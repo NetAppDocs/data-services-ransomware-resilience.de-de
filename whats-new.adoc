@@ -38,18 +38,6 @@ Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/blue
 
 
 
-=== Schutz vor Datenlecks
-
-
-
-=== SIEM
-
-
-
-=== Saubere Wiederherstellungsumgebung
-
-
-
 == 15. Juli 2025
 
 
