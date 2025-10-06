@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: rp-use-reports.html 
+keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
+summary: Mit NetApp Ransomware Resilience können Sie Berichte mit Details zu Schutz, Warnungen und Wiederherstellung herunterladen und als CSV-Dateien speichern. 
+---
+= Berichte in NetApp Ransomware Resilience herunterladen
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Schutzdaten exportieren und die CSV- oder JSON-Dateien herunterladen, die Details zu Angriffsbereitschaftsübungen, Schutz, Warnungen und Wiederherstellung enthalten.
+
+
+TIP: Bevor Sie die Dateien herunterladen, sollten Sie die Daten aktualisieren. Dadurch werden auch die in den Dateien angezeigten Daten aktualisiert.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+
+*Welche Daten können Sie herunterladen?*  Sie können Dateien von jeder der Hauptmenüoptionen herunterladen:
+
+* *Schutz*: Enthält den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.
+* *Warnungen*: Enthält den Status und die Details aller Warnungen, einschließlich der Gesamtzahl der Warnungen und automatisierten Snapshots.
+* *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads mit den Markierungen „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“.
+* *Berichte*: Sie können Daten von jeder Seite exportieren und die Dateien herunterladen.
++
+
+NOTE: Sie können Bereitschaftsübungsberichte nur von der Seite *Berichte* herunterladen.
+
+
+
+Wenn Sie CSV- oder JSON-Dateien von der Seite „Schutz“, „Warnungen“ oder „Wiederherstellung“ herunterladen, werden nur die Daten auf dieser Seite angezeigt.
+
+Die CSV- oder JSON-Dateien enthalten Daten für alle Workloads auf allen Konsolensystemen.
+
+.Schritte
+. Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.
++
+image:screen-dashboard.png["Dashboard-Seite"]
+
+. Wählen Sie im Dashboard oder auf einer anderen Seite die Option *Aktualisieren*image:button-refresh.png["Aktualisierungsoption"] Klicken Sie oben rechts auf die Option, um die Daten zu aktualisieren, die in den Berichten angezeigt werden.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wählen Sie auf der Seite *Download*image:button-download.png["Download-Option"] Option.
+** Wählen Sie im NetApp Ransomware Resilience-Menü *Berichte* aus.
+
+
+. Wenn Sie die Option *Berichte* ausgewählt haben, wählen Sie einen der vorkonfigurierten Dateinamen und wählen Sie *Herunterladen*.
++
+image:screen-reports.png["Berichtsseite mit dem Bereitschaftsübungsbericht"]
+
+

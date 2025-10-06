@@ -1,0 +1,554 @@
+---
+sidebar: sidebar 
+permalink: rp-use-settings.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware settings, backup destination 
+summary: Sie können mehrere Optionen konfigurieren, darunter ein Sicherungsziel, Bedrohungserkennung und Verbindung zu Data Infrastructure Insights Workload Security in Ransomware Resilience. 
+---
+= Konfigurieren der Schutzeinstellungen in NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Sicherungsziele konfigurieren, Daten an ein externes Sicherheits- und Ereignismanagementsystem (SIEM) senden, eine Übung zur Angriffsbereitschaft durchführen, die Workload-Erkennung konfigurieren oder die Verbindung zur Workload-Sicherheit von Data Infrastructure Insights konfigurieren, indem Sie auf die Option *Einstellungen* zugreifen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+*Was können Sie auf der Einstellungsseite tun?*  Auf der Seite „Einstellungen“ können Sie Folgendes tun:
+
+* Simulieren Sie einen Ransomware-Angriff, indem Sie eine Bereitschaftsübung durchführen und auf eine simulierte Ransomware-Warnung reagieren. Weitere Informationen finden Sie unter link:rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
+* Konfigurieren Sie die Workload-Erkennung.
+* Konfigurieren Sie die Verbindung zur Data Infrastructure Insights Workload-Sicherheit, um Informationen zu verdächtigen Benutzern in Ransomware-Warnungen anzuzeigen.
+* Fügen Sie ein Sicherungsziel hinzu.
+* Verbinden Sie Ihr Sicherheits- und Ereignismanagementsystem (SIEM) zur Bedrohungsanalyse und -erkennung.  Durch die Aktivierung der Bedrohungserkennung werden automatisch Daten zur Bedrohungsanalyse an Ihr SIEM gesendet.
+
+
+
+
+== Greifen Sie direkt auf die Seite „Einstellungen“ zu
+
+Sie können die Seite „Einstellungen“ ganz einfach über die Option „Aktionen“ im oberen Menü aufrufen.
+
+. Wählen Sie unter „Ransomware-Resilienz“ die vertikaleimage:button-actions-vertical.png["Vertikale Aktionen"] ... Option oben rechts.
+. Wählen Sie im Dropdown-Menü *Einstellungen* aus.
+
+
+
+
+== Simulieren Sie einen Ransomware-Angriff
+
+Führen Sie eine Ransomware-Bereitschaftsübung durch, indem Sie einen Ransomware-Angriff auf eine neu erstellte Beispiel-Workload simulieren.  Untersuchen Sie dann den simulierten Angriff und stellen Sie die Beispiel-Arbeitslast wieder her.  Mithilfe dieser Funktion können Sie durch das Testen von Warnbenachrichtigungen, Reaktions- und Wiederherstellungsprozessen sicherstellen, dass Sie im Falle eines tatsächlichen Ransomware-Angriffs vorbereitet sind.  Sie können eine Ransomware-Bereitschaftsübung mehrmals durchführen.
+
+Weitere Einzelheiten finden Sie unterlink:rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
+
+
+
+== Konfigurieren der Workload-Erkennung
+
+Sie können die Workload-Erkennung so konfigurieren, dass neue Workloads in Ihrer Umgebung automatisch erkannt werden.
+
+. Suchen Sie auf der Seite „Einstellungen“ nach der Kachel „Workload-Erkennung“.
+. Wählen Sie in der Kachel *Workload-Erkennung* die Option *Workloads erkennen* aus.
++
+Auf dieser Seite werden Konsolenagenten mit Systemen angezeigt, die zuvor nicht ausgewählt wurden, neu verfügbare Konsolenagenten und neu verfügbare Systeme.  Auf dieser Seite werden die zuvor ausgewählten Systeme nicht angezeigt.
+
+. Wählen Sie den Konsolenagenten aus, bei dem Sie Workloads ermitteln möchten.
+. Überprüfen Sie die Liste der Systeme.
+. Markieren Sie die Systeme, auf denen Sie Workloads ermitteln möchten, oder aktivieren Sie das Kontrollkästchen oben in der Tabelle, um Workloads in allen ermittelten Workloadumgebungen zu ermitteln.
+. Tun Sie dies bei Bedarf für andere Systeme.
+. Wählen Sie *Erkennen* aus, damit Ransomware Resilience automatisch neue Workloads im ausgewählten Konsolenagenten erkennt.
+
+
+
+
+== Erkennen Sie mutmaßlich anomales Benutzerverhalten durch die Verbindung mit Data Infrastructure Insights Workload Security
+
+Bevor Sie Details zu mutmaßlich anomalem Benutzerverhalten in Ransomware Resilience anzeigen können, müssen Sie die Verbindung zum Data Infrastructure Insights Workload-Sicherheitssystem konfigurieren.
+
+
+
+=== Abrufen eines API-Zugriffstokens vom Data Infrastructure Insights Workload-Sicherheitssystem
+
+Erhalten Sie ein API-Zugriffstoken vom Data Infrastructure Insights Workload-Sicherheitssystem.
+
+. Melden Sie sich beim Data Infrastructure Insights Workload-Sicherheitssystem an.
+. Wählen Sie in der linken Navigation *Admin* > *API-Zugriff*.
++
+image:../media/screen-alerts-ci-api-access-token.png["API-Zugriffsseite in der Data Infrastructure Insights Workload-Sicherheit"]
+
+. Erstellen Sie entweder ein API-Zugriffstoken oder verwenden Sie ein vorhandenes.
+. Kopieren Sie das API-Zugriffstoken.
+
+
+
+
+=== Verbindung zur Data Infrastructure Insights -Workload-Sicherheit
+
+. Suchen Sie im Menü „Ransomware Resilience-Einstellungen“ nach der Kachel „Workload-Sicherheitsverbindung“.
+. Wählen Sie *Verbinden*.
+. Geben Sie die URL für die Sicherheitsbenutzeroberfläche der Dateninfrastruktur-Workload ein.
+. Geben Sie das API-Zugriffstoken ein, das Zugriff auf die Workload-Sicherheit bietet.
+. Wählen Sie *Verbinden*.
+
+
+
+
+== Hinzufügen eines Sicherungsziels
+
+Ransomware Resilience kann Workloads identifizieren, für die noch keine Backups vorhanden sind, sowie Workloads, denen noch keine Backup-Ziele zugewiesen sind.
+
+Um diese Workloads zu schützen, sollten Sie ein Sicherungsziel hinzufügen.  Sie können eines der folgenden Sicherungsziele auswählen:
+
+* NetApp StorageGRID
+* Amazon Web Services (AWS)
+* Google Cloud Platform
+* Microsoft Azure
+
+
+
+NOTE: Für Workloads in Amazon FSx for NetApp ONTAP sind keine Sicherungsziele verfügbar.  Führen Sie Sicherungsvorgänge mit dem FSx for ONTAP -Sicherungsdienst durch.
+
+Sie können ein Sicherungsziel basierend auf einer empfohlenen Aktion vom Dashboard oder durch Zugriff auf die Option „Einstellungen“ im Menü hinzufügen.
+
+
+
+=== Greifen Sie über die empfohlenen Aktionen des Dashboards auf die Optionen für das Sicherungsziel zu
+
+Das Dashboard bietet viele Empfehlungen.  Eine Empfehlung könnte darin bestehen, ein Sicherungsziel zu konfigurieren.
+
+.Schritte
+. Überprüfen Sie im Dashboard „Ransomware Resilience“ den Bereich „Empfohlene Maßnahmen“.
++
+image:screen-dashboard.png["Dashboard-Seite"]
+
+. Wählen Sie im Dashboard *Überprüfen und beheben* für die Empfehlung „<Sicherungsanbieter> als Sicherungsziel vorbereiten“.
+. Fahren Sie je nach Backup-Anbieter mit den Anweisungen fort.
+
+
+
+
+=== StorageGRID als Backup-Ziel hinzufügen
+
+Um NetApp StorageGRID als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+.Schritte
+. Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
+. Geben Sie einen Namen für das Sicherungsziel ein.
++
+image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
+
+. Wählen Sie * StorageGRID*.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Erstellen Sie einen neuen Bucket oder bringen Sie Ihren eigenen Bucket mit, in dem die Backups gespeichert werden.
+*** Vollqualifizierter Domänenname, Port, StorageGRID Zugriffsschlüssel und geheime Schlüsselanmeldeinformationen des StorageGRID Gateway-Knotens.
+
+
+** *Netzwerk*: Wählen Sie den IP-Bereich.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“ die Option „Einstellungen“"]
+
+
+
+=== Amazon Web Services als Sicherungsziel hinzufügen
+
+Um AWS als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+Weitere Informationen zur Verwaltung Ihres AWS-Speichers in der Konsole finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Verwalten Sie Ihre Amazon S3-Buckets"^] .
+
+.Schritte
+. Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
+. Geben Sie einen Namen für das Sicherungsziel ein.
++
+image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
+
+. Wählen Sie *Amazon Web Services* aus.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Erstellen Sie einen neuen Bucket, wählen Sie einen vorhandenen Bucket aus, falls bereits einer in der Konsole vorhanden ist, oder bringen Sie Ihren eigenen Bucket mit, in dem die Backups gespeichert werden.
+*** AWS-Konto, Region, Zugriffsschlüssel und geheimer Schlüssel für AWS-Anmeldeinformationen
++
+https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["Wenn Sie Ihren eigenen Bucket mitbringen möchten, lesen Sie S3-Buckets hinzufügen."^] .
+
+
+
+** *Verschlüsselung*: Wenn Sie einen neuen S3-Bucket erstellen, geben Sie die Verschlüsselungsschlüsselinformationen ein, die Sie vom Anbieter erhalten haben.  Wenn Sie einen vorhandenen Bucket auswählen, sind die Verschlüsselungsinformationen bereits verfügbar.
++
+Daten im Bucket werden standardmäßig mit von AWS verwalteten Schlüsseln verschlüsselt.  Sie können weiterhin von AWS verwaltete Schlüssel verwenden oder die Verschlüsselung Ihrer Daten mit Ihren eigenen Schlüsseln verwalten.
+
+** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten AWS-Endpunkt (PrivateLink) verwenden möchten.
++
+Wenn Sie AWS PrivateLink verwenden möchten, lesen Sie https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink für Amazon S3"^] .
+
+
+
+** *Backup-Sperre*: Wählen Sie, ob Ransomware Resilience Backups vor Änderungen oder Löschungen schützen soll.  Diese Option verwendet die NetApp DataLock-Technologie.  Jedes Backup wird während der Aufbewahrungsfrist oder für mindestens 30 Tage zuzüglich einer Pufferzeit von bis zu 14 Tagen gesperrt.
++
+
+CAUTION: Wenn Sie die Sicherungssperreinstellung jetzt konfigurieren, können Sie die Einstellung später nicht mehr ändern, nachdem das Sicherungsziel konfiguriert wurde.
+
++
+*** *Governance-Modus*: Bestimmte Benutzer (mit der Berechtigung s3:BypassGovernanceRetention) können geschützte Dateien während der Aufbewahrungsfrist überschreiben oder löschen.
+*** *Compliance-Modus*: Benutzer können geschützte Sicherungsdateien während der Aufbewahrungsfrist nicht überschreiben oder löschen.
+
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“ die Option „Einstellungen“"]
+
+
+
+=== Google Cloud Platform als Backup-Ziel hinzufügen
+
+Um Google Cloud Platform (GCP) als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+Weitere Informationen zur Verwaltung Ihres GCP-Speichers in der Konsole finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-google.html["Installationsoptionen für den Konsolenagenten in Google Cloud"^] .
+
+.Schritte
+. Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
+. Geben Sie einen Namen für das Sicherungsziel ein.
++
+image:screen-settings-backup-destination-gcp.png["Seite „Sicherungsziele“"]
+
+. Wählen Sie *Google Cloud Platform* aus.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Erstellen Sie einen neuen Bucket.  Geben Sie den Zugriffsschlüssel und den geheimen Schlüssel ein.
+*** Geben Sie Ihr Google Cloud Platform-Projekt und Ihre Region ein oder wählen Sie sie aus.
+
+
+** *Verschlüsselung*: Wenn Sie einen neuen Bucket erstellen, geben Sie die Verschlüsselungsschlüsselinformationen ein, die Sie vom Anbieter erhalten haben.  Wenn Sie einen vorhandenen Bucket auswählen, sind die Verschlüsselungsinformationen bereits verfügbar.
++
+Die Daten im Bucket werden standardmäßig mit von Google verwalteten Schlüsseln verschlüsselt.  Sie können weiterhin von Google verwaltete Schlüssel verwenden.
+
+** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten GCP-Endpunkt (PrivateLink) verwenden möchten.
+
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+
+
+=== Microsoft Azure als Sicherungsziel hinzufügen
+
+Um Azure als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+Weitere Informationen zur Verwaltung Ihrer Azure-Anmeldeinformationen und Marketplace-Abonnements in der Konsole finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Verwalten Sie Ihre Azure-Anmeldeinformationen und Marketplace-Abonnements"^] .
+
+.Schritte
+. Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
+. Geben Sie einen Namen für das Sicherungsziel ein.
++
+image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
+
+. Wählen Sie *Azure* aus.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Erstellen Sie ein neues Speicherkonto, wählen Sie ein vorhandenes aus, falls in der Konsole bereits eines vorhanden ist, oder verwenden Sie Ihr eigenes Speicherkonto, in dem die Sicherungen gespeichert werden.
+*** Azure-Abonnement, Region und Ressourcengruppe für Azure-Anmeldeinformationen
++
+https://docs.netapp.com/us-en/bluexp-blob-storage/task-add-blob-storage.html["Wenn Sie Ihr eigenes Speicherkonto verwenden möchten, lesen Sie den Abschnitt Azure Blob-Speicherkonten hinzufügen."^] .
+
+
+
+** *Verschlüsselung*: Wenn Sie ein neues Speicherkonto erstellen, geben Sie die Verschlüsselungsschlüsselinformationen ein, die Sie vom Anbieter erhalten haben.  Wenn Sie ein bestehendes Konto auswählen, sind die Verschlüsselungsinformationen bereits verfügbar.
++
+Daten im Konto werden standardmäßig mit von Microsoft verwalteten Schlüsseln verschlüsselt.  Sie können weiterhin von Microsoft verwaltete Schlüssel verwenden oder die Verschlüsselung Ihrer Daten mit Ihren eigenen Schlüsseln verwalten.
+
+** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten Azure-Endpunkt verwenden möchten.
++
+Wenn Sie Azure PrivateLink verwenden möchten, lesen Sie https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^] .
+
+
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“ die Option „Einstellungen“"]
+
+
+
+== Stellen Sie eine Verbindung zu einem Sicherheits- und Ereignismanagementsystem (SIEM) zur Bedrohungsanalyse und -erkennung her
+
+Sie können Daten zur Bedrohungsanalyse und -erkennung automatisch an Ihr Sicherheits- und Ereignismanagementsystem (SIEM) senden.  Sie können AWS Security Hub, Microsoft Sentinel oder Splunk Cloud als Ihr SIEM auswählen.
+
+Bevor Sie SIEM in Ransomware Resilience aktivieren, müssen Sie Ihr SIEM-System konfigurieren.
+
+.Informationen zu den an ein SIEM gesendeten Ereignisdaten
+Ransomware Resilience kann die folgenden Ereignisdaten an Ihr SIEM-System senden:
+
+* *Kontext*:
++
+** *os*: Dies ist eine Konstante mit dem Wert von ONTAP.
+** *os_version*: Die auf dem System ausgeführte ONTAP -Version.
+** *connector_id*: Die ID des Konsolenagenten, der das System verwaltet.
+** *cluster_id*: Die von ONTAP für das System gemeldete Cluster-ID.
+** *svm_name*: Der Name der SVM, auf der die Warnung gefunden wurde.
+** *volume_name*: Der Name des Volumes, auf dem sich die Warnung befindet.
+** *volume_id*: Die ID des von ONTAP für das System gemeldeten Volumes.
+
+
+* *Vorfall*:
++
+** *incident_id*: Die von Ransomware Resilience für das in Ransomware Resilience angegriffene Volume generierte Vorfall-ID.
+** *alert_id*: Die von Ransomware Resilience für die Arbeitslast generierte ID.
+** *Schweregrad*: Eine der folgenden Warnstufen: „KRITISCH“, „HOCH“, „MITTEL“, „NIEDRIG“.
+** *Beschreibung*: Details zur erkannten Warnung, z. B. „Ein potenzieller Ransomware-Angriff wurde auf Workload arp_learning_mode_test_2630 erkannt.“
+
+
+
+
+
+
+=== Konfigurieren Sie AWS Security Hub für die Bedrohungserkennung
+
+Bevor Sie AWS Security Hub in Ransomware Resilience aktivieren, müssen Sie die folgenden allgemeinen Schritte in AWS Security Hub ausführen:
+
+* Richten Sie Berechtigungen im AWS Security Hub ein.
+* Richten Sie den Authentifizierungszugriffsschlüssel und den geheimen Schlüssel im AWS Security Hub ein.  (Diese Schritte werden hier nicht bereitgestellt.)
+
+
+.Schritte zum Einrichten von Berechtigungen im AWS Security Hub
+. Gehen Sie zur *AWS IAM-Konsole*.
+. Wählen Sie *Richtlinien* aus.
+. Erstellen Sie eine Richtlinie mit dem folgenden Code im JSON-Format:
++
+[listing]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "NetAppSecurityHubFindings",
+      "Effect": "Allow",
+      "Action": [
+        "securityhub:BatchImportFindings",
+        "securityhub:BatchUpdateFindings"
+      ],
+      "Resource": [
+        "arn:aws:securityhub:*:*:product/*/default",
+        "arn:aws:securityhub:*:*:hub/default"
+      ]
+    }
+  ]
+}
+----
+
+
+
+
+=== Konfigurieren von Microsoft Sentinel zur Bedrohungserkennung
+
+Bevor Sie Microsoft Sentinel in Ransomware Resilience aktivieren, müssen Sie die folgenden allgemeinen Schritte in Microsoft Sentinel ausführen:
+
+* *Voraussetzungen*
++
+** Aktivieren Sie Microsoft Sentinel.
+** Erstellen Sie eine benutzerdefinierte Rolle in Microsoft Sentinel.
+
+
+* *Anmeldung*
++
+** Registrieren Sie Ransomware Resilience, um Ereignisse von Microsoft Sentinel zu erhalten.
+** Erstellen Sie ein Geheimnis für die Registrierung.
+
+
+* *Berechtigungen*: Weisen Sie der Anwendung Berechtigungen zu.
+* *Authentifizierung*: Geben Sie die Authentifizierungsdaten für die Anwendung ein.
+
+
+.Schritte zum Aktivieren von Microsoft Sentinel
+. Gehen Sie zu Microsoft Sentinel.
+. Erstellen Sie einen *Log Analytics-Arbeitsbereich*.
+. Aktivieren Sie Microsoft Sentinel, um den gerade erstellten Log Analytics-Arbeitsbereich zu verwenden.
+
+
+.Schritte zum Erstellen einer benutzerdefinierten Rolle in Microsoft Sentinel
+. Gehen Sie zu Microsoft Sentinel.
+. Wählen Sie *Abonnement* > *Zugriffskontrolle (IAM)*.
+. Geben Sie einen benutzerdefinierten Rollennamen ein.  Verwenden Sie den Namen *Ransomware Resilience Sentinel Configurator*.
+. Kopieren Sie das folgende JSON und fügen Sie es in die Registerkarte *JSON* ein.
++
+[listing]
+----
+{
+  "roleName": "Ransomware Resilience Sentinel Configurator",
+  "description": "",
+  "assignableScopes":["/subscriptions/{subscription_id}"],
+  "permissions": [
+
+  ]
+}
+----
+. Überprüfen und speichern Sie Ihre Einstellungen.
+
+
+.Schritte zum Registrieren von Ransomware Resilience zum Empfangen von Ereignissen von Microsoft Sentinel
+. Gehen Sie zu Microsoft Sentinel.
+. Wählen Sie *Entra ID* > *Anwendungen* > *App-Registrierungen*.
+. Geben Sie als *Anzeigenamen* für die Anwendung „*Ransomware Resilience*“ ein.
+. Wählen Sie im Feld *Unterstützter Kontotyp* die Option *Nur Konten in diesem Organisationsverzeichnis* aus.
+. Wählen Sie einen *Standardindex* aus, in den Ereignisse übertragen werden.
+. Wählen Sie *Überprüfen* aus.
+. Wählen Sie *Registrieren*, um Ihre Einstellungen zu speichern.
++
+Nach der Registrierung zeigt das Microsoft Entra Admin Center den Anwendungsübersichtsbereich an.
+
+
+
+.Schritte zum Erstellen eines Geheimnisses für die Registrierung
+. Gehen Sie zu Microsoft Sentinel.
+. Wählen Sie *Zertifikate und Geheimnisse* > *Clientgeheimnisse* > *Neues Clientgeheimnis*.
+. Fügen Sie eine Beschreibung für Ihr Anwendungsgeheimnis hinzu.
+. Wählen Sie ein *Ablaufdatum* für das Geheimnis aus oder geben Sie eine benutzerdefinierte Lebensdauer an.
++
+
+TIP: Die Lebensdauer eines Client-Geheimnisses ist auf zwei Jahre (24 Monate) oder weniger begrenzt.  Microsoft empfiehlt, einen Ablaufwert von weniger als 12 Monaten festzulegen.
+
+. Wählen Sie *Hinzufügen*, um Ihr Geheimnis zu erstellen.
+. Notieren Sie das im Authentifizierungsschritt zu verwendende Geheimnis.  Das Geheimnis wird nie wieder angezeigt, nachdem Sie diese Seite verlassen.
+
+
+.Schritte zum Zuweisen von Berechtigungen zur Anwendung
+. Gehen Sie zu Microsoft Sentinel.
+. Wählen Sie *Abonnement* > *Zugriffskontrolle (IAM)*.
+. Wählen Sie *Hinzufügen* > *Rollenzuweisung hinzufügen*.
+. Wählen Sie im Feld *Privilegierte Administratorrollen* die Option *Ransomware Resilience Sentinel Configurator* aus.
++
+
+TIP: Dies ist die benutzerdefinierte Rolle, die Sie zuvor erstellt haben.
+
+. Wählen Sie *Weiter*.
+. Wählen Sie im Feld *Zugriff zuweisen an* die Option *Benutzer, Gruppe oder Dienstprinzipal* aus.
+. Wählen Sie *Mitglieder auswählen*.  Wählen Sie dann *Ransomware Resilience Sentinel Configurator*.
+. Wählen Sie *Weiter*.
+. Wählen Sie im Feld *Was der Benutzer tun kann* die Option *Dem Benutzer erlauben, alle Rollen außer den privilegierten Administratorrollen „Besitzer“, „UAA“, „RBAC“ (empfohlen) zuzuweisen*.
+. Wählen Sie *Weiter*.
+. Wählen Sie *Überprüfen und zuweisen* aus, um die Berechtigungen zuzuweisen.
+
+
+.Schritte zum Eingeben der Authentifizierungsdaten für die Anwendung
+. Gehen Sie zu Microsoft Sentinel.
+. Geben Sie die Anmeldeinformationen ein:
++
+.. Geben Sie die Mandanten-ID, die Client-Anwendungs-ID und das Client-Anwendungsgeheimnis ein.
+.. Klicken Sie auf *Authentifizieren*.
++
+
+NOTE: Nach erfolgreicher Authentifizierung wird die Meldung „Authentifiziert“ angezeigt.
+
+
+
+. Geben Sie die Log Analytics-Arbeitsbereichsdetails für die Anwendung ein.
++
+.. Wählen Sie die Abonnement-ID, die Ressourcengruppe und den Log Analytics-Arbeitsbereich aus.
+
+
+
+
+
+
+=== Konfigurieren Sie Splunk Cloud für die Bedrohungserkennung
+
+Bevor Sie Splunk Cloud in Ransomware Resilience aktivieren, müssen Sie die folgenden allgemeinen Schritte in Splunk Cloud ausführen:
+
+* Aktivieren Sie einen HTTP-Ereignissammler in Splunk Cloud, um Ereignisdaten über HTTP oder HTTPS von der Konsole zu empfangen.
+* Erstellen Sie ein Event Collector-Token in Splunk Cloud.
+
+
+.Schritte zum Aktivieren eines HTTP-Ereignissammlers in Splunk
+. Gehen Sie zu Splunk Cloud.
+. Wählen Sie *Einstellungen* > *Dateneingaben*.
+. Wählen Sie *HTTP-Ereignissammler* > *Globale Einstellungen*.
+. Wählen Sie auf dem Umschalter „Alle Token“ die Option *Aktiviert* aus.
+. Damit der Event Collector über HTTPS statt über HTTP lauscht und kommuniziert, wählen Sie *SSL aktivieren*.
+. Geben Sie in *HTTP-Portnummer* einen Port für den HTTP-Ereignissammler ein.
+
+
+.Schritte zum Erstellen eines Event Collector-Tokens in Splunk
+. Gehen Sie zu Splunk Cloud.
+. Wählen Sie *Einstellungen* > *Daten hinzufügen*.
+. Wählen Sie *Monitor* > *HTTP-Ereignissammler*.
+. Geben Sie einen Namen für das Token ein und wählen Sie *Weiter*.
+. Wählen Sie einen *Standardindex* aus, in den Ereignisse übertragen werden, und wählen Sie dann *Überprüfen*.
+. Bestätigen Sie, dass alle Einstellungen für den Endpunkt korrekt sind, und wählen Sie dann *Senden* aus.
+. Kopieren Sie das Token und fügen Sie es in ein anderes Dokument ein, um es für den Authentifizierungsschritt bereit zu haben.
+
+
+
+
+=== SIEM-Integration in Ransomware-Resilienz
+
+Durch die Aktivierung von SIEM werden Daten von Ransomware Resilience zur Bedrohungsanalyse und -berichterstattung an Ihren SIEM-Server gesendet.
+
+.Schritte
+. Wählen Sie im Konsolenmenü *Schutz* > *Ransomware-Resilienz*.
+. Wählen Sie im Menü Ransomware Resilience die vertikaleimage:button-actions-vertical.png["Vertikale Aktionen"] ... Option oben rechts.
+. Wählen Sie *Einstellungen*.
++
+Die Seite „Einstellungen“ wird angezeigt.
+
++
+image:screen-settings2.png["Seite „Einstellungen“"]
+
+. Wählen Sie auf der Seite „Einstellungen“ in der Kachel „SIEM-Verbindung“ die Option „Verbinden“ aus.
++
+image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungserkennung aktivieren"]
+
+. Wählen Sie eines der SIEM-Systeme.
+. Geben Sie das Token und die Authentifizierungsdetails ein, die Sie in AWS Security Hub oder Splunk Cloud konfiguriert haben.
++
+
+NOTE: Die von Ihnen eingegebenen Informationen hängen von dem von Ihnen ausgewählten SIEM ab.
+
+. Wählen Sie *Aktivieren*.
++
+Auf der Seite „Einstellungen“ wird „Verbunden“ angezeigt.
+
+

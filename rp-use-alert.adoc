@@ -1,0 +1,323 @@
+---
+sidebar: sidebar 
+permalink: rp-use-alert.html 
+keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
+summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Ransomware Resilience Dashboard eine Warnung angezeigt, die auf einen möglichen Angriff hinweist.  An diesem Punkt sollten Sie sich das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ ansehen. 
+---
+= Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Dashboard und im Benachrichtigungsbereich eine Warnung angezeigt.  Ransomware Resilience erstellt sofort einen Snapshot.  Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.
+
+Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird in den Benachrichtigungseinstellungen der Konsole eine Benachrichtigung angezeigt und eine E-Mail an die konfigurierte Adresse gesendet.  Die E-Mail enthält Informationen zum Schweregrad, zur betroffenen Arbeitslast und einen Link zur Warnung auf der Registerkarte „Ransomware Resilience *Warnungen*“.
+
+Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.
+
+
+TIP: Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst keine weitere Warnung aus.
+
+Um mit der Wiederherstellung Ihrer Daten zu beginnen, markieren Sie die Warnung als „bereit zur Wiederherstellung“, damit Ihr Speicheradministrator mit dem Wiederherstellungsprozess beginnen kann.
+
+Jeder Alarm kann mehrere Vorfälle mit unterschiedlichem Umfang und Status umfassen.  Überprüfen Sie alle Vorfälle.
+
+Ransomware Resilience liefert sogenannte _Beweise_ über die Ursache der Warnmeldung, beispielsweise die folgenden:
+
+* Dateierweiterungen wurden erstellt oder geändert
+* Dateierstellung mit einem Vergleich der erkannten und erwarteten Raten
+* Dateilöschung mit einem Vergleich der erkannten und erwarteten Raten
+* Bei hoher Verschlüsselung ohne Änderungen der Dateierweiterung
+
+
+Eine Warnung wird wie folgt klassifiziert:
+
+* *Potenzieller Angriff*: Eine Warnung wird ausgegeben, wenn Autonomous Ransomware Protection eine neue Erweiterung erkennt und das Vorkommen in den letzten 24 Stunden mehr als 20 Mal wiederholt wurde (Standardverhalten).
+* *Warnung*: Eine Warnung erfolgt aufgrund der folgenden Verhaltensweisen:
++
+** Die Erkennung einer neuen Erweiterung wurde bisher nicht festgestellt und dasselbe Verhalten wiederholt sich nicht oft genug, um es als Angriff zu deklarieren.
+** Es wird eine hohe Entropie beobachtet.
+** Die Aktivität beim Lesen, Schreiben, Umbenennen oder Löschen von Dateien hat sich im Vergleich zum Normalwert verdoppelt.
+
+
+
+
+
+NOTE: Bei SAN-Umgebungen basieren Warnungen nur auf hoher Entropie.
+
+Die Beweise basieren auf Informationen von Autonomous Ransomware Protection in ONTAP. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Übersicht über den autonomen Ransomware-Schutz"^] .
+
+Eine Warnung kann einen der folgenden Status haben:
+
+* *Neu*
+* *Inaktiv*
+
+
+Ein Alarmvorfall kann einen der folgenden Zustände haben:
+
+* *Neu*: Alle Vorfälle werden bei ihrer erstmaligen Erkennung als „neu“ gekennzeichnet.
+* *Abgelehnt*: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, können Sie den Status auf „Abgelehnt“ ändern.
++
+
+CAUTION: Nachdem Sie einen Angriff abgewehrt haben, können Sie dies nicht mehr rückgängig machen.  Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
+
+* *Abweisen*: Der Vorfall wird gerade abgewiesen.
+* *Gelöst*: Der Vorfall wurde behoben.
+* *Automatisch gelöst*: Bei Warnungen mit niedriger Priorität wird der Vorfall automatisch gelöst, wenn innerhalb von fünf Tagen keine Maßnahmen ergriffen wurden.
+
+
+
+TIP: Wenn Sie auf der Seite „Einstellungen“ ein Sicherheits- und Ereignisverwaltungssystem (SIEM) in Ransomware Resilience konfiguriert haben, sendet Ransomware Resilience Warndetails an Ihr SIEM-System.
+
+
+
+== Warnungen anzeigen
+
+Sie können über das Ransomware Resilience Dashboard oder über die Registerkarte *Warnungen* auf Warnungen zugreifen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Überprüfen Sie im Ransomware Resilience Dashboard den Bereich „Warnungen“.
+. Wählen Sie unter einem der Status *Alle anzeigen* aus.
+. Wählen Sie eine Warnung aus, um alle Vorfälle auf jedem Datenträger für jede Warnung zu überprüfen.
+. Um weitere Warnungen anzuzeigen, wählen Sie in der Brotkrümelnavigation oben links *Warnung* aus.
+. Überprüfen Sie die Warnungen auf der Seite „Warnungen“.
++
+image:screen-alerts.png["Seite „Warnungen“"]
+
+. Fahren Sie mit einem der folgenden Schritte fort:
++
+** <<Erkennen Sie böswillige Aktivitäten und anomales Benutzerverhalten>> .
+** <<Markieren Sie Ransomware-Vorfälle als bereit zur Wiederherstellung (nachdem die Vorfälle neutralisiert wurden).>> .
+** <<Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt>> .
+
+
+
+
+
+
+== Auf eine Warn-E-Mail antworten
+
+Wenn Ransomware Resilience einen potenziellen Angriff erkennt, sendet es den angemeldeten Benutzern eine E-Mail-Benachrichtigung basierend auf ihren Abonnement-Benachrichtigungseinstellungen.  Die E-Mail enthält Informationen zur Warnung, einschließlich des Schweregrads und der betroffenen Ressourcen.
+
+Sie können E-Mail-Benachrichtigungen zu Ransomware-Resilience-Warnmeldungen erhalten.  Mithilfe dieser Funktion bleiben Sie über Warnungen, deren Schweregrad und betroffene Ressourcen auf dem Laufenden.
+
+
+TIP: Um E-Mail-Benachrichtigungen zu abonnieren, lesen Sie bitte https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#set-email-notification-settings["E-Mail-Benachrichtigungseinstellungen festlegen"^] .
+
+. Gehen Sie in Ransomware Resilience zur Seite *Einstellungen*.
+. Suchen Sie unter *Benachrichtigungen* die Einstellungen für E-Mail-Benachrichtigungen.
+. Geben Sie die E-Mail-Adresse ein, an die Sie Benachrichtigungen erhalten möchten.
+. Speichern Sie Ihre Änderungen.
+
+
+Sie erhalten jetzt E-Mail-Benachrichtigungen, wenn neue Warnungen generiert werden.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Sehen Sie sich die E-Mail an.
+. Wählen Sie in der E-Mail *Warnung anzeigen* aus und melden Sie sich bei Ransomware Resilience an.
++
+Die Seite „Warnungen“ wird angezeigt.
+
+. Überprüfen Sie für jede Warnung alle Vorfälle auf jedem Datenträger.
+. Um weitere Warnungen anzuzeigen, klicken Sie in der Brotkrümelnavigation oben links auf *Warnung*.
+. Fahren Sie mit einem der folgenden Schritte fort:
++
+** <<Erkennen Sie böswillige Aktivitäten und anomales Benutzerverhalten>> .
+** <<Markieren Sie Ransomware-Vorfälle als bereit zur Wiederherstellung (nachdem die Vorfälle neutralisiert wurden).>> .
+** <<Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt>> .
+
+
+
+
+
+
+== Erkennen Sie böswillige Aktivitäten und anomales Benutzerverhalten
+
+Auf der Registerkarte „Warnungen“ können Sie erkennen, ob böswillige Aktivitäten vorliegen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+*Welche Details werden angezeigt?*  Die angezeigten Details hängen davon ab, wie die Warnung ausgelöst wurde:
+
+* Ausgelöst durch die Funktion „Autonomous Ransomware Protection“ in ONTAP.  Dadurch werden böswillige Aktivitäten anhand des Verhaltens der Dateien im Volume erkannt.
+* Ausgelöst durch die Workload-Sicherheit von Data Infrastructure Insights .  Dies erfordert eine Lizenz für die Data Infrastructure Insights Workload-Sicherheit und die Aktivierung in Ransomware Resilience.  Diese Funktion erkennt anomales Benutzerverhalten in Ihren Speicher-Workloads und ermöglicht es Ihnen, diesem Benutzer weiteren Zugriff zu verweigern.
++
+Um die Workload-Sicherheit in Ransomware Resilience zu aktivieren, gehen Sie zur Seite *Einstellungen* und wählen Sie die Option *Workload-Sicherheitsverbindung*.
+
++
+Einen Überblick über die Sicherheit der Data Infrastructure Insights -Workload finden Sie unter https://docs.netapp.com/us-en/data-infrastructure-insights/cs_intro.html["Informationen zur Workload-Sicherheit"^] .
+
+
+
+
+TIP: Wenn Sie keine Lizenz für die Sicherheit der Dateninfrastruktur-Workloads besitzen und diese in Ransomware Resilience nicht aktivieren, werden Ihnen die Informationen zum anomalen Benutzerverhalten nicht angezeigt.
+
+Bei böswilligen Aktivitäten wird eine Warnung generiert und ein automatischer Snapshot erstellt.
+
+
+
+=== Schädliche Aktivitäten nur vom autonomen Ransomware-Schutz aus anzeigen
+
+Wenn Autonomous Ransomware Protection eine Warnung in Ransomware Resilience auslöst, können Sie die folgenden Details anzeigen:
+
+* Entropie eingehender Daten
+* Erwartete Erstellungsrate neuer Dateien im Vergleich zur erkannten Rate
+* Erwartete Löschrate von Dateien im Vergleich zur erkannten Rate
+* Erwartete Umbenennungsrate von Dateien im Vergleich zur erkannten Rate
+* Betroffene Dateien und Verzeichnisse
+
+
+
+NOTE: Diese Details sind für NAS-Workloads sichtbar.  Für SAN-Umgebungen sind nur die Entropiedaten verfügbar.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
+. Wählen Sie eine Warnung aus.
+. Überprüfen Sie die Vorfälle in der Warnung.
++
+image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
+
+. Wählen Sie einen Vorfall aus, um die Details des Vorfalls zu überprüfen.
+
+
+
+
+=== Anzeigen von anomalem Benutzerverhalten in Data Infrastructure Insights Workload-Sicherheit
+
+Wenn die Data Infrastructure Insights Workload-Sicherheit eine Warnung in Ransomware Resilience auslöst, können Sie den verdächtigen Benutzer anzeigen, den Benutzer blockieren und die Benutzeraktivität direkt in der Data Infrastructure Insights Workload-Sicherheit untersuchen.
+
+
+TIP: Diese Funktionen ergänzen die Details, die nur durch den autonomen Ransomware-Schutz verfügbar sind.
+
+.Bevor Sie beginnen
+Für diese Option ist eine Lizenz für die Data Infrastructure Insights Workload-Sicherheit erforderlich und Sie müssen diese in Ransomware Resilience aktivieren.
+
+Um die Workload-Sicherheit in Ransomware Resilience zu aktivieren, gehen Sie wie folgt vor:
+
+. Gehen Sie zur Seite *Einstellungen*.
+. Wählen Sie die Option *Workload Security-Verbindung*.
++
+Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Ransomware-Resilienzeinstellungen"] .
+
+
+
+.Schritte
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
+. Wählen Sie eine Warnung aus.
+. Überprüfen Sie die Vorfälle in der Warnung.
++
+image:screenshot-alerts.png["Screenshot der Seite „Benachrichtigungen“."]
+
+. Um einem verdächtigen Benutzer den weiteren Zugriff auf Ihre von der Konsole überwachte Umgebung zu verweigern, wählen Sie den Link *Benutzer blockieren*.
+. Recherchieren Sie die Warnung oder einen Vorfall in der Warnung:
++
+.. Um die Warnung in der Data Infrastructure Insights Workload-Sicherheit weiter zu untersuchen, wählen Sie den Link *In Workload-Sicherheit untersuchen*.
+.. Wählen Sie einen Vorfall aus, um die Details des Vorfalls zu überprüfen.
+
+
+
+
+Data Infrastructure Insights Workload Security wird in einem neuen Tab geöffnet.
+
++image:screen-alerts-incidents-diiws-diiwspage.png["Untersuchen Sie die Workload-Sicherheit"]
+
+
+
+== Markieren Sie Ransomware-Vorfälle als bereit zur Wiederherstellung (nachdem die Vorfälle neutralisiert wurden).
+
+Benachrichtigen Sie nach dem Stoppen des Angriffs Ihren Speicheradministrator, dass die Daten bereit sind, damit er mit der Wiederherstellung beginnen kann.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
++
+image:screen-alerts.png["Seite „Warnungen“"]
+
+. Wählen Sie auf der Seite „Warnungen“ die Warnung aus.
+. Überprüfen Sie die Vorfälle in der Warnung.
++
+image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
+
+. Wenn Sie feststellen, dass die Vorfälle zur Wiederherstellung bereit sind, wählen Sie *Als Wiederherstellung erforderlich markieren*.
+. Bestätigen Sie die Aktion und wählen Sie *Als Wiederherstellung erforderlich markieren*.
+. Um die Workload-Wiederherstellung zu starten, wählen Sie in der Nachricht „Workload wiederherstellen“ oder wählen Sie die Registerkarte „Wiederherstellung“ aus.
+
+
+.Ergebnis
+Nachdem die Warnung zur Wiederherstellung markiert wurde, wird sie von der Registerkarte „Warnungen“ zur Registerkarte „Wiederherstellung“ verschoben.
+
+
+
+== Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt
+
+Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt.  Wenn die vorherige Bedingung nicht erfüllt ist, können sie entlassen werden.
+
+Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.  Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst bei einem solchen Verhalten keine weitere Warnung aus.
+
+Wenn Sie eine Arbeitslast verwerfen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf einen potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
+
+
+CAUTION: Wenn Sie eine Warnung verwerfen, können Sie diesen Status nicht wieder in einen anderen Status ändern und diese Änderung auch nicht rückgängig machen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
++
+image:screen-alerts.png["Seite „Warnungen“"]
+
+. Wählen Sie auf der Seite „Warnungen“ die Warnung aus.
++
+image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
+
+. Wählen Sie einen oder mehrere Vorfälle aus.  Oder wählen Sie alle Vorfälle aus, indem Sie das Feld „Vorfall-ID“ oben links in der Tabelle auswählen.
+. Wenn Sie feststellen, dass der Vorfall keine Bedrohung darstellt, verwerfen Sie ihn als falsch-positives Ergebnis:
++
+** Wählen Sie den Vorfall aus.
+** Wählen Sie die Schaltfläche *Status bearbeiten* über der Tabelle.
++
+image:screen-alerts-status-edit.png["Seite „Alarmstatus bearbeiten“"]
+
+
+
+. Wählen Sie im Feld „Status bearbeiten“ den Status *„Abgelehnt“* aus.
++
+Es werden zusätzliche Informationen zur Arbeitslast und zum Löschen von Snapshot-Kopien angezeigt.
+
+. Wählen Sie *Speichern*.
++
+Der Status des Vorfalls bzw. der Vorfälle ändert sich in „Abgelehnt“.
+
+
+
+
+
+== Liste der betroffenen Dateien anzeigen
+
+Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen.  Sie können auf die Seite „Warnungen“ zugreifen, um eine Liste der betroffenen Dateien herunterzuladen.  Verwenden Sie dann die Wiederherstellungsseite, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+Verwenden Sie die Seite „Warnungen“, um die Liste der betroffenen Dateien abzurufen.
+
+
+TIP: Wenn ein Volume mehrere Warnungen aufweist, müssen Sie möglicherweise für jede Warnung die CSV-Liste der betroffenen Dateien herunterladen.
+
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
+. Sortieren Sie auf der Seite „Warnungen“ die Ergebnisse nach Arbeitslast, um die Warnungen für die Anwendungsarbeitslast anzuzeigen, die Sie wiederherstellen möchten.
+. Wählen Sie aus der Liste der Warnungen für diese Arbeitslast eine Warnung aus.
+. Wählen Sie für diese Warnung einen einzelnen Vorfall aus.
++
+image:screen-alerts-incidents-impacted-files.png["Liste der betroffenen Dateien für eine bestimmte Warnung"]
+
+. Wählen Sie für diesen Vorfall das Download-Symbol aus und laden Sie die Liste der betroffenen Dateien im CSV-Format herunter.
+

@@ -1,0 +1,34 @@
+= Unterstützung für Amazon FSx for NetApp ONTAP
+:allow-uri-read: 
+
+
+
+
+=== Unterstützung für Amazon FSx for NetApp ONTAP
+
+Diese Version unterstützt Amazon FSx for NetApp ONTAP.  Diese Funktion hilft Ihnen, Ihre FSx für ONTAP -Workloads mit BlueXP ransomware protection zu schützen.
+
+FSx für ONTAP ist ein vollständig verwalteter Dienst, der die Leistung des NetApp ONTAP -Speichers in der Cloud bereitstellt.  Es bietet dieselben Funktionen, dieselbe Leistung und dieselben Verwaltungsfunktionen, die Sie vor Ort verwenden, mit der Agilität und Skalierbarkeit eines nativen AWS-Dienstes.
+
+Am BlueXP ransomware protection -Workflow wurden die folgenden Änderungen vorgenommen:
+
+* Discovery umfasst Workloads in FSx für ONTAP 9.15-Arbeitsumgebungen.
+* Auf der Registerkarte „Schutz“ werden Workloads in FSx für ONTAP -Umgebungen angezeigt.  In dieser Umgebung sollten Sie Sicherungsvorgänge mit dem FSx for ONTAP -Sicherungsdienst durchführen.  Sie können diese Workloads mithilfe von BlueXP ransomware protection -Snapshots wiederherstellen.
++
+
+TIP: Sicherungsrichtlinien für eine auf FSx für ONTAP ausgeführte Workload können in BlueXP nicht festgelegt werden.  Alle vorhandenen Sicherungsrichtlinien, die in Amazon FSx for NetApp ONTAP festgelegt sind, bleiben unverändert.
+
+* Warnmeldungen zeigen die neue FSx for ONTAP Arbeitsumgebung.
+
+
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Erfahren Sie mehr über den BlueXP ransomware protection"] .
+
+Informationen zu den unterstützten Optionen finden Sie im https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-limitations.html["Einschränkungen des BlueXP ransomware protection"] .
+
+
+
+=== BlueXP -Zugriffsrolle erforderlich
+
+Sie benötigen jetzt eine der folgenden Zugriffsrollen, um den BlueXP ransomware protection anzuzeigen, zu erkennen oder zu verwalten: Organisationsadministrator, Ordner- oder Projektadministrator, Ransomware-Schutzadministrator oder Ransomware-Schutz-Viewer.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .

@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: rp-use-protect-classify.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, cds, sensitive, pii, classification 
+summary: Verbessern Sie die Sicherheit und Datenschutzkonformität Ihrer Daten mit der NetApp Datenklassifizierung, um festzustellen, ob Ihre Daten personenbezogene oder private Informationen enthalten. 
+---
+= Scannen Sie mit NetApp Data Classification in Ransomware Resilience nach personenbezogenen Daten
+:allow-uri-read: 
+
+
+[role="lead"]
+Innerhalb von NetApp Ransomware Resilience können Sie NetApp Data Classification verwenden, um die Daten in einer Dateifreigabe-Workload zu scannen und zu klassifizieren.  Durch die Klassifizierung von Daten können Sie feststellen, ob der Datensatz personenbezogene Daten (PII) enthält, die das Sicherheitsrisiko erhöhen können.  Die Datenklassifizierung ist eine Kernkomponente der Konsole und ohne zusätzliche Kosten verfügbar.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/["Datenklassifizierung"^]nutzt KI-gesteuerte natürliche Sprachverarbeitung für die kontextbezogene Datenanalyse und -kategorisierung und bietet umsetzbare Einblicke in Ihre Daten, um Compliance-Anforderungen zu erfüllen, Sicherheitslücken zu erkennen, Kosten zu optimieren und die Migration zu beschleunigen.
+
+
+TIP: Dieser Prozess kann sich auf die Wichtigkeit der Arbeitslast auswirken, um sicherzustellen, dass Sie über den entsprechenden Schutz verfügen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+
+
+== Identifizieren Sie Datenschutzrisiken mithilfe der Datenklassifizierung
+
+Bevor Sie die Datenklassifizierung innerhalb von Ransomware Resilience verwenden, benötigen Sielink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["um die Datenklassifizierung zum Scannen Ihrer Daten zu aktivieren"^] .
+
+Sie können die Datenklassifizierung auf der Schutzseite von Ransomware Resilience bereitstellen.  Befolgen Sie die Schritte zur Ermittlung der Datenschutzrisiken.  Wenn Sie **Exposure identifizieren** auswählen und die Datenklassifizierung noch nicht bereitgestellt haben, können Sie sie in einem Dialogfeld aktivieren.
+
+image:classification-deploy.png["Screenshot der Bereitstellungsklassifizierung"]
+
+Weitere Informationen zur Datenklassifizierung finden Sie unter:
+
+* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die Datenklassifizierung"^]
+* https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Kategorien personenbezogener Daten"^]
+* https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten"^]
+
+
+.Bevor Sie beginnen
+Das Scannen nach PII-Daten in Ransomware Resilience ist verfügbar, wenn Sielink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["bereitgestellte Datenklassifizierung"^] .  Die Datenklassifizierung ist als Teil der Konsole ohne zusätzliche Kosten verfügbar und kann vor Ort oder in der Kunden-Cloud bereitgestellt werden.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
+. Suchen Sie auf der Seite „Schutz“ in der Spalte „Arbeitslast“ nach einer Arbeitslast für die Dateifreigabe.
++
+image:screen-protection-sensitive-preview-column.png["Seite „Schutz“ mit der Spalte „Datenschutzgefährdung“"]
+
+. Um die Datenklassifizierung zu aktivieren und Ihre Daten auf PII zu scannen, wählen Sie in der Spalte *Datenschutzgefährdung* die Option *Gefährdung identifizieren* aus.
+
+
+
+NOTE: Wenn Sie die Datenklassifizierung nicht bereitgestellt haben, wird durch Auswahl von *Exposure identifizieren* ein Dialogfeld zum Bereitstellen der Datenklassifizierung geöffnet.  Wählen Sie *Bereitstellen*.  Nachdem Sie die Datenklassifizierung bereitgestellt haben, können Sie zur Seite „Schutz“ zurückkehren und dann „Gefährdung identifizieren“ auswählen.
+
+.Ergebnis
+Das Scannen kann je nach Größe und Anzahl der Dateien mehrere Minuten dauern.  Während des Scans zeigt die Seite „Schutz“ an, dass Dateien identifiziert werden, und stellt eine Dateianzahl bereit.  Wenn der Scanvorgang abgeschlossen ist, wird in der Spalte „Datenschutzgefährdung“ die Gefährdungsstufe als „Niedrig“, „Mittel“ oder „Hoch“ eingestuft.
+
+
+
+== Überprüfen Sie die Datenschutzbestimmungen
+
+Bewerten Sie das Risiko, nachdem die Datenklassifizierung nach PII gesucht hat.
+
+PII-Daten werden einer von drei Kategorien zugeordnet:
+
+* *Hoch*: Mehr als 70 % der Dateien enthalten PII
+* *Mittel*: Mehr als 30 % und weniger als 70 % der Dateien enthalten PII
+* *Niedrig*: Mehr als 0 % und weniger als 30 % der Dateien enthalten PII
+
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
+. Suchen Sie auf der Seite „Schutz“ in der Spalte „Arbeitslast“ nach der Arbeitslast der Dateifreigabe, die in der Spalte „Datenschutzgefährdung“ einen Status anzeigt.
++
+image:screen-protection-sensitive-preview-column.png["Seite „Schutz“ mit der Spalte „Datenschutzgefährdung“"]
+
+. Wählen Sie den Workload-Link in der Workload-Spalte aus, um Details zum Workload anzuzeigen.
++
+image:screen-protection-workload-details-privacy-exposure.png["Bildschirm mit Workload-Details mit der Kachel „Datenschutzgefährdung“"]
+
+. Sehen Sie sich auf der Seite „Workloaddetails“ die Details in der Kachel „Datenschutzgefährdung“ an.
+
+
+
+
+== Auswirkungen der Offenlegung der Privatsphäre auf die Bedeutung der Arbeitsbelastung
+
+Änderungen der Datenschutzbelastung können sich auf die Arbeitsbelastung auswirken.
+
+[cols="15,20a,20,20"]
+|===
+| Bei Offenlegung der Privatsphäre: | Aus dieser Datenschutzbelehrung: | Zu dieser Datenschutzbeeinträchtigung: | Dann bewirkt die Arbeitslastwichtigkeit Folgendes: . 
+
+
+| *Abnahme*  a| 
+Hoch, Mittel oder Niedrig
+| Mittel, Niedrig oder Keine | Bleibt gleich 
+
+
+.3+| *Erhöht*  a| 
+Keine
+| Niedrig | Bleibt beim Standard 
+
+
+| Niedrig  a| 
+Medium
+| Änderungen von Standard zu Wichtig 
+
+
+| Niedrig oder Mittel  a| 
+Hoch
+| Änderungen von Standard oder Wichtig zu Kritisch 
+|===
+
+
+== Weitere Informationen
+
+Einzelheiten zur Datenklassifizierung finden Sie in der Dokumentation zur Datenklassifizierung:
+
+* https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die Datenklassifizierung"^]
+* https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Kategorien personenbezogener Daten"^]
+* https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Untersuchen Sie die in Ihrer Organisation gespeicherten Daten"^]
+

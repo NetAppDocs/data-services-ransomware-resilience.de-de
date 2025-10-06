@@ -1,0 +1,215 @@
+---
+sidebar: sidebar 
+permalink: rp-start-simulate.html 
+keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert, simulate, readiness drill, practice, ransomware attack, ransomware attack response, ransomware attack readiness drill 
+summary: Führen Sie eine Ransomware-Bereitschaftsübung durch, indem Sie einen Ransomware-Angriff auf eine neu erstellte Beispiel-Workload simulieren.  Untersuchen Sie dann den simulierten Angriff und stellen Sie die Beispiel-Arbeitslast wieder her.  Sie können eine Ransomware-Bereitschaftsübung mehrmals durchführen. 
+---
+= Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe in NetApp Ransomware Resilience durch
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch, indem Sie einen Angriff auf eine neue Beispiel-Workload simulieren.  Untersuchen Sie den simulierten Angriff und stellen Sie die Arbeitslast wieder her.  Verwenden Sie diese Funktion, um Warnbenachrichtigungen, Reaktionen und Wiederherstellungen zu testen.  Führen Sie die Übung so oft wie nötig durch.
+
+
+TIP: Ihre tatsächlichen Arbeitslastdaten sind davon nicht betroffen.
+
+Sie können Bereitschaftsübungen für NFS- und CIFS-Workloads (SMB) durchführen.
+
+
+
+== Konfigurieren Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe
+
+Bevor Sie eine Simulation ausführen, richten Sie auf der Seite „Einstellungen“ eine Übung ein.  Greifen Sie über die Option „Aktionen“ im oberen Menü auf die Seite „Einstellungen“ zu.
+
+In den folgenden Situationen müssen Sie einen Benutzernamen und ein Kennwort eingeben:
+
+* Wenn für die zuvor ausgewählte Storage-VM Änderungen am Benutzernamen oder Passwort vorgenommen wurden
+* Wenn Sie eine andere CIFS (SMB)-Speicher-VM auswählen
+* Wenn Sie einen anderen Test-Workload-Namen eingeben
+
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Wählen Sie im NetApp Ransomware Resilience-Menü oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
++
+image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaftsübung ausführen“"]
+
+. Wählen Sie auf der Seite „Einstellungen“ in der Karte „Bereitschaftsübung“ die Option „Konfigurieren“ aus.
++
+Die Konsole zeigt die Seite „Bereitschaftsübung konfigurieren“ an.
+
++
+image:screen-settings-alert-drill-configure.png["Seite „Bereitschaftsübung konfigurieren“"]
+
+. Gehen Sie folgendermaßen vor:
++
+.. Wählen Sie den Konsolenagenten aus, den Sie für die Bereitschaftsübung verwenden möchten.
+.. Wählen Sie ein Testsystem aus.
+.. Wählen Sie eine Testspeicher-SVM aus.
+.. Wenn Sie eine CIFS (SMB)-Speicher-VM ausgewählt haben, werden die Felder **Benutzername** und **Passwort** angezeigt.  Geben Sie den Benutzernamen und das Kennwort für die Speicher-VM ein.
+.. Geben Sie den Namen einer neuen Test-Workload ein, die erstellt werden soll.  Der Name darf keine Bindestriche enthalten.
+
+
+. Wählen Sie *Speichern*.
+
+
+
+TIP: Sie können die Konfiguration der Bereitschaftsübung später auf der Seite „Einstellungen“ bearbeiten.
+
+
+
+== Starten Sie eine Bereitschaftsübung
+
+Nachdem Sie die Bereitschaftsübung konfiguriert haben, können Sie mit der Übung beginnen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+Wenn Sie die Bereitschaftsübung starten, überspringt Ransomware Resilience den Lernmodus und startet die Übung im aktiven Modus.  Der Erkennungsstatus der Arbeitslast ist „Aktiv“.
+
+
+TIP: Eine Arbeitslast kann den Status „Lernmodus“ zur Ransomware-Erkennung haben, wenn vor Kurzem eine Erkennungsrichtlinie zugewiesen wurde und Ransomware Resilience Arbeitslasten scannt.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wählen Sie im Menü „Ransomware Resilience“ oben rechts die Schaltfläche „Bereitschaftsübung ausführen“ aus.
++
+image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaftsübung ausführen“"]
+
+** ODER wählen Sie auf der Seite „Einstellungen“ in der Karte „Bereitschaftsübung“ die Option „Start“ aus.
+
+
+. Wenn Sie die Bereitschaftsübung bereits konfiguriert haben, beginnt sie nach Auswahl von *Start*.
+
+
+
+NOTE: Nachdem die Übung begonnen hat, können Sie die Konfiguration der Bereitschaftsübung nicht mehr bearbeiten.  Sie können es zurücksetzen, um erneut zu starten.
+
+
+
+== Auf einen Alarm einer Bereitschaftsübung reagieren
+
+Testen Sie Ihre Bereitschaft, indem Sie auf eine Bereitschaftsübungswarnung reagieren.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
++
+Die Konsole zeigt die Seite „Warnungen“ an.  In der Spalte „Alarm-ID“ sehen Sie neben der ID „Bereitschaftsübung“.
+
++
+image:screen-alerts-readiness.png["Seite „Warnungen“ mit der Warnung zur Bereitschaftsübung"]
+
+. Wählen Sie den Alarm mit der Angabe „Bereitschaftsübung“ aus.  Auf der Detailseite der Warnungen wird eine Liste der Vorfallwarnungen angezeigt.
++
+image:screen-alerts-readiness-details.png["Seite mit Alarmdetails, auf der der Alarm zur Bereitschaftsübung angezeigt wird"]
+
+. Überprüfen Sie die Alarmvorfälle.
+. Wählen Sie einen Alarmvorfall aus.
++
+image:screen-alerts-readiness-incidents2.png["Vorfallseite mit der Warnung zur Bereitschaftsübung"]
+
+
+
+Hier sind einige Dinge, auf die Sie achten sollten:
+
+* Sehen Sie sich den potenziellen Angriffstyp an.
++
+Wenn der Typ darauf hinweist, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen.  Möglicherweise möchten Sie den Benutzer in Data Infrastructure Insights Workload Security genauer untersuchen, indem Sie *In Workload Security untersuchen* auswählen.
+
+
+
+* Sehen Sie sich die Dateiaktivität und verdächtigen Prozesse an:
++
+** Vergleichen Sie die eingehenden erkannten Daten mit den erwarteten Daten.
+** Sehen Sie sich die Erstellungsrate der erkannten Dateien im Vergleich zur erwarteten Rate an.
+** Sehen Sie sich die erkannte Dateiumbenennungsrate im Vergleich zur erwarteten Rate an.
+** Vergleichen Sie die Löschrate mit der erwarteten Rate.
+
+
+* Sehen Sie sich die Liste der betroffenen Dateien an.  Sehen Sie sich die Erweiterungen an, die den Angriff verursachen könnten.
+* Bestimmen Sie die Auswirkungen und das Ausmaß des Angriffs, indem Sie die Anzahl der betroffenen Dateien und Verzeichnisse überprüfen.
+
+
+
+
+== Wiederherstellen der Test-Workload
+
+Stellen Sie nach der Überprüfung der Warnung zur Bereitschaftsübung bei Bedarf die Testarbeitslast wieder her.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Kehren Sie zur Seite mit den Alarmdetails zurück.
+. Wenn die Test-Workload wiederhergestellt werden soll, gehen Sie wie folgt vor:
++
+** Wählen Sie *Als Wiederherstellung erforderlich markieren*.
+** Überprüfen Sie die Bestätigung und wählen Sie im Bestätigungsfeld *Als Wiederherstellung erforderlich markieren* aus.
++
+*** Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
+*** Wählen Sie den mit „Readiness Drill“ gekennzeichneten Test-Workload aus, den Sie wiederherstellen möchten.
+*** Wählen Sie *Wiederherstellen*.
+*** Geben Sie auf der Seite „Wiederherstellen“ Informationen zur Wiederherstellung ein:
+
+
+** Wählen Sie die Quell-Snapshot-Kopie aus.
+** Wählen Sie das Zielvolume aus.
+
+
+. Wählen Sie auf der Überprüfungsseite der Wiederherstellung *Wiederherstellen* aus.
++
+Die Konsole zeigt den Status der Wiederherstellung der Bereitschaftsübung auf der Wiederherstellungsseite als „In Bearbeitung“ an.
+
++
+Nachdem die Wiederherstellung abgeschlossen ist, ändert die Konsole den Status der Arbeitslast in *Wiederhergestellt*.
+
+. Überprüfen Sie die wiederhergestellte Arbeitslast.
+
+
+
+TIP: Einzelheiten zum Wiederherstellungsvorgang finden Sie unterlink:rp-use-recover.html["Wiederherstellung nach einem Ransomware-Angriff (nachdem die Vorfälle neutralisiert wurden)"] .
+
+
+
+== Ändern Sie den Alarmstatus nach der Bereitschaftsübung
+
+Nachdem Sie die Warnung zur Bereitschaftsübung überprüft und die Arbeitslast wiederhergestellt haben, ändern Sie bei Bedarf den Warnungsstatus.
+
+*Die Konsolenrolle ist erforderlich* Organisationsadministrator, Ordner- oder Projektadministrator oder Ransomware-Resilience-Administrator. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Kehren Sie zur Seite mit den Alarmdetails zurück.
+. Wählen Sie die Warnung erneut aus.
+. Geben Sie den Status an, indem Sie *Status bearbeiten* auswählen und den Status in einen der folgenden Werte ändern:
++
+** Abgelehnt: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, ändern Sie den Status in „Abgelehnt“.
++
+
+IMPORTANT: Nachdem Sie einen Angriff abgewehrt haben, können Sie ihn nicht mehr rückgängig machen.  Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.  Wenn Sie den Alarm verwerfen, gilt die Bereitschaftsübung als abgeschlossen.
+
+** Behoben: Der Vorfall wurde entschärft.
+
+
+
+
+
+
+== Überprüfen Sie die Berichte zur Bereitschaftsübung
+
+Nachdem die Bereitschaftsübung abgeschlossen ist, möchten Sie möglicherweise einen Bericht über die Übung überprüfen und speichern.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Berichte“ aus.
++
+image:screen-reports.png["Berichtsseite mit dem Bereitschaftsübungsbericht"]
+
+. Wählen Sie *Bereitschaftsübungen* und *Herunterladen*, um den Bericht zur Bereitschaftsübung herunterzuladen.
+

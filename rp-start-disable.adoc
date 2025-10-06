@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: rp-start-disable.html 
+keywords: bluexp, ransomware protection, netapp, disable protection 
+summary: Wenn Sie NetApp Ransomware Resilience nicht mehr verwenden möchten, können Sie die Lizenz auslaufen lassen. 
+---
+= NetApp Ransomware Resilience deaktivieren
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie NetApp Ransomware Resilience nicht mehr verwenden möchten, können Sie die Lizenz auslaufen lassen.  Sie können auch Richtlinien deaktivieren, die Sie nicht mehr verwenden möchten.
+
+
+
+== Ransomware-Resilienz deaktivieren
+
+Nach Ablauf des Abonnements oder der Lizenz deaktiviert Ransomware Resilience automatisch Funktionen, die ein Abonnement oder eine Lizenz erfordern.
+
+Details zu Aktionen, die Sie nach Ablauf der Lizenz noch durchführen können, finden Sie unterlink:rp-start-licenses.html["Einrichten der Ransomware Resilience-Lizenzierung"] .
+
+
+
+== Schutzrichtlinien deaktivieren
+
+Wenn Sie die Verwendung von Schutzrichtlinien, die auf Workloads angewendet werden, beenden möchten, können Sie diese mithilfe von System Manager, API-Aufrufen oder CLI deaktivieren.
+
+Sie können FPolicy- und Sicherungsrichtlinien in Ransomware Resilience deaktivieren, indem Sie eine andere Richtlinie anwenden, die diese nicht enthält.  Anweisungen zum Einrichten von Schutzrichtlinien finden Sie unterlink:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] .
+
+
+TIP: Wir empfehlen, Snapshot-Richtlinien nicht zu deaktivieren.

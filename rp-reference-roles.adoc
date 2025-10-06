@@ -1,0 +1,325 @@
+---
+sidebar: sidebar 
+permalink: rp-reference-roles.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
+summary: NetApp Ransomware Resilience verwendet Rollen, um den Zugriff jedes Benutzers auf bestimmte Funktionen und Aktionen zu regeln. 
+---
+= Rollenbasierter Zugriff auf NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience verwendet Rollen, um den Zugriff jedes Benutzers auf bestimmte Funktionen und Aktionen zu regeln.
+
+Ransomware Resilience verwendet die folgenden Rollen, die spezifisch für Ransomware Resilience sind.
+
+* *Ransomware Resilience-Administrator*: Verwalten Sie Aktionen auf den Registerkarten „Schützen“, „Warnungen“, „Wiederherstellen“, „Einstellungen“ und „Berichte“.
+* *Ransomware Resilience Viewer*: Zeigen Sie NetApp -Workloaddaten und Warndaten an, laden Sie Wiederherstellungsdaten herunter und laden Sie Berichte herunter.
+
+
+Diese Rollen ergänzen die Konsolenplattformrollen, die den Zugriff auf den Konsolendienst und andere Dienste wie Datenschutz, Workload-Management usw. regeln.  Einzelheiten zu allen Konsolenplattformrollen finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["die Setup- und Administrationsdokumentation"^] .
+
+Die folgende Tabelle zeigt die Aktionen, die jede Ransomware Resilience-Rolle ausführen kann.
+
+[cols="40,20a,20a"]
+|===
+| Funktion und Aktion | Ransomware-Resilienz-Administrator | Ransomware Resilience-Viewer 
+
+
+| Dashboard und alle Registerkarten anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Aktualisieren Sie den Empfehlungsstatus auf dem Dashboard  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Kostenlose Testversion starten  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Ermittlung von Workloads initiieren  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Neuermittlung von Workloads einleiten  a| 
+Ja
+ a| 
+Nein
+
+
+
+3+| *Auf der Registerkarte „Schützen“*: 
+
+
+| Schutzpläne hinzufügen, ändern oder löschen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Workloads schützen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Identifizieren Sie die Gefährdung sensibler Daten  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Listen Sie Schutzpläne und Details auf  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Auflisten von Schutzgruppen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Anzeigen von Schutzgruppendetails  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Schutzgruppe erstellen, bearbeiten oder löschen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Daten herunterladen  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| *Auf der Registerkarte „Warnungen“*: 
+
+
+| Anzeigen von Warnungen und Warnungsdetails  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Vorfallstatus bearbeiten  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Alarm zur Wiederherstellung markieren  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Vorfalldetails anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Vorfälle abweisen oder lösen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Benutzer blockieren  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Vollständige Liste der betroffenen Dateien abrufen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Warndaten herunterladen  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| *Auf der Registerkarte „Wiederherstellen“*: 
+
+
+| Betroffene Dateien herunterladen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Workload wiederherstellen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Wiederherstellungsdaten herunterladen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Berichte herunterladen  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| *Auf der Registerkarte „Einstellungen“*: 
+
+
+| Hinzufügen oder Ändern von Sicherungszielen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Auflisten der Sicherungsziele  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Verbundene SIEM-Ziele anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| SIEM-Ziele hinzufügen oder ändern  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Verbinden von Workload-Sicherheitszielen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Anzeigen des Verbindungsstatus der Workload-Sicherheit  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Trennen Sie die Workload-Sicherheitsziele  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Bereitschaftsübung konfigurieren  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Starten Sie die Bereitschaftsübung  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Übung zur Reset-Bereitschaft  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Bereitschaftsübung bearbeiten  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Status der Bereitschaftsübung überprüfen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Aktualisieren der Erkennungskonfiguration  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Anzeigen der Erkennungskonfiguration  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| *Auf der Registerkarte „Berichte“*: 
+
+
+| Berichte herunterladen  a| 
+Ja
+ a| 
+Ja
+
+|===

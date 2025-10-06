@@ -1,0 +1,31 @@
+= Aktualisierungen der Zielseite
+:allow-uri-read: 
+
+
+
+
+=== Aktualisierungen der Zielseite
+
+Diese Version enthält Aktualisierungen der Zielseite für den BlueXP ransomware protection , die den Start der kostenlosen Testversion und die Entdeckung erleichtern.
+
+
+
+=== Aktualisierungen der Bereitschaftsübung
+
+Bisher konnten Sie eine Ransomware-Bereitschaftsübung durchführen, indem Sie einen Angriff auf eine neue Beispiel-Workload simulierten.  Mit dieser Funktion können Sie den simulierten Angriff untersuchen und die Arbeitslast wiederherstellen.  Verwenden Sie diese Funktion, um Warnbenachrichtigungen, Reaktionen und Wiederherstellungen zu testen.  Führen Sie diese Übungen so oft wie nötig durch und planen Sie sie.
+
+Mit dieser Version können Sie über eine neue Schaltfläche im BlueXP ransomware protection eine Ransomware-Bereitschaftsübung für eine Test-Workload ausführen. So können Sie Ransomware-Angriffe einfacher simulieren, ihre Auswirkungen untersuchen und Workloads effizient wiederherstellen – und das alles in einer kontrollierten Umgebung.
+
+Sie können jetzt Bereitschaftsübungen zusätzlich zu NFS-Workloads auch für CIFS-Workloads (SMB) durchführen.
+
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
+
+
+
+=== Aktivieren Sie BlueXP classification Klassifizierungsaktualisierungen
+
+Bevor Sie die BlueXP classification innerhalb des BlueXP ransomware protection verwenden, müssen Sie die BlueXP classification aktivieren, um Ihre Daten zu scannen.  Durch die Klassifizierung von Daten können Sie personenbezogene Daten (PII) finden, die das Sicherheitsrisiko erhöhen können.
+
+Sie können die BlueXP classification auf einer Dateifreigabe-Workload innerhalb des BlueXP ransomware protection bereitstellen.  Wählen Sie in der Spalte *Datenschutzgefährdung* die Option *Gefährdung identifizieren*.  Wenn Sie den Klassifizierungsdienst aktiviert haben, identifiziert diese Aktion die Gefährdung.  Andernfalls wird mit dieser Version in einem Dialogfeld die Option zum Bereitstellen der BlueXP classification angezeigt.  Wählen Sie *Bereitstellen*, um zur Zielseite des BlueXP classification zu gelangen, wo Sie diesen Dienst bereitstellen können.  W
+
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["Stellen Sie die BlueXP classification in der Cloud bereit"^] und um den Dienst innerhalb des BlueXP ransomware protection zu nutzen, beziehen Sie sich auf https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect-classify.html["Scannen Sie mit der BlueXP classification nach personenbezogenen Daten"] .

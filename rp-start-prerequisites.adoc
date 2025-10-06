@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: rp-start-prerequisites.html 
+keywords: bluexp ransomware protection, ransomware protection prerequisites, resilience 
+summary: Beginnen Sie mit NetApp Ransomware Resilience, indem Sie die Unterstützung für Ihre Umgebung, Ihren Netzwerkzugriff, Ihre Anmeldung und Ihren Webbrowser überprüfen. 
+---
+= Voraussetzungen für NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/get-started/
+
+
+[role="lead"]
+Beginnen Sie mit NetApp Ransomware Resilience, indem Sie die Bereitschaft Ihrer Betriebsumgebung, Anmeldung, Ihres Netzwerkzugriffs und Ihres Webbrowsers überprüfen.
+
+Um Ransomware Resilience zu verwenden, benötigen Sie die Voraussetzungen.
+
+
+
+== In der NetApp Konsole
+
+* Ein NetApp Konsolenbenutzerkonto mit Organisationsadministratorberechtigungen zum Erkennen von Ressourcen.
+* Eine Konsolenorganisation mit mindestens einem aktiven Konsolenagenten, der eine Verbindung zu lokalen ONTAP Clustern oder zu Cloud Volumes ONTAP in AWS oder Azure herstellt.
+* Der Konsolenagent muss über die `cloudmanager-ransomware-protection` Container in einem aktiven Zustand.
+* Mindestens ein Konsolensystem mit einem lokalen NetApp ONTAP -Cluster oder Cloud Volumes ONTAP in AWS oder Azure.  Ransomware Resilience unterstützt sowohl NAS- (NFS und SMB) als auch SAN-Protokolle (iSCSI, FC und NVMe).
++
+** ONTAP oder Cloud Volumes ONTAP Cluster mit ONTAP OS Version 9.11.1 oder höher werden unterstützt.
++
+
+NOTE: SAN-Workloads werden nur in ONTAP 9.17.1 und höher unterstützt.
+
+** Wenn Ihre lokalen ONTAP Cluster oder Cloud Volumes ONTAP in AWS oder in der Azure-Cloud noch nicht in die Konsole integriert sind, benötigen Sie einen Konsolenagenten.
++
+Siehe https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten konfigurieren"] Und https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["Standardanforderungen für die Konsole"^] .
+
++
+
+NOTE: Wenn Sie mehrere Konsolenagenten in einer einzigen Konsolenorganisation haben, scannt Ransomware Resilience die ONTAP Ressourcen aller Konsolenagenten über den derzeit in der Konsolen-Benutzeroberfläche ausgewählten Agenten hinaus.
+
+
+
+
+
+
+
+== In ONTAP 9.11.1 und höher
+
+* Auf der lokalen ONTAP Instanz ist eine ONTAP One-Lizenz aktiviert.
+* Eine Lizenz für NetApp Autonomous Ransomware Protection, verwendet von Ransomware Resilience, aktiviert auf der lokalen ONTAP Instanz, abhängig von der von Ihnen verwendeten ONTAP -Version. Siehe https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Übersicht über den autonomen Ransomware-Schutz"^] .
++
+
+NOTE: Die allgemeine Version von Ransomware Resilience enthält im Gegensatz zur Vorschauversion eine Lizenz für die NetApp Autonomous Ransomware Protection-Technologie. Siehe https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Übersicht über den autonomen Ransomware-Schutz"^] für Details.
+
++
+Weitere Lizenzdetails finden Sie unterlink:concept-ransomware-protection.html["Erfahren Sie mehr über Ransomware-Resilienz"] .
+
+* Um Schutzkonfigurationen anzuwenden (wie etwa die Aktivierung des autonomen Ransomware-Schutzes und anderer), benötigt Ransomware Resilience Administratorberechtigungen für den ONTAP Cluster.  Das Onboarding des ONTAP Clusters sollte ausschließlich mit den Anmeldeinformationen des ONTAP Cluster-Administratorbenutzers erfolgen.
+* Wenn der ONTAP Cluster bereits mit den Anmeldeinformationen eines Nicht-Administratorbenutzers in der Konsole integriert ist, müssen die Berechtigungen des Nicht-Administratorbenutzers durch die Anmeldung beim ONTAP Cluster mit den erforderlichen Berechtigungen aktualisiert werden, wie auf dieser Seite beschrieben.
+
+
+
+
+== Für Datensicherungen
+
+* Ein Konto in NetApp StorageGRID, AWS S3, Azure Blob oder Google Cloud Platform für Sicherungsziele und die festgelegten Zugriffsberechtigungen.
++
+Weitere Informationen finden Sie im https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html["AWS-, Azure- oder S3-Berechtigungsliste"^] für Details.
+
+* NetApp Backup and Recovery muss auf dem System nicht aktiviert werden.
++
+Ransomware Resilience hilft bei der Konfiguration eines Sicherungsziels über die Option „Einstellungen“. Sehen link:rp-use-settings.html["Konfigurieren der Einstellungen"] .
+
+
+
+
+
+== Aktualisieren Sie die Berechtigungen von Nicht-Administratorbenutzern in einem ONTAP -System
+
+Wenn Sie die Berechtigungen von Nicht-Administratorbenutzern für ein bestimmtes System aktualisieren müssen, führen Sie diese Schritte aus.
+
+. Melden Sie sich bei der Konsole an und suchen Sie nach dem System, dessen ONTAP Benutzerberechtigungen aktualisiert werden müssen.
+. Wählen Sie das System aus, um Details anzuzeigen.
+. Wählen Sie *Zusätzliche Informationen anzeigen*, um den Benutzernamen anzuzeigen.
+. Melden Sie sich mit dem Administratorbenutzer bei der CLI des ONTAP -Clusters an.
+. Zeigen Sie die vorhandenen Rollen für diesen Benutzer an. Eingeben:
++
+[listing]
+----
+security login show -user-or-group-name <username>
+----
+. Ändern Sie die Rolle für den Benutzer. Eingeben:
++
+[listing]
+----
+security login modify -user-or-group-name <username> -application console|http|ontapi|ssh|telnet -authentication-method password -role admin
+----
+. Kehren Sie zur Ransomware Resilience-Benutzeroberfläche zurück, um es zu verwenden.
+

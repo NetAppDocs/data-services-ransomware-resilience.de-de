@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: rp-start-quick-start.html 
+keywords: get started, ransomware protection, quick start, resilience, quickstart 
+summary: Beginnen Sie in wenigen Schritten mit der NetApp Ransomware Resilience. 
+---
+= Schnellstart für NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hier finden Sie eine Übersicht über die erforderlichen Schritte für den Einstieg in NetApp Ransomware Resilience. Über die Links in den einzelnen Schritten gelangen Sie zu einer Seite mit weiteren Einzelheiten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Überprüfen der Voraussetzungen
+[role="quick-margin-para"]
+link:rp-start-prerequisites.html["Stellen Sie sicher, dass Ihr System diese Anforderungen erfüllt"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Ransomware-Resilienz einrichten
+[role="quick-margin-list"]
+* link:rp-start-setup.html["Bereiten Sie NetApp StorageGRID, Amazon Web Services, Google Cloud Platform oder Microsoft Azure als Sicherungsziel vor"] .
+* link:rp-start-setup.html["Konfigurieren eines Konsolenagenten"] .
+* link:rp-start-licenses.html["Einrichten der Lizenzierung"] .
+* link:rp-start-discover.html["Workloads in der Konsole ermitteln"] .
+* link:rp-start-setup.html["Konfigurieren von Sicherungszielen"] .
+* link:rp-start-setup.html["Aktivieren Sie optional die Bedrohungserkennung"] .
+* link:rp-start-simulate.html["Führen Sie optional eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Wie geht es weiter?
+[role="quick-margin-para"]
+Nachdem Sie Ransomware Resilience eingerichtet haben, können Sie als Nächstes Folgendes tun.
+
+[role="quick-margin-list"]
+* link:rp-use-dashboard.html["Zeigen Sie den Zustand des Workload-Schutzes auf dem Dashboard an"] .
+* link:rp-use-protect.html["Workloads schützen"] .
+* link:rp-use-alert.html["Reagieren Sie auf die Erkennung potenzieller Ransomware-Angriffe"] .
+* link:rp-use-recover.html["Wiederherstellung nach einem Angriff (nachdem Vorfälle neutralisiert wurden)"] .
+

@@ -1,0 +1,342 @@
+---
+sidebar: sidebar 
+permalink: rp-use-recover.html 
+keywords: ransomware protection recovery, recover from a ransomware attack, recovery point, RPA 
+summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience, ob die Sicherungsdaten auf dem Sekundärspeicher sauber sind, empfiehlt einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.' 
+---
+= Wiederherstellung nach einem Ransomware-Angriff (nachdem die Vorfälle neutralisiert wurden) mit NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Workloads als „Wiederherstellung erforderlich“ markiert wurden, empfiehlt NetApp Ransomware Resilience einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.
+
+* Wenn die Anwendung oder VM von SnapCenter verwaltet wird, stellt Ransomware Resilience die Anwendung oder VM mithilfe des anwendungskonsistenten oder VM-konsistenten Prozesses in ihren vorherigen Zustand und die letzte Transaktion zurück.  Bei der anwendungs- oder VM-konsistenten Wiederherstellung werden alle Daten, die nicht in den Speicher gelangt sind (z. B. Daten im Cache oder in einem E/A-Vorgang), den Daten im Volume hinzugefügt.
+* Wenn die Anwendung oder VM _nicht_ von SnapCenter , sondern von NetApp Backup and Recovery oder Ransomware Resilience verwaltet wird, führt Ransomware Resilience eine absturzkonsistente Wiederherstellung durch, bei der alle Daten, die sich zum gleichen Zeitpunkt auf dem Volume befanden, wiederhergestellt werden, beispielsweise wenn das System abgestürzt ist.
++
+Sie können die Arbeitslast wiederherstellen, indem Sie alle Volumes, bestimmte Volumes oder bestimmte Dateien auswählen.
+
+
+
+
+TIP: Die Wiederherstellung der Arbeitslast kann sich auf laufende Arbeitslasten auswirken.  Sie sollten die Wiederherstellungsprozesse mit den entsprechenden Beteiligten koordinieren.
+
+Ein Workload kann einen der folgenden Wiederherstellungsstatus haben:
+
+* *Wiederherstellung erforderlich*: Die Arbeitslast muss wiederhergestellt werden.
+* *In Bearbeitung*: Der Wiederherstellungsvorgang ist derzeit im Gange.
+* *Wiederhergestellt*: Die Arbeitslast wurde wiederhergestellt.
+* *Fehlgeschlagen*: Der Workload-Wiederherstellungsprozess konnte nicht abgeschlossen werden.
+
+
+
+
+== Anzeigen von Workloads, die zur Wiederherstellung bereit sind
+
+Überprüfen Sie die Workloads, die sich im Wiederherstellungsstatus „Wiederherstellung erforderlich“ befinden.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Überprüfen Sie im Dashboard die Gesamtsummen für „Wiederherstellung erforderlich“ im Bereich „Warnungen“ und wählen Sie „Alle anzeigen“ aus.
+** Wählen Sie im Menü *Wiederherstellung* aus.
+
+
+. Überprüfen Sie die Arbeitslastinformationen auf der Seite *Wiederherstellung*.
++
+image:screen-recovery2.png["Wiederherstellungsseite"]
+
+
+
+
+
+== Wiederherstellen einer von SnapCenter verwalteten Arbeitslast
+
+Mithilfe von Ransomware Resilience kann der Speicheradministrator bestimmen, wie Workloads am besten vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt wiederhergestellt werden.
+
+Der Anwendungsstatus ändert sich, falls dies für die Wiederherstellung erforderlich ist.  Die Anwendung wird aus Steuerdateien in ihren vorherigen Zustand zurückversetzt, sofern diese in der Sicherung enthalten sind.  Nach Abschluss der Wiederherstellung wird die Anwendung im LESE-/SCHREIBMODUS geöffnet.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+.Schritte
+. Wählen Sie unter „Ransomware-Resilienz“ die Option „Wiederherstellung“ aus.
+. Überprüfen Sie die Arbeitslastinformationen auf der Seite *Wiederherstellung*.
+. Wählen Sie eine Arbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie zum Wiederherstellen *Wiederherstellen*.
+. *Wiederherstellungsbereich*: Anwendungskonsistent (oder für SnapCenter für VMs ist der Wiederherstellungsbereich „Nach VM“)
+. *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.  Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
++
+
+TIP: Ransomware Resilience identifiziert den besten Wiederherstellungspunkt als die letzte Sicherung unmittelbar vor dem Vorfall und zeigt die Anzeige „Empfohlen“ an.
+
+. *Ziel*: Wählen Sie den Abwärtspfeil neben „Ziel“, um Details anzuzeigen.
++
+.. Wählen Sie den ursprünglichen oder alternativen Speicherort aus.
+.. Wählen Sie das System aus.
+.. Wählen Sie die Speicher-VM aus.
+
+
+. Wenn am ursprünglichen Ziel nicht genügend Speicherplatz zum Wiederherstellen der Arbeitslast vorhanden ist, wird die Zeile „Temporärer Speicher“ angezeigt.  Sie können den temporären Speicher auswählen, um die Workload-Daten wiederherzustellen.  Die wiederhergestellten Daten werden vom temporären Speicher an den ursprünglichen Speicherort kopiert.  Klicken Sie in der Zeile „Temporärer Speicher“ auf den *Abwärtspfeil* und legen Sie den Zielcluster, die Speicher-VM und die lokale Ebene fest.
+. Wählen Sie *Speichern*.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie Ihre Auswahl.
+. Wählen Sie *Wiederherstellen*.
+. Wählen Sie im oberen Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
+
+
+
+
+== Wiederherstellen einer Arbeitslast, die nicht von SnapCenter verwaltet wird
+
+Mithilfe von Ransomware Resilience kann der Speicheradministrator bestimmen, wie Workloads am besten vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt wiederhergestellt werden.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+Der Sicherheitsspeicheradministrator kann Daten auf verschiedenen Ebenen wiederherstellen:
+
+* Wiederherstellung aller Volumes
+* Stellen Sie eine Anwendung auf Volume- oder Datei- und Ordnerebene wieder her.
+* Stellen Sie eine Dateifreigabe auf Volume-, Verzeichnis- oder Datei-/Ordnerebene wieder her.
+* Wiederherstellung aus einem Datenspeicher auf VM-Ebene.
+
+
+Der Prozess unterscheidet sich je nach Arbeitslasttyp.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
+. Überprüfen Sie die Arbeitslastinformationen auf der Seite *Wiederherstellung*.
+. Wählen Sie eine Arbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie zum Wiederherstellen *Wiederherstellen*.
+. *Wiederherstellungsumfang*: Wählen Sie den Wiederherstellungstyp aus, den Sie durchführen möchten:
++
+** Alle Bände
+** Nach Volumen
+** Nach Datei: Sie können einen Ordner oder einzelne Dateien zur Wiederherstellung angeben.
++
+
+IMPORTANT: Bei SAN-Workloads können Sie nur nach Workload wiederherstellen.
+
++
+
+TIP: Sie können bis zu 100 Dateien oder einen einzelnen Ordner auswählen.
+
+
+
+. Fahren Sie mit einem der folgenden Verfahren fort, je nachdem, ob Sie Anwendung, Volume oder Datei ausgewählt haben.
+
+
+
+
+=== Alle Volumes wiederherstellen
+
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
+. Wählen Sie eine Arbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie zum Wiederherstellen *Wiederherstellen*.
+. Wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich *Alle Volumes* aus.
++
+image:screen-recovery-all-volumes.png["Seite „Wiederherstellen nach allen Volumes“"]
+
+. *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.
++
+.. Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
++
+
+TIP: Ransomware Resilience identifiziert den besten Wiederherstellungspunkt als die letzte Sicherung unmittelbar vor dem Vorfall und zeigt die Meldung „Am sichersten für alle Volumes“ an.  Dies bedeutet, dass alle Volumes auf eine Kopie wiederhergestellt werden, die vor dem ersten erkannten Angriff auf das erste Volume erstellt wurde.
+
+
+
+. *Ziel*: Wählen Sie den Abwärtspfeil neben „Ziel“, um Details anzuzeigen.
++
+.. Wählen Sie das System aus.
+.. Wählen Sie die Speicher-VM aus.
+.. Wählen Sie das Aggregat aus.
+.. Ändern Sie das Volume-Präfix, das allen neuen Volumes vorangestellt wird.
++
+
+TIP: Der neue Datenträgername wird als Präfix + ursprünglicher Datenträgername + Sicherungsname + Sicherungsdatum angezeigt.
+
+
+
+. Wählen Sie *Speichern*.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie Ihre Auswahl.
+. Wählen Sie *Wiederherstellen*.
+. Wählen Sie im oberen Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
+
+
+
+
+=== Wiederherstellen einer Anwendungs-Workload auf Volume-Ebene
+
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
+. Wählen Sie eine Anwendungsarbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie zum Wiederherstellen *Wiederherstellen*.
+. Wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich die Option *Nach Volume* aus.
++
+image:screen-recovery-byvolume.png["Seite „Wiederherstellen nach Volume“"]
+
+. Wählen Sie in der Volumeliste das Volume aus, das Sie wiederherstellen möchten.
+. *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.
++
+.. Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
++
+
+TIP: Ransomware Resilience identifiziert den besten Wiederherstellungspunkt als die letzte Sicherung unmittelbar vor dem Vorfall und zeigt die Meldung „Empfohlen“ an.
+
+
+
+. *Ziel*: Wählen Sie den Abwärtspfeil neben „Ziel“, um Details anzuzeigen.
++
+.. Wählen Sie das System aus.
+.. Wählen Sie die Speicher-VM aus.
+.. Wählen Sie das Aggregat aus.
+.. Überprüfen Sie den neuen Datenträgernamen.
++
+
+TIP: Der neue Datenträgername wird als ursprünglicher Datenträgername + Sicherungsname + Sicherungsdatum angezeigt.
+
+
+
+. Wählen Sie *Speichern*.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie Ihre Auswahl.
+. Wählen Sie *Wiederherstellen*.
+. Wählen Sie im oberen Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
+
+
+
+
+=== Wiederherstellen einer Anwendungs-Workload auf Dateiebene
+
+Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen.  Sie können auf die Seite „Warnungen“ zugreifen, um eine Liste der betroffenen Dateien herunterzuladen.  Verwenden Sie dann die Wiederherstellungsseite, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
+
+Sie können eine Anwendungs-Workload auf Dateiebene auf demselben oder einem anderen System wiederherstellen.
+
+.Schritte zum Abrufen der Liste der betroffenen Dateien
+Verwenden Sie die Seite „Warnungen“, um die Liste der betroffenen Dateien abzurufen.
+
+
+TIP: Wenn ein Volume mehrere Warnungen aufweist, müssen Sie für jede Warnung die CSV-Liste der betroffenen Dateien herunterladen.
+
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
+. Sortieren Sie auf der Seite „Warnungen“ die Ergebnisse nach Arbeitslast, um die Warnungen für die Anwendungsarbeitslast anzuzeigen, die Sie wiederherstellen möchten.
+. Wählen Sie aus der Liste der Warnungen für diese Arbeitslast eine Warnung aus.
+. Wählen Sie für diese Warnung einen einzelnen Vorfall aus.
++
+image:screen-alerts-incidents-impacted-files.png["Liste der betroffenen Dateien für eine bestimmte Warnung"]
+
+. Um die vollständige Liste der Dateien anzuzeigen, wählen Sie oben im Bereich „Betroffene Dateien“ die Option *Hier klicken* aus.
+. Wählen Sie für diesen Vorfall das Download-Symbol aus und laden Sie die Liste der betroffenen Dateien im CSV-Format herunter.
+
+
+.Schritte zum Wiederherstellen dieser Dateien
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
+. Wählen Sie eine Anwendungsarbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie zum Wiederherstellen *Wiederherstellen*.
+. Wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich die Option „Nach Datei“ aus.
+. Wählen Sie in der Volumeliste das Volume aus, das die Dateien enthält, die Sie wiederherstellen möchten.
+. *Wiederherstellungspunkt*: Wählen Sie den Abwärtspfeil neben *Wiederherstellungspunkt*, um Details anzuzeigen.  Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
++
+
+NOTE: In der Spalte „Grund“ im Bereich „Wiederherstellungspunkte“ wird der Grund für den Snapshot oder die Sicherung entweder als „Geplant“ oder „Automatisierte Reaktion auf Ransomware-Vorfall“ angezeigt.
+
+. *Dateien*:
++
+** *Dateien automatisch auswählen*: Lassen Sie Ransomware Resilience die wiederherzustellenden Dateien auswählen.
+** *Dateiliste hochladen*: Laden Sie eine CSV-Datei hoch, die die Liste der betroffenen Dateien enthält, die Sie von der Warnseite erhalten haben oder über die Sie verfügen.  Sie können bis zu 10.000 Dateien gleichzeitig wiederherstellen.
++
+image:screen-recovery-app-by-file-upload-csv.png["Laden Sie eine CSV-Datei hoch, in der die betroffenen Dateien für die Warnung aufgelistet sind."]
+
+** *Dateien manuell auswählen*: Wählen Sie bis zu 10.000 Dateien oder einen einzelnen Ordner zur Wiederherstellung aus.
++
+image:screen-recovery-app-by-file-select-files.png["Wählen Sie die wiederherzustellenden Dateien manuell aus"]
+
++
+
+NOTE: Wenn Dateien mit dem ausgewählten Wiederherstellungspunkt nicht wiederhergestellt werden können, wird eine Meldung mit der Anzahl der nicht wiederhergestellten Dateien angezeigt. Sie können die Liste dieser Dateien herunterladen, indem Sie „Liste der betroffenen Dateien herunterladen“ auswählen.
+
+
+
+. *Ziel*: Wählen Sie den Abwärtspfeil neben „Ziel“, um Details anzuzeigen.
++
+.. Wählen Sie, wo die Daten wiederhergestellt werden sollen: am ursprünglichen Quellspeicherort oder an einem alternativen Speicherort, den Sie angeben können.
++
+
+TIP: Während die ursprünglichen Dateien oder Verzeichnisse durch die wiederhergestellten Daten überschrieben werden, bleiben die ursprünglichen Datei- und Ordnernamen gleich, sofern Sie keine neuen Namen angeben.
+
+.. Wählen Sie das System aus.
+.. Wählen Sie die Speicher-VM aus.
+.. Geben Sie optional den Pfad ein.
++
+
+TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien auf einem neuen Volume im obersten Verzeichnis wiederhergestellt.
+
+.. Wählen Sie aus, ob die Namen der wiederhergestellten Dateien oder Verzeichnisse dieselben oder andere Namen wie am aktuellen Speicherort haben sollen.
+
+
+. Wählen Sie *Weiter*.
+. Überprüfen Sie Ihre Auswahl.
+. Wählen Sie *Wiederherstellen*.
+. Wählen Sie im oberen Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
+
+
+
+
+=== Wiederherstellen einer Dateifreigabe oder eines Datenspeichers
+
+. Nachdem Sie eine Dateifreigabe oder einen Datenspeicher zum Wiederherstellen ausgewählt haben, wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich die Option *Nach Volume* aus.
++
+image:screen-recovery-fileshare.png["Wiederherstellungsseite mit der Dateifreigabewiederherstellung"]
+
+. Wählen Sie in der Volumeliste das Volume aus, das Sie wiederherstellen möchten.
+. *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.
++
+.. Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
++
+
+TIP: Ransomware Resilience identifiziert den besten Wiederherstellungspunkt als die letzte Sicherung unmittelbar vor dem Vorfall und zeigt die Meldung „Empfohlen“ an.
+
+
+
+. *Ziel*: Wählen Sie den Abwärtspfeil neben „Ziel“, um Details anzuzeigen.
++
+.. Wählen Sie, wo die Daten wiederhergestellt werden sollen: am ursprünglichen Quellspeicherort oder an einem alternativen Speicherort, den Sie angeben können.
++
+
+TIP: Während die ursprünglichen Dateien oder Verzeichnisse durch die wiederhergestellten Daten überschrieben werden, bleiben die ursprünglichen Datei- und Ordnernamen gleich, sofern Sie keine neuen Namen angeben.
+
+.. Wählen Sie das System aus.
+.. Wählen Sie die Speicher-VM aus.
+.. Geben Sie optional den Pfad ein.
++
+
+TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien auf einem neuen Volume im obersten Verzeichnis wiederhergestellt.
+
+
+
+. Wählen Sie *Speichern*.
+. Überprüfen Sie Ihre Auswahl.
+. Wählen Sie *Wiederherstellen*.
+. Wählen Sie im Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Seite „Wiederherstellung“ zu überprüfen, auf der der Status des Vorgangs durch die verschiedenen Zustände geht.
+
+
+
+
+=== Wiederherstellen einer VM-Dateifreigabe auf VM-Ebene
+
+Nachdem Sie eine VM zur Wiederherstellung ausgewählt haben, fahren Sie auf der Seite „Wiederherstellung“ mit diesen Schritten fort.
+
+. *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.
++
+image:screen-recovery-vm.png["Wiederherstellungsseite mit der Anzeige einer wiederhergestellten VM"]
+
+. Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
+. *Ziel*: Zum ursprünglichen Standort.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie Ihre Auswahl.
+. Wählen Sie *Wiederherstellen*.
+. Wählen Sie im Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Seite „Wiederherstellung“ zu überprüfen, auf der der Status des Vorgangs durch die verschiedenen Zustände geht.
+

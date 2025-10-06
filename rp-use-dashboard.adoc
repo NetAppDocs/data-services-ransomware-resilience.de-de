@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: rp-use-dashboard.html 
+keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
+summary: Das NetApp Ransomware Resilience Dashboard bietet Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden, und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.  Sie können das Dashboard auch verwenden, um Schutzempfehlungen zu überprüfen und umzusetzen. 
+---
+= Überwachen Sie den Workload-Zustand mit dem NetAPp Ransomware Resilience Dashboard
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das NetApp Ransomware Resilience Dashboard bietet auf einen Blick Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.
+
+Verwenden Sie das Dashboard, um Schutzvorschläge zu prüfen, Einstellungen zu ändern, Berichte herunterzuladen und Dokumentationen anzuzeigen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+
+
+
+== Überprüfen des Workload-Zustands mithilfe des Dashboards
+
+.Schritte
+. Nachdem die Konsole Ihre Workloads erkannt hat, zeigt das Ransomware Resilience-Dashboard den Datenschutzstatus der Workloads an.
++
+image:screen-dashboard.png["Dashboard-Seite"]
+
+. Vom Dashboard aus können Sie in jedem Bereich die folgenden Aktionen ausführen:
++
+** *Schutz von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um auf der Seite „Schutz“ alle gefährdeten oder geschützten Workloads anzuzeigen.  Wenn die Schutzstufen nicht mit einer Schutzrichtlinie übereinstimmen, sind Workloads gefährdet. Weitere Informationen finden Sie unter link:rp-use-protect.html["Workloads schützen"] .
++
+
+TIP: Wählen Sie den Tooltip „i“ aus, um Tipps zu diesen Daten anzuzeigen.  Um das Arbeitslastlimit zu erhöhen, wählen Sie in dieser Notiz *Arbeitslastlimit erhöhen* aus.  Wenn Sie diese Option auswählen, gelangen Sie zur Seite „Konsolensupport“, auf der Sie ein Fallticket erstellen können.
+
+** *Warnungen und Wiederherstellung von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um aktive Vorfälle anzuzeigen, die sich auf Ihren Workload ausgewirkt haben, nach der Neutralisierung der Vorfälle zur Wiederherstellung bereit sind oder sich in der Wiederherstellung befinden. Weitere Informationen finden Sie unter link:rp-use-alert.html["Auf eine erkannte Warnung reagieren"] .
++
+*** Ein Vorfall wird in einen der folgenden Zustände eingeteilt:
++
+**** Neu
+**** Entlassen
+**** Abweisen
+**** Gelöst
+
+
+*** Eine Warnung kann einen der folgenden Status haben:
++
+**** Neu
+**** Inaktiv
+
+
+*** Ein Workload kann einen der folgenden Wiederherstellungsstatus haben:
++
+**** Wiederherstellung erforderlich
+**** Im Gange
+**** Restauriert
+**** Fehlgeschlagen
+
+
+
+
+** *Empfohlene Maßnahmen*: Um den Schutz zu erhöhen, überprüfen Sie jede Empfehlung und wählen Sie dann *Überprüfen und beheben*.
++
+Sehen link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Überprüfen Sie die Schutzvorschläge auf dem Dashboard"] oder link:rp-use-protect.html["Workloads schützen"] .
+
++
+Ransomware Resilience zeigt 24 Stunden lang neue Empfehlungen seit Ihrem letzten Besuch des Dashboards mit dem Tag „Neu“ an.  Die Aktionen werden in der Reihenfolge ihrer Priorität angezeigt, wobei die wichtigsten ganz oben stehen.  Überprüfen Sie jede Empfehlung, setzen Sie sie um oder verwerfen Sie sie.
+
++
+In der Gesamtzahl der Aktionen sind die von Ihnen abgelehnten Aktionen nicht enthalten.
+
+** *Arbeitslastdaten*: Überwachen Sie Änderungen im Schutzumfang der letzten 7 Tage.
+** *Workload-Backups*: Überwachen Sie Änderungen an Workload-Backups, die von Ransomware Resilience erstellt wurden und in den letzten 7 Tagen fehlgeschlagen oder erfolgreich abgeschlossen wurden.
+
+
+
+
+
+
+== Überprüfen Sie die Schutzempfehlungen auf dem Dashboard
+
+Ransomware Resilience bewertet den Schutz Ihrer Workloads und empfiehlt Maßnahmen zur Verbesserung dieses Schutzes.
+
+Sie können eine Empfehlung prüfen und darauf reagieren, wodurch sich der Status der Empfehlung in „Abgeschlossen“ ändert.  Oder Sie können es verwerfen, wenn Sie später darauf reagieren möchten.  Durch das Ablehnen einer Aktion wird die Empfehlung in eine Liste abgelehnter Aktionen verschoben, die Sie später überprüfen können.
+
+Hier ist eine Auswahl der Empfehlungen von Ransomware Resilience.
+
+[cols="30,30,30"]
+|===
+| Empfehlung | Beschreibung | So lösen Sie 
+
+
+| Fügen Sie eine Ransomware-Schutzrichtlinie hinzu. | Die Arbeitslast ist derzeit nicht geschützt. | Weisen Sie der Arbeitslast eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+
+
+| Stellen Sie eine Verbindung zu SIEM her, um Bedrohungen zu melden. | Senden Sie Daten zur Bedrohungsanalyse und -erkennung an ein Sicherheits- und Ereignismanagementsystem (SIEM). | Geben Sie die SIEM/XDR-Serverdetails ein, um die Bedrohungserkennung zu aktivieren. Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Schutzeinstellungen"] . 
+
+
+| Aktivieren Sie Workload-konsistenten Schutz für Anwendungen oder VMware. | Diese Workloads werden nicht von der SnapCenter -Software oder dem SnapCenter Plug-in for VMware vSphere verwaltet. | Aktivieren Sie den Workload-konsistenten Schutz, damit sie von SnapCenter verwaltet werden. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Ihre Workload vor Ransomware-Angriffen"] . 
+
+
+| Verbessern Sie die Sicherheitslage des Systems | NetApp Digital Advisor hat mindestens ein hohes oder kritisches Sicherheitsrisiko identifiziert. | Überprüfen Sie alle Sicherheitsrisiken im NetApp Digital Advisor. Siehe https://docs.netapp.com/us-en/active-iq/index.html["Digital Advisor -Dokumentation"^] . 
+
+
+| Machen Sie eine Politik stärker. | Einige Workloads sind möglicherweise nicht ausreichend geschützt.  Stärken Sie den Schutz von Workloads mit einer Richtlinie. | Erhöhen Sie die Aufbewahrung, fügen Sie Backups hinzu, erzwingen Sie unveränderliche Backups, blockieren Sie verdächtige Dateierweiterungen, aktivieren Sie die Erkennung auf sekundärem Speicher und mehr. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+
+
+| Bereiten Sie <Sicherungsanbieter> als Sicherungsziel vor, um Ihre Workload-Daten zu sichern. | Die Arbeitslast hat derzeit keine Sicherungsziele. | Fügen Sie diesem Workload Sicherungsziele hinzu, um ihn zu schützen. Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Schutzeinstellungen"] . 
+
+
+| Schützen Sie kritische oder sehr wichtige Anwendungs-Workloads vor Ransomware. | Auf der Seite „Schützen“ werden kritische oder sehr wichtige (je nach zugewiesener Prioritätsstufe) Anwendungs-Workloads angezeigt, die nicht geschützt sind. | Weisen Sie diesen Workloads eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+
+
+| Schützen Sie kritische oder sehr wichtige Dateifreigabe-Workloads vor Ransomware. | Auf der Seite „Schutz“ werden kritische oder sehr wichtige Workloads vom Typ „Dateifreigabe“ oder „Datenspeicher“ angezeigt, die nicht geschützt sind. | Weisen Sie jeder Arbeitslast eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+
+
+| Verfügbares SnapCenter Plugin für VMware vSphere (SCV) mit der Konsole registrieren | Eine VM-Workload ist nicht geschützt. | Weisen Sie der VM-Workload VM-konsistenten Schutz zu, indem Sie das SnapCenter -Plugin für VMware vSphere aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+
+
+| Verfügbaren SnapCenter -Server mit der Konsole registrieren | Eine Anwendung ist nicht geschützt. | Weisen Sie der Arbeitslast anwendungskonsistenten Schutz zu, indem Sie SnapCenter Server aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+
+
+| Überprüfen Sie neue Warnungen. | Es liegen neue Warnungen vor. | Überprüfen Sie die neuen Warnungen. Weitere Informationen finden Sie unter link:rp-use-alert.html["Reagieren Sie auf eine erkannte Ransomware-Warnung"] . 
+|===
+.Schritte
+. Wählen Sie im Bereich „Empfohlene Aktionen“ in Ransomware Resilience eine Empfehlung aus und klicken Sie dann auf *Überprüfen und beheben*.
+. Um die Aktion auf einen späteren Zeitpunkt zu verschieben, wählen Sie *Verwerfen*.
++
+Die Empfehlung wird aus der Aufgabenliste gelöscht und erscheint in der Liste „Abgelehnt“.
+
++
+
+TIP: Sie können einen abgelehnten Eintrag später in einen Aufgabeneintrag ändern.  Wenn Sie ein Element als erledigt markieren oder ein verworfenes Element in eine zu erledigende Aktion ändern, erhöht sich die Gesamtzahl der Aktionen um 1.
+
+. Um Informationen zum Umsetzen der Empfehlungen anzuzeigen, wählen Sie das Symbol *Informationen* aus.
+
+
+
+
+== Exportieren Sie Schutzdaten in CSV-Dateien
+
+Sie können Daten exportieren und CSV-Dateien herunterladen, die Details zu Schutz, Warnungen und Wiederherstellung enthalten.
+
+Sie können CSV-Dateien von jeder der Hauptmenüoptionen herunterladen:
+
+* *Schutz*: Enthält den Status und die Details aller Workloads, einschließlich der Gesamtzahl der Workloads, die Ransomware Resilience als geschützt oder gefährdet kennzeichnet.
+* *Warnungen*: Enthält den Status und die Details aller Warnungen, einschließlich der Gesamtzahl der Warnungen und automatisierten Snapshots.
+* *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads, die Ransomware Resilience als „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“ kennzeichnet.
+
+
+Das Herunterladen einer CSV-Datei von einer Seite umfasst nur die Daten dieser Seite.
+
+Die CSV-Dateien enthalten Daten für alle Workloads auf allen Konsolensystemen.
+
+.Schritte
+. Wählen Sie im Ransomware Resilience-Dashboard die Option *Aktualisieren*image:button-refresh.png["Aktualisierungsoption"] Klicken Sie oben rechts auf die Option, um die in den Dateien angezeigten Daten zu aktualisieren.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wählen Sie auf der Seite *Download*image:button-download.png["Download-Option"] Option.
+** Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Berichte“ aus.
+
+
+. Wenn Sie die Option *Berichte* ausgewählt haben, wählen Sie eine der vorkonfigurierten benannten Dateien aus und wählen Sie dann *Herunterladen (CSV)* oder *Herunterladen (JSON)*.
+
+
+
+
+== Zugriff auf die technische Dokumentation
+
+Sie können auf die technische Dokumentation zu Ransomware Resilience zugreifen unterlink:https://docs.netapp.com["docs.netapp.com"^] oder innerhalb von Ransomware Resilience.
+
+.Schritte
+. Wählen Sie im Ransomware Resilience-Dashboard die vertikale *Aktionen*image:button-actions-vertical.png["Option „Vertikale Aktionen“"] Option.
+. Wählen Sie eine dieser Optionen:
++
+** *Was ist neu*, um Informationen zu den Funktionen in der aktuellen oder früheren Version in den Versionshinweisen anzuzeigen.
+** *Dokumentation*, um die Homepage der Ransomware Resilience-Dokumentation und diese Dokumentation anzuzeigen.
+
+
+

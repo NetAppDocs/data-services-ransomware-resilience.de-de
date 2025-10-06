@@ -1,0 +1,28 @@
+= Erkennen Sie anomales Benutzerverhalten mit Data Infrastructure Insights Storage Workload Security
+:allow-uri-read: 
+
+
+
+
+=== Erkennen Sie anomales Benutzerverhalten mit Data Infrastructure Insights Storage Workload Security
+
+Mit dieser Version können Sie Data Infrastructure Insights Storage Workload Security verwenden, um anomales Benutzerverhalten in Ihren Speicher-Workloads zu erkennen.  Diese Funktion hilft Ihnen, potenzielle Sicherheitsbedrohungen zu erkennen und potenziell böswillige Benutzer zu blockieren, um Ihre Daten zu schützen.
+
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Reagieren Sie auf eine erkannte Ransomware-Warnung"] .
+
+Bevor Sie Data Infrastructure Insights Storage Workload Security zum Erkennen anomalen Benutzerverhaltens verwenden, müssen Sie die Option mithilfe der Option *Einstellungen* des BlueXP ransomware protection konfigurieren.
+
+Siehe https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["Konfigurieren Sie die BlueXP ransomware protection -Schutzeinstellungen"] .
+
+
+
+=== Auswählen von Workloads zum Erkennen und Schützen
+
+Mit dieser Version können Sie jetzt Folgendes tun:
+
+* Wählen Sie in jedem Connector die Arbeitsumgebungen aus, in denen Sie Workloads ermitteln möchten.  Sie können von dieser Funktion profitieren, wenn Sie bestimmte Workloads in Ihrer Umgebung schützen möchten und andere nicht.
+* Während der Workload-Erkennung können Sie die automatische Erkennung von Workloads pro Connector aktivieren.  Mit dieser Funktion können Sie die Workloads auswählen, die Sie schützen möchten.
+* Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Arbeitsumgebungen.
+
+
+Siehe https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Workloads ermitteln"] .
