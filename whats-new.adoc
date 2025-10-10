@@ -42,7 +42,7 @@ Ransomware Resilience umfasst einen neuen Erkennungsmechanismus, der in wenigen 
 
 Anders als bei der Verschlüsselungserkennung durch ARP auf Speicherebene erfolgt die Erkennung der Anomalie des Benutzerverhaltens im Ransomware Resilience SaaS-Dienst durch das Sammeln von FPolicy-Ereignissen.
 
-Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.htm["Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten"] Undlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"] .
+Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten"] Undlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"] .
 
 
 
