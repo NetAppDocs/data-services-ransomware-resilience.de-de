@@ -21,9 +21,9 @@ TIP: Sicherungsrichtlinien für eine auf FSx für ONTAP ausgeführte Workload k�
 * Warnmeldungen zeigen die neue FSx for ONTAP Arbeitsumgebung.
 
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Erfahren Sie mehr über den BlueXP ransomware protection"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über den BlueXP ransomware protection"] .
 
-Informationen zu den unterstützten Optionen finden Sie im https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-limitations.html["Einschränkungen des BlueXP ransomware protection"] .
+Informationen zu den unterstützten Optionen finden Sie im https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-limitations.html["Einschränkungen des BlueXP ransomware protection"] .
 
 
 
@@ -31,4 +31,4 @@ Informationen zu den unterstützten Optionen finden Sie im https://docs.netapp.c
 
 Sie benötigen jetzt eine der folgenden Zugriffsrollen, um den BlueXP ransomware protection anzuzeigen, zu erkennen oder zu verwalten: Organisationsadministrator, Ordner- oder Projektadministrator, Ransomware-Schutzadministrator oder Ransomware-Schutz-Viewer.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .

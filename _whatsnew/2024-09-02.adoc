@@ -16,7 +16,7 @@ Siehe https://docs.netapp.com/us-en/active-iq/index.html["Digital Advisor -Dokum
 
 Mit dieser Version können Sie als Sicherungsziel einen Bucket der Google Cloud Platform festlegen.  Bisher konnten Sie Sicherungsziele nur zu NetApp StorageGRID, Amazon Web Services und Microsoft Azure hinzufügen.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["Erfahren Sie mehr über die Konfiguration der BlueXP ransomware protection -Schutzeinstellungen"] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["Erfahren Sie mehr über die Konfiguration der BlueXP ransomware protection -Schutzeinstellungen"] .
 
 
 
@@ -24,7 +24,7 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html[
 
 Der Dienst unterstützt jetzt Cloud Volumes ONTAP für Google Cloud Platform zum Speicherschutz.  Zuvor unterstützte der Dienst nur Cloud Volumes ONTAP für Amazon Web Services und Microsoft Azure sowie lokales NAS.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Erfahren Sie mehr über den BlueXP ransomware protection und die unterstützten Datenquellen, Sicherungsziele und Arbeitsumgebungen"] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über den BlueXP ransomware protection und die unterstützten Datenquellen, Sicherungsziele und Arbeitsumgebungen"] .
 
 
 
@@ -32,4 +32,4 @@ https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-pr
 
 Sie können jetzt den Zugriff auf bestimmte Aktivitäten mit der rollenbasierten Zugriffskontrolle (RBAC) beschränken.  Der BlueXP ransomware protection verwendet zwei Rollen von BlueXP: BlueXP Kontoadministrator und Nicht-Kontoadministrator (Viewer).
 
-Einzelheiten zu den Aktionen, die jede Rolle ausführen kann, finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-reference-roles.html["Rollenbasierte Zugriffskontrollberechtigungen"] .
+Einzelheiten zu den Aktionen, die jede Rolle ausführen kann, finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Rollenbasierte Zugriffskontrollberechtigungen"] .

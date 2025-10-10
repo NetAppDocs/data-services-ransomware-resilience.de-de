@@ -8,7 +8,7 @@
 
 Diese Version umfasst Unterstützung für SAN-Workloads im BlueXP ransomware protection.  Sie können jetzt zusätzlich zu NFS- und CIFS-Workloads auch SAN-Workloads schützen.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-prerequisites.html["Voraussetzungen für den BlueXP ransomware protection"] .
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-prerequisites.html["Voraussetzungen für den BlueXP ransomware protection"] .
 
 
 
@@ -16,7 +16,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/bluexp
 
 Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie SnapCenter oder BlueXP backup and recovery.  In früheren Versionen erkannte der BlueXP ransomware protection die Richtlinien anderer Tools und ermöglichte Ihnen nur, die Erkennungsrichtlinie zu ändern.  Mit dieser Version können Sie jetzt Snapshot- und Backup-Richtlinien durch BlueXP ransomware protection -Schutzrichtlinien ersetzen oder die Richtlinien anderer Tools weiterhin verwenden.
 
-Weitere Einzelheiten finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["Workloads schützen"] .
+Weitere Einzelheiten finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Workloads schützen"] .
 
 
 
@@ -28,4 +28,4 @@ Die E-Mail enthält Informationen zum Schweregrad, zur betroffenen Arbeitslast u
 
 Wenn Sie im BlueXP ransomware protection ein Sicherheits- und Ereignismanagementsystem (SIEM) konfiguriert haben, sendet der Dienst Warndetails an Ihr SIEM-System.
 
-Weitere Einzelheiten finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Behandeln Sie erkannte Ransomware-Warnungen"] .
+Weitere Einzelheiten finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Behandeln Sie erkannte Ransomware-Warnungen"] .

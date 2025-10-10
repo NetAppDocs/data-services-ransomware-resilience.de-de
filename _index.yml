@@ -1,20 +1,20 @@
 ---
 indexpage:
   title: NetApp Ransomware Resilience-Dokumentation
-  summary: NetApp Ransomware Resilience ist ein Orchestrierungsdienst für Schutz,
-    Erkennung und Wiederherstellung vor Ransomware.  Ransomware Resilience schützt
-    anwendungsbasierte Workloads von Oracle, MySQL, VM-Datenspeichern und Dateifreigaben
-    auf lokalem NAS-Speicher sowie Cloud Volumes ONTAP in Amazon Web Services (unter
-    Verwendung der Protokolle NFS und CIFS) in NetApp Console-Organisationen und sichert
-    Daten im Cloud-Speicher von Amazon Web Services (AWS) oder in NetApp StorageGRID.
+  summary: NetApp Ransomware Resilience schützt, erkennt und unterstützt die Wiederherstellung
+    von Anwendungs-Workloads und Dateifreigaben vor Ransomware-Bedrohungen im lokalen
+    und Cloud-Speicher.  Ransomware Resilience unterstützt Plattformen wie Oracle,
+    MySQL, VM-Datenspeicher und NAS-Speicher und ermöglicht sichere Sicherung und
+    Wiederherstellung. So können Unternehmen kritische Daten schützen und die Geschäftskontinuität
+    aufrechterhalten.
   keywords: bluexp, ransomware, anti-ransomware, cyber attack, netapp, ontap, amazon
     web services, aws, storagegrid, protection, resilience
-  lead: NetApp Ransomware Resilience ist ein Orchestrierungsdienst für Schutz, Erkennung
-    und Wiederherstellung vor Ransomware.  Ransomware Resilience schützt anwendungsbasierte
-    Workloads von Oracle, MySQL, VM-Datenspeichern und Dateifreigaben auf lokalem
-    NAS-Speicher sowie Cloud Volumes ONTAP in Amazon Web Services (unter Verwendung
-    der Protokolle NFS und CIFS) in allen Konsolenorganisationen und sichert Daten
-    im Cloud-Speicher von Amazon Web Services (AWS) oder in NetApp StorageGRID.
+  lead: NetApp Ransomware Resilience schützt, erkennt und unterstützt die Wiederherstellung
+    von Anwendungs-Workloads und Dateifreigaben vor Ransomware-Bedrohungen im lokalen
+    und Cloud-Speicher.  Ransomware Resilience unterstützt Plattformen wie Oracle,
+    MySQL, VM-Datenspeicher und NAS-Speicher und ermöglicht sichere Sicherung und
+    Wiederherstellung. So können Unternehmen kritische Daten schützen und die Geschäftskontinuität
+    aufrechterhalten.
   tiles:
   - title: Erste Schritte
     links:

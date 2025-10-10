@@ -16,7 +16,7 @@ Melden Sie sich über die NetApp -Konsole bei NetApp Ransomware Resilience an.
 
 Um sich bei der Konsole anzumelden, können Sie Ihre Anmeldeinformationen für die NetApp Support-Site verwenden oder sich mit Ihrer E-Mail-Adresse und einem Kennwort für eine NetApp Cloud-Anmeldung anmelden. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Erfahren Sie mehr über die Anmeldung"^] .
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Öffnen Sie einen Webbrowser und gehen Sie zulink:https://console.netapp.com/["die Konsole"^] .

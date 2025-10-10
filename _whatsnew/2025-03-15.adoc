@@ -8,7 +8,7 @@
 
 Simulieren Sie mit dieser Version einen Ransomware-Angriff, um Ihre Reaktion auf eine Ransomware-Warnung zu testen.  Mithilfe dieser Funktion können Sie durch das Testen von Warnbenachrichtigungen, Reaktions- und Wiederherstellungsprozessen sicherstellen, dass Sie im Falle eines tatsächlichen Ransomware-Angriffs vorbereitet sind.
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
 
 
 
@@ -21,7 +21,7 @@ Diese Version enthält Verbesserungen der selektiven Erkennungs- und Neuerkennun
 * Sie können diese Erkennungsprozesse während des Erkennungsprozesses zu Beginn oder innerhalb der Option „Einstellungen“ durchführen.
 
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Arbeitsumgebungen"] Und https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-settings.html["Konfigurieren von Funktionen mit der Option „Einstellungen“"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html["Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Arbeitsumgebungen"] Und https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["Konfigurieren von Funktionen mit der Option „Einstellungen“"] .
 
 
 
@@ -29,4 +29,4 @@ Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ranso
 
 Mit dieser Version können Sie Warnmeldungen anzeigen, wenn bei Ihren Workloads eine hohe Verschlüsselung erkannt wird, auch ohne dass es zu starken Änderungen der Dateierweiterungen kommt.  Diese Funktion, die ONTAP Autonomous Ransomware Protection (ARP) AI verwendet, hilft Ihnen, Workloads zu identifizieren, die einem Risiko von Ransomware-Angriffen ausgesetzt sind.  Verwenden Sie diese Funktion und laden Sie die gesamte Liste der betroffenen Dateien mit oder ohne Erweiterungsänderungen herunter.
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Reagieren Sie auf eine erkannte Ransomware-Warnung"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Reagieren Sie auf eine erkannte Ransomware-Warnung"] .

@@ -8,4 +8,4 @@
 
 Mit dieser Version können Sie jetzt Dateifreigaben in Gruppen zusammenfassen, um Ihren Datenbestand einfacher zu schützen.  Der Dienst kann alle Volumes einer Gruppe gleichzeitig schützen.  Bisher mussten Sie jedes Volume separat schützen.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect.html["Erfahren Sie mehr über die Gruppierung von Dateifreigabe-Workloads in Ransomware-Schutzstrategien"] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Erfahren Sie mehr über die Gruppierung von Dateifreigabe-Workloads in Ransomware-Schutzstrategien"] .

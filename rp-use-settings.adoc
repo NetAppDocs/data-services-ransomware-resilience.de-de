@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-settings.html 
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware settings, backup destination 
-summary: Sie können mehrere Optionen konfigurieren, darunter ein Sicherungsziel, Bedrohungserkennung und Verbindung zu Data Infrastructure Insights Workload Security in Ransomware Resilience. 
+summary: Sie können auf der Einstellungsseite mehrere Optionen konfigurieren, darunter ein Sicherungsziel und eine Bedrohungserkennung. 
 ---
 = Konfigurieren der Schutzeinstellungen in NetApp Ransomware Resilience
 :hardbreaks:
@@ -12,15 +12,15 @@ summary: Sie können mehrere Optionen konfigurieren, darunter ein Sicherungsziel
 
 
 [role="lead"]
-Sie können Sicherungsziele konfigurieren, Daten an ein externes Sicherheits- und Ereignismanagementsystem (SIEM) senden, eine Übung zur Angriffsbereitschaft durchführen, die Workload-Erkennung konfigurieren oder die Verbindung zur Workload-Sicherheit von Data Infrastructure Insights konfigurieren, indem Sie auf die Option *Einstellungen* zugreifen.
+Sie können Sicherungsziele konfigurieren, Daten an ein externes Sicherheits- und Ereignismanagementsystem (SIEM) senden, eine Übung zur Angriffsbereitschaft durchführen, die Workload-Erkennung konfigurieren oder die Erkennung verdächtiger Benutzeraktivitäten konfigurieren, indem Sie auf die Option *Einstellungen* zugreifen.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 *Was können Sie auf der Einstellungsseite tun?*  Auf der Seite „Einstellungen“ können Sie Folgendes tun:
 
 * Simulieren Sie einen Ransomware-Angriff, indem Sie eine Bereitschaftsübung durchführen und auf eine simulierte Ransomware-Warnung reagieren. Weitere Informationen finden Sie unter link:rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
 * Konfigurieren Sie die Workload-Erkennung.
-* Konfigurieren Sie die Verbindung zur Data Infrastructure Insights Workload-Sicherheit, um Informationen zu verdächtigen Benutzern in Ransomware-Warnungen anzuzeigen.
+* Konfigurieren Sie die Meldung verdächtiger Benutzeraktivitäten.
 * Fügen Sie ein Sicherungsziel hinzu.
 * Verbinden Sie Ihr Sicherheits- und Ereignismanagementsystem (SIEM) zur Bedrohungsanalyse und -erkennung.  Durch die Aktivierung der Bedrohungserkennung werden automatisch Daten zur Bedrohungsanalyse an Ihr SIEM gesendet.
 
@@ -63,35 +63,11 @@ Auf dieser Seite werden Konsolenagenten mit Systemen angezeigt, die zuvor nicht 
 
 
 
-== Erkennen Sie mutmaßlich anomales Benutzerverhalten durch die Verbindung mit Data Infrastructure Insights Workload Security
+== Verdächtige Benutzeraktivität
 
-Bevor Sie Details zu mutmaßlich anomalem Benutzerverhalten in Ransomware Resilience anzeigen können, müssen Sie die Verbindung zum Data Infrastructure Insights Workload-Sicherheitssystem konfigurieren.
+Auf der Benutzeraktivitätskarte können Sie den Benutzeraktivitätsagenten erstellen und verwalten, der zum Erkennen verdächtiger Benutzeraktivitäten erforderlich ist.
 
-
-
-=== Abrufen eines API-Zugriffstokens vom Data Infrastructure Insights Workload-Sicherheitssystem
-
-Erhalten Sie ein API-Zugriffstoken vom Data Infrastructure Insights Workload-Sicherheitssystem.
-
-. Melden Sie sich beim Data Infrastructure Insights Workload-Sicherheitssystem an.
-. Wählen Sie in der linken Navigation *Admin* > *API-Zugriff*.
-+
-image:../media/screen-alerts-ci-api-access-token.png["API-Zugriffsseite in der Data Infrastructure Insights Workload-Sicherheit"]
-
-. Erstellen Sie entweder ein API-Zugriffstoken oder verwenden Sie ein vorhandenes.
-. Kopieren Sie das API-Zugriffstoken.
-
-
-
-
-=== Verbindung zur Data Infrastructure Insights -Workload-Sicherheit
-
-. Suchen Sie im Menü „Ransomware Resilience-Einstellungen“ nach der Kachel „Workload-Sicherheitsverbindung“.
-. Wählen Sie *Verbinden*.
-. Geben Sie die URL für die Sicherheitsbenutzeroberfläche der Dateninfrastruktur-Workload ein.
-. Geben Sie das API-Zugriffstoken ein, das Zugriff auf die Workload-Sicherheit bietet.
-. Wählen Sie *Verbinden*.
-
+Weitere Informationen finden Sie unter link:suspicious-user-activity.html["Verdächtige Benutzeraktivität"] .
 
 
 
@@ -169,7 +145,7 @@ image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“
 
 Um AWS als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
 
-Weitere Informationen zur Verwaltung Ihres AWS-Speichers in der Konsole finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/task-viewing-amazon-s3.html["Verwalten Sie Ihre Amazon S3-Buckets"^] .
+Weitere Informationen zur Verwaltung Ihres AWS-Speichers in der Konsole finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Verwalten Sie Ihre Amazon S3-Buckets"^] .
 
 .Schritte
 . Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
@@ -185,7 +161,7 @@ image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
 *** Erstellen Sie einen neuen Bucket, wählen Sie einen vorhandenen Bucket aus, falls bereits einer in der Konsole vorhanden ist, oder bringen Sie Ihren eigenen Bucket mit, in dem die Backups gespeichert werden.
 *** AWS-Konto, Region, Zugriffsschlüssel und geheimer Schlüssel für AWS-Anmeldeinformationen
 +
-https://docs.netapp.com/us-en/bluexp-s3-storage/task-add-s3-bucket.html["Wenn Sie Ihren eigenen Bucket mitbringen möchten, lesen Sie S3-Buckets hinzufügen."^] .
+https://docs.netapp.com/us-en/storage-management-s3-storage/task-add-s3-bucket.html["Wenn Sie Ihren eigenen Bucket mitbringen möchten, lesen Sie S3-Buckets hinzufügen."^] .
 
 
 
@@ -228,7 +204,7 @@ image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“
 
 Um Google Cloud Platform (GCP) als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
 
-Weitere Informationen zur Verwaltung Ihres GCP-Speichers in der Konsole finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-google.html["Installationsoptionen für den Konsolenagenten in Google Cloud"^] .
+Weitere Informationen zur Verwaltung Ihres GCP-Speichers in der Konsole finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["Installationsoptionen für den Konsolenagenten in Google Cloud"^] .
 
 .Schritte
 . Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
@@ -269,7 +245,7 @@ Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
 
 Um Azure als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
 
-Weitere Informationen zur Verwaltung Ihrer Azure-Anmeldeinformationen und Marketplace-Abonnements in der Konsole finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Verwalten Sie Ihre Azure-Anmeldeinformationen und Marketplace-Abonnements"^] .
+Weitere Informationen zur Verwaltung Ihrer Azure-Anmeldeinformationen und Marketplace-Abonnements in der Konsole finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-adding-azure-accounts.html["Verwalten Sie Ihre Azure-Anmeldeinformationen und Marketplace-Abonnements"^] .
 
 .Schritte
 . Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
@@ -285,7 +261,7 @@ image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
 *** Erstellen Sie ein neues Speicherkonto, wählen Sie ein vorhandenes aus, falls in der Konsole bereits eines vorhanden ist, oder verwenden Sie Ihr eigenes Speicherkonto, in dem die Sicherungen gespeichert werden.
 *** Azure-Abonnement, Region und Ressourcengruppe für Azure-Anmeldeinformationen
 +
-https://docs.netapp.com/us-en/bluexp-blob-storage/task-add-blob-storage.html["Wenn Sie Ihr eigenes Speicherkonto verwenden möchten, lesen Sie den Abschnitt Azure Blob-Speicherkonten hinzufügen."^] .
+https://docs.netapp.com/us-en/storage-management-blob-storage/task-add-blob-storage.html["Wenn Sie Ihr eigenes Speicherkonto verwenden möchten, lesen Sie den Abschnitt Azure Blob-Speicherkonten hinzufügen."^] .
 
 
 
@@ -468,7 +444,7 @@ TIP: Dies ist die benutzerdefinierte Rolle, die Sie zuvor erstellt haben.
 . Wählen Sie im Feld *Zugriff zuweisen an* die Option *Benutzer, Gruppe oder Dienstprinzipal* aus.
 . Wählen Sie *Mitglieder auswählen*.  Wählen Sie dann *Ransomware Resilience Sentinel Configurator*.
 . Wählen Sie *Weiter*.
-. Wählen Sie im Feld *Was der Benutzer tun kann* die Option *Dem Benutzer erlauben, alle Rollen außer den privilegierten Administratorrollen „Besitzer“, „UAA“, „RBAC“ (empfohlen) zuzuweisen*.
+. Wählen Sie im Feld *Was der Benutzer tun kann* die Option *Dem Benutzer erlauben, alle Rollen außer den privilegierten Administratorrollen „Besitzer“, „UAA“ und „RBAC“ zuzuweisen (empfohlen)*.
 . Wählen Sie *Weiter*.
 . Wählen Sie *Überprüfen und zuweisen* aus, um die Berechtigungen zuzuweisen.
 

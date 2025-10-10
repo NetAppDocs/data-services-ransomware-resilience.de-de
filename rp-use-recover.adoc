@@ -59,7 +59,7 @@ Mithilfe von Ransomware Resilience kann der Speicheradministrator bestimmen, wie
 
 Der Anwendungsstatus ändert sich, falls dies für die Wiederherstellung erforderlich ist.  Die Anwendung wird aus Steuerdateien in ihren vorherigen Zustand zurückversetzt, sofern diese in der Sicherung enthalten sind.  Nach Abschluss der Wiederherstellung wird die Anwendung im LESE-/SCHREIBMODUS geöffnet.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Wählen Sie unter „Ransomware-Resilienz“ die Option „Wiederherstellung“ aus.
@@ -93,7 +93,7 @@ TIP: Ransomware Resilience identifiziert den besten Wiederherstellungspunkt als 
 
 Mithilfe von Ransomware Resilience kann der Speicheradministrator bestimmen, wie Workloads am besten vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt wiederhergestellt werden.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 Der Sicherheitsspeicheradministrator kann Daten auf verschiedenen Ebenen wiederherstellen:
 

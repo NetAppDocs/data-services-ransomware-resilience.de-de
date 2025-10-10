@@ -12,4 +12,4 @@ Es gibt viele Gründe, warum der Dienst eine Arbeitsumgebung nicht unterstützt.
 
 Sie können die nicht unterstützten Arbeitsumgebungen während der ersten Erkennung anzeigen und dort auch die Ergebnisse herunterladen.  Sie können die Ergebnisse der Erkennung auch über die Option *Workload-Erkennung* auf der Seite „Einstellungen“ anzeigen.
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-discover.html["Entdecken Sie Workloads im BlueXP ransomware protection"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html["Entdecken Sie Workloads im BlueXP ransomware protection"] .

@@ -18,7 +18,7 @@ Mit dieser Version können Sie über eine neue Schaltfläche im BlueXP ransomwar
 
 Sie können jetzt Bereitschaftsübungen zusätzlich zu NFS-Workloads auch für CIFS-Workloads (SMB) durchführen.
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-simulate.html["Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch"] .
 
 
 
@@ -28,4 +28,4 @@ Bevor Sie die BlueXP classification innerhalb des BlueXP ransomware protection v
 
 Sie können die BlueXP classification auf einer Dateifreigabe-Workload innerhalb des BlueXP ransomware protection bereitstellen.  Wählen Sie in der Spalte *Datenschutzgefährdung* die Option *Gefährdung identifizieren*.  Wenn Sie den Klassifizierungsdienst aktiviert haben, identifiziert diese Aktion die Gefährdung.  Andernfalls wird mit dieser Version in einem Dialogfeld die Option zum Bereitstellen der BlueXP classification angezeigt.  Wählen Sie *Bereitstellen*, um zur Zielseite des BlueXP classification zu gelangen, wo Sie diesen Dienst bereitstellen können.  W
 
-Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html["Stellen Sie die BlueXP classification in der Cloud bereit"^] und um den Dienst innerhalb des BlueXP ransomware protection zu nutzen, beziehen Sie sich auf https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-protect-classify.html["Scannen Sie mit der BlueXP classification nach personenbezogenen Daten"] .
+Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["Stellen Sie die BlueXP classification in der Cloud bereit"^] und um den Dienst innerhalb des BlueXP ransomware protection zu nutzen, beziehen Sie sich auf https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect-classify.html["Scannen Sie mit der BlueXP classification nach personenbezogenen Daten"] .

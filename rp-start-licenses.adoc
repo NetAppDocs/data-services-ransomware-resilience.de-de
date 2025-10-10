@@ -14,7 +14,7 @@ summary: Beginnen Sie mit NeApp Ransomware Resilience, indem Sie die Lizenzierun
 [role="lead"]
 Mit NetApp Ransomware Resilience können Sie verschiedene Lizenzpläne nutzen.
 
-Um diese Aufgabe auszuführen, benötigen Sie die Rolle des Organisationsadministrators, Ordner- oder Projektadministrators. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^] .
+Um diese Aufgabe auszuführen, benötigen Sie die Rolle des Organisationsadministrators, Ordner- oder Projektadministrators. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^] .
 
 *Lizenztypen* Sie können die folgenden Lizenztypen verwenden:
 
@@ -40,11 +40,6 @@ Die Ransomware Resilience-Lizenz umfasst keine zusätzlichen NetApp Produkte.  R
 
 
 NOTE: Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resilience verfügen, werden alle gemeinsamen Daten, die durch beide Produkte geschützt werden, nur über Ransomware Resilience abgerechnet.
-
-Mit Data Infrastructure Insights Workload Security können Sie anomales Benutzerverhalten anzeigen.  Dies erfordert eine Lizenz für Data Infrastructure Insights Workload Security und die Aktivierung in Ransomware Resilience.  Einen Überblick über die Workload-Sicherheit von Data Infrastructure Insights finden Sie unter https://docs.netapp.com/us-en/data-infrastructure-insights/cs_intro.html["Informationen zur Workload-Sicherheit"^]
-
-
-TIP: Wenn Sie keine Lizenz für Data Infrastructure Insights Workload Security besitzen und diese in Ransomware Resilience nicht aktivieren, werden Ihnen die Informationen zum anomalen Benutzerverhalten nicht angezeigt.
 
 
 
@@ -73,7 +68,7 @@ image:screen-landing.png["Screenshot der Zielseite für Ransomware Resilience"]
 
 . Wenn Sie noch keinen Connector für andere Dienste hinzugefügt haben, fügen Sie einen hinzu.
 +
-Informationen zum Hinzufügen eines Konsolenagenten finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Erfahren Sie mehr über Konsolenagenten"^] .
+Informationen zum Hinzufügen eines Konsolenagenten finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Erfahren Sie mehr über Konsolenagenten"^] .
 
 . Nachdem Sie einen Konsolen-Agenten eingerichtet haben, ändert sich auf der Zielseite von Ransomware Resilience die Schaltfläche zum Hinzufügen eines Konsolen-Agenten in eine Schaltfläche zum Erkennen von Workloads.  Wählen Sie *Beginnen Sie mit der Ermittlung von Workloads* aus.
 . Um die Informationen zur kostenlosen Testversion anzuzeigen, wählen Sie die Dropdown-Option oben rechts aus.
@@ -121,9 +116,6 @@ image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufü
 +
 ** Um Abonnementinformationen anzuzeigen, wählen Sie *Abonnements*.
 ** Um BYOL-Lizenzen anzuzeigen, wählen Sie *Data Services-Lizenzen*.
-+
-image:screen-dw-data-services-license.png["Screenshot von Lizenzen und Abonnements."]
-
 
 
 . Zurück zur Ransomware-Resilienz.  Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.
@@ -166,9 +158,6 @@ image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufü
 +
 ** Um Abonnementinformationen anzuzeigen, wählen Sie *Abonnements*.
 ** Um BYOL-Lizenzen anzuzeigen, wählen Sie *Data Services-Lizenzen*.
-+
-image:screen-dw-data-services-license.png["Seite „Data Services-Lizenzen“"]
-
 
 
 . Zurück zur Ransomware-Resilienz.  Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.
@@ -195,7 +184,7 @@ image:screen-license-payment-methods3.png["Screenshot der Seite mit den Zahlungs
 
 . Wählen Sie auf der Seite „Zahlungsmethoden“ die Option „Abonnieren“ für Google Cloud Platform Marketplace* aus.
 . Wählen Sie im Google Cloud Platform Marketplace *Abonnieren* aus.
-. Verwenden Sie den Google Cloud Platform Marketplace, um * NetApp Intelligent Services* und *Ransomware Resilience* zu abonnieren.image:screen-license-payments-gcp2.png["Screenshot der Abonnementseite des Google Cloud Marketplace."]
+. Verwenden Sie den Google Cloud Platform Marketplace, um * NetApp Intelligent Services* und *Ransomware Resilience* zu abonnieren.
 . Wenn Sie zu Ransomware Resilience zurückkehren, wird eine Meldung angezeigt, dass Sie abonniert sind.
 +
 
@@ -211,9 +200,6 @@ image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufü
 +
 ** Um Abonnementinformationen anzuzeigen, wählen Sie *Abonnements*.
 ** Um BYOL-Lizenzen anzuzeigen, wählen Sie *Data Services-Lizenzen*.
-+
-image:screen-dw-data-services-license.png["Screenshot der Seite mit den Lizenzen und Abonnements."]
-
 
 
 . Zurück zur Ransomware-Resilienz.  Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.
@@ -246,7 +232,7 @@ image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufü
 +
 ** Wenn Sie die Seriennummer der Konsolenlizenz haben und Ihr NSS-Konto kennen, wählen Sie die Option *Seriennummer eingeben* und geben Sie diese Informationen ein.
 +
-Wenn Ihr NetApp Support Site-Konto nicht in der Dropdown-Liste verfügbar ist, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Fügen Sie das NSS-Konto zur Konsole hinzu"^] .
+Wenn Ihr NetApp Support Site-Konto nicht in der Dropdown-Liste verfügbar ist, https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html["Fügen Sie das NSS-Konto zur Konsole hinzu"^] .
 
 ** Wenn Sie über die zvondolr-Lizenzdatei verfügen (erforderlich bei Installation auf einer Dark Site), wählen Sie die Option *Lizenzdatei hochladen* und folgen Sie den Anweisungen zum Anhängen der Datei.
 
@@ -264,7 +250,7 @@ Auf der Seite „Lizenzen und Abonnements“ wird angezeigt, dass Ransomware Res
 Wenn sich Ihre Lizenzlaufzeit dem Ablaufdatum nähert oder Ihre lizenzierte Kapazität das Limit erreicht, werden Sie in der Ransomware Resilience-Benutzeroberfläche benachrichtigt.  Sie können Ihre Ransomware Resilience-Lizenz vor Ablauf aktualisieren, sodass Ihr Zugriff auf die gescannten Daten ohne Unterbrechung möglich ist.
 
 
-TIP: Diese Meldung erscheint auch in Lizenzen und Abonnements und in https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Benachrichtigungseinstellungen"] .
+TIP: Diese Meldung erscheint auch in Licenses and subscriptions und in https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["Benachrichtigungseinstellungen"] .
 
 .Schritte
 . Sie können eine E-Mail an den Support senden, um eine Aktualisierung Ihrer Lizenz anzufordern.

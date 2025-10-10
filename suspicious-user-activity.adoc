@@ -1,0 +1,185 @@
+---
+sidebar: sidebar 
+permalink: suspicious-user-activity.html 
+keywords: data breach detection, data breach, user activity, suspicious, anomalous, 
+summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience können Sie Benutzeraktivitäten erkennen, die eine potenzielle Bedrohung darstellen könnten. 
+---
+= Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten in NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ransomware Resilience unterstützt die Erkennung verdächtigen Benutzerverhaltens in Erkennungsrichtlinien und ermöglicht Ihnen, Ransomware-Vorfälle auf Benutzerebene zu bekämpfen.
+
+Ransomware Resilience erkennt verdächtige Benutzeraktivitäten durch die Analyse von Benutzeraktivitätsereignissen, die von FPolicy in ONTAP generiert werden.  Um Daten zur Benutzeraktivität zu erfassen, müssen Sie einen oder mehrere Benutzeraktivitätsagenten bereitstellen.  Der Agent ist ein Linux-Server oder eine VM mit Konnektivität zu Geräten auf Ihrem Mandanten.
+
+
+
+== Agenten und Sammler
+
+Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein.  Wenn Sie die Funktion für verdächtige Benutzeraktivitäten über das Ransomware Resilience-Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben, um die Funktion zu aktivieren.
+
+Ein Agent kann mehrere Datensammler hosten.  Datensammler senden Daten zur Analyse an einen SaaS-Standort.  Es gibt zwei Arten von Sammlern:
+
+* Der **Datensammler** sammelt Benutzeraktivitätsdaten von ONTAP.
+* Der **Benutzerverzeichnis-Connector** stellt eine Verbindung zu Ihrem Verzeichnis her, um Benutzer-IDs Benutzernamen zuzuordnen.
+
+
+Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
+
+
+
+== Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Administratorrolle „Ransomware Resilience-Benutzerverhalten“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+
+
+
+=== Hinzufügen eines Benutzeraktivitätsagenten
+
+Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Datensammler geben Benutzeraktivitätsereignisse an Ransomware Resilience weiter.  Sie müssen mindestens einen Benutzeraktivitäts-Agenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
+
+
+
+==== Anforderungen
+
+Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM mit einem der folgenden unterstützten Betriebssystem- und Serveranforderungen.
+
+**Betriebssystemanforderungen**
+
+[cols="2"]
+|===
+
+
+| Betriebssystem | Unterstützte Versionen 
+
+
+| AlmaLinux | 9.4 (64 Bit) bis 9.5 (64 Bit) und 10 (64 Bit), einschließlich SELinux 
+
+
+| CentOS | CentOS Stream 9 (64 Bit) 
+
+
+| Debian | 11 (64 Bit), 12 (64 Bit), einschließlich SELinux 
+
+
+| OpenSUSE Leap | 15.3 (64 Bit) bis 15.6 (64 Bit) 
+
+
+| Oracle Linux | 8.10 (64 Bit) und 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
+
+
+| RedHat | 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit) und 10 (64 Bit), einschließlich SELinux 
+
+
+| Felsig | Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
+
+
+| SUSE Enterprise Linux | 15 SP4 (64 Bit) bis 15 SP6 (64 Bit), einschließlich SELinux 
+
+
+| Ubuntu | 20.04 LTS (64 Bit), 22.04 LTS (64 Bit) und 24.04 LTS (64 Bit) 
+|===
+**Serveranforderungen**
+
+Der Server muss die folgenden Mindestanforderungen erfüllen:
+
+* **CPU**: 4 KERNE
+* **RAM**: 16 GB RAM
+* **Speicherplatz**: 35 GB freier Speicherplatz
+
+
+.Schritte
+. Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**.  Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
++
+Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie zu *Einstellungen*, suchen Sie die Kachel **Benutzeraktivität** und wählen Sie dann **Verwalten**.  Wählen Sie auf dem Bildschirm „Benutzeraktivität“ die Registerkarte **Benutzeraktivitätsagenten** und dann **Hinzufügen**.
+
+. Wählen Sie einen **Cloud-Anbieter** und dann eine **Region** aus.  Wählen Sie **Weiter**.
+. Geben Sie die Details des Benutzeraktivitätsagenten an:
++
+** **Name des Benutzeraktivitätsagenten**
+** *Konsolenagent* – der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.
+** *VM-DNS-Name oder IP-Adresse*
+** *VM-SSH-Schlüssel*
++
+image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivitätsagenten hinzufügen."]
+
+
+
+. Wählen Sie **Weiter**.
+. Überprüfen Sie Ihre Einstellungen.  Wählen Sie *Aktivieren*, um das Hinzufügen des Benutzeraktivitätsagenten abzuschließen.
+. Bestätigen Sie, dass der Benutzeraktivitäts-Agent erfolgreich erstellt wurde.  In der Kachel „Benutzeraktivität“ wird eine erfolgreiche Bereitstellung als „Wird ausgeführt“ angezeigt.
+
+
+.Ergebnis
+Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus.  Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammlern und Benutzerverzeichniskonnektoren.
+
+
+
+=== Hinzufügen eines Datensammlers
+
+Datensammler werden automatisch erstellt, wenn Sie eine Ransomware-Schutzstrategie mit Erkennung verdächtiger Benutzeraktivitäten aktivieren. Weitere Informationen finden Sie unter xref:rp-use-protect.adoc#add-a-detection-policy-to workloads-with-existing-backup-or-snapshot-policies [Hinzufügen einer Erkennungsrichtlinie] .
+
+Sie können die Details des Datensammlers anzeigen.  Wählen Sie in den Einstellungen in der Kachel „Benutzeraktivität“ die Option **Verwalten** aus.  Wählen Sie die Registerkarte **Datensammler** und dann den Datensammler aus, um seine Details anzuzeigen oder ihn anzuhalten.
+
+image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellungen"]
+
+
+
+=== Hinzufügen eines Benutzerverzeichnis-Connectors
+
+Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-Connector erstellen.
+
+.Schritte
+. Gehen Sie in Ransomware Resilience zu *Einstellungen*.
+. Wählen Sie in der Kachel „Benutzeraktivität“ **Verwalten** aus.
+. Wählen Sie die Registerkarte **Benutzerverzeichnis-Konnektoren** und dann **Hinzufügen**.
+. Geben Sie die Details der Verbindung an:
++
+** *Name*
+** *Benutzerverzeichnistyp*
+** *Server-IP-Adresse oder Domänenname*
+** *Waldname oder Suchname*
+** *BIND-Domänenname*
+** *BIND-Passwort*
+** *Protokoll* (dies ist optional)
+** *Hafen*
++
+image:screenshot-user-directory-connection.png["Screenshot der Benutzerverzeichnisverbindung"]
+
++
+Geben Sie die Details zur Attributzuordnung an:
+
+** *Anzeigename*
+** *SID* (wenn Sie LDAP verwenden)
+** *Benutzername*
+** *Unix-ID* (wenn Sie NFS verwenden)
+** Wählen Sie *Optionale Attribute einschließen*.  Sie können auch E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen angeben.
++
+Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
+
+
+
+. Wählen Sie **Hinzufügen**.
+. Kehren Sie zur Registerkarte „Benutzerverzeichnis-Konnektoren“ zurück, um den Status Ihres Benutzerverzeichnis-Konnektors zu überprüfen.  Bei erfolgreicher Erstellung wird der Status des Benutzerverzeichnis-Connectors als *Wird ausgeführt* angezeigt.
+
+
+
+
+=== Löschen eines Benutzerverzeichnis-Connectors
+
+. Gehen Sie in Ransomware Resilience zu *Einstellungen*.
+. Suchen Sie die Kachel „Benutzeraktivität“ und wählen Sie **Verwalten** aus.
+. Wählen Sie die Registerkarte **Benutzerverzeichnis-Connector**.
+. Identifizieren Sie den Benutzerverzeichnis-Connector, den Sie löschen möchten.  Wählen Sie im Aktionsmenü am Ende der Zeile die drei Punkte aus `...` dann **Löschen**.
+. Wählen Sie im Popup-Dialogfeld **Löschen** aus, um Ihre Aktionen zu bestätigen.
+
+
+
+
+== Reagieren Sie auf Warnungen zu verdächtigen Benutzeraktivitäten
+
+Nachdem Sie die Erkennung verdächtiger Benutzeraktivitäten konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie böswillige Aktivitäten und anomales Benutzerverhalten"] .

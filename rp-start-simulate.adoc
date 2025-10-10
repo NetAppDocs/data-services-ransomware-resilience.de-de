@@ -32,7 +32,7 @@ In den folgenden Situationen müssen Sie einen Benutzernamen und ein Kennwort ei
 * Wenn Sie einen anderen Test-Workload-Namen eingeben
 
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Wählen Sie im NetApp Ransomware Resilience-Menü oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
@@ -67,7 +67,7 @@ TIP: Sie können die Konfiguration der Bereitschaftsübung später auf der Seite
 
 Nachdem Sie die Bereitschaftsübung konfiguriert haben, können Sie mit der Übung beginnen.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 Wenn Sie die Bereitschaftsübung starten, überspringt Ransomware Resilience den Lernmodus und startet die Übung im aktiven Modus.  Der Erkennungsstatus der Arbeitslast ist „Aktiv“.
 
@@ -96,7 +96,7 @@ NOTE: Nachdem die Übung begonnen hat, können Sie die Konfiguration der Bereits
 
 Testen Sie Ihre Bereitschaft, indem Sie auf eine Bereitschaftsübungswarnung reagieren.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
@@ -119,11 +119,9 @@ image:screen-alerts-readiness-incidents2.png["Vorfallseite mit der Warnung zur B
 
 Hier sind einige Dinge, auf die Sie achten sollten:
 
-* Sehen Sie sich den potenziellen Angriffstyp an.
+* Sehen Sie sich die potenzielle Schwere des Angriffs an.
 +
-Wenn der Typ darauf hinweist, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen.  Möglicherweise möchten Sie den Benutzer in Data Infrastructure Insights Workload Security genauer untersuchen, indem Sie *In Workload Security untersuchen* auswählen.
-
-
+Wenn der Schweregrad darauf hindeutet, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen.  Sie können auchlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["den Benutzer blockieren."]
 
 * Sehen Sie sich die Dateiaktivität und verdächtigen Prozesse an:
 +
@@ -143,7 +141,7 @@ Wenn der Typ darauf hinweist, dass ein Benutzer böswilliger Aktivitäten verdä
 
 Stellen Sie nach der Überprüfung der Warnung zur Bereitschaftsübung bei Bedarf die Testarbeitslast wieder her.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Kehren Sie zur Seite mit den Alarmdetails zurück.
@@ -181,7 +179,7 @@ TIP: Einzelheiten zum Wiederherstellungsvorgang finden Sie unterlink:rp-use-reco
 
 Nachdem Sie die Warnung zur Bereitschaftsübung überprüft und die Arbeitslast wiederhergestellt haben, ändern Sie bei Bedarf den Warnungsstatus.
 
-*Die Konsolenrolle ist erforderlich* Organisationsadministrator, Ordner- oder Projektadministrator oder Ransomware-Resilience-Administrator. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Die Konsolenrolle ist erforderlich* Organisationsadministrator, Ordner- oder Projektadministrator oder Ransomware-Resilience-Administrator. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Kehren Sie zur Seite mit den Alarmdetails zurück.
@@ -204,7 +202,7 @@ IMPORTANT: Nachdem Sie einen Angriff abgewehrt haben, können Sie ihn nicht mehr
 
 Nachdem die Bereitschaftsübung abgeschlossen ist, möchten Sie möglicherweise einen Bericht über die Übung überprüfen und speichern.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
 
 .Schritte
 . Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Berichte“ aus.

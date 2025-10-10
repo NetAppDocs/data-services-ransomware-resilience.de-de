@@ -14,7 +14,7 @@ summary: Während der Erkennung analysiert Ransomware Resilience alle Volumes un
 [role="lead"]
 Bevor Sie NetApp Ransomware Resilience verwenden können, müssen zunächst Daten erkannt werden.  Während der Erkennung analysiert Ransomware Resilience alle Volumes und Dateien in Systemen über alle Konsolenagenten und Projekte innerhalb einer Organisation hinweg.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 *Was erkennt Ransomware Resilience?*  Ransomware Resilience bewertet MySQL-Anwendungen, Oracle-Anwendungen, VMware-Datenspeicher, Dateifreigaben und Blockspeicher.
 
@@ -55,7 +55,7 @@ NOTE: Wenn Sie die kostenlose Testversion gestartet haben, ändert sich die Besc
 Ransomware Resilience findet sowohl unterstützte als auch nicht unterstützte Systeme. Dieser Vorgang kann einige Minuten dauern.
 
 +
-image:screen-discover-workloads-unsupported.png["Screenshot „Workloads ermitteln“"]
+image:screen-discover-workloads.png["Screenshot „Workloads ermitteln“"]
 
 . Um Workloads für einen bestimmten Konsolenagenten zu ermitteln, wählen Sie *Systeme auswählen* neben dem Konsolenagenten aus, für den Sie Workloads ermitteln möchten.
 . Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.

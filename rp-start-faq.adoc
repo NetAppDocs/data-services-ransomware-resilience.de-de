@@ -35,7 +35,7 @@ Um mit Ransomware Resilience zu beginnen, wählen Sie auf der Zielseite „Workl
 
 *Ist Ransomware Resilience im Standard-, eingeschränkten und privaten Modus verfügbar?*  Derzeit ist Ransomware Resilience nur im Standardmodus verfügbar. Bleiben Sie dran für mehr.
 
-Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Bereitstellungsmodi der NetApp Konsole"^] .
+Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Bereitstellungsmodi der NetApp Konsole"^] .
 
 
 
@@ -43,7 +43,7 @@ Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter ht
 
 *Wie lautet die Ransomware-Resilience-URL?*  Geben Sie in einem Browser ein https://console.netapp.com/["https://console.netapp.com/ransomware-resilience"^] um auf die Konsole zuzugreifen.
 
-*Wie werden Zugriffsberechtigungen gehandhabt?* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Wie werden Zugriffsberechtigungen gehandhabt?* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
 *Welche Geräteauflösung ist am besten?* Die empfohlene Geräteauflösung für Ransomware Resilience beträgt 1920 x 1080 oder besser.
 
