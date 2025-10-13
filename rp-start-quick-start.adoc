@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-quick-start.html 
 keywords: get started, ransomware protection, quick start, resilience, quickstart 
-summary: Beginnen Sie in wenigen Schritten mit der NetApp Ransomware Resilience. 
+summary: Beginnen Sie in wenigen Schritten mit der NetApp Ransomware Resilience . 
 ---
 = Schnellstart für NetApp Ransomware Resilience
 :hardbreaks:

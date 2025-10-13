@@ -35,7 +35,7 @@ In den folgenden Situationen müssen Sie einen Benutzernamen und ein Kennwort ei
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
 .Schritte
-. Wählen Sie im NetApp Ransomware Resilience-Menü oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
+. Wählen Sie im NetApp Ransomware Resilience -Menü oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
 +
 image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaftsübung ausführen“"]
 
@@ -121,7 +121,7 @@ Hier sind einige Dinge, auf die Sie achten sollten:
 
 * Sehen Sie sich die potenzielle Schwere des Angriffs an.
 +
-Wenn der Schweregrad darauf hindeutet, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen.  Sie können auchlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["den Benutzer blockieren."]
+Wenn der Schweregrad darauf hindeutet, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen. Sie können auchlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["den Benutzer blockieren."]
 
 * Sehen Sie sich die Dateiaktivität und verdächtigen Prozesse an:
 +

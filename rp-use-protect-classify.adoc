@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-protect-classify.html 
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, cds, sensitive, pii, classification 
-summary: Verbessern Sie die Sicherheit und Datenschutzkonformität Ihrer Daten mit der NetApp Datenklassifizierung, um festzustellen, ob Ihre Daten personenbezogene oder private Informationen enthalten. 
+summary: Verbessern Sie die Sicherheit und Datenschutzkonformität Ihrer Daten mit der NetApp Data Classification, um festzustellen, ob Ihre Daten personenbezogene oder private Informationen enthalten. 
 ---
 = Scannen Sie mit NetApp Data Classification in Ransomware Resilience nach personenbezogenen Daten
 :allow-uri-read: 
@@ -34,7 +34,7 @@ Weitere Informationen zur Datenklassifizierung finden Sie unter:
 
 
 .Bevor Sie beginnen
-Das Scannen nach PII-Daten in Ransomware Resilience ist verfügbar, wenn Sielink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["bereitgestellte Datenklassifizierung"^] .  Die Datenklassifizierung ist als Teil der Konsole ohne zusätzliche Kosten verfügbar und kann vor Ort oder in der Kunden-Cloud bereitgestellt werden.
+Das Scannen nach PII-Daten in Ransomware Resilience ist verfügbar, wenn Sielink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["bereitgestellte Datenklassifizierung"^] . Die Datenklassifizierung ist als Teil der Konsole ohne zusätzliche Kosten verfügbar und kann vor Ort oder in der Kunden-Cloud bereitgestellt werden.
 
 .Schritte
 . Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
@@ -72,7 +72,7 @@ image:screen-protection-sensitive-preview-column.png["Seite „Schutz“ mit der
 
 . Wählen Sie den Workload-Link in der Workload-Spalte aus, um Details zum Workload anzuzeigen.
 +
-image:screen-protection-workload-details-privacy-exposure.png["Bildschirm mit Workload-Details mit der Kachel „Datenschutzgefährdung“"]
+image:screen-protection-workload-details-privacy-exposure.png["Bildschirm mit Arbeitslastdetails mit der Kachel „Datenschutzgefährdung“"]
 
 . Sehen Sie sich auf der Seite „Workloaddetails“ die Details in der Kachel „Datenschutzgefährdung“ an.
 

@@ -6,6 +6,6 @@
 
 === Benutzerdefinierte Gruppierung von Dateifreigabe-Workloads
 
-Mit dieser Version können Sie jetzt Dateifreigaben in Gruppen zusammenfassen, um Ihren Datenbestand einfacher zu schützen.  Der Dienst kann alle Volumes einer Gruppe gleichzeitig schützen.  Bisher mussten Sie jedes Volume separat schützen.
+Mit dieser Version können Sie jetzt Dateifreigaben in Gruppen zusammenfassen, um Ihren Datenbestand einfacher zu schützen.  Der Dienst kann alle Volumes einer Gruppe gleichzeitig schützen.  Bisher mussten Sie jedes Volume einzeln schützen.
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Erfahren Sie mehr über die Gruppierung von Dateifreigabe-Workloads in Ransomware-Schutzstrategien"] .

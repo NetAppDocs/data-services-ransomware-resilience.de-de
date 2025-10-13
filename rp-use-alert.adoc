@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-alert.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
-summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Ransomware Resilience Dashboard eine Warnung angezeigt, die auf einen möglichen Angriff hinweist.  An diesem Punkt sollten Sie sich das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ ansehen. 
+summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Ransomware Resilience Dashboard eine Warnung angezeigt, die auf einen möglichen Angriff hinweist. An diesem Punkt sollten Sie sich das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ ansehen. 
 ---
 = Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf d
 [role="lead"]
 Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Dashboard und im Benachrichtigungsbereich eine Warnung angezeigt.  Ransomware Resilience erstellt sofort einen Snapshot.  Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.
 
-Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird in den Benachrichtigungseinstellungen der Konsole eine Benachrichtigung angezeigt und eine E-Mail an die konfigurierte Adresse gesendet.  Die E-Mail enthält Informationen zum Schweregrad, zur betroffenen Arbeitslast und einen Link zur Warnung auf der Registerkarte „Ransomware Resilience *Warnungen*“.
+Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird in den Benachrichtigungseinstellungen der Konsole eine Benachrichtigung angezeigt und eine E-Mail an die konfigurierte Adresse gesendet. Die E-Mail enthält Informationen zum Schweregrad, zur betroffenen Arbeitslast und einen Link zur Warnung auf der Registerkarte „Ransomware Resilience *Warnungen*“.
 
 Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.
 
@@ -23,7 +23,7 @@ TIP: Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalte
 
 Um mit der Wiederherstellung Ihrer Daten zu beginnen, markieren Sie die Warnung als „bereit zur Wiederherstellung“, damit Ihr Speicheradministrator mit dem Wiederherstellungsprozess beginnen kann.
 
-Jeder Alarm kann mehrere Vorfälle mit unterschiedlichem Umfang und Status umfassen.  Überprüfen Sie alle Vorfälle.
+Jede Warnung kann mehrere Vorfälle mit unterschiedlichem Umfang und Status umfassen.  Überprüfen Sie alle Vorfälle.
 
 Ransomware Resilience liefert sogenannte _Beweise_ über die Ursache der Warnmeldung, beispielsweise die folgenden:
 
@@ -110,7 +110,7 @@ Sie können E-Mail-Benachrichtigungen zu Ransomware-Resilience-Warnmeldungen erh
 TIP: Um E-Mail-Benachrichtigungen zu abonnieren, lesen Sie bitte https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#set-email-notification-settings["E-Mail-Benachrichtigungseinstellungen festlegen"^] .
 
 . Gehen Sie in Ransomware Resilience zur Seite *Einstellungen*.
-. Suchen Sie unter *Benachrichtigungen* die Einstellungen für E-Mail-Benachrichtigungen.
+. Suchen Sie unter *Benachrichtigungen* nach den E-Mail-Benachrichtigungseinstellungen.
 . Geben Sie die E-Mail-Adresse ein, an die Sie Benachrichtigungen erhalten möchten.
 . Speichern Sie Ihre Änderungen.
 
@@ -142,10 +142,10 @@ Die Seite „Warnungen“ wird angezeigt.
 
 Auf der Registerkarte „Warnungen“ können Sie erkennen, ob böswillige Aktivitäten oder anomales Benutzerverhalten vorliegen.
 
-Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Schutzrichtlinie mit Benutzerverhaltenserkennung aktiviert haben, um die Erkennung auf Benutzerebene anzuzeigen.  Wenn die Erkennung des Benutzerverhaltens aktiviert ist, wird die Spalte *Verdächtiger Benutzer* im Dashboard „Warnungen“ angezeigt. Sie wird nicht angezeigt, wenn die Erkennung des Benutzerverhaltens nicht aktiviert ist.  Informationen zum Aktivieren der Erkennung verdächtiger Benutzer finden Sie unterlink:suspicious-user-activity.html["Verdächtige Benutzeraktivität"] .
+Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Schutzrichtlinie mit Benutzerverhaltenserkennung aktiviert haben, um die Erkennung auf Benutzerebene anzuzeigen. Wenn die Erkennung des Benutzerverhaltens aktiviert ist, wird die Spalte *Verdächtiger Benutzer* im Dashboard „Warnungen“ angezeigt. Sie wird nicht angezeigt, wenn die Erkennung des Benutzerverhaltens nicht aktiviert ist. Informationen zum Aktivieren der Erkennung verdächtiger Benutzer finden Sie unterlink:suspicious-user-activity.html["Verdächtige Benutzeraktivität"] .
 
 
-NOTE: Wenn Sie NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security-Agenten für Ransomware Resilience zu verwenden.  Sie müssen keine separaten Workload Security-Agenten für Ransomware Resilience bereitstellen. Die Verwendung derselben Workload Security-Agenten erfordert jedoch eine Paarungsbeziehung zwischen der Ransomware Resilience Console-Organisation und dem DII Storage Workload Security-Mandanten.  Wenden Sie sich an Ihren Kundenbetreuer, um diese Kopplung zu aktivieren.
+NOTE: Wenn Sie NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security-Agenten für Ransomware Resilience zu verwenden. Sie müssen keine separaten Workload Security-Agenten für Ransomware Resilience bereitstellen. Die Verwendung derselben Workload Security-Agenten erfordert jedoch eine Paarungsbeziehung zwischen der Ransomware Resilience Console-Organisation und dem DII Storage Workload Security-Mandanten. Wenden Sie sich an Ihren Kundenbetreuer, um diese Kopplung zu aktivieren.
 
 
 
@@ -177,7 +177,7 @@ image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
 
 === Anzeigen von anomalem Benutzerverhalten
 
-Wenn Sie die Erkennung verdächtiger Benutzer zum Anzeigen anomalen Benutzerverhaltens konfiguriert haben, können Sie Daten auf Benutzerebene anzeigen und bestimmte Benutzer blockieren.  Informationen zum Aktivieren der Einstellungen für verdächtige Benutzer finden Sie unterlink:rp-use-settings.html["Konfigurieren der Ransomware-Resilienzeinstellungen"] .
+Wenn Sie die Erkennung verdächtiger Benutzer zum Anzeigen anomalen Benutzerverhaltens konfiguriert haben, können Sie Daten auf Benutzerebene anzeigen und bestimmte Benutzer blockieren. Informationen zum Aktivieren der Einstellungen für verdächtige Benutzer finden Sie unterlink:rp-use-settings.html["Konfigurieren der Ransomware-Resilienzeinstellungen"] .
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
@@ -216,7 +216,7 @@ Nachdem die Warnung zur Wiederherstellung markiert wurde, wird sie von der Regis
 
 == Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt
 
-Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt.  Handelt es sich nicht um tatsächliche Drohungen, können sie abgewiesen werden.
+Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Handelt es sich nicht um tatsächliche Drohungen, können sie abgewiesen werden.
 
 Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.  Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst bei einem solchen Verhalten keine weitere Warnung aus.
 

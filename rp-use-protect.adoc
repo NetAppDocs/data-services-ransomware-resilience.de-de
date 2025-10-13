@@ -4,7 +4,7 @@ permalink: rp-use-protect.html
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
 summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einem Workload in NetApp Ransomware Resilience Richtlinien zuweisen. 
 ---
-= Schützen Sie Workloads mit NetApp Ransomware Resilience-Schutzstrategien
+= Schützen Sie Workloads mit NetApp Ransomware Resilience -Schutzstrategien
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -43,7 +43,7 @@ TIP: Für eine verbesserte Verwaltung und Sicherung Ihres Datenbestands können 
 
 Über Ransomware Resilience hinaus können die folgenden Dienste zur Verwaltung des Schutzes verwendet werden:
 
-* NetApp Backup und Recovery für Dateifreigaben, VM-Dateifreigaben
+* NetApp Backup and Recovery für Dateifreigaben, VM-Dateifreigaben
 * SnapCenter für VMware für VM-Datenspeicher
 * SnapCenter für Oracle und MySQL
 
@@ -247,8 +247,8 @@ Informationen zum Registrieren von SnapCenter oder SnapCenter Plug-in for VMware
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Dashboard“ aus.
 . Suchen Sie im Bereich „Empfehlungen“ eine der folgenden Empfehlungen und wählen Sie „Überprüfen und beheben“ aus:
 +
-** Verfügbaren SnapCenter Server mit der NetApp Konsole registrieren
-** Verfügbares SnapCenter Plug-in for VMware vSphere (SCV) mit der NetApp Konsole registrieren
+** Verfügbaren SnapCenter Server mit der NetApp Console registrieren
+** Verfügbares SnapCenter Plug-in for VMware vSphere (SCV) mit der NetApp Console registrieren
 
 
 . Befolgen Sie die Informationen, um das SnapCenter oder SnapCenter Plug-in for VMware vSphere Host mithilfe von Backup und Recovery zu registrieren.
@@ -289,7 +289,7 @@ Die Ransomware-Schutzstrategie umfasst:
 Die Erkennungsrichtlinie ändert nicht die in anderen Produkten verwalteten Richtlinien.
 
 +
-Die Erkennungsrichtlinie aktiviert den autonomen Ransomware-Schutz und den FPolicy-Schutz, wenn diese bereits in anderen Diensten aktiviert sind.  Erfahren Sie mehr überlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Autonomer Ransomware-Schutz"^] ,link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sicherung und Wiederherstellung"^] , Undlink:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^] .
+Die Erkennungsrichtlinie aktiviert den autonomen Ransomware-Schutz und den FPolicy-Schutz, wenn diese bereits in anderen Diensten aktiviert sind. Erfahren Sie mehr überlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Autonomer Ransomware-Schutz"^] ,link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sicherung und Wiederherstellung"^] , Undlink:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^] .
 
 
 
@@ -325,7 +325,7 @@ NOTE: Wenn Sie eine vorhandene Strategie kopieren und ändern möchten, hängt R
 +
 *** *Richtlinie*: Wählen Sie eine der vordefinierten Erkennungsrichtlinien.
 *** *Primäre Erkennung*: Aktivieren Sie die Ransomware-Erkennung, damit Ransomware Resilience potenzielle Ransomware-Angriffe erkennt.
-*** *Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung des Benutzerverhaltens, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und verdächtige Ereignisse wie Datenschutzverletzungen zu erkennen.
+*** *Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung des Benutzerverhaltens, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und verdächtige Ereignisse wie Datenverletzungen zu erkennen.
 *** *Dateierweiterungen blockieren*: Aktivieren Sie diese Option, damit Ransomware Resilience bekannte verdächtige Dateierweiterungen blockiert.  Ransomware Resilience erstellt automatisch Snapshot-Kopien, wenn die primäre Erkennung aktiviert ist.
 +
 Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.
@@ -385,10 +385,10 @@ image:screen-protection.png["Strategieseite verwalten"]
 . Wählen Sie **Weiter**.
 . Wenn Sie *Erkennung verdächtigen Benutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den Agenten für Benutzeraktivität oderlink:suspicious-user-activity.html#add-a-user-activity-agent["oder erstellen Sie ein"] .
 +
-Der Benutzeraktivitätsagent hostet die neuen Datensammler.  Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
+Der Benutzeraktivitätsagent hostet die neuen Datensammler. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
 
 . Wählen Sie **Weiter**.
-. Überprüfen Sie Ihre Auswahl.  Wählen Sie **Erstellen**, um die Erkennung zu aktivieren.
+. Überprüfen Sie Ihre Auswahl. Wählen Sie **Erstellen**, um die Erkennung zu aktivieren.
 . Überprüfen Sie auf der Seite „Schutz“ den **Erkennungsstatus**, um zu bestätigen, dass die Erkennung aktiv ist.
 
 
@@ -405,10 +405,10 @@ image:screen-protection.png["Strategieseite verwalten"]
 
 . Wählen Sie auf der Seite „Schutz“ eine Arbeitslast aus und wählen Sie dann *Schützen*.
 . Ransomware Resilience erkennt, ob aktive Backup- und Recovery- oder SnapCenter -Richtlinien vorhanden sind.  Um die vorhandenen Backup- und Recovery- oder SnapCenter -Richtlinien zu ersetzen, aktivieren Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen**.  Wenn Sie das Kontrollkästchen aktivieren, ersetzt Ransomware Resilience die Liste der Erkennungsrichtlinien durch Erkennungsrichtlinien.
-. Wählen Sie eine Schutzrichtlinie.  Wenn keine Schutzrichtlinie vorhanden ist, wählen Sie **Hinzufügen**, um eine neue Richtlinie zu erstellen.  Informationen zum Erstellen einer Richtlinie finden Sie unter<<steps,Erstellen einer Schutzrichtlinie>> .  Wählen Sie **Weiter**.
-. Wählen Sie ein Sicherungsziel aus oder erstellen Sie ein neues.  Wählen Sie **Weiter**.
+. Wählen Sie eine Schutzrichtlinie.  Wenn keine Schutzrichtlinie vorhanden ist, wählen Sie **Hinzufügen**, um eine neue Richtlinie zu erstellen.  Informationen zum Erstellen einer Richtlinie finden Sie unter<<steps,Erstellen einer Schutzrichtlinie>> . Wählen Sie **Weiter**.
+. Wählen Sie ein Sicherungsziel aus oder erstellen Sie ein neues. Wählen Sie **Weiter**.
 +
-.. Wenn Ihre Schutzstrategie die Erkennung des Benutzerverhaltens umfasst, wählen Sie in Ihrer Umgebung einen Benutzeraktivitätsagenten aus, um die neuen Datensammler zu hosten.  Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
+.. Wenn Ihre Schutzstrategie die Erkennung des Benutzerverhaltens umfasst, wählen Sie in Ihrer Umgebung einen Benutzeraktivitätsagenten aus, um die neuen Datensammler zu hosten. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
 
 
 . Überprüfen Sie die neue Schutzstrategie und wählen Sie dann **Schützen** aus, um sie anzuwenden.
@@ -436,7 +436,7 @@ Sie können die bestehende Richtlinie durch eine andere ersetzen.
 
 Durch die Gruppierung von Dateifreigaben in einer Schutzgruppe können Sie Ihren Datenbestand leichter schützen.  Ransomware Resilience kann alle Volumes in einer Gruppe gleichzeitig schützen, anstatt jedes Volume einzeln zu schützen.
 
-Sie können Gruppen unabhängig von ihrem Schutzstatus erstellen (d. h. nicht geschützte Gruppen und geschützte Gruppen).  Wenn Sie einer Schutzgruppe eine Schutzrichtlinie hinzufügen, ersetzt die neue Schutzrichtlinie alle vorhandenen Richtlinien, einschließlich der von SnapCenter und NetApp Backup and Recovery verwalteten Richtlinien.
+Sie können Gruppen unabhängig von ihrem Schutzstatus erstellen (d. h. nicht geschützte Gruppen und geschützte Gruppen). Wenn Sie einer Schutzgruppe eine Schutzrichtlinie hinzufügen, ersetzt die neue Schutzrichtlinie alle vorhandenen Richtlinien, einschließlich der von SnapCenter und NetApp Backup and Recovery verwalteten Richtlinien.
 
 .Schritte
 . Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
@@ -461,7 +461,7 @@ TIP: Um weitere Details zu den Arbeitslasten anzuzeigen, scrollen Sie nach recht
 +
 image:screen-protection-groups-policy.png["Schutzgruppe hinzufügen – Seite „Richtlinie“"]
 
-. Wählen Sie die Richtlinie aus, die den Schutz für diese Gruppe regelt.  Wählen Sie zur Bestätigung *Weiter*.
+. Wählen Sie die Richtlinie aus, die den Schutz für diese Gruppe regelt. Wählen Sie zur Bestätigung *Weiter*.
 +
 .. Wenn Sie eine Sicherungsrichtlinie konfigurieren müssen, wählen Sie eine aus und klicken Sie dann auf **Weiter**.
 .. Wenn Ihre Erkennungsrichtlinie die Erkennung des Benutzerverhaltens umfasst, wählen Sie den Datensammler aus, den Sie verwenden möchten, und klicken Sie dann auf **Weiter**.

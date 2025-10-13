@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-faq.html 
 keywords: ransomware protection faq, ransomware protection frequently asked questions 
-summary: Finden Sie Antworten auf häufig gestellte Fragen zur NetApp Ransomware Resilience. 
+summary: Finden Sie eine Antwort auf eine häufig gestellte Frage zu NetApp Ransomware Resilience. 
 ---
 = Häufig gestellte Fragen zur NetApp Ransomware Resilience
 :hardbreaks:
@@ -24,18 +24,18 @@ Sie können die folgenden Lizenztypen verwenden:
 
 * Melden Sie sich für eine 30-tägige kostenlose Testversion an.
 * Erwerben Sie ein Pay-as-you-go-Abonnement (PAYGO) für NetApp Intelligent Services und Ransomware Resilience über Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace und Microsoft Azure Marketplace.
-* Bringen Sie Ihre eigene Lizenz (BYOL) mit. Dabei handelt es sich um eine NetApp Lizenzdatei (NLF), die Sie von Ihrem NetApp Vertriebsmitarbeiter erhalten. Sie können die Seriennummer der Lizenz verwenden, um BYOL im Abschnitt „Lizenzen und Abonnements“ der Konsole zu aktivieren.
+* Bringen Sie Ihre eigene Lizenz (BYOL) mit. Dabei handelt es sich um eine NetApp Lizenzdatei (NLF), die Sie von Ihrem NetApp Vertriebsmitarbeiter erhalten.  Sie können die Seriennummer der Lizenz verwenden, um BYOL im Abschnitt „Lizenzen und Abonnements“ der Konsole zu aktivieren.
 
 
-*Wie aktivieren Sie Ransomware-Resilienz?*  Für Ransomware Resilience ist keine Aktivierung erforderlich.  Sie können über die NetApp -Konsole auf Ransomware Resilience zugreifen.
+*Wie aktivieren Sie Ransomware-Resilienz?*  Für Ransomware Resilience ist keine Aktivierung erforderlich.  Sie können über die NetApp Console auf Ransomware Resilience zugreifen.
 
 Um loszulegen, müssen Sie sich anmelden oder sich an Ihren NetApp Vertriebsmitarbeiter wenden, um diesen Service auszuprobieren.  Wenn Sie dann den Konsolenagenten verwenden, enthält dieser die entsprechenden Funktionen für Ransomware-Resilienz.
 
 Um mit Ransomware Resilience zu beginnen, wählen Sie auf der Zielseite „Workloads ermitteln“ aus.
 
-*Ist Ransomware Resilience im Standard-, eingeschränkten und privaten Modus verfügbar?*  Derzeit ist Ransomware Resilience nur im Standardmodus verfügbar. Bleiben Sie dran für mehr.
+*Ist Ransomware Resilience im Standard-, eingeschränkten und privaten Modus verfügbar?*  Derzeit ist Ransomware Resilience nur im Standardmodus verfügbar.  Bleiben Sie dran für mehr.
 
-Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Bereitstellungsmodi der NetApp Konsole"^] .
+Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Bereitstellungsmodi der NetApp Console"^] .
 
 
 
@@ -45,9 +45,9 @@ Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter ht
 
 *Wie werden Zugriffsberechtigungen gehandhabt?* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
 
-*Welche Geräteauflösung ist am besten?* Die empfohlene Geräteauflösung für Ransomware Resilience beträgt 1920 x 1080 oder besser.
+*Welche Geräteauflösung ist am besten?*  Die empfohlene Geräteauflösung für Ransomware Resilience beträgt 1920 x 1080 oder besser.
 
-*Welchen Browser sollte ich verwenden?* Jeder moderne Browser.
+*Welchen Browser sollte ich verwenden?*  Jeder moderne Browser.
 
 
 
@@ -71,7 +71,7 @@ Darüber hinaus verwendet Ransomware Resilience Backup and Recovery und SnapCent
 
 == Arbeitslasten
 
-*Was macht eine Arbeitsbelastung aus?* Eine Workload ist eine Anwendung, eine VM oder eine Dateifreigabe. Eine Arbeitslast umfasst alle Volumes, die von einer einzelnen Anwendungsinstanz verwendet werden.  Beispielsweise kann eine auf ora3.host.com bereitgestellte Oracle DB-Instance für ihre Daten bzw. Protokolle über vol1 und vol2 verfügen.  Diese Volumes bilden zusammen die Arbeitslast für diese bestimmte Instanz der Oracle-DB-Instanz.
+*Was macht eine Arbeitsbelastung aus?*  Eine Workload ist eine Anwendung, eine VM oder eine Dateifreigabe.  Eine Arbeitslast umfasst alle Volumes, die von einer einzelnen Anwendungsinstanz verwendet werden.  Beispielsweise kann eine auf ora3.host.com bereitgestellte Oracle DB-Instance für ihre Daten bzw. Protokolle über vol1 und vol2 verfügen.  Diese Volumes bilden zusammen die Arbeitslast für diese bestimmte Instanz der Oracle-DB-Instanz.
 
 *Wie priorisiert Ransomware Resilience Workload-Daten?*  Die Datenpriorität wird durch die erstellten Snapshot-Kopien und geplanten Backups bestimmt.
 
@@ -93,9 +93,9 @@ Ransomware Resilience verknüpft Daten auf folgende Weise mit einer Arbeitslast:
 * Wenn Sie außerdem über SnapCenter oder SnapCenter für VMware verfügen und Workloads in Backup und Recovery konfiguriert haben, erkennt Ransomware Resilience die von SnapCenter und SnapCenter für VMware verwalteten Workloads und die zugehörigen Volumes.
 
 
-*Was ist eine „geschützte“ Arbeitslast?* Bei Ransomware Resilience zeigt eine Arbeitslast den Status „geschützt“ an, wenn für sie eine primäre Erkennungsrichtlinie aktiviert ist.  Dies bedeutet vorerst, dass ARP auf allen mit der Arbeitslast verbundenen Volumes aktiviert ist.
+*Was ist eine „geschützte“ Arbeitslast?*  Bei Ransomware Resilience zeigt eine Arbeitslast den Status „geschützt“ an, wenn für sie eine primäre Erkennungsrichtlinie aktiviert ist.  Dies bedeutet vorerst, dass ARP auf allen mit der Arbeitslast verbundenen Volumes aktiviert ist.
 
-*Was ist eine „gefährdete“ Arbeitsbelastung?* Wenn für einen Workload keine primäre Erkennungsrichtlinie aktiviert ist, ist er „gefährdet“, auch wenn für ihn eine Sicherungs- und Snapshot-Richtlinie aktiviert ist.
+*Was ist eine „gefährdete“ Arbeitsbelastung?*  Wenn für einen Workload keine primäre Erkennungsrichtlinie aktiviert ist, ist er „gefährdet“, auch wenn für ihn eine Sicherungs- und Snapshot-Richtlinie aktiviert ist.
 
 *Neues Volume hinzugefügt, wird aber noch nicht angezeigt* Wenn Sie Ihrer Umgebung ein neues Volume hinzugefügt haben, starten Sie die Erkennung erneut und wenden Sie Schutzrichtlinien an, um das neue Volume zu schützen.
 
@@ -119,7 +119,7 @@ Eine Backup-Richtlinie ist in der Ransomware-Resilience-Strategie nicht erforder
 
 *Ist Ransomware Resilience über die in NetApp ONTAP vorgenommenen Schutzeinstellungen informiert?*
 
-Ja, Ransomware Resilience erkennt in ONTAP festgelegte Snapshot-Zeitpläne und stellt fest, ob ARP und FPolicy auf allen Volumes in einer erkannten Arbeitslast aktiviert sind. Die Informationen, die Sie zunächst im Dashboard sehen, werden aus anderen NetApp -Lösungen und -Produkten aggregiert.
+Ja, Ransomware Resilience erkennt in ONTAP festgelegte Snapshot-Zeitpläne und stellt fest, ob ARP und FPolicy auf allen Volumes in einer erkannten Arbeitslast aktiviert sind.  Die Informationen, die Sie zunächst im Dashboard sehen, werden aus anderen NetApp -Lösungen und -Produkten aggregiert.
 
 *Ist Ransomware Resilience mit den bereits in Backup and Recovery und SnapCenter festgelegten Richtlinien vertraut?*
 

@@ -32,13 +32,13 @@ Der BlueXP ransomware protection wurde in NetApp Ransomware Resilience umbenannt
 
 Die NetApp Console ermöglicht eine zentrale Verwaltung von Speicher- und Datendiensten in lokalen und Cloud-Umgebungen auf Unternehmensebene und liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Verwaltung.
 
-Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/console-relnotes/index.html["Versionshinweise zur NetApp Konsole"] .
+Einzelheiten zu den Änderungen finden Sie im https://docs.netapp.com/us-en/console-relnotes/index.html["Versionshinweise zur NetApp Console"] .
 
 
 
 === Erkennung von Datenschutzverletzungen
 
-Ransomware Resilience umfasst einen neuen Erkennungsmechanismus, der in wenigen Schritten aktiviert werden kann, um anomale Benutzerlesevorgänge als Frühindikator für einen Datenverstoß zu erkennen.  Ransomware Resilience sammelt und analysiert Lesevorgänge von Benutzern, indem es eine historische Basislinie erstellt, die ein Profil des erwarteten, normalen Verhaltens auf Grundlage der vergangenen Daten darstellt.  Wenn die Aktivität eines neuen Benutzers erheblich von dieser festgelegten Norm abweicht (z. B. ein unerwarteter Anstieg der Lesevorgänge in Kombination mit verdächtigen Lesemustern), wird eine Warnung generiert.  Ransomware Resilience umfasst ein KI-Modell zum Erkennen verdächtiger Lesemuster.
+Ransomware Resilience umfasst einen neuen Erkennungsmechanismus, der in wenigen Schritten aktiviert werden kann, um anomale Benutzerlesevorgänge als Frühindikator für einen Datenverstoß zu erkennen. Ransomware Resilience sammelt und analysiert Lesevorgänge von Benutzern, indem es eine historische Basislinie erstellt, die ein Profil des erwarteten, normalen Verhaltens auf Grundlage der vergangenen Daten darstellt. Wenn die Aktivität eines neuen Benutzers erheblich von dieser festgelegten Norm abweicht (z. B. ein unerwarteter Anstieg der Lesevorgänge in Kombination mit verdächtigen Lesemustern), wird eine Warnung generiert. Ransomware Resilience umfasst ein KI-Modell zum Erkennen verdächtiger Lesemuster.
 
 Anders als bei der Verschlüsselungserkennung durch ARP auf Speicherebene erfolgt die Erkennung der Anomalie des Benutzerverhaltens im Ransomware Resilience SaaS-Dienst durch das Sammeln von FPolicy-Ereignissen.
 
@@ -64,7 +64,7 @@ Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilie
 
 Um Warnmeldungen zu verdächtigen Benutzeraktivitäten zu verwalten, hat Ransomware Resilience zwei neue Rollen für Administratoren der Konsolenorganisation eingeführt, um Zugriff auf die Erkennung verdächtiger Benutzeraktivitäten zu gewähren: Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter.
 
-Sie müssen ein Benutzerverhaltensadministrator sein, um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren.  Die Administratorrolle „Ransomware Resilience“ wird für die Konfiguration von Einstellungen für verdächtiges Benutzerverhalten nicht unterstützt.
+Sie müssen ein Benutzerverhaltensadministrator sein, um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren. Die Administratorrolle „Ransomware Resilience“ wird für die Konfiguration von Einstellungen für verdächtiges Benutzerverhalten nicht unterstützt.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Rollenbasierter Zugriff auf NetApp Ransomware Resilience"^] .
 
@@ -82,7 +82,7 @@ Diese Version enthält allgemeine Erweiterungen und Verbesserungen.
 
 === SAN-Workload-Unterstützung
 
-Diese Version umfasst Unterstützung für SAN-Workloads im BlueXP ransomware protection.  Sie können jetzt zusätzlich zu NFS- und CIFS-Workloads auch SAN-Workloads schützen.
+Diese Version umfasst Unterstützung für SAN-Workloads im BlueXP ransomware protection. Sie können jetzt zusätzlich zu NFS- und CIFS-Workloads auch SAN-Workloads schützen.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-prerequisites.html["Voraussetzungen für den BlueXP ransomware protection"] .
 
@@ -90,7 +90,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 === Verbesserter Workload-Schutz
 
-Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie SnapCenter oder BlueXP backup and recovery.  In früheren Versionen erkannte der BlueXP ransomware protection die Richtlinien anderer Tools und ermöglichte Ihnen nur, die Erkennungsrichtlinie zu ändern.  Mit dieser Version können Sie jetzt Snapshot- und Backup-Richtlinien durch BlueXP ransomware protection -Schutzrichtlinien ersetzen oder die Richtlinien anderer Tools weiterhin verwenden.
+Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie SnapCenter oder BlueXP backup and recovery. In früheren Versionen erkannte der BlueXP ransomware protection die Richtlinien anderer Tools und ermöglichte Ihnen nur, die Erkennungsrichtlinie zu ändern. Mit dieser Version können Sie jetzt Snapshot- und Backup-Richtlinien durch BlueXP ransomware protection -Schutzrichtlinien ersetzen oder die Richtlinien anderer Tools weiterhin verwenden.
 
 Weitere Einzelheiten finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Workloads schützen"] .
 
@@ -331,7 +331,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover
 
 === Benutzerdefinierte Gruppierung von Dateifreigabe-Workloads
 
-Mit dieser Version können Sie jetzt Dateifreigaben in Gruppen zusammenfassen, um Ihren Datenbestand einfacher zu schützen.  Der Dienst kann alle Volumes einer Gruppe gleichzeitig schützen.  Bisher mussten Sie jedes Volume separat schützen.
+Mit dieser Version können Sie jetzt Dateifreigaben in Gruppen zusammenfassen, um Ihren Datenbestand einfacher zu schützen.  Der Dienst kann alle Volumes einer Gruppe gleichzeitig schützen.  Bisher mussten Sie jedes Volume einzeln schützen.
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Erfahren Sie mehr über die Gruppierung von Dateifreigabe-Workloads in Ransomware-Schutzstrategien"] .
 
@@ -490,7 +490,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 
 === Strategien zum Schutz vor Ransomware
 
-Wenn für die Arbeitslast keine Snapshot- oder Sicherungsrichtlinien vorhanden sind, können Sie eine Ransomware-Schutzstrategie erstellen, die die folgenden Richtlinien umfassen kann, die Sie in diesem Dienst erstellen:
+Wenn für die Arbeitslast keine Snapshot- oder Sicherungsrichtlinien vorhanden sind, können Sie eine Ransomware-Schutzstrategie erstellen, die die folgenden Richtlinien enthalten kann, die Sie in diesem Dienst erstellen:
 
 * Snapshot-Richtlinie
 * Sicherungsrichtlinie
@@ -503,7 +503,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 
 === Bedrohungserkennung
 
-Die Bedrohungserkennung ist jetzt über ein SIEM-System (Security and Event Management) eines Drittanbieters verfügbar.  Das Dashboard zeigt jetzt eine neue Empfehlung zum Aktivieren der Bedrohungserkennung an, die auf der Seite „Einstellungen“ konfiguriert werden kann.
+Die Bedrohungserkennung ist jetzt über ein Sicherheits- und Ereignismanagementsystem (SIEM) eines Drittanbieters verfügbar.  Das Dashboard zeigt jetzt eine neue Empfehlung zum Aktivieren der Bedrohungserkennung an, die auf der Seite „Einstellungen“ konfiguriert werden kann.
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-settings.html["Erfahren Sie mehr über das Konfigurieren von Einstellungsoptionen"] .
 
@@ -535,7 +535,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-reports
 
 === Dokumentationslink
 
-Der Link „Dokumentation anzeigen“ ist jetzt in der Benutzeroberfläche enthalten.  Sie können auf diese Dokumentation über die Dashboard-Vertikale *Aktionen* zugreifen.image:button-actions-vertical.png["Option „Vertikale Aktionen“"] Option.  Wählen Sie *Was ist neu*, um Details in den Versionshinweisen anzuzeigen, oder *Dokumentation*, um die Homepage der Dokumentation zum BlueXP ransomware protection anzuzeigen.
+Der Link „Dokumentation anzeigen“ ist jetzt in der Benutzeroberfläche enthalten.  Sie können auf diese Dokumentation über die Dashboard-Vertikale *Aktionen* zugreifen.image:button-actions-vertical.png["Option „Vertikale Aktionen“"] Option.  Wählen Sie *Was ist neu*, um Details in den Versionshinweisen anzuzeigen, oder *Dokumentation*, um die Homepage der BlueXP ransomware protection anzuzeigen.
 
 
 
@@ -583,7 +583,7 @@ Sie können jetzt weitere forensische Details anzeigen, um den erkannten potenzi
 
 === Wiederherstellungsprozess
 
-Der Wiederherstellungsprozess wurde verbessert.  Jetzt können Sie Volume für Volume oder alle Volumes für eine Arbeitslast wiederherstellen. https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["Erfahren Sie mehr über die Wiederherstellung nach einem Ransomware-Angriff (nachdem Vorfälle neutralisiert wurden)"] .
+Der Wiederherstellungsprozess wurde verbessert. Jetzt können Sie Volume für Volume oder alle Volumes für eine Arbeitslast wiederherstellen. https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["Erfahren Sie mehr über die Wiederherstellung nach einem Ransomware-Angriff (nachdem Vorfälle neutralisiert wurden)"] .
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über den BlueXP ransomware protection"] .
 

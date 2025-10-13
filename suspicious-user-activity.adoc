@@ -14,15 +14,15 @@ summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Re
 [role="lead"]
 Ransomware Resilience unterstützt die Erkennung verdächtigen Benutzerverhaltens in Erkennungsrichtlinien und ermöglicht Ihnen, Ransomware-Vorfälle auf Benutzerebene zu bekämpfen.
 
-Ransomware Resilience erkennt verdächtige Benutzeraktivitäten durch die Analyse von Benutzeraktivitätsereignissen, die von FPolicy in ONTAP generiert werden.  Um Daten zur Benutzeraktivität zu erfassen, müssen Sie einen oder mehrere Benutzeraktivitätsagenten bereitstellen.  Der Agent ist ein Linux-Server oder eine VM mit Konnektivität zu Geräten auf Ihrem Mandanten.
+Ransomware Resilience erkennt verdächtige Benutzeraktivitäten durch die Analyse von Benutzeraktivitätsereignissen, die von FPolicy in ONTAP generiert werden. Um Daten zur Benutzeraktivität zu erfassen, müssen Sie einen oder mehrere Benutzeraktivitätsagenten bereitstellen. Der Agent ist ein Linux-Server oder eine VM mit Konnektivität zu Geräten auf Ihrem Mandanten.
 
 
 
 == Agenten und Sammler
 
-Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein.  Wenn Sie die Funktion für verdächtige Benutzeraktivitäten über das Ransomware Resilience-Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben, um die Funktion zu aktivieren.
+Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten über das Ransomware Resilience-Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben, um die Funktion zu aktivieren.
 
-Ein Agent kann mehrere Datensammler hosten.  Datensammler senden Daten zur Analyse an einen SaaS-Standort.  Es gibt zwei Arten von Sammlern:
+Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analyse an einen SaaS-Standort. Es gibt zwei Arten von Sammlern:
 
 * Der **Datensammler** sammelt Benutzeraktivitätsdaten von ONTAP.
 * Der **Benutzerverzeichnis-Connector** stellt eine Verbindung zu Ihrem Verzeichnis her, um Benutzer-IDs Benutzernamen zuzuordnen.
@@ -40,7 +40,7 @@ Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
 
 === Hinzufügen eines Benutzeraktivitätsagenten
 
-Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Datensammler geben Benutzeraktivitätsereignisse an Ransomware Resilience weiter.  Sie müssen mindestens einen Benutzeraktivitäts-Agenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
+Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Datensammler geben Benutzeraktivitätsereignisse an Ransomware Resilience weiter. Sie müssen mindestens einen Benutzeraktivitäts-Agenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
 
 
 
@@ -93,11 +93,11 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 
 .Schritte
-. Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**.  Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
+. Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
 +
-Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie zu *Einstellungen*, suchen Sie die Kachel **Benutzeraktivität** und wählen Sie dann **Verwalten**.  Wählen Sie auf dem Bildschirm „Benutzeraktivität“ die Registerkarte **Benutzeraktivitätsagenten** und dann **Hinzufügen**.
+Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie zu *Einstellungen*, suchen Sie die Kachel **Benutzeraktivität** und wählen Sie dann **Verwalten**. Wählen Sie auf dem Bildschirm „Benutzeraktivität“ die Registerkarte **Benutzeraktivitätsagenten** und dann **Hinzufügen**.
 
-. Wählen Sie einen **Cloud-Anbieter** und dann eine **Region** aus.  Wählen Sie **Weiter**.
+. Wählen Sie einen **Cloud-Anbieter** und dann eine **Region** aus. Wählen Sie **Weiter**.
 . Geben Sie die Details des Benutzeraktivitätsagenten an:
 +
 ** **Name des Benutzeraktivitätsagenten**
@@ -110,12 +110,12 @@ image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivität
 
 
 . Wählen Sie **Weiter**.
-. Überprüfen Sie Ihre Einstellungen.  Wählen Sie *Aktivieren*, um das Hinzufügen des Benutzeraktivitätsagenten abzuschließen.
-. Bestätigen Sie, dass der Benutzeraktivitäts-Agent erfolgreich erstellt wurde.  In der Kachel „Benutzeraktivität“ wird eine erfolgreiche Bereitstellung als „Wird ausgeführt“ angezeigt.
+. Überprüfen Sie Ihre Einstellungen. Wählen Sie *Aktivieren*, um das Hinzufügen des Benutzeraktivitätsagenten abzuschließen.
+. Bestätigen Sie, dass der Benutzeraktivitäts-Agent erfolgreich erstellt wurde. In der Kachel „Benutzeraktivität“ wird eine erfolgreiche Bereitstellung als „Wird ausgeführt“ angezeigt.
 
 
 .Ergebnis
-Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus.  Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammlern und Benutzerverzeichniskonnektoren.
+Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus. Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammlern und Benutzerverzeichniskonnektoren.
 
 
 
@@ -123,7 +123,7 @@ Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum
 
 Datensammler werden automatisch erstellt, wenn Sie eine Ransomware-Schutzstrategie mit Erkennung verdächtiger Benutzeraktivitäten aktivieren. Weitere Informationen finden Sie unter xref:rp-use-protect.adoc#add-a-detection-policy-to workloads-with-existing-backup-or-snapshot-policies [Hinzufügen einer Erkennungsrichtlinie] .
 
-Sie können die Details des Datensammlers anzeigen.  Wählen Sie in den Einstellungen in der Kachel „Benutzeraktivität“ die Option **Verwalten** aus.  Wählen Sie die Registerkarte **Datensammler** und dann den Datensammler aus, um seine Details anzuzeigen oder ihn anzuhalten.
+Sie können die Details des Datensammlers anzeigen. Wählen Sie in den Einstellungen in der Kachel „Benutzeraktivität“ die Option **Verwalten** aus. Wählen Sie die Registerkarte **Datensammler** und dann den Datensammler aus, um seine Details anzuzeigen oder ihn anzuhalten.
 
 image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellungen"]
 
@@ -157,14 +157,14 @@ Geben Sie die Details zur Attributzuordnung an:
 ** *SID* (wenn Sie LDAP verwenden)
 ** *Benutzername*
 ** *Unix-ID* (wenn Sie NFS verwenden)
-** Wählen Sie *Optionale Attribute einschließen*.  Sie können auch E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen angeben.
+** Wählen Sie *Optionale Attribute einschließen*. Sie können auch E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen angeben.
 +
 Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
 
 
 
 . Wählen Sie **Hinzufügen**.
-. Kehren Sie zur Registerkarte „Benutzerverzeichnis-Konnektoren“ zurück, um den Status Ihres Benutzerverzeichnis-Konnektors zu überprüfen.  Bei erfolgreicher Erstellung wird der Status des Benutzerverzeichnis-Connectors als *Wird ausgeführt* angezeigt.
+. Kehren Sie zur Registerkarte „Benutzerverzeichnis-Konnektoren“ zurück, um den Status Ihres Benutzerverzeichnis-Konnektors zu überprüfen. Bei erfolgreicher Erstellung wird der Status des Benutzerverzeichnis-Connectors als *Wird ausgeführt* angezeigt.
 
 
 
@@ -174,7 +174,7 @@ Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
 . Gehen Sie in Ransomware Resilience zu *Einstellungen*.
 . Suchen Sie die Kachel „Benutzeraktivität“ und wählen Sie **Verwalten** aus.
 . Wählen Sie die Registerkarte **Benutzerverzeichnis-Connector**.
-. Identifizieren Sie den Benutzerverzeichnis-Connector, den Sie löschen möchten.  Wählen Sie im Aktionsmenü am Ende der Zeile die drei Punkte aus `...` dann **Löschen**.
+. Identifizieren Sie den Benutzerverzeichnis-Connector, den Sie löschen möchten. Wählen Sie im Aktionsmenü am Ende der Zeile die drei Punkte aus `...` dann **Löschen**.
 . Wählen Sie im Popup-Dialogfeld **Löschen** aus, um Ihre Aktionen zu bestätigen.
 
 

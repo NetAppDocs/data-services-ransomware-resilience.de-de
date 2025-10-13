@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-recover.html 
 keywords: ransomware protection recovery, recover from a ransomware attack, recovery point, RPA 
-summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience, ob die Sicherungsdaten auf dem Sekundärspeicher sauber sind, empfiehlt einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.' 
+summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die Sicherungsdaten auf dem Sekundärspeicher sauber sind, empfiehlt einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.' 
 ---
 = Wiederherstellung nach einem Ransomware-Angriff (nachdem die Vorfälle neutralisiert wurden) mit NetApp Ransomware Resilience
 :hardbreaks:
@@ -41,7 +41,7 @@ Ein Workload kann einen der folgenden Wiederherstellungsstatus haben:
 .Schritte
 . Führen Sie einen der folgenden Schritte aus:
 +
-** Überprüfen Sie im Dashboard die Gesamtsummen für „Wiederherstellung erforderlich“ im Bereich „Warnungen“ und wählen Sie „Alle anzeigen“ aus.
+** Überprüfen Sie im Dashboard die Gesamtsummen „Wiederherstellung erforderlich“ im Bereich „Warnungen“ und wählen Sie „Alle anzeigen“ aus.
 ** Wählen Sie im Menü *Wiederherstellung* aus.
 
 
@@ -228,7 +228,7 @@ TIP: Wenn ein Volume mehrere Warnungen aufweist, müssen Sie für jede Warnung d
 +
 image:screen-alerts-incidents-impacted-files.png["Liste der betroffenen Dateien für eine bestimmte Warnung"]
 
-. Um die vollständige Liste der Dateien anzuzeigen, wählen Sie oben im Bereich „Betroffene Dateien“ die Option *Hier klicken* aus.
+. Um die vollständige Liste der Dateien anzuzeigen, wählen Sie oben im Bereich „Betroffene Dateien“ die Option „Hier klicken“ aus.
 . Wählen Sie für diesen Vorfall das Download-Symbol aus und laden Sie die Liste der betroffenen Dateien im CSV-Format herunter.
 
 
@@ -320,7 +320,7 @@ TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien
 . Wählen Sie *Speichern*.
 . Überprüfen Sie Ihre Auswahl.
 . Wählen Sie *Wiederherstellen*.
-. Wählen Sie im Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Seite „Wiederherstellung“ zu überprüfen, auf der der Status des Vorgangs durch die verschiedenen Zustände geht.
+. Wählen Sie im Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
 
 
 
@@ -338,5 +338,5 @@ image:screen-recovery-vm.png["Wiederherstellungsseite mit der Anzeige einer wied
 . Wählen Sie *Weiter*.
 . Überprüfen Sie Ihre Auswahl.
 . Wählen Sie *Wiederherstellen*.
-. Wählen Sie im Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Seite „Wiederherstellung“ zu überprüfen, auf der der Status des Vorgangs durch die verschiedenen Zustände geht.
+. Wählen Sie im Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
 

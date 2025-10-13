@@ -44,7 +44,7 @@ image:screen-dashboard.png["Dashboard-Seite"]
 . Führen Sie einen der folgenden Schritte aus:
 +
 ** Wählen Sie auf der Seite *Download*image:button-download.png["Download-Option"] Option.
-** Wählen Sie im NetApp Ransomware Resilience-Menü *Berichte* aus.
+** Wählen Sie im NetApp Ransomware Resilience Menü *Berichte* aus.
 
 
 . Wenn Sie die Option *Berichte* ausgewählt haben, wählen Sie einen der vorkonfigurierten Dateinamen und wählen Sie *Herunterladen*.

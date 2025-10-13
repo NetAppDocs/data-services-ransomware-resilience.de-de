@@ -18,9 +18,9 @@ Um Ransomware Resilience zu verwenden, müssen Sie die folgenden Voraussetzungen
 
 
 
-== In der NetApp Konsole
+== In der NetApp Console
 
-* Ein NetApp Konsolenbenutzerkonto mit Organisationsadministratorberechtigungen zum Erkennen von Ressourcen.
+* Ein NetApp Console mit Organisationsadministratorberechtigungen zum Erkennen von Ressourcen.
 * Eine Konsolenorganisation mit mindestens einem aktiven Konsolenagenten, der eine Verbindung zu lokalen ONTAP Clustern oder zu Cloud Volumes ONTAP in AWS oder Azure herstellt.
 * Der Konsolenagent muss über die `cloudmanager-ransomware-protection` Container in einem aktiven Zustand.
 * Mindestens ein Konsolensystem mit einem lokalen NetApp ONTAP -Cluster oder Cloud Volumes ONTAP in AWS oder Azure.  Ransomware Resilience unterstützt sowohl NAS- (NFS und SMB) als auch SAN-Protokolle (iSCSI, FC und NVMe).
@@ -36,7 +36,7 @@ Siehe https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html[
 
 +
 
-NOTE: Wenn Sie mehrere Konsolenagenten in einer einzigen Konsolenorganisation haben, scannt Ransomware Resilience die ONTAP Ressourcen aller Konsolenagenten über den derzeit in der Konsolen-Benutzeroberfläche ausgewählten Agenten hinaus.
+NOTE: Wenn Sie mehrere Konsolenagenten in einer einzigen Konsolenorganisation haben, scannt Ransomware Resilience die ONTAP -Ressourcen aller Konsolenagenten über den derzeit in der Konsolen-Benutzeroberfläche ausgewählten Agenten hinaus.
 
 
 

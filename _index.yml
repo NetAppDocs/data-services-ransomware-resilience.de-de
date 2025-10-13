@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: NetApp Ransomware Resilience-Dokumentation
+  title: NetApp Ransomware Resilience Dokumentation
   summary: NetApp Ransomware Resilience schützt, erkennt und unterstützt die Wiederherstellung
     von Anwendungs-Workloads und Dateifreigaben vor Ransomware-Bedrohungen im lokalen
-    und Cloud-Speicher.  Ransomware Resilience unterstützt Plattformen wie Oracle,
+    und Cloud-Speicher. Ransomware Resilience unterstützt Plattformen wie Oracle,
     MySQL, VM-Datenspeicher und NAS-Speicher und ermöglicht sichere Sicherung und
     Wiederherstellung. So können Unternehmen kritische Daten schützen und die Geschäftskontinuität
     aufrechterhalten.
@@ -11,7 +11,7 @@ indexpage:
     web services, aws, storagegrid, protection, resilience
   lead: NetApp Ransomware Resilience schützt, erkennt und unterstützt die Wiederherstellung
     von Anwendungs-Workloads und Dateifreigaben vor Ransomware-Bedrohungen im lokalen
-    und Cloud-Speicher.  Ransomware Resilience unterstützt Plattformen wie Oracle,
+    und Cloud-Speicher. Ransomware Resilience unterstützt Plattformen wie Oracle,
     MySQL, VM-Datenspeicher und NAS-Speicher und ermöglicht sichere Sicherung und
     Wiederherstellung. So können Unternehmen kritische Daten schützen und die Geschäftskontinuität
     aufrechterhalten.
@@ -48,9 +48,9 @@ indexpage:
       url: "/rp-use-recover.html"
   - title: Blogs und Community
     links:
-    - title: NetApp Konsole
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp Datenservices
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp Community
       url: https://community.netapp.com/

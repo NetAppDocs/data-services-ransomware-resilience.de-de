@@ -56,7 +56,7 @@ Weitere Informationen zur Verwaltung Ihres Azure-Speichers in der Konsole finden
 
 
 
-== Einrichten der NetApp Konsole
+== Einrichten der NetApp Console
 
 Der nächste Schritt besteht darin, die Konsole und die Ransomware-Resilienz einzurichten.
 

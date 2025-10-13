@@ -27,7 +27,7 @@ Ransomware Resilience überprüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien
 
 *Wie können Sie Arbeitslasten ermitteln?*  Sie können Folgendes tun:
 
-* Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten. Sie können von dieser Funktion profitieren, wenn Sie bestimmte Workloads in Ihrer Umgebung schützen möchten und andere nicht.
+* Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten.  Sie können von dieser Funktion profitieren, wenn Sie bestimmte Workloads in Ihrer Umgebung schützen möchten und andere nicht.
 * Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme.
 * Entdecken Sie neue Systeme.
 
@@ -39,7 +39,7 @@ Ransomware Resilience überprüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien
 Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten.
 
 .Schritte
-. Wählen Sie in der NetApp Konsole *Schutz* > *Ransomware-Schutz*.
+. Wählen Sie in der NetApp Console*Schutz* > *Ransomware-Schutz*.
 +
 Wenn dies Ihre erste Anmeldung ist, wird die Zielseite angezeigt.
 
@@ -52,7 +52,7 @@ NOTE: Wenn Sie die kostenlose Testversion gestartet haben, ändert sich die Besc
 
 . Wählen Sie auf der ersten Zielseite *Beginnen Sie mit der Ermittlung von Workloads* aus.
 +
-Ransomware Resilience findet sowohl unterstützte als auch nicht unterstützte Systeme. Dieser Vorgang kann einige Minuten dauern.
+Ransomware Resilience findet sowohl unterstützte als auch nicht unterstützte Systeme.  Dieser Vorgang kann einige Minuten dauern.
 
 +
 image:screen-discover-workloads.png["Screenshot „Workloads ermitteln“"]
@@ -61,7 +61,7 @@ image:screen-discover-workloads.png["Screenshot „Workloads ermitteln“"]
 . Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.
 . Wählen Sie *Entdecken*.
 +
-Ransomware Resilience erkennt Workload-Daten nur für die Konsolenagenten mit ausgewählten Systemen. Dieser Vorgang kann einige Minuten dauern.
+Ransomware Resilience erkennt Workload-Daten nur für die Konsolenagenten mit ausgewählten Systemen.  Dieser Vorgang kann einige Minuten dauern.
 
 . Um die Liste der erkannten Workloads herunterzuladen, wählen Sie *Ergebnisse herunterladen*.
 . Um das Ransomware Resilience-Dashboard anzuzeigen, wählen Sie *Zum Dashboard gehen*.

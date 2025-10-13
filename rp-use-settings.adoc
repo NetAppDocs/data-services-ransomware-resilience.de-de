@@ -126,7 +126,7 @@ image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
 
 ** *Netzwerk*: Wählen Sie den IP-Bereich.
 +
-*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
 
 
 
@@ -171,7 +171,7 @@ Daten im Bucket werden standardmäßig mit von AWS verwalteten Schlüsseln versc
 
 ** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
 +
-*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
 *** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten AWS-Endpunkt (PrivateLink) verwenden möchten.
 +
 Wenn Sie AWS PrivateLink verwenden möchten, lesen Sie https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink für Amazon S3"^] .
@@ -227,7 +227,7 @@ Die Daten im Bucket werden standardmäßig mit von Google verwalteten Schlüssel
 
 ** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
 +
-*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
 *** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten GCP-Endpunkt (PrivateLink) verwenden möchten.
 
 
@@ -271,7 +271,7 @@ Daten im Konto werden standardmäßig mit von Microsoft verwalteten Schlüsseln 
 
 ** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
 +
-*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten. Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
 *** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten Azure-Endpunkt verwenden möchten.
 +
 Wenn Sie Azure PrivateLink verwenden möchten, lesen Sie https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^] .
@@ -428,7 +428,7 @@ Nach der Registrierung zeigt das Microsoft Entra Admin Center den Anwendungsübe
 TIP: Die Lebensdauer eines Client-Geheimnisses ist auf zwei Jahre (24 Monate) oder weniger begrenzt.  Microsoft empfiehlt, einen Ablaufwert von weniger als 12 Monaten festzulegen.
 
 . Wählen Sie *Hinzufügen*, um Ihr Geheimnis zu erstellen.
-. Notieren Sie das im Authentifizierungsschritt zu verwendende Geheimnis.  Das Geheimnis wird nie wieder angezeigt, nachdem Sie diese Seite verlassen.
+. Notieren Sie das im Authentifizierungsschritt zu verwendende Geheimnis.  Das Geheimnis wird nie wieder angezeigt, nachdem Sie diese Seite verlassen haben.
 
 
 .Schritte zum Zuweisen von Berechtigungen zur Anwendung

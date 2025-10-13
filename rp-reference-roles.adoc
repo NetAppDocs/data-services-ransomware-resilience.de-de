@@ -20,7 +20,7 @@ Ransomware Resilience verwendet die folgenden Rollen, die spezifisch für Ransom
 * *Ransomware Resilience Viewer*: Zeigen Sie NetApp -Workloaddaten und Warndaten an, laden Sie Wiederherstellungsdaten herunter und laden Sie Berichte herunter.
 
 
-Diese Rollen ergänzen die Konsolenplattformrollen, die den Zugriff auf den Konsolendienst und andere Dienste wie Datenschutz, Workload-Management usw. regeln.  Einzelheiten zu allen Konsolenplattformrollen finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["die Setup- und Administrationsdokumentation"^] .
+Diese Rollen ergänzen die Konsolenplattformrollen, die den Zugriff auf den Konsolendienst und andere Dienste wie Datenschutz, Workload-Management usw. regeln. Einzelheiten zu allen Konsolenplattformrollen finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["die Einrichtungs- und Administrationsdokumentation"^] .
 
 Die folgende Tabelle zeigt die Aktionen, die jede Ransomware Resilience-Rolle ausführen kann.
 
