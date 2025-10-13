@@ -42,6 +42,9 @@ Ransomware Resilience umfasst einen neuen Erkennungsmechanismus, der in wenigen 
 
 Anders als bei der Verschlüsselungserkennung durch ARP auf Speicherebene erfolgt die Erkennung der Anomalie des Benutzerverhaltens im Ransomware Resilience SaaS-Dienst durch das Sammeln von FPolicy-Ereignissen.
 
+
+IMPORTANT: Sie müssen die neuelink:#new-user-roles-for-data-breach-detection["Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter"] Rollen für den Zugriff auf Einstellungen zur Erkennung verdächtigen Benutzerverhaltens.
+
 Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten"] Undlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"] .
 
 
@@ -57,9 +60,13 @@ Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilie
 
 
 
-==== Neue Benutzerrolle zur Erkennung von Datenschutzverletzungen
+==== Neue Benutzerrollen zur Erkennung von Datenschutzverletzungen
 
-Um Warnmeldungen zu verdächtigen Benutzeraktivitäten zu verwalten, hat Ransomware Resilience zwei neue Rollen eingeführt, um einen granularen Zugriff auf vertrauliche Daten wie die Dateiaktivität des Benutzers zu ermöglichen. Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Rollenbasierter Zugriff auf NetApp Ransomware Resilience"] .
+Um Warnmeldungen zu verdächtigen Benutzeraktivitäten zu verwalten, hat Ransomware Resilience zwei neue Rollen für Administratoren der Konsolenorganisation eingeführt, um Zugriff auf die Erkennung verdächtiger Benutzeraktivitäten zu gewähren: Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter.
+
+Sie müssen ein Benutzerverhaltensadministrator sein, um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren.  Die Administratorrolle „Ransomware Resilience“ wird für die Konfiguration von Einstellungen für verdächtiges Benutzerverhalten nicht unterstützt.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Rollenbasierter Zugriff auf NetApp Ransomware Resilience"^] .
 
 
 

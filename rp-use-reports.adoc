@@ -17,7 +17,7 @@ Sie können Schutzdaten exportieren und die CSV- oder JSON-Dateien herunterladen
 
 TIP: Bevor Sie die Dateien herunterladen, sollten Sie die Daten aktualisieren. Dadurch werden auch die in den Dateien angezeigten Daten aktualisiert.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über BlueXP -Zugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
 *Welche Daten können Sie herunterladen?*  Sie können Dateien von jeder der Hauptmenüoptionen herunterladen:
 
