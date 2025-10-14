@@ -52,6 +52,7 @@ image:screen-settings-alert-drill-configure.png["Seite „Bereitschaftsübung ko
 .. Wählen Sie ein Testsystem aus.
 .. Wählen Sie eine Testspeicher-SVM aus.
 .. Wenn Sie eine CIFS (SMB)-Speicher-VM ausgewählt haben, werden die Felder **Benutzername** und **Passwort** angezeigt.  Geben Sie den Benutzernamen und das Kennwort für die Speicher-VM ein.
+.. Wählen Sie den Bereitschaftsübungstyp aus. Wählen Sie für eine manuelle Wiederherstellung nach einer Datenverschlüsselungsverletzung **Benutzerdefinierte Wiederherstellung**. Wählen Sie zur Wiederherstellung nach verdächtiger Benutzeraktivität **Datenverletzung**.
 .. Geben Sie den Namen einer neuen Test-Workload ein, die erstellt werden soll.  Der Name darf keine Bindestriche enthalten.
 
 
@@ -84,11 +85,10 @@ image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaft
 ** ODER wählen Sie auf der Seite „Einstellungen“ in der Karte „Bereitschaftsübung“ die Option „Start“ aus.
 
 
-. Wenn Sie die Bereitschaftsübung bereits konfiguriert haben, beginnt sie nach Auswahl von *Start*.
 
 
 
-NOTE: Nachdem die Übung begonnen hat, können Sie die Konfiguration der Bereitschaftsübung nicht mehr bearbeiten.  Sie können es zurücksetzen, um erneut zu starten.
+NOTE: Sie können die Konfiguration der Bereitschaftsübung nicht bearbeiten, während die Übung läuft. Sie können den Bohrer zurücksetzen, um ihn anzuhalten und die Konfiguration zu ändern.
 
 
 

@@ -25,10 +25,10 @@ Um Ransomware Resilience zu verwenden, müssen Sie die folgenden Voraussetzungen
 * Der Konsolenagent muss über die `cloudmanager-ransomware-protection` Container in einem aktiven Zustand.
 * Mindestens ein Konsolensystem mit einem lokalen NetApp ONTAP -Cluster oder Cloud Volumes ONTAP in AWS oder Azure.  Ransomware Resilience unterstützt sowohl NAS- (NFS und SMB) als auch SAN-Protokolle (iSCSI, FC und NVMe).
 +
-** ONTAP oder Cloud Volumes ONTAP Cluster mit ONTAP OS Version 9.11.1 oder höher werden unterstützt.
+** Ransomware Resilience wird mit ONTAP oder Cloud Volumes ONTAP Clustern mit ONTAP Version 9.11.1 oder höher unterstützt.
 +
 
-NOTE: SAN-Workloads werden nur in ONTAP 9.17.1 und höher unterstützt.
+NOTE: Wenn Sie Ransomware Resilience auf SAN-Workloads verwenden möchten, müssen Sie ONTAP 9.17.1 oder höher ausführen.
 
 ** Wenn Ihre lokalen ONTAP Cluster oder Cloud Volumes ONTAP in AWS oder in der Azure-Cloud noch nicht in die Konsole integriert sind, benötigen Sie einen Konsolenagenten.
 +
@@ -61,7 +61,7 @@ Weitere Lizenzdetails finden Sie unterlink:concept-ransomware-resilience.html["E
 
 
 
-== Für Datensicherungen
+== Datensicherungen
 
 * Ein Konto in NetApp StorageGRID, AWS S3, Azure Blob oder Google Cloud Platform für Sicherungsziele und die festgelegten Zugriffsberechtigungen.
 +
@@ -72,6 +72,12 @@ Weitere Informationen finden Sie im https://docs.netapp.com/us-en/console-setup-
 Ransomware Resilience hilft bei der Konfiguration eines Sicherungsziels über die Option „Einstellungen“. Sehen link:rp-use-settings.html["Konfigurieren der Einstellungen"] .
 
 
+
+
+
+== Verdächtiges Nutzerverhalten
+
+Damit Ransomware Resilience Warnungen zu verdächtigem Benutzerverhalten ausgibt, müssen Sie einen Benutzeraktivitätsagenten konfigurieren. Weitere Informationen finden Sie unter link:suspicious-user-activity.html["Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten in NetApp Ransomware Resilience"].
 
 
 
