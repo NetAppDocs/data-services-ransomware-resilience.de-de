@@ -209,9 +209,6 @@ Weitere Informationen zur Verwaltung Ihres GCP-Speichers in der Konsole finden S
 .Schritte
 . Wählen Sie auf der Seite *Einstellungen > Sicherungsziele* die Option *Hinzufügen* aus.
 . Geben Sie einen Namen für das Sicherungsziel ein.
-+
-image:screen-settings-backup-destination-gcp.png["Seite „Sicherungsziele“"]
-
 . Wählen Sie *Google Cloud Platform* aus.
 . Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
 +
@@ -219,6 +216,9 @@ image:screen-settings-backup-destination-gcp.png["Seite „Sicherungsziele“"]
 +
 *** Erstellen Sie einen neuen Bucket.  Geben Sie den Zugriffsschlüssel und den geheimen Schlüssel ein.
 *** Geben Sie Ihr Google Cloud Platform-Projekt und Ihre Region ein oder wählen Sie sie aus.
++
+image:screen-settings-backup-destination-gcp.png["Seite „Sicherungsziele“"]
+
 
 
 ** *Verschlüsselung*: Wenn Sie einen neuen Bucket erstellen, geben Sie die Verschlüsselungsschlüsselinformationen ein, die Sie vom Anbieter erhalten haben.  Wenn Sie einen vorhandenen Bucket auswählen, sind die Verschlüsselungsinformationen bereits verfügbar.
