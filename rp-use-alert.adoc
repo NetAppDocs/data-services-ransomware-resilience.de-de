@@ -142,7 +142,7 @@ Die Seite „Warnungen“ wird angezeigt.
 
 Auf der Registerkarte „Warnungen“ können Sie erkennen, ob böswillige Aktivitäten oder anomales Benutzerverhalten vorliegen.
 
-Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Schutzrichtlinie mit Benutzerverhaltenserkennung aktiviert haben, um die Erkennung auf Benutzerebene anzuzeigen. Wenn die Erkennung des Benutzerverhaltens aktiviert ist, wird die Spalte *Verdächtiger Benutzer* im Dashboard „Warnungen“ angezeigt. Sie wird nicht angezeigt, wenn die Erkennung des Benutzerverhaltens nicht aktiviert ist. Informationen zum Aktivieren der Erkennung verdächtiger Benutzer finden Sie unterlink:suspicious-user-activity.html["Verdächtige Benutzeraktivität"] .
+Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Schutzrichtlinie mit Benutzerverhaltenserkennung aktiviert haben, um Warnungen auf Benutzerebene anzuzeigen. Wenn die Erkennung des Benutzerverhaltens aktiviert ist, wird die Spalte *Verdächtiger Benutzer* im Dashboard „Warnungen“ angezeigt. Sie wird nicht angezeigt, wenn die Erkennung des Benutzerverhaltens nicht aktiviert ist.  Informationen zum Aktivieren der Erkennung verdächtiger Benutzer finden Sie unterlink:suspicious-user-activity.html["Verdächtige Benutzeraktivität"] .
 
 
 NOTE: Wenn Sie NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security-Agenten für Ransomware Resilience zu verwenden. Sie müssen keine separaten Workload Security-Agenten für Ransomware Resilience bereitstellen. Die Verwendung derselben Workload Security-Agenten erfordert jedoch eine Paarungsbeziehung zwischen der Ransomware Resilience Console-Organisation und dem DII Storage Workload Security-Mandanten. Wenden Sie sich an Ihren Kundenbetreuer, um diese Kopplung zu aktivieren.
@@ -183,7 +183,7 @@ Wenn Sie die Erkennung verdächtiger Benutzer zum Anzeigen anomalen Benutzerverh
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
 . Wählen Sie eine Warnung aus.
 . Überprüfen Sie die Vorfälle in der Warnung.
-. Um einem verdächtigen Benutzer den weiteren Zugriff auf Ihre von der Konsole überwachte Umgebung zu verweigern, wählen Sie unter dem Namen des Benutzers *Blockieren* aus.
+. Um einen verdächtigen Benutzer in Ihrer Umgebung zu blockieren, wählen Sie unter dem Namen des Benutzers *Blockieren* aus.
 
 
 
@@ -223,7 +223,7 @@ Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellun
 Wenn Sie eine Arbeitslast verwerfen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf einen potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
 
 
-CAUTION: Wenn Sie eine Warnung verwerfen, können Sie diesen Status nicht wieder in einen anderen Status ändern und diese Änderung auch nicht rückgängig machen.
+CAUTION: Wenn Sie eine Warnung verwerfen, können Sie ihren Status nicht ändern oder diese Änderung rückgängig machen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
@@ -277,5 +277,5 @@ TIP: Wenn ein Volume mehrere Warnungen aufweist, müssen Sie möglicherweise fü
 +
 image:screen-alerts-incidents-impacted-files.png["Liste der betroffenen Dateien für eine bestimmte Warnung"]
 
-. Wählen Sie für diesen Vorfall das Download-Symbol aus und laden Sie die Liste der betroffenen Dateien im CSV-Format herunter.
+. Wählen Sie für diesen Vorfall das Download-Symbol aus, um die Liste der betroffenen Dateien im CSV-Format herunterzuladen.
 

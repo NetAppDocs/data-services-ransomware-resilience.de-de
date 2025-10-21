@@ -34,7 +34,7 @@ Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
 
 == Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Administratorrolle „Ransomware Resilience-Benutzerverhalten“. Sie können diese Aufgabe nicht mit der Administratorrolle „Ransomware Resilience“ ausführen. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+*Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die Rolle des Organisationsadministrators.  Für nachfolgende Konfigurationen für verdächtige Benutzeraktivitäten benötigen Sie die Administratorrolle „Ransomware Resilience-Benutzerverhalten“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 
 
@@ -46,7 +46,7 @@ Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Daten
 
 ==== Anforderungen
 
-Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM mit einem der folgenden unterstützten Betriebssystem- und Serveranforderungen.
+Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM, der/die die folgenden unterstützten Betriebssystem- und Serveranforderungen erfüllt.
 
 **Betriebssystemanforderungen**
 
@@ -115,7 +115,7 @@ image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivität
 
 
 .Ergebnis
-Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus. Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammlern und Benutzerverzeichniskonnektoren.
+Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus. Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichniskonnektoren.
 
 
 

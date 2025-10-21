@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-licenses.html 
 keywords: bluexp license, ransomware protection license, netapp console 
-summary: Beginnen Sie mit NeApp Ransomware Resilience, indem Sie die Lizenzierung einrichten. 
+summary: Stellen Sie sicher, dass Sie die Lizenzanforderungen für Ransomware Resilience erfüllen, um Ihre Systeme und Workloads zu schützen. 
 ---
 = Einrichten der Lizenzierung für NetApp Ransomware Resilience
 :hardbreaks:
@@ -16,23 +16,20 @@ Mit NetApp Ransomware Resilience können Sie verschiedene Lizenzierungspläne nu
 
 Um diese Aufgabe auszuführen, benötigen Sie die Rolle des Organisationsadministrators, Ordner- oder Projektadministrators. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^] .
 
-*Lizenztypen* Sie können die folgenden Lizenztypen verwenden:
+*Lizenztypen* Ransomware Resilience ist mit den folgenden Lizenztypen verfügbar:
 
-* Melden Sie sich für eine 30-tägige kostenlose Testversion an.
-* Erwerben Sie ein Pay-as-you-go-Abonnement (PAYGO) bei Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace oder Azure Marketplace.
-* Bringen Sie Ihre eigene Lizenz (BYOL) mit. Dabei handelt es sich um eine NetApp Lizenzdatei (NLF), die Sie von Ihrem NetApp Vertriebsmitarbeiter erhalten. Sie können die Seriennummer der Lizenz verwenden, um BYOL in der Konsole zu aktivieren.
+* 30 Tage kostenlos testen
+* Erwerben Sie ein Pay-as-you-go-Abonnement (PAYGO) bei Amazon Web Services (AWS) Marketplace, Google Cloud Marketplace oder Azure Marketplace
+* Bringen Sie Ihre eigene Lizenz mit (BYOL): eine NetApp Lizenzdatei (NLF), die Sie von Ihrem NetApp Vertriebsmitarbeiter erhalten. Sie können die Seriennummer der Lizenz verwenden, um BYOL in der Konsole zu aktivieren.
 
-
-
-NOTE: Wenn Sie sich für eine sechsmonatige Testversion anmelden, sollten Sie über eine NLF-Lizenz verfügen.
 
 Nachdem Sie Ihr BYOL eingerichtet oder ein PAYGO-Abonnement erworben haben, können Sie die Lizenz im Abschnitt „Licenses and subscriptions“ der Konsole sehen.
 
-Nach Ablauf der kostenlosen Testversion oder der Lizenz bzw. des Abonnements können Sie in Ransomware Resilience weiterhin Folgendes tun:
+Nach Ablauf der kostenlosen Testversion oder der Lizenz bzw. des Abonnements können Sie weiterhin:
 
-* Zeigen Sie Arbeitslasten und Arbeitslastzustand an.
-* Löschen Sie eine beliebige Ressource, beispielsweise eine Richtlinie.
-* Führen Sie alle geplanten Vorgänge aus, die während der Testphase oder unter der Lizenz erstellt wurden.
+* Anzeigen von Workloads und Workload-Integrität
+* Löschen von Ressourcen wie Richtlinien
+* Führen Sie alle geplanten Vorgänge aus, die während der Testphase oder unter der Lizenz erstellt wurden
 
 
 
@@ -46,14 +43,11 @@ NOTE: Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resili
 
 
 
-== Probieren Sie es mit einer 30-tägigen kostenlosen Testversion aus
+== Testen Sie Ransomware Resilience 30 Tage lang kostenlos
 
 Sie können Ransomware Resilience mit einer 30-tägigen kostenlosen Testversion ausprobieren.  Sie müssen ein Konsolenorganisationsadministrator sein, um die kostenlose Testversion zu starten.
 
-
-NOTE: Mit der Veröffentlichung im Oktober 2024 können neue Bereitstellungen von Ransomware Resilience jetzt 30 Tage lang kostenlos getestet werden.  Zuvor war für Ransomware Resilience eine 90-tägige kostenlose Testversion verfügbar.  Wenn Sie bereits an der 90-tägigen kostenlosen Testversion teilnehmen, gilt dieses Angebot für die nächsten 90 Tage.
-
-Während der Testphase gelten keine Kapazitätsbeschränkungen.
+Während der Testphase werden keine Speicherkapazitätsbeschränkungen durchgesetzt.
 
 Sie können jederzeit eine Lizenz erwerben oder ein Abonnement abschließen. Bis zum Ende der 30-tägigen Testphase werden Ihnen keine Kosten berechnet.  Um nach der 30-tägigen Testversion fortzufahren, müssen Sie eine BYOL-Lizenz oder ein PAYGO-Abonnement erwerben.
 
@@ -69,11 +63,12 @@ Wenn Sie sich zum ersten Mal bei diesem Dienst anmelden, wird die Zielseite ange
 +
 image:screen-landing.png["Screenshot der Zielseite für Ransomware Resilience"]
 
-. Wenn Sie noch keinen Connector für andere Dienste hinzugefügt haben, fügen Sie einen hinzu.
+. Wenn Sie noch keinen Konsolenagenten für andere Dienste hinzugefügt haben,link:ps://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["füge eins hinzu"^] .
+. Wählen Sie auf der Zielseite „Ransomware Resilience“ die Option „Beginnen Sie mit der Ermittlung von Workloads“, um Ihre Workloads zu ermitteln.
 +
-Informationen zum Hinzufügen eines Konsolenagenten finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Erfahren Sie mehr über Konsolenagenten"^] .
 
-. Nachdem Sie einen Konsolen-Agenten eingerichtet haben, ändert sich auf der Zielseite von Ransomware Resilience die Schaltfläche zum Hinzufügen eines Konsolen-Agenten in eine Schaltfläche zum Erkennen von Workloads.  Wählen Sie *Beginnen Sie mit der Ermittlung von Workloads* aus.
+NOTE: Diese Option ist nur verfügbar, wenn Sie einen Konsolenagenten erfolgreich installiert haben.
+
 . Um die Informationen zur kostenlosen Testversion anzuzeigen, wählen Sie die Dropdown-Option oben rechts aus.
 
 
@@ -114,7 +109,7 @@ NOTE: Sie erhalten eine E-Mail mit der Seriennummer von Ransomware Resilience un
 +
 image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufügen“."]
 
-. Wählen Sie auf der Seite „Lizenz hinzufügen“ die Option „Seriennummer eingeben“, geben Sie die Seriennummer ein, die in der Ihnen zugesandten E-Mail enthalten war, und wählen Sie „Lizenz hinzufügen“ aus.
+. Wählen Sie auf der Seite „Lizenz hinzufügen“ die Option „Seriennummer eingeben“ aus, geben Sie die Seriennummer ein, die in der Ihnen zugesandten E-Mail enthalten war, und wählen Sie dann „Lizenz hinzufügen“ aus.
 . Um Lizenzdetails anzuzeigen, wählen Sie in der linken Navigation der Konsole *Verwaltung* > * Licenses and subscriptions*.
 +
 ** Um Abonnementinformationen anzuzeigen, wählen Sie *Abonnements*.
@@ -123,7 +118,7 @@ image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufü
 
 . Zurück zur Ransomware-Resilienz.  Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.
 +
-Es wird eine Meldung angezeigt, dass eine Lizenz hinzugefügt wurde.
+Eine Nachricht bestätigt, dass eine Lizenz hinzugefügt wurde.
 
 
 
