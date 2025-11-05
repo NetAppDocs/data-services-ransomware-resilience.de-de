@@ -169,7 +169,9 @@ image:diagram-rp-architecture-preview3.png["Diagramm zur Ransomware-Resilienzarc
 
 Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Datenquellen:
 
-*Unterstützte Sicherungsziele*
+
+
+=== Unterstützte Sicherungsziele
 
 * Amazon Web Services (AWS) S3
 * Google Cloud Platform
@@ -177,7 +179,9 @@ Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Da
 * NetApp StorageGRID
 
 
-*Unterstützte Systeme*
+
+
+=== Unterstützte Systeme
 
 * On-Premises ONTAP NAS (mit NFS- und CIFS-Protokollen) mit ONTAP Version 9.11.1 und höher
 * On-Premises ONTAP SAN (mit FC-, iSCSI- und NVMe-Protokollen) mit ONTAP Version 9.17.1 und höher
@@ -186,16 +190,14 @@ Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Da
 * Cloud Volumes ONTAP 9.12.1 oder höher für Microsoft Azure (unter Verwendung der Protokolle NFS und CIFS)
 * Cloud Volumes ONTAP 9.17.1 oder höher für AWS, Google Cloud Platform und Microsoft Azure (unter Verwendung der Protokolle FC, iSCSI und NVMe)
 * Amazon FSx for NetApp ONTAP, das Autonomous Ransomware Protection (ARP und nicht ARP/AI) verwendet
-+
-
-NOTE: ARP/AI erfordert ONTAP 9.16 oder höher.
 
 
 
+NOTE: Die Verwendung von ARP/AI in ONTAP erfordert ONTAP 9.16 oder höher.  + ONTAP bietet keinen Schutz vor Ransomware für FlexGroup -Volumes, Mount-Point-Volumes, Mount-Path-Volumes, Offline-Volumes und Data Protection (DP)-Volumes.  Stellen Sie sicher, dass Sie Folgendes überprüfenlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Unterstützte und nicht unterstützte Konfigurationen in ONTAP"^] Die
 
-NOTE: Folgendes wird nicht unterstützt: FlexGroup Volumes, ONTAP Versionen älter als 9.11.1, Mount Point-Volumes, Mount Path-Volumes, Offline-Volumes und Data Protection (DP)-Volumes.
 
-*Unterstützte Workload-Datenquellen*
+
+=== Unterstützte Workload-Datenquellen
 
 Ransomware Resilience schützt die folgenden anwendungsbasierten Workloads auf primären Datenvolumes:
 
@@ -203,7 +205,6 @@ Ransomware Resilience schützt die folgenden anwendungsbasierten Workloads auf p
 * Blockspeicher
 * VMware-Datenspeicher
 * Datenbanken (MySQL und Oracle)
-* Mehr folgt in Kürze
 
 
 Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden außerdem alle von diesen Produkten unterstützten Workloads in Ransomware Resilience identifiziert.  Ransomware Resilience kann diese auf eine Workload-konsistente Weise schützen und wiederherstellen.
