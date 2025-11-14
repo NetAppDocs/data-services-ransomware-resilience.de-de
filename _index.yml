@@ -30,8 +30,6 @@ indexpage:
       url: "/rp-start-simulate.html"
   - title: Nutzen Sie Ransomware-Resilienz
     links:
-    - title: Übersicht zur Ransomware-Resilienz verwenden
-      url: "/rp-use-overview.html"
     - title: Workloads ermitteln
       url: "/rp-start-discover.html"
     - title: Anzeigen des Workload-Zustands mithilfe des Dashboards

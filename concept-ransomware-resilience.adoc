@@ -207,7 +207,7 @@ Ransomware Resilience schützt die folgenden anwendungsbasierten Workloads auf p
 * Datenbanken (MySQL und Oracle)
 
 
-Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden außerdem alle von diesen Produkten unterstützten Workloads in Ransomware Resilience identifiziert.  Ransomware Resilience kann diese auf eine Workload-konsistente Weise schützen und wiederherstellen.
+Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden alle von diesen Produkten unterstützten Workloads auch in Ransomware Resilience identifiziert. Ransomware Resilience kann diese auf eine Workload-konsistente Weise schützen und wiederherstellen.
 
 
 
