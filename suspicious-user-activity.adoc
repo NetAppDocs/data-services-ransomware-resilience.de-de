@@ -52,8 +52,6 @@ Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder
 
 [cols="2"]
 |===
-
-
 | Betriebssystem | Unterstützte Versionen 
 
 
@@ -92,6 +90,19 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 * **Speicherplatz**: 35 GB freier Speicherplatz
 
 
+**Unterstützung durch Cloud-Anbieter**
+
+Die Überwachung verdächtiger Benutzeraktivitäten ist bei AWS und Azure in den folgenden Regionen möglich:
+
+|===
+| Cloud-Anbieter | Region 
+
+
+| AWS | US Ost (us-east-1) 
+
+
+| Azurblau | Ostküste der USA 
+|===
 .Schritte
 . Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
 +
