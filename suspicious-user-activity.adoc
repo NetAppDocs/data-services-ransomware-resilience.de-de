@@ -92,7 +92,7 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 **Unterstützung durch Cloud-Anbieter**
 
-Die Überwachung verdächtiger Benutzeraktivitäten ist bei AWS und Azure in den folgenden Regionen möglich:
+Verdächtige Benutzeraktivitätsdaten können in AWS und Azure in den folgenden Regionen gespeichert werden:
 
 |===
 | Cloud-Anbieter | Region 

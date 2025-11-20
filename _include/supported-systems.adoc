@@ -2,14 +2,34 @@
 :allow-uri-read: 
 
 
-* On-Premises ONTAP NAS (mit NFS- und CIFS-Protokollen) mit ONTAP Version 9.11.1 und höher
-* On-Premises ONTAP SAN (mit FC-, iSCSI- und NVMe-Protokollen) mit ONTAP Version 9.17.1 und höher
-* Cloud Volumes ONTAP 9.11.1 oder höher für AWS (unter Verwendung der Protokolle NFS und CIFS)
-* Cloud Volumes ONTAP 9.11.1 oder höher für Google Cloud Platform (unter Verwendung der Protokolle NFS und CIFS)
-* Cloud Volumes ONTAP 9.12.1 oder höher für Microsoft Azure (unter Verwendung der Protokolle NFS und CIFS)
-* Cloud Volumes ONTAP 9.17.1 oder höher für AWS, Google Cloud Platform und Microsoft Azure (unter Verwendung der Protokolle FC, iSCSI und NVMe)
-* Amazon FSx for NetApp ONTAP, das Autonomous Ransomware Protection (ARP und nicht ARP/AI) verwendet
+|===
+| Umfeld | Protokoll | Unterstützte Versionen 
 
 
+| Amazon FSx for NetApp ONTAP* | NFS, CIFS und SAN | k. A. 
 
-NOTE: Die Verwendung von ARP/AI in ONTAP erfordert ONTAP 9.16 oder höher.  + ONTAP bietet keinen Schutz vor Ransomware für FlexGroup -Volumes, Mount-Point-Volumes, Mount-Path-Volumes, Offline-Volumes und Data Protection (DP)-Volumes.  Stellen Sie sicher, dass Sie Folgendes überprüfenlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Unterstützte und nicht unterstützte Konfigurationen in ONTAP"^] Die
+
+.2+| Cloud Volumes ONTAP für AWS | CIFS & NFS | 9.11.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+
+
+.2+| Cloud Volumes ONTAP für Google Cloud Platform | CIFS & NFS | 9.11.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+
+
+.2+| Cloud Volumes ONTAP für Microsoft Azure | CIFS & NFS | 9.12.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+
+
+.2+| ONTAP (lokal) | CIFS & NFS | 9.11.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+|===
+{* Amazon FSx for NetApp ONTAP verwendet Autonomous Ransomware Protection (ARP) und nicht ARP/AI.  Weitere Informationen zu den Unterschieden finden Sie unterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/#arp-ai["ARP/AI"^] Die

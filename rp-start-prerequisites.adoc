@@ -22,17 +22,37 @@ Um Ransomware Resilience nutzen zu können, müssen Sie die Voraussetzungen erf�
 
 Stellen Sie sicher, dass Sie ein unterstütztes System verwenden:
 
-* On-Premises ONTAP NAS (mit NFS- und CIFS-Protokollen) mit ONTAP Version 9.11.1 und höher
-* On-Premises ONTAP SAN (mit FC-, iSCSI- und NVMe-Protokollen) mit ONTAP Version 9.17.1 und höher
-* Cloud Volumes ONTAP 9.11.1 oder höher für AWS (unter Verwendung der Protokolle NFS und CIFS)
-* Cloud Volumes ONTAP 9.11.1 oder höher für Google Cloud Platform (unter Verwendung der Protokolle NFS und CIFS)
-* Cloud Volumes ONTAP 9.12.1 oder höher für Microsoft Azure (unter Verwendung der Protokolle NFS und CIFS)
-* Cloud Volumes ONTAP 9.17.1 oder höher für AWS, Google Cloud Platform und Microsoft Azure (unter Verwendung der Protokolle FC, iSCSI und NVMe)
-* Amazon FSx for NetApp ONTAP, das Autonomous Ransomware Protection (ARP und nicht ARP/AI) verwendet
+|===
+| Umfeld | Protokoll | Unterstützte Versionen 
 
 
+| Amazon FSx for NetApp ONTAP* | NFS, CIFS und SAN | k. A. 
 
-NOTE: Die Verwendung von ARP/AI in ONTAP erfordert ONTAP 9.16 oder höher.  + ONTAP bietet keinen Schutz vor Ransomware für FlexGroup -Volumes, Mount-Point-Volumes, Mount-Path-Volumes, Offline-Volumes und Data Protection (DP)-Volumes.  Stellen Sie sicher, dass Sie Folgendes überprüfenlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Unterstützte und nicht unterstützte Konfigurationen in ONTAP"^] Die
+
+.2+| Cloud Volumes ONTAP für AWS | CIFS & NFS | 9.11.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+
+
+.2+| Cloud Volumes ONTAP für Google Cloud Platform | CIFS & NFS | 9.11.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+
+
+.2+| Cloud Volumes ONTAP für Microsoft Azure | CIFS & NFS | 9.12.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+
+
+.2+| ONTAP (lokal) | CIFS & NFS | 9.11.1 und später 
+
+
+| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+|===
+{* Amazon FSx for NetApp ONTAP verwendet Autonomous Ransomware Protection (ARP) und nicht ARP/AI.  Weitere Informationen zu den Unterschieden finden Sie unterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/#arp-ai["ARP/AI"^] Die
 
 
 
@@ -43,7 +63,7 @@ Ihre NetApp Console Konfiguration erfordert Folgendes:
 * Ein NetApp Console mit Organisationsadministratorberechtigungen zum Erkennen von Ressourcen.
 * Eine Konsolenorganisation und ein System mit mindestens einem aktiven Konsolenagenten, der mit einem System verbunden istlink:concept-ransomware-resilience.html#supported-backup-targets-systems-and-workload-data-sources["Unterstütztes System"] Die
 +
-** Falls Ihre lokalen ONTAP Cluster oder Cloud Volumes ONTAP in AWS oder in der Azure-Cloud nicht in der Konsole eingerichtet sind, siehelink:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten konfigurieren"^] Undlink:https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["Standardanforderungen für die Konsole"^] Die
+** Falls Ihre lokalen ONTAP Cluster oder Cloud Volumes ONTAP in AWS oder in der Azure-Cloud nicht in der Konsole eingerichtet sind, siehelink:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten konfigurieren"^] Undlink:https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["Standardanforderungen für die Konsole"^] Die
 +
 
 NOTE: Wenn Sie mehrere Konsolenagenten in einer einzigen Konsolenorganisation haben, scannt Ransomware Resilience die ONTAP -Ressourcen aller Konsolenagenten über den derzeit in der Konsolen-Benutzeroberfläche ausgewählten Agenten hinaus.
