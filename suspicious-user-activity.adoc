@@ -108,7 +108,6 @@ Verdächtige Benutzeraktivitätsdaten können in AWS und Azure in den folgenden 
 
 | Azurblau | Ostküste der USA 
 |===
- and
 .Schritte
 . Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
 +
