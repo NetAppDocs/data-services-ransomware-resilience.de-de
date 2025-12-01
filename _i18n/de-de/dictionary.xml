@@ -1995,7 +1995,6 @@
   <block id="e29d7c0b36af68edd13ebac84f15b44b" category="cell">Cloud-Anbieter</block>
   <block id="f447ac856e7e72435904956e3b15f433" category="cell">Region</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="cell">AWS</block>
-  <block id="90f74c5c50c42b91275c19e2cccad976" category="cell">US Ost (us-east-1)</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="cell">Azurblau</block>
   <block id="3c110de67497eb3f8d4c100e43101c81" category="cell">Ostküste der USA</block>
   <block id="0ba29c6a1afacf586b03a26162c72274" category="cell">Umfeld</block>
@@ -2069,4 +2068,7 @@
   <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">Die Zuordnung von NSS-Anmeldeinformationen zu Ihrem NetApp Console unterscheidet sich von der Zuordnung des NSS-Kontos zu einer Konsolenbenutzeranmeldung.</block>
   <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">Diese NSS-Anmeldeinformationen sind mit Ihrer spezifischen Konsolenkonto-ID verknüpft. Benutzer, die zur Konsolenorganisation gehören, können über *Support &gt; NSS-Verwaltung* auf diese Anmeldeinformationen zugreifen.</block>
   <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">Diese Aktionen ermöglichen der Konsole, Ihr NSS-Konto für Dinge wie Lizenzdownloads, Überprüfung von Software-Upgrades und zukünftige Support-Registrierungen zu verwenden.</block>
+  <block id="24dd233beea6d20446b604bba13115c0" category="list-text">Asien-Pazifik (Sydney) (ap-southeast-2)</block>
+  <block id="5c024c0f8096e0fba857f661afe2dbd0" category="list-text">Europa (Frankfurt) (eu-central-1)</block>
+  <block id="d605e764d56b8615ebf6dd5f87998855" category="list-text">US Ost (Nord-Virginia) (us-east-1)</block>
 </blocks>
