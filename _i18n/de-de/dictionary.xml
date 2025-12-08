@@ -1610,7 +1610,6 @@
   <block id="906ec8bab01967c36f2f073eff9f54df" category="doc">Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten in NetApp Ransomware Resilience</block>
   <block id="9ba1db4a2c84400f14de2d58496b9f52" category="paragraph">Ransomware Resilience unterstützt die Erkennung verdächtigen Benutzerverhaltens in Erkennungsrichtlinien und ermöglicht Ihnen, Ransomware-Vorfälle auf Benutzerebene zu bekämpfen.</block>
   <block id="90c4c763135bd7a7443ed22e4149185b" category="section-title">Agenten und Sammler</block>
-  <block id="03f21183a058745685d1d78fcc7eab3a" category="paragraph">Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten über das Ransomware Resilience-Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben, um die Funktion zu aktivieren.</block>
   <block id="2b294b61543173e7462d37def0724cef" category="paragraph">Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analyse an einen SaaS-Standort. Es gibt zwei Arten von Sammlern:</block>
   <block id="fa83d0f077ae64e1df0b8a9ed9982815" category="paragraph">Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.</block>
   <block id="4f047e83e52e21d5382adc1b5dbf3119" category="section-title">Hinzufügen eines Benutzeraktivitätsagenten</block>
@@ -1626,21 +1625,15 @@
   <block id="6fe8b98c53e8d099686936732785d471" category="cell">Debian</block>
   <block id="96076f12b1cb63e4304e6e93bf2bdf1c" category="cell">11 (64 Bit), 12 (64 Bit), einschließlich SELinux</block>
   <block id="47aa329f6ec0cd1009231b4b7fca0a6b" category="cell">OpenSUSE Leap</block>
-  <block id="19b160ebc6598b7f22f292d227c45c9d" category="cell">15.3 (64 Bit) bis 15.6 (64 Bit)</block>
   <block id="fdcd362ac5f5f9817e70642dd2a48bfd" category="cell">Oracle Linux</block>
-  <block id="95ccc8f8721ed98f86b3373d9ede2a15" category="cell">8.10 (64 Bit) und 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux</block>
-  <block id="a82007c47b25723539a00ff94e8b3d27" category="cell">RedHat</block>
   <block id="d33305ae6335b0a9106e226ed71ca60f" category="cell">8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit) und 10 (64 Bit), einschließlich SELinux</block>
   <block id="d405e3063aac76a254e44386c961b24c" category="cell">Felsig</block>
-  <block id="562cb7e6b7d585b5ffbe8d9aec64cf10" category="cell">Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux</block>
   <block id="92ceb02e8fd413288d949e40d8ca4832" category="cell">SUSE Enterprise Linux</block>
   <block id="ce370a856bc8592a8206af596cace9ea" category="cell">15 SP4 (64 Bit) bis 15 SP6 (64 Bit), einschließlich SELinux</block>
   <block id="3d945423f8e9496c429a5d8c65b4604f" category="cell">Ubuntu</block>
   <block id="6072b01d67af0366830f2fef13cdf0da" category="cell">20.04 LTS (64 Bit), 22.04 LTS (64 Bit) und 24.04 LTS (64 Bit)</block>
   <block id="e5fc81082964adedb5790746c18c9fb7" category="paragraph">**Serveranforderungen**</block>
   <block id="fd9b966c1c6f66e7c4f38e133767c880" category="paragraph">Der Server muss die folgenden Mindestanforderungen erfüllen:</block>
-  <block id="f0499c7832db4d35decdf83de714841c" category="list-text">**CPU**: 4 KERNE</block>
-  <block id="4a8a49e18f8860c4232837503bcc2edd" category="list-text">**RAM**: 16 GB RAM</block>
   <block id="a2ad8789f963859e0c26a6daaec4a76b" category="list-text">Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.</block>
   <block id="44e08a5b01e752ac11f59bba4e07dea7" category="paragraph">Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie zu *Einstellungen*, suchen Sie die Kachel **Benutzeraktivität** und wählen Sie dann **Verwalten**. Wählen Sie auf dem Bildschirm „Benutzeraktivität“ die Registerkarte **Benutzeraktivitätsagenten** und dann **Hinzufügen**.</block>
   <block id="75d41b8fe2ef8de56d2fd2046bb0dad3" category="list-text">Wählen Sie einen **Cloud-Anbieter** und dann eine **Region** aus. Wählen Sie **Weiter**.</block>
@@ -1662,24 +1655,14 @@
   <block id="8348d8dcee9ea32e049e21c42a431b91" category="list-text">Gehen Sie in Ransomware Resilience zu *Einstellungen*.</block>
   <block id="9fcb0a7634f29d96ae98e37bbc76e1cd" category="list-text">Wählen Sie in der Kachel „Benutzeraktivität“ **Verwalten** aus.</block>
   <block id="e70202c14c96f451fdcf2617844ea351" category="list-text">Wählen Sie die Registerkarte **Benutzerverzeichnis-Konnektoren** und dann **Hinzufügen**.</block>
-  <block id="6b0d749af4fb3ac0e4e4a1eefc36c454" category="list-text">Geben Sie die Details der Verbindung an:</block>
   <block id="496ee322ba138fdbc777e5ab2e30145e" category="list-text">*Name*</block>
   <block id="e018ce61f2faa0782aac0cf5ceb4e39f" category="list-text">*Benutzerverzeichnistyp*</block>
   <block id="817d09446fbab0a167f137ba029b3b2c" category="list-text">*Server-IP-Adresse oder Domänenname*</block>
   <block id="942f115bf2a4bb90285e9cc5de7fd48b" category="list-text">*Waldname oder Suchname*</block>
-  <block id="28781714c6ccf5cfa635f547328898a5" category="list-text">*BIND-Domänenname*</block>
   <block id="f379b6d26456916980ea32f662e2088a" category="list-text">*BIND-Passwort*</block>
-  <block id="2bfa02843b15eae74dde462c970a2a00" category="list-text">*Protokoll* (dies ist optional)</block>
   <block id="5ddcf17f54788a5bb9148e8671562c06" category="list-text">*Hafen*</block>
   <block id="4648df055f6134caf491290d363fdd55" category="inline-image-macro">Screenshot der Benutzerverzeichnisverbindung</block>
   <block id="e41447b39a2a8caf5092a92f230bd291" category="paragraph"><block ref="e41447b39a2a8caf5092a92f230bd291" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="86c3d5aee71dba0d2e67a122a900b46d" category="paragraph">Geben Sie die Details zur Attributzuordnung an:</block>
-  <block id="67abd0bd8cf8f6b948416d41be7c6f6a" category="list-text">*Anzeigename*</block>
-  <block id="aff175f709dc693d1f9ca4c44728163a" category="list-text">*SID* (wenn Sie LDAP verwenden)</block>
-  <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Benutzername*</block>
-  <block id="c8a0546946d4ed57fd88fc4918d3825f" category="list-text">*Unix-ID* (wenn Sie NFS verwenden)</block>
-  <block id="44c65853ed8da5c496344c1e746b1669" category="list-text">Wählen Sie *Optionale Attribute einschließen*. Sie können auch E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen angeben.</block>
-  <block id="7703674a5321c1f23549682250a732e9" category="paragraph">Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.</block>
   <block id="7174ea6988f438d85266f06a4d178a79" category="list-text">Wählen Sie **Hinzufügen**.</block>
   <block id="c46a6dfd4cabd150fef75d97e543d6e6" category="list-text">Kehren Sie zur Registerkarte „Benutzerverzeichnis-Konnektoren“ zurück, um den Status Ihres Benutzerverzeichnis-Konnektors zu überprüfen. Bei erfolgreicher Erstellung wird der Status des Benutzerverzeichnis-Connectors als *Wird ausgeführt* angezeigt.</block>
   <block id="ecdd284164c9ec55e281a5e22e24af67" category="section-title">Löschen eines Benutzerverzeichnis-Connectors</block>
@@ -1893,7 +1876,6 @@
   <block id="b6173a051353d59a4ee775fcef288441" category="list-text">Der **Benutzerverzeichnis-Connector** stellt eine Verbindung zu Ihrem Verzeichnis her, um Benutzer-IDs Benutzernamen zuzuordnen.</block>
   <block id="508899c1c018f291af4cb6a0423c426c" category="paragraph">*Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die Rolle des Organisationsadministrators.  Für nachfolgende Konfigurationen für verdächtige Benutzeraktivitäten benötigen Sie die Administratorrolle „Ransomware Resilience-Benutzerverhalten“. <block ref="d9cbbacd5ef5cff6a1660fdb9d259f2f" category="inline-link-macro-rx"></block>.</block>
   <block id="53b036bcd07f4ebcfe2ec32a98556822" category="paragraph">Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM, der/die die folgenden unterstützten Betriebssystem- und Serveranforderungen erfüllt.</block>
-  <block id="d4a6e9b0b745b83f49163b25271ce445" category="list-text">**Speicherplatz**: 35 GB freier Speicherplatz</block>
   <block id="398de83ff8f318218f9eaedb05929ef0" category="paragraph">Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus. Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichniskonnektoren.</block>
   <block id="a83ea9a287c9fdd0689933a464055150" category="paragraph">Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-Connector erstellen.</block>
   <block id="89bd0177a422e5d81fce2f8f82dac3f6" category="paragraph-title">Benötigen Sie eine Lizenz zur Nutzung von Ransomware Resilience?</block>
@@ -2071,4 +2053,26 @@
   <block id="f6967390d49d08c53cc88d3cdf42eb92" category="list-text">SnapCenter für Oracle</block>
   <block id="897c29783a147c6c7b7844f2d4a9e81a" category="paragraph">In der Vorabversion schützt der Dienst anwendungsbasierte Workloads von Oracle, VM-Datenspeichern und Dateifreigaben auf lokalem NAS-Speicher sowie Cloud Volumes ONTAP auf AWS (unter Verwendung des NFS-Protokolls) über BlueXP -Organisationen hinweg und sichert Daten im Amazon Web Services Cloud-Speicher.</block>
   <block id="2d2972fc6d16379955701a1cc8c6633f" category="sidebar">NetApp Ransomware Resilience schützt, erkennt und unterstützt die Wiederherstellung von Anwendungs-Workloads und Dateifreigaben vor Ransomware-Bedrohungen im lokalen und Cloud-Speicher. Ransomware Resilience ermöglicht sichere Datensicherung und -wiederherstellung und hilft Unternehmen so, kritische Daten zu schützen und die Geschäftskontinuität für Oracle, VM-Datenspeicher, NAS-Speicher und mehr aufrechtzuerhalten.</block>
+  <block id="05a32e62ff35ead335cfbdaf6b19a9b2" category="paragraph">Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten im Ransomware Resilience Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben.</block>
+  <block id="f075180c986e3a7a8e0bad4fcec7c485" category="cell">15.3 (64 Bit) bis 15.6 (64 Bit)</block>
+  <block id="32d094cff0ab508ab383051555e7844b" category="cell">8.10 (64 Bit) und 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux</block>
+  <block id="1d9fc183665bd1e195391190be506894" category="cell">Red Hat</block>
+  <block id="40a4866844a145aa0d01d094ea38e0d3" category="cell">Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux</block>
+  <block id="ec0c7e841d2f0e7a16a6b4b47a57ecd8" category="list-text">**CPU**: 4 Kerne</block>
+  <block id="177d9a4926538bc7d9bcbb8ad6ca3f0f" category="list-text">**RAM**: 16 GB RAM</block>
+  <block id="f01ab58abd28b55b4954d17a62080293" category="list-text">**Festplattenspeicher**: 35 GB freier Festplattenspeicher</block>
+  <block id="191a3f30ab05799955dc06c5f394b591" category="list-text">Konfigurieren Sie die Verbindung. Geben Sie die erforderlichen Informationen für jedes Feld ein.</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">Feld</block>
+  <block id="8099786db97f0913cd0cefcd4a7bc6fd" category="cell">Geben Sie einen eindeutigen Namen für den Benutzerverzeichnis-Connector ein.</block>
+  <block id="4adff96a4a05104e03197234118085e2" category="cell">Der Verzeichnistyp</block>
+  <block id="722fb2ada3f9ea6943e9b3e31070b992" category="cell">Die IP-Adresse oder der vollqualifizierte Domänenname (FQDN) des Servers, der die Verbindung hostet</block>
+  <block id="de477c1e3721a76952a5b9396ecf6fdd" category="paragraph">Sie können die Gesamtstrukturebene der Verzeichnisstruktur als direkten Domänennamen angeben (zum Beispiel<block ref="50e97bbcb7daba438b04ca294e70b332" prefix=" " category="inline-code"></block>) oder eine Reihe relativer, angesehener Namen (zum Beispiel:<block ref="a095aad7202650a49f2e97c9b4301648" prefix=" " category="inline-code"></block>). Sie können auch einen Eintrag eingeben<block ref="e4a59df8b97206109eb4b7f2fe528a4d" prefix=" " category="inline-code"></block> um nach einer Organisationseinheit oder einem<block ref="1c2903397d8833382673bab22aa8b937" prefix=" " category="inline-code"></block> auf einen bestimmten Benutzer beschränken (zum Beispiel:<block ref="bf398740ce4b2f74d8422fcaf8220aa1" prefix=" " category="inline-code"></block>).</block>
+  <block id="e84098015e7ceb92236e398c96a2a10d" category="cell">*BIND DN*</block>
+  <block id="bc155f025a2d678a9b7a2ecd0f109bb7" category="cell">Der BIND DN ist ein Benutzerkonto, das berechtigt ist, das Verzeichnis zu durchsuchen, z. B. user@domain.com. Der Benutzer benötigt die Berechtigung „Domänenlesbar“.</block>
+  <block id="c0e32b7e69f6b1f044d23fea6824f4f5" category="cell">Das Passwort für den in BIND DN angegebenen Benutzer.</block>
+  <block id="dce365633ffb688b7532470dfaf4e118" category="cell">*Protokoll*</block>
+  <block id="91fa08a58f816e98d83df1ce310eb825" category="cell">Das Feld „Protokoll“ ist optional. Sie können LDAP, LDAPS oder LDAP over StartTLS verwenden.</block>
+  <block id="f9115354bfb0b47a80e11c68936a7ec8" category="cell">Geben Sie die von Ihnen gewählte Portnummer ein.</block>
+  <block id="ffcb2d1f993f068c61d2776ab07c354f" category="paragraph">Geben Sie die Details zur Attributzuordnung an: * *Anzeigename* * *SID* (falls Sie LDAP verwenden) * *Benutzername* * *Unix-ID* (falls Sie NFS verwenden) * Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen hinzufügen.</block>
+  <block id="8cab6e56434342fb39a14e12391a5d3e" category="paragraph">+ Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.</block>
 </blocks>
