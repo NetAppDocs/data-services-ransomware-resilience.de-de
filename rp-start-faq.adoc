@@ -83,7 +83,7 @@ Die Priorität der Arbeitslast (kritisch, Standard, wichtig) wird durch die Snap
 link:rp-use-protect.html["Informieren Sie sich über die Priorität oder Wichtigkeit der Arbeitslast"] .
 
 .Welche Workloads werden von Ransomware Resilience unterstützt?
-Ransomware Resilience kann die folgenden Workloads identifizieren: Oracle, MySQL, Dateifreigaben, Blockspeicher, VMs und VM-Datenspeicher.
+Ransomware Resilience kann die folgenden Workloads identifizieren: Oracle, Dateifreigaben, Blockspeicher, VMs und VM-Datenspeicher.
 
 Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden alle von diesen Produkten unterstützten Workloads auch in Ransomware Resilience identifiziert. Ransomware Resilience kann SnapCenter und SnapCenter -Workloads auf eine workloadkonsistente Weise schützen und wiederherstellen.
 

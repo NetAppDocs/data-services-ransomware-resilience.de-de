@@ -45,7 +45,7 @@ TIP: Für eine verbesserte Verwaltung und Sicherung Ihres Datenbestands können 
 
 * NetApp Backup and Recovery für Dateifreigaben, VM-Dateifreigaben
 * SnapCenter für VMware für VM-Datenspeicher
-* SnapCenter für Oracle und MySQL
+* SnapCenter für Oracle
 
 
 Schutzinformationen dieser Dienste werden in Ransomware Resilience angezeigt.  Mit Ransomware Resilience können Sie diesen Diensten Erkennungsrichtlinien hinzufügen.  Das Hinzufügen einer Schutzrichtlinie mit Ransomware Resilience ersetzt die vorhandenen Schutzrichtlinien.
