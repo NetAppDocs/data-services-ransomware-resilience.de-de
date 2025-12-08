@@ -190,10 +190,18 @@ Sie können die Gesamtstrukturebene der Verzeichnisstruktur als direkten Domäne
 image:screenshot-user-directory-connection.png["Screenshot der Benutzerverzeichnisverbindung"]
 
 +
-Geben Sie die Details zur Attributzuordnung an: * *Anzeigename* * *SID* (falls Sie LDAP verwenden) * *Benutzername* * *Unix-ID* (falls Sie NFS verwenden) * Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen hinzufügen.
+Geben Sie die Details zur Attributzuordnung an:
 
 +
-+ Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
+** *Anzeigename*
+** *SID* (wenn Sie LDAP verwenden)
+** *Benutzername*
+** *Unix-ID* (wenn Sie NFS verwenden)
+** Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen.
++
+Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
+
+
 
 . Wählen Sie **Hinzufügen**.
 . Kehren Sie zur Registerkarte „Benutzerverzeichnis-Konnektoren“ zurück, um den Status Ihres Benutzerverzeichnis-Konnektors zu überprüfen. Bei erfolgreicher Erstellung wird der Status des Benutzerverzeichnis-Connectors als *Wird ausgeführt* angezeigt.

@@ -2073,6 +2073,11 @@
   <block id="dce365633ffb688b7532470dfaf4e118" category="cell">*Protokoll*</block>
   <block id="91fa08a58f816e98d83df1ce310eb825" category="cell">Das Feld „Protokoll“ ist optional. Sie können LDAP, LDAPS oder LDAP over StartTLS verwenden.</block>
   <block id="f9115354bfb0b47a80e11c68936a7ec8" category="cell">Geben Sie die von Ihnen gewählte Portnummer ein.</block>
-  <block id="ffcb2d1f993f068c61d2776ab07c354f" category="paragraph">Geben Sie die Details zur Attributzuordnung an: * *Anzeigename* * *SID* (falls Sie LDAP verwenden) * *Benutzername* * *Unix-ID* (falls Sie NFS verwenden) * Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, Telefonnummer, Rolle, Bundesland, Land, Abteilung, Foto, Manager-DN oder Gruppen hinzufügen.</block>
-  <block id="8cab6e56434342fb39a14e12391a5d3e" category="paragraph">+ Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.</block>
+  <block id="86c3d5aee71dba0d2e67a122a900b46d" category="paragraph">Geben Sie die Details zur Attributzuordnung an:</block>
+  <block id="67abd0bd8cf8f6b948416d41be7c6f6a" category="list-text">*Anzeigename*</block>
+  <block id="aff175f709dc693d1f9ca4c44728163a" category="list-text">*SID* (wenn Sie LDAP verwenden)</block>
+  <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Benutzername*</block>
+  <block id="c8a0546946d4ed57fd88fc4918d3825f" category="list-text">*Unix-ID* (wenn Sie NFS verwenden)</block>
+  <block id="1358e8e29329a97048f0688a1813071f" category="list-text">Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen.</block>
+  <block id="7703674a5321c1f23549682250a732e9" category="paragraph">Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.</block>
 </blocks>
