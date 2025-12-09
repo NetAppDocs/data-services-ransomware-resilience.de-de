@@ -14,7 +14,7 @@ Wenn Sie die Erweiterungsblockierung aktivieren, erfolgt die Aktivierung nun auf
 
 Ransomware Resilience ermöglicht es Ihnen nun, den Status von Warnmeldungen zum Benutzerverhalten zu bearbeiten. Sie können Warnmeldungen manuell verwerfen und beheben.
 
-Weitere Informationen finden Sie unter xref:rp-use-alert.html[Verwalten von Warnungen].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Warnmeldungen in der Ransomware-Resilienz verwalten"^].
 
 
 
