@@ -4,7 +4,7 @@ permalink: rp-use-alert.html
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
 summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Ransomware Resilience Dashboard eine Warnung angezeigt, die auf einen möglichen Angriff hinweist. An diesem Punkt sollten Sie sich das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ ansehen. 
 ---
-= Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience
+= Warnmeldungen in NetApp Ransomware Resilience verwalten
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf d
 
 
 [role="lead"]
-Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Dashboard und im Benachrichtigungsbereich eine Warnung angezeigt.  Ransomware Resilience erstellt sofort einen Snapshot.  Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.
+Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung auf dem Dashboard und im Benachrichtigungsbereich angezeigt. Ransomware Resilience erstellt sofort einen Snapshot. Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.
 
 Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird in den Benachrichtigungseinstellungen der Konsole eine Benachrichtigung angezeigt und eine E-Mail an die konfigurierte Adresse gesendet. Die E-Mail enthält Informationen zum Schweregrad, zur betroffenen Arbeitslast und einen Link zur Warnung auf der Registerkarte „Ransomware Resilience *Warnungen*“.
 
@@ -56,13 +56,14 @@ Eine Warnung kann einen der folgenden Status haben:
 * *Inaktiv*
 
 
-Ein Alarmvorfall kann einen der folgenden Zustände haben:
+Ein Alarmereignis kann folgende Zustände aufweisen:
 
 * *Neu*: Alle Vorfälle werden bei ihrer erstmaligen Erkennung als „neu“ gekennzeichnet.
+* *In Bearbeitung*: Sie können einen Vorfall als „in Bearbeitung“ markieren, während Sie ihn auswerten.
 * *Abgelehnt*: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, können Sie den Status auf „Abgelehnt“ ändern.
 +
 
-CAUTION: Nachdem Sie einen Angriff abgewehrt haben, können Sie dies nicht mehr rückgängig machen.  Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
+CAUTION: Sobald ein Angriff abgewiesen wurde, kann sein Status nicht mehr rückgängig gemacht werden. Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
 
 * *Abweisen*: Der Vorfall wird gerade abgewiesen.
 * *Gelöst*: Der Vorfall wurde behoben.
@@ -216,9 +217,9 @@ Nachdem die Warnung zur Wiederherstellung markiert wurde, wird sie von der Regis
 
 == Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt
 
-Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Handelt es sich nicht um tatsächliche Drohungen, können sie abgewiesen werden.
+Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Wenn es sich nicht um tatsächliche Bedrohungen handelt, können sie als unbegründet abgetan werden.
 
-Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.  Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst bei einem solchen Verhalten keine weitere Warnung aus.
+Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden. Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten und ordnet es dem normalen Betrieb zu, sodass bei einem solchen Verhalten keine Warnung mehr ausgelöst wird.
 
 Wenn Sie eine Arbeitslast verwerfen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf einen potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
 
@@ -236,7 +237,7 @@ image:screen-alerts.png["Seite „Warnungen“"]
 +
 image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
 
-. Wählen Sie einen oder mehrere Vorfälle aus.  Oder wählen Sie alle Vorfälle aus, indem Sie das Feld „Vorfall-ID“ oben links in der Tabelle auswählen.
+. Wählen Sie einen oder mehrere Vorfälle aus. Alternativ können Sie alle Vorfälle auswählen, indem Sie das Feld „Vorfalls-ID“ oben links in der Tabelle anklicken.
 . Wenn Sie feststellen, dass der Vorfall keine Bedrohung darstellt, verwerfen Sie ihn als falsch-positives Ergebnis:
 +
 ** Wählen Sie den Vorfall aus.
@@ -246,13 +247,13 @@ image:screen-alerts-status-edit.png["Seite „Alarmstatus bearbeiten“"]
 
 
 
-. Wählen Sie im Feld „Status bearbeiten“ den Status *„Abgelehnt“* aus.
+. Wählen Sie im Dialogfeld „Status bearbeiten“ den Status *Abgelehnt* aus.
 +
-Es werden zusätzliche Informationen zur Arbeitslast und zum Löschen von Snapshot-Kopien angezeigt.
+Es werden zusätzliche Informationen über die Arbeitslast und das Löschen der Snapshot-Kopien angezeigt.
 
 . Wählen Sie *Speichern*.
 +
-Der Status des Vorfalls bzw. der Vorfälle ändert sich in „Abgelehnt“.
+Der Status des Vorfalls bzw. der Vorfälle ändert sich zu „Abgewiesen“.
 
 
 

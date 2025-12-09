@@ -215,7 +215,6 @@
   <block id="533c17bbfdfb297420db9af0908070d6" category="inline-link">Autonomer Ransomware-Schutz</block>
   <block id="cc6088539286339733631d73fb51774b" category="inline-link">NetApp Backup and Recovery</block>
   <block id="2dd00507ca85eec8a3465506e478e45f" category="inline-link">ONTAP FPolicy</block>
-  <block id="f2abd20c3ee58c54298223da2df91335" category="list-text">Ermittelt die aktuelle Schutzstufe der NetApp Snapshot-Kopien und Sicherungsrichtlinien jedes Volumes sowie alle On-Box-Erkennungsfunktionen. Ransomware Resilience verknüpft diese Schutzhaltung dann mit den Workloads, indem es Backup und Recovery, ONTAP Dienste und NetApp -Technologien wie Autonomous Ransomware Protection (ARP oder ARP/AI, abhängig von Ihrer ONTAP Version), FPolicy, Backup-Richtlinien und Snapshot-Richtlinien verwendet. Erfahren Sie mehr über<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline-link-rx"></block> ,<block ref="2b1b7f994c6938347657a18d8edc7db7" category="inline-link-rx"></block> , Und<block ref="591ebe16737e602cc342b68e859c040e" category="inline-link-rx"></block> .</block>
   <block id="d8b67a8dae92158ddb9e71a66b9532b5" category="list-text">Weist jedem Workload basierend auf automatisch erkannten Schutzstufen eine Geschäftspriorität zu und empfiehlt Schutzrichtlinien für Workloads basierend auf ihrer Geschäftspriorität.  Die Arbeitslastpriorität basiert auf den Snapshot-Häufigkeiten, die bereits auf jedes mit der Arbeitslast verknüpfte Volume angewendet werden.</block>
   <block id="f23d5c00c473a2e87ffcd7a0eedb89b5" category="cell">*SCHÜTZEN*</block>
   <block id="63b3247f9021fefc99163e7f1ccaa624" category="list-text">Überwacht aktiv Workloads und orchestriert die Verwendung von Backup und Recovery, SnapCenter und ONTAP -APIs, indem Richtlinien auf jeden der identifizierten Workloads angewendet werden.</block>
@@ -680,8 +679,6 @@
   <block id="179e5ea4317177f519c688d15ef67987" category="paragraph"><block ref="179e5ea4317177f519c688d15ef67987" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e462715e9b155f4f9638da4f314c8aff" category="list-text">Wählen Sie *Bereitschaftsübungen* und *Herunterladen*, um den Bericht zur Bereitschaftsübung herunterzuladen.</block>
   <block id="bb44ab86396f7335c45f2c99c022776c" category="summary">Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Ransomware Resilience Dashboard eine Warnung angezeigt, die auf einen möglichen Angriff hinweist. An diesem Punkt sollten Sie sich das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ ansehen.</block>
-  <block id="1238309e873f300d76b90a5b0f3a20bc" category="doc">Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience</block>
-  <block id="5edf980bc8d23fb98c1f0d60dc6594f8" category="paragraph">Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Dashboard und im Benachrichtigungsbereich eine Warnung angezeigt.  Ransomware Resilience erstellt sofort einen Snapshot.  Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.</block>
   <block id="0cf61fe483b7c3216a42a15a22e0ef97" category="paragraph">Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird in den Benachrichtigungseinstellungen der Konsole eine Benachrichtigung angezeigt und eine E-Mail an die konfigurierte Adresse gesendet. Die E-Mail enthält Informationen zum Schweregrad, zur betroffenen Arbeitslast und einen Link zur Warnung auf der Registerkarte „Ransomware Resilience *Warnungen*“.</block>
   <block id="4c8cd66676ad1c434108e699d9777408" category="paragraph">Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.</block>
   <block id="899157335f0c98105a8cbc92966ba06d" category="admonition">Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst keine weitere Warnung aus.</block>
@@ -703,10 +700,8 @@
   <block id="64c00e9ea78abe412d8db56dd1df0462" category="paragraph">Eine Warnung kann einen der folgenden Status haben:</block>
   <block id="adf79604cd73ac69e1173c85b1070d09" category="list-text">*Neu*</block>
   <block id="001af4b9160bf93cb0c3215a7180e3b7" category="list-text">*Inaktiv*</block>
-  <block id="0ab8632cf6795b381aaa64cb2dc1b45f" category="paragraph">Ein Alarmvorfall kann einen der folgenden Zustände haben:</block>
   <block id="be48871d3fcb22d62d5de71b2de11ab9" category="list-text">*Neu*: Alle Vorfälle werden bei ihrer erstmaligen Erkennung als „neu“ gekennzeichnet.</block>
   <block id="d2b7a3286df55d9570e26ad7450dfeb9" category="list-text">*Abgelehnt*: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, können Sie den Status auf „Abgelehnt“ ändern.</block>
-  <block id="5295c827fac90b16880fb1c75f51694f" category="admonition">Nachdem Sie einen Angriff abgewehrt haben, können Sie dies nicht mehr rückgängig machen.  Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.</block>
   <block id="abcc01ccddba81d6df2f14e786d4b375" category="list-text">*Abweisen*: Der Vorfall wird gerade abgewiesen.</block>
   <block id="135963592c039774ee41872c4fec1009" category="list-text">*Gelöst*: Der Vorfall wurde behoben.</block>
   <block id="afd9740574ba951a58c825da5cfeddb3" category="list-text">*Automatisch gelöst*: Bei Warnungen mit niedriger Priorität wird der Vorfall automatisch gelöst, wenn innerhalb von fünf Tagen keine Maßnahmen ergriffen wurden.</block>
@@ -768,18 +763,12 @@
   <block id="6faff9d182a89c619b1ad36913af4fa5" category="list-text">Um die Workload-Wiederherstellung zu starten, wählen Sie in der Nachricht „Workload wiederherstellen“ oder wählen Sie die Registerkarte „Wiederherstellung“ aus.</block>
   <block id="dbb2ae89216b8dfda3662d01ab32469f" category="paragraph">Nachdem die Warnung zur Wiederherstellung markiert wurde, wird sie von der Registerkarte „Warnungen“ zur Registerkarte „Wiederherstellung“ verschoben.</block>
   <block id="d3870301348c9947a819b7a9ed0c25df" category="section-title">Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt</block>
-  <block id="b0b578b8be1448972010b482195bbda8" category="paragraph">Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Handelt es sich nicht um tatsächliche Drohungen, können sie abgewiesen werden.</block>
-  <block id="74583f536ee54b8803ab561a596f2bb9" category="paragraph">Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.  Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst bei einem solchen Verhalten keine weitere Warnung aus.</block>
   <block id="5a5533258cfacee641d19f7f201b727f" category="paragraph">Wenn Sie eine Arbeitslast verwerfen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf einen potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.</block>
-  <block id="46b4f01c45e92cd2d2fe7d4406168b5d" category="list-text">Wählen Sie einen oder mehrere Vorfälle aus.  Oder wählen Sie alle Vorfälle aus, indem Sie das Feld „Vorfall-ID“ oben links in der Tabelle auswählen.</block>
   <block id="c4229f2836db3c8f0198619d853bad27" category="list-text">Wenn Sie feststellen, dass der Vorfall keine Bedrohung darstellt, verwerfen Sie ihn als falsch-positives Ergebnis:</block>
   <block id="a20ff2150b7b9f34f30c94111d0f2672" category="list-text">Wählen Sie den Vorfall aus.</block>
   <block id="4c8220d9b08f6a99b99ca2a31e910796" category="list-text">Wählen Sie die Schaltfläche *Status bearbeiten* über der Tabelle.</block>
   <block id="cae6793a9f947fdb33e9ebb9c2913794" category="inline-image-macro">Seite „Alarmstatus bearbeiten“</block>
   <block id="e6fe1dbe41a0d14f05208f5ee0593783" category="paragraph"><block ref="e6fe1dbe41a0d14f05208f5ee0593783" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a3766d306cdb80badf038a83067d73d3" category="list-text">Wählen Sie im Feld „Status bearbeiten“ den Status *„Abgelehnt“* aus.</block>
-  <block id="0d77ad85eefae95571395461b82d0990" category="paragraph">Es werden zusätzliche Informationen zur Arbeitslast und zum Löschen von Snapshot-Kopien angezeigt.</block>
-  <block id="982b96cbcd987b2495b15ba07dd59831" category="paragraph">Der Status des Vorfalls bzw. der Vorfälle ändert sich in „Abgelehnt“.</block>
   <block id="03449fca76164b6dcb5b9e314b4a5c2b" category="section-title">Liste der betroffenen Dateien anzeigen</block>
   <block id="0fd4c032e8d9638089eca51930a25305" category="paragraph">Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen.  Sie können auf die Seite „Warnungen“ zugreifen, um eine Liste der betroffenen Dateien herunterzuladen.  Verwenden Sie dann die Wiederherstellungsseite, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.</block>
   <block id="6162015141ec2e05b3da3316c594dc7a" category="paragraph">Verwenden Sie die Seite „Warnungen“, um die Liste der betroffenen Dateien abzurufen.</block>
@@ -1639,7 +1628,6 @@
   <block id="75d41b8fe2ef8de56d2fd2046bb0dad3" category="list-text">Wählen Sie einen **Cloud-Anbieter** und dann eine **Region** aus. Wählen Sie **Weiter**.</block>
   <block id="604a864dab990debb57e02cc6550cb0b" category="list-text">Geben Sie die Details des Benutzeraktivitätsagenten an:</block>
   <block id="8b67ab5f6d4b7a7c9b54a220ab393e0f" category="list-text">**Name des Benutzeraktivitätsagenten**</block>
-  <block id="40c10b55b38de651cc304b987f3b8552" category="list-text">*Konsolenagent* – der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.</block>
   <block id="b023c42f6578a2febd3d77169ecb00ef" category="list-text">*VM-DNS-Name oder IP-Adresse*</block>
   <block id="95a1594aeff80ead5b4f2710e4acb1c5" category="list-text">*VM-SSH-Schlüssel*</block>
   <block id="1dc03f52e7a38f5b6ec91f4303e010ad" category="inline-image-macro">Screenshot der Benutzeroberfläche des Aktivitätsagenten hinzufügen.</block>
@@ -2078,6 +2066,28 @@
   <block id="aff175f709dc693d1f9ca4c44728163a" category="list-text">*SID* (wenn Sie LDAP verwenden)</block>
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Benutzername*</block>
   <block id="c8a0546946d4ed57fd88fc4918d3825f" category="list-text">*Unix-ID* (wenn Sie NFS verwenden)</block>
-  <block id="1358e8e29329a97048f0688a1813071f" category="list-text">Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen.</block>
-  <block id="7703674a5321c1f23549682250a732e9" category="paragraph">Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.</block>
+  <block id="8a9b2764802b622f9894a669a606f74f" category="doc">Die Blockierung von Erweiterungen ist auf Workload-Ebene aktiviert.</block>
+  <block id="ab47595f128d75b47b3449fcd4dfb523" category="paragraph">Wenn Sie die Erweiterungsblockierung aktivieren, erfolgt die Aktivierung nun auf Workload-Ebene und nicht mehr auf Ebene der Speicher-VM.</block>
+  <block id="a6493502d5fc22c0b3ccee818dc4a5a5" category="section-title">Benutzerverhaltenswarnungsstatus bearbeiten</block>
+  <block id="f143f02b29819ec9e761d9f292dea42c" category="paragraph">Ransomware Resilience ermöglicht es Ihnen nun, den Status von Warnmeldungen zum Benutzerverhalten zu bearbeiten.  Sie können Warnmeldungen manuell verwerfen und beheben.  Sie können Benachrichtigungen nun auch als „In Bearbeitung“ markieren.</block>
+  <block id="685b0f2db45e4fc09a06ccb4695806de" category="inline-xref-macro">Verwalten von Warnungen</block>
+  <block id="30acfc7aa0f5ff9593d73e769de766c0" category="paragraph">Weitere Informationen finden Sie unter <block ref="32161c93f86d45672d8429d13ea78e6b" category="inline-xref-macro-rx"></block>.</block>
+  <block id="d5214a8deea026de61af736ebf8697dd" category="section-title">Unterstützung für mehrere Konsolenagenten</block>
+  <block id="1a6a565def701385358a626d6728afd8" category="paragraph">Ransomware Resilience unterstützt jetzt die Verwendung mehrerer Console-Agenten zur Verwaltung derselben Systeme.</block>
+  <block id="76adc55b5a0beb97a709fbc0c204a3d0" category="paragraph">Weitere Informationen zu Console-Agenten finden Sie unter<block ref="c97584494dd542160395e5c607ae4c2c" category="inline-link-macro-rx"></block> Die</block>
+  <block id="be8cc003074f86f2bc2b3ef0d2f3a334" category="list-text">Ermittelt die aktuelle Schutzstufe der NetApp Snapshot-Kopien und Sicherungsrichtlinien jedes Volumes sowie alle On-Box-Erkennungsfunktionen. Ransomware Resilience verknüpft diese Schutzlage dann mit den Workloads durch den Einsatz von Backup und Recovery, ONTAP -Diensten und NetApp -Technologien wie Autonomous Ransomware Protection (ARP oder ARP/AI, abhängig von Ihrer ONTAP Version), FPolicy, Backup-Richtlinien und Snapshot-Richtlinien.  Erfahren Sie mehr über<block ref="f30128629f1afb4b75b9a7fc6de548bc" category="inline-link-rx"></block> ,<block ref="2b1b7f994c6938347657a18d8edc7db7" category="inline-link-rx"></block> , Und<block ref="591ebe16737e602cc342b68e859c040e" category="inline-link-rx"></block> Die</block>
+  <block id="ee1bc5da2dde4f02ef7aa47df921506a" category="doc">Warnmeldungen in NetApp Ransomware Resilience verwalten</block>
+  <block id="9a51095678260d2a753174230dbe8a88" category="paragraph">Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung auf dem Dashboard und im Benachrichtigungsbereich angezeigt. Ransomware Resilience erstellt sofort einen Snapshot. Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.</block>
+  <block id="6fe459ab097d6c4270e2ad317a017b93" category="paragraph">Ein Alarmereignis kann folgende Zustände aufweisen:</block>
+  <block id="afc3fd7b02af578176e65700acd6709b" category="list-text">*In Bearbeitung*: Sie können einen Vorfall als „in Bearbeitung“ markieren, während Sie ihn auswerten.</block>
+  <block id="93771318f0ad483bcb651c0ded2c6033" category="admonition">Sobald ein Angriff abgewiesen wurde, kann sein Status nicht mehr rückgängig gemacht werden. Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.</block>
+  <block id="c95e7dd9856afddc701e5bf3b384f093" category="paragraph">Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Wenn es sich nicht um tatsächliche Bedrohungen handelt, können sie als unbegründet abgetan werden.</block>
+  <block id="c73a9fafaefc34f0b97adbaba4200dc9" category="paragraph">Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden. Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten und ordnet es dem normalen Betrieb zu, sodass bei einem solchen Verhalten keine Warnung mehr ausgelöst wird.</block>
+  <block id="ea3cf0f8eb2106f78fd9e62d674bd7c0" category="list-text">Wählen Sie einen oder mehrere Vorfälle aus. Alternativ können Sie alle Vorfälle auswählen, indem Sie das Feld „Vorfalls-ID“ oben links in der Tabelle anklicken.</block>
+  <block id="845279243191f55592e2d4438456de67" category="list-text">Wählen Sie im Dialogfeld „Status bearbeiten“ den Status *Abgelehnt* aus.</block>
+  <block id="c66f0ec622b69a240be9821f2dbbb082" category="paragraph">Es werden zusätzliche Informationen über die Arbeitslast und das Löschen der Snapshot-Kopien angezeigt.</block>
+  <block id="3224e89b6de433c70f47e320c0777439" category="paragraph">Der Status des Vorfalls bzw. der Vorfälle ändert sich zu „Abgewiesen“.</block>
+  <block id="6edf03555b64b68b413469994ca42164" category="list-text">*Konsolenagent* - Der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.</block>
+  <block id="8e19d605b8be4e3be2157e822268633f" category="list-text">Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen. Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.</block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">8. Dezember 2025</block>
 </blocks>

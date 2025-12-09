@@ -1,0 +1,25 @@
+= Die Blockierung von Erweiterungen ist auf Workload-Ebene aktiviert.
+:allow-uri-read: 
+
+
+
+
+=== Die Blockierung von Erweiterungen ist auf Workload-Ebene aktiviert.
+
+Wenn Sie die Erweiterungsblockierung aktivieren, erfolgt die Aktivierung nun auf Workload-Ebene und nicht mehr auf Ebene der Speicher-VM.
+
+
+
+=== Benutzerverhaltenswarnungsstatus bearbeiten
+
+Ransomware Resilience ermöglicht es Ihnen nun, den Status von Warnmeldungen zum Benutzerverhalten zu bearbeiten.  Sie können Warnmeldungen manuell verwerfen und beheben.  Sie können Benachrichtigungen nun auch als „In Bearbeitung“ markieren.
+
+Weitere Informationen finden Sie unter xref:rp-use-alert.html[Verwalten von Warnungen].
+
+
+
+=== Unterstützung für mehrere Konsolenagenten
+
+Ransomware Resilience unterstützt jetzt die Verwendung mehrerer Console-Agenten zur Verwaltung derselben Systeme.
+
+Weitere Informationen zu Console-Agenten finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-setup.html["Erstellen eines Konsolenagenten"] Die

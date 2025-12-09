@@ -117,7 +117,7 @@ Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie z
 . Geben Sie die Details des Benutzeraktivitätsagenten an:
 +
 ** **Name des Benutzeraktivitätsagenten**
-** *Konsolenagent* – der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.
+** *Konsolenagent* - Der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.
 ** *VM-DNS-Name oder IP-Adresse*
 ** *VM-SSH-Schlüssel*
 +
@@ -155,9 +155,8 @@ Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-
 . Wählen Sie die Registerkarte **Benutzerverzeichnis-Konnektoren** und dann **Hinzufügen**.
 . Konfigurieren Sie die Verbindung. Geben Sie die erforderlichen Informationen für jedes Feld ein.
 +
+[cols="25,75"]
 |===
-
-
 | Feld | Beschreibung 
 
 
@@ -197,10 +196,7 @@ Geben Sie die Details zur Attributzuordnung an:
 ** *SID* (wenn Sie LDAP verwenden)
 ** *Benutzername*
 ** *Unix-ID* (wenn Sie NFS verwenden)
-** Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen.
-+
-Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
-
+** Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen. Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
 
 
 . Wählen Sie **Hinzufügen**.
