@@ -59,7 +59,6 @@ Eine Warnung kann einen der folgenden Status haben:
 Ein Alarmereignis kann folgende Zustände aufweisen:
 
 * *Neu*: Alle Vorfälle werden bei ihrer erstmaligen Erkennung als „neu“ gekennzeichnet.
-* *In Bearbeitung*: Sie können einen Vorfall als „in Bearbeitung“ markieren, während Sie ihn auswerten.
 * *Abgelehnt*: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, können Sie den Status auf „Abgelehnt“ ändern.
 +
 

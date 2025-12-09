@@ -12,7 +12,7 @@ Wenn Sie die Erweiterungsblockierung aktivieren, erfolgt die Aktivierung nun auf
 
 === Benutzerverhaltenswarnungsstatus bearbeiten
 
-Ransomware Resilience ermöglicht es Ihnen nun, den Status von Warnmeldungen zum Benutzerverhalten zu bearbeiten.  Sie können Warnmeldungen manuell verwerfen und beheben.  Sie können Benachrichtigungen nun auch als „In Bearbeitung“ markieren.
+Ransomware Resilience ermöglicht es Ihnen nun, den Status von Warnmeldungen zum Benutzerverhalten zu bearbeiten. Sie können Warnmeldungen manuell verwerfen und beheben.
 
 Weitere Informationen finden Sie unter xref:rp-use-alert.html[Verwalten von Warnungen].
 
