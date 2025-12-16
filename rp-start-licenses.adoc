@@ -280,3 +280,10 @@ Wenn Sie Ihr PAYGO-Abonnement beenden möchten, können Sie dies jederzeit tun.
 . Deaktivieren Sie in den Dropdown-Details das Kontrollkästchen *Nach Ablauf der aktuellen Zahlungsmethode verwenden*.
 . Wählen Sie *Speichern*.
 
+
+
+
+== Weitere Informationen
+
+* link:https://docs.netapp.com/us-en/console-licenses-subscriptions/index.html["Dokumentation zu NetApp Console -Lizenzen und -Abonnements"^]
+

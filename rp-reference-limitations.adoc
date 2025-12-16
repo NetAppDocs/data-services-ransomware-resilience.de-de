@@ -24,8 +24,8 @@ Wenn Sie für die Übung zur Vorbereitung auf Ransomware-Angriffe ein ONTAP 9.11
 
 == Einschränkungen von Amazon FSx for NetApp ONTAP
 
-Das Amazon FSx for NetApp ONTAP -System wird in Ransomware Resilience unterstützt.  Für dieses System gelten die folgenden Einschränkungen:
+Das Amazon FSx for NetApp ONTAP -System wird in Ransomware Resilience unterstützt. Für Amazon FSx für ONTAP gelten folgende Einschränkungen:
 
-* Sicherungsrichtlinien werden für Fsx for ONTAP nicht unterstützt.  In dieser Umgebung sollten Sie Sicherungsvorgänge mit Amazon FSx für Sicherungen durchführen.  Sie können diese Workloads mithilfe von Ransomware Resilience wiederherstellen.
+* Backup-Richtlinien werden für Amazon FSx für ONTAP nicht unterstützt. In dieser Umgebung sollten Sie Sicherungsvorgänge mit Amazon FSx für Sicherungen durchführen. Sie können diese Workloads mithilfe von Ransomware Resilience wiederherstellen.
 * Wiederherstellungsvorgänge werden nur von Snapshots aus durchgeführt.
 
