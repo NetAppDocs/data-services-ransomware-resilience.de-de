@@ -109,9 +109,9 @@ Ransomware Resilience hilft bei der Konfiguration eines Sicherungsziels über di
 
 
 
-== Verdächtiges Nutzerverhalten
+== Anforderungen an verdächtiges Nutzerverhalten
 
-Damit Ransomware Resilience Warnungen zu verdächtigem Benutzerverhalten ausgibt, müssen Sie einen Benutzeraktivitätsagenten konfigurieren. Weitere Informationen finden Sie unter link:suspicious-user-activity.html["Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten in NetApp Ransomware Resilience"].
+Damit Ransomware Resilience Warnungen zu verdächtigem Benutzerverhalten ausgibt, müssen Sie einen Benutzeraktivitätsagenten konfigurieren. Um einen Benutzeraktivitätsagenten zu installieren, stellen Sie sicher, dass Ihr System die Anforderungen erfülltlink:suspicious-user-activity.html["die Anforderungen"].
 
 
 

@@ -4,7 +4,7 @@ permalink: rp-use-dashboard.html
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
 summary: Das NetApp Ransomware Resilience Dashboard bietet Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden, und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.  Sie können das Dashboard auch verwenden, um Schutzempfehlungen zu überprüfen und umzusetzen. 
 ---
-= Überwachen Sie den Workload-Zustand mit dem NetAPp Ransomware Resilience Dashboard
+= Überwachen Sie den Workload-Zustand mit dem NetApp Ransomware Resilience Dashboard
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -14,7 +14,7 @@ summary: Das NetApp Ransomware Resilience Dashboard bietet Informationen zum Sch
 [role="lead"]
 Das NetApp Ransomware Resilience Dashboard bietet auf einen Blick Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.
 
-Verwenden Sie das Dashboard, um Schutzvorschläge zu prüfen, Einstellungen zu ändern, Berichte herunterzuladen und Dokumentationen anzuzeigen.
+Über das Dashboard können Sie Schutzvorschläge einsehen, Einstellungen ändern und Berichte herunterladen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
@@ -32,7 +32,7 @@ image:screen-dashboard.png["Dashboard-Seite"]
 ** *Schutz von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um auf der Seite „Schutz“ alle gefährdeten oder geschützten Workloads anzuzeigen.  Wenn die Schutzstufen nicht mit einer Schutzrichtlinie übereinstimmen, sind Workloads gefährdet. Weitere Informationen finden Sie unter link:rp-use-protect.html["Workloads schützen"] .
 +
 
-TIP: Wählen Sie den Tooltip „i“ aus, um Tipps zu diesen Daten anzuzeigen.  Um das Arbeitslastlimit zu erhöhen, wählen Sie in dieser Notiz *Arbeitslastlimit erhöhen* aus.  Wenn Sie diese Option auswählen, gelangen Sie zur Seite „Konsolensupport“, auf der Sie ein Fallticket erstellen können.
+TIP: Wählen Sie den Tooltip „i“ aus, um Tipps zu diesen Daten anzuzeigen. Um das Arbeitslastlimit zu erhöhen, wählen Sie in dieser Notiz *Arbeitslastlimit erhöhen* aus. Wenn Sie diese Option auswählen, gelangen Sie zur Seite „Konsolensupport“, auf der Sie ein Fallticket erstellen können.
 
 ** *Warnungen und Wiederherstellung von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um aktive Vorfälle anzuzeigen, die sich auf Ihren Workload ausgewirkt haben, nach der Neutralisierung der Vorfälle zur Wiederherstellung bereit sind oder sich in der Wiederherstellung befinden. Weitere Informationen finden Sie unter link:rp-use-alert.html["Auf eine erkannte Warnung reagieren"] .
 +
@@ -131,7 +131,7 @@ Die Empfehlung wird aus der Aufgabenliste gelöscht und erscheint in der Liste �
 
 +
 
-TIP: Sie können einen abgelehnten Eintrag später in einen Aufgabeneintrag ändern.  Wenn Sie ein Element als erledigt markieren oder ein verworfenes Element in eine zu erledigende Aktion ändern, erhöht sich die Gesamtzahl der Aktionen um 1.
+TIP: Sie können einen abgelehnten Eintrag später in einen Aufgabeneintrag ändern. Wenn Sie ein Element als erledigt markieren oder ein verworfenes Element in eine zu erledigende Aktion ändern, erhöht sich die Gesamtzahl der Aktionen um 1.
 
 . Um Informationen zum Umsetzen der Empfehlungen anzuzeigen, wählen Sie das Symbol *Informationen* aus.
 
@@ -149,15 +149,15 @@ Sie können CSV-Dateien von jeder der Hauptmenüoptionen herunterladen:
 * *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads, die Ransomware Resilience als „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“ kennzeichnet.
 
 
-Das Herunterladen einer CSV-Datei von einer Seite umfasst nur die Daten dieser Seite.
+Beim Herunterladen einer CSV-Datei von einer Seite werden nur die Daten dieser Seite enthalten.
 
 Die CSV-Dateien enthalten Daten für alle Workloads auf allen Konsolensystemen.
 
 .Schritte
-. Wählen Sie im Ransomware Resilience-Dashboard die Option *Aktualisieren*image:button-refresh.png["Aktualisierungsoption"] Klicken Sie oben rechts auf die Option, um die in den Dateien angezeigten Daten zu aktualisieren.
+. Wählen Sie im Dashboard „Ransomware-Resilienz“ die Option *Aktualisieren*. image:button-refresh.png["Aktualisierungsoption"] Option oben rechts zum Aktualisieren der Daten, die in den Dateien angezeigt werden.
 . Führen Sie einen der folgenden Schritte aus:
 +
-** Wählen Sie auf der Seite *Download*image:button-download.png["Download-Option"] Option.
+** Wählen Sie auf der Seite die Option *Herunterladen* aus. image:button-download.png["Abbildung des Download-Optionssymbols"] Option.
 ** Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Berichte“ aus.
 
 

@@ -42,7 +42,7 @@ Ransomware Resilience ermöglicht die vollständige Nutzung mehrerer NetApp -Tec
 * *Identifizieren* Sie alle anwendungsbasierten, dateifreigabebasierten oder VMware-verwalteten Workloads in NetApp On-Premises NAS (NFS oder CIFS) und SAN (FC, iSCSI und NVMe) Systemen über die NetApp Console, Projekte und Console Agents hinweg. Ransomware Resilience kategorisiert die Datenpriorität und gibt Ihnen Empfehlungen zur Verbesserung der Ransomware-Resilienz.
 * *Schützen* Sie Ihre Workloads, indem Sie Backups, Snapshot-Kopien und Ransomware-Schutzstrategien für Ihre Daten aktivieren.
 * *Erkennen* Sie Anomalien, bei denen es sich um Ransomware-Angriffe handeln könnte. Fußnote: [Auch wenn es möglich ist, dass ein Angriff unentdeckt bleibt, haben unsere Untersuchungen ergeben, dass die NetApp -Technologie zu einem hohen Erkennungsgrad bei bestimmten Ransomware-Angriffen auf Basis der Dateiverschlüsselung geführt hat.]
-* *Reagieren* Sie auf potenzielle Ransomware-Angriffe, indem Sie automatisch einen manipulationssicheren NetApp ONTAP -Snapshot initiieren, der gesperrt ist, sodass die Kopie nicht versehentlich oder böswillig gelöscht werden kann.  Ihre Sicherungsdaten bleiben unveränderlich und durchgängig vor Ransomware-Angriffen an der Quelle und am Ziel geschützt.
+* Reagieren Sie auf potenzielle Ransomware-Angriffe, indem Sie automatisch einen Momentaufnahme-Scan erstellen, der gesperrt ist, sodass die Kopie nicht versehentlich oder böswillig gelöscht werden kann. Ihre Sicherungsdaten bleiben unveränderlich und sind sowohl am Quellort als auch am Zielort umfassend vor Ransomware-Angriffen geschützt.
 * *Stellen Sie Ihre Workloads wieder her* und beschleunigen Sie so die Workload-Betriebszeit durch die Orchestrierung mehrerer NetApp -Technologien.  Sie können bestimmte Volumes wiederherstellen.  Ransomware Resilience bietet Empfehlungen zu den besten Optionen.
 * *Regieren*: Implementieren Sie Ihre Ransomware-Schutzstrategie und überwachen Sie die Ergebnisse.
 
@@ -70,10 +70,7 @@ Ransomware Resilience bietet die folgenden Vorteile:
 
 == Kosten
 
-NetApp berechnet Ihnen für die Nutzung der Testversion von Ransomware Resilience keine Gebühren.
-
-
-NOTE: Mit der Veröffentlichung im Oktober 2024 bieten neue Bereitstellungen von Ransomware Resilience eine 30-tägige kostenlose Testversion.  Zuvor bot Ransomware Resilience eine 90-tägige kostenlose Testversion an.  Wenn Sie sich bereits für die 90-tägige kostenlose Testversion angemeldet haben, ist diese Testversion 90 Tage lang gültig.
+Sie können Ransomware Resilience mit einer 30-tägigen kostenlosen Testversion ausprobieren. NetApp berechnet Ihnen für die Nutzung der Testversion von Ransomware Resilience keine Gebühren.
 
 Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resilience verfügen, werden alle gemeinsamen Daten, die durch beide Produkte geschützt werden, nur über Ransomware Resilience abgerechnet.
 

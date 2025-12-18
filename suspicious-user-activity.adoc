@@ -18,7 +18,7 @@ Ransomware Resilience erkennt verdächtige Benutzeraktivitäten durch die Analys
 
 
 
-== Agenten und Sammler
+== Benutzeraktivitätsagenten und -sammler
 
 Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten im Ransomware Resilience Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben.
 
@@ -30,25 +30,17 @@ Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analys
 
 Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
 
-
-
-== Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten
-
 *Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die Rolle des Organisationsadministrators.  Für nachfolgende Konfigurationen für verdächtige Benutzeraktivitäten benötigen Sie die Administratorrolle „Ransomware Resilience-Benutzerverhalten“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 
 
-=== Hinzufügen eines Benutzeraktivitätsagenten
+== Systemanforderungen
 
-Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Datensammler geben Benutzeraktivitätsereignisse an Ransomware Resilience weiter. Sie müssen mindestens einen Benutzeraktivitäts-Agenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
+Für die Installation eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM, die die folgenden Anforderungen erfüllt.
 
 
 
-==== Anforderungen
-
-Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM, der/die die folgenden unterstützten Betriebssystem- und Serveranforderungen erfüllt.
-
-**Betriebssystemanforderungen**
+=== Betriebssystemanforderungen
 
 [cols="2"]
 |===
@@ -81,14 +73,124 @@ Zum Installieren eines Benutzeraktivitätsagenten benötigen Sie einen Host oder
 
 | Ubuntu | 20.04 LTS (64 Bit), 22.04 LTS (64 Bit) und 24.04 LTS (64 Bit) 
 |===
-**Serveranforderungen**
+
+NOTE: Auf dem Computer, den Sie für den Benutzeraktivitätsagenten verwenden, sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen.
+
+Der `unzip` Für die Installation wird ein Befehl benötigt. Der `sudo su -` Der Befehl wird für die Installation, die Ausführung von Skripten und die Deinstallation benötigt.
+
+
+
+=== Serveranforderungen
 
 Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 * **CPU**: 4 Kerne
 * **RAM**: 16 GB RAM
-* **Festplattenspeicher**: 35 GB freier Festplattenspeicher
+* **Festplattenspeicher**: 36 GB freier Festplattenspeicher
 
+
+
+NOTE: Weisen Sie zusätzlichen Speicherplatz zu, um die Erstellung des Dateisystems zu ermöglichen. Stellen Sie sicher, dass im Dateisystem mindestens 35 GB freier Speicherplatz vorhanden sind. + Wenn `/opt` Es handelt sich um einen eingebundenen Ordner von einem NAS-Speicher; lokale Benutzer müssen Zugriff auf diesen Ordner haben. Die Erstellung eines Benutzeraktivitätsagenten kann fehlschlagen, wenn lokale Benutzer nicht über die erforderlichen Berechtigungen verfügen.
+
+
+NOTE: Es wird empfohlen, den Benutzeraktivitätsagenten auf einem anderen System als Ihrer Ransomware-Resilienzumgebung zu installieren. Falls Sie sie auf demselben Rechner installieren, sollten Sie 50 bis 55 GB Speicherplatz einplanen. Für Linux sollten Sie 25-30 GB Speicherplatz reservieren. `/opt/netapp` und 25 GB bis `var/log/netapp`Die
+
+
+TIP: Es wird empfohlen, die Zeit sowohl auf dem ONTAP System als auch auf dem Rechner des Benutzeraktivitätsagenten mithilfe des Network Time Protocol (NTP) oder des Simple Network Time Protocol (SNTP) zu synchronisieren.
+
+
+
+=== Cloud-Netzwerkzugriffsregeln
+
+Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-Pazifik, Europa oder Vereinigte Staaten).
+
+
+
+==== Bereitstellung von Benutzeraktivitätsagenten im asiatisch-pazifischen Raum
+
+[cols="5*"]
+|===
+| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+
+
+| TCP | 443 | Benutzeraktivitätsagent  a| 
+* <site_name>.cs01-ap-1.cloudinsights.netapp.com
+* <site_name>.c01-ap-1.cloudinsights.netapp.com
+* <site_name>.c02-ap-1.cloudinsights.netapp.com
+
+| Zugang zu Ransomware-Resilienz 
+
+
+| TCP | 443 | Benutzeraktivitätsagent | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
+|===
+
+
+==== Bereitstellung von Benutzeraktivitätsagenten in Europa
+
+[cols="5*"]
+|===
+| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+
+
+| TCP | 443 | Benutzeraktivitätsagent  a| 
+* <site_name>.cs01-eu-1.cloudinsights.netapp.com
+* <site_name>.c01-eu-1.cloudinsights.netapp.com
+* <site_name>.c02-eu-1.cloudinsights.netapp.com
+
+| Zugang zu Ransomware-Resilienz 
+
+
+| TCP | 443 | Benutzeraktivitätsagent | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
+|===
+
+
+==== US-basierte Bereitstellungen von Benutzeraktivitätsagenten
+
+[cols="5*"]
+|===
+| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+
+
+| TCP | 443 | Benutzeraktivitätsagent  a| 
+* <site_name>.cs01.cloudinsights.netapp.com
+* <site_name>.c01.cloudinsights.netapp.com
+* <site_name>.c02.cloudinsights.netapp.com
+
+| Zugang zu Ransomware-Resilienz 
+
+
+| TCP | 443 | Benutzeraktivitätsagent | agentlogin.cs01.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
+|===
+
+
+=== Netzwerkinterne Regeln
+
+[cols="5*"]
+|===
+| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+
+
+| TCP | 389 (LDAP) 636 (LDAPs / Start-TLS) | Benutzeraktivitätsagent | LDAP-Server-URL | Mit LDAP verbinden 
+
+
+| TCP | 443 | Benutzeraktivitätsagent | Cluster- oder SVM-Management-IP-Adresse (abhängig von der SVM-Collector-Konfiguration) | API-Kommunikation mit ONTAP 
+
+
+| TCP | 35000 - 55000  a| 
+SVM-Daten LIF IP-Adressen
+| Benutzeraktivitätsagent | Kommunikation von ONTAP an den Benutzeraktivitätsagenten für Fpolicy-Ereignisse. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet werden, damit ONTAP Ereignisse an ihn senden kann, einschließlich etwaiger Firewall-Anforderungen auf dem Benutzeraktivitätsagenten selbst (falls vorhanden). + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie hierfür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von 100 Ports zu beginnen und diese bei Bedarf zu erhöhen. 
+
+
+| TCP | 35000-55000 | Cluster-Verwaltungs-IP | Benutzeraktivitätsagent | Kommunikation von der ONTAP Clusterverwaltungs-IP zum Benutzeraktivitätsagenten für *EMS-Ereignisse*. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet werden, damit ONTAP EMS-Ereignisse an ihn senden kann, einschließlich etwaiger Firewall-Anforderungen auf dem Benutzeraktivitätsagenten selbst. + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie hierfür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von 100 Ports zu beginnen und diese bei Bedarf zu erhöhen. 
+
+
+| SSH | 22 | Benutzeraktivitätsagent | Clusterverwaltung | Wird für die CIFS/SMB-Benutzerblockierung benötigt. 
+|===
+
+
+== Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten
+
+Stellen Sie sicher, dass Sie die folgenden Kriterien erfüllt haben: link:#system-requirements["Systemanforderungen"] für den Benutzeraktivitätsagenten. Stellen Sie sicher, dass Ihre Konfiguration den unterstützten Cloud-Anbietern und Regionen entspricht.
 
 **Unterstützung durch Cloud-Anbieter**
 
@@ -108,6 +210,12 @@ Verdächtige Benutzeraktivitätsdaten können in AWS und Azure in den folgenden 
 
 | Azurblau | Ostküste der USA 
 |===
+
+
+=== Hinzufügen eines Benutzeraktivitätsagenten
+
+Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Datensammler geben Benutzeraktivitätsereignisse an Ransomware Resilience weiter. Sie müssen mindestens einen Benutzeraktivitäts-Agenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
+
 .Schritte
 . Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
 +
