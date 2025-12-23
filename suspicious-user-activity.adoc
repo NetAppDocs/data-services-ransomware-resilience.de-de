@@ -113,15 +113,10 @@ Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-P
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent  a| 
-* <site_name>.cs01-ap-1.cloudinsights.netapp.com
-* <site_name>.c01-ap-1.cloudinsights.netapp.com
-* <site_name>.c02-ap-1.cloudinsights.netapp.com
-
-| Zugang zu Ransomware-Resilienz 
+| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugang zu Ransomware-Resilienz 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
+| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugriff auf Authentifizierungsdienste 
 |===
 
 
@@ -132,15 +127,10 @@ Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-P
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent  a| 
-* <site_name>.cs01-eu-1.cloudinsights.netapp.com
-* <site_name>.c01-eu-1.cloudinsights.netapp.com
-* <site_name>.c02-eu-1.cloudinsights.netapp.com
-
-| Zugang zu Ransomware-Resilienz 
+| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugang zu Ransomware-Resilienz 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
+| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugriff auf Authentifizierungsdienste 
 |===
 
 
@@ -151,15 +141,10 @@ Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-P
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent  a| 
-* <site_name>.cs01.cloudinsights.netapp.com
-* <site_name>.c01.cloudinsights.netapp.com
-* <site_name>.c02.cloudinsights.netapp.com
-
-| Zugang zu Ransomware-Resilienz 
+| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugang zu Ransomware-Resilienz 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | agentlogin.cs01.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
+| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugriff auf Authentifizierungsdienste 
 |===
 
 
