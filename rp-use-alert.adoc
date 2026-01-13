@@ -59,10 +59,11 @@ Eine Warnung kann einen der folgenden Status haben:
 Ein Alarmereignis kann folgende Zustände aufweisen:
 
 * *Neu*: Alle Vorfälle werden bei ihrer erstmaligen Erkennung als „neu“ gekennzeichnet.
+* *In Bearbeitung*: Sie können einen Vorfall als „in Bearbeitung“ markieren, während Sie ihn auswerten.
 * *Abgelehnt*: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, können Sie den Status auf „Abgelehnt“ ändern.
 +
 
-CAUTION: Sobald ein Angriff abgewiesen wurde, kann sein Status nicht mehr rückgängig gemacht werden. Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
+CAUTION: Sobald Sie einen Angriff abgewiesen haben, können Sie seinen Status nicht mehr rückgängig machen. Wenn Sie eine Arbeitslast abbrechen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien endgültig gelöscht.
 
 * *Abweisen*: Der Vorfall wird gerade abgewiesen.
 * *Gelöst*: Der Vorfall wurde behoben.

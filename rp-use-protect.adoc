@@ -20,9 +20,9 @@ Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einen Worklo
 
 == Strategien zum Schutz vor Ransomware verstehen
 
-Strategien zum Schutz vor Ransomware umfassen sowohl Erkennungs- als auch Schutzrichtlinien.
+Strategien zum Schutz vor Ransomware umfassen sowohl Erkennungs-, Schutz- als auch Replikationsrichtlinien.
 
-* **Erkennungsrichtlinien** erkennen Ransomware-Bedrohungen
+* **Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen.
 * **Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.
 +
 Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt Ransomware Resilience diese und bietet Ihnen die Möglichkeit, entweder:
@@ -31,6 +31,10 @@ Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt R
 ** Verwenden Sie eine Ransomware-Erkennungsrichtlinie und nutzen Sie weiterhin die Snapshot- und Backup-Richtlinien, die von anderen NetApp -Tools erstellt wurden, oder
 ** Verwenden Sie Ransomware Resilience, um Erkennung, Snapshots und Backups zu verwalten.
 
+
+* **Replikationsrichtlinien** ermöglichen es Ihnen, Snapshots von Ransomware Resilience auf einen sekundären Standort zu replizieren. Replikationspläne können auf stündliche, tägliche, wöchentliche oder monatliche Frequenzen eingestellt werden.
++
+Derzeit können Snapshots nur auf lokalem ONTAP Speicher repliziert werden.
 
 
 
@@ -74,7 +78,7 @@ Einer der ersten Schritte zum Schutz von Workloads besteht darin, Ihre aktuellen
 
 
 .Schritte
-. Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.
+. Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz*.
 . Führen Sie einen der folgenden Schritte aus:
 +
 ** Wählen Sie im Bereich „Datenschutz“ des Dashboards die Option „Alle anzeigen“ aus.
@@ -116,7 +120,12 @@ TIP: Wenn der Schutz in Ransomware Resilience aktiviert ist, beginnt die Erkennu
 
 
 
+
+NOTE: Verdächtige Benutzeraktivitäten und Aktivitäten im Zusammenhang mit FPolicy (verdächtige Dateierweiterungen) werden getrennt vom Erkennungsstatus aufgeführt.
+
 *Erkennungsrichtlinie*: Der Name der Ransomware-Erkennungsrichtlinie wird angezeigt, sofern eine zugewiesen wurde.  Wenn die Erkennungsrichtlinie nicht zugewiesen wurde, wird „N/A“ angezeigt.
+
+*Replikationsziel*: Wenn Sie die Snapshot-Replikation konfiguriert haben, werden die Namen der Ziel-Speicher-VMs und -Systeme aufgelistet. Wenn keine Replikation vorliegt, wird in diesem Feld „Keine“ angezeigt.
 
 *Snapshot- und Backup-Richtlinien*: Diese Spalte zeigt die auf die Arbeitslast angewendeten Snapshot- und Backup-Richtlinien und das Produkt oder den Dienst, das bzw. der diese Richtlinien verwaltet.
 
@@ -131,21 +140,25 @@ TIP: Wenn der Schutz in Ransomware Resilience aktiviert ist, beginnt die Erkennu
 
 Ransomware Resilience weist jedem Workload während der Erkennung basierend auf einer Analyse jedes Workloads eine Wichtigkeit oder Priorität zu.  Die Workload-Wichtigkeit wird durch die folgenden Snapshot-Häufigkeiten bestimmt:
 
-* *Kritisch*: Es werden mehr als 1 Snapshot-Kopien pro Stunde erstellt (sehr aggressiver Schutzplan)
-* *Wichtig*: Es werden weniger als 1 Snapshot-Kopien pro Stunde, aber mehr als 1 pro Tag erstellt
-* *Standard*: Mehr als eine Snapshot-Kopie pro Tag
+* *Kritisch*: Es werden mehr als eine Snapshot-Kopie pro Stunde erstellt (sehr aggressiver Schutzplan).
+* *Wichtig*: Snapshot-Kopien werden seltener als stündlich, aber häufiger als täglich erstellt.
+* *Standard*: Es werden mehrmals täglich Momentaufnahmen erstellt.
 
 
-*Vordefinierte Erkennungsrichtlinien* [[vordefiniert]]
+
+
+=== Vordefinierte Erkennungsrichtlinien
 
 Sie können eine der folgenden vordefinierten Ransomware-Resilience-Richtlinien auswählen, die auf die Wichtigkeit der Arbeitslast abgestimmt sind.
 
 
 NOTE: Die Richtlinie **Encryption-Benutzererweiterung** ist die einzige vordefinierte Richtlinie, die die Erkennung verdächtigen Benutzerverhaltens unterstützt.
 
++ Die **kritische Replikationsrichtlinie** ist die einzige vordefinierte Richtlinie, die die Replikation von Snapshots nach ONTAP unterstützt.
+
 [cols="10,15a,20,15,15,15"]
 |===
-| Richtlinienebene | Schnappschuss | Frequenz | Aufbewahrung (Tage) | Anzahl der Snapshot-Kopien | Maximale Gesamtzahl der Snapshot-Kopien 
+| Richtlinienebene | Schnappschuss | Frequenz | Aufbewahrungsdauer (Tage) | Anzahl der Snapshot-Kopien | Maximale Anzahl von Snapshot-Kopien 
 
 
 .4+| *Richtlinie für kritische Arbeitslast*  a| 
@@ -226,6 +239,46 @@ Jede Woche
 | Monatlich  a| 
 Alle 30 Tage
 | 60 | 2 | 93 
+
+
+.4+| *Verschlüsselungsbenutzererweiterung*  a| 
+Viertelstündlich
+| Alle 30 Minuten | 3 | 72 | 93 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 93 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 93 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 93 
+
+
+.4+| *Richtlinie zur kritischen Replikation*  a| 
+Viertelstündlich
+| Alle 15 Minuten | 3 | 288 | 309 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 309 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 309 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 309 
 |===
 
 
@@ -302,6 +355,7 @@ Wenn für die Arbeitslast keine Snapshot- oder Sicherungsrichtlinien vorhanden s
 * Snapshot-Richtlinie
 * Sicherungsrichtlinie
 * Richtlinie zur Ransomware-Erkennung
+* Sekundäre Replikation zu ONTAP
 
 
 .Schritte zum Erstellen einer Ransomware-Schutzstrategie [[Schritte]]
@@ -324,9 +378,9 @@ NOTE: Wenn Sie eine vorhandene Strategie kopieren und ändern möchten, hängt R
 ** *Erkennungsrichtlinie*:
 +
 *** *Richtlinie*: Wählen Sie eine der vordefinierten Erkennungsrichtlinien.
-*** *Primäre Erkennung*: Aktivieren Sie die Ransomware-Erkennung, damit Ransomware Resilience potenzielle Ransomware-Angriffe erkennt.
+*** *Primäre Erkennung*: Aktivieren Sie die Ransomware-Resilienz, um potenzielle Ransomware-Angriffe zu erkennen.
 *** *Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung des Benutzerverhaltens, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und verdächtige Ereignisse wie Datenverletzungen zu erkennen.
-*** *Dateierweiterungen blockieren*: Aktivieren Sie diese Option, damit Ransomware Resilience bekannte verdächtige Dateierweiterungen blockiert.  Ransomware Resilience erstellt automatisch Snapshot-Kopien, wenn die primäre Erkennung aktiviert ist.
+*** *Dateierweiterungen blockieren*: Aktivieren Sie die Ransomware-Resilienz, um bekannte verdächtige Dateierweiterungen zu blockieren. Ransomware Resilience erstellt automatisch Snapshot-Kopien, wenn die primäre Erkennung aktiviert ist.
 +
 Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.
 
@@ -345,17 +399,23 @@ Die Snapshot-Kopiersperre ist mit ONTAP 9.12.1 und höher verfügbar.  Weitere I
 *** *Schnappschuss-Zeitpläne*: Wählen Sie Zeitplanoptionen und die Anzahl der aufzubewahrenden Schnappschusskopien aus und aktivieren Sie den Zeitplan.
 
 
+** *Replikationsrichtlinie*:
++
+*** *Basisname der Replikationsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen aus. Der Basisname ist das Präfix, das an alle Snapshots angehängt wird.
+*** *Replikationszeitpläne*: Aktivieren Sie die gewünschten Replikationsfrequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert (die Anzahl der aufzubewahrenden replizierten Snapshots) fest.
+
+
 ** *Backup-Richtlinie*:
 +
 *** *Basisname der Sicherungsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen Namen.
 *** *Sicherungszeitpläne*: Wählen Sie Zeitplanoptionen für den sekundären Speicher und aktivieren Sie den Zeitplan.
-
-
-
-
 +
 
 TIP: Um die Sicherungssperre auf dem sekundären Speicher zu aktivieren, konfigurieren Sie Ihre Sicherungsziele mit der Option *Einstellungen*. Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Einstellungen"] .
+
+
+
+
 
 . Wählen Sie *Hinzufügen*.
 
@@ -406,6 +466,7 @@ image:screen-protection.png["Strategieseite verwalten"]
 . Wählen Sie auf der Seite „Schutz“ eine Arbeitslast aus und wählen Sie dann *Schützen*.
 . Ransomware Resilience erkennt, ob aktive Backup- und Recovery- oder SnapCenter -Richtlinien vorhanden sind.  Um die vorhandenen Backup- und Recovery- oder SnapCenter -Richtlinien zu ersetzen, aktivieren Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen**.  Wenn Sie das Kontrollkästchen aktivieren, ersetzt Ransomware Resilience die Liste der Erkennungsrichtlinien durch Erkennungsrichtlinien.
 . Wählen Sie eine Schutzrichtlinie.  Wenn keine Schutzrichtlinie vorhanden ist, wählen Sie **Hinzufügen**, um eine neue Richtlinie zu erstellen.  Informationen zum Erstellen einer Richtlinie finden Sie unter<<steps,Erstellen einer Schutzrichtlinie>> . Wählen Sie **Weiter**.
+. Wenn Ihre Strategie die Replikation beinhaltet, wählen Sie das **Zielsystem** und die **Zielspeicher-VM** aus. Wählen Sie **Weiter**.
 . Wählen Sie ein Sicherungsziel aus oder erstellen Sie ein neues. Wählen Sie **Weiter**.
 +
 .. Wenn Ihre Schutzstrategie die Erkennung des Benutzerverhaltens umfasst, wählen Sie in Ihrer Umgebung einen Benutzeraktivitätsagenten aus, um die neuen Datensammler zu hosten. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
@@ -462,11 +523,16 @@ TIP: Um weitere Details zu den Arbeitslasten anzuzeigen, scrollen Sie nach recht
 image:screen-protection-groups-policy.png["Schutzgruppe hinzufügen – Seite „Richtlinie“"]
 
 . Wählen Sie die Richtlinie aus, die den Schutz für diese Gruppe regelt. Wählen Sie zur Bestätigung *Weiter*.
+. Wenn die Schutzstrategie die Replikation umfasst, überprüfen Sie die Replikationseinstellungen.
 +
-.. Wenn Sie eine Sicherungsrichtlinie konfigurieren müssen, wählen Sie eine aus und klicken Sie dann auf **Weiter**.
-.. Wenn Ihre Erkennungsrichtlinie die Erkennung des Benutzerverhaltens umfasst, wählen Sie den Datensammler aus, den Sie verwenden möchten, und klicken Sie dann auf **Weiter**.
+.. Um alle Snapshots am selben Zielort zu replizieren, aktivieren Sie **Für jede Arbeitslast das gleiche Ziel verwenden**. Wählen Sie im Abschnitt „Konsolenagent“ ein *Zielsystem* und eine *Zielspeicher-VM* für die Workloads aus.
++
+Um andere Ziele auszuwählen, deaktivieren Sie dieses Kästchen. Überprüfen Sie alle Workloads unter jedem Console-Agenten und weisen Sie jedem Workload ein *Zielsystem* und eine *Zielspeicher-VM* zu. Wählen Sie **Weiter**.
 
 
+
+. Wenn Sie eine Sicherungsrichtlinie konfigurieren müssen, wählen Sie eine aus und klicken Sie dann auf **Weiter**.
+. Wenn Ihre Erkennungsrichtlinie die Erkennung des Benutzerverhaltens umfasst, wählen Sie den Datensammler aus, den Sie verwenden möchten, und klicken Sie dann auf **Weiter**.
 . Überprüfen Sie die Auswahl für die Schutzgruppe.
 . Um die Erstellung der Schutzgruppe abzuschließen, wählen Sie *Hinzufügen*.
 

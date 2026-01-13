@@ -23,13 +23,6 @@ Ransomware Resilience überprüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
-*Wie können Sie Arbeitslasten ermitteln?*  Sie können Folgendes tun:
-
-* Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten.  Sie können von dieser Funktion profitieren, wenn Sie bestimmte Workloads in Ihrer Umgebung schützen möchten und andere nicht.
-* Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme.
-* Entdecken Sie neue Systeme.
-
-
 
 
 == Auswählen von Workloads zum Erkennen und Schützen
@@ -59,7 +52,7 @@ image:screen-discover-workloads.png["Screenshot „Workloads ermitteln“"]
 . Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.
 . Wählen Sie *Entdecken*.
 +
-Ransomware Resilience erkennt Workload-Daten nur für Console-Agenten auf ausgewählten Systemen. Dieser Vorgang kann einige Minuten dauern.
+Ransomware Resilience erkennt Workload-Daten nur, wenn Sie das System auswählen. Der Ermittlungsprozess kann mehrere Minuten dauern.
 
 . Um die Liste der erkannten Workloads herunterzuladen, wählen Sie *Ergebnisse herunterladen*.
 . Um das Ransomware Resilience-Dashboard anzuzeigen, wählen Sie *Zum Dashboard gehen*.
@@ -78,10 +71,10 @@ link:rp-use-dashboard.html["Erfahren Sie, was Ihnen das Dashboard anzeigt."]
 
 == Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme
 
-Wenn Sie bereits Systeme zur Erkennung ausgewählt haben, können Sie über das Dashboard neu erstellte Workloads für diese Umgebungen erkennen.
+Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, müssen Sie die Erkennung erneut initiieren, um die neuen Workloads zu schützen.
 
 .Schritte
-. Um das Datum der letzten Entdeckung zu ermitteln, sehen Sie sich den Datums- und Zeitstempel neben dem Symbol *Aktualisieren* oben rechts im Ransomware Resilience-Dashboard an.
+. Um den Zeitpunkt der letzten Erkennung zu ermitteln, sehen Sie sich den Datums- und Zeitstempel neben dem Symbol *Aktualisieren* oben rechts im Ransomware-Resilienz-Dashboard an.
 . Wählen Sie im Dashboard das Symbol *Aktualisieren*, um neue Workloads zu finden.
 
 
@@ -92,8 +85,41 @@ Wenn Sie bereits Systeme zur Erkennung ausgewählt haben, können Sie über das 
 Wenn Sie bereits Systeme entdeckt haben, können Sie neue oder bisher nicht ausgewählte Systeme finden.
 
 .Schritte
-. Wählen Sie im Menü Ransomware Resilience die vertikaleimage:button-actions-vertical.png["Vertikale Aktionen"] ... Option oben rechts.  Wählen Sie im Dropdown-Menü *Einstellungen* aus.
+. Wählen Sie im Menü „Ransomware-Resilienz“ die vertikale Option aus. " category='inline-code'/> Option oben rechts. Wählen Sie im Dropdown-Menü *Einstellungen* aus.
 . Wählen Sie auf der Workload-Erkennungskarte *Workloads erkennen* aus. Die Suche kann einige Minuten dauern.  Ein Ladesymbol zeigt den Fortschritt an.
 . Ransomware Resilience erkennt sowohl unterstützte als auch nicht unterstützte Systeme. Es unterstützt kein System, wenn dessen ONTAP Version unterhalb der erforderlichen Version liegt. Wenn Sie mit der Maus über ein nicht unterstütztes System fahren, wird in einem Tooltip der Grund angezeigt. Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.
 . Wählen Sie *Entdecken*.
+
+
+
+
+== Arbeitslasten ausschließen
+
+Ransomware-Resilienz ermöglicht es Ihnen, bestimmte Workloads in einem System vom Ransomware-Schutz und der Erkennung auszuschließen.
+
+Sie können nur solche Workloads ausschließen, die unterstützt werden und erfolgreich erkannt wurden. Sie können die Liste der ausgeschlossenen Workloads jederzeit ändern. Für Workloads, die von der Ransomware-Resilienz ausgeschlossen sind, werden keine Gebühren erhoben.
+
+.Fügen Sie Arbeitslasten zur Liste der ausgeschlossenen Arbeitslasten hinzu
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Suchen Sie im Dashboard „Einstellungen“ das Dashboard „Workload-Erkennung“. Die Karte gibt die Anzahl der ausgeschlossenen Workloads an. Um Workloads hinzuzufügen, wählen Sie neben den ausgeschlossenen Workloads die Option **Verwalten**.
++
+image:settings-excluded-workload.png["Dashboard für die Einstellungen zur Ransomware-Resilienz"]
+
+. Wählen Sie auf der Seite „Ausgeschlossene Workloads“ die Option **Hinzufügen**.
+. Wählen Sie die Workloads aus, die Sie ausschließen möchten, und klicken Sie dann auf **Hinzufügen**.
+. Überprüfen Sie die ausgeschlossenen Workloads auf der Seite „Ausgeschlossene Workloads“. Während die Arbeitslast hinzugefügt wird, wird neben ihrem Namen eine Fortschrittsanzeige angezeigt. Wenn eine Arbeitslast nicht erfolgreich ausgeschlossen wurde, wird sie nicht auf der Seite angezeigt.
+
+
+.Workloads aus der Liste der ausgeschlossenen Workloads entfernen
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Suchen Sie im Dashboard „Einstellungen“ das Dashboard „Workload-Erkennung“. Die Karte gibt die Anzahl der ausgeschlossenen Workloads an. Wählen Sie neben den ausgeschlossenen Workloads **Verwalten** aus.
++
+image:settings-excluded-workload.png["Screenshot des Dashboards mit den Einstellungen zur Ransomware-Resilienz."]
+
+. Um eine einzelne Arbeitslast zu entfernen, wählen Sie im Aktionsmenü die Arbeitslast aus, die Sie aus der Ausschlussliste entfernen möchten.
++
+Um mehrere Workloads zu entfernen, wählen Sie das Kontrollkästchen neben den Workloads aus, die Sie entfernen möchten, und klicken Sie dann auf **Aus ausgeschlossenen entfernen**.
+
+. Wählen Sie im Dialogfeld **Entfernen**, um zu bestätigen, dass Sie die Workloads aus der Ausschlussliste entfernen möchten.
+. Wenn die Arbeitslast erfolgreich aus der Liste der ausgeschlossenen Arbeitslasten entfernt wurde, erscheint eine Erfolgsmeldung auf der Seite „Ausgeschlossene Arbeitslasten“ und die Arbeitslast wird nicht mehr in der Liste der ausgeschlossenen Arbeitslasten angezeigt. Wenn die Aktion fehlschlägt, wird eine Fehlermeldung angezeigt; versuchen Sie den Vorgang erneut. image:exclude-workload-remove-successful.png["Screenshot der erfolgreichen Entfernung einer ausgeschlossenen Arbeitslast."]
 

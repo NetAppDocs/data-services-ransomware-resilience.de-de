@@ -15,13 +15,13 @@ summary: Mit NetApp Ransomware Resilience können Sie Berichte mit Details zu Sc
 Sie können Schutzdaten exportieren und die CSV- oder JSON-Dateien herunterladen, die Details zu Angriffsbereitschaftsübungen, Schutz, Warnungen und Wiederherstellung enthalten.
 
 
-TIP: Bevor Sie die Dateien herunterladen, sollten Sie die Daten aktualisieren. Dadurch werden auch die in den Dateien angezeigten Daten aktualisiert.
+TIP: Bevor Sie die Dateien herunterladen, sollten Sie das Dashboard aktualisieren, um die aktuellsten Daten in Ihren Berichten zu erfassen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
 *Welche Daten können Sie herunterladen?*  Sie können Dateien von jeder der Hauptmenüoptionen herunterladen:
 
-* *Schutz*: Enthält den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.
+* *Schutz*: Beinhaltet den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.
 * *Warnungen*: Enthält den Status und die Details aller Warnungen, einschließlich der Gesamtzahl der Warnungen und automatisierten Snapshots.
 * *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads mit den Markierungen „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“.
 * *Berichte*: Sie können Daten von jeder Seite exportieren und die Dateien herunterladen.

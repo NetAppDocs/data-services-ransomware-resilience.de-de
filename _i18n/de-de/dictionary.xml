@@ -337,10 +337,6 @@
   <block id="76722f595147e9e40ab79fef549441a4" category="admonition">Wir empfehlen, Snapshot-Richtlinien nicht zu deaktivieren.</block>
   <block id="ef54d92c7cc927ca7eb5e489c30b0e9b" category="summary">Während der Erkennung analysiert Ransomware Resilience alle Volumes und Dateien in Systemen über alle Konsolenagenten und Konten hinweg.</block>
   <block id="e9be3c13b1ed73a120f1b23e2cefb058" category="doc">Entdecken Sie Workloads in NetApp Ransomware Resilience</block>
-  <block id="66fde4240a0e74342b069b682c733504" category="paragraph">*Wie können Sie Arbeitslasten ermitteln?*  Sie können Folgendes tun:</block>
-  <block id="e532d8f244f0ea9cd5619802d3cb8f03" category="list-text">Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten.  Sie können von dieser Funktion profitieren, wenn Sie bestimmte Workloads in Ihrer Umgebung schützen möchten und andere nicht.</block>
-  <block id="6785cfec3a12064afa1fdb005b389154" category="list-text">Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme.</block>
-  <block id="35cf13d9dca3a78ecf913cca5a7af14a" category="list-text">Entdecken Sie neue Systeme.</block>
   <block id="790472d97707885ad0bca12c5442db2a" category="paragraph">Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
   <block id="7b8dc42ed597eb23a119869a1195c334" category="list-text">Wählen Sie in der NetApp Console*Schutz* &gt; *Ransomware-Schutz*.</block>
@@ -363,12 +359,9 @@
   <block id="7aa859cab6bf5bccbd16604f19eefa93" category="inline-link-macro">Erfahren Sie, was Ihnen das Dashboard anzeigt.</block>
   <block id="6363fabfdf63bcf12dfba9fd9de06ba3" category="paragraph"><block ref="6363fabfdf63bcf12dfba9fd9de06ba3" category="inline-link-macro-rx"></block></block>
   <block id="0e8bd87ff5fa544ac4a41711a3b607ee" category="section-title">Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme</block>
-  <block id="50cb53872ff54665f11a232b976038d3" category="paragraph">Wenn Sie bereits Systeme zur Erkennung ausgewählt haben, können Sie über das Dashboard neu erstellte Workloads für diese Umgebungen erkennen.</block>
-  <block id="349f26e9c45e28e1bbdcacd539035898" category="list-text">Um das Datum der letzten Entdeckung zu ermitteln, sehen Sie sich den Datums- und Zeitstempel neben dem Symbol *Aktualisieren* oben rechts im Ransomware Resilience-Dashboard an.</block>
   <block id="cee654483027bd7fe0b0908f5113b46f" category="section-title">Entdecken Sie neue Systeme</block>
   <block id="3a268026d4270688c4ec208104cc118c" category="paragraph">Wenn Sie bereits Systeme entdeckt haben, können Sie neue oder bisher nicht ausgewählte Systeme finden.</block>
   <block id="12138171b6ceeb4bdc45d66e55bebe1c" category="inline-image-macro">Vertikale Aktionen</block>
-  <block id="981597877eeda1ab60f9f862028665bf" category="list-text">Wählen Sie im Menü Ransomware Resilience die vertikale<block ref="ddacd9651566dbd67045ad6fbaf81a6c" category="inline-image-macro-rx" type="image"></block> ... Option oben rechts.  Wählen Sie im Dropdown-Menü *Einstellungen* aus.</block>
   <block id="405f846fd5caab9c6bb41e637ac55c97" category="summary">Finden Sie eine Antwort auf eine häufig gestellte Frage zu NetApp Ransomware Resilience.</block>
   <block id="815a60d80ffbc32f6db251b3410900b2" category="doc">Häufig gestellte Fragen zur NetApp Ransomware Resilience</block>
   <block id="0257967210bdc685c6f54c2fd5c5300f" category="paragraph">Diese FAQ können hilfreich sein, wenn Sie nur eine schnelle Antwort auf eine Frage zu NetApp Ransomware Resilience suchen.</block>
@@ -924,8 +917,6 @@
   <block id="54a418aa76c7e9afaa77a58a34a3d3ed" category="doc">Schützen Sie Workloads mit NetApp Ransomware Resilience -Schutzstrategien</block>
   <block id="7bf3a8af65d2a153b44dafcf248f1df7" category="paragraph">Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einen Workload-konsistenten Schutz aktivieren oder Ransomware-Schutzstrategien in NetApp Ransomware Resilience erstellen.</block>
   <block id="9d76fd8cddbcb128567856bd698d409e" category="section-title">Strategien zum Schutz vor Ransomware verstehen</block>
-  <block id="88a4ad08ed31669f06a098dea0a14a38" category="paragraph">Strategien zum Schutz vor Ransomware umfassen sowohl Erkennungs- als auch Schutzrichtlinien.</block>
-  <block id="dd90d4cdb71a18320f3becc35cd530d5" category="list-text">**Erkennungsrichtlinien** erkennen Ransomware-Bedrohungen</block>
   <block id="b5728c1f0d5859e4bf3e89712b5ddbdf" category="list-text">**Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.</block>
   <block id="7646c296ea1b221cbb826893afaa224e" category="paragraph">Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt Ransomware Resilience diese und bietet Ihnen die Möglichkeit, entweder:</block>
   <block id="0e468f869572effeac4af4bbea21ed06" category="list-text">Verwenden Sie eine Ransomware-Erkennungsrichtlinie und nutzen Sie weiterhin die Snapshot- und Backup-Richtlinien, die von anderen NetApp -Tools erstellt wurden, oder</block>
@@ -975,18 +966,11 @@
   <block id="6041f003f0f1bda39024283f18c8591b" category="list-text">Name der Ransomware-Schutzrichtlinie, die Snapshots und Backups regelt</block>
   <block id="0b780e70f563e19cd1a3f1e2bce2f198" category="paragraph">*Arbeitsbelastungsbedeutung*</block>
   <block id="0882532dc9eb74e24a8b137f1e6a0b39" category="paragraph">Ransomware Resilience weist jedem Workload während der Erkennung basierend auf einer Analyse jedes Workloads eine Wichtigkeit oder Priorität zu.  Die Workload-Wichtigkeit wird durch die folgenden Snapshot-Häufigkeiten bestimmt:</block>
-  <block id="1ad5d2b1df5750779a9e10432b0d7a7b" category="list-text">*Kritisch*: Es werden mehr als 1 Snapshot-Kopien pro Stunde erstellt (sehr aggressiver Schutzplan)</block>
-  <block id="1adc4b459e7f50d96280424fb7e06709" category="list-text">*Wichtig*: Es werden weniger als 1 Snapshot-Kopien pro Stunde, aber mehr als 1 pro Tag erstellt</block>
-  <block id="e12f58d91eed1a4a160b184cc1b10ebf" category="list-text">*Standard*: Mehr als eine Snapshot-Kopie pro Tag</block>
-  <block id="48102e7d0a568223836c2d653abd58e5" category="paragraph">*Vordefinierte Erkennungsrichtlinien* [[vordefiniert]]</block>
   <block id="58adba48bf0678c3abb71d1fdf829602" category="paragraph">Sie können eine der folgenden vordefinierten Ransomware-Resilience-Richtlinien auswählen, die auf die Wichtigkeit der Arbeitslast abgestimmt sind.</block>
   <block id="4d293abd3f96b37c9afdf90f01855f8b" category="admonition">Die Richtlinie **Encryption-Benutzererweiterung** ist die einzige vordefinierte Richtlinie, die die Erkennung verdächtigen Benutzerverhaltens unterstützt.</block>
   <block id="a2c5d5541ff19f8df63922963356ec16" category="cell">Richtlinienebene</block>
   <block id="d4e2713d1b1725a1592f9268589f990d" category="cell">Schnappschuss</block>
   <block id="7cf395303ce3665a9834721d4b748e4b" category="cell">Frequenz</block>
-  <block id="c2097ddf718c7c0477555ad9dde31c5e" category="cell">Aufbewahrung (Tage)</block>
-  <block id="39531fdceaea662abd6669cba8f989fc" category="cell">Anzahl der Snapshot-Kopien</block>
-  <block id="c6b8cedaee837159aadd999ac609755e" category="cell">Maximale Gesamtzahl der Snapshot-Kopien</block>
   <block id="e8ce96c640213db710ed76440fe41391" category="cell">*Richtlinie für kritische Arbeitslast*</block>
   <block id="ef47e7cb2656929b4b5701de51c43f5f" category="paragraph">Viertelstündlich</block>
   <block id="efec1cf9b9eee75e20f0e689c7d19618" category="cell">Alle 15 Minuten</block>
@@ -1054,9 +1038,7 @@
   <block id="e4574be2aa1d855d0a159fa734c028b7" category="list-text">Wählen Sie für jedes Element den *Abwärtspfeil* aus.</block>
   <block id="b77a56354e9e39a76b1a118e9bfa09d3" category="list-text">*Erkennungsrichtlinie*:</block>
   <block id="949db64066489b0349a4ff1451832808" category="list-text">*Richtlinie*: Wählen Sie eine der vordefinierten Erkennungsrichtlinien.</block>
-  <block id="0bea212ea55cc876a45f2009621526fb" category="list-text">*Primäre Erkennung*: Aktivieren Sie die Ransomware-Erkennung, damit Ransomware Resilience potenzielle Ransomware-Angriffe erkennt.</block>
   <block id="66ecff8104cfb8cf22c05ebdad07a66a" category="list-text">*Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung des Benutzerverhaltens, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und verdächtige Ereignisse wie Datenverletzungen zu erkennen.</block>
-  <block id="25c38cb370fc00bc6fd644a75102eeb2" category="list-text">*Dateierweiterungen blockieren*: Aktivieren Sie diese Option, damit Ransomware Resilience bekannte verdächtige Dateierweiterungen blockiert.  Ransomware Resilience erstellt automatisch Snapshot-Kopien, wenn die primäre Erkennung aktiviert ist.</block>
   <block id="7c06fadd4f73e4b63eb519df7d9880fc" category="paragraph">Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.</block>
   <block id="c8499d03897189696e5af26fc5ab9f45" category="list-text">*Snapshot-Richtlinie*:</block>
   <block id="007ac2633329ecdb55692304050d9260" category="list-text">*Basisname der Snapshot-Richtlinie*: Wählen Sie eine Richtlinie aus oder wählen Sie *Erstellen* und geben Sie einen Namen für die Snapshot-Richtlinie ein.</block>
@@ -1079,7 +1061,6 @@
   <block id="5bf833f3ee3985c83ff4a2c137c2cdb9" category="list-text">Ransomware Resilience erkennt, ob aktive SnapCenter oder Backup- und Recovery-Richtlinien vorhanden sind.</block>
   <block id="0d7426ba5ec4042ac3383e7c8f81d565" category="list-text">Um Ihre vorhandenen Backup- und Recovery- oder SnapCenter -Richtlinien beizubehalten und nur eine _Erkennungs_richtlinie anzuwenden, lassen Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen** deaktiviert.</block>
   <block id="346ced422939f5220048eed80e512829" category="list-text">Um Details zu den SnapCenter -Richtlinien anzuzeigen, wählen Sie den *Abwärtspfeil*.</block>
-  <block id="0004fcb1621d03d3051ca5a93121a0c9" category="list-text">Wählen Sie die gewünschten Erkennungseinstellungen: *Verschlüsselungserkennung* *Erkennung verdächtigen Benutzerverhaltens* *Blockieren verdächtiger Dateierweiterungen*</block>
   <block id="c716b644cde6bcf010e93cdafcb078a0" category="list-text">Wählen Sie **Weiter**.</block>
   <block id="a3de809b15b92430b0a649973defb161" category="inline-link-macro">oder erstellen Sie ein</block>
   <block id="4ba6fce8781481d7a10ccdf42ed8690d" category="list-text">Wenn Sie *Erkennung verdächtigen Benutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den Agenten für Benutzeraktivität oder<block ref="739a3400f03009256dff1eb7cc8f7f4a" category="inline-link-macro-rx"></block> .</block>
@@ -1259,9 +1240,7 @@
   <block id="b2ff9d90b8575c5030e4183e92ccf938" category="summary">Mit NetApp Ransomware Resilience können Sie Berichte mit Details zu Schutz, Warnungen und Wiederherstellung herunterladen und als CSV-Dateien speichern.</block>
   <block id="2963ad4383209a31ba7b5a890b302bc2" category="doc">Berichte in NetApp Ransomware Resilience herunterladen</block>
   <block id="6fb301adfaa83e3f2590a0454361757e" category="paragraph">Sie können Schutzdaten exportieren und die CSV- oder JSON-Dateien herunterladen, die Details zu Angriffsbereitschaftsübungen, Schutz, Warnungen und Wiederherstellung enthalten.</block>
-  <block id="d788bcb0d6bc2e0d54ec3c042333bf41" category="admonition">Bevor Sie die Dateien herunterladen, sollten Sie die Daten aktualisieren. Dadurch werden auch die in den Dateien angezeigten Daten aktualisiert.</block>
   <block id="229560de4c61096e275f68d7eda37c00" category="paragraph">*Welche Daten können Sie herunterladen?*  Sie können Dateien von jeder der Hauptmenüoptionen herunterladen:</block>
-  <block id="9e3cf45f94aa890af53ce59cfb5a0bac" category="list-text">*Schutz*: Enthält den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.</block>
   <block id="a7e404e1296fea04d0cd654b84867b5a" category="list-text">*Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads mit den Markierungen „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“.</block>
   <block id="a36d9f25fe7ecafe45db2fd45823c6e7" category="list-text">*Berichte*: Sie können Daten von jeder Seite exportieren und die Dateien herunterladen.</block>
   <block id="cba5c013826db3e7efce5d0c19aee9c1" category="admonition">Sie können Bereitschaftsübungsberichte nur von der Seite *Berichte* herunterladen.</block>
@@ -1542,9 +1521,7 @@
   <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Ganz neu bei NetApp</block>
   <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Wenn Sie NetApp noch nicht kennen und kein NSS-Konto haben, befolgen Sie die nachstehenden Schritte.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Ein Screenshot des Hilfemenüs, in dem „Support“ die erste aufgeführte Option ist.</block>
-  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">Suchen Sie auf der Support-Registrierungsseite nach der Seriennummer Ihrer Konto-ID.</block>
-  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Support-Registrierungssite von NetApp</block>
   <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Navigieren Sie zu<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> und wählen Sie *Ich bin kein registrierter NetApp -Kunde*.</block>
   <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Füllen Sie die Pflichtfelder (mit roten Sternchen gekennzeichnet) aus.</block>
@@ -1572,8 +1549,6 @@
   <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">Dasselbe gilt, wenn Sie bereits über NSS-Konten auf Kundenebene verfügen und versuchen, ein Konto auf Partnerebene hinzuzufügen.</block>
   <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">Nach erfolgreicher Anmeldung speichert NetApp den NSS-Benutzernamen.</block>
   <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">Ein Symbol mit drei horizontalen Punkten</block>
-  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">Dies ist eine vom System generierte ID, die Ihrer E-Mail-Adresse zugeordnet ist. Auf der Seite *NSS-Verwaltung* können Sie Ihre E-Mail-Adresse aus dem<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> Speisekarte.</block>
-  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Wenn Sie Ihre Anmeldeinformationen aktualisieren müssen, gibt es auch die Option *Anmeldeinformationen aktualisieren* im<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> Speisekarte.</block>
   <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">Bei Verwendung dieser Option werden Sie aufgefordert, sich erneut anzumelden. Beachten Sie, dass das Token für diese Konten nach 90 Tagen abläuft. Sie werden durch eine entsprechende Benachrichtigung darauf aufmerksam gemacht.</block>
   <block id="2a4edc5ec6e55f07dba0609dc2cd6d87" category="summary">Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience können Sie Benutzeraktivitäten erkennen, die eine potenzielle Bedrohung darstellen könnten.</block>
   <block id="906ec8bab01967c36f2f073eff9f54df" category="doc">Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten in NetApp Ransomware Resilience</block>
@@ -2044,7 +2019,6 @@
   <block id="ee1bc5da2dde4f02ef7aa47df921506a" category="doc">Warnmeldungen in NetApp Ransomware Resilience verwalten</block>
   <block id="9a51095678260d2a753174230dbe8a88" category="paragraph">Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung auf dem Dashboard und im Benachrichtigungsbereich angezeigt. Ransomware Resilience erstellt sofort einen Snapshot. Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.</block>
   <block id="6fe459ab097d6c4270e2ad317a017b93" category="paragraph">Ein Alarmereignis kann folgende Zustände aufweisen:</block>
-  <block id="93771318f0ad483bcb651c0ded2c6033" category="admonition">Sobald ein Angriff abgewiesen wurde, kann sein Status nicht mehr rückgängig gemacht werden. Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.</block>
   <block id="c95e7dd9856afddc701e5bf3b384f093" category="paragraph">Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Wenn es sich nicht um tatsächliche Bedrohungen handelt, können sie als unbegründet abgetan werden.</block>
   <block id="c73a9fafaefc34f0b97adbaba4200dc9" category="paragraph">Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden. Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten und ordnet es dem normalen Betrieb zu, sodass bei einem solchen Verhalten keine Warnung mehr ausgelöst wird.</block>
   <block id="ea3cf0f8eb2106f78fd9e62d674bd7c0" category="list-text">Wählen Sie einen oder mehrere Vorfälle aus. Alternativ können Sie alle Vorfälle auswählen, indem Sie das Feld „Vorfalls-ID“ oben links in der Tabelle anklicken.</block>
@@ -2066,7 +2040,6 @@
   <block id="55971de7d1268c37251f60641b742b76" category="paragraph">Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unterstützte Systemkonfigurationen an. Ransomware Resilience bewertet Oracle-Anwendungen, VMware-Datenspeicher, Dateifreigaben und Blockspeicher.</block>
   <block id="1e55889dc96c3aa2614c39626c9cecdd" category="admonition">Ransomware Resilience erkennt keine Workloads mit Volumes, die FlexGroup verwenden.</block>
   <block id="c0605366a345249c74664f31f92636c4" category="paragraph">Ransomware Resilience überprüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und die Optionen für den autonomen Ransomware-Schutz von NetApp . Ransomware Resilience erkennt außerdem Schutzinformationen von SnapCenter for VMware für VM-Datenspeicher, SnapCenter for Oracle und NetApp Backup and Recovery für Dateifreigaben und VM-Dateifreigaben. Anschließend werden Ihnen Möglichkeiten zur Verbesserung Ihres Ransomware-Schutzes empfohlen.</block>
-  <block id="20571d4d9a9f67814984ceaa9897d90b" category="paragraph">Ransomware Resilience erkennt Workload-Daten nur für Console-Agenten auf ausgewählten Systemen. Dieser Vorgang kann einige Minuten dauern.</block>
   <block id="0c4db502345984347741cd5a9a3da447" category="list-text">Wählen Sie im Dashboard das Symbol *Aktualisieren*, um neue Workloads zu finden.</block>
   <block id="242b6b00ff2f35d933e337704d202041" category="list-text">Wählen Sie auf der Workload-Erkennungskarte *Workloads erkennen* aus. Die Suche kann einige Minuten dauern.  Ein Ladesymbol zeigt den Fortschritt an.</block>
   <block id="728cc93ad9329b5fca77365b0336ce77" category="list-text">Ransomware Resilience erkennt sowohl unterstützte als auch nicht unterstützte Systeme. Es unterstützt kein System, wenn dessen ONTAP Version unterhalb der erforderlichen Version liegt. Wenn Sie mit der Maus über ein nicht unterstütztes System fahren, wird in einem Tooltip der Grund angezeigt. Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.</block>
@@ -2129,4 +2102,74 @@
   <block id="c3c0e3736c092f9f194505694468ca8b" category="inline-link-macro">Systemanforderungen</block>
   <block id="3711ac0a85bd797cffe6d1b55a460f16" category="paragraph">Stellen Sie sicher, dass Sie die folgenden Kriterien erfüllt haben: <block ref="24745d2c3c6c1ff64bcdf410b4214e6b" category="inline-link-macro-rx"></block> für den Benutzeraktivitätsagenten. Stellen Sie sicher, dass Ihre Konfiguration den unterstützten Cloud-Anbietern und Regionen entspricht.</block>
   <block id="bbeae0eeffca7072631fe62be382e481" category="cell">Ransomware-Resilienzdienst</block>
+  <block id="28f949c139c27e6b09df3640a4d3aea0" category="doc">Snapshots in ONTAP replizieren</block>
+  <block id="f67d671d0eb9b2810d472b2c73fb65d6" category="paragraph">Ransomware Resilience unterstützt nun das Hinzufügen der Replikation von Snapshots zu einem sekundären ONTAP Standort. Sie können eine Ransomware-Schutzstrategie erstellen, die Replikation beinhaltet, oder die vordefinierte Strategie verwenden. Mit Schutzgruppen, die eine Replikationsrichtlinie verwenden, können Sie für jede Arbeitslast an dasselbe Ziel oder an verschiedene Ziele replizieren.</block>
+  <block id="6ca5a36112bece1031ef1a3e82518ffb" category="inline-link-macro">Workloads im Rahmen der Ransomware-Resilienz schützen</block>
+  <block id="0b603f5148dda4ce1b974e4b20493476" category="paragraph">Weitere Informationen finden Sie unter <block ref="1b59dbcecddb451034333205ceb2d85d" category="inline-link-macro-rx"></block>.</block>
+  <block id="f7bb3fba9e87909a7d99018a8feebef5" category="section-title">Workloads von der Ransomware-Resilienz ausschließen</block>
+  <block id="36d62eb8fbffb07f574185bd90036cd1" category="paragraph">Ransomware Resilience unterstützt jetzt das Ausschließen bestimmter Workloads in einem System vom Schutz und vom Ransomware Resilience Dashboard. Sie können Workloads nach der Erkennung ausschließen und sie wieder einbeziehen, wenn Sie einen Ransomware-Schutz hinzufügen möchten. Für ausgeschlossene Arbeitslasten werden Ihnen keine Kosten in Rechnung gestellt.</block>
+  <block id="427dab7765b34a516acce2d3545db33d" category="inline-link-macro">Arbeitslasten ausschließen</block>
+  <block id="cce6483b933a36b9eebb2ecf0d8f32a6" category="paragraph">Weitere Informationen finden Sie unter <block ref="40a5b14292f3b3c1d42c8b093a2843e2" category="inline-link-macro-rx"></block>.</block>
+  <block id="35308ce14b9ba8b4f632405b876f0cc3" category="section-title">Benachrichtigungen als in Überprüfung markieren</block>
+  <block id="ff4c9cd383a7fe5ae887d1ac68d7ba52" category="paragraph">Ransomware Resilience ermöglicht es Ihnen nun, Warnmeldungen als „In Prüfung“ zu markieren. Verwenden Sie das Label „In Prüfung“, um die Klarheit innerhalb Ihres Teams bei der Priorisierung und dem Management aktiver Ransomware-Bedrohungen zu verbessern.</block>
+  <block id="89f2d4e28daee04bf630a66530a30349" category="paragraph">Ransomware Resilience erkennt Workload-Daten nur, wenn Sie das System auswählen. Der Ermittlungsprozess kann mehrere Minuten dauern.</block>
+  <block id="67cfc97e3b12b9504bf641388c095506" category="paragraph">Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, müssen Sie die Erkennung erneut initiieren, um die neuen Workloads zu schützen.</block>
+  <block id="a766aa8ad09c7fe20050753d75beca3f" category="list-text">Um den Zeitpunkt der letzten Erkennung zu ermitteln, sehen Sie sich den Datums- und Zeitstempel neben dem Symbol *Aktualisieren* oben rechts im Ransomware-Resilienz-Dashboard an.</block>
+  <block id="b449485bf7d14cf53070de7818e6bb15" category="inline-image-macro">Vertikale Aktionen&lt;block ref="2f43b42fd833d1e77420a8dae7419000" prefix="</block>
+  <block id="5b000e587ccbc59d84db84375ebb8da8" category="list-text">Wählen Sie im Menü „Ransomware-Resilienz“ die vertikale Option aus. <block ref="fc01824fafc69aa9b95ac35277bbc402" category="inline-image-macro-rx" type="image"></block>" category='inline-code'/&gt; Option oben rechts. Wählen Sie im Dropdown-Menü *Einstellungen* aus.</block>
+  <block id="a73cb044815fd2c4fc6f7f4be69aea1b" category="paragraph">Ransomware-Resilienz ermöglicht es Ihnen, bestimmte Workloads in einem System vom Ransomware-Schutz und der Erkennung auszuschließen.</block>
+  <block id="195a678c9c8d484143eb63eed10f0646" category="paragraph">Sie können nur solche Workloads ausschließen, die unterstützt werden und erfolgreich erkannt wurden. Sie können die Liste der ausgeschlossenen Workloads jederzeit ändern. Für Workloads, die von der Ransomware-Resilienz ausgeschlossen sind, werden keine Gebühren erhoben.</block>
+  <block id="8177747908126fef8483f6d1d6004f44" category="list-title">Fügen Sie Arbeitslasten zur Liste der ausgeschlossenen Arbeitslasten hinzu</block>
+  <block id="37eb321d29db5dca11557bda9adc6eb7" category="list-text">Unter Ransomware Resilience wählen Sie **Einstellungen**.</block>
+  <block id="c015f4b89fe0df1b17fc4657c586df8c" category="list-text">Suchen Sie im Dashboard „Einstellungen“ das Dashboard „Workload-Erkennung“. Die Karte gibt die Anzahl der ausgeschlossenen Workloads an. Um Workloads hinzuzufügen, wählen Sie neben den ausgeschlossenen Workloads die Option **Verwalten**.</block>
+  <block id="7722f090277db2c47e7aecd7f6ee7e81" category="inline-image-macro">Dashboard für die Einstellungen zur Ransomware-Resilienz</block>
+  <block id="fed7f3c8409ae810bb45ed3af428f167" category="paragraph"><block ref="fed7f3c8409ae810bb45ed3af428f167" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2aa032eed68682b8806374264ab61a71" category="list-text">Wählen Sie auf der Seite „Ausgeschlossene Workloads“ die Option **Hinzufügen**.</block>
+  <block id="37cf02ce6bbea058426687b673a078ad" category="list-text">Wählen Sie die Workloads aus, die Sie ausschließen möchten, und klicken Sie dann auf **Hinzufügen**.</block>
+  <block id="5b9260ea2b4c6018fc2bd598ec422b08" category="list-text">Überprüfen Sie die ausgeschlossenen Workloads auf der Seite „Ausgeschlossene Workloads“. Während die Arbeitslast hinzugefügt wird, wird neben ihrem Namen eine Fortschrittsanzeige angezeigt. Wenn eine Arbeitslast nicht erfolgreich ausgeschlossen wurde, wird sie nicht auf der Seite angezeigt.</block>
+  <block id="423527e51d69b12e13d1380a3cd19d9f" category="list-title">Workloads aus der Liste der ausgeschlossenen Workloads entfernen</block>
+  <block id="8e0c5d2e3270df01d0de694ff5c7c445" category="list-text">Suchen Sie im Dashboard „Einstellungen“ das Dashboard „Workload-Erkennung“. Die Karte gibt die Anzahl der ausgeschlossenen Workloads an. Wählen Sie neben den ausgeschlossenen Workloads **Verwalten** aus.</block>
+  <block id="d3ce09b8cd5f44a1b0f3a2d83e6ac0f2" category="inline-image-macro">Screenshot des Dashboards mit den Einstellungen zur Ransomware-Resilienz.</block>
+  <block id="ca700be141532b3ddfdcc178e0b5cd32" category="paragraph"><block ref="ca700be141532b3ddfdcc178e0b5cd32" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9ec9c37808e2bdf2c275e0fc67f873fc" category="list-text">Um eine einzelne Arbeitslast zu entfernen, wählen Sie im Aktionsmenü die Arbeitslast aus, die Sie aus der Ausschlussliste entfernen möchten.</block>
+  <block id="d1e463c8fe8d734bd3327fb633998456" category="paragraph">Um mehrere Workloads zu entfernen, wählen Sie das Kontrollkästchen neben den Workloads aus, die Sie entfernen möchten, und klicken Sie dann auf **Aus ausgeschlossenen entfernen**.</block>
+  <block id="9f1822f26663cadd0ea726defa3cca17" category="list-text">Wählen Sie im Dialogfeld **Entfernen**, um zu bestätigen, dass Sie die Workloads aus der Ausschlussliste entfernen möchten.</block>
+  <block id="01e74a47d7af3692bf72faf95ffcd1a3" category="inline-image-macro">Screenshot der erfolgreichen Entfernung einer ausgeschlossenen Arbeitslast.</block>
+  <block id="af77f82e6f94939c1b89727420b621ac" category="list-text">Wenn die Arbeitslast erfolgreich aus der Liste der ausgeschlossenen Arbeitslasten entfernt wurde, erscheint eine Erfolgsmeldung auf der Seite „Ausgeschlossene Arbeitslasten“ und die Arbeitslast wird nicht mehr in der Liste der ausgeschlossenen Arbeitslasten angezeigt. Wenn die Aktion fehlschlägt, wird eine Fehlermeldung angezeigt; versuchen Sie den Vorgang erneut. <block ref="364f1d2f9b1485226ce83c7872b1bae0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="afc3fd7b02af578176e65700acd6709b" category="list-text">*In Bearbeitung*: Sie können einen Vorfall als „in Bearbeitung“ markieren, während Sie ihn auswerten.</block>
+  <block id="a6e3974f4227562b42dd3774682f3f56" category="admonition">Sobald Sie einen Angriff abgewiesen haben, können Sie seinen Status nicht mehr rückgängig machen. Wenn Sie eine Arbeitslast abbrechen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien endgültig gelöscht.</block>
+  <block id="95f7e6287ef0ab80de109e7baee476ad" category="paragraph">Strategien zum Schutz vor Ransomware umfassen sowohl Erkennungs-, Schutz- als auch Replikationsrichtlinien.</block>
+  <block id="b8b45f3c53a227dc5aa1d806ef340f06" category="list-text">**Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen.</block>
+  <block id="68fc9b8869c6d23ecc7c4acaf4ef7761" category="list-text">**Replikationsrichtlinien** ermöglichen es Ihnen, Snapshots von Ransomware Resilience auf einen sekundären Standort zu replizieren. Replikationspläne können auf stündliche, tägliche, wöchentliche oder monatliche Frequenzen eingestellt werden.</block>
+  <block id="3ed69b14426127876e3ab79ddc2e266e" category="paragraph">Derzeit können Snapshots nur auf lokalem ONTAP Speicher repliziert werden.</block>
+  <block id="6474bbda8f7c072686c6e020cf107ead" category="list-text">Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* &gt; *Ransomware-Resilienz*.</block>
+  <block id="ace8eeed056a04351826cffef5f4da33" category="admonition">Verdächtige Benutzeraktivitäten und Aktivitäten im Zusammenhang mit FPolicy (verdächtige Dateierweiterungen) werden getrennt vom Erkennungsstatus aufgeführt.</block>
+  <block id="8e671825df2521c62d586d393df3398d" category="paragraph">*Replikationsziel*: Wenn Sie die Snapshot-Replikation konfiguriert haben, werden die Namen der Ziel-Speicher-VMs und -Systeme aufgelistet. Wenn keine Replikation vorliegt, wird in diesem Feld „Keine“ angezeigt.</block>
+  <block id="705d8898c1c055eb3bff9939a87b6812" category="list-text">*Kritisch*: Es werden mehr als eine Snapshot-Kopie pro Stunde erstellt (sehr aggressiver Schutzplan).</block>
+  <block id="0bec43abfdb99f043ac56e20931d1899" category="list-text">*Wichtig*: Snapshot-Kopien werden seltener als stündlich, aber häufiger als täglich erstellt.</block>
+  <block id="890ca6db61a7d84b3c2f7e8b21560ff7" category="list-text">*Standard*: Es werden mehrmals täglich Momentaufnahmen erstellt.</block>
+  <block id="da4aa80a5402fe8991327699e5421e28" category="section-title">Vordefinierte Erkennungsrichtlinien</block>
+  <block id="b267816a1724e79c894aa7e4509e18b2" category="paragraph">+ Die **kritische Replikationsrichtlinie** ist die einzige vordefinierte Richtlinie, die die Replikation von Snapshots nach ONTAP unterstützt.</block>
+  <block id="0d6a90889ade51e4252ba8bbf1ad155e" category="cell">Aufbewahrungsdauer (Tage)</block>
+  <block id="b5b7fab63026325a379913c2a05751c2" category="cell">Anzahl der Snapshot-Kopien</block>
+  <block id="aa9adfa847815670c9bd986dafc8c79c" category="cell">Maximale Anzahl von Snapshot-Kopien</block>
+  <block id="cf9344351eb239ccd95661876c4d97ee" category="cell">*Richtlinie zur kritischen Replikation*</block>
+  <block id="ad53fda1a18da9db9d8aa1d460952aa5" category="list-text">Sekundäre Replikation zu ONTAP</block>
+  <block id="8f6c5d8baaf38cda61b5392a06e30e68" category="list-text">*Primäre Erkennung*: Aktivieren Sie die Ransomware-Resilienz, um potenzielle Ransomware-Angriffe zu erkennen.</block>
+  <block id="21fd87cf8a3d6f008657537a5cec6e82" category="list-text">*Dateierweiterungen blockieren*: Aktivieren Sie die Ransomware-Resilienz, um bekannte verdächtige Dateierweiterungen zu blockieren. Ransomware Resilience erstellt automatisch Snapshot-Kopien, wenn die primäre Erkennung aktiviert ist.</block>
+  <block id="50723c157cd9ea132a02f421411e273d" category="list-text">*Replikationsrichtlinie*:</block>
+  <block id="f84245dfb1fc8217e62c0934102ba606" category="list-text">*Basisname der Replikationsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen aus. Der Basisname ist das Präfix, das an alle Snapshots angehängt wird.</block>
+  <block id="d230465858c85552b6c5a5b1ef3bb21f" category="list-text">*Replikationszeitpläne*: Aktivieren Sie die gewünschten Replikationsfrequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert (die Anzahl der aufzubewahrenden replizierten Snapshots) fest.</block>
+  <block id="228ec8f5cf8241b99a71e0c11689b0e6" category="list-text">Wählen Sie die gewünschten Erkennungseinstellungen: *Verschlüsselungserkennung* *Erkennung verdächtigen Benutzerverhaltens* *Blockieren verdächtiger Dateierweiterungen*</block>
+  <block id="447fce6406d4a8e99de98a2d5d107536" category="list-text">Wenn Ihre Strategie die Replikation beinhaltet, wählen Sie das **Zielsystem** und die **Zielspeicher-VM** aus. Wählen Sie **Weiter**.</block>
+  <block id="0c82c0ade162cfe42b72c98aa569451d" category="list-text">Wenn die Schutzstrategie die Replikation umfasst, überprüfen Sie die Replikationseinstellungen.</block>
+  <block id="22af614d3b0e3b88037f6f632819e41f" category="list-text">Um alle Snapshots am selben Zielort zu replizieren, aktivieren Sie **Für jede Arbeitslast das gleiche Ziel verwenden**. Wählen Sie im Abschnitt „Konsolenagent“ ein *Zielsystem* und eine *Zielspeicher-VM* für die Workloads aus.</block>
+  <block id="5cddb60bd30a2b5abfa065435ff46fad" category="paragraph">Um andere Ziele auszuwählen, deaktivieren Sie dieses Kästchen. Überprüfen Sie alle Workloads unter jedem Console-Agenten und weisen Sie jedem Workload ein *Zielsystem* und eine *Zielspeicher-VM* zu. Wählen Sie **Weiter**.</block>
+  <block id="05f102695dcd78d82f88a52818f4c682" category="admonition">Bevor Sie die Dateien herunterladen, sollten Sie das Dashboard aktualisieren, um die aktuellsten Daten in Ihren Berichten zu erfassen.</block>
+  <block id="6f540707e47351a26c8e3c79ccce18ea" category="list-text">*Schutz*: Beinhaltet den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.</block>
+  <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">Dies ist eine vom System generierte ID, die Ihrer E-Mail-Adresse zugeordnet ist. Auf der Seite *NSS-Verwaltung* können Sie Ihre E-Mail-Adresse aus dem<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> Speisekarte.</block>
+  <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Wenn Sie Ihre Anmeldeinformationen aktualisieren müssen, gibt es auch die Option *Anmeldeinformationen aktualisieren* im<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> Speisekarte.</block>
+  <block id="667dffcf5676fe0bd645082d2a512fef" category="section-title">12. Januar 2026</block>
 </blocks>

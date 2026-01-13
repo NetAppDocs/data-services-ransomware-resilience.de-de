@@ -1,0 +1,27 @@
+= Snapshots in ONTAP replizieren
+:allow-uri-read: 
+
+
+
+
+=== Snapshots in ONTAP replizieren
+
+Ransomware Resilience unterstützt nun das Hinzufügen der Replikation von Snapshots zu einem sekundären ONTAP Standort. Sie können eine Ransomware-Schutzstrategie erstellen, die Replikation beinhaltet, oder die vordefinierte Strategie verwenden. Mit Schutzgruppen, die eine Replikationsrichtlinie verwenden, können Sie für jede Arbeitslast an dasselbe Ziel oder an verschiedene Ziele replizieren.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Workloads im Rahmen der Ransomware-Resilienz schützen"^].
+
+
+
+=== Workloads von der Ransomware-Resilienz ausschließen
+
+Ransomware Resilience unterstützt jetzt das Ausschließen bestimmter Workloads in einem System vom Schutz und vom Ransomware Resilience Dashboard. Sie können Workloads nach der Erkennung ausschließen und sie wieder einbeziehen, wenn Sie einen Ransomware-Schutz hinzufügen möchten. Für ausgeschlossene Arbeitslasten werden Ihnen keine Kosten in Rechnung gestellt.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html#exclude-workloads["Arbeitslasten ausschließen"^].
+
+
+
+=== Benachrichtigungen als in Überprüfung markieren
+
+Ransomware Resilience ermöglicht es Ihnen nun, Warnmeldungen als „In Prüfung“ zu markieren. Verwenden Sie das Label „In Prüfung“, um die Klarheit innerhalb Ihres Teams bei der Priorisierung und dem Management aktiver Ransomware-Bedrohungen zu verbessern.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Warnmeldungen in der Ransomware-Resilienz verwalten"^].
