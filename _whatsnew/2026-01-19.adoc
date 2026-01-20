@@ -1,0 +1,11 @@
+= Nicht unterstützte Volumes
+:allow-uri-read: 
+
+
+
+
+=== Nicht unterstützte Volumes
+
+Die Berichte zur Ransomware-Resilienz erfassen nun Informationen über unterstützte und nicht unterstützte Volumes im **Zusammenfassungsbericht**. Nutzen Sie diese Informationen, um zu diagnostizieren, warum Volumes in einem System möglicherweise nicht für den Ransomware-Schutz geeignet sind.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-reports.html["Berichte zum Thema Ransomware-Resilienz herunterladen"^].

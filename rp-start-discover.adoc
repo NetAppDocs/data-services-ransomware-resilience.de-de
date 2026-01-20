@@ -79,6 +79,9 @@ Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, müssen Sie 
 
 
 
+TIP: Falls Sie feststellen, dass für das von Ihnen ermittelte System keine Volumes angezeigt werden, werden diese Volumes möglicherweise nicht unterstützt. Um eine Liste der nicht unterstützten Volumes zu finden, gehen Sie zum Menü **Einstellungen** und wählen Sie dann das Aktionsmenü in der Workload-Erkennungskarte aus, um einen JSON-Bericht über unterstützte und nicht unterstützte Volumes herunterzuladen.
+
+
 
 == Entdecken Sie neue Systeme
 

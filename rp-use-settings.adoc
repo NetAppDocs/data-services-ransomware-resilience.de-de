@@ -62,6 +62,9 @@ Auf dieser Seite werden Konsolenagenten mit Systemen angezeigt, die zuvor nicht 
 
 
 
+TIP: Wählen Sie in den Einstellungen auf der Workload-Erkennungskarte das Aktionsmenü aus. `...` Laden Sie anschließend den **Bericht (JSON) herunter**, um eine Liste der unterstützten und nicht unterstützten Workloads in Ihren Systemen einzusehen.
+
+
 
 == Verdächtige Benutzeraktivität
 
