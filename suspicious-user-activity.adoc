@@ -30,7 +30,9 @@ Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analys
 
 Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
 
-*Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die Rolle des Organisationsadministrators.  Für nachfolgende Konfigurationen für verdächtige Benutzeraktivitäten benötigen Sie die Administratorrolle „Ransomware Resilience-Benutzerverhalten“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
+*Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die **Organization admin role**. Für nachfolgende Konfigurationen verdächtiger Benutzeraktivitäten benötigen Sie die **Ransomware Resilience user behavior admin role**. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
+
+Stellen Sie sicher, dass jede Rolle auf Organisationsebene angewendet wird.
 
 
 
