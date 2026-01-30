@@ -107,46 +107,58 @@ TIP: Es wird empfohlen, die Zeit sowohl auf dem ONTAP System als auch auf dem Re
 Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-Pazifik, Europa oder Vereinigte Staaten).
 
 
+IMPORTANT: Ersetzen Sie bei der Erstinstallation die  `<site_name>` durch eine Platzhalter-(`*`-Berechtigung. Sobald der Agent aktiviert und voll funktionsfähig ist, können Sie die Berechtigung durch den Standortnamen ersetzen. Wenden Sie sich an Ihren NetApp-Ansprechpartner, um den Standortnamen zu erhalten.
+
+
 
 ==== Bereitstellung von Benutzeraktivitätsagenten im asiatisch-pazifischen Raum
 
-[cols="5*"]
+[cols="1,1,1,3,1"]
 |===
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugang zu Ransomware-Resilienz 
+| TCP | 443 | Benutzeraktivitätsagent  a| 
+* <site_name>.cs01-ap-1.cloudinsights.netapp.com
+* <site_name>.c01-ap-1.cloudinsights.netapp.com
+* <site_name>.c02-ap-1.cloudinsights.netapp.com
+* gentlogin.cs01-ap-1.cloudinsights.netapp.com
 
-
-| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugriff auf Authentifizierungsdienste 
+| Zugang zu Ransomware-Resilienz 
 |===
 
 
 ==== Bereitstellung von Benutzeraktivitätsagenten in Europa
 
-[cols="5*"]
+[cols="1,1,1,3,1"]
 |===
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugang zu Ransomware-Resilienz 
+| TCP | 443 | Benutzeraktivitätsagent  a| 
+* <site_name>.cs01-eu-1.cloudinsights.netapp.com
+* <site_name>.c01-eu-1.cloudinsights.netapp.com
+* <site_name>.c02-eu-1.cloudinsights.netapp.com
+* agentlogin.cs01-eu-1.cloudinsights.netapp.com
 
-
-| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugriff auf Authentifizierungsdienste 
+| Zugang zu Ransomware-Resilienz 
 |===
 
 
 ==== US-basierte Bereitstellungen von Benutzeraktivitätsagenten
 
-[cols="5*"]
+[cols="1,1,1,3,1"]
 |===
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugang zu Ransomware-Resilienz 
+| TCP | 443 | Benutzeraktivitätsagent  a| 
+* <site_name>.cs01.cloudinsights.netapp.com
+* <site_name>.c01.cloudinsights.netapp.com
+* <site_name>.c02.cloudinsights.netapp.com
+* agentlogin.cs01.cloudinsights.netapp.com
 
-
-| TCP | 443 | Benutzeraktivitätsagent | Ransomware-Resilienzdienst | Zugriff auf Authentifizierungsdienste 
+| Zugang zu Ransomware-Resilienz 
 |===
 
 
