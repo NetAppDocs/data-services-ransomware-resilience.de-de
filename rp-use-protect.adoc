@@ -20,7 +20,7 @@ Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einen Worklo
 
 == Strategien zum Schutz vor Ransomware verstehen
 
-Strategien zum Schutz vor Ransomware umfassen sowohl Erkennungs-, Schutz- als auch Replikationsrichtlinien.
+Strategien zum Schutz vor Ransomware umfassen _Erkennung_, _Schutz_ und _Replikationsrichtlinien_.
 
 * **Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen.
 * **Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.
