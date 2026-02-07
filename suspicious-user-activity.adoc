@@ -118,7 +118,7 @@ IMPORTANT: Ersetzen Sie bei der Erstinstallation die  `<site_name>` durch eine P
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent  a| 
+| HTTPS (TCP) | 443 | Benutzeraktivitätsagent  a| 
 * <site_name>.cs01-ap-1.cloudinsights.netapp.com
 * <site_name>.c01-ap-1.cloudinsights.netapp.com
 * <site_name>.c02-ap-1.cloudinsights.netapp.com
@@ -135,7 +135,7 @@ IMPORTANT: Ersetzen Sie bei der Erstinstallation die  `<site_name>` durch eine P
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent  a| 
+| HTTPS (TCP) | 443 | Benutzeraktivitätsagent  a| 
 * <site_name>.cs01-eu-1.cloudinsights.netapp.com
 * <site_name>.c01-eu-1.cloudinsights.netapp.com
 * <site_name>.c02-eu-1.cloudinsights.netapp.com
@@ -152,7 +152,7 @@ IMPORTANT: Ersetzen Sie bei der Erstinstallation die  `<site_name>` durch eine P
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 443 | Benutzeraktivitätsagent  a| 
+| HTTPS (TCP) | 443 | Benutzeraktivitätsagent  a| 
 * <site_name>.cs01.cloudinsights.netapp.com
 * <site_name>.c01.cloudinsights.netapp.com
 * <site_name>.c02.cloudinsights.netapp.com
@@ -172,7 +172,7 @@ IMPORTANT: Ersetzen Sie bei der Erstinstallation die  `<site_name>` durch eine P
 | TCP | 389 (LDAP) 636 (LDAPs / Start-TLS) | Benutzeraktivitätsagent | LDAP-Server-URL | Mit LDAP verbinden 
 
 
-| TCP | 443 | Benutzeraktivitätsagent | Cluster- oder SVM-Management-IP-Adresse (abhängig von der SVM-Collector-Konfiguration) | API-Kommunikation mit ONTAP 
+| HTTPS (TCP) | 443 | Benutzeraktivitätsagent | Cluster- oder SVM-Management-IP-Adresse (abhängig von der SVM-Collector-Konfiguration) | API-Kommunikation mit ONTAP 
 
 
 | TCP | 35000 - 55000  a| 
