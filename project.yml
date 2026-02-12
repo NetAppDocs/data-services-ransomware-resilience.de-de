@@ -41,8 +41,14 @@ sidebar:
     - title: Konfigurieren Sie Backups, Bedrohungserkennung und Angriffssimulationen
         in den Einstellungen
       url: "/rp-use-settings.html"
-    - title: Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten
-      url: "/suspicious-user-activity.html"
+    - title: Benutzeraktivitätserkennung konfigurieren
+      entries:
+      - title: Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten
+        url: "/concept-user-behavior.html"
+      - title: Anforderungen an die Benutzeraktivität
+        url: "/reference-user-activity-requirements.html"
+      - title: Agenten und Collector konfigurieren
+        url: "/suspicious-user-activity.html"
   - title: Nutzen Sie Ransomware-Resilienz
     entries:
     - title: Anzeigen des Workload-Zustands mithilfe des Dashboards

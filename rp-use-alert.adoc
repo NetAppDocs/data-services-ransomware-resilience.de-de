@@ -136,9 +136,6 @@ Auf der Registerkarte „Warnungen“ können Sie erkennen, ob böswillige Aktiv
 Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Datensicherungsstrategie mit Benutzerverhaltenserkennung aktiviert haben, um Warnungen auf Benutzerebene anzuzeigen. Die Spalte *Verdächtiger Benutzer* wird im Warnungs-Dashboard nur angezeigt, wenn die Benutzerverhaltenserkennung aktiviert ist. Um die Erkennung verdächtiger Benutzer zu aktivieren, siehe link:suspicious-user-activity.html["Verdächtige Benutzeraktivität"].
 
 
-NOTE: Wenn Sie NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security-Agenten auch für Ransomware Resilience zu verwenden. Sie müssen keine separaten Workload Security-Agenten für Ransomware Resilience bereitstellen, jedoch erfordert die Verwendung derselben Workload Security-Agenten eine Verknüpfung zwischen der Ransomware Resilience Console-Organisation und dem DII Storage Workload Security-Mandanten. Wenden Sie sich an Ihren Kundenbetreuer, um diese Verknüpfung zu aktivieren. + Um die Erkennung verdächtiger Benutzer _ohne_ DII zu nutzen, stellen Sie sicher, dass Sie link:suspicious-user-activity.html["aktivierte Erkennung verdächtiger Benutzeraktivitäten"] und die entsprechenden Agenten konfiguriert haben.
-
-
 
 === Anzeigen böswilliger Aktivitäten
 

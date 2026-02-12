@@ -111,19 +111,19 @@ Ransomware Resilience hilft bei der Konfiguration eines Sicherungsziels über di
 
 == Anforderungen an verdächtiges Nutzerverhalten
 
-Damit Ransomware Resilience Warnungen zu verdächtigem Benutzerverhalten ausgibt, müssen Sie einen Benutzeraktivitätsagenten konfigurieren. Um einen Benutzeraktivitätsagenten zu installieren, stellen Sie sicher, dass Ihr System die Anforderungen erfülltlink:suspicious-user-activity.html["die Anforderungen"].
+Damit NetApp Ransomware Resilience Warnungen über verdächtiges Benutzerverhalten ausgeben kann, müssen Sie einen Benutzeraktivitätsagenten konfigurieren. Um einen Benutzeraktivitätsagenten zu installieren, stellen Sie sicher, dass Ihr System link:reference-user-activity-requirements.html["die Anforderungen"] erfüllt.
 
 
 
 == Aktualisieren Sie die Berechtigungen von Nicht-Administratorbenutzern in einem ONTAP -System
 
-Wenn Sie die Berechtigungen von Nicht-Administratorbenutzern für ein bestimmtes System aktualisieren müssen, führen Sie diese Schritte aus.
+Wenn Sie die Berechtigungen von Nicht-Admin-Benutzern für ein bestimmtes System aktualisieren müssen, verwenden Sie diese Verfahrensschritte.
 
-. Melden Sie sich bei der Konsole an und suchen Sie nach dem System, dessen ONTAP Benutzerberechtigungen aktualisiert werden müssen.
-. Wählen Sie das System aus, um Details anzuzeigen.
+. Melden Sie sich in der Console an. Identifizieren Sie im Dashboard das System, dessen ONTAP Benutzerberechtigungen aktualisiert werden müssen.
+. Wählen Sie das System aus, um dessen Details anzuzeigen.
 . Wählen Sie *Zusätzliche Informationen anzeigen*, um den Benutzernamen anzuzeigen.
 . Melden Sie sich als Administrator an der ONTAP Cluster-CLI an.
-. Zeigen Sie die vorhandenen Rollen für diesen Benutzer an. Eingeben:
+. Zeigen Sie die vorhandenen Rollen für diesen Benutzer an:
 +
 [listing]
 ----

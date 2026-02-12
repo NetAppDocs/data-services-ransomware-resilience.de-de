@@ -443,7 +443,7 @@ image:screen-protection.png["Strategieseite verwalten"]
 . Um Details zu den SnapCenter -Richtlinien anzuzeigen, wählen Sie den *Abwärtspfeil*.
 . Wählen Sie die gewünschten Erkennungseinstellungen: *Verschlüsselungserkennung* *Erkennung verdächtigen Benutzerverhaltens* *Blockieren verdächtiger Dateierweiterungen*
 . Wählen Sie **Weiter**.
-. Wenn Sie *Erkennung verdächtigen Benutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den Agenten für Benutzeraktivität oderlink:suspicious-user-activity.html#add-a-user-activity-agent["oder erstellen Sie ein"] .
+. Wenn Sie *Erkennung verdächtigen Nutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den User activity agent oder link:suspicious-user-activity.html#create-a-user-activity-agent["oder erstellen Sie ein"].
 +
 Der Benutzeraktivitätsagent hostet die neuen Datensammler. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
 

@@ -4,7 +4,7 @@ permalink: suspicious-user-activity.html
 keywords: data breach detection, data breach, user activity, suspicious, anomalous, 
 summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience können Sie Benutzeraktivitäten erkennen, die eine potenzielle Bedrohung darstellen könnten. 
 ---
-= Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten in NetApp Ransomware Resilience
+= Konfigurieren von Agenten und Collectoren zur Erkennung von Benutzeraktivitäten in NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,15 +12,7 @@ summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Re
 
 
 [role="lead"]
-Ransomware Resilience unterstützt die Erkennung verdächtigen Benutzerverhaltens in Erkennungsrichtlinien und ermöglicht Ihnen, Ransomware-Vorfälle auf Benutzerebene zu bekämpfen.
-
-Ransomware Resilience erkennt verdächtige Benutzeraktivitäten durch die Analyse von Benutzeraktivitätsereignissen, die von FPolicy in ONTAP generiert werden. Um Daten zur Benutzeraktivität zu erfassen, müssen Sie einen oder mehrere Benutzeraktivitätsagenten bereitstellen. Der Agent ist ein Linux-Server oder eine VM mit Konnektivität zu Geräten auf Ihrem Mandanten.
-
-
-
-== Benutzeraktivitätsagenten und -sammler
-
-Um die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience zu aktivieren, muss mindestens ein Benutzeraktivitätsagent installiert sein. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten im Ransomware Resilience Dashboard aktivieren, müssen Sie die Agent-Hostinformationen angeben.
+Um die Erkennung verdächtigen Nutzerverhaltens in NetApp Ransomware Resilience zu aktivieren, müssen Sie mindestens einen Benutzeraktivitäts-Agenten installieren. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten über das Ransomware Resilience-Dashboard aktivieren, müssen Sie die Hostinformationen des Benutzeraktivitäts-Agenten angeben.
 
 Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analyse an einen SaaS-Standort. Es gibt zwei Arten von Sammlern:
 
@@ -30,190 +22,27 @@ Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analys
 
 Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
 
+
+NOTE: Wenn Sie bereits NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security Agents auch für Ransomware Resilience zu verwenden. Sie müssen keine separaten Workload Security Agents für Ransomware Resilience bereitstellen, jedoch erfordert die Verwendung derselben Workload Security Agents eine Kopplung zwischen der Ransomware Resilience Console Organization und dem DII Storage Workload Security Tenant. Wenden Sie sich an Ihren Account Representative, um diese Kopplung zu aktivieren.
+
++ Falls Sie Data Infrastructure Insights noch nicht verwenden, fahren Sie mit den Konfigurationsanweisungen hier fort.
+
+
+
+== Bevor Sie beginnen
+
+* Stellen Sie sicher, dass Sie die link:reference-user-activity-requirements.html["Anforderungen an Betriebssystem, Server und Netzwerk"] erfüllen.
+
+
 *Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die **Organization admin role**. Für nachfolgende Konfigurationen verdächtiger Benutzeraktivitäten benötigen Sie die **Ransomware Resilience user behavior admin role**. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 Stellen Sie sicher, dass jede Rolle auf Organisationsebene angewendet wird.
 
 
 
-== Systemanforderungen
+== Erstellen Sie einen Benutzeraktivitätsagenten
 
-Für die Installation eines Benutzeraktivitätsagenten benötigen Sie einen Host oder eine VM, die die folgenden Anforderungen erfüllt.
-
-
-
-=== Betriebssystemanforderungen
-
-[cols="2"]
-|===
-| Betriebssystem | Unterstützte Versionen 
-
-
-| AlmaLinux | 9.4 (64 Bit) bis 9.5 (64 Bit) und 10 (64 Bit), einschließlich SELinux 
-
-
-| CentOS | CentOS Stream 9 (64 Bit) 
-
-
-| Debian | 11 (64 Bit), 12 (64 Bit), einschließlich SELinux 
-
-
-| OpenSUSE Leap | 15.3 (64 Bit) bis 15.6 (64 Bit) 
-
-
-| Oracle Linux | 8.10 (64 Bit) und 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
-
-
-| Red Hat | 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit) und 10 (64 Bit), einschließlich SELinux 
-
-
-| Felsig | Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
-
-
-| SUSE Enterprise Linux | 15 SP4 (64 Bit) bis 15 SP6 (64 Bit), einschließlich SELinux 
-
-
-| Ubuntu | 20.04 LTS (64 Bit), 22.04 LTS (64 Bit) und 24.04 LTS (64 Bit) 
-|===
-
-NOTE: Auf dem Computer, den Sie für den Benutzeraktivitätsagenten verwenden, sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen.
-
-Der `unzip` Für die Installation wird ein Befehl benötigt. Der `sudo su -` Der Befehl wird für die Installation, die Ausführung von Skripten und die Deinstallation benötigt.
-
-
-
-=== Serveranforderungen
-
-Der Server muss die folgenden Mindestanforderungen erfüllen:
-
-* **CPU**: 4 Kerne
-* **RAM**: 16 GB RAM
-* **Festplattenspeicher**: 36 GB freier Festplattenspeicher
-
-
-
-NOTE: Weisen Sie zusätzlichen Speicherplatz zu, um die Erstellung des Dateisystems zu ermöglichen. Stellen Sie sicher, dass im Dateisystem mindestens 35 GB freier Speicherplatz vorhanden sind. + Wenn `/opt` Es handelt sich um einen eingebundenen Ordner von einem NAS-Speicher; lokale Benutzer müssen Zugriff auf diesen Ordner haben. Die Erstellung eines Benutzeraktivitätsagenten kann fehlschlagen, wenn lokale Benutzer nicht über die erforderlichen Berechtigungen verfügen.
-
-
-NOTE: Es wird empfohlen, den Benutzeraktivitätsagenten auf einem anderen System als Ihrer Ransomware-Resilienzumgebung zu installieren. Falls Sie sie auf demselben Rechner installieren, sollten Sie 50 bis 55 GB Speicherplatz einplanen. Für Linux sollten Sie 25-30 GB Speicherplatz reservieren. `/opt/netapp` und 25 GB bis `var/log/netapp`Die
-
-
-TIP: Es wird empfohlen, die Zeit sowohl auf dem ONTAP System als auch auf dem Rechner des Benutzeraktivitätsagenten mithilfe des Network Time Protocol (NTP) oder des Simple Network Time Protocol (SNTP) zu synchronisieren.
-
-
-
-=== Cloud-Netzwerkzugriffsregeln
-
-Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-Pazifik, Europa oder Vereinigte Staaten).
-
-
-IMPORTANT: Ersetzen Sie bei der Erstinstallation die  `<site_name>` durch eine Platzhalter-(`*`-Berechtigung. Sobald der Agent aktiviert und voll funktionsfähig ist, können Sie die Berechtigung durch den Standortnamen ersetzen. Wenden Sie sich an Ihren NetApp-Ansprechpartner, um den Standortnamen zu erhalten.
-
-
-
-==== Bereitstellung von Benutzeraktivitätsagenten im asiatisch-pazifischen Raum
-
-[cols="1,1,1,3,1"]
-|===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
-
-
-| HTTPS (TCP) | 443 | Benutzeraktivitätsagent  a| 
-* <site_name>.cs01-ap-1.cloudinsights.netapp.com
-* <site_name>.c01-ap-1.cloudinsights.netapp.com
-* <site_name>.c02-ap-1.cloudinsights.netapp.com
-* gentlogin.cs01-ap-1.cloudinsights.netapp.com
-
-| Zugang zu Ransomware-Resilienz 
-|===
-
-
-==== Bereitstellung von Benutzeraktivitätsagenten in Europa
-
-[cols="1,1,1,3,1"]
-|===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
-
-
-| HTTPS (TCP) | 443 | Benutzeraktivitätsagent  a| 
-* <site_name>.cs01-eu-1.cloudinsights.netapp.com
-* <site_name>.c01-eu-1.cloudinsights.netapp.com
-* <site_name>.c02-eu-1.cloudinsights.netapp.com
-* agentlogin.cs01-eu-1.cloudinsights.netapp.com
-
-| Zugang zu Ransomware-Resilienz 
-|===
-
-
-==== US-basierte Bereitstellungen von Benutzeraktivitätsagenten
-
-[cols="1,1,1,3,1"]
-|===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
-
-
-| HTTPS (TCP) | 443 | Benutzeraktivitätsagent  a| 
-* <site_name>.cs01.cloudinsights.netapp.com
-* <site_name>.c01.cloudinsights.netapp.com
-* <site_name>.c02.cloudinsights.netapp.com
-* agentlogin.cs01.cloudinsights.netapp.com
-
-| Zugang zu Ransomware-Resilienz 
-|===
-
-
-=== Netzwerkinterne Regeln
-
-[cols="5*"]
-|===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
-
-
-| TCP | 389 (LDAP) 636 (LDAPs / Start-TLS) | Benutzeraktivitätsagent | LDAP-Server-URL | Mit LDAP verbinden 
-
-
-| HTTPS (TCP) | 443 | Benutzeraktivitätsagent | Cluster- oder SVM-Management-IP-Adresse (abhängig von der SVM-Collector-Konfiguration) | API-Kommunikation mit ONTAP 
-
-
-| TCP | 35000 - 55000  a| 
-SVM-Daten LIF IP-Adressen
-| Benutzeraktivitätsagent | Kommunikation von ONTAP an den Benutzeraktivitätsagenten für Fpolicy-Ereignisse. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet werden, damit ONTAP Ereignisse an ihn senden kann, einschließlich etwaiger Firewall-Anforderungen auf dem Benutzeraktivitätsagenten selbst (falls vorhanden). + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie hierfür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von 100 Ports zu beginnen und diese bei Bedarf zu erhöhen. 
-
-
-| TCP | 35000-55000 | Cluster-Verwaltungs-IP | Benutzeraktivitätsagent | Kommunikation von der ONTAP Clusterverwaltungs-IP zum Benutzeraktivitätsagenten für *EMS-Ereignisse*. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet werden, damit ONTAP EMS-Ereignisse an ihn senden kann, einschließlich etwaiger Firewall-Anforderungen auf dem Benutzeraktivitätsagenten selbst. + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie hierfür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von 100 Ports zu beginnen und diese bei Bedarf zu erhöhen. 
-
-
-| SSH | 22 | Benutzeraktivitätsagent | Clusterverwaltung | Wird für die CIFS/SMB-Benutzerblockierung benötigt. 
-|===
-
-
-== Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten
-
-Stellen Sie sicher, dass Sie die folgenden Kriterien erfüllt haben: link:#system-requirements["Systemanforderungen"] für den Benutzeraktivitätsagenten. Stellen Sie sicher, dass Ihre Konfiguration den unterstützten Cloud-Anbietern und Regionen entspricht.
-
-**Unterstützung durch Cloud-Anbieter**
-
-Verdächtige Benutzeraktivitätsdaten können in AWS und Azure in den folgenden Regionen gespeichert werden:
-
-|===
-| Cloud-Anbieter | Region 
-
-
-| AWS  a| 
-* Asien-Pazifik (Sydney) (ap-southeast-2)
-* Europa (Frankfurt) (eu-central-1)
-* US Ost (Nord-Virginia) (us-east-1)
-
-
-
-
-| Azurblau | Ostküste der USA 
-|===
-
-
-=== Hinzufügen eines Benutzeraktivitätsagenten
-
-Benutzeraktivitätsagenten sind ausführbare Umgebungen für Datensammler. Datensammler geben Benutzeraktivitätsereignisse an Ransomware Resilience weiter. Sie müssen mindestens einen Benutzeraktivitäts-Agenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
+Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"]; Datensammler teilen Benutzeraktivitätsereignisse mit Ransomware Resilience. Sie müssen mindestens einen Benutzeraktivitätsagenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
 
 .Schritte
 . Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
@@ -234,11 +63,11 @@ image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivität
 
 . Wählen Sie **Weiter**.
 . Überprüfen Sie Ihre Einstellungen. Wählen Sie *Aktivieren*, um das Hinzufügen des Benutzeraktivitätsagenten abzuschließen.
-. Bestätigen Sie, dass der Benutzeraktivitäts-Agent erfolgreich erstellt wurde. In der Kachel „Benutzeraktivität“ wird eine erfolgreiche Bereitstellung als „Wird ausgeführt“ angezeigt.
+. Bestätigen Sie, dass der Benutzeraktivitätsagent erfolgreich erstellt wurde. In der Kachel „Benutzeraktivität“ wird eine erfolgreiche Bereitstellung als **Wird ausgeführt** angezeigt.
 
 
 .Ergebnis
-Nachdem der Benutzeraktivitäts-Agent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann in der Kachel „Benutzeraktivität“ **Verwalten** aus. Wählen Sie die Registerkarte **Benutzeraktivitätsagent** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichniskonnektoren.
+Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann **Verwalten** im Bereich Benutzeraktivität. Wählen Sie den Tab **Benutzeraktivitätsagenten** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichnis-Konnektoren.
 
 
 
@@ -252,7 +81,7 @@ image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellunge
 
 
 
-=== Hinzufügen eines Benutzerverzeichnis-Connectors
+== Erstellen Sie einen Benutzerverzeichnis-Connector
 
 Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-Connector erstellen.
 
@@ -318,11 +147,11 @@ Geben Sie die Details zur Attributzuordnung an:
 . Suchen Sie die Kachel „Benutzeraktivität“ und wählen Sie **Verwalten** aus.
 . Wählen Sie die Registerkarte **Benutzerverzeichnis-Connector**.
 . Identifizieren Sie den Benutzerverzeichnis-Connector, den Sie löschen möchten. Wählen Sie im Aktionsmenü am Ende der Zeile die drei Punkte aus `...` dann **Löschen**.
-. Wählen Sie im Popup-Dialogfeld **Löschen** aus, um Ihre Aktionen zu bestätigen.
+. Wählen Sie im Popup-Dialogfeld **Löschen** aus, um zu bestätigen.
 
 
 
 
 == Reagieren Sie auf Warnungen zu verdächtigen Benutzeraktivitäten
 
-Nachdem Sie die Erkennung verdächtiger Benutzeraktivitäten konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie böswillige Aktivitäten und anomales Benutzerverhalten"] .
+Nachdem Sie die Erkennung verdächtiger Benutzeraktivitäten konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie bösartige Aktivitäten und verdächtiges Nutzerverhalten"].
