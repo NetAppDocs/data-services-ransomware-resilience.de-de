@@ -55,7 +55,14 @@ Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie z
 ** **Name des Benutzeraktivitätsagenten**
 ** *Konsolenagent* - Der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.
 ** *VM-DNS-Name oder IP-Adresse*
-** *VM-SSH-Schlüssel*
+** *VM SSH Key* - Geben Sie den SSH-Schlüssel in diesem Format ein:
++
+[code]
+----
+-----BEGIN OPENSSH PRIVATE KEY-----
+private-key-contents
+-----END OPENSSH PRIVATE KEY-----
+----
 +
 image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivitätsagenten hinzufügen."]
 
