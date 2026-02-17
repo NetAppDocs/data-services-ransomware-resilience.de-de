@@ -184,7 +184,10 @@ Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Da
 | Umfeld | Protokoll | Unterstützte Versionen 
 
 
-| Amazon FSx for NetApp ONTAP* | NFS, CIFS und SAN | k. A. 
+| Amazon FSx for NetApp ONTAP* | CIFS, NFS und SAN | k. A. 
+
+
+| Azure NetApp Files | CIFS & NFS | k. A. 
 
 
 .2+| Cloud Volumes ONTAP für AWS | CIFS & NFS | 9.11.1 und später 

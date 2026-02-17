@@ -171,8 +171,15 @@ Wenn Sie die Erkennung verdächtiger Benutzer zum Anzeigen anomalen Benutzerverh
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
 . Wählen Sie eine Warnung aus.
 . Überprüfen Sie die Vorfälle in der Warnung.
-. Um einen verdächtigen Benutzer in Ihrer Umgebung zu blockieren, wählen Sie unter dem Namen des Benutzers *Blockieren* aus.
++
+.. Um einen verdächtigen Benutzer in Ihrer Umgebung zu blockieren, wählen Sie *Block* neben dem Namen des Benutzers aus.
+.. Um Benachrichtigungen für einen Benutzer zu deaktivieren, der Gegenstand einer nachweislich falschen Benachrichtigung ist, wählen Sie die drei Punkte (`...` und anschließend **Diesen Benutzer von der Überwachung ausschließen**. Überprüfen Sie den Dialog und wählen Sie dann **Ausschließen** zur Bestätigung.
 
+
+
+
+
+TIP: Um Benachrichtigungen für einen Benutzer wieder zu aktivieren, rufen Sie die Benachrichtigung auf. Wählen Sie die drei Punkte und dann **Diesen Benutzer in die Überwachung einbeziehen**. Sie können auch link:suspicious-user-activity.html#exclude-users-from-alerts["Benutzer ausschließen"] aus der Überwachung entfernen.
 
 
 

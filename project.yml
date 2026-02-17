@@ -41,6 +41,8 @@ sidebar:
     - title: Konfigurieren Sie Backups, Bedrohungserkennung und Angriffssimulationen
         in den Einstellungen
       url: "/rp-use-settings.html"
+    - title: SIEM konfigurieren
+      url: "/task-siem.html"
     - title: Benutzeraktivitätserkennung konfigurieren
       entries:
       - title: Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten

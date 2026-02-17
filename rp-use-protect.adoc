@@ -39,6 +39,9 @@ Derzeit können Snapshots nur auf lokalem ONTAP Speicher repliziert werden.
 
 
 
+NOTE: Wenn Sie Schutzstrategien für Amazon FSxN für ONTAP und Azure NetApp Files konfigurieren, konsultieren Sie link:rp-reference-limitations.html["die Einschränkungen für jeden Dienst"].
+
+
 TIP: Für eine verbesserte Verwaltung und Sicherung Ihres Datenbestands können Sielink:#create-a-protection-group["Gruppendateifreigaben"] um Datenmengen gemeinsam im Rahmen einer Strategie zu schützen.
 
 
@@ -57,7 +60,7 @@ Schutzinformationen dieser Dienste werden in Ransomware Resilience angezeigt.  M
 Wenn eine Ransomware-Erkennungsrichtlinie von Autonomous Ransomware Protection (ARP oder ARP/AI, je nach ONTAP Version) und FPolicy in ONTAP verwaltet wird, sind diese Workloads geschützt und werden weiterhin von ARP und FPolicy verwaltet.
 
 
-NOTE: Für Workloads in Amazon FSx for NetApp ONTAP sind keine Sicherungsziele verfügbar.  Führen Sie Sicherungsvorgänge mit dem FSx for ONTAP -Sicherungsdienst durch.  Sie legen Sicherungsrichtlinien für Workloads in FSx für ONTAP in AWS fest, nicht in Ransomware Resilience.  Die Sicherungsrichtlinien werden in Ransomware Resilience angezeigt und bleiben gegenüber AWS unverändert.
+NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP oder Azure NetApp Files nicht verfügbar. Führen Sie Backup-Vorgänge mit dem FSx for ONTAP-Backup-Service durch. Sie legen Backup-Richtlinien für Workloads in FSx for ONTAP in AWS fest, nicht in Ransomware Resilience. Die Backup-Richtlinien werden in Ransomware Resilience angezeigt und bleiben gegenüber AWS unverändert.
 
 
 
@@ -441,7 +444,13 @@ image:screen-protection.png["Strategieseite verwalten"]
 . Ransomware Resilience erkennt, ob aktive SnapCenter oder Backup- und Recovery-Richtlinien vorhanden sind.
 . Um Ihre vorhandenen Backup- und Recovery- oder SnapCenter -Richtlinien beizubehalten und nur eine _Erkennungs_richtlinie anzuwenden, lassen Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen** deaktiviert.
 . Um Details zu den SnapCenter -Richtlinien anzuzeigen, wählen Sie den *Abwärtspfeil*.
-. Wählen Sie die gewünschten Erkennungseinstellungen: *Verschlüsselungserkennung* *Erkennung verdächtigen Benutzerverhaltens* *Blockieren verdächtiger Dateierweiterungen*
+. Wählen Sie die gewünschten Erkennungseinstellungen aus:
++
+....
+*Encryption detection*
+*Suspicious user behavior detection*
+*Block suspicious file extensions*
+....
 . Wählen Sie **Weiter**.
 . Wenn Sie *Erkennung verdächtigen Nutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den User activity agent oder link:suspicious-user-activity.html#create-a-user-activity-agent["oder erstellen Sie ein"].
 +
@@ -522,7 +531,7 @@ TIP: Um weitere Details zu den Arbeitslasten anzuzeigen, scrollen Sie nach recht
 +
 image:screen-protection-groups-policy.png["Schutzgruppe hinzufügen – Seite „Richtlinie“"]
 
-. Wählen Sie die Richtlinie aus, die den Schutz für diese Gruppe regelt. Wählen Sie zur Bestätigung *Weiter*.
+. Wählen Sie die Richtlinie aus, um den Schutz für diese Gruppe zu steuern.
 . Wenn die Schutzstrategie die Replikation umfasst, überprüfen Sie die Replikationseinstellungen.
 +
 .. Um alle Snapshots am selben Zielort zu replizieren, aktivieren Sie **Für jede Arbeitslast das gleiche Ziel verwenden**. Wählen Sie im Abschnitt „Konsolenagent“ ein *Zielsystem* und eine *Zielspeicher-VM* für die Workloads aus. + Um andere Ziele zu verwenden, deaktivieren Sie dieses Kästchen. Überprüfen Sie alle Workloads unter jedem Console-Agenten und weisen Sie jedem Workload ein *Zielsystem* und eine *Zielspeicher-VM* zu. Wählen Sie **Weiter**.

@@ -150,11 +150,51 @@ Geben Sie die Details zur Attributzuordnung an:
 
 === Löschen eines Benutzerverzeichnis-Connectors
 
+.Schritte
 . Gehen Sie in Ransomware Resilience zu *Einstellungen*.
 . Suchen Sie die Kachel „Benutzeraktivität“ und wählen Sie **Verwalten** aus.
 . Wählen Sie die Registerkarte **Benutzerverzeichnis-Connector**.
 . Identifizieren Sie den Benutzerverzeichnis-Connector, den Sie löschen möchten. Wählen Sie im Aktionsmenü am Ende der Zeile die drei Punkte aus `...` dann **Löschen**.
 . Wählen Sie im Popup-Dialogfeld **Löschen** aus, um zu bestätigen.
+
+
+
+
+=== Benutzer von Warnmeldungen ausschließen
+
+Wenn es bestimmte vertrauenswürdige Benutzer gibt, deren Verhalten möglicherweise Warnmeldungen zum Benutzerverhalten auslöst, können Sie sie von Warnmeldungen ausschließen.
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.
+. Wählen Sie die Registerkarte **Excluded users** aus.
+. Um einzelne Benutzer in der Benutzeroberfläche zu überprüfen, wählen Sie **Manuell auswählen**. Um eine Liste ausgeschlossener Benutzer hochzuladen, wählen Sie **Hochladen**.
++
+.. Wenn Sie **Manuell auswählen** gewählt haben, aktivieren Sie das Kontrollkästchen neben den Namen der spezifischen Benutzer, die Sie ausschließen möchten.
+.. Wenn Sie **Hochladen** auswählen, müssen Sie zuerst eine CSV-Datei herunterladen, die die Liste aller Benutzer enthält. Wählen Sie **Herunterladen**, um auf die Liste zuzugreifen.
++
+Überprüfen Sie die CSV-Datei. Entfernen Sie die Namen aller Benutzer, für die Sie die Erkennung beibehalten möchten. Wenn die Liste nur noch die Namen der Benutzer enthält, die Sie von der Erkennung ausschließen möchten, speichern Sie sie. Wählen Sie **Hochladen** aus, um die Datei zu suchen und auszuwählen.
+
+
+
+. Wählen Sie **Hinzufügen** aus, um das Hinzufügen der Benutzer zur Ausschlussliste abzuschließen.
+. Auf der Registerkarte **Ausgeschlossene Benutzer** werden nun die Namen der Benutzer angezeigt, die aus den Warnmeldungen zur Benutzerverhaltenserkennung entfernt wurden.
+
+
+
+TIP: Sie können einen Benutzer auch direkt von einer Benachrichtigung ausschließen. Weitere Informationen finden Sie unter link:rp-use-alert.html["Auf Ransomware-Warnungen reagieren"].
+
+
+
+==== Benutzer aus der Liste der ausgeschlossenen Benutzer entfernen
+
+Sie können einen Benutzer anschließend wieder zur Erkennung hinzufügen.
+
+.Schritte
+. Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.
+. Wählen Sie die Registerkarte **Excluded users** aus.
+. Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Wählen Sie das Aktionsmenü (`...`) in der Zeile mit dem Benutzernamen und dann **Entfernen**.
+. Wählen Sie im Dialogfeld **Entfernen** aus, um zu bestätigen, dass Sie die ausgewählten Benutzer entfernen möchten.
 
 
 
