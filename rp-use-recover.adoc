@@ -14,8 +14,7 @@ summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die S
 [role="lead"]
 Nachdem Workloads als „Wiederherstellung erforderlich“ markiert wurden, empfiehlt NetApp Ransomware Resilience einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.
 
-* Wenn die Anwendung oder VM von SnapCenter verwaltet wird, stellt Ransomware Resilience die Anwendung oder VM mithilfe des anwendungskonsistenten oder VM-konsistenten Prozesses in ihren vorherigen Zustand und die letzte Transaktion zurück.  Bei der anwendungs- oder VM-konsistenten Wiederherstellung werden alle Daten, die nicht in den Speicher gelangt sind (z. B. Daten im Cache oder in einem E/A-Vorgang), den Daten im Volume hinzugefügt.
-* Wenn die Anwendung oder VM _nicht_ von SnapCenter , sondern von NetApp Backup and Recovery oder Ransomware Resilience verwaltet wird, führt Ransomware Resilience eine absturzkonsistente Wiederherstellung durch, bei der alle Daten, die sich zum gleichen Zeitpunkt auf dem Volume befanden, wiederhergestellt werden, beispielsweise wenn das System abgestürzt ist.
+* Wenn die Anwendung oder VM von NetApp Backup and Recovery oder Ransomware Resilience verwaltet wird, führt Ransomware Resilience eine absturzkonsistente Wiederherstellung durch, bei der alle Daten, die sich zum gleichen Zeitpunkt auf dem Volume befanden, wiederhergestellt werden, zum Beispiel wenn das System abgestürzt ist.
 +
 Sie können die Arbeitslast wiederherstellen, indem Sie alle Volumes, bestimmte Volumes oder bestimmte Dateien auswählen.
 
@@ -53,43 +52,7 @@ image:screen-recovery2.png["Wiederherstellungsseite"]
 
 
 
-== Wiederherstellen einer von SnapCenter verwalteten Arbeitslast
-
-Mithilfe von Ransomware Resilience kann der Speicheradministrator bestimmen, wie Workloads am besten vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt wiederhergestellt werden.
-
-Der Anwendungsstatus ändert sich, falls dies für die Wiederherstellung erforderlich ist.  Die Anwendung wird aus Steuerdateien in ihren vorherigen Zustand zurückversetzt, sofern diese in der Sicherung enthalten sind.  Nach Abschluss der Wiederherstellung wird die Anwendung im LESE-/SCHREIBMODUS geöffnet.
-
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
-
-.Schritte
-. Wählen Sie unter „Ransomware-Resilienz“ die Option „Wiederherstellung“ aus.
-. Überprüfen Sie die Arbeitslastinformationen auf der Seite *Wiederherstellung*.
-. Wählen Sie eine Arbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
-. Wählen Sie zum Wiederherstellen *Wiederherstellen*.
-. *Wiederherstellungsbereich*: Anwendungskonsistent (oder für SnapCenter für VMs ist der Wiederherstellungsbereich „Nach VM“)
-. *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.  Wählen Sie den Wiederherstellungspunkt aus, den Sie zum Wiederherstellen der Daten verwenden möchten.
-+
-
-TIP: Ransomware Resilience identifiziert den besten Wiederherstellungspunkt als die letzte Sicherung unmittelbar vor dem Vorfall und zeigt die Anzeige „Empfohlen“ an.
-
-. *Ziel*: Wählen Sie den Abwärtspfeil neben „Ziel“, um Details anzuzeigen.
-+
-.. Wählen Sie den ursprünglichen oder alternativen Speicherort aus.
-.. Wählen Sie das System aus.
-.. Wählen Sie die Speicher-VM aus.
-
-
-. Wenn am ursprünglichen Ziel nicht genügend Speicherplatz zum Wiederherstellen der Arbeitslast vorhanden ist, wird die Zeile „Temporärer Speicher“ angezeigt.  Sie können den temporären Speicher auswählen, um die Workload-Daten wiederherzustellen.  Die wiederhergestellten Daten werden vom temporären Speicher an den ursprünglichen Speicherort kopiert.  Klicken Sie in der Zeile „Temporärer Speicher“ auf den *Abwärtspfeil* und legen Sie den Zielcluster, die Speicher-VM und die lokale Ebene fest.
-. Wählen Sie *Speichern*.
-. Wählen Sie *Weiter*.
-. Überprüfen Sie Ihre Auswahl.
-. Wählen Sie *Wiederherstellen*.
-. Wählen Sie im oberen Menü „Wiederherstellung“ aus, um die Arbeitslast auf der Wiederherstellungsseite zu überprüfen, auf der der Status des Vorgangs durch die Zustände wechselt.
-
-
-
-
-== Wiederherstellen einer Arbeitslast, die nicht von SnapCenter verwaltet wird
+== Stellen Sie eine Arbeitslast wieder her
 
 Mithilfe von Ransomware Resilience kann der Speicheradministrator bestimmen, wie Workloads am besten vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt wiederhergestellt werden.
 

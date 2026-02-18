@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: task-protection-group 
+keywords: ransomware protection, protection group, modify, create, 
+summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einem Workload in NetApp Ransomware Resilience Richtlinien zuweisen. 
+---
+= Schutzgruppen in NetApp Ransomware Resilience verwalten
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience bietet Schutzgruppen zur einfacheren Verwaltung Ihrer Datenbestände. Schutzgruppen sind logische Gruppierungen von Workloads. Ransomware Resilience kann alle Volumes in einer Schutzgruppe gleichzeitig mit einer einzigen Datensicherungsstrategie schützen, sodass Sie keine Strategie für jeden Workload einzeln anwenden müssen.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+
+
+
+== Erstellen einer Schutzgruppe
+
+Sie können Gruppen unabhängig von ihrem Schutzstatus erstellen (d. h. Gruppen, die nicht geschützt sind, und Gruppen, die geschützt sind). Wenn Sie einer Schutzgruppe eine Datensicherungsstrategie hinzufügen, ersetzt die neue Datensicherungsstrategie alle vorhandenen Richtlinien, einschließlich der von NetApp Backup and Recovery verwalteten Richtlinien.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
++
+image:screen-protection.png["Strategieseite verwalten"]
+
+. Wählen Sie im Protection-Dashboard die Registerkarte *Protection groups* aus.
++
+image:screen-protection-groups.png["Seite „Schutzgruppen“"]
+
+. Wählen Sie *Hinzufügen*.
++
+image:screen-protection-groups-add.png["Seite „Schutzgruppe hinzufügen“"]
+
+. Geben Sie einen Namen für die Schutzgruppe ein.
+. Wählen Sie die Workloads aus, die der Gruppe hinzugefügt werden sollen.
++
+
+TIP: Um weitere Details zu den Arbeitslasten anzuzeigen, scrollen Sie nach rechts.
+
+. Wählen Sie *Weiter*.
++
+image:screen-protection-groups-policy.png["Schutzgruppe hinzufügen – Seite „Richtlinie“"]
+
+. Wählen Sie eine Datensicherungsstrategie für die Gruppe.
+. Wenn die Schutzstrategie die Replikation umfasst, überprüfen Sie die Replikationseinstellungen.
++
+.. Um alle Snapshots am selben Zielort zu replizieren, aktivieren Sie **Für jede Arbeitslast das gleiche Ziel verwenden**. Wählen Sie im Abschnitt „Konsolenagent“ ein *Zielsystem* und eine *Zielspeicher-VM* für die Workloads aus. + Um andere Ziele zu verwenden, deaktivieren Sie dieses Kästchen. Überprüfen Sie alle Workloads unter jedem Console-Agenten und weisen Sie jedem Workload ein *Zielsystem* und eine *Zielspeicher-VM* zu. Wählen Sie **Weiter**.
+
+
+. Um eine Sicherungsrichtlinie zu konfigurieren, wählen Sie eine aus und klicken Sie dann auf **Weiter**.
+. Wenn Ihre Erkennungsrichtlinie die Erkennung des Benutzerverhaltens umfasst, wählen Sie den Datensammler aus, den Sie verwenden möchten, und klicken Sie dann auf **Weiter**.
+. Überprüfen Sie die Auswahl für die Schutzgruppe.
+. Um die Schutzgruppe abzuschließen, wählen Sie *Add*.
+
+
+
+
+=== Gruppenschutz bearbeiten
+
+Sie können die Erkennungsrichtlinie für eine vorhandene Gruppe ändern.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
+. Wählen Sie auf der Seite „Schutz“ die Registerkarte *Schutzgruppen* und dann die Gruppe aus, deren Richtlinie Sie ändern möchten.
+. Wählen Sie auf der Übersichtsseite der Schutzgruppe *Schutz bearbeiten* aus.
+. Wählen Sie eine vorhandene Datensicherungsstrategie aus, die Sie anwenden möchten, oder wählen Sie **Hinzufügen**, um eine neue Datensicherungsstrategie zu erstellen. Weitere Informationen zum Hinzufügen einer Datensicherungsstrategie finden Sie unter link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erstellen einer Schutzrichtlinie"]. Wählen Sie anschließend **Speichern** aus.
+. Wählen Sie in der Übersicht der Sicherungsziele ein vorhandenes Sicherungsziel aus oder **fügen Sie ein neues Sicherungsziel hinzu**.
+. Wählen Sie **Weiter** aus, um Ihre Änderungen zu überprüfen.
+
+
+
+
+== Workloads aus einer Datensicherungsgruppe entfernen
+
+Möglicherweise müssen Sie später Workloads aus einer bestehenden Datensicherungsgruppe entfernen.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
+. Wählen Sie auf der Seite „Schutz“ die Registerkarte „Schutzgruppen“ aus.
+. Wählen Sie die Gruppe aus, aus der Sie eine oder mehrere Workloads entfernen möchten.
++
+image:screen-protection-groups-more-workloads.png["Seite mit Details zur Schutzgruppe"]
+
+. Wählen Sie auf der Seite der Schutzgruppe die Workload aus, die Sie aus der Gruppe entfernen möchten, und wählen Sie die Option *Aktionen* image:screenshot_horizontal_more_button.gif["Schaltfläche „Aktionen“"].
+. Wählen Sie im Menü „Aktionen“ die Option „Arbeitslast entfernen“ aus.
+. Bestätigen Sie, dass Sie die Arbeitslast entfernen möchten, und wählen Sie *Entfernen*.
+
+
+
+
+== Eine Schutzgruppe löschen
+
+Wenn Sie eine Schutzgruppe löschen, entfernt Ransomware Resilience die Gruppe und die Datensicherungsstrategie von den Workloads. Es werden nicht die einzelnen Workloads gelöscht.
+
+.Schritte
+. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
+. Wählen Sie auf der Seite „Schutz“ die Registerkarte „Schutzgruppen“ aus.
+. Wählen Sie die Gruppe aus, aus der Sie eine oder mehrere Workloads entfernen möchten.
++
+image:screen-protection-groups-more-workloads.png["Seite mit Details zur Schutzgruppe"]
+
+. Wählen Sie auf der Seite mit der ausgewählten Schutzgruppe oben rechts *Schutzgruppe löschen* aus.
+. Bestätigen Sie, dass Sie die Gruppe löschen möchten, und wählen Sie *Löschen*.
+

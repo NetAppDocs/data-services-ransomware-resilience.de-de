@@ -59,6 +59,8 @@ sidebar:
       entries:
       - title: Schützen Sie Workloads mit Strategien zum Schutz vor Ransomware
         url: "/rp-use-protect.html"
+      - title: Schutzgruppen verwalten
+        url: "/task-protection-group.html"
       - title: Scannen nach personenbezogenen Daten
         url: "/rp-use-protect-classify.html"
     - title: Auf eine erkannte Warnung reagieren

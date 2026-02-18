@@ -62,9 +62,9 @@ Ja, Ransomware Resilience erkennt in ONTAP festgelegte Snapshot-Zeitpläne.
 .Wie interagiert Ransomware Resilience mit NetApp Backup and Recovery und SnapCenter?
 Ransomware Resilience arbeitet mit Backup und Recovery zusammen, um Snapshot- und Backup-Richtlinien für Dateifreigabe-Workloads zu ermitteln und festzulegen.
 
-Ransomware Resilience arbeitet mit SnapCenter oder SnapCenter für VMware zusammen, um Snapshot- und Backup-Richtlinien für Anwendungs- und VM-Workloads zu ermitteln und festzulegen.
+Ransomware Resilience arbeitet mit SnapCenter oder SnapCenter for VMware zusammen, um Snapshot- und Backup-Richtlinien für Anwendungs- und VM-Workloads zu ermitteln und festzulegen. Derzeit können Sie Ransomware Resilience nicht für die Wiederherstellung mit SnapCenter verwenden.
 
-Ransomware Resilience arbeitet außerdem mit Backup and Recovery und SnapCenter (einschließlich SnapCenter für VMware) zusammen, um eine datei- und workloadkonsistente Wiederherstellung durchzuführen.
+Ransomware Resilience arbeitet außerdem mit Backup and Recovery zusammen, um eine datei- und workload-konsistente Wiederherstellung durchzuführen.
 
 Für Lizenzierung und Abrechnung kann Ransomware Resilience auch dann in Backup and Recovery integriert werden, wenn Sie keine separate Lizenz für Backup and Recovery besitzen. Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resilience verfügen, werden alle gemeinsamen Daten, die durch beide Produkte geschützt werden, nur über Ransomware Resilience abgerechnet.
 
@@ -85,7 +85,7 @@ link:rp-use-protect.html["Informieren Sie sich über die Priorität oder Wichtig
 .Welche Workloads werden von Ransomware Resilience unterstützt?
 Ransomware Resilience kann die folgenden Workloads identifizieren: Oracle, Dateifreigaben, Blockspeicher, VMs und VM-Datenspeicher.
 
-Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden alle von diesen Produkten unterstützten Workloads auch in Ransomware Resilience identifiziert. Ransomware Resilience kann SnapCenter und SnapCenter -Workloads auf eine workloadkonsistente Weise schützen und wiederherstellen.
+Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden alle von diesen Produkten unterstützten Workloads auch in Ransomware Resilience identifiziert.
 
 .Wie ordnet man Daten einer Arbeitslast zu?
 Ransomware Resilience erkennt die Volumes und die Dateierweiterungen und ordnet sie der entsprechenden Arbeitslast zu.

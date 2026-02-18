@@ -97,9 +97,6 @@ Hier ist eine Auswahl der Empfehlungen von Ransomware Resilience.
 | Stellen Sie eine Verbindung zu SIEM her, um Bedrohungen zu melden. | Senden Sie Daten zur Bedrohungsanalyse und -erkennung an ein Sicherheits- und Ereignismanagementsystem (SIEM). | Geben Sie die SIEM/XDR-Serverdetails ein, um die Bedrohungserkennung zu aktivieren. Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Schutzeinstellungen"] . 
 
 
-| Aktivieren Sie Workload-konsistenten Schutz für Anwendungen oder VMware. | Diese Workloads werden nicht von der SnapCenter -Software oder dem SnapCenter Plug-in for VMware vSphere verwaltet. | Aktivieren Sie den Workload-konsistenten Schutz, damit sie von SnapCenter verwaltet werden. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Ihre Workload vor Ransomware-Angriffen"] . 
-
-
 | Verbessern Sie die Sicherheitslage des Systems | NetApp Digital Advisor hat mindestens ein hohes oder kritisches Sicherheitsrisiko identifiziert. | Überprüfen Sie alle Sicherheitsrisiken im NetApp Digital Advisor. Siehe https://docs.netapp.com/us-en/active-iq/index.html["Digital Advisor -Dokumentation"^] . 
 
 
@@ -112,13 +109,7 @@ Hier ist eine Auswahl der Empfehlungen von Ransomware Resilience.
 | Schützen Sie kritische oder sehr wichtige Anwendungs-Workloads vor Ransomware. | Auf der Seite „Schützen“ werden kritische oder sehr wichtige (je nach zugewiesener Prioritätsstufe) Anwendungs-Workloads angezeigt, die nicht geschützt sind. | Weisen Sie diesen Workloads eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
 
 
-| Schützen Sie kritische oder sehr wichtige Dateifreigabe-Workloads vor Ransomware. | Auf der Seite „Schutz“ werden kritische oder sehr wichtige Workloads vom Typ „Dateifreigabe“ oder „Datenspeicher“ angezeigt, die nicht geschützt sind. | Weisen Sie jeder Arbeitslast eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
-
-
-| Verfügbares SnapCenter Plugin für VMware vSphere (SCV) mit der Konsole registrieren | Eine VM-Workload ist nicht geschützt. | Weisen Sie der VM-Workload VM-konsistenten Schutz zu, indem Sie das SnapCenter -Plugin für VMware vSphere aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
-
-
-| Verfügbaren SnapCenter -Server mit der Konsole registrieren | Eine Anwendung ist nicht geschützt. | Weisen Sie der Arbeitslast anwendungskonsistenten Schutz zu, indem Sie SnapCenter Server aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+| Schützen Sie kritische oder sehr wichtige Dateifreigabe-Workloads vor Ransomware. | Auf der Seite „Schutz“ werden kritische oder sehr wichtige Workloads vom Typ „Dateifreigabe“ oder „Datenspeicher“ angezeigt, die nicht geschützt sind. | Weisen Sie jedem Workload eine Richtlinie zu. Siehe link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"]. Siehe link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"]. Siehe link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"]. 
 
 
 | Überprüfen Sie neue Warnungen. | Es liegen neue Warnungen vor. | Überprüfen Sie die neuen Warnungen. Weitere Informationen finden Sie unter link:rp-use-alert.html["Reagieren Sie auf eine erkannte Ransomware-Warnung"] . 

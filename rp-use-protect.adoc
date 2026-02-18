@@ -42,20 +42,17 @@ Derzeit können Snapshots nur auf lokalem ONTAP Speicher repliziert werden.
 NOTE: Wenn Sie Schutzstrategien für Amazon FSxN für ONTAP und Azure NetApp Files konfigurieren, konsultieren Sie link:rp-reference-limitations.html["die Einschränkungen für jeden Dienst"].
 
 
-TIP: Für eine verbesserte Verwaltung und Sicherung Ihres Datenbestands können Sielink:#create-a-protection-group["Gruppendateifreigaben"] um Datenmengen gemeinsam im Rahmen einer Strategie zu schützen.
+TIP: Für eine verbesserte Verwaltung und einen besseren Schutz Ihrer Datenbestände können Sie link:task-protection-group.html["Gruppen-Workloads"] erstellen, um Volumes gemeinsam unter einer Strategie zu schützen.
 
 
 
 === Schutzrichtlinien mit anderen von NetApp verwalteten Diensten
 
-Über Ransomware Resilience hinaus können die folgenden Dienste zur Verwaltung des Schutzes verwendet werden:
+Neben Ransomware Resilience können Sie NetApp Backup and Recovery verwenden, um den Schutz für Dateifreigaben und VM-Dateifreigaben zu verwalten.
 
-* NetApp Backup and Recovery für Dateifreigaben, VM-Dateifreigaben
-* SnapCenter für VMware für VM-Datenspeicher
-* SnapCenter für Oracle
+Schutzinformationen von Backup & Recovery Services werden in Ransomware Resilience angezeigt. Sie können diesen Services mit Ransomware Resilience Erkennungsrichtlinien hinzufügen. Das Hinzufügen einer Datensicherungsstrategie mit Ransomware Resilience ersetzt die bestehenden Datensicherungsstrategien.
 
-
-Schutzinformationen dieser Dienste werden in Ransomware Resilience angezeigt.  Mit Ransomware Resilience können Sie diesen Diensten Erkennungsrichtlinien hinzufügen.  Das Hinzufügen einer Schutzrichtlinie mit Ransomware Resilience ersetzt die vorhandenen Schutzrichtlinien.
+Ransomware Resilience erkennt außerdem Datensicherungsstrategien von SnapCenter for VMware für VM-Datenspeicher und SnapCenter for Oracle. Sie können diese Dienste nicht zur Wiederherstellung mit Ransomware Resilience verwenden.
 
 Wenn eine Ransomware-Erkennungsrichtlinie von Autonomous Ransomware Protection (ARP oder ARP/AI, je nach ONTAP Version) und FPolicy in ONTAP verwaltet wird, sind diese Workloads geschützt und werden weiterhin von ARP und FPolicy verwaltet.
 
@@ -66,7 +63,7 @@ NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP oder Azure
 
 === Schutzrichtlinien für Workloads, die nicht durch NetApp -Anwendungen geschützt sind
 
-Wenn Ihre Arbeitslast nicht von Backup and Recovery, Ransomware Resilience, SnapCenter oder SnapCenter Plug-in for VMware vSphere verwaltet wird, werden möglicherweise Snapshots als Teil von ONTAP oder anderen Produkten erstellt.  Wenn der ONTAP FPolicy-Schutz vorhanden ist, können Sie den FPolicy-Schutz mit ONTAP ändern.
+Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience verwaltet wird, wurden möglicherweise Snapshots im Rahmen von ONTAP oder anderen Produkten erstellt. Wenn ONTAP FPolicy-Schutz aktiviert ist, können Sie den FPolicy-Schutz mit ONTAP ändern.
 
 
 
@@ -95,7 +92,7 @@ image:screen-protection.png["Schutzseite"]
 
 
 
-NOTE: Sehenlink:#add-a-ransomware-protection-strategy["Fügen Sie eine Ransomware-Schutzstrategie hinzu"] um mehr über die Verwendung von Ransomware Resilience zu erfahren, wenn eine bestehende Schutzrichtlinie mit SnapCenter oder Backup and Recovery vorhanden ist.
+NOTE: Siehe link:#add-a-ransomware-protection-strategy["Fügen Sie eine Ransomware-Schutzstrategie hinzu"] , um mehr über die Verwendung von Ransomware Resilience bei einer bestehenden Datensicherungsstrategie mit Backup and Recovery zu erfahren.
 
 
 
@@ -130,7 +127,7 @@ NOTE: Verdächtige Benutzeraktivitäten und Aktivitäten im Zusammenhang mit FPo
 
 *Replikationsziel*: Wenn Sie die Snapshot-Replikation konfiguriert haben, werden die Namen der Ziel-Speicher-VMs und -Systeme aufgelistet. Wenn keine Replikation vorliegt, wird in diesem Feld „Keine“ angezeigt.
 
-*Snapshot- und Backup-Richtlinien*: Diese Spalte zeigt die auf die Arbeitslast angewendeten Snapshot- und Backup-Richtlinien und das Produkt oder den Dienst, das bzw. der diese Richtlinien verwaltet.
+*Snapshot-, Replikations- und Backup-Richtlinien*: Diese Spalte zeigt die auf die Workload angewendeten Snapshot- und Backup-Richtlinien sowie das Produkt oder den Service, das diese Richtlinien verwaltet.
 
 * Verwaltet von SnapCenter
 * Verwaltet durch SnapCenter Plug-in for VMware vSphere
@@ -138,6 +135,9 @@ NOTE: Verdächtige Benutzeraktivitäten und Aktivitäten im Zusammenhang mit FPo
 * Name der Ransomware-Schutzrichtlinie, die Snapshots und Backups regelt
 * Keine
 
+
+
+NOTE: Sie können die Wiederherstellung in Ransomware Resilience für keine SnapCenter Richtlinien verwalten.
 
 *Arbeitsbelastungsbedeutung*
 
@@ -285,37 +285,6 @@ Alle 30 Tage
 |===
 
 
-== Aktivieren Sie anwendungs- oder VM-konsistenten Schutz mit SnapCenter
-
-Durch die Aktivierung des anwendungs- oder VM-konsistenten Schutzes können Sie Ihre Anwendungs- oder VM-Workloads auf konsistente Weise schützen und einen ruhigen und konsistenten Zustand erreichen, um einen möglichen späteren Datenverlust zu vermeiden, falls eine Wiederherstellung erforderlich ist.
-
-Dieser Prozess leitet die Registrierung des SnapCenter Software Servers für Anwendungen oder des SnapCenter Plug-in for VMware vSphere für VMs mit Backup und Recovery ein.
-
-Nachdem Sie den Workload-konsistenten Schutz aktiviert haben, können Sie Schutzstrategien in Ransomware Resilience verwalten.  Die Schutzstrategie umfasst die an anderer Stelle verwalteten Snapshot- und Backup-Richtlinien sowie eine in Ransomware Resilience verwaltete Ransomware-Erkennungsrichtlinie.
-
-Informationen zum Registrieren von SnapCenter oder SnapCenter Plug-in for VMware vSphere mithilfe von Backup und Recovery finden Sie in den folgenden Informationen:
-
-* https://docs.netapp.com/us-en/data-services-backup-recovery/task-register-snapcenter-server.html["Registrieren der SnapCenter Server-Software"^]
-* https://docs.netapp.com/us-en/data-services-backup-recovery/task-register-snapCenter-plug-in-for-vmware-vsphere.html["Registrieren Sie das SnapCenter Plug-in for VMware vSphere"^]
-
-
-.Schritte
-. Wählen Sie im Menü „Ransomware Resilience“ die Option „Dashboard“ aus.
-. Suchen Sie im Bereich „Empfehlungen“ eine der folgenden Empfehlungen und wählen Sie „Überprüfen und beheben“ aus:
-+
-** Verfügbaren SnapCenter Server mit der NetApp Console registrieren
-** Verfügbares SnapCenter Plug-in for VMware vSphere (SCV) mit der NetApp Console registrieren
-
-
-. Befolgen Sie die Informationen, um das SnapCenter oder SnapCenter Plug-in for VMware vSphere Host mithilfe von Backup und Recovery zu registrieren.
-. Zurück zur Ransomware-Resilienz.
-. Navigieren Sie von Ransomware Resilience zum Dashboard und starten Sie den Erkennungsprozess erneut.
-. Wählen Sie unter „Ransomware-Resilienz“ *Schutz* aus, um die Seite „Schutz“ anzuzeigen.
-. Überprüfen Sie die Details in der Spalte „Snapshot- und Sicherungsrichtlinien“ auf der Seite „Schutz“, um sicherzustellen, dass die Richtlinien an anderer Stelle verwaltet werden.
-
-
-
-
 == Fügen Sie eine Ransomware-Schutzstrategie hinzu
 
 Es gibt drei Ansätze zum Hinzufügen einer Ransomware-Schutzstrategie:
@@ -330,7 +299,7 @@ Die Ransomware-Schutzstrategie umfasst:
 ** Sicherungsrichtlinie
 
 
-* **Ersetzen Sie die vorhandenen Snapshot- oder Backup-Richtlinien von SnapCenter oder Backup and Recovery Protection durch Schutzstrategien, die von Ransomware Resilience verwaltet werden.**
+* **Ersetzen Sie die bestehenden Snapshot- oder Backup-Richtlinien von Backup and Recovery protection durch Datensicherungsstrategien, die von Ransomware Resilience verwaltet werden.**
 +
 Die Ransomware-Schutzstrategie umfasst:
 
@@ -425,15 +394,15 @@ TIP: Um die Sicherungssperre auf dem sekundären Speicher zu aktivieren, konfigu
 
 
 
-=== Fügen Sie Workloads mit vorhandenen Snapshot- und Backup-Richtlinien, die von SnapCenter oder Backup and Recovery verwaltet werden, eine Erkennungsrichtlinie hinzu
+=== Fügen Sie eine Erkennungsrichtlinie zu Workloads mit vorhandenen Snapshot- und Backup-Richtlinien hinzu, die von Backup and Recovery verwaltet werden
 
-Mit Ransomware Resilience können Sie Workloads mit vorhandenem Snapshot- und Backup-Schutz, der in anderen NetApp -Produkten oder -Services verwaltet wird, entweder eine Erkennungsrichtlinie oder eine Schutzrichtlinie zuweisen.  Andere Dienste wie Backup and Recovery und SnapCenter verwenden Richtlinien, die Snapshots, die Replikation auf sekundären Speicher oder Backups auf Objektspeicher regeln.
+Ransomware Resilience ermöglicht es Ihnen, entweder eine Erkennungsrichtlinie oder eine Datensicherungsstrategie auf Workloads mit bestehendem Snapshot- und Backup-Schutz, der in anderen NetApp Produkten oder Diensten verwaltet wird, anzuwenden. Backup and Recovery verwendet Richtlinien, die Snapshots, die Replikation auf Sekundärspeicher oder Backups auf Objektspeicher steuern.
 
 
 
 ==== Hinzufügen einer Erkennungsrichtlinie zu Workloads mit vorhandenen Sicherungs- oder Snapshot-Richtlinien
 
-Wenn Sie über vorhandene Snapshot- oder Backup-Richtlinien mit Backup and Recovery oder SnapCenter verfügen, können Sie eine Richtlinie zum Erkennen von Ransomware-Angriffen hinzufügen.  Informationen zum Verwalten von Schutz und Erkennung mit Ransomware Resilience finden Sie unter<<protection,Schutz durch Ransomware-Resilienz>> .
+Wenn Sie bereits Snapshot- oder Backup-Richtlinien mit Backup and Recovery verwenden, können Sie eine Richtlinie zum Erkennen von Ransomware-Angriffen hinzufügen. Um Schutz und Erkennung mit Ransomware Resilience zu verwalten, siehe <<protection,Schutz durch Ransomware-Resilienz>>.
 
 .Schritte
 . Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
@@ -441,9 +410,8 @@ Wenn Sie über vorhandene Snapshot- oder Backup-Richtlinien mit Backup and Recov
 image:screen-protection.png["Strategieseite verwalten"]
 
 . Wählen Sie auf der Seite „Schutz“ eine Arbeitslast aus und wählen Sie dann *Schützen*.
-. Ransomware Resilience erkennt, ob aktive SnapCenter oder Backup- und Recovery-Richtlinien vorhanden sind.
-. Um Ihre vorhandenen Backup- und Recovery- oder SnapCenter -Richtlinien beizubehalten und nur eine _Erkennungs_richtlinie anzuwenden, lassen Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen** deaktiviert.
-. Um Details zu den SnapCenter -Richtlinien anzuzeigen, wählen Sie den *Abwärtspfeil*.
+. Ransomware Resilience erkennt, ob bereits aktive Backup and Recovery policies vorhanden sind.
+. Um Ihre bestehende Backup and Recovery beizubehalten und nur eine _detection_ policy anzuwenden, lassen Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen** deaktiviert.
 . Wählen Sie die gewünschten Erkennungseinstellungen aus:
 +
 ....
@@ -473,7 +441,7 @@ Sie können Ihre vorhandenen Backup- oder Snapshot-Richtlinien durch eine Ransom
 image:screen-protection.png["Strategieseite verwalten"]
 
 . Wählen Sie auf der Seite „Schutz“ eine Arbeitslast aus und wählen Sie dann *Schützen*.
-. Ransomware Resilience erkennt, ob aktive Backup- und Recovery- oder SnapCenter -Richtlinien vorhanden sind.  Um die vorhandenen Backup- und Recovery- oder SnapCenter -Richtlinien zu ersetzen, aktivieren Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen**.  Wenn Sie das Kontrollkästchen aktivieren, ersetzt Ransomware Resilience die Liste der Erkennungsrichtlinien durch Erkennungsrichtlinien.
+. Ransomware Resilience erkennt, ob bereits aktive Backup and Recovery policies vorhanden sind. Um die vorhandenen policies zu ersetzen, aktivieren Sie das Kontrollkästchen **Replace existing policies**. Wenn Sie das Kontrollkästchen aktivieren, ersetzt Ransomware Resilience die Liste der detection policies durch detection policies.
 . Wählen Sie eine Schutzrichtlinie.  Wenn keine Schutzrichtlinie vorhanden ist, wählen Sie **Hinzufügen**, um eine neue Richtlinie zu erstellen.  Informationen zum Erstellen einer Richtlinie finden Sie unter<<steps,Erstellen einer Schutzrichtlinie>> . Wählen Sie **Weiter**.
 . Wenn Ihre Strategie die Replikation beinhaltet, wählen Sie das **Zielsystem** und die **Zielspeicher-VM** aus. Wählen Sie **Weiter**.
 . Wählen Sie ein Sicherungsziel aus oder erstellen Sie ein neues. Wählen Sie **Weiter**.
@@ -494,103 +462,10 @@ Sie können die bestehende Richtlinie durch eine andere ersetzen.
 .Schritte
 . Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
 . Wählen Sie auf der Seite „Schutz“ in der Workload-Zeile die Option „Schutz bearbeiten“ aus.
-. Wenn für die Arbeitslast eine vorhandene Backup- und Wiederherstellungs- oder SnapCenter -Richtlinie vorhanden ist, die Sie beibehalten möchten, deaktivieren Sie **Vorhandene Richtlinien ersetzen**.  Um die vorhandenen Richtlinien zu ersetzen, aktivieren Sie **Vorhandene Richtlinien ersetzen**.
+. Wenn für die Arbeitslast bereits eine Backup and Recovery-Strategie existiert, die Sie beibehalten möchten, deaktivieren Sie **Replace existing policies**. Um die vorhandenen Strategien zu ersetzen, aktivieren Sie **Replace existing policies**.
 . Wählen Sie auf der Seite „Richtlinien“ den Abwärtspfeil für die Richtlinie aus, die Sie zuweisen möchten, um die Details zu überprüfen.
 . Wählen Sie die Richtlinie aus, die Sie zuweisen möchten.
 . Wählen Sie *Schützen*, um die Änderung abzuschließen.
-
-
-
-
-== Erstellen einer Schutzgruppe
-
-Durch die Gruppierung von Dateifreigaben in einer Schutzgruppe können Sie Ihren Datenbestand leichter schützen.  Ransomware Resilience kann alle Volumes in einer Gruppe gleichzeitig schützen, anstatt jedes Volume einzeln zu schützen.
-
-Sie können Gruppen unabhängig von ihrem Schutzstatus erstellen (d. h. nicht geschützte Gruppen und geschützte Gruppen). Wenn Sie einer Schutzgruppe eine Schutzrichtlinie hinzufügen, ersetzt die neue Schutzrichtlinie alle vorhandenen Richtlinien, einschließlich der von SnapCenter und NetApp Backup and Recovery verwalteten Richtlinien.
-
-.Schritte
-. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
-+
-image:screen-protection.png["Strategieseite verwalten"]
-
-. Wählen Sie auf der Seite „Schutz“ die Registerkarte „Schutzgruppen“ aus.
-+
-image:screen-protection-groups.png["Seite „Schutzgruppen“"]
-
-. Wählen Sie *Hinzufügen*.
-+
-image:screen-protection-groups-add.png["Seite „Schutzgruppe hinzufügen“"]
-
-. Geben Sie einen Namen für die Schutzgruppe ein.
-. Wählen Sie die Workloads aus, die der Gruppe hinzugefügt werden sollen.
-+
-
-TIP: Um weitere Details zu den Arbeitslasten anzuzeigen, scrollen Sie nach rechts.
-
-. Wählen Sie *Weiter*.
-+
-image:screen-protection-groups-policy.png["Schutzgruppe hinzufügen – Seite „Richtlinie“"]
-
-. Wählen Sie die Richtlinie aus, um den Schutz für diese Gruppe zu steuern.
-. Wenn die Schutzstrategie die Replikation umfasst, überprüfen Sie die Replikationseinstellungen.
-+
-.. Um alle Snapshots am selben Zielort zu replizieren, aktivieren Sie **Für jede Arbeitslast das gleiche Ziel verwenden**. Wählen Sie im Abschnitt „Konsolenagent“ ein *Zielsystem* und eine *Zielspeicher-VM* für die Workloads aus. + Um andere Ziele zu verwenden, deaktivieren Sie dieses Kästchen. Überprüfen Sie alle Workloads unter jedem Console-Agenten und weisen Sie jedem Workload ein *Zielsystem* und eine *Zielspeicher-VM* zu. Wählen Sie **Weiter**.
-
-
-. Um eine Sicherungsrichtlinie zu konfigurieren, wählen Sie eine aus und klicken Sie dann auf **Weiter**.
-. Wenn Ihre Erkennungsrichtlinie die Erkennung des Benutzerverhaltens umfasst, wählen Sie den Datensammler aus, den Sie verwenden möchten, und klicken Sie dann auf **Weiter**.
-. Überprüfen Sie die Auswahl für die Schutzgruppe.
-. Um die Erstellung der Schutzgruppe abzuschließen, wählen Sie *Hinzufügen*.
-
-
-
-
-=== Gruppenschutz bearbeiten
-
-Sie können die Erkennungsrichtlinie für eine vorhandene Gruppe ändern.
-
-.Schritte
-. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
-. Wählen Sie auf der Seite „Schutz“ die Registerkarte *Schutzgruppen* und dann die Gruppe aus, deren Richtlinie Sie ändern möchten.
-. Wählen Sie auf der Übersichtsseite der Schutzgruppe *Schutz bearbeiten* aus.
-. Wählen Sie eine vorhandene Schutzrichtlinie aus, die angewendet werden soll, oder wählen Sie **Hinzufügen**, um eine neue Schutzrichtlinie zu erstellen.  Weitere Informationen zum Hinzufügen einer Schutzrichtlinie finden Sie unter<<steps,Erstellen einer Schutzrichtlinie>> .  Wählen Sie dann **Speichern**.
-. Wählen Sie in der Übersicht der Sicherungsziele ein vorhandenes Sicherungsziel aus oder **fügen Sie ein neues Sicherungsziel hinzu**.
-. Wählen Sie **Weiter** aus, um Ihre Änderungen zu überprüfen.
-
-
-
-
-=== Entfernen von Workloads aus einer Gruppe
-
-Möglicherweise müssen Sie später Arbeitslasten aus einer vorhandenen Gruppe entfernen.
-
-.Schritte
-. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
-. Wählen Sie auf der Seite „Schutz“ die Registerkarte „Schutzgruppen“ aus.
-. Wählen Sie die Gruppe aus, aus der Sie eine oder mehrere Workloads entfernen möchten.
-+
-image:screen-protection-groups-more-workloads.png["Seite mit Details zur Schutzgruppe"]
-
-. Wählen Sie auf der Seite der ausgewählten Schutzgruppe die Arbeitslast aus, die Sie aus der Gruppe entfernen möchten, und wählen Sie die *Aktionen*image:screenshot_horizontal_more_button.gif["Schaltfläche „Aktionen“"] Option.
-. Wählen Sie im Menü „Aktionen“ die Option „Arbeitslast entfernen“ aus.
-. Bestätigen Sie, dass Sie die Arbeitslast entfernen möchten, und wählen Sie *Entfernen*.
-
-
-
-
-=== Löschen der Schutzgruppe
-
-Durch das Löschen der Schutzgruppe werden die Gruppe und ihr Schutz entfernt, die einzelnen Workloads werden jedoch nicht entfernt.
-
-.Schritte
-. Wählen Sie im Menü „Ransomware-Resilienz“ die Option „Schutz“ aus.
-. Wählen Sie auf der Seite „Schutz“ die Registerkarte „Schutzgruppen“ aus.
-. Wählen Sie die Gruppe aus, aus der Sie eine oder mehrere Workloads entfernen möchten.
-+
-image:screen-protection-groups-more-workloads.png["Seite mit Details zur Schutzgruppe"]
-
-. Wählen Sie auf der Seite mit der ausgewählten Schutzgruppe oben rechts *Schutzgruppe löschen* aus.
-. Bestätigen Sie, dass Sie die Gruppe löschen möchten, und wählen Sie *Löschen*.
 
 
 
