@@ -80,11 +80,11 @@ Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, kehren Sie zum 
 
 === Hinzufügen eines Datensammlers
 
-Datensammler werden automatisch erstellt, wenn Sie eine Ransomware-Schutzstrategie mit Erkennung verdächtiger Benutzeraktivitäten aktivieren. Weitere Informationen finden Sie unter xref:rp-use-protect.adoc#add-a-detection-policy-to-workloads-with-existing-snapshot-and-backup-policies-managed-by-snapcenter-or-backup-and-recovery[Hinzufügen einer Erkennungsrichtlinie].
+Datensammler werden automatisch erstellt, wenn Sie eine Ransomware-Schutzstrategie mit Erkennung verdächtiger Benutzeraktivitäten aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["Hinzufügen einer Erkennungsrichtlinie"].
 
 Sie können die Details des Datensammlers anzeigen. Wählen Sie in den Einstellungen in der Kachel „Benutzeraktivität“ die Option **Verwalten** aus. Wählen Sie die Registerkarte **Datensammler** und dann den Datensammler aus, um seine Details anzuzeigen oder ihn anzuhalten.
 
-image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellungen"]
+image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellungen."]
 
 
 

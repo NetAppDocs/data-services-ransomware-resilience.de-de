@@ -62,7 +62,7 @@ Für diese Aufgaben ist die Rolle „Ransomware Resilience-Administrator“ erfo
 Nachdem Sie den Schutz in Ransomware Resilience konfiguriert haben, können Sie als Nächstes Folgendes tun.
 
 [role="quick-margin-list"]
-* link:rp-use-protect-classify.html["Aktivieren Sie die Datenklassifizierung, um Governance- und Sicherheitsrisiken zu identifizieren"]
+* link:task-classify.html["Aktivieren Sie die Datenklassifizierung, um Governance- und Sicherheitsrisiken zu identifizieren"]
 * link:task-siem.html["Senden Sie Warnmeldungen an SIEM"]
 * link:rp-use-reports.html["Laden Sie Warn-, Schutz-, Bereitschaftsübungs-, Wiederherstellungs- oder Zusammenfassungsberichte herunter"]
 

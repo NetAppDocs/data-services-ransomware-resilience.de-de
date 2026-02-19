@@ -244,26 +244,6 @@ Alle 30 Tage
 | 60 | 2 | 93 
 
 
-.4+| *Verschlüsselungsbenutzererweiterung*  a| 
-Viertelstündlich
-| Alle 30 Minuten | 3 | 72 | 93 
-
-
-| Täglich  a| 
-Jeden 1 Tag
-| 14 | 14 | 93 
-
-
-| Wöchentlich  a| 
-Jede Woche
-| 35 | 5 | 93 
-
-
-| Monatlich  a| 
-Alle 30 Tage
-| 60 | 2 | 93 
-
-
 .4+| *Richtlinie zur kritischen Replikation*  a| 
 Viertelstündlich
 | Alle 15 Minuten | 3 | 288 | 309 

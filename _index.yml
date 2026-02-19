@@ -39,7 +39,7 @@ indexpage:
     - title: Workloads schützen
       url: "/rp-use-protect.html"
     - title: Scannen Sie mit NetApp Data Classification nach personenbezogenen Daten
-      url: "/rp-use-protect-classify.html"
+      url: "/task-classify.html"
     - title: Auf eine erkannte Warnung reagieren
       url: "/rp-use-alert.html"
     - title: Wiederherstellung nach einem Angriff
