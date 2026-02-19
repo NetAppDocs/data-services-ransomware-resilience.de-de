@@ -12,9 +12,9 @@ summary: Stellen Sie sicher, dass Sie die Lizenzanforderungen für Ransomware Re
 
 
 [role="lead"]
-Mit NetApp Ransomware Resilience können Sie verschiedene Lizenzierungspläne nutzen.
+NetApp Ransomware Resilience bietet verschiedene Lizenzpläne an, sodass Sie den Dienst genau dort abonnieren können, wo es für Ihr Unternehmen sinnvoll ist.
 
-Um diese Aufgabe auszuführen, benötigen Sie die Rolle des Organisationsadministrators, Ordner- oder Projektadministrators. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^] .
+Für die Einrichtung der Lizenzierung benötigen Sie die Rolle des Organization admin, Folder oder project admin. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^].
 
 
 

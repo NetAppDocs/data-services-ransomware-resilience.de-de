@@ -57,6 +57,8 @@ sidebar:
       url: "/rp-use-dashboard.html"
     - title: Workloads schützen
       entries:
+      - title: Schutz überprüfen
+        url: "/task-review-protection.html"
       - title: Schützen Sie Workloads mit Strategien zum Schutz vor Ransomware
         url: "/rp-use-protect.html"
       - title: Schutzgruppen verwalten

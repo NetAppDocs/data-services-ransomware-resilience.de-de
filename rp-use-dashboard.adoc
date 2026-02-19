@@ -4,7 +4,7 @@ permalink: rp-use-dashboard.html
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
 summary: Das NetApp Ransomware Resilience Dashboard bietet Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden, und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.  Sie können das Dashboard auch verwenden, um Schutzempfehlungen zu überprüfen und umzusetzen. 
 ---
-= Überwachen Sie den Workload-Zustand mit dem NetApp Ransomware Resilience Dashboard
+= Überwachen Sie die Workload-Integrität in NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

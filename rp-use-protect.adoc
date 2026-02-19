@@ -12,7 +12,7 @@ summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie ein
 
 
 [role="lead"]
-Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einen Workload-konsistenten Schutz aktivieren oder Ransomware-Schutzstrategien in NetApp Ransomware Resilience erstellen.
+Strategien zum Schutz vor Ransomware sind ein zentrales Merkmal der NetApp Ransomware Resilience: Sie unterstützen Erkennung, Schutz und Replikation. Schutzstrategien sind ein wesentlicher Bestandteil Ihrer Cybersicherheitsstrategie.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
@@ -61,92 +61,9 @@ NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP oder Azure
 
 
 
-=== Schutzrichtlinien für Workloads, die nicht durch NetApp -Anwendungen geschützt sind
+==== Schutzrichtlinien für Workloads, die nicht durch NetApp -Anwendungen geschützt sind
 
 Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience verwaltet wird, wurden möglicherweise Snapshots im Rahmen von ONTAP oder anderen Produkten erstellt. Wenn ONTAP FPolicy-Schutz aktiviert ist, können Sie den FPolicy-Schutz mit ONTAP ändern.
-
-
-
-== Anzeigen des Ransomware-Schutzes für eine Arbeitslast
-
-Einer der ersten Schritte zum Schutz von Workloads besteht darin, Ihre aktuellen Workloads und deren Schutzstatus anzuzeigen.  Sie können die folgenden Arten von Workloads sehen:
-
-* Anwendungs-Workloads
-* Blockieren von Workloads
-* Dateifreigabe-Workloads
-* VM-Workloads
-
-
-.Schritte
-. Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz*.
-. Führen Sie einen der folgenden Schritte aus:
-+
-** Wählen Sie im Bereich „Datenschutz“ des Dashboards die Option „Alle anzeigen“ aus.
-** Wählen Sie im Menü *Schutz* aus.
-+
-image:screen-protection.png["Schutzseite"]
-
-
-
-. Auf dieser Seite können Sie Schutzdetails für die Arbeitslast anzeigen und ändern.
-
-
-
-NOTE: Siehe link:#add-a-ransomware-protection-strategy["Fügen Sie eine Ransomware-Schutzstrategie hinzu"] , um mehr über die Verwendung von Ransomware Resilience bei einer bestehenden Datensicherungsstrategie mit Backup and Recovery zu erfahren.
-
-
-
-=== Die Seite „Schutz verstehen“
-
-Auf der Seite „Schutz“ werden die folgenden Informationen zum Workload-Schutz angezeigt:
-
-*Schutzstatus*: Eine Arbeitslast kann einen der folgenden Schutzstatus aufweisen, um anzugeben, ob eine Richtlinie angewendet wird oder nicht:
-
-* *Geschützt*: Eine Richtlinie wird angewendet.  ARP (oder ARP/AI, je nach ONTAP Version) ist auf allen mit der Arbeitslast verbundenen Volumes aktiviert.
-* *Gefährdet*: Es wird keine Richtlinie angewendet.  Wenn für einen Workload keine primäre Erkennungsrichtlinie aktiviert ist, ist er „gefährdet“, auch wenn für ihn eine Snapshot- und Backup-Richtlinie aktiviert ist.
-* *In Bearbeitung*: Eine Richtlinie wird angewendet, ist aber noch nicht abgeschlossen.
-* *Fehlgeschlagen*: Eine Richtlinie wird angewendet, funktioniert aber nicht.
-
-
-*Erkennungsstatus*: Eine Arbeitslast kann einen der folgenden Ransomware-Erkennungsstatus aufweisen:
-
-* *Lernen*: Der Arbeitslast wurde vor Kurzem eine Richtlinie zur Ransomware-Erkennung zugewiesen und Ransomware Resilience scannt die Arbeitslasten.
-* *Aktiv*: Eine Schutzrichtlinie zur Ransomware-Erkennung ist zugewiesen.
-* *Nicht festgelegt*: Es ist keine Schutzrichtlinie zur Ransomware-Erkennung zugewiesen.
-* *Fehler*: Eine Ransomware-Erkennungsrichtlinie wurde zugewiesen, aber Ransomware Resilience hat einen Fehler festgestellt.
-+
-
-TIP: Wenn der Schutz in Ransomware Resilience aktiviert ist, beginnt die Erkennung und Meldung von Warnungen, nachdem sich der Status der Ransomware-Erkennungsrichtlinie vom Lernmodus in den aktiven Modus geändert hat.
-
-
-
-
-NOTE: Verdächtige Benutzeraktivitäten und Aktivitäten im Zusammenhang mit FPolicy (verdächtige Dateierweiterungen) werden getrennt vom Erkennungsstatus aufgeführt.
-
-*Erkennungsrichtlinie*: Der Name der Ransomware-Erkennungsrichtlinie wird angezeigt, sofern eine zugewiesen wurde.  Wenn die Erkennungsrichtlinie nicht zugewiesen wurde, wird „N/A“ angezeigt.
-
-*Replikationsziel*: Wenn Sie die Snapshot-Replikation konfiguriert haben, werden die Namen der Ziel-Speicher-VMs und -Systeme aufgelistet. Wenn keine Replikation vorliegt, wird in diesem Feld „Keine“ angezeigt.
-
-*Snapshot-, Replikations- und Backup-Richtlinien*: Diese Spalte zeigt die auf die Workload angewendeten Snapshot- und Backup-Richtlinien sowie das Produkt oder den Service, das diese Richtlinien verwaltet.
-
-* Verwaltet von SnapCenter
-* Verwaltet durch SnapCenter Plug-in for VMware vSphere
-* Verwaltet durch Backup und Wiederherstellung
-* Name der Ransomware-Schutzrichtlinie, die Snapshots und Backups regelt
-* Keine
-
-
-
-NOTE: Sie können die Wiederherstellung in Ransomware Resilience für keine SnapCenter Richtlinien verwalten.
-
-*Arbeitsbelastungsbedeutung*
-
-Ransomware Resilience weist jedem Workload während der Erkennung basierend auf einer Analyse jedes Workloads eine Wichtigkeit oder Priorität zu.  Die Workload-Wichtigkeit wird durch die folgenden Snapshot-Häufigkeiten bestimmt:
-
-* *Kritisch*: Es werden mehr als eine Snapshot-Kopie pro Stunde erstellt (sehr aggressiver Schutzplan).
-* *Wichtig*: Snapshot-Kopien werden seltener als stündlich, aber häufiger als täglich erstellt.
-* *Standard*: Es werden mehrmals täglich Momentaufnahmen erstellt.
-
 
 
 
@@ -394,11 +311,11 @@ image:screen-protection.png["Strategieseite verwalten"]
 . Um Ihre bestehende Backup and Recovery beizubehalten und nur eine _detection_ policy anzuwenden, lassen Sie das Kontrollkästchen **Vorhandene Richtlinien ersetzen** deaktiviert.
 . Wählen Sie die gewünschten Erkennungseinstellungen aus:
 +
-....
-*Encryption detection*
-*Suspicious user behavior detection*
-*Block suspicious file extensions*
-....
+** *Verschlüsselungserkennung*
+** *Erkennung verdächtigen Benutzerverhaltens*
+** *Verdächtige Dateierweiterungen blockieren*
+
+
 . Wählen Sie **Weiter**.
 . Wenn Sie *Erkennung verdächtigen Nutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den User activity agent oder link:suspicious-user-activity.html#create-a-user-activity-agent["oder erstellen Sie ein"].
 +

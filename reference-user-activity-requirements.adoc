@@ -12,13 +12,11 @@ summary: Bevor Sie einen Benutzeraktivitätsagenten und andere Collector erstell
 
 
 [role="lead"]
-Bevor Sie einen Benutzeraktivitätsagenten und andere Collector erstellen, müssen Sie sicherstellen, dass Sie die beschriebenen Anforderungen an Betriebssystem, Server und Netzwerk erfüllen.
+NetApp Ransomware Resilience Benutzerverhaltenserkennung ermöglicht es Ihnen, auf Ransomware-Ereignisse auf Benutzerebene zu reagieren. Sie müssen eine Gruppe von Agenten erstellen, um die Benutzerverhaltenserkennung zu aktivieren. Bevor Sie die Erkennung aktivieren, müssen Sie sicherstellen, dass Sie die beschriebenen Betriebssystem-, Server- und Netzwerkvoraussetzungen erfüllen, damit Ransomware Resilience Ereignisse korrekt erkennen und melden kann.
 
 
 
 == Cloud-Anbieter-Support
-
-**Unterstützung durch Cloud-Anbieter**
 
 Verdächtige Benutzeraktivitätsdaten können in AWS und Azure in den folgenden Regionen gespeichert werden:
 

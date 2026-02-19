@@ -1,15 +1,13 @@
 ---
-sidebar: sidebar 
 permalink: rp-use-manage.html 
-keywords: ransomware protection workload name, ransomware protection 
-summary: Sie können Workloads verwalten, indem Sie den Workload-Namen ändern, anstatt einen Standardnamen zu verwenden, was riskanter ist. 
+redirect: data-services-ransomware-resilience/rp-use-protect.html 
 ---
-= Verwalten von Workloads in NetApp Ransomware Resilience
-:hardbreaks:
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+'''
+sidebar: sidebar permalink: rp-use-manage.html keywords: ransomware protection workload name, ransomware protection summary: Sie können Workloads verwalten, indem Sie den Workload-Namen ändern, anstatt einen Standardnamen zu verwenden, der riskanter ist. --- = Ändern des Namens von Workloads in NetApp Ransomware Resilience :hardbreaks: :icons: font :imagesdir: ./media/
 
 [role="lead"]
 Sie können Workloads in NetApp Ransomware Resilience verwalten, indem Sie den Workload-Namen ändern.  Die Verwendung eines Standardnamens birgt das Risiko von Ransomware-Angriffen.

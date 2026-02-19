@@ -58,6 +58,9 @@ image:screen-protection-groups-policy.png["Schutzgruppe hinzufügen – Seite �
 
 
 
+TIP: Beim Überprüfen des Schutz-Dashboards in Ransomware Resilience können Sie Workloads nach Schutzgruppe sortieren.
+
+
 
 === Gruppenschutz bearbeiten
 

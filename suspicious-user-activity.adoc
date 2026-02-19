@@ -12,20 +12,20 @@ summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Re
 
 
 [role="lead"]
-Um die Erkennung verdächtigen Nutzerverhaltens in NetApp Ransomware Resilience zu aktivieren, müssen Sie mindestens einen Benutzeraktivitäts-Agenten installieren. Wenn Sie die Funktion für verdächtige Benutzeraktivitäten über das Ransomware Resilience-Dashboard aktivieren, müssen Sie die Hostinformationen des Benutzeraktivitäts-Agenten angeben.
+NetApp Ransomware Resilience Benutzeraktivitätserkennung hilft Ihnen, Ransomware-Ereignisse auf Benutzerebene zu verhindern. Um die Erkennung verdächtigen Benutzerverhaltens in Ransomware Resilience zu aktivieren, müssen Sie mindestens einen Benutzeraktivitätsagenten installieren, der eine Datenerfassungsumgebung erstellt, um das Benutzerverhalten auf abweichende Muster zu überwachen, die Ransomware-Ereignissen ähneln.
 
-Ein Agent kann mehrere Datensammler hosten. Datensammler senden Daten zur Analyse an einen SaaS-Standort. Es gibt zwei Arten von Sammlern:
+Ein Benutzeraktivitätsagent hostet einen Datensammler und einen Benutzerverzeichnis-Connector, die beide Daten zur Analyse an einen SaaS-Standort senden.
 
-* Der **Datensammler** sammelt Benutzeraktivitätsdaten von ONTAP.
-* Der **Benutzerverzeichnis-Connector** stellt eine Verbindung zu Ihrem Verzeichnis her, um Benutzer-IDs Benutzernamen zuzuordnen.
+* Der **Datensammler** erfasst Benutzeraktivitätsdaten von ONTAP. Der Datensammler wird automatisch erstellt, wenn Sie eine Schutzstrategie mit Benutzerverhaltenserkennung erstellen.
+* Der **Benutzerverzeichnis-Connector** stellt eine Verbindung zu Ihrem Verzeichnis her, um Benutzer-IDs Benutzernamen zuzuordnen. Sie müssen den Benutzerverzeichnis-Connector konfigurieren.
 
 
-Collector werden in den Ransomware Resilience-Einstellungen konfiguriert.
+Der Benutzeraktivitätsagent, der Datensammler und der Benutzerverzeichnis-Connector können alle über das Dashboard der Ransomware Resilience-Einstellungen verwaltet werden.
 
 
 NOTE: Wenn Sie bereits NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security Agents auch für Ransomware Resilience zu verwenden. Sie müssen keine separaten Workload Security Agents für Ransomware Resilience bereitstellen, jedoch erfordert die Verwendung derselben Workload Security Agents eine Kopplung zwischen der Ransomware Resilience Console Organization und dem DII Storage Workload Security Tenant. Wenden Sie sich an Ihren Account Representative, um diese Kopplung zu aktivieren.
 
-+ Falls Sie Data Infrastructure Insights noch nicht verwenden, fahren Sie mit den Konfigurationsanweisungen hier fort.
++ Falls Sie _nicht_ DII verwenden, fahren Sie mit den Konfigurationsanweisungen hier fort.
 
 
 

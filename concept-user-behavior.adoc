@@ -12,7 +12,7 @@ summary: Nutzen Sie die Erkennung verdächtigen Nutzerverhaltens und Warnmeldung
 
 
 [role="lead"]
-NetApp Ransomware Resilience unterstützt die Erkennung verdächtigen Benutzerverhaltens und ermöglicht es Ihnen, Ransomware-Vorfälle auf Benutzerebene zu beheben.
+Mit der Erkennung von Benutzeraktivitäten ermöglicht NetApp Ransomware Resilience Ihnen, Ransomware-Ereignisse auf Benutzerebene zu adressieren und Ereignisse wie Datenlecks und großflächige Löschungen zu stoppen.
 
 NetApp Ransomware Resilience bietet eine KI-gestützte Erkennung von Datenschutzverletzungen durch Überwachung verdächtiger Benutzeraktivitäten. Deutliche Anstiege der Leseaktivität und Zugriffsmuster bei Lesezugriffen werden genutzt, um böswillige Absichten zu erkennen. Nach der Erkennung generiert Ransomware Resilience automatisch Warnmeldungen in der NetApp Console, per E-Mail und in jedem konfigurierten Sicherheitssystem (zum Beispiel SIEM).
 

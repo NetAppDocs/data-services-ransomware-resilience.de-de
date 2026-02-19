@@ -6,7 +6,7 @@
 
 === Sicherheitsrisikobewertung von Digital Advisor
 
-Der BlueXP ransomware protection sammelt jetzt Informationen über hohe und kritische Sicherheitsrisiken im Zusammenhang mit einem Cluster von NetApp Digital Advisor.  Wenn ein Risiko erkannt wird, gibt der BlueXP ransomware protection im Bereich *Empfohlene Aktionen* des Dashboards eine Empfehlung aus: „Beheben Sie eine bekannte Sicherheitslücke im Cluster <Name>.“  Wenn Sie in der Empfehlung auf dem Dashboard auf *Überprüfen und beheben* klicken, wird vorgeschlagen, Digital Advisor und einen CVE-Artikel (Common Vulnerability & Exposure) zu überprüfen, um das Sicherheitsrisiko zu beheben.  Wenn mehrere Sicherheitsrisiken bestehen, überprüfen Sie die Informationen im Digital Advisor.
+BlueXP ransomware protection sammelt nun Informationen über hohe und kritische Sicherheitsrisiken im Zusammenhang mit einem Cluster von NetApp Digital Advisor. Wenn ein Risiko gefunden wird, gibt BlueXP ransomware protection eine Empfehlung im Bereich *Empfohlene Aktionen* des Dashboards: „Bekannte Sicherheitslücke im Cluster beheben <name>.“ Von der Empfehlung im Dashboard aus schlägt die Auswahl von *Überprüfen und beheben* vor, Digital Advisor und einen Common Vulnerability & Exposure (CVE)-Artikel zu überprüfen, um das Sicherheitsrisiko zu beheben. Wenn mehrere Sicherheitsrisiken bestehen, überprüfen Sie die Informationen in Digital Advisor.
 
 Siehe https://docs.netapp.com/us-en/active-iq/index.html["Digital Advisor -Dokumentation"^] .
 

@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task-review-protection.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
+summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einem Workload in NetApp Ransomware Resilience Richtlinien zuweisen. 
+---
+= Schutzstatus in NetApp Ransomware Resilience überprüfen
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience's Schutz-Dashboard bietet einen Überblick über den Schutzstatus und die Schutzbereitschaft Ihrer Workloads. Verwenden Sie das Schutz-Dashboard, um Einblicke darin zu erhalten, was geschützt ist, was Schutz benötigt und welchen Umfang der Schutz hat.
+
+Sobald Sie den Umfang Ihres aktuellen Schutzes verstanden haben, link:rp-use-protect.html["Sie können Ransomware-Schutzstrategien für Ihre Workloads erstellen und anwenden"].
+
+
+
+== Schutz auf einer Arbeitslast anzeigen
+
+Einer der ersten Schritte zum Schutz von Workloads besteht darin, Ihre aktuellen Workloads und deren Schutzstatus anzuzeigen.  Sie können die folgenden Arten von Workloads sehen:
+
+* Anwendungs-Workloads
+* Blockieren von Workloads
+* Dateifreigabe-Workloads
+* VM-Workloads
+
+
+.Schritte
+. Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz*.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wählen Sie im Bereich „Datenschutz“ des Dashboards die Option „Alle anzeigen“ aus.
+** Wählen Sie im Menü *Schutz* aus.
++
+image:screen-protection.png["Schutzseite"]
+
+
+
+. Auf dieser Seite können Sie Schutzdetails für die Arbeitslast anzeigen und ändern.
+
+
+
+NOTE: Siehe link:rp-use-protect.html#add-a-ransomware-protection-strategy["Fügen Sie eine Ransomware-Schutzstrategie hinzu"] , um mehr über die Verwendung von Ransomware Resilience bei einer bestehenden Datensicherungsstrategie mit Backup and Recovery zu erfahren.
+
+
+
+== Das Schutz-Dashboard verstehen
+
+Das Schutz-Dashboard in Ransomware Resilience zeigt detaillierte Informationen zu Workloads (zum Beispiel Workload-Name und -Typ, Console-Agent, System und Storage-VM) sowie Einblicke in den Schutzstatus. Verwenden Sie das Schutz-Dashboard, um die Ransomware-Vorsorge für Workloads zu überprüfen und zu verwalten. Die folgenden Spalten sind besonders hilfreich, um Ihre Schutzsituation zu verstehen:
+
+*Schutzstatus*: Eine Arbeitslast kann einen der folgenden Schutzstatus aufweisen, um anzugeben, ob eine Richtlinie angewendet wird oder nicht:
+
+* *Geschützt*: Eine Richtlinie wird angewendet.  ARP (oder ARP/AI, je nach ONTAP Version) ist auf allen mit der Arbeitslast verbundenen Volumes aktiviert.
+* *Gefährdet*: Es wird keine Richtlinie angewendet.  Wenn für einen Workload keine primäre Erkennungsrichtlinie aktiviert ist, ist er „gefährdet“, auch wenn für ihn eine Snapshot- und Backup-Richtlinie aktiviert ist.
+* *In Bearbeitung*: Eine Richtlinie wird angewendet, ist aber noch nicht abgeschlossen.
+* *Fehlgeschlagen*: Eine Richtlinie wird angewendet, funktioniert aber nicht.
+
+
+*Erkennungsstatus*:
+
++ Ransomware Resilience bietet Einblicke in den Umfang der von Ihnen auf Ihren Workloads konfigurierten Ransomware-Erkennungsrichtlinien. Überprüfen Sie den Erkennungsbereich anhand der folgenden Felder.
+
+* *Status der Verschlüsselungserkennung*
+* *Status der Erkennung mutmaßlichen Benutzerverhaltens*
+* *Verdächtige Dateierweiterungen blockieren*
+
+
+*Snapshot-, Replikations- und Sicherungsrichtlinien*: Diese Spalte zeigt das Produkt oder den Dienst an, der die Richtlinie verwaltet. Wenn keine Richtlinie vorhanden ist, wird N/A angezeigt.
+
+*Bedeutung*
+
+Ransomware Resilience weist jedem Workload während der Erkennung basierend auf einer Analyse jedes Workloads eine Wichtigkeit oder Priorität zu.  Die Workload-Wichtigkeit wird durch die folgenden Snapshot-Häufigkeiten bestimmt:
+
+* *Kritisch*: Es werden mehr als eine Snapshot-Kopie pro Stunde erstellt (sehr aggressiver Schutzplan).
+* *Wichtig*: Snapshot-Kopien werden seltener als stündlich, aber häufiger als täglich erstellt.
+* *Standard*: Es werden mehrmals täglich Momentaufnahmen erstellt.
+
+
+*Privacy exposure*: Wählen Sie diese Option aus, um link:task-classify.html["Scannen nach personenbezogenen Daten mit NetApp Data Classification"].
+
+*Replikationsziel*: Wenn Sie die Snapshot-Replikation konfiguriert haben, werden die Namen der Ziel-Speicher-VMs und -Systeme aufgelistet. Wenn keine Replikation vorhanden ist, wird in diesem Feld "N/A" angezeigt.
+
+*Sicherungsziel*: Wenn Sie eine Ransomware-Schutzstrategie mit Backups konfiguriert haben, wird hier der Name des Sicherungszielsystems angezeigt.
+
+
+
+== Nächste Schritte
+
+* link:rp-use-protect.html["Schützen Sie Workloads mit Strategien zum Schutz vor Ransomware"]
+* link:task-protection-group.html["Schutzgruppen verwalten"]
+* link:task-classify.html["Scannen nach personenbezogenen Daten"]
+

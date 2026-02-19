@@ -12,9 +12,9 @@ summary: Beginnen Sie mit NetApp Ransomware Resilience, indem Sie die Unterstüt
 
 
 [role="lead"]
-Beginnen Sie mit NetApp Ransomware Resilience, indem Sie die Bereitschaft Ihrer Betriebsumgebung, Ihres Netzwerkzugriffs und Ihres Webbrowsers überprüfen.
+Um eine erfolgreiche Implementierung von NetApp Ransomware Resilience zu gewährleisten, überprüfen Sie die Einsatzbereitschaft Ihrer Betriebsumgebung, Netzwerkzugriff und Ihres Webbrowsers.
 
-Um Ransomware Resilience nutzen zu können, müssen Sie die Voraussetzungen erfüllen.
+Überprüfen Sie und stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen.
 
 
 

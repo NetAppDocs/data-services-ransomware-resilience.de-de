@@ -117,7 +117,7 @@ TIP: Informationen zum Einrichten von E-Mail-Benachrichtigungen in der NetApp Co
 Die Seite „Warnungen“ wird angezeigt.
 
 . Überprüfen Sie für jede Warnung alle Vorfälle auf jedem Datenträger.
-. Um weitere Warnungen anzuzeigen, klicken Sie in der Brotkrümelnavigation oben links auf *Warnung*.
+. Um weitere Warnungen anzuzeigen, wählen Sie in der Brotkrümelnavigation oben links *Warnung* aus.
 . Fahren Sie mit einem der folgenden Schritte fort:
 +
 ** <<Erkennen Sie böswillige Aktivitäten und anomales Benutzerverhalten>> .
