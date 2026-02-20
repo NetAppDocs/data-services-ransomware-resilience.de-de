@@ -12,7 +12,7 @@ summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf d
 
 
 [role="lead"]
-Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung auf dem Dashboard und im Benachrichtigungsbereich angezeigt. Ransomware Resilience erstellt sofort einen Snapshot. Überprüfen Sie das potenzielle Risiko auf der Registerkarte „Ransomware-Resilienz *Warnungen*“.
+Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung im Dashboard und im Benachrichtigungsbereich angezeigt. Ransomware Resilience erstellt sofort eine Snapshot. Wenn Sie eine Warnung erhalten, überprüfen Sie das potenzielle Risiko auf der Registerkarte *Alerts* von Ransomware Resilience, um die Auswirkungen auf Ihre Daten einzuschätzen und einen möglichen Ransomware-Angriff zu verhindern.
 
 Wenn Ransomware Resilience einen möglichen Angriff erkennt, erscheint eine Benachrichtigung in den Console Notification-Einstellungen und eine E-Mail wird an die konfigurierten Adressen gesendet. Die E-Mail enthält Informationen über den Schweregrad, die betroffene Workload und einen Link zur Warnung im Tab *Alerts* von Ransomware Resilience.
 
@@ -25,17 +25,39 @@ Um mit der Wiederherstellung Ihrer Daten zu beginnen, markieren Sie die Warnung 
 
 Jede Warnung kann mehrere Vorfälle mit unterschiedlichem Umfang und Status umfassen.  Überprüfen Sie alle Vorfälle.
 
-Ransomware Resilience liefert sogenannte _Beweise_ über die Ursache der Warnmeldung, beispielsweise die folgenden:
 
+
+== Wie Warnmeldungen generiert werden
+
+Ransomware Resilience nutzt Erkenntnisse über Datenentropiemuster, Dateierweiterungstypen und Verschlüsselung, um Warnmeldungen zu generieren. Warnmeldungen basieren auf den folgenden Ereignissen:
+
+* Datenpanne
+* Datenvernichtung
 * Dateierweiterungen wurden erstellt oder geändert
 * Dateierstellung mit einem Vergleich der erkannten und erwarteten Raten
 * Dateilöschung mit einem Vergleich der erkannten und erwarteten Raten
+* Verdächtiges Nutzerverhalten
 * Bei hoher Verschlüsselung ohne Änderungen der Dateierweiterung
 
 
-Eine Warnung wird wie folgt klassifiziert:
 
-* *Potenzieller Angriff*: Eine Warnung wird ausgegeben, wenn Autonomous Ransomware Protection eine neue Erweiterung erkennt und das Vorkommen in den letzten 24 Stunden mehr als 20 Mal wiederholt wurde (Standardverhalten).
+NOTE: Für Benachrichtigungen über Datenschutzverletzungen, Datenzerstörung und verdächtiges Benutzerverhalten müssen Sie link:concept-user-behavior.html["Benutzeraktivitätserkennung"] konfigurieren.
+
+
+
+=== Alarmtypen und -status
+
+Benachrichtigungen haben einen von zwei Status: *New* oder *Inactive*.
+
+Eine Warnung wird als einer der folgenden Typen klassifiziert:
+
+* *Potenzieller Angriff*: Eine Warnung wird als potenzieller Angriff eingestuft, wenn:
++
+** Autonomous Ransomware Protection erkennt eine neue Erweiterung, und das Auftreten wiederholt sich in den letzten 24 Stunden mehr als 20 Mal (Standardverhalten).
+** Datenpannen werden erkannt.
+** Datenzerstörung wurde erkannt.
+
+
 * *Warnung*: Eine Warnung erfolgt aufgrund der folgenden Verhaltensweisen:
 +
 ** Die Erkennung einer neuen Erweiterung wurde bisher nicht festgestellt und dasselbe Verhalten wiederholt sich nicht oft genug, um es als Angriff zu deklarieren.
@@ -50,34 +72,40 @@ NOTE: Für SAN-Umgebungen basieren Warnungen ausschließlich auf hoher Entropie.
 
 Die Beweise basieren auf Informationen von Autonomous Ransomware Protection in ONTAP. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Übersicht über den autonomen Ransomware-Schutz"^] .
 
-Eine Warnung kann einen der folgenden Status haben:
 
-* *Neu*
-* *Inaktiv*
 
+=== Alarmzustände
 
 Ein Alarmereignis kann folgende Zustände aufweisen:
 
-* *Neu*: Alle Vorfälle werden bei ihrer erstmaligen Erkennung als „neu“ gekennzeichnet.
-* *In Bearbeitung*: Sie können einen Vorfall als „in Bearbeitung“ markieren, während Sie ihn auswerten.
-* *Abgelehnt*: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, können Sie den Status auf „Abgelehnt“ ändern.
-+
-
-CAUTION: Sobald Sie einen Angriff abgewiesen haben, können Sie seinen Status nicht mehr rückgängig machen. Wenn Sie eine Arbeitslast abbrechen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien endgültig gelöscht.
-
-* *Abweisen*: Der Vorfall wird gerade abgewiesen.
-* *Gelöst*: Der Vorfall wurde behoben.
-* *Automatisch gelöst*: Bei Warnungen mit niedriger Priorität wird der Vorfall automatisch gelöst, wenn innerhalb von fünf Tagen keine Maßnahmen ergriffen wurden.
+[cols="10%,90%"]
+|===
 
 
+| Status | Beschreibung 
 
-TIP: Wenn Sie auf der Seite „Einstellungen“ ein Sicherheits- und Ereignisverwaltungssystem (SIEM) in Ransomware Resilience konfiguriert haben, sendet Ransomware Resilience Warndetails an Ihr SIEM-System.
 
+| *Neu* | Alle Vorfälle werden als „neu“ gekennzeichnet, wenn sie erstmals identifiziert werden. 
+
+
+| *In Überprüfung* | Sie können einen Alarmvorfall manuell als „in Bearbeitung“ markieren, während Sie ihn auswerten. 
+
+
+| *Abgewiesen*  a| 
+Wenn Sie vermuten, dass die Aktivität kein Ransomware-Angriff ist, können Sie den Status auf „abgelehnt“ ändern. + ACHTUNG: Nachdem Sie einen Angriff abgelehnt haben, können Sie seinen Status nicht mehr zurücksetzen. Wenn Sie eine Arbeitslast ablehnen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien dauerhaft gelöscht.
+
+
+
+| *Gelöst* | Der Vorfall wurde behoben. 
+
+
+| *Automatisch aufgelöst* | Bei Warnmeldungen mit niedriger Priorität wird der Vorfall automatisch behoben, wenn innerhalb von fünf Tagen keine Maßnahmen ergriffen wurden. 
+|===
 
 
 == Warnungen anzeigen
 
-Sie können über das Ransomware Resilience Dashboard oder über die Registerkarte *Warnungen* auf Warnungen zugreifen.
+Sie können auf Warnmeldungen über das Ransomware Resilience-Dashboard oder über die Registerkarte *Alerts* zugreifen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
@@ -112,7 +140,7 @@ TIP: Informationen zum Einrichten von E-Mail-Benachrichtigungen in der NetApp Co
 
 .Schritte
 . Sehen Sie sich die E-Mail an.
-. Wählen Sie in der E-Mail *Warnung anzeigen* aus und melden Sie sich bei Ransomware Resilience an.
+. Wählen Sie in der E-Mail *View alert* und melden Sie sich bei Ransomware Resilience an.
 +
 Die Seite „Warnungen“ wird angezeigt.
 
@@ -139,13 +167,15 @@ Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Datensicherun
 
 === Anzeigen böswilliger Aktivitäten
 
-Wenn Autonomous Ransomware Protection eine Warnung in Ransomware Resilience auslöst, können Sie die folgenden Details anzeigen:
+Wenn Autonomous Ransomware Protection in NetApp Ransomware Resilience eine Warnung auslöst, können Sie die folgenden Details einsehen:
 
+* Als die Warnung ausgelöst wurde
+* Wenn der Zugriff geändert oder verweigert wurde
 * Entropie eingehender Daten
 * Erwartete Erstellungsrate neuer Dateien im Vergleich zur erkannten Rate
 * Erwartete Löschrate von Dateien im Vergleich zur erkannten Rate
 * Erwartete Umbenennungsrate von Dateien im Vergleich zur erkannten Rate
-* Betroffene Dateien und Verzeichnisse
+* Betroffene Workloads, Volumes, Dateien und Verzeichnisse
 
 
 

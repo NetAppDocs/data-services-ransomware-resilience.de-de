@@ -21,6 +21,9 @@ Durch die Erkennung und Benachrichtigung über verdächtiges Nutzerverhalten war
 Ransomware Resilience erkennt verdächtige Benutzeraktivitäten durch die Analyse von Benutzeraktivitätsereignissen, die von FPolicy in ONTAP generiert werden. Um Daten zur Benutzeraktivität zu erfassen, müssen Sie einen oder mehrere Benutzeraktivitätsagenten bereitstellen. Der Agent ist ein Linux-Server oder eine VM mit Konnektivität zu Geräten auf Ihrem Mandanten.
 
 
+IMPORTANT: Die Erkennung von Benutzeraktivitäten wird derzeit für SAN-Workloads nicht unterstützt. Sie können die Erkennung von Benutzeraktivitäten mit NAS-Workloads in Amazon FSxN für ONTAP, Cloud Volumes ONTAP und ONTAP verwenden.
+
+
 
 == Forensik verdächtiger Benutzeraktivität
 
