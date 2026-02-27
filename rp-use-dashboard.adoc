@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-dashboard.html 
 keywords: ransomware protection, ransomware protection dashboard, detect ransomware attacks, recover from ransomware attack 
-summary: Das NetApp Ransomware Resilience Dashboard bietet Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden, und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.  Sie können das Dashboard auch verwenden, um Schutzempfehlungen zu überprüfen und umzusetzen. 
+summary: Nutzen Sie die Ransomware Resilience, um festzustellen, welche Workloads Schutz oder Aufmerksamkeit erfordern, und um den Umfang des Schutzes zu beurteilen, indem Sie prüfen, wie viel Speicher geschützt oder gefährdet ist. 
 ---
 = Überwachen Sie die Workload-Integrität in NetApp Ransomware Resilience
 :hardbreaks:
@@ -12,22 +12,22 @@ summary: Das NetApp Ransomware Resilience Dashboard bietet Informationen zum Sch
 
 
 [role="lead"]
-Das NetApp Ransomware Resilience Dashboard bietet auf einen Blick Informationen zum Schutzzustand Ihrer Workloads.  Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, welche Workloads von einem Vorfall betroffen sind oder sich in der Wiederherstellung befinden und den Umfang des Schutzes einschätzen, indem Sie sich ansehen, wie viel Speicher geschützt oder gefährdet ist.
+Das NetApp Ransomware Resilience Dashboard bietet auf einen Blick Informationen über die Schutzgesundheit Ihrer Workloads. Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, Workloads identifizieren, die von einem Vorfall betroffen oder in der Wiederherstellung sind, und das Ausmaß des Schutzes einschätzen, indem Sie sehen, wie viel Speicher geschützt oder gefährdet ist.
 
-Über das Dashboard können Sie Schutzvorschläge einsehen, Einstellungen ändern und Berichte herunterladen.
+Verwenden Sie das Dashboard, um Schutzvorschläge zu überprüfen, Einstellungen zu ändern und Berichte herunterzuladen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
 
 
-== Überprüfen des Workload-Zustands mithilfe des Dashboards
+== Überprüfen Sie die Arbeitslastgesundheit mithilfe des Dashboards
 
 .Schritte
 . Nachdem die Konsole Ihre Workloads erkannt hat, zeigt das Ransomware Resilience-Dashboard den Datenschutzstatus der Workloads an.
 +
 image:screen-dashboard.png["Dashboard-Seite"]
 
-. Vom Dashboard aus können Sie in jedem Bereich die folgenden Aktionen ausführen:
+. Im Dashboard können Sie in den einzelnen Bereichen folgende Aktionen durchführen:
 +
 ** *Schutz von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um auf der Seite „Schutz“ alle gefährdeten oder geschützten Workloads anzuzeigen.  Wenn die Schutzstufen nicht mit einer Schutzrichtlinie übereinstimmen, sind Workloads gefährdet. Weitere Informationen finden Sie unter link:rp-use-protect.html["Workloads schützen"] .
 +
@@ -62,10 +62,10 @@ TIP: Wählen Sie den Tooltip „i“ aus, um Tipps zu diesen Daten anzuzeigen. U
 
 ** *Empfohlene Maßnahmen*: Um den Schutz zu erhöhen, überprüfen Sie jede Empfehlung und wählen Sie dann *Überprüfen und beheben*.
 +
-Sehen link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Überprüfen Sie die Schutzvorschläge auf dem Dashboard"] oder link:rp-use-protect.html["Workloads schützen"] .
+Siehe link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Schutzvorschläge auf dem Dashboard prüfen"] oder link:rp-use-protect.html["Workloads schützen"].
 
 +
-Ransomware Resilience zeigt 24 Stunden lang neue Empfehlungen seit Ihrem letzten Besuch des Dashboards mit dem Tag „Neu“ an.  Die Aktionen werden in der Reihenfolge ihrer Priorität angezeigt, wobei die wichtigsten ganz oben stehen.  Überprüfen Sie jede Empfehlung, setzen Sie sie um oder verwerfen Sie sie.
+Ransomware Resilience zeigt seit Ihrem letzten Besuch im Dashboard neue Empfehlungen mit dem Tag „Neu“ für 24 Stunden an. Maßnahmen werden in Prioritätsreihenfolge angezeigt, wobei die wichtigste oben steht. Überprüfen, umsetzen oder verwerfen Sie jede Empfehlung.
 
 +
 In der Gesamtzahl der Aktionen sind die von Ihnen abgelehnten Aktionen nicht enthalten.
@@ -78,7 +78,7 @@ In der Gesamtzahl der Aktionen sind die von Ihnen abgelehnten Aktionen nicht ent
 
 
 
-== Überprüfen Sie die Schutzempfehlungen auf dem Dashboard
+== Schutzempfehlungen auf dem Dashboard überprüfen
 
 Ransomware Resilience bewertet den Schutz Ihrer Workloads und empfiehlt Maßnahmen zur Verbesserung dieses Schutzes.
 
@@ -94,7 +94,7 @@ Hier ist eine Auswahl der Empfehlungen von Ransomware Resilience.
 | Fügen Sie eine Ransomware-Schutzrichtlinie hinzu. | Die Arbeitslast ist derzeit nicht geschützt. | Weisen Sie der Arbeitslast eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
 
 
-| Stellen Sie eine Verbindung zu SIEM her, um Bedrohungen zu melden. | Senden Sie Daten zur Bedrohungsanalyse und -erkennung an ein Sicherheits- und Ereignismanagementsystem (SIEM). | Geben Sie die SIEM/XDR-Serverdetails ein, um die Bedrohungserkennung zu aktivieren. Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Schutzeinstellungen"] . 
+| Stellen Sie eine Verbindung zu SIEM her, um Bedrohungen zu melden. | Senden Sie Daten zur Bedrohungsanalyse und -erkennung an ein Sicherheits- und Ereignismanagementsystem (SIEM). | Geben Sie die SIEM/XDR-Serverdetails ein, um die Bedrohungserkennung zu aktivieren. Siehe link:task-siem.html["Verbindung zu einem SIEM herstellen"]. 
 
 
 | Verbessern Sie die Sicherheitslage des Systems | NetApp Digital Advisor hat mindestens ein hohes oder kritisches Sicherheitsrisiko identifiziert. | Überprüfen Sie alle Sicherheitsrisiken im NetApp Digital Advisor. Siehe https://docs.netapp.com/us-en/active-iq/index.html["Digital Advisor -Dokumentation"^] . 
@@ -103,7 +103,7 @@ Hier ist eine Auswahl der Empfehlungen von Ransomware Resilience.
 | Machen Sie eine Politik stärker. | Einige Workloads sind möglicherweise nicht ausreichend geschützt.  Stärken Sie den Schutz von Workloads mit einer Richtlinie. | Erhöhen Sie die Aufbewahrung, fügen Sie Backups hinzu, erzwingen Sie unveränderliche Backups, blockieren Sie verdächtige Dateierweiterungen, aktivieren Sie die Erkennung auf sekundärem Speicher und mehr. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
 
 
-| Bereiten Sie <Sicherungsanbieter> als Sicherungsziel vor, um Ihre Workload-Daten zu sichern. | Die Arbeitslast hat derzeit keine Sicherungsziele. | Fügen Sie diesem Workload Sicherungsziele hinzu, um ihn zu schützen. Weitere Informationen finden Sie unter link:rp-use-settings.html["Konfigurieren der Schutzeinstellungen"] . 
+| Bereiten Sie <Sicherungsanbieter> als Sicherungsziel vor, um Ihre Workload-Daten zu sichern. | Die Arbeitslast hat derzeit keine Sicherungsziele. | Fügen Sie dieser Arbeitslast Sicherungsziele hinzu, um sie zu schützen. Siehe link:task-backup-destination.html["Hinzufügen eines Sicherungsziels"]. 
 
 
 | Schützen Sie kritische oder sehr wichtige Anwendungs-Workloads vor Ransomware. | Auf der Seite „Schützen“ werden kritische oder sehr wichtige (je nach zugewiesener Prioritätsstufe) Anwendungs-Workloads angezeigt, die nicht geschützt sind. | Weisen Sie diesen Workloads eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-use-alert.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert 
-summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf dem Ransomware Resilience Dashboard eine Warnung angezeigt, die auf einen möglichen Angriff hinweist. An diesem Punkt sollten Sie sich das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ ansehen. 
+summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, erscheint eine Warnung auf dem Ransomware Resilience-Dashboard, die auf einen potenziellen Angriff hinweist. An diesem Punkt sollten Sie das potenzielle Risiko auf der Registerkarte „Ransomware Resilience Alerts“ betrachten. 
 ---
 = Warnmeldungen in NetApp Ransomware Resilience verwalten
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, wird auf d
 
 
 [role="lead"]
-Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung im Dashboard und im Benachrichtigungsbereich angezeigt. Ransomware Resilience erstellt sofort eine Snapshot. Wenn Sie eine Warnung erhalten, überprüfen Sie das potenzielle Risiko auf der Registerkarte *Alerts* von Ransomware Resilience, um die Auswirkungen auf Ihre Daten einzuschätzen und einen möglichen Ransomware-Angriff zu verhindern.
+Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung im Dashboard und im Benachrichtigungsmenü angezeigt. Ransomware Resilience erstellt sofort eine Snapshot. Wenn Sie eine Warnung erhalten, überprüfen Sie das potenzielle Risiko im *Alerts*-Tab von Ransomware Resilience, um die Auswirkungen auf Ihre Daten einzuschätzen und einen möglichen Ransomware-Angriff zu verhindern.
 
 Wenn Ransomware Resilience einen möglichen Angriff erkennt, erscheint eine Benachrichtigung in den Console Notification-Einstellungen und eine E-Mail wird an die konfigurierten Adressen gesendet. Die E-Mail enthält Informationen über den Schweregrad, die betroffene Workload und einen Link zur Warnung im Tab *Alerts* von Ransomware Resilience.
 
@@ -110,7 +110,7 @@ Sie können auf Warnmeldungen über das Ransomware Resilience-Dashboard oder üb
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
 .Schritte
-. Überprüfen Sie im Ransomware Resilience Dashboard den Bereich „Warnungen“.
+. Überprüfen Sie im Dashboard „Ransomware Resilience“ den Bereich „Warnungen“.
 . Wählen Sie unter einem der Status *Alle anzeigen* aus.
 . Wählen Sie eine Warnung aus, um alle Vorfälle auf jedem Datenträger für jede Warnung zu überprüfen.
 . Um weitere Warnungen anzuzeigen, wählen Sie in der Brotkrümelnavigation oben links *Warnung* aus.
@@ -195,7 +195,7 @@ image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
 
 === Anzeigen von anomalem Benutzerverhalten
 
-Wenn Sie die Erkennung verdächtiger Benutzer zum Anzeigen anomalen Benutzerverhaltens konfiguriert haben, können Sie Daten auf Benutzerebene anzeigen und bestimmte Benutzer blockieren. Informationen zum Aktivieren der Einstellungen für verdächtige Benutzer finden Sie unterlink:rp-use-settings.html["Konfigurieren der Ransomware-Resilienzeinstellungen"] .
+Wenn Sie die Erkennung verdächtiger Benutzer so konfiguriert haben, dass anomales Benutzerverhalten angezeigt wird, können Sie Benutzerdaten einsehen und bestimmte Benutzer blockieren. Um die Einstellungen für verdächtige Benutzer zu aktivieren, siehe link:suspicious-user-activity.html["Agenten und Collector für die Erkennung von Benutzeraktivitäten konfigurieren"].
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.

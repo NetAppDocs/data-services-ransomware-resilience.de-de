@@ -102,7 +102,7 @@ Weitere Informationen finden Sie im https://docs.netapp.com/us-en/console-setup-
 
 * NetApp Backup and Recovery muss auf dem System nicht aktiviert werden.
 +
-Ransomware Resilience hilft bei der Konfiguration eines Sicherungsziels über die Option „Einstellungen“. Sehen link:rp-use-settings.html["Konfigurieren der Einstellungen"] .
+Ransomware Resilience hilft dabei, ein Backup-Ziel über die Option „Einstellungen“ zu konfigurieren. Siehe link:task-backup-destination.html["Hinzufügen eines Sicherungsziels"].
 
 
 

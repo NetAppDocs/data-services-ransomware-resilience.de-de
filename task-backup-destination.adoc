@@ -1,0 +1,215 @@
+---
+sidebar: sidebar 
+permalink: task-backup-destination.html 
+keywords: ransomware protection, backup destination, storagegrid, aws, azure, google cloud 
+summary: Fügen Sie in NetApp Ransomware Resilience ein Backup-Ziel hinzu, um die Cyber-Resilienz zu verbessern. 
+---
+= Fügen Sie ein Backup-Ziel in NetApp Ransomware Resilience hinzu
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn NetApp Ransomware Resilience Workloads erkennt, werden, falls Backups konfiguriert sind, die Backup-Ziele erkannt. Wenn Sie planen, Backups als Teil Ihrer link:rp-use-protect.html["Ransomware-Schutzstrategie"] zu verwenden, aber noch keine Backup-Ziele für den Workload konfiguriert haben, müssen Sie ein Backup-Ziel in NetApp Ransomware Resilience hinzufügen, um die Cyber-Resilienz zu verbessern.
+
+Sie können eines der folgenden Sicherungsziele auswählen:
+
+* NetApp StorageGRID
+* Amazon Web Services (AWS)
+* Google Cloud Platform
+* Microsoft Azure
+
+
+
+NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP und Azure NetApp Files nicht verfügbar. Führen Sie Backup-Vorgänge mit nativen Backup-Lösungen durch: FSx for ONTAP Backup-Service oder Azure NetApp Files Backups.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+
+
+
+== StorageGRID als Backup-Ziel hinzufügen
+
+Um NetApp StorageGRID als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Wählen Sie in der Kachel **Backup-Ziele** **Anzeigen** aus.
+. Wählen Sie **Hinzufügen**.
+. Geben Sie einen Namen für das Sicherungsziel ein.
++
+image:screen-settings-backup-destination.png["Seite „Sicherungsziele“"]
+
+. Wählen Sie * StorageGRID*.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus, um die erforderlichen Felder zu überprüfen:
++
+** *Anbietereinstellungen*:
++
+*** Wählen Sie **Neuen Bucket erstellen** oder **Eigenen Bucket verwenden**.
+*** Geben Sie den **vollqualifizierten Domainnamen (FQDN) des Gateway-Knotens** und den **Port** an.
+*** Geben Sie die StorageGRID-Anmeldedaten an: **Access key** und **Secret key**.
+
+
+** *Netzwerk*: Wählen Sie den IP-Bereich.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+
+
+** *Backup Lock*
++
+Wählen Sie, ob Sie die Backup-Sperre konfigurieren möchten. Mit Backup-Sperre sind Kopien vor Änderungen oder Löschung geschützt und werden auf Ransomware-Bedrohungen überprüft. Sie können diese Einstellung nach der Konfiguration des Backup-Ziels nicht mehr ändern. ** Wenn Sie keine Backup-Sperre möchten, wählen Sie **None**. ** Wählen Sie **Governance mode**, um Benutzern mit bestimmten Berechtigungen das Überschreiben oder Löschen geschützter Backup-Dateien während der Aufbewahrungsfrist zu ermöglichen. ** Wählen Sie **Compliance mode**, um zu verhindern, dass Benutzer geschützte Backup-Dateien während der Aufbewahrungsfrist überschreiben oder löschen.
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+image:screen-settings-backup-destinations-list2.png["Screenshot der Sicherungsziele."]
+
+
+
+== Amazon Web Services als Sicherungsziel hinzufügen
+
+Um AWS als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+Weitere Informationen zur Verwaltung Ihres AWS-Speichers in der Konsole finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/task-viewing-amazon-s3.html["Verwalten Sie Ihre Amazon S3-Buckets"^].
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Wählen Sie in der Kachel **Backup-Ziele** **Anzeigen** aus.
+. Wählen Sie **Hinzufügen**.
+. Wählen Sie *Amazon Web Services* aus.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Erstellen Sie einen neuen Bucket, wählen Sie einen vorhandenen Bucket aus, falls bereits einer in der Konsole vorhanden ist, oder bringen Sie Ihren eigenen Bucket mit, in dem die Backups gespeichert werden.
+*** AWS-Konto, Region, Zugriffsschlüssel und geheimer Schlüssel für AWS-Anmeldeinformationen
++
+https://docs.netapp.com/us-en/storage-management-s3-storage/task-add-s3-bucket.html["Wenn Sie Ihren eigenen Bucket mitbringen möchten, lesen Sie S3-Buckets hinzufügen."^] .
+
+
+
+** *Verschlüsselung*: Wenn Sie einen neuen S3-Bucket erstellen, geben Sie die Verschlüsselungsschlüsselinformationen ein, die Sie vom Anbieter erhalten haben.  Wenn Sie einen vorhandenen Bucket auswählen, sind die Verschlüsselungsinformationen bereits verfügbar.
++
+Daten im Bucket werden standardmäßig mit von AWS verwalteten Schlüsseln verschlüsselt.  Sie können weiterhin von AWS verwaltete Schlüssel verwenden oder die Verschlüsselung Ihrer Daten mit Ihren eigenen Schlüsseln verwalten.
+
+** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten AWS-Endpunkt (PrivateLink) verwenden möchten.
++
+Wenn Sie AWS PrivateLink verwenden möchten, lesen Sie https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html["AWS PrivateLink für Amazon S3"^] .
+
+
+
+** *Backup-Sperre*: Wählen Sie, ob Ransomware Resilience Backups vor Änderungen oder Löschungen schützen soll.  Diese Option verwendet die NetApp DataLock-Technologie.  Jedes Backup wird während der Aufbewahrungsfrist oder für mindestens 30 Tage zuzüglich einer Pufferzeit von bis zu 14 Tagen gesperrt.
++
+
+CAUTION: Wenn Sie die Backup-Sperreinstellung jetzt konfigurieren, können Sie die Einstellung nach der Konfiguration des Backup-Ziels nicht mehr ändern.
+
++
+*** *Governance-Modus*: Bestimmte Benutzer (mit der Berechtigung s3:BypassGovernanceRetention) können geschützte Dateien während der Aufbewahrungsfrist überschreiben oder löschen.
+*** *Compliance-Modus*: Benutzer können geschützte Sicherungsdateien während der Aufbewahrungsfrist nicht überschreiben oder löschen.
+
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“ die Option „Einstellungen“"]
+
+
+
+== Google Cloud Platform als Backup-Ziel hinzufügen
+
+Um Google Cloud Platform (GCP) als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+Weitere Informationen zur Verwaltung Ihres GCP-Speichers in der Konsole finden Sie unter link:https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["Installationsoptionen für den Konsolenagenten in Google Cloud"^].
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Wählen Sie in der Kachel **Backup-Ziele** **Anzeigen** aus.
+. Wählen Sie **Hinzufügen**.
+. Geben Sie einen Namen für das Sicherungsziel ein.
+. Wählen Sie *Google Cloud Platform* aus.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Wählen Sie **Neuen Bucket erstellen** oder **Eigenen Bucket verwenden**.
+*** Geben Sie die Google Cloud Platform-Anmeldeinformationen an: **Access key** und **Secret key**.
+*** Wählen Sie Ihr **Projekt** und die **Region**, in der es sich befindet.
++
+image:screen-settings-backup-destination-gcp.png["Seite „Sicherungsziele“"]
+
+
+
+** *Verschlüsselung*: Wenn Sie einen neuen Bucket erstellen, geben Sie die Verschlüsselungsschlüsselinformationen ein, die Sie vom Anbieter erhalten haben.  Wenn Sie einen vorhandenen Bucket auswählen, sind die Verschlüsselungsinformationen bereits verfügbar.
++
+Die Daten im Bucket werden standardmäßig mit von Google verwalteten Schlüsseln verschlüsselt. Sie können die Standardeinstellung beibehalten, indem Sie **Google-managed keys** auswählen oder **Customer-managed keys** verwenden.
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+
+
+== Microsoft Azure als Sicherungsziel hinzufügen
+
+Um Azure als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
+
+Weitere Informationen zur Verwaltung Ihrer Azure-Anmeldeinformationen und Marketplace-Abonnements in der Konsole finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/task-adding-azure-accounts.html["Verwalten Sie Ihre Azure-Anmeldeinformationen und Marketplace-Abonnements"^] .
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Wählen Sie in der Kachel **Backup-Ziele** **Anzeigen** aus.
+. Wählen Sie **Hinzufügen**.
+. Wählen Sie *Azure* aus.
+. Wählen Sie den Abwärtspfeil neben jeder Einstellung aus und geben Sie Werte ein oder wählen Sie sie aus:
++
+** *Anbietereinstellungen*:
++
+*** Erstellen Sie ein neues Speicherkonto, wählen Sie ein vorhandenes aus, falls in der Konsole bereits eines vorhanden ist, oder verwenden Sie Ihr eigenes Speicherkonto, in dem die Sicherungen gespeichert werden.
+*** Geben Sie die Application (client) ID, das Client secret und die Directory (tenant) ID an. Wählen Sie **Authenticate**.
+*** Wählen Sie das Azure-Abonnement, die Region und die Ressourcengruppe für Ihr Azure-Abonnement aus.
++
+https://docs.netapp.com/us-en/storage-management-blob-storage/task-add-blob-storage.html["Wenn Sie Ihr eigenes Speicherkonto verwenden möchten, lesen Sie den Abschnitt Azure Blob-Speicherkonten hinzufügen."^] .
+
+
+
+** *Verschlüsselung*: Standardmäßig werden Daten mit einem von Microsoft verwalteten Schlüssel verschlüsselt. Wählen Sie **Microsoft-managed key**, um diese Option beizubehalten; alternativ können Sie **Customer managed key** wählen, um Ihre eigenen Schlüssel für die Verschlüsselung zu verwenden.
+** *Netzwerk*: Wählen Sie den IP-Bereich und geben Sie an, ob Sie einen privaten Endpunkt verwenden möchten.
++
+*** Der IPspace ist der Cluster, in dem sich die Volumes befinden, die Sie sichern möchten.  Die Intercluster-LIFs für diesen IPspace müssen über ausgehenden Internetzugang verfügen.
+*** Wählen Sie optional aus, ob Sie einen zuvor konfigurierten privaten Azure-Endpunkt verwenden möchten.
++
+Wenn Sie Azure PrivateLink verwenden möchten, lesen Sie https://azure.microsoft.com/en-us/products/private-link/["Azure PrivateLink"^] .
+
+
+
+** *Backup Lock*
++
+Wählen Sie, ob Sie die Backup-Sperre konfigurieren möchten. Mit Backup-Sperre sind Kopien vor Änderungen oder Löschung geschützt und werden auf Ransomware-Bedrohungen überprüft. Sie können diese Einstellung nach der Konfiguration des Backup-Ziels nicht mehr ändern. ** Wenn Sie keine Backup-Sperre möchten, wählen Sie **None**. ** Wählen Sie **Governance mode**, um Benutzern mit bestimmten Berechtigungen das Überschreiben oder Löschen geschützter Backup-Dateien während der Aufbewahrungsfrist zu ermöglichen. ** Wählen Sie **Compliance mode**, um zu verhindern, dass Benutzer geschützte Backup-Dateien während der Aufbewahrungsfrist überschreiben oder löschen.
+
+
+
+. Wählen Sie *Hinzufügen*.
+
+
+.Ergebnis
+Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
+
+image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“ die Option „Einstellungen“"]

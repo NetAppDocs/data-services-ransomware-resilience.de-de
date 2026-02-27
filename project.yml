@@ -30,45 +30,46 @@ sidebar:
       url: "/rp-start-quick-start.html"
     - title: Ransomware-Resilienz einrichten
       url: "/rp-start-setup.html"
-    - title: Zugriff auf Ransomware-Resilienz
-      url: "/rp-start-login.html"
     - title: Einrichten der Lizenzierung
       url: "/rp-start-licenses.html"
     - title: Workloads ermitteln
       url: "/rp-start-discover.html"
-    - title: Simulieren Sie einen Ransomware-Angriff mit einer Bereitschaftsübung
-      url: "/rp-start-simulate.html"
-    - title: Konfigurieren Sie Backups, Bedrohungserkennung und Angriffssimulationen
-        in den Einstellungen
-      url: "/rp-use-settings.html"
-    - title: SIEM konfigurieren
-      url: "/task-siem.html"
-    - title: Benutzeraktivitätserkennung konfigurieren
-      entries:
-      - title: Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten
-        url: "/concept-user-behavior.html"
-      - title: Anforderungen an die Benutzeraktivität
-        url: "/reference-user-activity-requirements.html"
-      - title: Agenten und Collector konfigurieren
-        url: "/suspicious-user-activity.html"
   - title: Nutzen Sie Ransomware-Resilienz
     entries:
-    - title: Anzeigen des Workload-Zustands mithilfe des Dashboards
+    - title: Zugriff auf Ransomware-Resilienz
+      url: "/rp-start-login.html"
+    - title: Workload-Gesundheit anzeigen
       url: "/rp-use-dashboard.html"
-    - title: Workloads schützen
+    - title: Schützen und erkennen
       entries:
       - title: Schutz überprüfen
         url: "/task-review-protection.html"
-      - title: Schützen Sie Workloads mit Strategien zum Schutz vor Ransomware
+      - title: Konfigurieren von Sicherungszielen
+        url: "/task-backup-destination.html"
+      - title: Workloads schützen
         url: "/rp-use-protect.html"
+      - title: Benutzeraktivitätserkennung konfigurieren
+        entries:
+        - title: Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten
+          url: "/concept-user-behavior.html"
+        - title: Anforderungen an die Erkennung von Benutzeraktivitäten
+          url: "/reference-user-activity-requirements.html"
+        - title: Agenten und Collector konfigurieren
+          url: "/suspicious-user-activity.html"
       - title: Schutzgruppen verwalten
         url: "/task-protection-group.html"
       - title: Scannen nach personenbezogenen Daten
         url: "/task-classify.html"
-    - title: Auf eine erkannte Warnung reagieren
-      url: "/rp-use-alert.html"
-    - title: Wiederherstellung nach einem Ransomware-Angriff
-      url: "/rp-use-recover.html"
+    - title: Reagieren und wiederherstellen
+      entries:
+      - title: Auf eine erkannte Warnung reagieren
+        url: "/rp-use-alert.html"
+      - title: Wiederherstellung nach einem Ransomware-Angriff
+        url: "/rp-use-recover.html"
+    - title: Führen Sie eine Bereitschaftsübung durch
+      url: "/rp-start-simulate.html"
+    - title: SIEM konfigurieren
+      url: "/task-siem.html"
     - title: Berichte herunterladen
       url: "/rp-use-reports.html"
   - section: support

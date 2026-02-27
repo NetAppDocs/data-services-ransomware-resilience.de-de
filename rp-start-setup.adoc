@@ -26,7 +26,7 @@ Bereiten Sie eines der folgenden Sicherungsziele vor:
 * Microsoft Azure
 
 
-Nachdem Sie Optionen im Sicherungsziel selbst konfiguriert haben, konfigurieren Sie es später als Sicherungsziel in Ransomware Resilience.  Einzelheiten zum Konfigurieren des Sicherungsziels in Ransomware Resilience finden Sie unterlink:rp-use-settings.html["Konfigurieren von Sicherungszielen"] .
+Nachdem Sie die Optionen im Backup-Ziel selbst konfiguriert haben, konfigurieren Sie es später als Backup-Ziel in Ransomware Resilience. Weitere Informationen zur Konfiguration des Backup-Ziels in Ransomware Resilience finden Sie unter link:task-backup-destination.html["Konfigurieren von Sicherungszielen"].
 
 
 

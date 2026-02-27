@@ -41,7 +41,7 @@ Die CSV- oder JSON-Dateien enthalten Daten für alle Workloads auf allen Konsole
 +
 image:screen-dashboard.png["Dashboard-Seite"]
 
-. Wählen Sie im Dashboard oder auf einer anderen Seite die Option *Aktualisieren*image:button-refresh.png["Aktualisierungsoption"] Klicken Sie oben rechts auf die Option, um die Daten zu aktualisieren, die in den Berichten angezeigt werden.
+. Wählen Sie im Dashboard oder auf einer anderen Seite die Option *Aktualisieren* image:button-refresh.png["Aktualisierungsoption"] oben rechts, um die Daten zu aktualisieren, die in den Berichten angezeigt werden.
 . Führen Sie einen der folgenden Schritte aus:
 +
 ** Wählen Sie auf der Seite *Download*image:button-download.png["Download-Option"] Option.

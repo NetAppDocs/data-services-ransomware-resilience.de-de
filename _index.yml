@@ -18,28 +18,24 @@ indexpage:
     links:
     - title: Erfahren Sie mehr über Ransomware-Resilienz
       url: "/concept-ransomware-resilience.html"
+    - title: Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten
+      url: "/concept-user-behavior.html"
     - title: Was ist neu bei Ransomware Resilience?
       url: "/whats-new.html"
     - title: Voraussetzungen
       url: "/rp-start-prerequisites.html"
     - title: Schnellstart
       url: "/rp-start-quick-start.html"
-    - title: Konfigurieren Sie Sicherungsziele und aktivieren Sie die Bedrohungserkennung
-      url: "/rp-use-settings.html"
-    - title: Simulieren Sie einen Ransomware-Angriff
-      url: "/rp-start-simulate.html"
-    - title: Konfigurieren der Erkennung verdächtiger Benutzeraktivitäten
-      url: "/suspicious-user-activity.html"
   - title: Nutzen Sie Ransomware-Resilienz
     links:
     - title: Workloads ermitteln
       url: "/rp-start-discover.html"
-    - title: Anzeigen des Workload-Zustands mithilfe des Dashboards
+    - title: Workload-Gesundheit anzeigen
       url: "/rp-use-dashboard.html"
     - title: Workloads schützen
       url: "/rp-use-protect.html"
-    - title: Scannen Sie mit NetApp Data Classification nach personenbezogenen Daten
-      url: "/task-classify.html"
+    - title: Konfigurieren Sie die Erkennung verdächtiger Benutzeraktivitäten
+      url: "/suspicious-user-activity.html"
     - title: Auf eine erkannte Warnung reagieren
       url: "/rp-use-alert.html"
     - title: Wiederherstellung nach einem Angriff

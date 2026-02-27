@@ -40,7 +40,7 @@ Ein Workload kann einen der folgenden Wiederherstellungsstatus haben:
 .Schritte
 . Führen Sie einen der folgenden Schritte aus:
 +
-** Überprüfen Sie im Dashboard die Gesamtsummen „Wiederherstellung erforderlich“ im Bereich „Warnungen“ und wählen Sie „Alle anzeigen“ aus.
+** Überprüfen Sie im Dashboard die Summen von „Restore needed“ im Warnbereich und wählen Sie *View all*.
 ** Wählen Sie im Menü *Wiederherstellung* aus.
 
 

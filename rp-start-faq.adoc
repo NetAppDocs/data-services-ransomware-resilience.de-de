@@ -120,7 +120,7 @@ A link:rp-use-protect.html#add-a-ransomware-protection-strategy["Ransomware-Schu
 Eine Backup-Richtlinie ist in der Ransomware-Resilience-Strategie nicht erforderlich.
 
 .Ist die Ransomware-Resilienz auf die Schutzeinstellungen in ONTAP vorbereitet?
-Ja, Ransomware Resilience erkennt in ONTAP festgelegte Snapshot-Zeitpläne. Es ermittelt außerdem, ob ARP und FPolicy auf allen Volumes einer erkannten Arbeitslast aktiviert sind. Die im Ransomware Resilience Dashboard angezeigten Informationen werden aus anderen NetApp -Lösungen und -Produkten zusammengeführt.
+Ja, Ransomware Resilience erkennt Snapshot-Zeitpläne, die in ONTAP festgelegt sind. Es erkennt außerdem, ob ARP und FPolicy auf allen Volumes einer erkannten Workload aktiviert sind. Die Informationen, die Sie im Ransomware Resilience-Dashboard sehen, werden aus anderen NetApp Lösungen und Produkten zusammengeführt.
 
 .Ist Ransomware Resilience mit den bereits in Backup and Recovery und SnapCenter festgelegten Richtlinien vertraut?
 Ja, wenn Sie Workloads in Backup and Recovery oder SnapCenter verwalten, werden die von diesen Produkten verwalteten Richtlinien in Ransomware Resilience übernommen.

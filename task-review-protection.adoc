@@ -32,7 +32,7 @@ Einer der ersten Schritte zum Schutz von Workloads besteht darin, Ihre aktuellen
 . Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz*.
 . Führen Sie einen der folgenden Schritte aus:
 +
-** Wählen Sie im Bereich „Datenschutz“ des Dashboards die Option „Alle anzeigen“ aus.
+** Wählen Sie im Bereich „Data Protection“ auf dem Dashboard *View all* aus.
 ** Wählen Sie im Menü *Schutz* aus.
 +
 image:screen-protection.png["Schutzseite"]
