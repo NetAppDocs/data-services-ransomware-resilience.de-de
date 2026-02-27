@@ -79,7 +79,7 @@ Um diese Workloads zu schützen, sollten Sie ein Sicherungsziel hinzufügen.  Si
 
 
 
-NOTE: Sicherungsziele sind für Workloads in Amazon FSx for NetApp ONTAP oder Azure NetApp Files nicht verfügbar. Führen Sie Sicherungsvorgänge mit nativen Sicherungslösungen durch: FSx for ONTAP Backup Service oder Azure NetApp Files Backups.
+NOTE: Sicherungsziele sind für Workloads in Amazon FSx for NetApp ONTAP und Azure NetApp Files nicht verfügbar. Führen Sie Sicherungsvorgänge mit nativen Sicherungslösungen durch: FSx for ONTAP Backup Service oder Azure NetApp Files Backups.
 
 Sie können ein Sicherungsziel basierend auf einer empfohlenen Aktion vom Dashboard oder durch Zugriff auf die Option „Einstellungen“ im Menü hinzufügen.
 
