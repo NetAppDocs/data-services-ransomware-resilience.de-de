@@ -14,7 +14,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 === Verbesserter Workload-Schutz
 
-Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie SnapCenter oder BlueXP backup and recovery. In früheren Versionen erkannte der BlueXP ransomware protection die Richtlinien anderer Tools und ermöglichte Ihnen nur, die Erkennungsrichtlinie zu ändern. Mit dieser Version können Sie jetzt Snapshot- und Backup-Richtlinien durch BlueXP ransomware protection -Schutzrichtlinien ersetzen oder die Richtlinien anderer Tools weiterhin verwenden.
+Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie BlueXP Backup und Recovery. In früheren Versionen hat der BlueXP Ransomware-Schutz die Richtlinien von anderen Tools erkannt und erlaubte nur die Änderung der Erkennungsrichtlinie. Mit dieser Version können Sie nun Snapshot- und Backup-Richtlinien durch BlueXP Ransomware-Schutzrichtlinien ersetzen oder weiterhin die Richtlinien von anderen Tools verwenden.
 
 Weitere Einzelheiten finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Workloads schützen"] .
 

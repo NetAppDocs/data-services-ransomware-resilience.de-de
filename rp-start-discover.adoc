@@ -19,10 +19,7 @@ Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unter
 
 NOTE: Ransomware Resilience erkennt keine Workloads mit Volumes, die FlexGroup verwenden.
 
-Ransomware Resilience überprüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und die Optionen für den autonomen Ransomware-Schutz von NetApp . Ransomware Resilience erkennt außerdem Schutzinformationen von SnapCenter for VMware für VM-Datenspeicher, SnapCenter for Oracle und NetApp Backup and Recovery für Dateifreigaben und VM-Dateifreigaben. Anschließend werden Ihnen Möglichkeiten zur Verbesserung Ihres Ransomware-Schutzes empfohlen.
-
-
-IMPORTANT: Obwohl Ransomware Resilience Richtlinien von SnapCenter erkennt, können Sie mit Ransomware Resilience keine Wiederherstellung über SnapCenter durchführen.
+Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und NetApp Autonomous Ransomware Protection Optionen. Ransomware Resilience erkennt außerdem Schutzinformationen von NetApp Backup and Recovery für Dateifreigaben und VM-Dateifreigaben. Anschließend empfiehlt es Möglichkeiten zur Verbesserung Ihres Ransomware-Schutzes.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 

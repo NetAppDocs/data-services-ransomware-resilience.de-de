@@ -52,8 +52,6 @@ Neben Ransomware Resilience können Sie NetApp Backup and Recovery verwenden, um
 
 Schutzinformationen von Backup & Recovery Services werden in Ransomware Resilience angezeigt. Sie können diesen Services mit Ransomware Resilience Erkennungsrichtlinien hinzufügen. Das Hinzufügen einer Datensicherungsstrategie mit Ransomware Resilience ersetzt die bestehenden Datensicherungsstrategien.
 
-Ransomware Resilience erkennt außerdem Datensicherungsstrategien von SnapCenter for VMware für VM-Datenspeicher und SnapCenter for Oracle. Sie können diese Dienste nicht zur Wiederherstellung mit Ransomware Resilience verwenden.
-
 Wenn eine Ransomware-Erkennungsrichtlinie von Autonomous Ransomware Protection (ARP oder ARP/AI, je nach ONTAP Version) und FPolicy in ONTAP verwaltet wird, sind diese Workloads geschützt und werden weiterhin von ARP und FPolicy verwaltet.
 
 

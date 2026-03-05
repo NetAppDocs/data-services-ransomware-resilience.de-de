@@ -112,7 +112,6 @@
   <block id="1e4e512c953bb68c6492ac3e8c1ea138" category="inline-link-macro">Voraussetzungen für den BlueXP ransomware protection</block>
   <block id="8b61f628ff6c584959e081dfc4edebb6" category="paragraph">Weitere Informationen finden Sie unter <block ref="c4baa86796975d4c7e6a1153b246f3d1" category="inline-link-macro-rx"></block> .</block>
   <block id="e155741c288e2488f325db0165488b59" category="section-title">Verbesserter Workload-Schutz</block>
-  <block id="9bd93ada9b2fbfbf189c8da933c74698" category="paragraph">Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie SnapCenter oder BlueXP backup and recovery. In früheren Versionen erkannte der BlueXP ransomware protection die Richtlinien anderer Tools und ermöglichte Ihnen nur, die Erkennungsrichtlinie zu ändern. Mit dieser Version können Sie jetzt Snapshot- und Backup-Richtlinien durch BlueXP ransomware protection -Schutzrichtlinien ersetzen oder die Richtlinien anderer Tools weiterhin verwenden.</block>
   <block id="bf4011ddd9ae5a6521f75843972999ab" category="inline-link-macro">Workloads schützen</block>
   <block id="cf51b26fb14f613d642588e747a6409b" category="paragraph">Weitere Einzelheiten finden Sie unter<block ref="fe8b859db0e9e0c241fb61d50beda51d" category="inline-link-macro-rx"></block> .</block>
   <block id="a67ce68ccac082ad54a552bdbcb6ecd7" category="section-title">E-Mail-Benachrichtigungen</block>
@@ -172,7 +171,6 @@
   <block id="26f7eb76c3f0032daa502e8f74affdf8" category="list-text">Wendet KI-/ML-gesteuerte Datenschutzempfehlungen mit Ein-Klick-Zugriff an.</block>
   <block id="c530e1fdcf59b6298208943bc8050282" category="list-text">Erkennt mithilfe von KI-Technologie Ransomware-Angriffe auf Daten im Primärspeicher in Echtzeit.</block>
   <block id="8343e8aa9aee8047de78869e0826e3b6" category="list-text">Leitet als Reaktion auf erkannte potenzielle Angriffe automatisierte Aktionen ein, indem es Snapshot-Kopien erstellt und Warnungen bei ungewöhnlichen Aktivitäten auslöst.</block>
-  <block id="4a72582f981b12d4f27dceb8b0d7dbb9" category="list-text">Wendet kuratierte Wiederherstellung an, um RPO-Richtlinien zu erfüllen.  Ransomware Resilience orchestriert die Wiederherstellung nach Ransomware-Vorfällen mithilfe mehrerer NetApp Wiederherstellungsdienste, darunter NetApp Backup and Recovery (früher Cloud Backup) und SnapCenter.</block>
   <block id="5af59cc2b4c7693a13f53462b371bb84" category="list-text">Verwendet die rollenbasierte Zugriffskontrolle (RBAC), um den Zugriff auf Funktionen und Vorgänge zu regeln.</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Kosten</block>
   <block id="644c6176733b0f8cdca928e0cc985955" category="paragraph">Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resilience verfügen, werden alle gemeinsamen Daten, die durch beide Produkte geschützt werden, nur über Ransomware Resilience abgerechnet.</block>
@@ -193,7 +191,6 @@
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">Funktion</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Beschreibung</block>
   <block id="3d39c52f84949476c9663603ca01f73f" category="cell">*IDENTIFIZIEREN*</block>
-  <block id="c82f46c0119153d2fbb052c15694e283" category="list-text">Findet alle lokalen NAS- (NFS- und CIFS-Protokolle), SAN- (FC, iSCSI und NVMe) und Cloud Volumes ONTAP Daten des Kunden, die mit der Konsole verbunden sind.</block>
   <block id="253b40ae359ba25b56231803430c4873" category="inline-link">ONTAP</block>
   <block id="533c17bbfdfb297420db9af0908070d6" category="inline-link">Autonomer Ransomware-Schutz</block>
   <block id="cc6088539286339733631d73fb51774b" category="inline-link">NetApp Backup and Recovery</block>
@@ -305,8 +302,6 @@
   <block id="43963265d27ac7360fe50e98bde4f748" category="list-text">Richtlinie zur Ransomware-Erkennung</block>
   <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">Snapshot-Richtlinie</block>
   <block id="f85025bdaaee4c51a3c8a6a750214305" category="paragraph">Eine Backup-Richtlinie ist in der Ransomware-Resilience-Strategie nicht erforderlich.</block>
-  <block id="0fb2074acd01e003dfb96452aab97fe5" category="paragraph">Ja, wenn Sie Workloads in Backup and Recovery oder SnapCenter verwalten, werden die von diesen Produkten verwalteten Richtlinien in Ransomware Resilience übernommen.</block>
-  <block id="554f865a5796d8129c776f0577cf3139" category="paragraph">Nein, Sie können von Ransomware Resilience aus keine von Backup and Recovery oder SnapCenter verwalteten Richtlinien ändern.  Sie verwalten alle Änderungen an diesen Richtlinien in Backup and Recovery oder SnapCenter.</block>
   <block id="830a27164c48c0901dff35b6935793d3" category="paragraph">Nein. Ransomware Resilience ändert keine vorhandenen Erkennungsrichtlinien (ARP-, FPolicy-Einstellungen) von ONTAP.</block>
   <block id="e2ec1056e393e1702e9916034506b224" category="paragraph">Ja, Sie können Richtlinien von ONTAP in Ransomware Resilience ändern.  Sie können in Ransomware Resilience auch neue Richtlinien erstellen und auf Workloads anwenden.  Diese Aktion ersetzt vorhandene ONTAP -Richtlinien durch die in Ransomware Resilience erstellten Richtlinien.</block>
   <block id="389b413db649d1d5d2854fd3e4faf2e6" category="paragraph">Sie können FPolicy- und Sicherungsrichtlinien deaktivieren, indem Sie eine andere Richtlinie anwenden, die diese nicht enthält.</block>
@@ -1325,19 +1320,14 @@
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06. Oktober 2025</block>
   <block id="d341f0c47f4b7ad5cc1b4c9bb210cfda" category="section-title">12. August 2025</block>
   <block id="36981b3e282313667db719384f6f7a69" category="section-title">15. Juli 2025</block>
-  <block id="f27f1ce6df3e2ec2518f77e8e1a4a531" category="section-title">9. Juni 2025</block>
   <block id="71df7d09aaee8e6796df0c3d10989fbd" category="section-title">13. Mai 2025</block>
   <block id="8855742ef7ac60d26f35536e1d09aef9" category="section-title">29. April 2025</block>
   <block id="4409983c60e456858bb3e9ef5737f98a" category="section-title">14. April 2025</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10. März 2025</block>
   <block id="c33f35ab44944cc0d09e5bb702125592" category="section-title">16. Dezember 2024</block>
-  <block id="21e938043b4ef6be41f16e95f7f5aaaa" category="section-title">7. November 2024</block>
   <block id="964635dcf6206ebb279b58d13cf69a92" category="section-title">30. September 2024</block>
-  <block id="28dc8814bfe656bc8e29052d1508b999" category="section-title">2. September 2024</block>
-  <block id="dd6b8bf5a56c8beb81b173991906c83e" category="section-title">5. August 2024</block>
   <block id="d87d7ee64c0c4e6b9769c640d8889cd0" category="section-title">Bedrohungserkennung mit Splunk Cloud</block>
   <block id="40c15e54846f2454a459bb0ef7ba9faa" category="paragraph">Sie können Daten zur Bedrohungsanalyse und -erkennung automatisch an Ihr Sicherheits- und Ereignismanagementsystem (SIEM) senden.  Bei früheren Versionen konnten Sie nur den AWS Security Hub als Ihr SIEM auswählen.  Mit dieser Version können Sie den AWS Security Hub oder Splunk Cloud als Ihr SIEM auswählen.</block>
-  <block id="16ec862fdbc31bf15f7d944ad60dd33f" category="section-title">1. Juli 2024</block>
   <block id="3ad6a80bb44b13a7ad34ad835b0166d5" category="paragraph">Mit dieser Version können Sie eine BYOL-Lizenz verwenden, bei der es sich um eine NetApp -Lizenzdatei (NLF) handelt, die Sie von Ihrem NetApp Vertriebsmitarbeiter erhalten.</block>
   <block id="a0f248fceae83613cf99c651e3c24be5" category="inline-link">Weitere Informationen zum Einrichten der Lizenzierung</block>
   <block id="9d5aaa8966c5e35be75ef082fe317272" category="paragraph"><block ref="52acad0b8ccf8676f5a7124bd999ec73" category="inline-link-rx"></block> .</block>
@@ -1375,8 +1365,6 @@
   <block id="ea68074e88ed0ee034f46a22da4207e3" category="paragraph">Diese Version bietet jetzt mehr Details in den Workload-Informationen vom Schutz und anderen Seiten für eine verbesserte Bewertung des Workload-Schutzes.  Anhand der Workload-Details können Sie die aktuell zugewiesene Richtlinie und die konfigurierten Sicherungsziele überprüfen.</block>
   <block id="e959f6b23824b1ea02ac36779938412d" category="inline-link">Erfahren Sie mehr über das Anzeigen von Workloaddetails auf den Schutzseiten</block>
   <block id="282209fca8545cb316f2eba7f3a62db7" category="paragraph"><block ref="30b7f8b521639e51a1e6fc42e56a3552" category="inline-link-rx"></block> .</block>
-  <block id="8d99eb044387ccaf47ae81f4bc0e655c" category="section-title">Anwendungskonsistenter und VM-konsistenter Schutz und Wiederherstellung</block>
-  <block id="2d27a1cb1cddcea603af3821a038c473" category="paragraph">Sie können jetzt anwendungskonsistenten Schutz mit der NetApp SnapCenter -Software und VM-konsistenten Schutz mit dem SnapCenter Plug-in for VMware vSphere durchführen und so einen ruhigen und konsistenten Zustand erreichen, um einen möglichen späteren Datenverlust zu vermeiden, falls eine Wiederherstellung erforderlich ist.  Wenn eine Wiederherstellung erforderlich ist, können Sie die Anwendung oder VM in einen der zuvor verfügbaren Zustände zurückversetzen.</block>
   <block id="ee689c35077ba98079c7b0a4f05a6dc5" category="inline-link">Erfahren Sie mehr über den Schutz von Workloads</block>
   <block id="6e679110b5603dd298546f6066c877b0" category="paragraph"><block ref="e6accfa7d08294e7415997a8922d3847" category="inline-link-rx"></block> .</block>
   <block id="2ffdf2b6c5684e4c6c9a1519e96a8cdd" category="section-title">Strategien zum Schutz vor Ransomware</block>
@@ -1402,7 +1390,6 @@
   <block id="ede1cce9f240fed5ecc4264bd699cee1" category="section-title">BlueXP backup and recovery</block>
   <block id="609943abdcf36e6b01b6e1bd91561708" category="section-title">Einstellungsoption</block>
   <block id="dca5a35d56928cb7458a60a545581862" category="paragraph">Sie können jetzt Sicherungsziele in den Einstellungen des BlueXP ransomware protection einrichten.</block>
-  <block id="592997dde366d5775e7e052816854f74" category="section-title">5. März 2024</block>
   <block id="43ce8197249a120a136331aaa3e00c1d" category="section-title">Schutzrichtlinienverwaltung</block>
   <block id="cf69a03aa5287886f0e8d3de1a6334cc" category="inline-link">Weitere Informationen zum Verwalten von Richtlinien</block>
   <block id="d609cfbd89a3fada16238b8a39148f46" category="paragraph">Zusätzlich zur Verwendung vordefinierter Richtlinien können Sie jetzt Richtlinien erstellen.<block ref="c308b2d22c33a15b90252d49c2873920" category="inline-link-rx"></block> .</block>
@@ -1417,7 +1404,6 @@
   <block id="1308d0f084fdb39839541aaf971b23ff" category="section-title">Wiederherstellungsprozess</block>
   <block id="bda01efb679b0ca92bc4e76a23294328" category="inline-link">Erfahren Sie mehr über die Wiederherstellung nach einem Ransomware-Angriff (nachdem Vorfälle neutralisiert wurden)</block>
   <block id="77d6960ddc4ee40e26fd963e6e1f6e68" category="paragraph">Der Wiederherstellungsprozess wurde verbessert. Jetzt können Sie Volume für Volume oder alle Volumes für eine Arbeitslast wiederherstellen.<block ref="2db5667b5f183f51656a41f32740d8f2" category="inline-link-rx"></block> .</block>
-  <block id="69483d973a063c873a5a66f6edcc241c" category="section-title">6. Oktober 2023</block>
   <block id="ae98c30c78f5642e201d040b9e0b468c" category="paragraph">Der BlueXP ransomware protection ist eine SaaS-Lösung zum Schutz von Daten, zur Erkennung potenzieller Angriffe und zur Wiederherstellung von Daten nach einem Ransomware-Angriff.</block>
   <block id="75b67029f102f7aa5f52d85fbaeb59b1" category="paragraph">Der BlueXP ransomware protection bietet die volle Nutzung mehrerer NetApp -Technologien, sodass Ihr Datensicherheitsadministrator oder Sicherheitsbetriebsingenieur die folgenden Ziele erreichen kann:</block>
   <block id="c97c8c1adb5529a50db916535c46fa2b" category="list-text">Sehen Sie sich auf einen Blick den Ransomware-Schutz für alle Ihre Workloads an.</block>
@@ -1523,8 +1509,6 @@
   <block id="109ebdb84b226b323abc2b47b353e5f4" category="paragraph">Sie können mit jedem modernen Webbrowser auf die NetApp Console zugreifen.</block>
   <block id="67a915151759ecc737f698391f7cfd08" category="section-title">Interoperabilität</block>
   <block id="10c4fe0b6e00d5560df8e602d85a5bd1" category="paragraph">Ja, Ransomware Resilience erkennt in ONTAP festgelegte Snapshot-Zeitpläne.</block>
-  <block id="8ed72bdbbdc0df9146a0777651178cbf" category="paragraph-title">Wie interagiert Ransomware Resilience mit NetApp Backup and Recovery und SnapCenter?</block>
-  <block id="8f3fc6dee049aeb65422cea50c997060" category="paragraph">Ransomware Resilience arbeitet mit Backup und Recovery zusammen, um Snapshot- und Backup-Richtlinien für Dateifreigabe-Workloads zu ermitteln und festzulegen.</block>
   <block id="282764b1530b129720ca01a123b6f6ce" category="paragraph-title">Was versteht man unter Arbeitslast im Kontext von Ransomware-Resilienz?</block>
   <block id="10c8ec686acd93b9da39b3efea09bc01" category="paragraph">Eine Workload ist eine Anwendung, eine VM oder eine Dateifreigabe. Eine Arbeitslast umfasst alle Volumes, die von einer einzelnen Anwendungsinstanz verwendet werden.</block>
   <block id="f7e19062cc2eaeb5901ce8337d69e539" category="paragraph">Betrachten wir beispielsweise eine Oracle-Datenbank, die auf ora3.host.com bereitgestellt ist mit<block ref="2b0d59c7031769e80c8e5118b6ec7694" prefix=" " category="inline-code"></block> enthaltend Daten und<block ref="a110e8ed91b0de267a5728888b1f4ed1" prefix=" " category="inline-code"></block> enthaltend Protokolle. Die beiden Volumes bilden die Arbeitslast für diese Oracle-Datenbankinstanz.</block>
@@ -1533,7 +1517,6 @@
   <block id="79444a9daf1e4ef34a492d7a4ccc93fd" category="paragraph-title">Welche Workloads werden von Ransomware Resilience unterstützt?</block>
   <block id="65a602dc25a2da85e0a1dfb15824b10b" category="paragraph-title">Wie ordnet man Daten einer Arbeitslast zu?</block>
   <block id="e2201c0935bcdfd14ed840897f30bcdc" category="paragraph">Ransomware Resilience erkennt die Volumes und die Dateierweiterungen und ordnet sie der entsprechenden Arbeitslast zu.</block>
-  <block id="bbcd2d0377872826c23c1bf4bcd98e47" category="paragraph">Wenn Sie SnapCenter oder SnapCenter for VMware besitzen und Workloads in Backup and Recovery konfiguriert haben, erkennt Ransomware Resilience die von SnapCenter und SnapCenter for VMware verwalteten Workloads sowie die zugehörigen Volumes.</block>
   <block id="f7d49d845f0e8fd37a070e797785ddd2" category="paragraph-title">Was ist eine geschützte Arbeitslast?</block>
   <block id="7259cd6e0f46eebf9079f25f465a8c63" category="inline-link-macro">Autonomer Ransomware-Schutz (ARP)</block>
   <block id="7fd0dced59717f1ce225e83c1eba7879" category="paragraph">In Ransomware Resilience wird eine Arbeitslast als *geschützt* angezeigt, wenn eine primäre Erkennungsrichtlinie aktiviert ist, was bedeutet: <block ref="f47b2a56bf7e72f952a180e4f688a755" category="inline-link-macro-rx"></block> ist auf allen Volumes aktiviert, die mit der Arbeitslast zusammenhängen.</block>
@@ -1550,11 +1533,7 @@
   <block id="eb736865032ae478d0b6e5b412448020" category="paragraph">A <block ref="5f4e714854e79a1737929ec78e18ea2b" category="inline-link-macro-rx"></block> erfordert:</block>
   <block id="03e55fcba3b01c6e3fb1919d269654c0" category="list-text">eine Ransomware-Erkennungsrichtlinie und</block>
   <block id="3f6fda029d0c02be255dfd8176381b0b" category="list-text">eine Snapshot-Richtlinie</block>
-  <block id="b47f32a472405e3fa06c5fd8b5ce74b9" category="paragraph-title">Ist Ransomware Resilience mit den bereits in Backup and Recovery und SnapCenter festgelegten Richtlinien vertraut?</block>
-  <block id="f9368916b722dbf65864396e08a2f81a" category="paragraph-title">Können die von NetApp Backup and Recovery und/oder SnapCenter übernommenen Richtlinien geändert werden?</block>
   <block id="1b574bfc0313243d6641e2a840917179" category="paragraph-title">Falls in ONTAP Richtlinien vorhanden sind (wie ARP, FPolicy und Snapshots), werden diese in Ransomware Resilience geändert?</block>
-  <block id="4f169f5ccc5598c9065c573b18437be7" category="paragraph-title">Was passiert, wenn Sie nach der Anmeldung für Ransomware Resilience neue Richtlinien in Backup and Recovery oder SnapCenter hinzufügen?</block>
-  <block id="1481f2014d70d8be4eaa9d42a2ac7e81" category="paragraph">Ransomware Resilience erkennt neu erstellte Richtlinien und Richtlinienänderungen in Backup and Recovery oder SnapCenter.</block>
   <block id="9e4bf76e69b44d54bda6324e7a451d29" category="paragraph-title">Können Richtlinien über ONTAP geändert werden?</block>
   <block id="8eb907afc706971993c8bde086302ff0" category="paragraph-title">Kann man Richtlinien in ONTAP deaktivieren?</block>
   <block id="7986143a8e8e26aa1cd4fe5e42208a2b" category="paragraph">Sie können ARP in Erkennungsrichtlinien über die System Manager-Benutzeroberfläche, APIs oder CLI in ONTAP deaktivieren.</block>
@@ -1713,7 +1692,6 @@
   <block id="f20af4e11539d270463e7ed46557be6f" category="paragraph">Bevor Sie NetApp Ransomware Resilience nutzen können, müssen zunächst die Workload-Daten ermittelt werden. Während der Erkennung analysiert Ransomware Resilience alle Volumes und Dateien in Systemen über alle Konsolenagenten und Projekte innerhalb einer Organisation hinweg.</block>
   <block id="55971de7d1268c37251f60641b742b76" category="paragraph">Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unterstützte Systemkonfigurationen an. Ransomware Resilience bewertet Oracle-Anwendungen, VMware-Datenspeicher, Dateifreigaben und Blockspeicher.</block>
   <block id="1e55889dc96c3aa2614c39626c9cecdd" category="admonition">Ransomware Resilience erkennt keine Workloads mit Volumes, die FlexGroup verwenden.</block>
-  <block id="c0605366a345249c74664f31f92636c4" category="paragraph">Ransomware Resilience überprüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und die Optionen für den autonomen Ransomware-Schutz von NetApp . Ransomware Resilience erkennt außerdem Schutzinformationen von SnapCenter for VMware für VM-Datenspeicher, SnapCenter for Oracle und NetApp Backup and Recovery für Dateifreigaben und VM-Dateifreigaben. Anschließend werden Ihnen Möglichkeiten zur Verbesserung Ihres Ransomware-Schutzes empfohlen.</block>
   <block id="242b6b00ff2f35d933e337704d202041" category="list-text">Wählen Sie auf der Workload-Erkennungskarte *Workloads erkennen* aus. Die Suche kann einige Minuten dauern.  Ein Ladesymbol zeigt den Fortschritt an.</block>
   <block id="728cc93ad9329b5fca77365b0336ce77" category="list-text">Ransomware Resilience erkennt sowohl unterstützte als auch nicht unterstützte Systeme. Es unterstützt kein System, wenn dessen ONTAP Version unterhalb der erforderlichen Version liegt. Wenn Sie mit der Maus über ein nicht unterstütztes System fahren, wird in einem Tooltip der Grund angezeigt. Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.</block>
   <block id="ee23d61365a6507dff70606d3790e1de" category="list-text">Reagieren Sie auf potenzielle Ransomware-Angriffe, indem Sie automatisch einen Momentaufnahme-Scan erstellen, der gesperrt ist, sodass die Kopie nicht versehentlich oder böswillig gelöscht werden kann. Ihre Sicherungsdaten bleiben unveränderlich und sind sowohl am Quellort als auch am Zielort umfassend vor Ransomware-Angriffen geschützt.</block>
@@ -1964,18 +1942,12 @@
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">16. Februar 2026</block>
   <block id="51f5590fac3af82049df229fcb91793c" category="sidebar">SIEM konfigurieren</block>
   <block id="8944abed4a7795983ff8cde0c660dfda" category="paragraph">Ransomware Resilience verwendet NetApp Backup and Recovery, um Snapshot- und Backup-Richtlinien für Dateifreigabe-Workloads zu erkennen und festzulegen.</block>
-  <block id="7275b90366e3424df414ea245c97ebe6" category="list-text">Identifiziert Kundendaten aus ONTAP und SnapCenter Service-APIs und ordnet sie Workloads zu. Erfahren Sie mehr über<block ref="a16fd9a0601d0464b4c9ce4f59c2454b" category="inline-link-rx"></block>.</block>
   <block id="c7508e265b893e4d518594502d79c380" category="list-text">Überwacht aktiv die Workloads und orchestriert die Nutzung der Backup and Recovery- und ONTAP-APIs, indem Richtlinien auf jede der identifizierten Workloads angewendet werden.</block>
-  <block id="8ab694960534ed38cae5f75597a21b9b" category="admonition">Obwohl Ransomware Resilience Richtlinien von SnapCenter erkennt, können Sie mit Ransomware Resilience keine Wiederherstellung über SnapCenter durchführen.</block>
-  <block id="52632b136c48766a9fb3109144810641" category="paragraph">Ransomware Resilience arbeitet mit SnapCenter oder SnapCenter for VMware zusammen, um Snapshot- und Backup-Richtlinien für Anwendungs- und VM-Workloads zu ermitteln und festzulegen. Derzeit können Sie Ransomware Resilience nicht für die Wiederherstellung mit SnapCenter verwenden.</block>
-  <block id="33be3f4617dbd57db084d6df8086348f" category="paragraph">Ransomware Resilience arbeitet außerdem mit Backup and Recovery zusammen, um eine datei- und workload-konsistente Wiederherstellung durchzuführen.</block>
-  <block id="ae785e9a302942d106ead6b14e222e26" category="paragraph">Wenn Sie SnapCenter oder SnapCenter für VMware verwenden, werden alle von diesen Produkten unterstützten Workloads auch in Ransomware Resilience identifiziert.</block>
   <block id="e47b008a3c9b07db3a7f7c525eeccc5a" category="cell">Weisen Sie jedem Workload eine Richtlinie zu. Siehe <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>. Siehe <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>. Siehe <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>.</block>
   <block id="402b250b6b0cd33bf0396353ed30be82" category="inline-link-macro">Gruppen-Workloads</block>
   <block id="c35d66439764aa49afc7babd31dd817e" category="admonition">Für eine verbesserte Verwaltung und einen besseren Schutz Ihrer Datenbestände können Sie <block ref="f976640ede437bd07da0e62885caa3e9" category="inline-link-macro-rx"></block> erstellen, um Volumes gemeinsam unter einer Strategie zu schützen.</block>
   <block id="32fcd2ee690f5f3556594e0a5c86b657" category="paragraph">Neben Ransomware Resilience können Sie NetApp Backup and Recovery verwenden, um den Schutz für Dateifreigaben und VM-Dateifreigaben zu verwalten.</block>
   <block id="19df373c6eb28e440c7376f7b6153ac6" category="paragraph">Schutzinformationen von Backup &amp; Recovery Services werden in Ransomware Resilience angezeigt. Sie können diesen Services mit Ransomware Resilience Erkennungsrichtlinien hinzufügen. Das Hinzufügen einer Datensicherungsstrategie mit Ransomware Resilience ersetzt die bestehenden Datensicherungsstrategien.</block>
-  <block id="42a88e6373b8a6a0a4d8625012fbd018" category="paragraph">Ransomware Resilience erkennt außerdem Datensicherungsstrategien von SnapCenter for VMware für VM-Datenspeicher und SnapCenter for Oracle. Sie können diese Dienste nicht zur Wiederherstellung mit Ransomware Resilience verwenden.</block>
   <block id="5faff4d5da024e537f30a6f61e63b11d" category="paragraph">Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience verwaltet wird, wurden möglicherweise Snapshots im Rahmen von ONTAP oder anderen Produkten erstellt. Wenn ONTAP FPolicy-Schutz aktiviert ist, können Sie den FPolicy-Schutz mit ONTAP ändern.</block>
   <block id="294bdeaab3c13eeb5476a96b2a4d7991" category="list-text">**Ersetzen Sie die bestehenden Snapshot- oder Backup-Richtlinien von Backup and Recovery protection durch Datensicherungsstrategien, die von Ransomware Resilience verwaltet werden.**</block>
   <block id="f9dbe879fedc698e4cd50df0431ab680" category="section-title">Fügen Sie eine Erkennungsrichtlinie zu Workloads mit vorhandenen Snapshot- und Backup-Richtlinien hinzu, die von Backup and Recovery verwaltet werden</block>
@@ -2165,4 +2137,24 @@
   <block id="0fbc6e1e6b007cdd357b2d64d431dff7" category="sidebar">Anforderungen an die Erkennung von Benutzeraktivitäten</block>
   <block id="9625b1e458d75145b2fbf2d4b886fc70" category="sidebar">Reagieren und wiederherstellen</block>
   <block id="d805ea206a1d58881a7d28213018ae80" category="sidebar">Führen Sie eine Bereitschaftsübung durch</block>
+  <block id="a23f6543c6afd691624522ac1b0c2620" category="paragraph">Diese Version verbessert den Konfigurationsprozess für Workloads mit Snapshot- und Backup-Richtlinien von anderen NetApp Tools wie BlueXP Backup und Recovery. In früheren Versionen hat der BlueXP Ransomware-Schutz die Richtlinien von anderen Tools erkannt und erlaubte nur die Änderung der Erkennungsrichtlinie. Mit dieser Version können Sie nun Snapshot- und Backup-Richtlinien durch BlueXP Ransomware-Schutzrichtlinien ersetzen oder weiterhin die Richtlinien von anderen Tools verwenden.</block>
+  <block id="b720eb62a1de68d6cb9c9dbea3c63907" category="list-text">Setzt optimierte Wiederherstellungsmaßnahmen ein, um RPO-Richtlinien zu erfüllen. Ransomware-Resilienz orchestriert die Wiederherstellung nach Ransomware-Angriffen durch NetApp Backup und Recovery.</block>
+  <block id="a819c959f129152fca4db3ef3b38727c" category="list-text">Findet alle Kundendaten in On-Premises- und Cloud-NAS-Systemen (NFS- und CIFS-Protokolle) sowie in SAN-Systemen (FC, iSCSI und NVMe), die an die Console angeschlossen sind.</block>
+  <block id="d24b6d4f9b8a5c2126c721c0f8b448e5" category="list-text">Identifiziert Kundendaten aus ONTAP und Backup und Recovery Service-APIs und ordnet sie Workloads zu. Erfahren Sie mehr über<block ref="a16fd9a0601d0464b4c9ce4f59c2454b" category="inline-link-rx"></block>.</block>
+  <block id="5d81d4b181b1f6e47c262988038cd67d" category="paragraph">Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und NetApp Autonomous Ransomware Protection Optionen. Ransomware Resilience erkennt außerdem Schutzinformationen von NetApp Backup and Recovery für Dateifreigaben und VM-Dateifreigaben. Anschließend empfiehlt es Möglichkeiten zur Verbesserung Ihres Ransomware-Schutzes.</block>
+  <block id="c048f8419f5606e294e716a232b223a2" category="paragraph-title">Wie interagiert Ransomware-Resilienz mit NetApp Backup und Recovery?</block>
+  <block id="eadde9be35eb975c3bbd5558937ea6ce" category="paragraph">Ransomware Resilience arbeitet mit Backup und Recovery zusammen, um Snapshot- und Backup-Richtlinien für Dateifreigabe-Workloads zu entdecken und festzulegen. Ransomware Resilience arbeitet außerdem mit Backup und Recovery zusammen, um eine datei- und workloadkonsistente Wiederherstellung durchzuführen.</block>
+  <block id="79b8a65e3601fc128a20382435361146" category="paragraph-title">Berücksichtigt die Ransomware-Resilienz die bereits in Backup und Recovery festgelegten Richtlinien?</block>
+  <block id="94a13b2631414c7aa1bd5efb554c98aa" category="paragraph">Ja, wenn Sie Workloads in Backup und Recovery verwalten, werden die von diesen Produkten verwalteten Richtlinien in Ransomware Resilience übernommen.</block>
+  <block id="f88bf8ade397c623545ba47ce5394409" category="paragraph-title">Können Sie Richtlinien ändern, die aus NetApp Backup und Recovery übernommen wurden?</block>
+  <block id="dd9161665fa6e8f8df843bd9c2b959be" category="paragraph">Nein, Sie können von Backup und Recovery verwaltete Richtlinien nicht über Ransomware Resilience ändern. Sie verwalten Änderungen an diesen Richtlinien in Backup und Recovery.</block>
+  <block id="12d4775c2501ee99b589ba7851a2ec0d" category="paragraph-title">Was passiert, wenn Sie nach der Anmeldung für Ransomware Resilience neue Richtlinien in Backup und Recovery hinzufügen?</block>
+  <block id="c50c4204dc83ed0ae4638ebc55abb4b1" category="paragraph">Ransomware Resilience erkennt neu erstellte Richtlinien und Richtlinienänderungen in Backup und Recovery.</block>
+  <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">09. Juni 2025</block>
+  <block id="9ad1cefff7f21461e44e8caa68c8b2b5" category="section-title">07. November 2024</block>
+  <block id="89d81f51c3713b55bed81e8aaf5ec742" category="section-title">02. September 2024</block>
+  <block id="d7cf77b2e56bc33512915804de4711b6" category="section-title">05. August 2024</block>
+  <block id="65f1f74c15350fb3342360320ff8c717" category="section-title">01. Juli 2024</block>
+  <block id="c3084a9e2d458e9a14fb0606a505126d" category="section-title">05. März 2024</block>
+  <block id="ff1c2e86cdd326544983c6d6affd39a5" category="section-title">06. Oktober 2023</block>
 </blocks>
