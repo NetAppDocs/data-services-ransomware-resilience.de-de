@@ -36,6 +36,15 @@ Die Ransomware-Resilienz ist derzeit nur im Standardmodus verfügbar.
 
 Eine Erläuterung dieser Modi für alle NetApp -Datendienste finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Bereitstellungsmodi der NetApp Console"^] .
 
+.Wie funktioniert die Abrechnung für Ransomware Resilience?
+Sie können Ransomware Resilience mit einer 30-tägigen kostenlosen Testversion ausprobieren. NetApp berechnet Ihnen für die Nutzung der Testversion von Ransomware Resilience keine Gebühren.
+
+Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resilience verfügen, werden alle gemeinsamen Daten, die durch beide Produkte geschützt werden, nur über Ransomware Resilience abgerechnet.
+
+Wird eine Arbeitslast als geschützt eingestuft, wird sie auf die erworbene Kapazität oder das PAYGO-Abonnement angerechnet. Ransomware Resilience stuft eine Arbeitslast als geschützt ein, wenn eine Erkennungsrichtlinie mit mindestens einer Snapshot- oder Backup-Richtlinie aktiviert ist. Arbeitslasten, die mit einer Erkennungsrichtlinie, aber  Backup- oder Snapshot-Richtlinien erkannt werden, gelten als gefährdet. Gefährdete Arbeitslasten werden nicht auf die erworbene Kapazität angerechnet.
+
+Geschützte Workloads werden nach Ablauf der kostenlosen Testphase auf die erworbene Kapazität oder das Abonnement angerechnet. Ransomware Resilience wird pro GB für die Daten berechnet, die mit geschützten Workloads verbunden sind (wie von ONTAP gemeldet), vor Effizienzsteigerungen.
+
 
 
 == Zugang
