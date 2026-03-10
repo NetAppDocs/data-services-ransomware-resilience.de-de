@@ -8,7 +8,7 @@
 
 Ransomware Resilience unterstützt jetzt Azure NetApp Files-Systeme und ermöglicht Ihnen, Ransomware-Bedrohungen in Azure NetApp Files effizient zu erkennen und darauf zu reagieren. Wenn Sie Workloads entdecken, zeigt Ransomware Resilience jetzt Azure NetApp Files an und stellt sie im Schutz-Dashboard dar. Die Unterstützung von Ransomware Resilience für Azure NetApp Files umfasst Erkennungs- und Schutzstrategien ausschließlich mit Snapshots. Die Unterstützung für Azure NetApp Files befindet sich derzeit in der Vorschau.
 
-Weitere Informationen finden Sie unter folgendem Link: link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über Ransomware-Resilienz"^].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über Ransomware-Resilienz"^].
 
 
 

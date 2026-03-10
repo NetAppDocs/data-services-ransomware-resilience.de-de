@@ -171,9 +171,12 @@ Wenn es bestimmte vertrauenswürdige Benutzer gibt, deren Verhalten möglicherwe
 . Um einzelne Benutzer in der Benutzeroberfläche zu überprüfen, wählen Sie **Manuell auswählen**. Um eine Liste ausgeschlossener Benutzer hochzuladen, wählen Sie **Hochladen**.
 +
 .. Wenn Sie **Manuell auswählen** gewählt haben, aktivieren Sie das Kontrollkästchen neben den Namen der spezifischen Benutzer, die Sie ausschließen möchten.
-.. Wenn Sie **Hochladen** auswählen, müssen Sie zuerst eine CSV-Datei herunterladen, die die Liste aller Benutzer enthält. Wählen Sie **Herunterladen**, um auf die Liste zuzugreifen.
+.. Wenn Sie **Hochladen** auswählen, laden Sie die CSV- oder JSON-Datei mit der Liste aller Benutzer herunter. Wählen Sie **Herunterladen**, um auf die Liste zuzugreifen.
 +
-Überprüfen Sie die CSV-Datei. Entfernen Sie die Namen aller Benutzer, für die Sie die Erkennung beibehalten möchten. Wenn die Liste nur noch die Namen der Benutzer enthält, die Sie von der Erkennung ausschließen möchten, speichern Sie sie. Wählen Sie **Hochladen** aus, um die Datei zu suchen und auszuwählen.
+Überprüfen Sie die Datei auf Ihrem lokalen Rechner. Entfernen Sie die Namen aller Benutzer, für die Sie die Erkennung beibehalten möchten. Wenn die Liste nur noch die Namen der Benutzer enthält, die Sie von der Erkennung ausschließen möchten, speichern Sie sie.
+
++
+Wählen Sie in Ransomware Resilience **Hochladen** aus. Suchen Sie die Datei und laden Sie sie hoch.
 
 
 
@@ -193,6 +196,8 @@ Sie können einen Benutzer anschließend wieder zur Erkennung hinzufügen.
 .Schritte
 . Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.
 . Wählen Sie die Registerkarte **Excluded users** aus.
+. Wählen Sie **Hinzufügen**.
+. Um einzelne Benutzer von der UI auszuschließen, wählen Sie **Select manually**.
 . Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Wählen Sie das Aktionsmenü (`...`) in der Zeile mit dem Benutzernamen und dann **Entfernen**.
 . Wählen Sie im Dialogfeld **Entfernen** aus, um zu bestätigen, dass Sie die ausgewählten Benutzer entfernen möchten.
 
