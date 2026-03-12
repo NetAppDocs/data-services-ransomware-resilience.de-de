@@ -4,7 +4,7 @@ permalink: rp-use-recover.html
 keywords: ransomware protection recovery, recover from a ransomware attack, recovery point, RPA 
 summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die Sicherungsdaten auf dem Sekundärspeicher sauber sind, empfiehlt einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.' 
 ---
-= Wiederherstellung nach einem Ransomware-Angriff (nachdem die Vorfälle neutralisiert wurden) mit NetApp Ransomware Resilience
+= Stellen Sie sich nach einem Ransomware-Angriff mit NetApp Ransomware Resilience wieder her
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

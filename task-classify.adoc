@@ -4,14 +4,16 @@ permalink: task-classify.html
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, cds, sensitive, pii, classification 
 summary: Verbessern Sie die Sicherheit und Datenschutzkonformität Ihrer Daten mit der NetApp Data Classification, um festzustellen, ob Ihre Daten personenbezogene oder private Informationen enthalten. 
 ---
-= Scannen Sie mit NetApp Data Classification in Ransomware Resilience nach personenbezogenen Daten
+= Scannen Sie nach personenbezogenen Daten in NetApp Ransomware Resilience
 :allow-uri-read: 
 
 
 [role="lead"]
-Innerhalb von NetApp Ransomware Resilience können Sie NetApp Data Classification verwenden, um die Daten in einer Dateifreigabe-Workload zu scannen und zu klassifizieren. Durch die Klassifizierung von Daten können Sie feststellen, ob der Datensatz personenbezogene Daten (PII) enthält, die das Sicherheitsrisiko erhöhen können. Die Datenklassifizierung ist eine Kernkomponente der NetApp Console und ohne zusätzliche Kosten verfügbar.
+Innerhalb von NetApp Ransomware Resilience können Sie NetApp Data Classification verwenden, um die Daten in einer Dateifreigabe-Workload zu scannen und zu klassifizieren. Die Klassifizierung von Daten hilft Ihnen festzustellen, ob der Datensatz personenbezogene Daten (PII) enthält, was die Sicherheitsrisiken erhöhen kann.
 
 link:https://docs.netapp.com/us-en/data-services-data-classification/["Datenklassifizierung"^]nutzt KI-gesteuerte natürliche Sprachverarbeitung für die kontextbezogene Datenanalyse und -kategorisierung und bietet umsetzbare Einblicke in Ihre Daten, um Compliance-Anforderungen zu erfüllen, Sicherheitslücken zu erkennen, Kosten zu optimieren und die Migration zu beschleunigen.
+
+Data Classification ist eine Kernkomponente der NetApp Console. Für die Nutzung von Data Classification ist keine Lizenz erforderlich. Je nach Ihrer Konfiguration können bei der Einrichtung von Data Classification Kosten anfallen, die jedoch nicht von Ransomware Resilience in Rechnung gestellt werden. Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html#cost["Erfahren Sie mehr über die Datenklassifizierung"^].
 
 
 TIP: Dieser Prozess kann sich auf die Wichtigkeit der Arbeitslast auswirken, um sicherzustellen, dass Sie über den entsprechenden Schutz verfügen.

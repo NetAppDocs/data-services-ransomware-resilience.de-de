@@ -4,7 +4,7 @@ permalink: rp-reference-limitations.html
 keywords: ransomware protection, protect against ransomware attacks, anti-ransomware, role-based access control, rbac, role, permission, access rights, organization,project,account 
 summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden. 
 ---
-= Bekannte Einschränkungen der NetApp Ransomware Resilience
+= Bekannte Einschränkungen in NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

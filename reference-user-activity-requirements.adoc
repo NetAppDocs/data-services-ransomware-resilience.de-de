@@ -4,7 +4,7 @@ permalink: reference-user-activity-requirements.html
 keywords: data breach detection, data breach, user activity, suspicious, anomalous, requirements, end points, operating systems, networking 
 summary: Bevor Sie einen Benutzeraktivitätsagenten und andere Collector erstellen, müssen Sie sicherstellen, dass Sie die beschriebenen Anforderungen an Betriebssystem, Server und Netzwerk erfüllen. 
 ---
-= Anforderungen für die Erkennung des Nutzerverhaltens in NetApp Ransomware Resilience
+= Anforderungen an die Erkennung von Benutzeraktivitäten für NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
