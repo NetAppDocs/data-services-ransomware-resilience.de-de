@@ -53,7 +53,7 @@ image:screen-settings-alert-drill-configure.png["Seite „Bereitschaftsübung ko
 .. Wählen Sie eine Testspeicher-SVM aus.
 .. Wenn Sie eine CIFS (SMB)-Speicher-VM ausgewählt haben, werden die Felder **Benutzername** und **Passwort** angezeigt.  Geben Sie den Benutzernamen und das Kennwort für die Speicher-VM ein.
 .. Wählen Sie den Bereitschaftsübungstyp aus. Wählen Sie für eine manuelle Wiederherstellung nach einer Datenverschlüsselungsverletzung **Benutzerdefinierte Wiederherstellung**. Wählen Sie zur Wiederherstellung nach verdächtiger Benutzeraktivität **Datenverletzung**.
-.. Geben Sie den Namen einer neuen Test-Workload ein, die erstellt werden soll.  Der Name darf keine Bindestriche enthalten.
+.. Geben Sie einen Namen für die Test-Workload ein. Der Name darf keine Bindestriche enthalten.
 
 
 . Wählen Sie *Speichern*.
@@ -151,7 +151,7 @@ Stellen Sie nach der Überprüfung der Warnung zur Bereitschaftsübung bei Bedar
 ** Überprüfen Sie die Bestätigung und wählen Sie im Bestätigungsfeld *Als Wiederherstellung erforderlich markieren* aus.
 +
 *** Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
-*** Wählen Sie den mit „Readiness Drill“ gekennzeichneten Test-Workload aus, den Sie wiederherstellen möchten.
+*** Wählen Sie die mit „Readiness drill“ gekennzeichnete Test-Workload aus, die Sie wiederherstellen möchten.
 *** Wählen Sie *Wiederherstellen*.
 *** Geben Sie auf der Seite „Wiederherstellen“ Informationen zur Wiederherstellung ein:
 
@@ -189,7 +189,7 @@ Nachdem Sie die Warnung zur Bereitschaftsübung überprüft und die Arbeitslast 
 ** Abgelehnt: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, ändern Sie den Status in „Abgelehnt“.
 +
 
-IMPORTANT: Nachdem Sie einen Angriff abgewehrt haben, können Sie ihn nicht mehr rückgängig machen.  Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.  Wenn Sie den Alarm verwerfen, gilt die Bereitschaftsübung als abgeschlossen.
+IMPORTANT: Nachdem Sie einen Angriff verworfen haben, kann dies nicht rückgängig gemacht werden. Wenn Sie eine Arbeitslast verwerfen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien endgültig gelöscht. Mit dem Verwerfen der Warnung gilt die Bereitschaftsübung als abgeschlossen.
 
 ** Behoben: Der Vorfall wurde entschärft.
 

@@ -498,7 +498,6 @@
   <block id="6c66a8a541d348bc3f3a48dc2e58492c" category="list-text">Wählen Sie ein Testsystem aus.</block>
   <block id="9d5c8a6e3597683b4559e2c596a2ead9" category="list-text">Wählen Sie eine Testspeicher-SVM aus.</block>
   <block id="09cb5a7830e25d2457463ef0f909f5a0" category="list-text">Wenn Sie eine CIFS (SMB)-Speicher-VM ausgewählt haben, werden die Felder **Benutzername** und **Passwort** angezeigt.  Geben Sie den Benutzernamen und das Kennwort für die Speicher-VM ein.</block>
-  <block id="6773f809e3f238c4a8a25adcd8e46f13" category="list-text">Geben Sie den Namen einer neuen Test-Workload ein, die erstellt werden soll.  Der Name darf keine Bindestriche enthalten.</block>
   <block id="b5ffafbc91e02195737c6716b418141e" category="admonition">Sie können die Konfiguration der Bereitschaftsübung später auf der Seite „Einstellungen“ bearbeiten.</block>
   <block id="187666a138e7f6f15224af7bcef93040" category="section-title">Starten Sie eine Bereitschaftsübung</block>
   <block id="b30d5003eb8b470d6df77c1edbb96724" category="paragraph">Nachdem Sie die Bereitschaftsübung konfiguriert haben, können Sie mit der Übung beginnen.</block>
@@ -538,7 +537,6 @@
   <block id="402892b652810818eb61e703ca333d06" category="list-text">Wählen Sie *Als Wiederherstellung erforderlich markieren*.</block>
   <block id="f1a43a1191cd8e11a5db942f4175b31f" category="list-text">Überprüfen Sie die Bestätigung und wählen Sie im Bestätigungsfeld *Als Wiederherstellung erforderlich markieren* aus.</block>
   <block id="63d4b8d17265522f12b229a2016b08c9" category="list-text">Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.</block>
-  <block id="001b6bed17667ada4d5dad085e5729b3" category="list-text">Wählen Sie den mit „Readiness Drill“ gekennzeichneten Test-Workload aus, den Sie wiederherstellen möchten.</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">Wählen Sie *Wiederherstellen*.</block>
   <block id="98576e747c7efb09ca0d1e50a58ae308" category="list-text">Geben Sie auf der Seite „Wiederherstellen“ Informationen zur Wiederherstellung ein:</block>
   <block id="05e2304cb46b92601ea1e826aa3fec0b" category="list-text">Wählen Sie die Quell-Snapshot-Kopie aus.</block>
@@ -555,7 +553,6 @@
   <block id="b707d985234424bd425b96580911950e" category="list-text">Wählen Sie die Warnung erneut aus.</block>
   <block id="2da9a9f4e6a92f5857d147337ae308f7" category="list-text">Geben Sie den Status an, indem Sie *Status bearbeiten* auswählen und den Status in einen der folgenden Werte ändern:</block>
   <block id="e0a30b860c06e610cadc21ebf64426da" category="list-text">Abgelehnt: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, ändern Sie den Status in „Abgelehnt“.</block>
-  <block id="ff8d215b189dca41bf900d6545392594" category="admonition">Nachdem Sie einen Angriff abgewehrt haben, können Sie ihn nicht mehr rückgängig machen.  Wenn Sie eine Arbeitslast ablehnen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.  Wenn Sie den Alarm verwerfen, gilt die Bereitschaftsübung als abgeschlossen.</block>
   <block id="36b45588cbfa3653d0bdeb91883b49f4" category="list-text">Behoben: Der Vorfall wurde entschärft.</block>
   <block id="1be5568d0c3f299b7d0fa2b810d4b90d" category="section-title">Überprüfen Sie die Berichte zur Bereitschaftsübung</block>
   <block id="1618fcb06831249fd4142102d83577f5" category="paragraph">Nachdem die Bereitschaftsübung abgeschlossen ist, möchten Sie möglicherweise einen Bericht über die Übung überprüfen und speichern.</block>
@@ -2209,4 +2206,7 @@
   <block id="d0c1ba6e120f697911d5bd92a51f0322" category="paragraph">Ransomware Resilience bietet jetzt ein Security Orchestration, Automation, and Response (SOAR) Playbook für <block ref="d942356c034f7ad3c314a5fae7d11e1d" category="inline-link-macro-rx"></block>. Das Playbook ermöglicht ein einfacheres Management der Bedrohungsreaktion, automatisiert Aufgaben und Tests und unterstützt wichtige Maßnahmen zur Ransomware-Abwehr, einschließlich der Erstellung von Snapshots und der Offline-Schaltung eines Volumes.</block>
   <block id="dce0959f50faa93a47d141f615365404" category="paragraph">Ransomware Resilience bietet Playbooks für Google SecOps, Microsoft Sentinel und Splunk. Prüfen Sie die jeweiligen GitHub-Seiten für Einrichtungsdetails.</block>
   <block id="4f61a1c38b74708d0982090b3ace3f21" category="list-text">Von der Verwendung <block ref="237628f5d72273fb0e39c8149431292e" category="inline-link-macro-rx"></block> mit Azure NetApp Files wird abgeraten, da die Azure NetApp Files APIs automatisierte Aktionen blockieren.</block>
+  <block id="4fcce21aba16e6a89d3c15cbcce7db5a" category="list-text">Geben Sie einen Namen für die Test-Workload ein. Der Name darf keine Bindestriche enthalten.</block>
+  <block id="922e09477f5763a3965ac29db0b9139d" category="list-text">Wählen Sie die mit „Readiness drill“ gekennzeichnete Test-Workload aus, die Sie wiederherstellen möchten.</block>
+  <block id="3aecb1c0d4a2579d6c2b4487309b2cdc" category="admonition">Nachdem Sie einen Angriff verworfen haben, kann dies nicht rückgängig gemacht werden. Wenn Sie eine Arbeitslast verwerfen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien endgültig gelöscht. Mit dem Verwerfen der Warnung gilt die Bereitschaftsübung als abgeschlossen.</block>
 </blocks>
