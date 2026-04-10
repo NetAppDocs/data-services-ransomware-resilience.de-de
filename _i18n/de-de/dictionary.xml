@@ -1132,12 +1132,7 @@
   <block id="53e68cb1edb551af8b1c0d8fee230e44" category="admonition">Nach erfolgreicher Authentifizierung wird die Meldung „Authentifiziert“ angezeigt.</block>
   <block id="00bcd4c2f217493f06ecbb6ddfa3862b" category="list-text">Geben Sie die Log Analytics-Arbeitsbereichsdetails für die Anwendung ein.</block>
   <block id="b263ba58e894356680bda9edd8c52400" category="list-text">Wählen Sie die Abonnement-ID, die Ressourcengruppe und den Log Analytics-Arbeitsbereich aus.</block>
-  <block id="9ccf45c8190b08c78e0be70f31ab71c4" category="section-title">Konfigurieren Sie Splunk Cloud für die Bedrohungserkennung</block>
-  <block id="4d6d1328084c627bf56727551f4a6626" category="paragraph">Bevor Sie Splunk Cloud in Ransomware Resilience aktivieren, müssen Sie die folgenden allgemeinen Schritte in Splunk Cloud ausführen:</block>
-  <block id="8a628c54baa5d5a16a963626db04a20f" category="list-text">Aktivieren Sie einen HTTP-Ereignissammler in Splunk Cloud, um Ereignisdaten über HTTP oder HTTPS von der Konsole zu empfangen.</block>
-  <block id="a0df7816503d32b52e0b8eaf94868e56" category="list-text">Erstellen Sie ein Event Collector-Token in Splunk Cloud.</block>
   <block id="2c65d4e0cdac9c48880857277c1bc9e3" category="list-title">Schritte zum Aktivieren eines HTTP-Ereignissammlers in Splunk</block>
-  <block id="a99a07d12915c1a94a26205b4a84ba20" category="list-text">Gehen Sie zu Splunk Cloud.</block>
   <block id="ce0362998bb10251a5412bcabd9b833c" category="list-text">Wählen Sie *Einstellungen* &gt; *Dateneingaben*.</block>
   <block id="069c7509480a5fbadda560c7376dca8a" category="list-text">Wählen Sie *HTTP-Ereignissammler* &gt; *Globale Einstellungen*.</block>
   <block id="b42b974604014d593eace2a8678716ed" category="list-text">Wählen Sie auf dem Umschalter „Alle Token“ die Option *Aktiviert* aus.</block>
@@ -1162,7 +1157,6 @@
   <block id="322bdafeaec3f2756e524c7676eec70b" category="inline-image-macro">Detailseite zur Bedrohungserkennung aktivieren</block>
   <block id="a79d3cc091ba614079e19b05bd4144d7" category="paragraph"><block ref="a79d3cc091ba614079e19b05bd4144d7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="53ff0c832c14f6bc98decd93490e2576" category="list-text">Wählen Sie eines der SIEM-Systeme.</block>
-  <block id="8b2302df496c7e3838b65f0dfaee3ab4" category="list-text">Geben Sie das Token und die Authentifizierungsdetails ein, die Sie in AWS Security Hub oder Splunk Cloud konfiguriert haben.</block>
   <block id="4cb0caa7f0c97dd44ed525e6237432d2" category="admonition">Die von Ihnen eingegebenen Informationen hängen von dem von Ihnen ausgewählten SIEM ab.</block>
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">Wählen Sie *Aktivieren*.</block>
   <block id="f29be3377655fbc2e89f86e482ef5ca2" category="paragraph">Auf der Seite „Einstellungen“ wird „Verbunden“ angezeigt.</block>
@@ -2207,6 +2201,16 @@
   <block id="dce0959f50faa93a47d141f615365404" category="paragraph">Ransomware Resilience bietet Playbooks für Google SecOps, Microsoft Sentinel und Splunk. Prüfen Sie die jeweiligen GitHub-Seiten für Einrichtungsdetails.</block>
   <block id="4f61a1c38b74708d0982090b3ace3f21" category="list-text">Von der Verwendung <block ref="237628f5d72273fb0e39c8149431292e" category="inline-link-macro-rx"></block> mit Azure NetApp Files wird abgeraten, da die Azure NetApp Files APIs automatisierte Aktionen blockieren.</block>
   <block id="4fcce21aba16e6a89d3c15cbcce7db5a" category="list-text">Geben Sie einen Namen für die Test-Workload ein. Der Name darf keine Bindestriche enthalten.</block>
-  <block id="922e09477f5763a3965ac29db0b9139d" category="list-text">Wählen Sie die mit „Readiness drill“ gekennzeichnete Test-Workload aus, die Sie wiederherstellen möchten.</block>
   <block id="3aecb1c0d4a2579d6c2b4487309b2cdc" category="admonition">Nachdem Sie einen Angriff verworfen haben, kann dies nicht rückgängig gemacht werden. Wenn Sie eine Arbeitslast verwerfen, werden alle automatisch als Reaktion auf den potenziellen Ransomware-Angriff erstellten Snapshot-Kopien endgültig gelöscht. Mit dem Verwerfen der Warnung gilt die Bereitschaftsübung als abgeschlossen.</block>
+  <block id="a1f10863eda000ced0430d0c31580729" category="list-text">Azure NetApp Files unterstützt keine FPolicy oder Benutzerverhaltensaktivität.</block>
+  <block id="001b6bed17667ada4d5dad085e5729b3" category="list-text">Wählen Sie die mit „Readiness drill“ gekennzeichnete Test-Workload aus, die Sie wiederherstellen möchten.</block>
+  <block id="5dba46907e72d7502229329d2aafd8a2" category="list-text">Splunk Enterprise</block>
+  <block id="a8fdc49c32c2aa34ebd35cbf9823def6" category="section-title">Konfigurieren Sie Splunk Cloud und Splunk Enterprise für die Bedrohungserkennung</block>
+  <block id="681024dbfdb70dd04ac980451d89db64" category="paragraph">Ransomware Resilience unterstützt die Bedrohungserkennung mit Splunk Cloud und Splunk Enterprise. Bevor Sie die Splunk-Verbindung in Ransomware Resilience aktivieren, müssen Sie Folgendes tun:</block>
+  <block id="026d482451225403707f4d919cfb8461" category="list-text">Aktivieren Sie einen HTTP Event Collector in Splunk Cloud oder Enterprise, um Ereignisdaten über HTTP oder HTTPS von der Konsole zu empfangen.</block>
+  <block id="42de63532cd927f3b14ff23339042fae" category="list-text">Erstellen Sie ein Event Collector-Token in Splunk Cloud oder Enterprise.</block>
+  <block id="b8e9fd0fd0fe8e4c4d930ae7315048e4" category="admonition">Für Splunk Enterprise müssen Sie eingehenden öffentlichen Internetverkehr zulassen, damit Ransomware Resilience Ereignisse mithilfe der bereitgestellten HTTP-Ereignissammlerdetails senden kann.</block>
+  <block id="261f193d834ffba7dae6c54f99306659" category="list-text">Wechseln Sie zu Ihrer gewählten Splunk-Umgebung: Cloud oder Enterprise.</block>
+  <block id="eade5cc0d987bed25c884550a681c364" category="list-text">Wechseln Sie zu Splunk Cloud oder Enterprise.</block>
+  <block id="e4f58ddb798b11dab7791e0175f6cf0f" category="list-text">Geben Sie das Token und die Authentifizierungsdetails ein, die Sie in AWS Security Hub, Splunk Cloud oder Splunk Enterprise konfiguriert haben.</block>
 </blocks>

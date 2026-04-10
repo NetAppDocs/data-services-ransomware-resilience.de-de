@@ -18,6 +18,7 @@ Ransomware Resilience unterstützt die folgenden SIEMs:
 * AWS Security Hub
 * Microsoft Sentinel
 * Splunk Cloud
+* Splunk Enterprise
 
 
 Bevor Sie SIEM in Ransomware Resilience aktivieren, müssen Sie Ihr SIEM-System konfigurieren.
@@ -202,16 +203,19 @@ NOTE: Nach erfolgreicher Authentifizierung wird die Meldung „Authentifiziert�
 
 
 
-== Konfigurieren Sie Splunk Cloud für die Bedrohungserkennung
+== Konfigurieren Sie Splunk Cloud und Splunk Enterprise für die Bedrohungserkennung
 
-Bevor Sie Splunk Cloud in Ransomware Resilience aktivieren, müssen Sie die folgenden allgemeinen Schritte in Splunk Cloud ausführen:
+Ransomware Resilience unterstützt die Bedrohungserkennung mit Splunk Cloud und Splunk Enterprise. Bevor Sie die Splunk-Verbindung in Ransomware Resilience aktivieren, müssen Sie Folgendes tun:
 
-* Aktivieren Sie einen HTTP-Ereignissammler in Splunk Cloud, um Ereignisdaten über HTTP oder HTTPS von der Konsole zu empfangen.
-* Erstellen Sie ein Event Collector-Token in Splunk Cloud.
+* Aktivieren Sie einen HTTP Event Collector in Splunk Cloud oder Enterprise, um Ereignisdaten über HTTP oder HTTPS von der Konsole zu empfangen.
+* Erstellen Sie ein Event Collector-Token in Splunk Cloud oder Enterprise.
 
+
+
+NOTE: Für Splunk Enterprise müssen Sie eingehenden öffentlichen Internetverkehr zulassen, damit Ransomware Resilience Ereignisse mithilfe der bereitgestellten HTTP-Ereignissammlerdetails senden kann.
 
 .Schritte zum Aktivieren eines HTTP-Ereignissammlers in Splunk
-. Gehen Sie zu Splunk Cloud.
+. Wechseln Sie zu Ihrer gewählten Splunk-Umgebung: Cloud oder Enterprise.
 . Wählen Sie *Einstellungen* > *Dateneingaben*.
 . Wählen Sie *HTTP-Ereignissammler* > *Globale Einstellungen*.
 . Wählen Sie auf dem Umschalter „Alle Token“ die Option *Aktiviert* aus.
@@ -220,7 +224,7 @@ Bevor Sie Splunk Cloud in Ransomware Resilience aktivieren, müssen Sie die folg
 
 
 .Schritte zum Erstellen eines Event Collector-Tokens in Splunk
-. Gehen Sie zu Splunk Cloud.
+. Wechseln Sie zu Splunk Cloud oder Enterprise.
 . Wählen Sie *Einstellungen* > *Daten hinzufügen*.
 . Wählen Sie *Monitor* > *HTTP-Ereignissammler*.
 . Geben Sie einen Namen für das Token ein und wählen Sie *Weiter*.
@@ -250,7 +254,7 @@ image:screen-settings2.png["Seite „Einstellungen“"]
 image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungserkennung aktivieren"]
 
 . Wählen Sie eines der SIEM-Systeme.
-. Geben Sie das Token und die Authentifizierungsdetails ein, die Sie in AWS Security Hub oder Splunk Cloud konfiguriert haben.
+. Geben Sie das Token und die Authentifizierungsdetails ein, die Sie in AWS Security Hub, Splunk Cloud oder Splunk Enterprise konfiguriert haben.
 +
 
 NOTE: Die von Ihnen eingegebenen Informationen hängen von dem von Ihnen ausgewählten SIEM ab.
