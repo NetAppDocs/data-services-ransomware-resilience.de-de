@@ -2,13 +2,8 @@
 :allow-uri-read: 
 
 
-[NOTE]
 .Reinraum-SVM-Daten LIF IP (crr-data-LIF-IP)
-====
-Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können Sie diese Anforderung an die Clean Room SVM-Daten-LIF-IP überspringen.
-
-====
-* Weisen Sie dem Reinraum-SVM-Daten-LIF die IP-Adresse zu. Notieren Sie sich die IP-Adresse: Sie benötigen diese IP-Adresse während des IRE-Konfigurationsprozesses.
+* Weisen Sie dem Reinraum-SVM-Daten-LIF eine IP-Adresse zu. Notieren Sie sich die IP-Adresse: Sie benötigen diese IP-Adresse während des IRE-Konfigurationsprozesses.
 +
 ** Für Cloud Volumes ONTAP mit AWS unter Verwendung einer Cloud-zu-Cloud-Clean-Restore muss sichergestellt werden, dass die IP-Adresse der Elastic Network Interface zugewiesen ist.
 
@@ -16,9 +11,12 @@ Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können
 * Routing von der SVM-Daten-LIF-IP zur IRE zulassen.
 
 
+
+NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können Sie diese Anforderung an die Clean Room SVM-Daten-LIF-IP überspringen.
+
 .Produktionsumgebungs-Routingtabelle
 * Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.
-* Sicherheitsgruppen und Firewalls auf dem Produktions-ONTAP-Cluster sollten eingehenden NFSv4- und NFSv3-Datenverkehr zur Clean Restore Data LIF-IP zulassen. Die Firewall sollte für eingehenden Datenverkehr aus dem IRE-CIDR-Bereich geöffnet sein.
+* Sicherheitsgruppen und Firewalls im Produktions-ONTAP-Cluster sollten eingehenden NFSv4- und NFSv3-Datenverkehr zur LIF-IP für saubere Wiederherstellungsdaten zulassen. Die Firewall sollte für eingehenden Datenverkehr aus dem IRE-CIDR-Bereich geöffnet sein.
 +
 [cols="1,1,1,1"]
 |===
@@ -60,8 +58,9 @@ Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können
 
 
 .Cloud-Berechtigungen
-* Ransomware Resilience benötigt den AWS-Zugriffsschlüssel und das Secret mit den korrekten IAM-Berechtigungen, um die Clean Restore in einer AWS-Umgebung durchzuführen. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Erstellen einer IAM-Richtlinie in AWS"^] mit den folgenden Berechtigungen und hängen Sie dann die Richtlinie an einen neu erstellten Benutzer an. Nachdem Sie den Benutzer erstellt haben, generieren Sie die IAM-Anmeldeinformationen und stellen Sie sie für die Clean Restore bereit.
-+
+* Ransomware Resilience benötigt den AWS Access Key und das Secret mit den korrekten IAM-Berechtigungen, um die Clean Restore in einer AWS-Umgebung durchzuführen. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Erstellen einer IAM-Richtlinie in AWS"^] mit den folgenden Berechtigungen, und hängen Sie dann die Richtlinie an einen neu erstellten Benutzer an. Nachdem Sie den Benutzer erstellt haben, generieren Sie die IAM-Anmeldeinformationen und stellen Sie sie für die Clean Restore bereit.
+
+
 [source, json]
 ----
 {
@@ -132,4 +131,3 @@ Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können
     ]
 }
 ----
-

@@ -12,10 +12,10 @@ summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die S
 
 
 [role="lead"]
-Mit Ransomware Resilience können Speicheradministratoren festlegen, wie Workloads am besten entweder vom empfohlenen Wiederherstellungspunkt oder vom bevorzugten Wiederherstellungspunkt wiederhergestellt werden.
+Mit Ransomware Resilience können Speicheradministratoren festlegen, wie Workloads am besten wiederhergestellt werden, entweder vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt.
 
 
-TIP: Ransomware Resilience unterstützt außerdem eine xref:task-clean-restore.html[Option für saubere Wiederherstellung]Funktion, die eine geführte Wiederherstellung und erweiterte Funktionen bietet, um sicherzustellen, dass nur saubere und unverschlüsselte Daten wiederhergestellt werden.
+TIP: Ransomware Resilience unterstützt außerdem eine xref:task-clean-restore.html[Option für saubere Wiederherstellung], die eine geführte Wiederherstellung und erweiterte Funktionen bietet, um sicherzustellen, dass nur saubere und unverschlüsselte Daten wiederhergestellt werden.
 
 
 
@@ -169,7 +169,7 @@ image:screen-alerts-incidents-impacted-files.png["Liste der betroffenen Dateien 
 
 ==== Stellen Sie die Dateien wieder her
 
-Nach der Überprüfung der betroffenen Dateien können Sie diese wiederherstellen.
+Nach der Überprüfung der betroffenen Dateien können Sie sie wiederherstellen.
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.

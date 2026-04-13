@@ -12,7 +12,7 @@ summary: Mit NetApp Ransomware Resilience können Sie Berichte mit Details zu Sc
 
 
 [role="lead"]
-NetApp Ransomware Resilience liefert Berichte im JSON-Format, die Details zu unterstützten und nicht unterstützten Volumes, Übungen zur Angriffsbereitschaft, Schutzmaßnahmen, Warnungen und Wiederherstellung aufzeigen und Ihnen ermöglichen, Ransomware-Ereignisse und die Bereitschaft offline zu bewerten und zu überprüfen.
+NetApp Ransomware Resilience liefert Berichte im JSON-Format, die Details zu unterstützten und nicht unterstützten Volumes, Übungen zur Angriffsbereitschaft, Schutzmaßnahmen, Warnungen und Wiederherstellung aufzeigen und Ihnen die Möglichkeit geben, Ransomware-Ereignisse und die Bereitschaft offline zu bewerten und zu überprüfen.
 
 
 TIP: Bevor Sie die Dateien herunterladen, aktualisieren Sie das Dashboard, um die aktuellsten Daten in Ihren Berichten zu erfassen.
@@ -28,7 +28,7 @@ Welche Berichte kann ich herunterladen?
 * *Bereitschaftsübungen*: Beinhaltet Ergebnisse simulierter Angriffe, um Verbesserungspotenziale aufzuzeigen.
 * *Saubere Wiederherstellung*: Enthält Details zu den mit der sauberen Wiederherstellung wiederhergestellten Workloads.
 +
-Sie benötigen eine aktive isolierte Wiederherstellungsumgebung (IRE), um saubere Wiederherstellungsberichte zu generieren. Saubere Wiederherstellungsberichte sind nicht mehr verfügbar, nachdem die IRE gelöscht wurde.
+Sie benötigen eine aktive isolierte Wiederherstellungsumgebung (IRE), um saubere Wiederherstellungsberichte zu generieren. Saubere Wiederherstellungsberichte sind nach dem Löschen der IRE nicht mehr verfügbar.
 
 
 
