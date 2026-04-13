@@ -82,7 +82,7 @@ Wenn Sie sich zum ersten Mal bei diesem Dienst anmelden, wird die Zielseite ange
 +
 image:screen-landing.png["Screenshot der Zielseite für Ransomware Resilience"]
 
-. Wenn Sie noch keinen Konsolenagenten für andere Dienste hinzugefügt haben,link:ps://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["füge eins hinzu"^] .
+. Falls Sie noch keinen Konsolenagenten für andere Dienste hinzugefügt haben, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["füge eins hinzu"^].
 . Wählen Sie auf der Zielseite „Ransomware Resilience“ die Option „Beginnen Sie mit der Ermittlung von Workloads“, um Ihre Workloads zu ermitteln.
 +
 
@@ -240,7 +240,7 @@ Sie benötigen die Seriennummer von Ransomware Resilience.  Suchen Sie diese Num
 
 .Schritte
 . Nachdem Sie die Lizenz erhalten haben, kehren Sie zu Ransomware Resilience zurück.  Wählen Sie oben rechts die Option *Zahlungsmethoden anzeigen*.  Oder wählen Sie in der Meldung, dass die kostenlose Testversion abläuft, *Abonnieren oder Lizenz kaufen* aus.
-. Wählen Sie *Lizenz hinzufügen*, um zur Seite „Konsolenlizenzen und -abonnements“ zu gelangen.
+. Wählen Sie *Lizenz hinzufügen*, um zur Seite Licenses and subscriptions der Konsole zu gelangen.
 . Wählen Sie auf der Registerkarte *Data Services-Lizenzen* die Option *Lizenz hinzufügen* aus.
 +
 image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufügen“."]

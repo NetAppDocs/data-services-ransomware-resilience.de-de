@@ -64,8 +64,16 @@ sidebar:
       entries:
       - title: Auf eine erkannte Warnung reagieren
         url: "/rp-use-alert.html"
-      - title: Wiederherstellung nach einem Ransomware-Angriff
+      - title: Überprüfung des Wiederherstellungsstatus
         url: "/rp-use-recover.html"
+      - title: Wiederherstellung mit einer benutzerdefinierten Wiederherstellung
+        url: "/rp-use-recover.html"
+      - title: Führen Sie eine saubere Wiederherstellung durch
+        entries:
+        - title: Erstellen Sie eine isolierte Wiederherstellungsumgebung
+          url: "/task-clean-restore.html"
+        - title: Wiederherstellung mit sauberem Restore
+          url: "/task-clean-restore-recover.html"
     - title: Führen Sie eine Bereitschaftsübung durch
       url: "/rp-start-simulate.html"
     - title: SIEM konfigurieren

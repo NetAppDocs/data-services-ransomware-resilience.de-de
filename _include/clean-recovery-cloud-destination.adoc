@@ -1,0 +1,135 @@
+= 
+:allow-uri-read: 
+
+
+[NOTE]
+.Reinraum-SVM-Daten LIF IP (crr-data-LIF-IP)
+====
+Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können Sie diese Anforderung an die Clean Room SVM-Daten-LIF-IP überspringen.
+
+====
+* Weisen Sie dem Reinraum-SVM-Daten-LIF die IP-Adresse zu. Notieren Sie sich die IP-Adresse: Sie benötigen diese IP-Adresse während des IRE-Konfigurationsprozesses.
++
+** Für Cloud Volumes ONTAP mit AWS unter Verwendung einer Cloud-zu-Cloud-Clean-Restore muss sichergestellt werden, dass die IP-Adresse der Elastic Network Interface zugewiesen ist.
+
+
+* Routing von der SVM-Daten-LIF-IP zur IRE zulassen.
+
+
+.Produktionsumgebungs-Routingtabelle
+* Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.
+* Sicherheitsgruppen und Firewalls auf dem Produktions-ONTAP-Cluster sollten eingehenden NFSv4- und NFSv3-Datenverkehr zur Clean Restore Data LIF-IP zulassen. Die Firewall sollte für eingehenden Datenverkehr aus dem IRE-CIDR-Bereich geöffnet sein.
++
+[cols="1,1,1,1"]
+|===
+| Protokoll | Zielport | Quelle | Zweck 
+
+
+| TCP & UDP | 2049 | IRE VPC CIDR-Bereich | NFSv4-Zugriff von IRE 
+
+
+| TCP & UDP | 111 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
+
+
+| TCP & UDP | 635 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
+
+
+| TCP & UDP | 4045 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
+
+
+| TCP & UDP | 4046 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
+
+
+| TCP & UDP | 4049 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
+|===
+
+
+.IRE-Routingtabelle
+* Die IRE-Routingtabelle sollte die Hauptroutingtabelle in der IRE VPC sein.
+* Die IRE-Routingtabelle sollte das Routing zur sauberen Wiederherstellungsdaten-LIF-IP-Adresse ermöglichen.
+* Die IRE-Routingtabelle sollte auch eine Route zum öffentlichen Internet ermöglichen, damit der IRE-Agent funktionieren kann.
+
+
+.Virtual Private Cloud (VPC)
+* Für das IRE stellen Sie eine VPC innerhalb des IP-Adressbereichs Ihrer Produktionsumgebung bereit. Die IP-Adresse darf nicht mit bestehenden IP-Adressen in Konflikt stehen.
++
+** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) haben.
+** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Konsolenagent nicht.
+
+
+
+
+.Cloud-Berechtigungen
+* Ransomware Resilience benötigt den AWS-Zugriffsschlüssel und das Secret mit den korrekten IAM-Berechtigungen, um die Clean Restore in einer AWS-Umgebung durchzuführen. link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["Erstellen einer IAM-Richtlinie in AWS"^] mit den folgenden Berechtigungen und hängen Sie dann die Richtlinie an einen neu erstellten Benutzer an. Nachdem Sie den Benutzer erstellt haben, generieren Sie die IAM-Anmeldeinformationen und stellen Sie sie für die Clean Restore bereit.
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2Isolated recovery environmentFullAccess",
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/rps::Isolated recovery environment-name": "*"
+                }
+            }
+        },
+        {
+            "Sid": "EC2CreateAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "EC2ReadPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "IAMFullAccess",
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:ResourceTag/rps::Isolated recovery environment-name": "*"
+                }
+            }
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucketCreation",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucketObjects",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::*-netapp-Isolated recovery environment-state-bucket/*"
+        },
+        {
+            "Sid": "S3FullAccessToIsolated recovery environmentStateBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::*-netapp-Isolated recovery environment-state-bucket"
+        }
+    ]
+}
+----
+

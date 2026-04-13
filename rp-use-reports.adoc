@@ -12,29 +12,25 @@ summary: Mit NetApp Ransomware Resilience können Sie Berichte mit Details zu Sc
 
 
 [role="lead"]
-NetApp Ransomware Resilience stellt Berichte im CSV- und JSON-Format bereit, die Details zu unterstützten und nicht unterstützten Volumes, Übungen zur Angriffsbereitschaft, Schutz, Warnmeldungen und Wiederherstellung anzeigen. Mit Berichten können Sie Offline-Berichte zu Übungen, Schutzstatus, Warnmeldungen und Wiederherstellungsereignissen speichern und überprüfen.
+NetApp Ransomware Resilience liefert Berichte im JSON-Format, die Details zu unterstützten und nicht unterstützten Volumes, Übungen zur Angriffsbereitschaft, Schutzmaßnahmen, Warnungen und Wiederherstellung aufzeigen und Ihnen ermöglichen, Ransomware-Ereignisse und die Bereitschaft offline zu bewerten und zu überprüfen.
 
 
 TIP: Bevor Sie die Dateien herunterladen, aktualisieren Sie das Dashboard, um die aktuellsten Daten in Ihren Berichten zu erfassen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“, „Ransomware Resilience-Administrator“ oder „Ransomware Resilience-Viewer“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
-*Welche Daten können Sie herunterladen?*  Sie können Dateien von jeder der Hauptmenüoptionen herunterladen:
+Welche Berichte kann ich herunterladen?
 
 * **Zusammenfassung**: Enthält Listen unterstützter und nicht unterstützter Workloads, empfohlene Maßnahmen zur Verbesserung Ihrer Cyber-Resilienz sowie Informationen, die im Ransomware-Resilienz-Dashboard erfasst werden.
 * *Schutz*: Beinhaltet den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.
 * *Warnungen*: Enthält den Status und die Details aller Warnungen, einschließlich der Gesamtzahl der Warnungen und automatisierten Snapshots.
 * *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads mit den Markierungen „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“.
-* *Berichte*: Sie können Daten von jeder Seite exportieren und die Dateien herunterladen.
+* *Bereitschaftsübungen*: Beinhaltet Ergebnisse simulierter Angriffe, um Verbesserungspotenziale aufzuzeigen.
+* *Saubere Wiederherstellung*: Enthält Details zu den mit der sauberen Wiederherstellung wiederhergestellten Workloads.
 +
-
-NOTE: Sie können Bereitschaftsübungsberichte nur von der Seite *Berichte* herunterladen.
-
+Sie benötigen eine aktive isolierte Wiederherstellungsumgebung (IRE), um saubere Wiederherstellungsberichte zu generieren. Saubere Wiederherstellungsberichte sind nicht mehr verfügbar, nachdem die IRE gelöscht wurde.
 
 
-Wenn Sie CSV- oder JSON-Dateien von der Seite „Schutz“, „Warnungen“ oder „Wiederherstellung“ herunterladen, werden nur die Daten auf dieser Seite angezeigt.
-
-Die CSV- oder JSON-Dateien enthalten Daten für alle Workloads auf allen Konsolensystemen.
 
 .Schritte
 . Wählen Sie in der linken Navigationsleiste der Konsole *Schutz* > *Ransomware-Resilienz* aus.

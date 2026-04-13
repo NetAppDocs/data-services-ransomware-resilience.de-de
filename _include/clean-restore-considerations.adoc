@@ -1,0 +1,12 @@
+= 
+:allow-uri-read: 
+
+
+* Sie können nur eine saubere Wiederherstellung bei einem auf Verschlüsselung basierenden Ransomware-Angriff durchführen.
+* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, wird dieser in die Warteschlange gestellt, bis Kapazität verfügbar ist.
++
+** Im Dashboard „Ransomware Resilience Recovery“ können Sie jederzeit den Status aktiver und in der Warteschlange befindlicher Wiederherstellungsvorgänge überwachen.
+
+
+* Wenn Sie eine vollständige Wiederherstellung durchführen, wird das ursprüngliche Volume ausgehängt, was den IO-Zugriff beeinträchtigen kann.
+

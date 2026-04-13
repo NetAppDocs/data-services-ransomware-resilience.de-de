@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: task-clean-restore-recover.html 
+keywords: clean room, clean restore, secure recovery, recover, isolated recovery environment, ire 
+summary: Ransomware Resilience ermöglicht es Ihnen, Ihre Workloads durch eine saubere Wiederherstellung zu kontrollieren und zu bereinigen. 
+---
+= Workloads mit sauberer Wiederherstellung in NetApp Ransomware Resilience wiederherstellen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit NetApp Ransomware Resilience können Sie nach einem auf Verschlüsselung basierenden Ransomware-Angriff eine geführte Wiederherstellung mittels einer sauberen Wiederherstellung durchführen. Die saubere Wiederherstellung identifiziert optimierte Wiederherstellungspfade, um Datenverlust zu minimieren und Ihre Workloads in kürzester Zeit wieder online zu bringen.
+
+Die Option „Saubere Wiederherstellung“ ist eine Alternative zur xref:task-custom-restore.html[Benutzerdefinierte Wiederherstellungsoption].
+
+
+
+== Bevor Sie beginnen
+
+Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgebung"^] konfiguriert haben, bevor Sie eine vollständige Wiederherstellung durchführen können.
+
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+
+
+
+== Überlegungen
+
+* Sie können nur eine saubere Wiederherstellung bei einem auf Verschlüsselung basierenden Ransomware-Angriff durchführen.
+* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, wird dieser in die Warteschlange gestellt, bis Kapazität verfügbar ist.
++
+** Im Dashboard „Ransomware Resilience Recovery“ können Sie jederzeit den Status aktiver und in der Warteschlange befindlicher Wiederherstellungsvorgänge überwachen.
+
+
+* Wenn Sie eine vollständige Wiederherstellung durchführen, wird das ursprüngliche Volume ausgehängt, was den IO-Zugriff beeinträchtigen kann.
+
+
+
+
+== Führen Sie eine saubere Wiederherstellung durch
+
+. Wählen Sie im Abschnitt **Wiederherstellung** die Workload aus, die Sie wiederherstellen möchten. Wählen Sie **Wiederherstellen**.
+. Wählen Sie unter den Optionen für den Wiederherstellungstyp **Saubere Wiederherstellung** und dann **Weiter** aus.
+. Wählen Sie die gewünschte isolierte Wiederherstellungsumgebung aus und klicken Sie dann auf **Weiter**.
+. Überprüfen Sie die isolierte Wiederherstellungsumgebung und vergewissern Sie sich, dass es sich um den richtigen Speicherort handelt. Wählen Sie **Wiederherstellen**.
+. Ransomware Resilience führt die erforderlichen Einstellungen durch. Nach erfolgreichem Abschluss der Einrichtung zeigt Ransomware Resilience **Setup complete** an. Um mit der Analyse fortzufahren, wählen Sie **Next**.
+. Nach Abschluss der Einrichtung wählen Sie **Analyse ausführen**. Ransomware Resilience analysiert alle verfügbaren Wiederherstellungspunkte in den sieben Tagen vor dem Ransomware-Ereignis und zeigt das Datum und den Typ des Wiederherstellungspunkts an.
++
+image:screenshot-clean-room-analysis.png["Screenshot des Analyseschritts „Saubere Wiederherstellung“."]
+
+. Nach Abschluss der Analyse wählen Sie **Weiter**, um Ihre Wiederherstellung zu planen. Ransomware Resilience präsentiert zwei Optionen: **Least data loss** und **Latest unimpacted restore point**. Wählen Sie eine der beiden Optionen und sehen Sie sich optional die einzelnen Dateidaten für einen der beiden Wiederherstellungspunkte an.
++
+Um detaillierte Dateiereignisdaten anzuzeigen, wählen Sie eine Datei aus, um ihren Verschlüsselungsstatus zu analysieren; wann sie erstellt, geändert oder gelöscht wurde und welcher Wiederherstellungspunkt welcher Aktion entspricht.
+
++
+image:clean-restore-plan.png["Screenshot des Schrittes „Sauberer Wiederherstellungsplan“."]
+
+. Nachdem Sie Ihren Wiederherstellungspunkt ausgewählt haben, klicken Sie auf **Weiter**, um mit der Bereinigung Ihrer Dateien zu beginnen.
+. Ransomware Resilience beginnt mit der Bereinigung der Arbeitslast.
++
+Wenn die Reinigung abgeschlossen ist, wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
+
+. Wählen Sie, ob Sie die ursprüngliche Arbeitslast speichern möchten. Um die ursprüngliche Arbeitslast nicht zu speichern, wählen Sie **Nein, ursprüngliche Arbeitslast ersetzen**. Um sie zu speichern, wählen Sie **Ja, ursprüngliche Arbeitslast speichern** und geben Sie anschließend einen neuen Namen für die Arbeitslast ein.
+. Wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
+. Wenn die Wiederherstellung abgeschlossen ist, wählen Sie **Weiter**, um zur letzten Phase zu gelangen.
+. Wählen Sie **Ressourcen freigeben und beenden**, um die Ressourcen freizugeben und den Reinraum zu schließen. Um zu bestätigen, dass Sie die Ressourcen freigeben möchten, wählen Sie **Beenden**.
+
