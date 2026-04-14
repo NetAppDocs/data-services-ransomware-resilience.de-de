@@ -16,15 +16,13 @@ summary: Ransomware Resilience ermöglicht es Ihnen, Ihre Workloads durch eine s
 [role="lead"]
 Mit NetApp Ransomware Resilience können Sie nach einem Ransomware-Angriff mit Verschlüsselung eine geführte Wiederherstellung mittels einer sauberen Wiederherstellung durchführen. Die saubere Wiederherstellung identifiziert optimierte Wiederherstellungspfade, um Datenverlust zu minimieren und Ihre Workloads in kürzester Zeit wieder online zu bringen.
 
-Die Option „Saubere Wiederherstellung“ ist eine Alternative zur xref:task-custom-restore.html[Benutzerdefinierte Wiederherstellungsoption].
-
 
 
 == Bevor Sie beginnen
 
-Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgebung"^] konfiguriert haben, bevor Sie eine vollständige Wiederherstellung durchführen können.
-
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+
+Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgebung"^] konfiguriert haben, bevor Sie eine vollständige Wiederherstellung durchführen können.
 
 
 
