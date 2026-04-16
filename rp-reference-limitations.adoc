@@ -41,4 +41,5 @@ Azure NetApp Files wird in NetApp Ransomware Resilience unterstützt. Für Azure
 * Azure NetApp Files unterstützt keine FPolicy oder Benutzerverhaltensaktivität.
 * Achten Sie bei der Auswahl einer Schutzstrategie darauf, dass deren Snapshot-Zeitplan mit Azure NetApp Files kompatibel ist. Der am häufigsten in Azure NetApp Files verfügbare Snapshot-Zeitplan ist stündlich.
 * Von der Verwendung link:reference-soar.html["SOAR-Spielbücher"] mit Azure NetApp Files wird abgeraten, da die Azure NetApp Files APIs automatisierte Aktionen blockieren.
+* Einige Ereignisdaten sind in link:task-siem.html["SIEM-Berichte"] für Azure NetApp Files-Konfigurationen nicht enthalten.
 

@@ -47,11 +47,24 @@ Ransomware Resilience kann die folgenden Ereignisdaten an Ihr SIEM-System senden
 +
 ** *incident_id*: Die von Ransomware Resilience für das in Ransomware Resilience angegriffene Volume generierte Vorfall-ID.
 ** *alert_id*: Die von Ransomware Resilience für die Arbeitslast generierte ID.
-** *Schweregrad*: Eine der folgenden Warnstufen: „KRITISCH“, „HOCH“, „MITTEL“, „NIEDRIG“.
+** *Schweregrad*: Der Schweregrad der Alarmstufen: „CRITICAL“, „HIGH“, „MEDIUM“, „LOW“.
 ** *Beschreibung*: Details zur erkannten Warnung, z. B. „Ein potenzieller Ransomware-Angriff wurde auf Workload arp_learning_mode_test_2630 erkannt.“
+** *Titel*: Der Anzeigename der erkannten Warnung
+** *Kritikalität*: Eine Einschätzung der Kritikalität des Volumens in Ihrer Umgebung: „KRITISCH“, „WICHTIG“, „STANDARD“.
+** *incident_status*: Der aktive Status des Vorfalls, der folgende Werte annehmen kann: "NEW", "RESOLVED", "DISMISSED", "AUTO_RESOLVED".
+** *first_detected*: Der Zeitstempel, der angibt, wann der Vorfall von Ransomware Resilience erstmals erkannt wurde.
+** *is_readiness_drill*: Ein boolescher Wert, der angibt, ob es sich bei der Warnung um eine Übung oder einen tatsächlichen Vorfall handelt.
+** *Protokoll*: Das vom Volume verwendete Protokoll. Mögliche Werte sind "iSCSI", "NFS" und "SMB".
+** *alert_type*: Die Art der erkannten Bedrohung. Mögliche Werte sind „Verschlüsselung“, „Datenzerstörung“, „Datenleck“ und „Verdächtiges Benutzerverhalten“.
+** *user_name*: Der Benutzername des verdächtigen Benutzers, der mit der Warnung in Verbindung steht.
+** *user_id*: Die Benutzer-ID des verdächtigen Benutzers, der mit der Warnung verknüpft ist.
+** *client_ips*: Eine Liste der Client-IP-Adressen, die mit der verdächtigen Aktivität in Verbindung stehen, gilt nur für NFS-Warnungen.
 
 
 
+
+
+NOTE: Die Felder *user_name* und *user_id* sind nur relevant, wenn Sie xref:concept-user-behavior.adoc[Erkennung des Nutzerverhaltens] konfiguriert haben.
 
 
 
