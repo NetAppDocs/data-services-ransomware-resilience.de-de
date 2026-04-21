@@ -17,7 +17,7 @@ Bevor Sie NetApp Ransomware Resilience nutzen können, müssen zunächst die Wor
 Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unterstützte Systemkonfigurationen an. Ransomware Resilience bewertet Oracle-Anwendungen, VMware-Datenspeicher, Dateifreigaben und Blockspeicher.
 
 
-NOTE: Ransomware Resilience erkennt keine Workloads mit Volumes, die FlexGroup verwenden.
+NOTE: Ransomware Resilience erkennt keine Systeme mit Volumes, die FlexGroup verwenden.
 
 Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und NetApp Autonomous Ransomware Protection Optionen. Ransomware Resilience erkennt außerdem Schutzinformationen von NetApp Backup and Recovery für Dateifreigaben und VM-Dateifreigaben. Anschließend empfiehlt es Möglichkeiten zur Verbesserung Ihres Ransomware-Schutzes.
 
@@ -25,31 +25,28 @@ Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und 
 
 
 
-== Auswählen von Workloads zum Erkennen und Schützen
+== Wählen Sie die Workloads aus, die Sie entdecken möchten
 
-Wählen Sie in jedem Konsolenagenten die Systeme aus, auf denen Sie Workloads ermitteln möchten.
+Wählen Sie innerhalb jedes Console-Agent die Systeme aus, auf denen Sie Workloads identifizieren möchten.
+
+Die Erkennung von Workloads schützt diese nicht automatisch. Ransomware Resilience erkennt bestehende Schutzrichtlinien von NetApp Backup and Recovery oder ONTAP während des Erkennungsprozesses. Für alle Workloads ohne Schutz müssen Sie link:rp-use-protect.html["Schutz konfigurieren"].
 
 .Schritte
-. Wählen Sie in der NetApp Console*Schutz* > *Ransomware-Schutz*.
+. Wählen Sie in der NetApp Console*Schutz* > *Ransomware-Resilienz*.
 +
-Wenn dies Ihre erste Anmeldung ist, wird die Zielseite angezeigt.
+Wenn Sie sich zum ersten Mal anmelden, wird die Startseite angezeigt. Um die kostenlose Testphase zu starten, wählen Sie *30 Tage kostenlos testen*. Wenn Sie die Testphase bereits aktiviert haben, wählen Sie *Mit der Ermittlung von Workloads beginnen*.
 
 +
 image:screen-landing.png["Screenshot der Zielseite für Ransomware Resilience"]
 
 +
-
-NOTE: Wenn Sie die kostenlose Testversion gestartet haben, ändert sich die Beschriftung der Schaltfläche *30-tägige kostenlose Testversion starten* in *Mit der Ermittlung von Workloads beginnen*.
-
-. Wählen Sie auf der ersten Zielseite *Beginnen Sie mit der Ermittlung von Workloads* aus.
-+
 Ransomware Resilience findet sowohl unterstützte als auch nicht unterstützte Systeme.  Dieser Vorgang kann einige Minuten dauern.
 
+. Um Systeme für einen bestimmten Console-Agenten zu ermitteln, wählen Sie den Abwärtspfeil für den Console-Agenten, der das zu ermittelnde System enthält.
 +
 image:screen-discover-workloads.png["Screenshot „Workloads ermitteln“"]
 
-. Um Workloads für einen bestimmten Konsolenagenten zu ermitteln, wählen Sie *Systeme auswählen* neben dem Konsolenagenten aus, für den Sie Workloads ermitteln möchten.
-. Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.
+. Wählen Sie die Systeme aus, auf denen Sie die Erkennung durchführen möchten.
 . Wählen Sie *Entdecken*.
 +
 Ransomware Resilience erkennt Workload-Daten nur, wenn Sie das System auswählen. Der Ermittlungsprozess kann mehrere Minuten dauern.
@@ -75,7 +72,7 @@ Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, müssen Sie 
 
 .Schritte
 . Um den Zeitpunkt der letzten Erkennung zu ermitteln, sehen Sie sich den Datums- und Zeitstempel neben dem Symbol *Aktualisieren* oben rechts im Ransomware-Resilienz-Dashboard an.
-. Wählen Sie im Dashboard das Symbol *Refresh*, um neue Workloads zu finden.
+. Wählen Sie im Dashboard das Symbol *Aktualisieren*, um neue Workloads zu identifizieren.
 
 
 
@@ -85,12 +82,12 @@ TIP: Falls Sie feststellen, dass für das von Ihnen ermittelte System keine Volu
 
 == Entdecken Sie neue Systeme
 
-Wenn Sie bereits Arbeitslasten ermittelt haben, können Sie neue oder zuvor nicht ausgewählte finden.
+Wenn Sie bereits eine Erkennung auf einem System durchgeführt und anschließend eine Arbeitslast hinzugefügt haben, führen Sie die Erkennung erneut durch, um die Arbeitslasten zu identifizieren.
 
 .Schritte
 . Wählen Sie in NetApp Ransomware Resilience *Einstellungen* aus.
-. Wählen Sie auf der Workload-Erkennungskarte *Workloads erkennen* aus. Die Suche kann einige Minuten dauern.  Ein Ladesymbol zeigt den Fortschritt an.
-. Ransomware Resilience erkennt sowohl unterstützte als auch nicht unterstützte Systeme. Es unterstützt kein System, wenn dessen ONTAP Version unterhalb der erforderlichen Version liegt. Wenn Sie mit der Maus über ein nicht unterstütztes System fahren, wird in einem Tooltip der Grund angezeigt. Wählen Sie die Systeme aus, auf denen Sie Workloads ermitteln möchten.
+. Wählen Sie in der Workload-Erkennungskarte *Erkennen* aus. Die Erkennung kann einige Minuten dauern. Ein Ladesymbol zeigt den Fortschritt an.
+. Ransomware Resilience erkennt sowohl unterstützte als auch nicht unterstützte Systeme. Systeme mit einer ONTAP Version unterhalb der erforderlichen Version werden nicht unterstützt. Beim Überfahren eines nicht unterstützten Systems mit dem Mauszeiger wird der Grund in einer Kurzbeschreibung angezeigt. Wählen Sie die Systeme aus, auf denen Sie Workloads identifizieren möchten.
 . Wählen Sie *Entdecken*.
 
 

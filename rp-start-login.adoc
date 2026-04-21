@@ -41,8 +41,5 @@ Andernfalls wird das Ransomware Resilience-Dashboard angezeigt.
 +
 image:screen-dashboard.png["Screenshot des Ransomware Resilience-Dashboards"]
 
-. Wählen Sie die Option *Workloads ermitteln* aus, falls Sie dies noch nicht getan haben.
-+
-Weitere Informationen finden Sie unter link:rp-start-discover.html["Workloads ermitteln"] .
-
+. Wenn Sie Ransomware Resilience zum ersten Mal verwenden, link:rp-start-discover.html["Arbeitslasten ermitteln"].
 

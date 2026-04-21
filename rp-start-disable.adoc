@@ -26,7 +26,7 @@ Details zu Aktionen, die Sie nach Ablauf der Lizenz noch durchführen können, f
 
 == Schutzrichtlinien deaktivieren
 
-Wenn Sie die Verwendung von Schutzrichtlinien, die auf Workloads angewendet werden, beenden möchten, können Sie diese mithilfe von System Manager, API-Aufrufen oder CLI deaktivieren.
+Wenn Sie die Verwendung von Schutzrichtlinien, die auf Workloads angewendet werden, beenden möchten, können Sie diese mithilfe von System Manager, API-Aufrufen oder der CLI deaktivieren.
 
 Sie können FPolicy- und Sicherungsrichtlinien in Ransomware Resilience deaktivieren, indem Sie eine andere Richtlinie anwenden, die diese nicht enthält.  Anweisungen zum Einrichten von Schutzrichtlinien finden Sie unterlink:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] .
 
