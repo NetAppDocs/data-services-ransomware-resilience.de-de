@@ -2178,7 +2178,6 @@
   <block id="b1573f80f25470f8eb281542e0c5be32" category="list-text">Routing von der SVM-Daten-LIF-IP zur IRE zulassen.</block>
   <block id="9c9dab37f0ac19e3e253ffd75559fad6" category="list-title">Produktionsumgebungs-Routingtabelle</block>
   <block id="17e68097ee762fecf78b9e9fdb36d0c8" category="list-text">Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.</block>
-  <block id="673c05ce31cb0b56b8af3c9126f1cbb0" category="list-text">Sicherheitsgruppen und Firewalls im Produktions-ONTAP-Cluster sollten eingehenden NFSv4- und NFSv3-Datenverkehr zur LIF-IP für saubere Wiederherstellungsdaten zulassen. Die Firewall sollte für eingehenden Datenverkehr aus dem IRE-CIDR-Bereich geöffnet sein.</block>
   <block id="7c1a5f175cfc657a18de4a95621d74e3" category="cell">Zielport</block>
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">Zweck</block>
   <block id="f8dc77f2ac2f7272dc57dd5689ee9d63" category="cell">TCP &amp; UDP</block>
@@ -2457,4 +2456,6 @@
   <block id="6d008767b6b1ed8f9bb99930968157ff" category="summary">Stellen Sie sicher, dass Sie die Lizenzanforderungen für Ransomware Resilience erfüllen, um Ihre Workloads zu schützen.</block>
   <block id="360e5892ccf9a138fa1f7477e6e2db92" category="list-text">Wenn Sie Ransomware Resilience zum ersten Mal verwenden, <block ref="f19bbe7d2dbc45b6f2a3e4d9d3615c0f" category="inline-link-macro-rx"></block>.</block>
   <block id="df3fb79f22fd0d8a496bd6ab0f7fcb62" category="sidebar">NetApp Ransomware Resilience schützt, erkennt und unterstützt die Wiederherstellung von Workloads vor Ransomware-Bedrohungen in lokalen und Cloud-Speichern. Ransomware Resilience ermöglicht sicheres Backup und Recovery und hilft Unternehmen, kritische Daten zu schützen und die Geschäftskontinuität für Oracle, VM-Datastores, NAS-Speicher und mehr aufrechtzuerhalten.</block>
+  <block id="d75c1a5d668e6fb6360954c43259df75" category="list-title">IRE-Firewall</block>
+  <block id="93222c59d4ce3b5c19ed433527efc1b4" category="list-text">Sie sollten eine separate Firewall zur Verwaltung des eingehenden Datenverkehrs für die crr-data-LIF-IP erstellen. Diese Firewall sollte NFSv3- und NFSv4-Mounts aus dem IRE VPC CIDR-Bereich zulassen.</block>
 </blocks>

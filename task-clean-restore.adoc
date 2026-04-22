@@ -171,7 +171,6 @@ NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, k
 
 .Produktionsumgebungs-Routingtabelle
 * Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.
-* Sicherheitsgruppen und Firewalls im Produktions-ONTAP-Cluster sollten eingehenden NFSv4- und NFSv3-Datenverkehr zur LIF-IP für saubere Wiederherstellungsdaten zulassen. Die Firewall sollte für eingehenden Datenverkehr aus dem IRE-CIDR-Bereich geöffnet sein.
 +
 [cols="1,1,1,1"]
 |===
@@ -195,6 +194,10 @@ NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, k
 
 | TCP & UDP | 4049 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
 |===
+
+
+.IRE-Firewall
+* Sie sollten eine separate Firewall zur Verwaltung des eingehenden Datenverkehrs für die crr-data-LIF-IP erstellen. Diese Firewall sollte NFSv3- und NFSv4-Mounts aus dem IRE VPC CIDR-Bereich zulassen.
 
 
 .IRE-Routingtabelle
@@ -307,7 +310,6 @@ NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, k
 
 .Produktionsumgebungs-Routingtabelle
 * Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.
-* Sicherheitsgruppen und Firewalls im Produktions-ONTAP-Cluster sollten eingehenden NFSv4- und NFSv3-Datenverkehr zur LIF-IP für saubere Wiederherstellungsdaten zulassen. Die Firewall sollte für eingehenden Datenverkehr aus dem IRE-CIDR-Bereich geöffnet sein.
 +
 [cols="1,1,1,1"]
 |===
@@ -331,6 +333,10 @@ NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, k
 
 | TCP & UDP | 4049 | IRE VPC CIDR-Bereich | NFSv3-Zugriff von IRE 
 |===
+
+
+.IRE-Firewall
+* Sie sollten eine separate Firewall zur Verwaltung des eingehenden Datenverkehrs für die crr-data-LIF-IP erstellen. Diese Firewall sollte NFSv3- und NFSv4-Mounts aus dem IRE VPC CIDR-Bereich zulassen.
 
 
 .IRE-Routingtabelle
