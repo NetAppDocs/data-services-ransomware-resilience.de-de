@@ -125,13 +125,13 @@ Bevor Sie Microsoft Sentinel in NetApp Ransomware Resilience aktivieren, müssen
 * *Authentifizierung*: Geben Sie die Authentifizierungsdaten für die Anwendung ein.
 
 
-.Schritte zum Aktivieren von Microsoft Sentinel
+.Microsoft Sentinel aktivieren
 . Gehen Sie zu Microsoft Sentinel.
 . Erstellen Sie einen *Log Analytics-Arbeitsbereich*.
 . Aktivieren Sie Microsoft Sentinel, um den gerade erstellten Log Analytics-Arbeitsbereich zu verwenden.
 
 
-.Schritte zum Erstellen einer benutzerdefinierten Rolle in Microsoft Sentinel
+.Erstellen einer benutzerdefinierten Rolle in Microsoft Sentinel
 . Gehen Sie zu Microsoft Sentinel.
 . Wählen Sie *Abonnement* > *Zugriffskontrolle (IAM)*.
 . Geben Sie einen benutzerdefinierten Rollennamen ein.  Verwenden Sie den Namen *Ransomware Resilience Sentinel Configurator*.
@@ -151,7 +151,7 @@ Bevor Sie Microsoft Sentinel in NetApp Ransomware Resilience aktivieren, müssen
 . Überprüfen und speichern Sie Ihre Einstellungen.
 
 
-.Schritte zum Registrieren von Ransomware Resilience zum Empfangen von Ereignissen von Microsoft Sentinel
+.Registrieren Sie Ransomware Resilience, um Ereignisse von Microsoft Sentinel zu erhalten.
 . Gehen Sie zu Microsoft Sentinel.
 . Wählen Sie *Entra ID* > *Anwendungen* > *App-Registrierungen*.
 . Geben Sie als *Anzeigenamen* für die Anwendung „*Ransomware Resilience*“ ein.
@@ -164,7 +164,7 @@ Nach der Registrierung zeigt das Microsoft Entra Admin Center den Anwendungsübe
 
 
 
-.Schritte zum Erstellen eines Geheimnisses für die Registrierung
+.Erstellen Sie ein Geheimnis für die Registrierung
 . Gehen Sie zu Microsoft Sentinel.
 . Wählen Sie *Zertifikate und Geheimnisse* > *Clientgeheimnisse* > *Neues Clientgeheimnis*.
 . Fügen Sie eine Beschreibung für Ihr Anwendungsgeheimnis hinzu.
@@ -177,7 +177,7 @@ TIP: Die Lebensdauer eines Client-Geheimnisses ist auf zwei Jahre (24 Monate) od
 . Notieren Sie das im Authentifizierungsschritt zu verwendende Geheimnis.  Das Geheimnis wird nie wieder angezeigt, nachdem Sie diese Seite verlassen haben.
 
 
-.Schritte zum Zuweisen von Berechtigungen zur Anwendung
+.Berechtigungen zuweisen
 . Gehen Sie zu Microsoft Sentinel.
 . Wählen Sie *Abonnement* > *Zugriffskontrolle (IAM)*.
 . Wählen Sie *Hinzufügen* > *Rollenzuweisung hinzufügen*.
@@ -195,7 +195,7 @@ TIP: Dies ist die benutzerdefinierte Rolle, die Sie zuvor erstellt haben.
 . Wählen Sie *Überprüfen und zuweisen* aus, um die Berechtigungen zuzuweisen.
 
 
-.Schritte zum Eingeben der Authentifizierungsdaten für die Anwendung
+.Geben Sie Authentifizierungsanmeldeinformationen ein.
 . Gehen Sie zu Microsoft Sentinel.
 . Geben Sie die Anmeldeinformationen ein:
 +
@@ -227,7 +227,7 @@ Ransomware Resilience unterstützt die Bedrohungserkennung mit Splunk Cloud und 
 
 NOTE: Für Splunk Enterprise müssen Sie eingehenden öffentlichen Internetverkehr zulassen, damit Ransomware Resilience Ereignisse mithilfe der bereitgestellten HTTP-Ereignissammlerdetails senden kann.
 
-.Schritte zum Aktivieren eines HTTP-Ereignissammlers in Splunk
+.Aktivieren eines HTTP-Ereignissammlers in Splunk
 . Wechseln Sie zu Ihrer gewählten Splunk-Umgebung: Cloud oder Enterprise.
 . Wählen Sie *Einstellungen* > *Dateneingaben*.
 . Wählen Sie *HTTP-Ereignissammler* > *Globale Einstellungen*.
@@ -236,7 +236,7 @@ NOTE: Für Splunk Enterprise müssen Sie eingehenden öffentlichen Internetverke
 . Geben Sie in *HTTP-Portnummer* einen Port für den HTTP-Ereignissammler ein.
 
 
-.Schritte zum Erstellen eines Event Collector-Tokens in Splunk
+.Erstellen Sie ein Event Collector-Token in Splunk
 . Wechseln Sie zu Splunk Cloud oder Enterprise.
 . Wählen Sie *Einstellungen* > *Daten hinzufügen*.
 . Wählen Sie *Monitor* > *HTTP-Ereignissammler*.

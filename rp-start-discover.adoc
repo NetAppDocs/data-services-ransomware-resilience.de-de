@@ -14,7 +14,7 @@ summary: Während der Erkennung analysiert Ransomware Resilience alle Volumes un
 [role="lead"]
 Bevor Sie NetApp Ransomware Resilience nutzen können, müssen zunächst die Workload-Daten ermittelt werden. Während der Erkennung analysiert Ransomware Resilience alle Volumes und Dateien in Systemen über alle Konsolenagenten und Projekte innerhalb einer Organisation hinweg.
 
-Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unterstützte Systemkonfigurationen an. Ransomware Resilience bewertet Oracle-Anwendungen, VMware-Datenspeicher, Dateifreigaben und Blockspeicher.
+Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unterstützte Systemkonfigurationen an. Ransomware Resilience bewertet Dateifreigaben und Blockspeicher.
 
 
 NOTE: Ransomware Resilience erkennt keine Systeme mit Volumes, die FlexGroup verwenden.

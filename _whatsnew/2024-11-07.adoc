@@ -25,11 +25,3 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html
 === Jetzt 30 Tage kostenlos testen
 
 Mit dieser Version können neue Bereitstellungen des BlueXP ransomware protection jetzt 30 Tage lang kostenlos getestet werden.  Zuvor war der BlueXP ransomware protection 90 Tage lang als kostenlose Testversion verfügbar.  Wenn Sie bereits an der 90-tägigen kostenlosen Testversion teilnehmen, gilt dieses Angebot für die nächsten 90 Tage.
-
-
-
-=== Wiederherstellen der Anwendungsarbeitslast auf Dateiebene für Podman
-
-Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie jetzt eine Liste der Dateien anzeigen, die möglicherweise von einem Angriff betroffen waren, und diejenigen identifizieren, die Sie wiederherstellen möchten.  Wenn die BlueXP Konnektoren in einer Organisation (früher ein Konto) Podman verwendeten, war diese Funktion zuvor deaktiviert.  Es ist jetzt für Podman aktiviert.  Sie können die wiederherzustellenden Dateien vom BlueXP ransomware protection auswählen lassen, eine CSV-Datei hochladen, in der alle von einer Warnung betroffenen Dateien aufgelistet sind, oder manuell angeben, welche Dateien Sie wiederherstellen möchten.
-
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["Erfahren Sie mehr über die Wiederherstellung nach einem Ransomware-Angriff"] .

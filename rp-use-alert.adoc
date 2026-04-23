@@ -285,7 +285,7 @@ Der Status des Vorfalls bzw. der Vorfälle ändert sich zu „Abgewiesen“.
 
 == Liste der betroffenen Dateien anzeigen
 
-Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen.  Sie können auf die Seite „Warnungen“ zugreifen, um eine Liste der betroffenen Dateien herunterzuladen.  Verwenden Sie dann die Wiederherstellungsseite, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
+Bevor Sie eine Arbeitslast auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen. Sie können die Seite „Warnungen“ aufrufen, um eine Liste der betroffenen Dateien herunterzuladen. Dann verwenden Sie die Seite „Wiederherstellung“, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
 
@@ -296,7 +296,7 @@ Verwenden Sie die Seite „Warnungen“, um die Liste der betroffenen Dateien ab
 TIP: Wenn ein Volume mehrere Warnungen aufweist, müssen Sie möglicherweise für jede Warnung die CSV-Liste der betroffenen Dateien herunterladen.
 
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
-. Sortieren Sie auf der Seite „Warnungen“ die Ergebnisse nach Arbeitslast, um die Warnungen für die Anwendungsarbeitslast anzuzeigen, die Sie wiederherstellen möchten.
+. Sortieren Sie auf der Seite „Warnungen“ die Ergebnisse nach Arbeitslast, um die Warnungen für die Arbeitslast anzuzeigen, die Sie wiederherstellen möchten.
 . Wählen Sie aus der Liste der Warnungen für diese Arbeitslast eine Warnung aus.
 . Wählen Sie für diese Warnung einen einzelnen Vorfall aus.
 +

@@ -80,9 +80,7 @@ Für Lizenzierung und Abrechnung kann Ransomware Resilience auch dann in Backup 
 == Arbeitslasten
 
 .Was versteht man unter Arbeitslast im Kontext von Ransomware-Resilienz?
-Eine Workload ist eine Anwendung, eine VM oder eine Dateifreigabe. Eine Arbeitslast umfasst alle Volumes, die von einer einzelnen Anwendungsinstanz verwendet werden.
-
-Betrachten wir beispielsweise eine Oracle-Datenbank, die auf ora3.host.com bereitgestellt ist mit `vol1` enthaltend Daten und `vol2` enthaltend Protokolle. Die beiden Volumes bilden die Arbeitslast für diese Oracle-Datenbankinstanz.
+Eine Arbeitslast ist eine virtuelle Maschine oder eine Dateifreigabe.
 
 .Wie priorisiert Ransomware Resilience die Workload-Daten?
 Die Priorität der Arbeitslast (kritisch, Standard, wichtig) wird durch die Snapshot-Frequenzen bestimmt, die bereits für jedes mit der Arbeitslast verbundene Volume und die geplanten Backups angewendet wurden.

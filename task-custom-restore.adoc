@@ -25,9 +25,8 @@ TIP: Ransomware Resilience unterstützt außerdem eine xref:task-clean-restore.h
 
 Der Sicherheitsspeicheradministrator kann Daten auf verschiedenen Ebenen wiederherstellen:
 
-* Wiederherstellung aller Volumes
-* Stellen Sie eine Anwendung auf Volume- oder Datei- und Ordnerebene wieder her.
-* Stellen Sie eine Dateifreigabe auf Volume-, Verzeichnis- oder Datei-/Ordnerebene wieder her.
+* Alle Volumes wiederherstellen
+* Eine Dateifreigabe auf Volume-, Verzeichnis- oder Dateiebene wiederherstellen.
 * Wiederherstellung aus einem Datenspeicher auf VM-Ebene.
 
 
@@ -54,7 +53,7 @@ TIP: Sie können bis zu 100 Dateien oder einen einzelnen Ordner auswählen.
 
 
 
-. Fahren Sie mit einem der folgenden Verfahren fort, je nachdem, ob Sie Anwendung, Volume oder Datei ausgewählt haben.
+. Fahren Sie mit einem der folgenden Verfahren fort, je nachdem, ob Sie Volume oder Datei ausgewählt haben.
 
 
 
@@ -62,7 +61,7 @@ TIP: Sie können bis zu 100 Dateien oder einen einzelnen Ordner auswählen.
 === Alle Volumes wiederherstellen
 
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
-. Wählen Sie eine Arbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie eine Arbeitslast im Status „Wiederherstellung erforderlich“ aus.
 . Wählen Sie zum Wiederherstellen *Wiederherstellen*.
 . Wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich *Alle Volumes* aus.
 +
@@ -98,10 +97,10 @@ TIP: Der neue Datenträgername wird als Präfix + ursprünglicher Datenträgerna
 
 
 
-=== Wiederherstellen einer Anwendungs-Workload auf Volume-Ebene
+=== Stellen Sie eine Arbeitslast auf Volumenebene wieder her
 
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
-. Wählen Sie eine Anwendungsarbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie eine Arbeitslast im Status „Wiederherstellung erforderlich“ aus.
 . Wählen Sie zum Wiederherstellen *Wiederherstellen*.
 . Wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich die Option *Nach Volume* aus.
 +
@@ -138,11 +137,11 @@ TIP: Der neue Datenträgername wird als ursprünglicher Datenträgername + Siche
 
 
 
-=== Wiederherstellen einer Anwendungs-Workload auf Dateiebene
+=== Stellen Sie eine Arbeitslast auf Dateiebene wieder her
 
-Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen.  Sie können auf die Seite „Warnungen“ zugreifen, um eine Liste der betroffenen Dateien herunterzuladen.  Verwenden Sie dann die Wiederherstellungsseite, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
+Bevor Sie eine Arbeitslast auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen. Sie können die Seite „Warnungen“ aufrufen, um eine Liste der betroffenen Dateien herunterzuladen. Dann verwenden Sie die Seite „Wiederherstellung“, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
 
-Sie können eine Anwendungs-Workload auf Dateiebene auf demselben oder einem anderen System wiederherstellen.
+Sie können eine Arbeitslast auf Dateiebene auf demselben oder einem anderen System wiederherstellen.
 
 
 
@@ -155,7 +154,7 @@ TIP: Wenn ein Volume mehrere Warnungen aufweist, müssen Sie für jede Warnung d
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
-. Sortieren Sie auf der Seite „Warnungen“ die Ergebnisse nach Arbeitslast, um die Warnungen für die Anwendungsarbeitslast anzuzeigen, die Sie wiederherstellen möchten.
+. Sortieren Sie auf der Seite „Warnungen“ die Ergebnisse nach Arbeitslast, um die Warnungen für die Arbeitslast anzuzeigen, die Sie wiederherstellen möchten.
 . Wählen Sie aus der Liste der Warnungen für diese Arbeitslast eine Warnung aus.
 . Wählen Sie für diese Warnung einen einzelnen Vorfall aus.
 +
@@ -173,7 +172,7 @@ Nach der Überprüfung der betroffenen Dateien können Sie sie wiederherstellen.
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
-. Wählen Sie eine Anwendungsarbeitslast aus, die sich im Status „Wiederherstellung erforderlich“ befindet.
+. Wählen Sie eine Arbeitslast im Status „Wiederherstellung erforderlich“ aus.
 . Wählen Sie *Wiederherstellen*.
 . Wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich die Option „Nach Datei“ aus.
 . Wählen Sie in der Volumeliste das Volume aus, das die Dateien enthält, die Sie wiederherstellen möchten.

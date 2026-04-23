@@ -485,14 +485,6 @@ Mit dieser Version können neue Bereitstellungen des BlueXP ransomware protectio
 
 
 
-=== Wiederherstellen der Anwendungsarbeitslast auf Dateiebene für Podman
-
-Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie jetzt eine Liste der Dateien anzeigen, die möglicherweise von einem Angriff betroffen waren, und diejenigen identifizieren, die Sie wiederherstellen möchten.  Wenn die BlueXP Konnektoren in einer Organisation (früher ein Konto) Podman verwendeten, war diese Funktion zuvor deaktiviert.  Es ist jetzt für Podman aktiviert.  Sie können die wiederherzustellenden Dateien vom BlueXP ransomware protection auswählen lassen, eine CSV-Datei hochladen, in der alle von einer Warnung betroffenen Dateien aufgelistet sind, oder manuell angeben, welche Dateien Sie wiederherstellen möchten.
-
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["Erfahren Sie mehr über die Wiederherstellung nach einem Ransomware-Angriff"] .
-
-
-
 == 30. September 2024
 
 
@@ -565,9 +557,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-licen
 
 
 
-=== Wiederherstellen der Anwendungsarbeitslast auf Dateiebene
+=== Stellen Sie die Arbeitslast auf Dateiebene wieder her
 
-Bevor Sie eine Anwendungs-Workload auf Dateiebene wiederherstellen, können Sie jetzt eine Liste der Dateien anzeigen, die möglicherweise von einem Angriff betroffen waren, und diejenigen identifizieren, die Sie wiederherstellen möchten.  Sie können die wiederherzustellenden Dateien vom BlueXP ransomware protection auswählen lassen, eine CSV-Datei hochladen, in der alle von einer Warnung betroffenen Dateien aufgelistet sind, oder manuell angeben, welche Dateien Sie wiederherstellen möchten.
+Bevor Sie eine Arbeitslast auf Dateiebene wiederherstellen, können Sie sich nun eine Liste der möglicherweise von einem Angriff betroffenen Dateien anzeigen lassen und die Dateien identifizieren, die Sie wiederherstellen möchten. Sie können BlueXP Ransomware Protection die Auswahl der wiederherzustellenden Dateien überlassen, eine CSV-Datei hochladen, die alle von einer Warnung betroffenen Dateien auflistet, oder Sie können manuell festlegen, welche Dateien Sie wiederherstellen möchten.
 
 
 NOTE: Wenn mit dieser Version nicht alle BlueXP Konnektoren in einem Konto Podman verwenden, ist die Funktion zur Wiederherstellung einzelner Dateien aktiviert.  Andernfalls ist es für dieses Konto deaktiviert.
@@ -578,9 +570,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover
 
 === Laden Sie eine Liste der betroffenen Dateien herunter
 
-Bevor Sie eine Anwendungsarbeitslast auf Dateiebene wiederherstellen, können Sie jetzt auf die Seite „Warnungen“ zugreifen, um eine Liste der betroffenen Dateien in einer CSV-Datei herunterzuladen und dann die CSV-Datei über die Seite „Wiederherstellung“ hochzuladen.
+Bevor Sie eine Arbeitslast auf Dateiebene wiederherstellen, können Sie jetzt auf die Warnseite zugreifen, um eine Liste der betroffenen Dateien in einer CSV-Datei herunterzuladen und dann die Wiederherstellungsseite verwenden, um die CSV-Datei hochzuladen.
 
-https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["Erfahren Sie mehr über das Herunterladen betroffener Dateien vor der Wiederherstellung einer Anwendung"] .
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-recover.html["Erfahren Sie mehr über das Herunterladen betroffener Dateien vor der Wiederherstellung einer Arbeitslast"]
 
 
 

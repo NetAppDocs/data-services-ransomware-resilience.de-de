@@ -106,7 +106,7 @@ Hier ist eine Auswahl der Empfehlungen von Ransomware Resilience.
 | Bereiten Sie <Sicherungsanbieter> als Sicherungsziel vor, um Ihre Workload-Daten zu sichern. | Die Arbeitslast hat derzeit keine Sicherungsziele. | Fügen Sie dieser Arbeitslast Sicherungsziele hinzu, um sie zu schützen. Siehe link:task-backup-destination.html["Hinzufügen eines Sicherungsziels"]. 
 
 
-| Schützen Sie kritische oder sehr wichtige Anwendungs-Workloads vor Ransomware. | Auf der Seite „Schützen“ werden kritische oder sehr wichtige (je nach zugewiesener Prioritätsstufe) Anwendungs-Workloads angezeigt, die nicht geschützt sind. | Weisen Sie diesen Workloads eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
+| Schützen Sie kritische oder besonders wichtige Arbeitslasten vor Ransomware. | Auf der Seite „Protect“ werden kritische oder sehr wichtige (basierend auf der zugewiesenen Prioritätsstufe) Workloads angezeigt, die nicht geschützt sind. | Weisen Sie diesen Workloads eine Richtlinie zu. Weitere Informationen finden Sie unter link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"] . 
 
 
 | Schützen Sie kritische oder sehr wichtige Dateifreigabe-Workloads vor Ransomware. | Auf der Seite „Schutz“ werden kritische oder sehr wichtige Workloads vom Typ „Dateifreigabe“ oder „Datenspeicher“ angezeigt, die nicht geschützt sind. | Weisen Sie jedem Workload eine Richtlinie zu. Siehe link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"]. Siehe link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"]. Siehe link:rp-use-protect.html["Schützen Sie Workloads vor Ransomware-Angriffen"]. 

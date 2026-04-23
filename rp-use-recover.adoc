@@ -14,7 +14,7 @@ summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die S
 [role="lead"]
 Nachdem Workloads als „Wiederherstellung erforderlich“ markiert wurden, empfiehlt NetApp Ransomware Resilience einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.
 
-* Wenn die Anwendung oder VM von NetApp Backup and Recovery oder Ransomware Resilience verwaltet wird, führt Ransomware Resilience eine absturzkonsistente Wiederherstellung durch, bei der alle Daten, die sich zum gleichen Zeitpunkt auf dem Volume befanden, wiederhergestellt werden, zum Beispiel wenn das System abgestürzt ist.
+* Wird die VM von NetApp Backup and Recovery oder Ransomware Resilience verwaltet, führt Ransomware Resilience eine absturzkonsistente Wiederherstellung durch, bei der alle Daten, die sich zum gleichen Zeitpunkt auf dem Volume befanden, wiederhergestellt werden, beispielsweise wenn das System abgestürzt ist.
 +
 Sie können die Arbeitslast wiederherstellen, indem Sie alle Volumes, bestimmte Volumes oder bestimmte Dateien auswählen.
 

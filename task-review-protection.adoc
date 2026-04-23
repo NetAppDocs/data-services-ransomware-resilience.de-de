@@ -22,7 +22,6 @@ Sobald Sie den Umfang Ihres aktuellen Schutzes verstanden haben, link:rp-use-pro
 
 Einer der ersten Schritte zum Schutz von Workloads besteht darin, Ihre aktuellen Workloads und deren Schutzstatus anzuzeigen.  Sie können die folgenden Arten von Workloads sehen:
 
-* Anwendungs-Workloads
 * Blockieren von Workloads
 * Dateifreigabe-Workloads
 * VM-Workloads
