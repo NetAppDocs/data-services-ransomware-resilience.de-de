@@ -54,6 +54,6 @@ image:screen-recovery2.png["Wiederherstellungsseite"]
 
 Nachdem Sie die Arbeitslasten bewertet haben, haben Sie zwei Möglichkeiten, Ihre Arbeitslast wiederherzustellen:
 
-* xref:task-custom-restore.html[Wiederherstellung mit einer benutzerdefinierten Wiederherstellung]
 * xref:task-clean-restore.html[Mit einer sauberen Wiederherstellung wiederherstellen]
+* xref:task-custom-restore.html[Wiederherstellung mit einer benutzerdefinierten Wiederherstellung]
 

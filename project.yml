@@ -66,14 +66,14 @@ sidebar:
         url: "/rp-use-alert.html"
       - title: Überprüfen Sie den Wiederherstellungsstatus
         url: "/rp-use-recover.html"
-      - title: Wiederherstellung mit einer benutzerdefinierten Wiederherstellung
-        url: "/rp-use-recover.html"
-      - title: Führen Sie eine saubere Wiederherstellung durch
+      - title: Mit einer sauberen Wiederherstellung wiederherstellen
         entries:
         - title: Erstellen Sie eine isolierte Wiederherstellungsumgebung
           url: "/task-clean-restore.html"
-        - title: Wiederherstellung mit sauberer Wiederherstellung
+        - title: Führen Sie eine saubere Wiederherstellung durch
           url: "/task-clean-restore-recover.html"
+      - title: Wiederherstellung mit einer benutzerdefinierten Wiederherstellung
+        url: "/rp-use-recover.html"
     - title: Führen Sie eine Bereitschaftsübung durch
       url: "/rp-start-simulate.html"
     - title: SIEM konfigurieren
