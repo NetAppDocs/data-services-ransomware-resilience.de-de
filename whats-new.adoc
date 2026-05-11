@@ -18,6 +18,42 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 
 
+== 11. März 2026
+
+
+
+=== Verbesserungen für Clean Restore
+
+Clean Restore unterstützt jetzt die Wiederherstellung auf alternative Cluster und Analysen über sieben Tage hinaus.
+
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Stellen Sie Workloads mit einer sauberen Wiederherstellung wieder her"^].
+
+
+
+=== Google SecOps SIEM-Unterstützung
+
+Ransomware Resilience unterstützt jetzt Security Information and Event Management (SIEM) mit Google SecOps, wodurch Sie Daten automatisch an Google SecOps senden können, um die Bedrohungsanalyse und -erkennung zu optimieren.
+
+Informationen zur Konfiguration finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["Verbinden Sie NetApp Ransomware Resilience mit einem SIEM"^].
+
+
+
+=== Azure NetApp Files-Unterstützung ist jetzt allgemein verfügbar
+
+Ransomware Resilience unterstützt jetzt Azure NetApp Files-Systeme und ermöglicht Ihnen so die effiziente Erkennung und Abwehr von Ransomware-Bedrohungen in Azure NetApp Files. Bei der Erkennung von Workloads zeigt Ransomware Resilience nun Azure NetApp Files im Schutz-Dashboard an. Die Unterstützung von Ransomware Resilience für Azure NetApp Files umfasst Erkennungs- und Schutzstrategien, die ausschließlich auf Snapshots basieren. Die Unterstützung für Azure NetApp Files ist ab sofort allgemein verfügbar (GA).
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über Ransomware-Resilienz"^].
+
+
+
+=== SOAR-Unterstützung für das Blockieren von Benutzern
+
+Ransomware Resilience unterstützt jetzt das Blockieren einzelner Nutzer mit Google SecOps und Splunk SOAR Playbooks. Mit dieser Erweiterung können Sie das Blockieren von Nutzern automatisieren, wenn Ransomware Resilience verdächtige Nutzeraktivitäten wie einen Datenverstoß oder massenhafte Datenlöschungen erkennt.
+
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/reference-soar.html["Integrieren Sie ein SOAR-Playbook"^].
+
+
+
 == 13. April 2026
 
 

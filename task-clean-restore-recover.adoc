@@ -46,7 +46,7 @@ Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgeb
 . Wählen Sie die gewünschte isolierte Wiederherstellungsumgebung aus und klicken Sie dann auf **Weiter**.
 . Überprüfen Sie die isolierte Wiederherstellungsumgebung und vergewissern Sie sich, dass es sich um den richtigen Speicherort handelt. Wählen Sie **Wiederherstellen**.
 . Ransomware Resilience führt die erforderlichen Einstellungen durch. Nach erfolgreichem Abschluss der Einrichtung zeigt Ransomware Resilience **Setup complete** an. Um mit der Analyse fortzufahren, wählen Sie **Next**.
-. Nach Abschluss der Einrichtung wählen Sie **Analyse ausführen**. Ransomware Resilience analysiert alle verfügbaren Wiederherstellungspunkte in den sieben Tagen vor dem Ransomware-Ereignis und zeigt das Datum und den Typ des Wiederherstellungspunkts an.
+. Nach Abschluss der Einrichtung wählen Sie **Analyse ausführen**. Ransomware Resilience sucht nach verfügbaren Wiederherstellungspunkten vor dem Ransomware-Ereignis und zeigt das Datum und den Typ des Wiederherstellungspunkts an. Ransomware Resilience sucht nach Wiederherstellungspunkten in Sieben-Tage-Intervallen. Ist in den ersten sieben Tagen kein Wiederherstellungspunkt verfügbar, beginnt Ransomware Resilience mit der Suche im vorherigen Sieben-Tage-Zeitraum und wiederholt den Vorgang, bis ein praktikabler Wiederherstellungspfad gefunden ist.
 +
 image:screenshot-clean-room-analysis.png["Screenshot des Analyseschritts „Saubere Wiederherstellung“."]
 
@@ -57,11 +57,13 @@ Um detaillierte Dateiereignisdaten anzuzeigen, wählen Sie eine Datei aus, um ih
 +
 image:clean-restore-plan.png["Screenshot des Schritts „Sauberer Wiederherstellungsplan“."]
 
-. Nachdem Sie Ihren Wiederherstellungspunkt ausgewählt haben, klicken Sie auf **Weiter**, um mit der Bereinigung Ihrer Dateien zu beginnen.
-. Ransomware Resilience beginnt mit der Bereinigung der Arbeitslast.
+. Nachdem Sie Ihren Wiederherstellungspunkt ausgewählt haben, klicken Sie auf **Weiter**, um mit der Bereinigung Ihrer Dateien zu beginnen. Ransomware Resilience beginnt mit der Bereinigung der Arbeitslast.
+. Wählen Sie das Wiederherstellungsziel.
 +
-Wenn die Reinigung abgeschlossen ist, wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
+.. Wenn Sie *Alternativ* gewählt haben, wählen Sie *System*, *Storage VM* und *Aggregate* für die Wiederherstellung aus. Geben Sie einen *New volume*-Namen ein.
 
+
+. Wenn die Reinigung abgeschlossen ist, wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
 . Wählen Sie, ob Sie die ursprüngliche Arbeitslast speichern möchten. Um die ursprüngliche Arbeitslast nicht zu speichern, wählen Sie **Nein, ursprüngliche Arbeitslast ersetzen**. Um sie zu speichern, wählen Sie **Ja, ursprüngliche Arbeitslast speichern** und geben Sie anschließend einen neuen Namen für die Arbeitslast ein.
 . Wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
 . Wenn die Wiederherstellung abgeschlossen ist, wählen Sie **Weiter**, um zur letzten Phase zu gelangen.

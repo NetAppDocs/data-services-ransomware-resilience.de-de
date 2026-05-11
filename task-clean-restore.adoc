@@ -518,8 +518,9 @@ Die Vorgehensweise zum Einrichten eines isolierten Wiederherstellungsraums unter
 --
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . Wählen Sie in der Karte „Saubere Wiederherstellung“ die Option **Hinzufügen**, um die isolierte Wiederherstellungsumgebung zu erstellen.
-. Für ein Cloud-basiertes IRE wählen Sie **Amazon Web Services**.
+. Im Abschnitt „Typ“ wählen Sie *Nur Reinigung*.
 . Erweitern Sie den Abschnitt **Name**. Geben Sie einen **Name** für die Umgebung ein.
+. Für ein Cloud-basiertes IRE wählen Sie **Amazon Web Services**.
 . Erweitern Sie den Abschnitt *Systeme*. Wählen Sie die Systeme aus, die Sie mit dem IRE verbinden möchten. Für jedes ausgewählte System müssen Sie die IP-Adresse, die Subnetzmaske und das Gateway der Speicher-VM angeben.
 +
 
@@ -549,8 +550,9 @@ Ransomware Resilience testet die Verbindung, nachdem Sie „Hinzufügen“ ausge
 --
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . Wählen Sie auf der Karte „Clean restores“ die Option **Hinzufügen**, wenn dies Ihre erste Umgebung ist, oder **Verwalten**, wenn Sie bereits eine erstellt haben.
-. Wählen Sie als Standort **On-premises** aus.
+. Im Abschnitt „Typ“ wählen Sie *Nur Reinigung*.
 . Erweitern Sie den Abschnitt *Name*. Weisen Sie dem IRE einen **Namen** zu.
+. Wählen Sie als Standort **On-premises** aus.
 . Erweitern Sie den Abschnitt *Systeme*. Wählen Sie die Systeme aus, die Sie mit dem IRE verbinden möchten. Weisen Sie jedem System, dessen Workloads im IRE wiederhergestellt werden sollen, eine Speicher-VM-IP-Adresse, eine Subnetzmaske und ein Gateway zu.
 +
 Jedem ausgewählten System muss eine IP-Adresse zugewiesen sein. Sie können primäre oder sekundäre Systeme auswählen. Sekundäre Systeme können für Analyse und Wiederherstellung verwendet werden, falls das primäre System keine unverschlüsselten Snapshots enthält oder nicht verfügbar ist.
