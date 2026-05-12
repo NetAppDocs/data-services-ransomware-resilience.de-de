@@ -39,33 +39,52 @@ Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgeb
 
 
 
+=== Überlegungen zur Wiederherstellung an einem alternativen Standort
+
+Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, haben Sie die Möglichkeit, die Wiederherstellung an einem alternativen Speicherort durchzuführen, der vom selben Console-Agenten verwaltet wird. Der neue Speicherort kann sich auf demselben oder einem anderen System, derselben Storage-VM oder demselben Aggregat befinden. Bei der Wiederherstellung an einem alternativen Speicherort:
+
+* ARP wird auf dem neuen Volume automatisch aktiviert.
+* Der Verbindungspfad wird anhand des von Ihnen angegebenen Namens festgelegt. Zum Beispiel: `<Data LIF IP address of destination storage VM>:<new volume name>`.
+* Die Exportrichtlinie für das wiederhergestellte Volume ist die gleiche wie für das Quellvolume.
+* Die SMB-Freigaben auf dem wiederhergestellten Volume sind die gleichen wie auf dem Quellvolume.
+
+
+
+
 == Führen Sie eine saubere Wiederherstellung durch
 
-. Wählen Sie im Abschnitt **Wiederherstellung** die Workload aus, die Sie wiederherstellen möchten. Wählen Sie **Wiederherstellen**.
+. Identifizieren Sie im Abschnitt **Wiederherstellung** die Workload, die Sie wiederherstellen möchten. Wählen Sie **Wiederherstellen** aus.
 . Wählen Sie unter den Optionen für den Wiederherstellungstyp **Saubere Wiederherstellung** und dann **Weiter** aus.
 . Wählen Sie die gewünschte isolierte Wiederherstellungsumgebung aus und klicken Sie dann auf **Weiter**.
 . Überprüfen Sie die isolierte Wiederherstellungsumgebung und vergewissern Sie sich, dass es sich um den richtigen Speicherort handelt. Wählen Sie **Wiederherstellen**.
-. Ransomware Resilience führt die erforderlichen Einstellungen durch. Nach erfolgreichem Abschluss der Einrichtung zeigt Ransomware Resilience **Setup complete** an. Um mit der Analyse fortzufahren, wählen Sie **Next**.
-. Nach Abschluss der Einrichtung wählen Sie **Analyse ausführen**. Ransomware Resilience sucht nach verfügbaren Wiederherstellungspunkten vor dem Ransomware-Ereignis und zeigt das Datum und den Typ des Wiederherstellungspunkts an. Ransomware Resilience sucht nach Wiederherstellungspunkten in Sieben-Tage-Intervallen. Ist in den ersten sieben Tagen kein Wiederherstellungspunkt verfügbar, beginnt Ransomware Resilience mit der Suche im vorherigen Sieben-Tage-Zeitraum und wiederholt den Vorgang, bis ein praktikabler Wiederherstellungspfad gefunden ist.
+. Ransomware Resilience führt die erforderliche Konfiguration durch. Nach erfolgreichem Abschluss der Einrichtung aktualisiert Ransomware Resilience den Status. Um fortzufahren, wählen Sie **Weiter**.
+. Nach Abschluss der Einrichtung wählen Sie **Analyse ausführen**. Ransomware Resilience sucht nach dem aktuellsten unbeschädigten Snapshot.
 +
 image:screenshot-clean-room-analysis.png["Screenshot des Analyseschritts „Saubere Wiederherstellung“."]
 
 . Nach Abschluss der Analyse wählen Sie **Weiter**, um Ihre Wiederherstellung zu planen. Ransomware Resilience präsentiert zwei Optionen: **Least data loss** und **Latest unimpacted restore point**. Wählen Sie eine der beiden Optionen und sehen Sie sich optional die einzelnen Dateidaten für den jeweiligen Wiederherstellungspunkt an.
 +
-Um detaillierte Dateiereignisdaten anzuzeigen, wählen Sie eine Datei aus, um ihren Verschlüsselungsstatus zu analysieren; wann sie erstellt, geändert oder gelöscht wurde und welcher Wiederherstellungspunkt welcher Aktion entspricht.
+Um detaillierte Dateiereignisdaten anzuzeigen, wählen Sie eine Datei aus, um deren Verschlüsselungsstatus und Metadaten zu analysieren: wann sie erstellt, geändert oder gelöscht wurde und welcher Wiederherstellungspunkt welcher Aktion entspricht.
 
 +
 image:clean-restore-plan.png["Screenshot des Schritts „Sauberer Wiederherstellungsplan“."]
 
-. Nachdem Sie Ihren Wiederherstellungspunkt ausgewählt haben, klicken Sie auf **Weiter**, um mit der Bereinigung Ihrer Dateien zu beginnen. Ransomware Resilience beginnt mit der Bereinigung der Arbeitslast.
-. Wählen Sie das Wiederherstellungsziel.
+. Nachdem Sie Ihren Wiederherstellungspunkt ausgewählt haben, wählen Sie **Wiederherstellungspunkt erstellen**. Ransomware Resilience startet eine Reihe von Jobs, um den Wiederherstellungspunkt zu erstellen. Sobald dieser Vorgang abgeschlossen ist, wählen Sie **Weiter**.
+. Wählen Sie **Bereinigung starten**, um mit der Entfernung von Malware aus den Dateien zu beginnen.
+. Sobald die Reinigung abgeschlossen ist, wählen Sie **Weiter**.
+. Wählen Sie das Wiederherstellungsziel aus:
 +
-.. Wenn Sie *Alternativ* gewählt haben, wählen Sie *System*, *Storage VM* und *Aggregate* für die Wiederherstellung aus. Geben Sie einen *New volume*-Namen ein.
+** Wählen Sie **Primär (Original)**, um am ursprünglichen Zielort wiederherzustellen.
++
+Wenn der primäre Speicherort nicht verfügbar ist und link:task-clean-restore.html#secondary-sources["Sie haben eine sekundäre Quelle konfiguriert"], können Sie stattdessen auf die **sekundäre** Quelle wiederherstellen.
+
+** Wählen Sie **Alternativ**, um die Wiederherstellung auf einem neuen Volume durchzuführen. Wählen Sie das **System**, die **Storage-VM** und das **Aggregat** für das neue Volume aus und geben Sie anschließend einen **neuen Volume-Namen** an.
++
+image:alternate-recovery-destination.png["Screenshot des alternativen Wiederherstellungsziels"]
 
 
-. Wenn die Reinigung abgeschlossen ist, wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
-. Wählen Sie, ob Sie die ursprüngliche Arbeitslast speichern möchten. Um die ursprüngliche Arbeitslast nicht zu speichern, wählen Sie **Nein, ursprüngliche Arbeitslast ersetzen**. Um sie zu speichern, wählen Sie **Ja, ursprüngliche Arbeitslast speichern** und geben Sie anschließend einen neuen Namen für die Arbeitslast ein.
+
 . Wählen Sie **Wiederherstellung starten**, um die Wiederherstellung einzuleiten.
 . Wenn die Wiederherstellung abgeschlossen ist, wählen Sie **Weiter**, um zur letzten Phase zu gelangen.
-. Wählen Sie **Ressourcen freigeben und beenden**, um die Ressourcen freizugeben und den Reinraum zu schließen. Um zu bestätigen, dass Sie die Ressource freigeben möchten, wählen Sie **Beenden**.
+. Wählen Sie **Ressourcen freigeben und beenden**, um die Ressourcen freizugeben und den Reinraum zu schließen. Zur Bestätigung wählen Sie **Beenden**.
 

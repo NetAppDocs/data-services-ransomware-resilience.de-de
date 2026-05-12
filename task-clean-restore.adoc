@@ -122,7 +122,7 @@ Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten 
 
 Beim Erstellen des IRE für lokale Quellen haben Sie die Möglichkeit, eine sekundäre Quelle hinzuzufügen.
 
-Wenn die primäre Quelle verfügbar ist, muss die Clean Restore auf der primären Quelle durchgeführt werden. Wenn die primäre Quelle nicht verfügbar ist und Sie eine sekundäre Quelle konfiguriert haben, wird die Clean Restore auf der sekundären Quelle durchgeführt.
+Wenn die primäre Quelle nicht verfügbar ist und Sie eine sekundäre Quelle konfiguriert haben, wird die Clean Restore auf der sekundären Quelle durchgeführt.
 
 Der Clean Restore-Prozess analysiert standardmäßig Snapshots aus der Quellumgebung. Ist entweder die Quellumgebung nicht verfügbar oder kein unverschlüsselter Snapshot auf der Quelle vorhanden, analysiert Clean Restore Snapshots auf einem Sekundärsystem, sofern Sie eines konfiguriert haben.
 

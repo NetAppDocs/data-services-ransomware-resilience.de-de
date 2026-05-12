@@ -6,9 +6,9 @@
 
 === Verbesserungen für Clean Restore
 
-Clean Restore unterstützt jetzt die Wiederherstellung auf alternative Cluster und Analysen über sieben Tage hinaus.
+Die Funktion „Saubere Wiederherstellung“ unterstützt jetzt die Wiederherstellung an einem alternativen Speicherort, sodass Sie Volumes auf verschiedenen Systemen, Speicher-VMs und Aggregaten wiederherstellen können, die vom selben Console-Agenten verwaltet werden. Außerdem wurde die Sieben-Tage-Beschränkung für die Suche nach geeigneten Snapshots für die Wiederherstellung aufgehoben. Die Funktion „Saubere Wiederherstellung“ durchsucht nun weiterhin alle verfügbaren Snapshots nach einem geeigneten Wiederherstellungspunkt, unabhängig vom Abstand zum Ransomware-Ereignis.
 
-link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Stellen Sie Workloads mit einer sauberen Wiederherstellung wieder her"^].
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover.html["Stellen Sie Workloads mit einer sauberen Wiederherstellung wieder her"^].
 
 
 
