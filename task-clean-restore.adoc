@@ -120,7 +120,7 @@ Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten 
 
 === Sekundärquellen
 
-Beim Erstellen des IRE für lokale Quellen haben Sie die Möglichkeit, eine sekundäre Quelle hinzuzufügen.
+Beim Erstellen des IRE haben Sie die Möglichkeit, eine sekundäre Quelle hinzuzufügen.
 
 Wenn die primäre Quelle nicht verfügbar ist und Sie eine sekundäre Quelle konfiguriert haben, wird die Clean Restore auf der sekundären Quelle durchgeführt.
 
