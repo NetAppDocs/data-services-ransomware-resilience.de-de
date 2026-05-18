@@ -69,12 +69,12 @@ Ihre NetApp Console Konfiguration erfordert Folgendes:
 ** Falls Ihre On-Premises ONTAP Cluster oder Cloud Volumes ONTAP Systeme nicht in der Console eingerichtet sind, siehe link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten konfigurieren"^] und link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["Standardanforderungen für die Konsole"^].
 +
 
-NOTE: Wenn Sie mehrere Konsolenagenten in einer einzigen Konsolenorganisation haben, scannt Ransomware Resilience die ONTAP -Ressourcen aller Konsolenagenten über den derzeit in der Konsolen-Benutzeroberfläche ausgewählten Agenten hinaus.
+NOTE: Wenn Sie mehrere Console-Agenten in einer einzigen Console-Organisation haben, scannt Ransomware Resilience ONTAP Ressourcen auf allen Console-Agenten, die nicht aktuell in der Console-Benutzeroberfläche ausgewählt sind.
 
 
 
 * Der Konsolenagent muss über die `cloudmanager-ransomware-protection` Container in einem aktiven Zustand.
-* Für ONTAP oder Cloud Volumes ONTAP Cluster erfordert Ransomware Resilience die ONTAP Version 9.11.1 oder höher.
+* Für ONTAP oder Cloud Volumes ONTAP Cluster ist für die Ransomware-Resilienz ONTAP Version 9.11.1 oder höher erforderlich.
 +
 
 NOTE: Um Ransomware Resilience auf SAN-Workloads nutzen zu können, müssen Sie ONTAP 9.17.1 oder höher verwenden.
@@ -90,7 +90,7 @@ NOTE: Um Ransomware Resilience auf SAN-Workloads nutzen zu können, müssen Sie 
 
 
 
-NOTE: Wenn Sie einen ONTAP Cluster mit der Konsole mit Nicht-Administrator-Anmeldeinformationen verbunden haben, [müssen Sie die Anmeldeinformationen im ONTAP -Cluster aktualisieren](#update-non-admin-user-permissions-in-an-ontap-system).
+NOTE: Wenn Sie einen ONTAP Cluster mit der Konsole mit Nicht-Administrator-Anmeldeinformationen verbunden haben, müssen Sie <<Aktualisieren Sie die Berechtigungen von Nicht-Administratorbenutzern in einem ONTAP -System>>.
 
 
 
@@ -114,11 +114,17 @@ Damit NetApp Ransomware Resilience Warnungen über verdächtiges Benutzerverhalt
 
 
 
+== Voraussetzungen für die Bereinigung der Wiederherstellung
+
+Ransomware Resilience bietet eine saubere Wiederherstellung, die einen geführten Wiederherstellungsprozess zur Ermittlung optimaler Wiederherstellungspfade beinhaltet. Um eine saubere Wiederherstellung zu nutzen, link:task-clean-restore.html["Stellen Sie sicher, dass Sie die Voraussetzungen erfüllen."].
+
+
+
 == Aktualisieren Sie die Berechtigungen von Nicht-Administratorbenutzern in einem ONTAP -System
 
-Wenn Sie die Berechtigungen von Nicht-Admin-Benutzern für ein bestimmtes System aktualisieren müssen, verwenden Sie diese Verfahrensschritte.
+Wenn Sie die Berechtigungen von Benutzern ohne Administratorrechte für ein bestimmtes System aktualisieren müssen, gehen Sie wie folgt vor:
 
-. Melden Sie sich in der Console an. Identifizieren Sie im Dashboard das System, dessen ONTAP Benutzerberechtigungen aktualisiert werden müssen.
+. Melden Sie sich in der Konsole an. Identifizieren Sie im Dashboard das System, dessen ONTAP Benutzerberechtigungen aktualisiert werden müssen.
 . Wählen Sie das System aus, um dessen Details anzuzeigen.
 . Wählen Sie *Zusätzliche Informationen anzeigen*, um den Benutzernamen anzuzeigen.
 . Melden Sie sich als Administrator an der ONTAP Cluster-CLI an.
