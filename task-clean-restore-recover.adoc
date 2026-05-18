@@ -62,6 +62,9 @@ Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, 
 +
 image:screenshot-clean-room-analysis.png["Screenshot des Analyseschritts „Saubere Wiederherstellung“."]
 
++
+Während die Analyse läuft, können Sie **Stopp** auswählen. Das Beenden der Analyse erfordert, dass der Clean Restore-Prozess neu gestartet wird.
+
 . Nach Abschluss der Analyse wählen Sie **Weiter**, um Ihre Wiederherstellung zu planen. Ransomware Resilience präsentiert zwei Optionen: **Least data loss** und **Latest unimpacted restore point**. Wählen Sie eine der beiden Optionen und sehen Sie sich optional die einzelnen Dateidaten für den jeweiligen Wiederherstellungspunkt an.
 +
 Um detaillierte Dateiereignisdaten anzuzeigen, wählen Sie eine Datei aus, um deren Verschlüsselungsstatus und Metadaten zu analysieren: wann sie erstellt, geändert oder gelöscht wurde und welcher Wiederherstellungspunkt welcher Aktion entspricht.

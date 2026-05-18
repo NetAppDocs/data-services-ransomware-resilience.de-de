@@ -211,9 +211,15 @@ Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Da
 .2+| ONTAP (lokal) | CIFS & NFS | 9.11.1 und später 
 
 
-| SAN (FC, iSCSI & NVMe) | 9.17.1 und höher 
+| SAN (iSCSI & NVMe) | 9.17.1 und höher 
+
+
+| Google Cloud NetApp Volumes | CIFS, NFS, SAN (iSCSI & NVMe) | k. A. 
 |===
 {* Amazon FSx for NetApp ONTAP verwendet Autonomous Ransomware Protection (ARP) und nicht ARP/AI.  Weitere Informationen zu den Unterschieden finden Sie unterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/#arp-ai["ARP/AI"^] Die
+
+
+NOTE: Die Erkennung verdächtiger Benutzeraktivitäten wird für Azure NetApp Files oder Google Cloud NetApp Volumes nicht unterstützt. Weitere Informationen zur Unterstützung der Erkennung verdächtiger Benutzeraktivitäten finden Sie unter link:reference-user-activity-requirements.html["Anforderungen an die Erkennung von Benutzeraktivitäten"].
 
 
 NOTE: Die Verwendung von ARP/AI in ONTAP erfordert ONTAP 9.16 oder höher. + ONTAP bietet keinen Schutz vor Ransomware für FabricPool FlexCache, FlexGroup -Volumes, Mount-Point-Volumes von Konsistenzgruppen, Mount-Pfad-Volumes, Offline-Volumes und Data Protection (DP)-Volumes. Stellen Sie sicher, dass Sie Folgendes überprüfenlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Unterstützte und nicht unterstützte Konfigurationen in ONTAP"^] Die
@@ -225,7 +231,14 @@ NOTE: Die Verwendung von ARP/AI in ONTAP erfordert ONTAP 9.16 oder höher. + ONT
 Ransomware Resilience schützt die folgenden Workloads auf primären Datenvolumes:
 
 * Blockspeicher
+* Datenbanken:
++
+** Microsoft SQL Server
+** Oracle
+
+
 * Dateifreigaben
+* VMware-Datastores
 
 
 
