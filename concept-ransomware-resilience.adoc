@@ -156,7 +156,7 @@ image:diagram-rp-architecture-preview3.png["Diagramm zur Ransomware-Resilienzarc
 
 | *REGIEREN*  a| 
 * Weist die Ransomware-Schutzstrategien zu
-* Hilft Ihnen, die Ergebnisse zu überwachen.
+* Hilft Ihnen dabei, die Ergebnisse zu überwachen.
 
 
 |===

@@ -100,6 +100,52 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 
 
+=== Größenempfehlungen
+
+Stellen Sie beim Erfassen von Benutzerereignissen sicher, dass der Rechner, auf dem der Benutzeraktivitätsagent ausgeführt wird, ausreichend dimensioniert ist, um Ihre Ereignisrate zu bewältigen. Das bedeutet, dass Sie über genügend Datensammler sowie ausreichend CPU und RAM auf dem Rechner verfügen müssen, auf dem der Benutzeraktivitätsagent ausgeführt wird, um die Anzahl der Ereignisse pro Sekunde zu tolerieren. Um die Anzahl der Datensammler zu erhöhen, müssen Sie möglicherweise die RAM- oder CPU-Kapazität erhöhen. Ransomware Resilience unterstützt bis zu 50 Datensammler pro Benutzeraktivitätsagent.
+
+Die folgende Tabelle bietet allgemeine Richtlinien zur Größenbestimmung:
+
+|===
+| Konfiguration des Benutzeraktivitätsagenten-Rechners | Anzahl der Datensammler | Maximale Ereignisrate 
+
+
+| 4 Kerne, 16GB | 10 Datensammler | 20.000 Ereignisse/Sekunde 
+
+
+| 4 Kerne, 32GB | 20 Datensammler | 20.000 Ereignisse/Sekunde 
+|===
+Sie können auch Ihre spezifischen Anforderungen berechnen. Bei der Berechnung der passenden Größe empfiehlt es sich, eine Pufferrate von 30 % einzuplanen. Verwenden Sie diese Formel, um festzustellen, ob Ihre Konfiguration die Last bewältigen kann.
+
+[listing]
+----
+Where E is the sum of all events per second across all data collectors:
+
+E + (0.3 x E) < 20,000 events/second
+----
+.Ransomware Resilience stellt ein Skript zur Berechnung der Ereignisdatenrate bereit. Erfahren Sie, wie Sie die Ereignisdatenrate in Ransomware Resilience berechnen.
+[%collapsible]
+====
+Ransomware Resilience stellt ein Skript bereit, mit dem Sie die Ereignisdatenrate auf Ihrem System berechnen können. Standardmäßig wird das Skript für maximal fünf Storage-VMs ausgeführt. Wenn Ihre Umgebung mehr als 5 SVMs umfasst, können Sie das Skript entsprechend anpassen. Unabhängig von der Anzahl der SVMs benötigt das Skript etwa fünf Minuten, um einen durchschnittlichen Wert für die Ereignisrate zu ermitteln. Bevor Sie das Skript ausführen, müssen Sie Folgendes haben:
+
+* link:suspicious-user-activity.html["Einen Benutzeraktivitätsagenten konfiguriert"]
+* Die Cluster-IP-Adresse
+* Benutzername und Passwort des Cluster-Administrators
+* Installiert `sshpass` auf dem Linux-Rechner (Sie können mit dem Befehl  `sudo yum install -y sshpass` installieren)
+
+
+.Schritte
+. Führen Sie das Skript auf dem Cluster, auf dem der Benutzeraktivitätsagent gehostet wird, als Administrator aus: `/opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh`
+. Geben Sie bei Aufforderung die Cluster-IP-Adresse, den Admin-Benutzernamen und das Admin-Passwort an.
+. Das Skript benötigt etwa fünf Minuten zur Ausführung. Nach Abschluss zeigt die Befehlszeile die Ereignisrate an, beispielsweise „Svm svm_rate generiert 100 Ereignisse/Sek.“
++
+Nutzen Sie die Ereignisrate, um Ihre Dimensionierung zu berechnen.
+
+
+
+====
+
+
 == Cloud-Netzwerkzugriffsregeln
 
 Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-Pazifik, Europa oder Vereinigte Staaten).
