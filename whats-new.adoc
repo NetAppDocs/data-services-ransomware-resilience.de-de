@@ -96,7 +96,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
-=== Verbesserung der Benutzeraktivitätsüberwachung
+=== Verbesserung der Benutzerverhaltenserkennung
 
 Erkenntnisse über Datenschutzverletzungen werden nun 13 Monate nach dem Vorfall gespeichert, wodurch eine längere Datenspeicherung für Ihre Berichtspflichten ermöglicht wird.
 
@@ -134,13 +134,13 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 === Benutzer massenhaft von Benutzerverhaltenswarnungen ausschließen
 
-Ransomware Resilience unterstützt jetzt das Hochladen einer JSON-Liste von Benutzern, die von Warnmeldungen zu Benutzerverhaltensaktivitäten ausgeschlossen werden sollen, zusätzlich zu den bestehenden UI- und CSV-basierten Optionen.
+Ransomware Resilience unterstützt jetzt zusätzlich zu den bestehenden UI- und CSV-basierten Optionen das Hochladen einer JSON-Liste von Benutzern, die von Warnmeldungen zum Benutzerverhalten ausgeschlossen werden sollen.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#exclude-users-from-alerts["Benutzer von Warnmeldungen ausschließen"^].
 
 
 
-=== Verbesserungen der Nutzerverhaltensaktivitäten
+=== Verbesserungen der Benutzerverhaltenserkennung
 
 Ransomware Resilience bietet verbesserte Einblicke in das Nutzerverhalten durch E-Mail-Benachrichtigungen und die Einbeziehung von Nutzerverhaltensereignissen in die unterstützten SIEM-Ereignisdaten (AWS Security Hub, Microsoft Sentinel, und Splunk Cloud). Diese Verbesserungen bieten genauere Einblicke in Ihre Sicherheits- und Compliance-Überwachung.
 
@@ -168,7 +168,7 @@ Weitere Informationen finden Sie unter folgendem Link: link:https://docs.netapp.
 
 
 
-=== Unterstützung von Schutzgruppen für Benutzerverhaltensaktivität
+=== Unterstützung von Schutzgruppen für die Erkennung des Nutzerverhaltens
 
 Ransomware Resilience-Schutzgruppen unterstützen jetzt Erkennungsrichtlinien zur Erkennung von verdächtigem Benutzerverhalten. Wenn Sie eine Ransomware-Schutzstrategie auf eine Schutzgruppe anwenden, wird eine Richtlinie auf alle Workloads angewendet, wodurch die Verwaltung Ihrer Cybersicherheitslage optimiert wird.
 
@@ -275,13 +275,13 @@ Anders als bei der Verschlüsselungserkennung durch ARP auf Speicherebene erfolg
 
 IMPORTANT: Sie müssen die neuelink:#new-user-roles-for-data-breach-detection["Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter"] Rollen für den Zugriff auf Einstellungen zur Erkennung verdächtigen Benutzerverhaltens.
 
-Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten"] Undlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"] .
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Benutzeraktivitätserkennung aktivieren"] und link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"].
 
 
 
 ==== Weitere Erkennungen verdächtiger Benutzeraktivitäten
 
-Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilience auch die folgenden Warnmeldungstypen basierend auf beobachteten verdächtigen Benutzeraktivitäten:
+Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilience auch die folgenden Alarmtypen basierend auf der beobachteten Benutzeraktivität:
 
 * **Datenzerstörung – potenzieller Angriff** – Eine Warnung mit der Schwere eines potenziellen Angriffs wird erstellt, wenn die Anzahl der Dateilöschungen die historische Norm überschreitet.
 * **Verdächtiges Benutzerverhalten – potenzieller Angriff** – Eine Warnung mit dem Schweregrad eines potenziellen Angriffs wird erstellt, wenn Lese-, Umbenennungs- und Löschvorgänge in einer Sequenz beobachtet werden, die einem Ransomware-Angriff ähnelt.
@@ -292,7 +292,7 @@ Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilie
 
 ==== Neue Benutzerrollen zur Erkennung von Datenschutzverletzungen
 
-Um Warnmeldungen zu verdächtigen Benutzeraktivitäten zu verwalten, hat Ransomware Resilience zwei neue Rollen für Administratoren der Konsolenorganisation eingeführt, um Zugriff auf die Erkennung verdächtiger Benutzeraktivitäten zu gewähren: Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter.
+Zur Verwaltung von Warnmeldungen über Benutzeraktivitäten hat Ransomware Resilience zwei neue Rollen für Administratoren von Console-Organisationen eingeführt, um Zugriff auf die Erkennung verdächtiger Benutzeraktivitäten zu gewähren: Ransomware Resilience user behavior admin und Ransomware Resilience user behavior viewer.
 
 Sie müssen ein Benutzerverhaltensadministrator sein, um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren. Die Administratorrolle „Ransomware Resilience“ wird für die Konfiguration von Einstellungen für verdächtiges Benutzerverhalten nicht unterstützt.
 

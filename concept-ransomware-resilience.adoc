@@ -162,6 +162,34 @@ image:diagram-rp-architecture-preview3.png["Diagramm zur Ransomware-Resilienzarc
 |===
 
 
+=== Angriffsarten
+
+Ransomware Resilience erkennt fünf Arten von Angriffen:
+
+[cols="25,75"]
+|===
+| Angriffsart | Definition 
+
+
+| Verschlüsselung (Entropie) | Ransomware Resilience erkennt anomale IOPS-Muster, Datenentropie und nicht standardmäßige Dateisuffixe. 
+
+
+| Verschlüsselung (Benutzerverhalten) | Ransomware Resilience identifiziert anomale Lese-, Schreib- und Umbenennungsaktivitäten von Dateien, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenpanne | Ransomware Resilience erkennt anomale Dateilesemuster, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenvernichtung | Ransomware Resilience erkennt die massenhafte Löschung von Dateien durch einen bestimmten Benutzer. 
+
+
+| Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
+|===
+
+NOTE: Um einen bestimmten Benutzer zu identifizieren, der für einen Angriff verantwortlich ist, müssen Sie link:concept-user-behavior.html["Erkennung des Benutzerverhaltens."] Review link:rp-reference-limitations.html["Einschränkungen"] überprüfen, um festzustellen, ob Ihr System die Erkennung von Benutzeraktivitäten unterstützt.
+
+
+
 == Unterstützte Sicherungsziele, Systeme und Workload-Datenquellen
 
 Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Datenquellen:
@@ -219,7 +247,7 @@ Ransomware Resilience unterstützt die folgenden Sicherungsziele, Systeme und Da
 {* Amazon FSx for NetApp ONTAP verwendet Autonomous Ransomware Protection (ARP) und nicht ARP/AI.  Weitere Informationen zu den Unterschieden finden Sie unterlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/#arp-ai["ARP/AI"^] Die
 
 
-NOTE: Die Erkennung verdächtiger Benutzeraktivitäten wird für Azure NetApp Files oder Google Cloud NetApp Volumes nicht unterstützt. Weitere Informationen zur Unterstützung der Erkennung verdächtiger Benutzeraktivitäten finden Sie unter link:reference-user-activity-requirements.html["Anforderungen an die Erkennung von Benutzeraktivitäten"].
+NOTE: Die Erkennung von Benutzeraktivitäten wird für Azure NetApp Files oder Google Cloud NetApp Volumes nicht unterstützt. Weitere Informationen zur Unterstützung der Erkennung von Benutzeraktivitäten finden Sie unter link:reference-user-activity-requirements.html["Anforderungen an die Erkennung von Benutzeraktivitäten"].
 
 
 NOTE: Die Verwendung von ARP/AI in ONTAP erfordert ONTAP 9.16 oder höher. + ONTAP bietet keinen Schutz vor Ransomware für FabricPool FlexCache, FlexGroup -Volumes, Mount-Point-Volumes von Konsistenzgruppen, Mount-Pfad-Volumes, Offline-Volumes und Data Protection (DP)-Volumes. Stellen Sie sicher, dass Sie Folgendes überprüfenlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/use-cases-restrictions-concept.html["Unterstützte und nicht unterstützte Konfigurationen in ONTAP"^] Die

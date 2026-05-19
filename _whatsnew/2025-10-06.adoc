@@ -27,13 +27,13 @@ Anders als bei der Verschlüsselungserkennung durch ARP auf Speicherebene erfolg
 
 IMPORTANT: Sie müssen die neuelink:#new-user-roles-for-data-breach-detection["Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter"] Rollen für den Zugriff auf Einstellungen zur Erkennung verdächtigen Benutzerverhaltens.
 
-Weitere Informationen finden Sie unterlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten"] Undlink:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"] .
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Benutzeraktivitätserkennung aktivieren"] und link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html#view-anomalous-user-behavior["Anzeigen von anomalem Benutzerverhalten"].
 
 
 
 ==== Weitere Erkennungen verdächtiger Benutzeraktivitäten
 
-Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilience auch die folgenden Warnmeldungstypen basierend auf beobachteten verdächtigen Benutzeraktivitäten:
+Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilience auch die folgenden Alarmtypen basierend auf der beobachteten Benutzeraktivität:
 
 * **Datenzerstörung – potenzieller Angriff** – Eine Warnung mit der Schwere eines potenziellen Angriffs wird erstellt, wenn die Anzahl der Dateilöschungen die historische Norm überschreitet.
 * **Verdächtiges Benutzerverhalten – potenzieller Angriff** – Eine Warnung mit dem Schweregrad eines potenziellen Angriffs wird erstellt, wenn Lese-, Umbenennungs- und Löschvorgänge in einer Sequenz beobachtet werden, die einem Ransomware-Angriff ähnelt.
@@ -44,7 +44,7 @@ Zusätzlich zur Erkennung von Datenschutzverletzungen erkennt Ransomware Resilie
 
 ==== Neue Benutzerrollen zur Erkennung von Datenschutzverletzungen
 
-Um Warnmeldungen zu verdächtigen Benutzeraktivitäten zu verwalten, hat Ransomware Resilience zwei neue Rollen für Administratoren der Konsolenorganisation eingeführt, um Zugriff auf die Erkennung verdächtiger Benutzeraktivitäten zu gewähren: Ransomware Resilience-Benutzerverhaltensadministrator und Ransomware Resilience-Benutzerverhaltensbetrachter.
+Zur Verwaltung von Warnmeldungen über Benutzeraktivitäten hat Ransomware Resilience zwei neue Rollen für Administratoren von Console-Organisationen eingeführt, um Zugriff auf die Erkennung verdächtiger Benutzeraktivitäten zu gewähren: Ransomware Resilience user behavior admin und Ransomware Resilience user behavior viewer.
 
 Sie müssen ein Benutzerverhaltensadministrator sein, um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren. Die Administratorrolle „Ransomware Resilience“ wird für die Konfiguration von Einstellungen für verdächtiges Benutzerverhalten nicht unterstützt.
 

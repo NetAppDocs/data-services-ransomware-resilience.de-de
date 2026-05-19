@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: suspicious-user-activity.html 
 keywords: data breach detection, data breach, user activity, suspicious, anomalous, 
-summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Resilience können Sie Benutzeraktivitäten erkennen, die eine potenzielle Bedrohung darstellen könnten. 
+summary: Die Benutzeraktivitätserkennung in NetApp Ransomware Resilience ermöglicht es Ihnen, Benutzeraktivitäten zu erkennen, die eine potenzielle Bedrohung darstellen könnten. 
 ---
 = Konfigurieren der Benutzeraktivitätserkennung in NetApp Ransomware Resilience
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: Durch die Erkennung verdächtiger Benutzeraktivitäten in Ransomware Re
 
 
 [role="lead"]
-NetApp Ransomware Resilience Benutzeraktivitätserkennung hilft Ihnen, Ransomware-Ereignisse auf Benutzerebene zu verhindern. Um die Erkennung verdächtigen Benutzerverhaltens in Ransomware Resilience zu aktivieren, müssen Sie mindestens einen Benutzeraktivitätsagenten installieren, der eine Datenerfassungsumgebung erstellt, um das Benutzerverhalten auf abweichende Muster zu überwachen, die Ransomware-Ereignissen ähneln.
+NetApp Ransomware Resilience Benutzerverhaltenserkennung hilft Ihnen, Ransomware-Ereignisse auf Benutzerebene zu verhindern. Um die Benutzerverhaltenserkennung in Ransomware Resilience zu aktivieren, müssen Sie mindestens einen Benutzeraktivitätsagenten installieren, der eine Datenerfassungsumgebung erstellt, um das Benutzerverhalten auf abweichende Muster zu überwachen, die Ransomware-Ereignissen ähneln.
 
 Ein Benutzeraktivitätsagent hostet einen Datensammler und einen Benutzerverzeichnis-Connector, die beide Daten zur Analyse an einen SaaS-Standort senden.
 
@@ -34,7 +34,7 @@ Falls Sie DII _nicht_ verwenden, fahren Sie mit den Konfigurationsanweisungen hi
 * Stellen Sie sicher, dass Sie die link:reference-user-activity-requirements.html["Anforderungen an Betriebssystem, Server und Netzwerk"] erfüllen.
 
 
-*Erforderliche Konsolenrolle* Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, benötigen Sie die **Organization admin role**. Für nachfolgende Konfigurationen verdächtiger Benutzeraktivitäten benötigen Sie die **Ransomware Resilience user behavior admin role**. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
+*Erforderliche Konsolenrolle* Zur Aktivierung der Benutzerverhaltenserkennung benötigen Sie die **Organization admin role**. Für nachfolgende Konfigurationen der Benutzerverhaltenserkennung benötigen Sie die **Ransomware Resilience user behavior admin role**. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 Stellen Sie sicher, dass jede Rolle auf Organisationsebene angewendet wird.
 
@@ -42,7 +42,7 @@ Stellen Sie sicher, dass jede Rolle auf Organisationsebene angewendet wird.
 
 == Erstellen Sie einen Benutzeraktivitätsagenten
 
-Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"]; Datensammler teilen Benutzeraktivitätsereignisse mit Ransomware Resilience. Sie müssen mindestens einen Benutzeraktivitätsagenten erstellen, um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren.
+Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"]; Datensammler teilen Benutzeraktivitätsereignisse mit Ransomware Resilience. Sie müssen mindestens einen Benutzeraktivitätsagenten erstellen, um die Benutzeraktivitätserkennung zu aktivieren.
 
 .Schritte
 . Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
@@ -80,7 +80,7 @@ Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, kehren Sie zum 
 
 === Hinzufügen eines Datensammlers
 
-Datensammler werden automatisch erstellt, wenn Sie eine Ransomware-Schutzstrategie mit Erkennung verdächtiger Benutzeraktivitäten aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["Hinzufügen einer Erkennungsrichtlinie"].
+Datensammler werden automatisch erstellt, wenn Sie eine Datensicherungsstrategie mit Benutzeraktivitätserkennung aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["Hinzufügen einer Erkennungsrichtlinie"].
 
 Sie können die Details des Datensammlers anzeigen. Wählen Sie in den Einstellungen in der Kachel „Benutzeraktivität“ die Option **Verwalten** aus. Wählen Sie die Registerkarte **Datensammler** und dann den Datensammler aus, um seine Details anzuzeigen oder ihn anzuhalten.
 
@@ -204,6 +204,6 @@ Sie können einen Benutzer anschließend wieder zur Erkennung hinzufügen.
 
 
 
-== Reagieren Sie auf Warnungen zu verdächtigen Benutzeraktivitäten
+== Auf Benachrichtigungen über Benutzeraktivitäten reagieren
 
-Nachdem Sie die Erkennung verdächtiger Benutzeraktivitäten konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie bösartige Aktivitäten und verdächtiges Nutzerverhalten"].
+Nachdem Sie die Benutzeraktivitätserkennung konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie bösartige Aktivitäten und verdächtiges Nutzerverhalten"].

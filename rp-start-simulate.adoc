@@ -52,7 +52,7 @@ image:screen-settings-alert-drill-configure.png["Seite „Bereitschaftsübung ko
 .. Wählen Sie ein Testsystem aus.
 .. Wählen Sie eine Testspeicher-SVM aus.
 .. Wenn Sie eine CIFS (SMB)-Speicher-VM ausgewählt haben, werden die Felder **Benutzername** und **Passwort** angezeigt.  Geben Sie den Benutzernamen und das Kennwort für die Speicher-VM ein.
-.. Wählen Sie den Bereitschaftsübungstyp aus. Wählen Sie für eine manuelle Wiederherstellung nach einer Datenverschlüsselungsverletzung **Benutzerdefinierte Wiederherstellung**. Wählen Sie zur Wiederherstellung nach verdächtiger Benutzeraktivität **Datenverletzung**.
+.. Wählen Sie den Übungstyp aus. Für eine manuelle Wiederherstellung nach einem Verschlüsselungs-Datenleck wählen Sie **Benutzerdefinierte Wiederherstellung**. Für die Wiederherstellung nach verdächtigem Benutzerverhalten wählen Sie **Datenleck**.
 .. Geben Sie einen Namen für die Test-Workload ein. Der Name darf keine Bindestriche enthalten.
 
 

@@ -14,13 +14,13 @@ summary: Bevor Sie einen Benutzeraktivitätsagenten und andere Collector erstell
 [role="lead"]
 NetApp Ransomware Resilience Benutzerverhaltenserkennung ermöglicht es Ihnen, auf Ransomware-Ereignisse auf Benutzerebene zu reagieren. Sie müssen eine Gruppe von Agenten erstellen, um die Benutzerverhaltenserkennung zu aktivieren. Bevor Sie die Erkennung aktivieren, müssen Sie sicherstellen, dass Sie die beschriebenen Betriebssystem-, Server- und Netzwerkvoraussetzungen erfüllen, damit Ransomware Resilience Ereignisse korrekt erkennen und melden kann.
 
-Die Erkennung von Benutzerverhaltensaktivitäten wird in Ransomware Resilience für Workloads in On-Premises ONTAP-Systemen sowie in Amazon FsxN für NetApp ONTAP und Cloud Volumes ONTAP-Systeme unterstützt, die mit <<Cloud-Anbieter-Support>> übereinstimmen.
+Die Erkennung des Benutzerverhaltens wird in Ransomware Resilience für Workloads in On-Premises ONTAP-Systemen sowie in Amazon FsxN für NetApp ONTAP und Cloud Volumes ONTAP-Systeme unterstützt, die mit <<Cloud-Anbieter-Support>> übereinstimmen.
 
 
 
 == Cloud-Anbieter-Support
 
-Verdächtige Benutzeraktivitätsdaten können in AWS und Azure in den folgenden Regionen gespeichert werden:
+Nutzerverhaltensdaten können in AWS und Azure in den folgenden Regionen gespeichert werden:
 
 |===
 | Cloud-Anbieter | Region 

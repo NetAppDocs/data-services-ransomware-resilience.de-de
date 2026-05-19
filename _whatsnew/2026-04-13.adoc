@@ -20,7 +20,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
-=== Verbesserung der Benutzeraktivitätsüberwachung
+=== Verbesserung der Benutzerverhaltenserkennung
 
 Erkenntnisse über Datenschutzverletzungen werden nun 13 Monate nach dem Vorfall gespeichert, wodurch eine längere Datenspeicherung für Ihre Berichtspflichten ermöglicht wird.
 

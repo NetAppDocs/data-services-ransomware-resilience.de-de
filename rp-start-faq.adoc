@@ -120,6 +120,18 @@ A link:rp-use-protect.html#add-a-ransomware-protection-strategy["Ransomware-Schu
 
 Eine Backup-Richtlinie ist in der Ransomware-Resilience-Strategie nicht erforderlich.
 
+.Welche Arten von Angriffen erkennt Ransomware Resilience?
+Ransomware Resilience erkennt fünf Angriffstypen:
+
+* Verschlüsselung (Entropie)
+* Verschlüsselung (Benutzerverhalten)
+* Datenpanne
+* Datenvernichtung
+* Verdächtige Benutzeraktivität
+
+
+Weitere Informationen zu link:concept-ransomware-resilience.html#attack-types["Angriffsarten"].
+
 .Ist die Ransomware-Resilienz auf die Schutzeinstellungen in ONTAP vorbereitet?
 Ja, Ransomware Resilience erkennt Snapshot-Zeitpläne, die in ONTAP festgelegt sind. Es erkennt außerdem, ob ARP und FPolicy auf allen Volumes einer erkannten Workload aktiviert sind. Die Informationen, die Sie im Ransomware Resilience-Dashboard sehen, werden aus anderen NetApp Lösungen und Produkten zusammengeführt.
 

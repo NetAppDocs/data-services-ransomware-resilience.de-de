@@ -24,7 +24,7 @@ Für diese Aufgaben ist die Rolle „Konsolenadministrator“ erforderlich.
 * link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html#agent-installation["Stellen Sie sicher, dass Sie einen Konsolenagenten installiert haben"^]
 * link:rp-start-prerequisites.html["Stellen Sie sicher, dass Ihr System die Anforderungen erfüllt"]
 +
-** Prüfen Sie außerdem die Anforderungen für link:reference-user-activity-requirements.html["Erkennung verdächtiger Benutzeraktivitäten"] und link:task-clean-restore.html["saubere Wiederherstellungen"].
+** Prüfen Sie außerdem die Anforderungen für link:reference-user-activity-requirements.html["Erkennung verdächtigen Nutzerverhaltens"] und link:task-clean-restore.html["saubere Wiederherstellungen"].
 
 
 * link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Überprüfen Sie die Benutzerrollen von Ransomware Resilience und weisen Sie Benutzern, die auf Ransomware Resilience zugreifen, Berechtigungen zu."]
@@ -43,12 +43,12 @@ Für diese Aufgaben ist die Rolle „Ransomware Resilience-Administrator“ erfo
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Konfigurieren Sie Schutz und Erkennung in Ransomware Resilience
 [role="quick-margin-para"]
-Für diese Aufgaben ist die Rolle „Ransomware Resilience-Administrator“ erforderlich.  Zum Konfigurieren verdächtiger Benutzerverhaltensaktivitäten ist die zusätzliche Rolle „Ransomware Resilience-Benutzerverhaltensadministrator“ erforderlich.
+Für diese Aufgaben ist die Administratorrolle _Ransomware Resilience admin_ erforderlich. Die Konfiguration der Benutzerverhaltenserkennung erfordert zusätzlich die Administratorrolle _Ransomware Resilience user behavior admin_.
 
 [role="quick-margin-list"]
 * link:rp-use-protect.html["Workloads schützen"]
 +
-** Optional:link:suspicious-user-activity.html["Verbessern Sie den Schutz durch die Konfiguration der Erkennung verdächtiger Benutzeraktivitäten"]
+** Optional, link:suspicious-user-activity.html["Verbessern Sie den Schutz durch die Konfiguration der Benutzerverhaltenserkennung"]
 
 
 * Konfigurieren Sie optional Sicherungsziele:
@@ -63,10 +63,11 @@ Für diese Aufgaben ist die Rolle „Ransomware Resilience-Administrator“ erfo
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]Wie geht es weiter?
 [role="quick-margin-para"]
-Nachdem Sie den Schutz in Ransomware Resilience konfiguriert haben, können Sie als Nächstes Folgendes tun.
+Nachdem Sie den Schutz in Ransomware Resilience konfiguriert haben, können Sie:
 
 [role="quick-margin-list"]
 * link:task-classify.html["Aktivieren Sie die Datenklassifizierung, um Governance- und Sicherheitsrisiken zu identifizieren"]
 * link:task-siem.html["Senden Sie Warnmeldungen an SIEM"]
+* link:reference-soar.html["Konfigurieren eines SOAR-Playbooks"]
 * link:rp-use-reports.html["Laden Sie Warn-, Schutz-, Bereitschaftsübungs-, Wiederherstellungs- oder Zusammenfassungsberichte herunter"]
 

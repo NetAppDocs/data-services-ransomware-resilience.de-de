@@ -161,7 +161,7 @@ Die Seite „Warnungen“ wird angezeigt.
 
 Auf der Registerkarte „Warnungen“ können Sie erkennen, ob böswillige Aktivitäten oder anomales Benutzerverhalten vorliegen.
 
-Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Datensicherungsstrategie mit Benutzerverhaltenserkennung aktiviert haben, um Warnungen auf Benutzerebene anzuzeigen. Die Spalte *Verdächtiger Benutzer* wird im Warnungs-Dashboard nur angezeigt, wenn die Benutzerverhaltenserkennung aktiviert ist. Um die Erkennung verdächtiger Benutzer zu aktivieren, siehe link:suspicious-user-activity.html["Verdächtige Benutzeraktivität"].
+Sie müssen einen Benutzeraktivitätsagenten konfiguriert und eine Datensicherungsstrategie mit Benutzerverhaltenserkennung aktiviert haben, um Warnungen auf Benutzerebene anzuzeigen. Die Spalte *Verdächtiger Benutzer* wird im Warnungs-Dashboard nur angezeigt, wenn die Benutzerverhaltenserkennung aktiviert ist. Weitere Informationen link:suspicious-user-activity.html["Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten"].
 
 
 
@@ -195,7 +195,7 @@ image:screen-alerts-incidents3.png["Seite „Warnvorfälle“"]
 
 === Anzeigen von anomalem Benutzerverhalten
 
-Wenn Sie die Erkennung verdächtiger Benutzer so konfiguriert haben, dass anomales Benutzerverhalten angezeigt wird, können Sie Benutzerdaten einsehen und bestimmte Benutzer blockieren. Um die Einstellungen für verdächtige Benutzer zu aktivieren, siehe link:suspicious-user-activity.html["Agenten und Collector für die Erkennung von Benutzeraktivitäten konfigurieren"].
+Wenn Sie die Verhaltenserkennung für Benutzer konfiguriert haben, können Sie Daten auf Benutzerebene anzeigen und bestimmte Benutzer blockieren. Um die Benutzeraktivitätserkennung zu aktivieren, siehe link:suspicious-user-activity.html["Agenten und Collector konfigurieren"].
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.

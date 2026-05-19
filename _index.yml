@@ -34,7 +34,7 @@ indexpage:
       url: "/rp-use-dashboard.html"
     - title: Workloads schützen
       url: "/rp-use-protect.html"
-    - title: Konfigurieren Sie die Erkennung verdächtiger Benutzeraktivitäten
+    - title: Benutzeraktivitätserkennung konfigurieren
       url: "/suspicious-user-activity.html"
     - title: Auf eine erkannte Warnung reagieren
       url: "/rp-use-alert.html"

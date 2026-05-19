@@ -20,7 +20,7 @@ Weitere Informationen finden Sie unter folgendem Link: link:https://docs.netapp.
 
 
 
-=== Unterstützung von Schutzgruppen für Benutzerverhaltensaktivität
+=== Unterstützung von Schutzgruppen für die Erkennung des Nutzerverhaltens
 
 Ransomware Resilience-Schutzgruppen unterstützen jetzt Erkennungsrichtlinien zur Erkennung von verdächtigem Benutzerverhalten. Wenn Sie eine Ransomware-Schutzstrategie auf eine Schutzgruppe anwenden, wird eine Richtlinie auf alle Workloads angewendet, wodurch die Verwaltung Ihrer Cybersicherheitslage optimiert wird.
 
