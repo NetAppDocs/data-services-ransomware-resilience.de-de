@@ -106,11 +106,10 @@ NOTE: Wenn Sie einen ONTAP Cluster mit der Konsole mit Nicht-Administrator-Anmel
 +
 Weitere Informationen finden Sie im https://docs.netapp.com/us-en/console-setup-admin/reference-permissions.html["AWS-, Azure- oder S3-Berechtigungsliste"^] für Details.
 
-* NetApp Backup and Recovery muss auf dem System nicht aktiviert werden.
-+
-Ransomware Resilience hilft dabei, ein Backup-Ziel über die Option „Einstellungen“ zu konfigurieren. Siehe link:task-backup-destination.html["Hinzufügen eines Sicherungsziels"].
 
 
+
+NOTE: Sie können link:task-backup-destination.html["Konfigurieren eines Backup-Ziels in Ransomware Resilience"]. Wenn Ihre Workloads durch NetApp Backup and Recovery geschützt sind, erkennt Ransomware Resilience automatisch die Schutzdetails, einschließlich Snapshots und Backup-Ziele. Backup and Recovery ist _nicht_ erforderlich, um Ransomware Resilience zu verwenden.
 
 
 
