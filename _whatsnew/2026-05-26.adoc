@@ -1,0 +1,9 @@
+= Google Cloud NetApp Volumes-Unterstützung (Vorschau)
+:allow-uri-read: 
+
+
+
+
+=== Google Cloud NetApp Volumes-Unterstützung (Vorschau)
+
+Ransomware Resilience unterstützt jetzt die Erstellung von Schutzgruppen für Workloads in Google Cloud NetApp Volumes-Systemen, sodass Sie mehrere Workloads unter einer Richtlinie organisieren können, um die Verwaltung zu vereinfachen. Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-protection-group.html["Erstellen Sie eine Schutzgruppe in Ransomware Resilience"^].
