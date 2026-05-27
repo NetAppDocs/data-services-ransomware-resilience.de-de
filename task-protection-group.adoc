@@ -14,7 +14,7 @@ summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie ein
 [role="lead"]
 NetApp Ransomware Resilience bietet Schutzgruppen zur einfacheren Verwaltung Ihrer Datenbestände. Schutzgruppen sind logische Gruppierungen von Workloads. Ransomware Resilience kann alle Volumes in einer Schutzgruppe gleichzeitig mit einer einzigen Datensicherungsstrategie schützen, sodass Sie keine Strategie für jeden Workload einzeln anwenden müssen.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 
 

@@ -25,7 +25,7 @@ Sie können eines der folgenden Sicherungsziele auswählen:
 
 NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP und Azure NetApp Files nicht verfügbar. Führen Sie Backup-Vorgänge mit nativen Backup-Lösungen durch: FSx for ONTAP Backup-Service oder Azure NetApp Files Backups.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 
 

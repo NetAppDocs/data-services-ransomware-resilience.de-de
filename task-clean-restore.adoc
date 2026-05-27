@@ -16,7 +16,7 @@ summary: Bevor Sie eine vollständige Wiederherstellung in NetApp Ransomware Res
 [role="lead"]
 NetApp Ransomware Resilience bietet saubere Wiederherstellungen, die eine geführte Wiederherstellung nach Ransomware-Angriffen ermöglichen. Um eine saubere Wiederherstellung durchzuführen, müssen Sie zunächst eine isolierte Wiederherstellungsumgebung (IRE) erstellen, entweder lokal oder in einer unterstützten Cloud-Umgebung. In der IRE erstellen Sie einen Clean Room, in dem Ransomware Resilience die Arbeitslast isoliert, um zu ermitteln, welche Dateien sauber und welche von Ransomware betroffen sind.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 
 

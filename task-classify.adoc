@@ -11,7 +11,7 @@ summary: Ransomware Resilience kann Datenschutzlücken in Ihren Daten identifizi
 [role="lead"]
 Innerhalb von NetApp Ransomware Resilience können Sie NetApp Data Classification verwenden, um Datenschutzlücken zu identifizieren und Ihre Daten proaktiv zu schützen. Die Identifizierung von Datenschutzlücken zeigt, ob ein Datensatz personenbezogene Daten (PII) enthält. Datenschutzlücken können Sicherheitsrisiken erhöhen und die Einstufung der Arbeitslasten verändern.
 
-*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die Rolle „Organisationsadministrator“, „Ordner- oder Projektadministrator“ oder „Ransomware Resilience-Administrator“. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^] .
+*Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 
 
