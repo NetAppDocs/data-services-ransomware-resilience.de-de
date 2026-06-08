@@ -168,13 +168,13 @@ Ransomware Resilience erkennt fünf Arten von Angriffen:
 
 [cols="25,75"]
 |===
-| Angriffsart | Definition 
+| Angriffsart | Beschreibung 
 
 
 | Verschlüsselung (Entropie) | Ransomware Resilience erkennt anomale IOPS-Muster, Datenentropie und nicht standardmäßige Dateisuffixe. 
 
 
-| Verschlüsselung (Benutzerverhalten) | Ransomware Resilience identifiziert anomale Lese-, Schreib- und Umbenennungsaktivitäten von Dateien, die von einem bestimmten Benutzer durchgeführt werden. 
+| Verschlüsselung (Benutzerverhalten) | Ransomware Resilience erkennt anomale Lese-, Schreib- und Umbenennungsaktivitäten von Dateien, die von einem bestimmten Benutzer durchgeführt werden. 
 
 
 | Datenpanne | Ransomware Resilience erkennt anomale Dateilesemuster, die von einem bestimmten Benutzer durchgeführt werden. 

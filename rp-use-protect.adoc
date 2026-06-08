@@ -22,7 +22,16 @@ Strategien zum Schutz vor Ransomware sind ein zentrales Merkmal der NetApp Ranso
 
 Strategien zum Schutz vor Ransomware umfassen _Erkennung_, _Schutz_ und _Replikationsrichtlinien_.
 
-* **Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen.
+* **Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen. Sie haben drei Erkennungsoptionen:
++
+** Verschlüsselungserkennung
+** Verdächtige Benutzeraktivität
+** Verdächtige Dateierweiterungen blockieren
++
+Ihre Erkennungsrichtlinie kann alle drei Optionen oder eine Kombination davon umfassen. Sie muss entweder die Verschlüsselungserkennung oder link:suspicious-user-activity.html["verdächtige Benutzeraktivität (die zusätzliche Konfigurationen erfordert)"] beinhalten.
+
+
+
 * **Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.
 +
 Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt Ransomware Resilience diese und bietet Ihnen die Möglichkeit, entweder:

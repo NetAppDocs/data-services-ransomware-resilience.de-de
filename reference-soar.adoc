@@ -15,16 +15,16 @@ Ransomware Resilience bietet Sicherheitsorchestrierungs-, Automatisierungs- und 
 
 Ransomware Resilience Playbooks bieten die folgenden Funktionen:
 
-* Einen Benutzer blockieren*
+* Benutzer blockieren/entsperren*
 * Erstellen Sie einen Snapshot eines Volumes
 * Eine IP-Adresse mit Bedrohungsdaten anreichern
 * Speicherinformationen für einen bestimmten Agenten und ein bestimmtes System anreichern
-* Nehmen Sie ein Volume für die Incident Response offline
+* Nehmen Sie ein Volume zur Reaktion auf einen Vorfall offline oder nehmen Sie ein Volume nach einem Vorfall wieder online.
 * Konnektivität testen
 * Überprüfen Sie den Status eines Enrichment-Jobs
 
 
-{asterisk}Das Blockieren eines Benutzers wird nur für Splunk und Google SecOps SOAR-Playbooks unterstützt. Sie müssen link:concept-user-behavior["Erkennung des Nutzerverhaltens"]auf einem unterstützten System konfiguriert haben, um einen Benutzer zu blockieren.
+{asterisk}Das Blockieren/Entsperren eines Benutzers wird nur für Splunk- und Google SecOps SOAR-Playbooks unterstützt. Sie müssen link:concept-user-behavior["Erkennung des Nutzerverhaltens"] auf einem unterstützten System konfiguriert haben, um einen Benutzer zu blockieren.
 
 
 

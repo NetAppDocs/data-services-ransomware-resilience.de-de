@@ -1,0 +1,23 @@
+= Verbesserte Flexibilität für Schutzstrategien
+:allow-uri-read: 
+
+
+
+
+=== Verbesserte Flexibilität für Schutzstrategien
+
+Die Ransomware-Resilienz bietet jetzt mehr Flexibilität bei der Auswahl von Ransomware-Erkennungsstrategien. Bisher mussten alle Ransomware-Schutzstrategien die Erkennung von Verschlüsselung umfassen. Jetzt können Sie eine Ransomware-Schutzstrategie aktivieren, die ausschließlich die Erkennung des Nutzerverhaltens verwendet.
+
+Schutzstrategien können weiterhin sowohl die Erkennung von Verschlüsselung _als auch_ die Erkennung verdächtigen Nutzerverhaltens umfassen. Auch das Blockieren von Dateierweiterungen kann in jede Schutzstrategie integriert werden.
+
+Wenn Sie einen Teil der Schutzstrategie einer bestehenden Richtlinie deaktivieren, können alle unter der vorherigen Version der Richtlinie erstellten Warnungen nur als "Behoben" und nicht als "Abgelehnt" markiert werden. Wenn Sie beispielsweise eine Schutzstrategie hatten, die die Erkennung von Verschlüsselung und verdächtigem Benutzerverhalten umfasste, Sie aber die Verschlüsselungserkennung deaktiviert haben, können Sie nur eine bestehende Verschlüsselungswarnung für diese Arbeitslast als behoben markieren.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Schützen Sie Workloads mit NetApp Ransomware Resilience -Schutzstrategien"^].
+
+
+
+=== SOAR-Playbook-Erweiterungen
+
+Die SOAR-Playbooks für Ransomware-Resilienz bieten nun Maßnahmen zur Behebung von Problemen, nachdem Sie einen Benutzer gesperrt oder ein Volume offline genommen haben. Sie können ein Volume nun wieder online schalten und einen Benutzer entsperren, wenn die Aktion nicht als Ransomware-Bedrohung eingestuft wurde.
+
+link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/reference-soar.html["Integrieren Sie ein SOAR-Playbook"^].

@@ -24,4 +24,4 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 Erkenntnisse über Datenschutzverletzungen werden nun 13 Monate nach dem Vorfall gespeichert, wodurch eine längere Datenspeicherung für Ihre Berichtspflichten ermöglicht wird.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Erfahren Sie mehr über die Erkennung von Benutzeraktivitäten"^].
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-user-behavior.html["Erfahren Sie mehr über die Erkennung des Nutzerverhaltens"^].

@@ -26,6 +26,7 @@ Welche Berichte kann ich herunterladen?
 * *Warnungen*: Enthält den Status und die Details aller Warnungen, einschließlich der Gesamtzahl der Warnungen und automatisierten Snapshots.
 * *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads mit den Markierungen „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“.
 * *Bereitschaftsübungen*: Beinhaltet Ergebnisse simulierter Angriffe, um Verbesserungspotenziale aufzuzeigen.
+* *Änderungen der Schutzmaßnahmen*: Beinhaltet eine Überprüfung der Änderungen der Schutzstrategien für Workloads über einen festgelegten Zeitraum: 30 Tage, 60 Tage, 90 Tage oder 1 Jahr.
 * *Saubere Wiederherstellung*: Enthält Details zu den mit der sauberen Wiederherstellung wiederhergestellten Workloads.
 +
 Sie benötigen eine aktive isolierte Wiederherstellungsumgebung (IRE), um saubere Wiederherstellungsberichte zu generieren. Saubere Wiederherstellungsberichte sind nach dem Löschen der IRE nicht mehr verfügbar.
