@@ -19,7 +19,7 @@ Wenn Ransomware Resilience einen möglichen Angriff erkennt, erscheint eine Bena
 Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.
 
 
-TIP: Wenn Sie die Warnung verwerfen, lernt Ransomware Resilience dieses Verhalten, verknüpft es mit normalen Vorgängen und löst keine weitere Warnung aus.
+TIP: Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten, ordnet es dem normalen Betrieb zu und sendet keine Warnungen mehr bei ähnlichen Ereignissen.
 
 Um mit der Wiederherstellung Ihrer Daten zu beginnen, markieren Sie die Warnung als „bereit zur Wiederherstellung“, damit Ihr Speicheradministrator mit dem Wiederherstellungsprozess beginnen kann.
 
@@ -101,6 +101,9 @@ Wenn Sie vermuten, dass die Aktivität kein Ransomware-Angriff ist, können Sie 
 
 | *Automatisch aufgelöst* | Bei Warnmeldungen mit niedriger Priorität wird der Vorfall automatisch behoben, wenn innerhalb von fünf Tagen keine Maßnahmen ergriffen wurden. 
 |===
+
+NOTE: Wenn Sie eine bestehende Schutzstrategie haben und anschließend eine Erkennungsform deaktivieren, können alle unter der vorherigen Richtlinienversion erstellten Warnungen nur als "Behoben" und nicht als "Abgelehnt" markiert werden. Wenn Sie beispielsweise eine aktive Warnung für eine Schutzstrategie hatten, die Verschlüsselungserkennung und verdächtiges Benutzerverhalten umfasste, und Sie dann die Verschlüsselungserkennung deaktiviert haben, können Sie diese Warnung nur als "Behoben" markieren.
+
 
 
 == Warnungen anzeigen

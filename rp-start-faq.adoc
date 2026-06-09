@@ -94,10 +94,10 @@ Ransomware Resilience kann die folgenden Workloads identifizieren: Oracle, Datei
 Ransomware Resilience erkennt die Volumes und die Dateierweiterungen und ordnet sie der entsprechenden Arbeitslast zu.
 
 .Was ist eine geschützte Arbeitslast?
-In Ransomware Resilience wird eine Arbeitslast als *geschützt* angezeigt, wenn eine primäre Erkennungsrichtlinie aktiviert ist, was bedeutet: link:concept-ransomware-resilience.html["Autonomer Ransomware-Schutz (ARP)"] ist auf allen Volumes aktiviert, die mit der Arbeitslast zusammenhängen.
+In Ransomware Resilience wird eine Arbeitslast als *geschützt* angezeigt, wenn eine _Erkennungs_-Richtlinie aktiviert ist. Die Erkennungsrichtlinie muss entweder die Erkennung von Verschlüsselungen oder von verdächtigem Benutzerverhalten (oder beides) umfassen. Sie kann auch die Erkennung verdächtiger Dateierweiterungen beinhalten. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"].
 
 .Was ist eine „gefährdete“ Arbeitsbelastung?
-Wenn für eine Arbeitslast keine primäre Erkennungsrichtlinie aktiviert ist, wird sie als "gefährdet" gekennzeichnet, selbst wenn eine Backup- und Snapshot-Richtlinie aktiviert ist. Zum Schutz vor Ransomware sollten Sie Folgendes aktivieren: link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"]Die
+Wenn für eine Arbeitslast keine Erkennungsrichtlinie aktiviert ist, wird sie als „gefährdet“ eingestuft, selbst wenn eine Backup- und Snapshot-Richtlinie aktiviert ist. Zum Schutz vor Ransomware sollten Sie eine link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"] aktivieren.
 
 .Ich habe einen neuen Band hinzugefügt, aber er wird noch nicht angezeigt. Was soll ich tun?
 Wenn Sie Ihrer Umgebung ein neues Volume hinzugefügt haben, starten Sie die Erkennung der Arbeitslast erneut. Nachdem das Volumen entdeckt wurde, link:rp-use-protect.html#add-a-ransomware-protection-strategy["Schutzrichtlinien anwenden, um das neue Volumen zu schützen"]Die

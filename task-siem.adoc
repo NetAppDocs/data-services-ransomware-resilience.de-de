@@ -69,13 +69,13 @@ NOTE: Die Felder *user_name* und *user_id* sind nur relevant, wenn Sie xref:conc
 
 == Konfigurieren Sie AWS Security Hub für die Bedrohungserkennung
 
-Bevor Sie AWS Security Hub in Ransomware Resilience aktivieren, müssen Sie die folgenden Schritte auf hoher Ebene in AWS Security Hub durchführen:
+Bevor Sie AWS Security Hub in Ransomware Resilience aktivieren, müssen Sie Sicherheitskonfigurationen in AWS Security Hub vornehmen:
 
 * Richten Sie Berechtigungen im AWS Security Hub ein.
 * Richten Sie den Authentifizierungszugriffsschlüssel und den geheimen Schlüssel im AWS Security Hub ein.  (Diese Schritte werden hier nicht bereitgestellt.)
 
 
-.Schritte zum Einrichten von Berechtigungen im AWS Security Hub
+.Berechtigungen im AWS Security Hub einrichten
 . Gehen Sie zur *AWS IAM-Konsole*.
 . Wählen Sie *Richtlinien* aus.
 . Erstellen Sie eine Richtlinie mit dem folgenden Code im JSON-Format:

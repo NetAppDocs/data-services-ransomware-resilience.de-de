@@ -52,10 +52,10 @@ Das Schutz-Dashboard in Ransomware Resilience zeigt detaillierte Informationen z
 
 *Schutzstatus*: Eine Arbeitslast kann einen der folgenden Schutzstatus aufweisen, um anzugeben, ob eine Richtlinie angewendet wird oder nicht:
 
-* *Geschützt*: Eine Richtlinie wird angewendet.  ARP (oder ARP/AI, je nach ONTAP Version) ist auf allen mit der Arbeitslast verbundenen Volumes aktiviert.
-* *Gefährdet*: Es wird keine Richtlinie angewendet.  Wenn für einen Workload keine primäre Erkennungsrichtlinie aktiviert ist, ist er „gefährdet“, auch wenn für ihn eine Snapshot- und Backup-Richtlinie aktiviert ist.
-* *In Bearbeitung*: Eine Richtlinie wird angewendet, ist aber noch nicht abgeschlossen.
-* *Fehlgeschlagen*: Eine Richtlinie wird angewendet, funktioniert aber nicht.
+* *Geschützt*: Es wird eine Erkennungsrichtlinie angewendet.
+* *Gefährdet*: Es wird keine Richtlinie angewendet. Wenn für eine Arbeitslast keine Erkennungsrichtlinie aktiviert ist, gilt sie als „gefährdet“, selbst wenn eine Snapshot- und Backup-Richtlinie aktiviert ist.
+* *In Bearbeitung*: Eine Richtlinie wird angewendet, aber der Vorgang ist noch nicht abgeschlossen.
+* *Fehlgeschlagen*: Es wurde eine Richtlinie konfiguriert, aber es ist ein Fehler aufgetreten.
 
 
 *Erkennungsstatus*:

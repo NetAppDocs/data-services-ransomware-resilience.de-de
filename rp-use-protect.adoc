@@ -254,11 +254,15 @@ NOTE: Wenn Sie eine vorhandene Strategie kopieren und ändern möchten, hängt R
 ** *Erkennungsrichtlinie*:
 +
 *** *Richtlinie*: Wählen Sie eine der vordefinierten Erkennungsrichtlinien.
-*** *Primäre Erkennung*: Aktivieren Sie die Ransomware-Resilienz, um potenzielle Ransomware-Angriffe zu erkennen.
-*** *Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung des Benutzerverhaltens, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und verdächtige Ereignisse wie Datenverletzungen zu erkennen.
-*** *Dateierweiterungen blockieren*: Aktivieren Sie die Ransomware-Resilienz, um bekannte verdächtige Dateierweiterungen zu blockieren. Ransomware Resilience erstellt automatisch Snapshot-Kopien, wenn die primäre Erkennung aktiviert ist.
+*** *Verschlüsselungserkennung*: Aktivieren Sie Ransomware Resilience, um verschlüsselungsbasierte Angriffe zu erkennen.
+*** *Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung von Benutzerverhalten, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übermitteln und verdächtige Ereignisse wie Datenlecks oder Datenzerstörung zu erkennen.
+*** *Dateierweiterungen blockieren*: Aktivieren Sie die Ransomware-Resilienz, um bekannte verdächtige Dateierweiterungen zu blockieren.
 +
 Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.
+
++
+
+NOTE: Sie können eine beliebige Kombination der Erkennungsrichtlinien auswählen. Die Erkennungsrichtlinie muss entweder die Verschlüsselungserkennung oder die Erkennung verdächtigen Benutzerverhaltens umfassen.
 
 
 
