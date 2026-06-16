@@ -76,7 +76,7 @@ Sie können auch im Planungsschritt die Dateihistorien einsehen, um zu sehen, wa
 
 
 
-| Cloud: Amazon FSxN für ONTAP | Cloud: AWS  a| 
+| Cloud: Amazon FSx for NetApp ONTAP | Cloud: AWS  a| 
 ** US East 1
 ** EU Central 1
 
@@ -167,7 +167,7 @@ image::diagram-clean-recovery-cloud-cloud.png[Diagramm zur Cloud-zu-Cloud-Clean-
 
 
 
-NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können Sie diese Anforderung an die Clean Room SVM-Daten-LIF-IP überspringen.
+NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert wird, entfällt diese Clean Room SVM-Daten-LIF-IP-Anforderung.
 
 .Produktionsumgebungs-Routingtabelle
 * Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.
@@ -306,7 +306,7 @@ image:diagram-clean-recovery-cloud-on-prem.png["Diagramm zur Wiederherstellung v
 
 
 
-NOTE: Wenn Sie ein IRE mit der Quelle in Amazon FSxN für ONTAP konfigurieren, können Sie diese Anforderung an die Clean Room SVM-Daten-LIF-IP überspringen.
+NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert wird, entfällt diese Clean Room SVM-Daten-LIF-IP-Anforderung.
 
 .Produktionsumgebungs-Routingtabelle
 * Die Produktionsroutentabelle muss den Datenverkehr vom IRE-Subnetz zur Clean Restore Data LIF-IP zulassen. Sie müssen diese Route zur Produktionsroutentabelle hinzufügen.
@@ -524,7 +524,7 @@ Die Vorgehensweise zum Einrichten eines isolierten Wiederherstellungsraums unter
 . Erweitern Sie den Abschnitt *Systeme*. Wählen Sie die Systeme aus, die Sie mit dem IRE verbinden möchten. Für jedes ausgewählte System müssen Sie die IP-Adresse, die Subnetzmaske und das Gateway der Speicher-VM angeben.
 +
 
-NOTE: Für IREs, die auf Amazon FSxN für ONTAP bereitgestellt werden, müssen Sie diese Informationen nicht angeben.
+NOTE: Für IREs, die auf Amazon FSx for NetApp ONTAP bereitgestellt werden, ist die Angabe dieser Informationen nicht erforderlich.
 
 +
 image:clean-restore-systems.png["Screenshot der Systemauswahloberfläche."]
