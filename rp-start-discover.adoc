@@ -31,6 +31,9 @@ Wählen Sie innerhalb jedes Console-Agent die Systeme aus, auf denen Sie Workloa
 
 Die Erkennung von Workloads schützt diese nicht automatisch. Ransomware Resilience erkennt bestehende Schutzrichtlinien von NetApp Backup and Recovery oder ONTAP während des Erkennungsprozesses. Für alle Workloads ohne Schutz müssen Sie link:rp-use-protect.html["Schutz konfigurieren"].
 
+
+NOTE: Ransomware Resilience kann nur bis zu 3.000 Workloads pro Console agent erkennen.
+
 .Schritte
 . Wählen Sie in der NetApp Console*Schutz* > *Ransomware-Resilienz*.
 +

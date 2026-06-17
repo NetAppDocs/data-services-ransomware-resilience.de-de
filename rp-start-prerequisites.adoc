@@ -78,6 +78,7 @@ NOTE: Wenn Sie mehrere Console-Agenten in einer einzigen Console-Organisation ha
 
 
 * Der Konsolenagent muss über die `cloudmanager-ransomware-protection` Container in einem aktiven Zustand.
+* Es gibt eine Beschränkung von 3.000 Workloads pro Console Agent.
 * Für ONTAP oder Cloud Volumes ONTAP Cluster ist für die Ransomware-Resilienz ONTAP Version 9.11.1 oder höher erforderlich.
 +
 
