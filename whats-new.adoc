@@ -738,9 +738,10 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 
 Wenn für die Arbeitslast keine Snapshot- oder Sicherungsrichtlinien vorhanden sind, können Sie eine Ransomware-Schutzstrategie erstellen, die die folgenden Richtlinien enthalten kann, die Sie in diesem Dienst erstellen:
 
-* Snapshot-Richtlinie
-* Sicherungsrichtlinie
 * Erkennungsrichtlinie
+* Sicherungsrichtlinie
+* Snapshot-Richtlinie
+* Replikationsrichtlinie
 
 
 https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Erfahren Sie mehr über den Schutz von Workloads"] .

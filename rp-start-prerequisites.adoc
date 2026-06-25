@@ -56,7 +56,7 @@ Stellen Sie sicher, dass Sie ein unterstütztes System verwenden:
 | SAN (iSCSI & NVMe) | 9.17.1 und höher 
 
 
-| Google Cloud NetApp Volumes | CIFS, NFS, SAN (iSCSI & NVMe) | k. A. 
+| Google Cloud NetApp Volumes | CIFS & NFS | k. A. 
 |===
 
 NOTE: Die Erkennung von Benutzeraktivitäten wird für Azure NetApp Files oder Google Cloud NetApp Volumes nicht unterstützt. Weitere Informationen zur Unterstützung der Erkennung von Benutzeraktivitäten finden Sie unter link:reference-user-activity-requirements.html["Anforderungen an die Erkennung von Benutzeraktivitäten"].
