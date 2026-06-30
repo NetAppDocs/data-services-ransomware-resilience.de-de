@@ -70,11 +70,11 @@ image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivität
 
 . Wählen Sie **Weiter**.
 . Überprüfen Sie Ihre Einstellungen. Wählen Sie *Aktivieren*, um das Hinzufügen des Benutzeraktivitätsagenten abzuschließen.
-. Bestätigen Sie, dass der Benutzeraktivitätsagent erfolgreich erstellt wurde. In der Kachel „Benutzeraktivität“ wird eine erfolgreiche Bereitstellung als **Wird ausgeführt** angezeigt.
+. Bestätigen Sie, dass der Benutzeraktivitätsagent erfolgreich erstellt wurde. In der Kachel „Benutzeraktivitätsüberwachung“ wird eine erfolgreiche Bereitstellung als **Wird ausgeführt** angezeigt.
 
 
 .Ergebnis
-Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, kehren Sie zum Menü **Einstellungen** zurück und wählen Sie dann **Verwalten** im Bereich Benutzeraktivität. Wählen Sie den Tab **Benutzeraktivitätsagenten** und dann den Benutzeraktivitätsagenten aus, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichnis-Konnektoren.
+Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, zurück zum Menü **Einstellungen** wechseln und dann im Bereich **Benutzeraktivitätsüberwachung** die Option **Verwalten** auswählen. Den Tab **Benutzeraktivitätsagenten** auswählen und dann den gewünschten Benutzeraktivitätsagenten, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichnis-Konnektoren.
 
 
 
@@ -82,7 +82,7 @@ Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, kehren Sie zum 
 
 Datensammler werden automatisch erstellt, wenn Sie eine Datensicherungsstrategie mit Benutzeraktivitätserkennung aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["Hinzufügen einer Erkennungsrichtlinie"].
 
-Sie können die Details des Datensammlers anzeigen. Wählen Sie in den Einstellungen in der Kachel „Benutzeraktivität“ die Option **Verwalten** aus. Wählen Sie die Registerkarte **Datensammler** und dann den Datensammler aus, um seine Details anzuzeigen oder ihn anzuhalten.
+Sie können die Details des Datensammlers einsehen. In den Einstellungen die Option **Verwalten** im Feld Benutzeraktivitätsüberwachung auswählen. Den Tab **Datensammler** auswählen und dann den Datensammler auswählen, um dessen Details anzuzeigen oder ihn anzuhalten.
 
 image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellungen."]
 
@@ -94,7 +94,7 @@ Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-
 
 .Schritte
 . Gehen Sie in Ransomware Resilience zu *Einstellungen*.
-. Wählen Sie in der Kachel „Benutzeraktivität“ **Verwalten** aus.
+. Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
 . Wählen Sie die Registerkarte **Benutzerverzeichnis-Konnektoren** und dann **Hinzufügen**.
 . Konfigurieren Sie die Verbindung. Geben Sie die erforderlichen Informationen für jedes Feld ein.
 +
@@ -151,8 +151,8 @@ Geben Sie die Details zur Attributzuordnung an:
 === Löschen eines Benutzerverzeichnis-Connectors
 
 .Schritte
-. Gehen Sie in Ransomware Resilience zu *Einstellungen*.
-. Suchen Sie die Kachel „Benutzeraktivität“ und wählen Sie **Verwalten** aus.
+. In Ransomware Resilience die Option *Einstellungen* auswählen.
+. Die Kachel „Benutzeraktivitätsüberwachung“ finden und **Verwalten** auswählen.
 . Wählen Sie die Registerkarte **Benutzerverzeichnis-Connector**.
 . Identifizieren Sie den Benutzerverzeichnis-Connector, den Sie löschen möchten. Wählen Sie im Aktionsmenü am Ende der Zeile die drei Punkte aus `...` dann **Löschen**.
 . Wählen Sie im Popup-Dialogfeld **Löschen** aus, um zu bestätigen.
@@ -160,50 +160,15 @@ Geben Sie die Details zur Attributzuordnung an:
 
 
 
-=== Benutzer von Warnmeldungen ausschließen
-
-Wenn es bestimmte vertrauenswürdige Benutzer gibt, deren Verhalten möglicherweise Warnmeldungen zum Benutzerverhalten auslöst, können Sie sie von Warnmeldungen ausschließen.
-
-.Schritte
-. Unter Ransomware Resilience wählen Sie **Einstellungen**.
-. Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.
-. Wählen Sie die Registerkarte **Excluded users** aus.
-. Um einzelne Benutzer in der Benutzeroberfläche zu überprüfen, wählen Sie **Manuell auswählen**. Um eine Liste ausgeschlossener Benutzer hochzuladen, wählen Sie **Hochladen**.
-+
-.. Wenn Sie **Manuell auswählen** gewählt haben, aktivieren Sie das Kontrollkästchen neben den Namen der spezifischen Benutzer, die Sie ausschließen möchten.
-.. Wenn Sie **Hochladen** auswählen, laden Sie die CSV- oder JSON-Datei mit der Liste aller Benutzer herunter. Wählen Sie **Herunterladen**, um auf die Liste zuzugreifen.
-+
-Überprüfen Sie die Datei auf Ihrem lokalen Rechner. Entfernen Sie die Namen aller Benutzer, für die Sie die Erkennung beibehalten möchten. Wenn die Liste nur noch die Namen der Benutzer enthält, die Sie von der Erkennung ausschließen möchten, speichern Sie sie.
-
-+
-Wählen Sie in Ransomware Resilience **Hochladen** aus. Suchen Sie die Datei und laden Sie sie hoch.
-
-
-
-. Wählen Sie **Hinzufügen** aus, um das Hinzufügen der Benutzer zur Ausschlussliste abzuschließen.
-. Auf der Registerkarte **Ausgeschlossene Benutzer** werden nun die Namen der Benutzer angezeigt, die aus den Warnmeldungen zur Benutzerverhaltenserkennung entfernt wurden.
-
-
-
-TIP: Sie können einen Benutzer auch direkt von einer Benachrichtigung ausschließen. Weitere Informationen finden Sie unter link:rp-use-alert.html["Auf Ransomware-Warnungen reagieren"].
-
-
-
-==== Benutzer aus der Liste der ausgeschlossenen Benutzer entfernen
-
-Sie können einen Benutzer anschließend wieder zur Erkennung hinzufügen.
-
-.Schritte
-. Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.
-. Wählen Sie die Registerkarte **Excluded users** aus.
-. Wählen Sie **Hinzufügen**.
-. Um einzelne Benutzer von der UI auszuschließen, wählen Sie **Select manually**.
-. Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Wählen Sie das Aktionsmenü (`...`) in der Zeile mit dem Benutzernamen und dann **Entfernen**.
-. Wählen Sie im Dialogfeld **Entfernen** aus, um zu bestätigen, dass Sie die ausgewählten Benutzer entfernen möchten.
-
-
-
-
 == Auf Benachrichtigungen über Benutzeraktivitäten reagieren
 
 Nachdem Sie die Benutzeraktivitätserkennung konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie bösartige Aktivitäten und verdächtiges Nutzerverhalten"].
+
+Sie können auch link:task-automate-user-activity.html["Antworten auf Benutzeraktivitätsereignisse automatisieren"].
+
+
+
+== Nächste Schritte
+
+* link:task-users-manage.html["Benutzerblockierung und Warnmeldungen in NetApp Ransomware Resilience verwalten"]
+

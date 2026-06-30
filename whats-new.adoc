@@ -18,6 +18,18 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 
 
+== 29. Juni 2026
+
+
+
+=== Automatisierte Antworten auf Benachrichtigungen zu Benutzeraktivitäten
+
+Ransomware Resilience unterstützt jetzt die Automatisierung der Snapshot-Erstellung und das Sperren von Benutzern, wenn eine Benutzeraktivitätswarnung generiert wird. Mit automatisierten Reaktionen lässt sich ein Benutzer unmittelbar nach Generierung einer Warnung sperren und ein Snapshot zur Wiederherstellung erstellen, was eine schnellere Reaktion ohne manuelle Eingriffe ermöglicht.
+
+Weitere Informationen sind unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-automate-user-activity.html["Antworten auf Warnmeldungen zu Benutzeraktivitäten automatisieren"^] zu finden.
+
+
+
 == 08. Juni 2026
 
 

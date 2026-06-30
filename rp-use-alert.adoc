@@ -207,12 +207,14 @@ Wenn Sie die Verhaltenserkennung für Benutzer konfiguriert haben, können Sie D
 +
 .. Um einen verdächtigen Benutzer in Ihrer Umgebung zu blockieren, wählen Sie *Block* neben dem Namen des Benutzers aus.
 .. Um Benachrichtigungen für einen Benutzer zu deaktivieren, der Gegenstand einer nachweislich falschen Benachrichtigung ist, wählen Sie die drei Punkte (`...` und anschließend **Diesen Benutzer von der Überwachung ausschließen**. Überprüfen Sie den Dialog und wählen Sie dann **Ausschließen** zur Bestätigung.
+.. Im Feld *Antworten* wird mit **Jetzt Snapshot erstellen** ein Snapshot erstellt.
+.. Wenn auf der SVM eine automatische Antwort aktiviert wurde, kann über **Benutzerblockierung bearbeiten** der Benutzer gesperrt werden. Zum Sperren des Benutzers **Zeitraum für gesperrten Benutzer** auswählen und die Dauer der Sperre festlegen (von einer Stunde bis dauerhaft). Der Benutzer kann auch wieder entsperrt werden, falls die Warnung nicht als Ransomware-Ereignis eingestuft wird. **Speichern** auswählen.
 
 
 
 
 
-TIP: Um Benachrichtigungen für einen Benutzer wieder zu aktivieren, rufen Sie die Benachrichtigung auf. Wählen Sie die drei Punkte und dann **Diesen Benutzer in die Überwachung einbeziehen**. Sie können auch link:suspicious-user-activity.html#exclude-users-from-alerts["Benutzer ausschließen"] aus der Überwachung entfernen.
+TIP: Um Benachrichtigungen für einen Benutzer wieder zu aktivieren, rufen Sie die Benachrichtigung auf. Wählen Sie die drei Punkte und dann **Diesen Benutzer in die Überwachung einbeziehen**. Sie können auch link:task-users-manage.html["Benutzer ausschließen"] aus der Überwachung entfernen.
 
 
 

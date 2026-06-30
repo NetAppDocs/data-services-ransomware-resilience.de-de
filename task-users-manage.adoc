@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: task-users-manage.html 
+keywords: user activity detection, 
+summary: Nach der Erstellung des Benutzerverzeichnis-Connectors in NetApp Ransomware Resilience können Benutzer gesperrt und entsperrt sowie von Warnmeldungen ausgeschlossen werden. 
+---
+= Benutzerblockierung und Warnmeldungen in NetApp Ransomware Resilience verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem der Benutzerverzeichnis-Connector in NetApp Ransomware Resilience erstellt wurde, besteht die Möglichkeit, Benutzer bei Ransomware-Ereignissen zu sperren und zu entsperren sowie diese Ereignisse auszuwerten. Es ist außerdem möglich, Benutzer gezielt von Ransomware-Warnungen auszuschließen, wenn sicher ist, dass deren Aktionen keine Angriffe sind.
+
+Sie müssen link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["einen Benutzeraktivitätsagenten konfiguriert, eine Richtlinie mit Benutzeraktivitätserkennung aktiviert und einen Benutzerverzeichnis-Connector erstellt"] haben, um Benutzer zu blockieren.
+
+
+TIP: Sie können link:task-automate-user-activity.html["Antworten automatisieren"] auf Benutzeraktivitätserkennungsereignisse reagieren.
+
+
+
+== Blockierte Benutzer verwalten
+
+Sie können Benutzer sperren, wenn Sie der Ansicht sind, dass sie für böswillige Aktivitäten verantwortlich sind.
+
+.Benutzer blockieren
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
+. Die Registerkarte **Benutzer** auswählen.
+. **Benutzer blockieren** auswählen.
+. Wählen Sie die Dauer der Sperrung: Sie kann eine Stunde bis zu 24 Stunden oder dauerhaft betragen.
+. Aktivieren Sie das Kontrollkästchen neben den Namen der Benutzer, die blockiert werden sollen.
+. **Block** auswählen.
+
+
+.Die Liste der blockierten Benutzer ändern
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
+. Die Registerkarte **Benutzer** auswählen.
+. **Benutzerblockierung bearbeiten** auswählen.
+. Wählen Sie die gewünschte Änderung. Zum Ändern der Sperrdauer **Zeitraum für gesperrte Benutzer** auswählen und die Dauer anpassen. Zum Entfernen von Benutzern aus der Liste der gesperrten Benutzer **Benutzer entsperren** auswählen.
+. Aktivieren Sie das Kontrollkästchen neben dem Namen des gesperrten Benutzers, dessen Status geändert werden soll.
+. **Speichern** auswählen.
+
+
+
+
+== Benutzerwarnungen verwalten
+
+Wenn es bestimmte vertrauenswürdige Benutzer gibt, deren Verhalten möglicherweise Warnmeldungen zum Benutzerverhalten auslöst, können Sie sie von Warnmeldungen ausschließen.
+
+.Benutzer von Warnmeldungen ausschließen
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
+. Die Registerkarte **Von der Überwachung ausgeschlossen** auswählen.
+. Um einzelne Benutzer in der Benutzeroberfläche zu überprüfen, wählen Sie **Manuell auswählen**. Um eine Liste ausgeschlossener Benutzer hochzuladen, wählen Sie **Hochladen**.
++
+.. Wenn Sie **Manuell auswählen** gewählt haben, aktivieren Sie das Kontrollkästchen neben den Namen der spezifischen Benutzer, die Sie ausschließen möchten.
+.. Wenn Sie **Hochladen** auswählen, laden Sie die CSV- oder JSON-Datei mit der Liste aller Benutzer herunter. Wählen Sie **Herunterladen**, um auf die Liste zuzugreifen.
++
+Überprüfen Sie die Datei auf Ihrem lokalen Rechner. Entfernen Sie die Namen aller Benutzer, für die Sie die Erkennung beibehalten möchten. Wenn die Liste nur noch die Namen der Benutzer enthält, die Sie von der Erkennung ausschließen möchten, speichern Sie sie.
+
++
+Wählen Sie in Ransomware Resilience **Hochladen** aus. Suchen Sie die Datei und laden Sie sie hoch.
+
+
+
+. **Hinzufügen** auswählen, um das Hinzufügen der Benutzer zur Ausschlussliste abzuschließen.
+. Auf der Registerkarte **Von der Überwachung ausgeschlossen** werden im Dashboard nun die Namen der Benutzer angezeigt, die von den Warnmeldungen zur Benutzerverhaltenserkennung entfernt wurden.
+
+
+
+TIP: Sie können einen Benutzer auch direkt von einer Benachrichtigung ausschließen. Weitere Informationen finden Sie unter link:rp-use-alert.html["Auf Ransomware-Warnungen reagieren"].
+
+.Benutzer aus der Liste der ausgeschlossenen Benutzer entfernen
+. Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
+. Die Registerkarte **Von der Überwachung ausgeschlossen** auswählen.
+. Wählen Sie **Hinzufügen**.
+. Um einzelne Benutzer von der Benutzeroberfläche auszuschließen, **manuell auswählen** wählen.
+. Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Im Aktionsmenü (`...`) in der Zeile mit dem Benutzernamen steht die Option **Entfernen** zur Verfügung.
+. Wählen Sie im Dialogfeld **Entfernen** aus, um zu bestätigen, dass Sie die ausgewählten Benutzer entfernen möchten.
+
+
+
+
+== Nächste Schritte
+
+* link:task-automate-user-activity.html["Antworten auf Ereignisse der Benutzeraktivitätserkennung automatisieren"]
+

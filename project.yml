@@ -56,6 +56,8 @@ sidebar:
           url: "/reference-user-activity-requirements.html"
         - title: Agenten und Collector konfigurieren
           url: "/suspicious-user-activity.html"
+        - title: Benutzerbenachrichtigungen und Blockierungen verwalten
+          url: "/task-users-manage.html"
       - title: Schutzgruppen verwalten
         url: "/task-protection-group.html"
       - title: Scannen nach personenbezogenen Daten
@@ -64,6 +66,8 @@ sidebar:
       entries:
       - title: Auf eine erkannte Warnung reagieren
         url: "/rp-use-alert.html"
+      - title: Antworten auf Warnmeldungen zu Benutzeraktivitäten automatisieren
+        url: "/task-automate-user-activity.html"
       - title: Überprüfen Sie den Wiederherstellungsstatus
         url: "/rp-use-recover.html"
       - title: Mit einer sauberen Wiederherstellung wiederherstellen

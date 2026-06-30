@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: task-automate-user-activity.html 
+keywords: data breach detection, data breach, user activity, automated response 
+summary: NetApp Ransomware Resilience unterstützt das Erstellen automatisierter Reaktionen auf Benutzeraktivitätsereignisse, sodass automatisch ein Snapshot erstellt oder ein Benutzer gesperrt werden kann. 
+---
+= Automatisierte Reaktionen auf Benutzeraktivitätswarnungen in NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience unterstützt die Erstellung automatisierter Reaktionen auf link:concept-user-behavior.html["Benutzeraktivitätsereignisse"]. Mit automatisierten Reaktionen kann Ransomware Resilience einen Snapshot erstellen oder einen Benutzer sperren, wenn ein Angriff oder eine Warnung erkannt wird, was eine schnellere Reaktion auf Ransomware-Ereignisse ermöglicht.
+
+Automatisierte Antworten werden für Verschlüsselung (Benutzerverhalten), Datenschutzverletzungen und Datenzerstörungsereignisse unterstützt. Sie müssen link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["einen Benutzeraktivitätsagenten konfiguriert, eine Richtlinie mit Benutzeraktivitätserkennung aktiviert und einen Benutzerverzeichnis-Connector erstellt"] haben, bevor eine automatisierte Antwort erstellt werden kann.
+
+
+
+== Eine automatisierte Antwort erstellen
+
+Es kann nur eine Storage-VM mit mindestens einer Arbeitslast geschützt werden, die durch eine Richtlinie zur Erkennung verdächtigen Benutzerverhaltens geschützt ist.
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
+. Die Registerkarte **Automatisierte Antworten** auswählen.
+. **Hinzufügen** auswählen, um das Verhalten zu erstellen.
+. Einen **Namen** für die automatisierte Antwort eingeben.
+. Wählen Sie den Ereignistyp, der die Reaktion auslöst: **Angriff** oder **Warnung**. Weitere Informationen zu den verschiedenen link:rp-use-alert.html#alert-types-and-statuses["Arten von Warnungen"].
+. Wählen Sie die Antwort aus:
++
+** **Benutzerzugriff sperren**: Der Benutzer wird von allen durch NetApp Ransomware Resilience geschützten Storage-VMs gesperrt, wenn die Warnung ausgelöst wird.
++
+Wenn Sie diese Option wählen, müssen Sie auch die Dauer der Sperre festlegen. Diese kann zwischen 1 und 24 Stunden oder dauerhaft sein.
+
+** **Snapshots erstellen**: Ein Snapshot der betroffenen Workloads wird zur möglichen Wiederherstellung erstellt. Die Snapshots werden sieben Tage lang aufbewahrt.
+
+
+. Wählen Sie die Alarmtypen aus, die die automatisierte Reaktion auslösen:
++
+|===
+
+
+| Alarmtyp | Beschreibung 
+
+
+| Verschlüsselung (Benutzerverhalten) | Ransomware Resilience erkennt anomale Lese-, Schreib- und Umbenennungsaktivitäten von Dateien, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenpanne | Ransomware Resilience erkennt anomale Dateilesemuster, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenvernichtung | Ransomware Resilience erkennt die massenhafte Löschung von Dateien durch einen bestimmten Benutzer. 
+|===
+. Wählen Sie die Storage-VMs aus, auf die die automatisierte Antwort angewendet werden soll.
+. **Hinzufügen** auswählen, um die automatische Antwort zu erstellen.
+
+
+
+
+== Eine automatisierte Antwort ändern
+
+Nachdem eine automatische Antwort erstellt wurde, besteht die Möglichkeit, die Antwort zu pausieren, neu zu starten oder zu ändern. Der Name der Antwort, die Alarmtypen, die die Antwort auslösen, die Storage-VMs und die durchgeführte Aktion können geändert werden.
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
+. Die Registerkarte **Automatisierte Antworten** auswählen.
+. Wählen Sie die automatisierte Antwort aus, die Sie ändern möchten.
+. Um die Antwort anzuhalten oder zu löschen, im Aktionsmenü **Pause** (oder **Start**) oder **Löschen** auswählen.
++
+Um die Antwort zu ändern, **Bearbeiten** auswählen.
+
+. Sie können alle Einstellungen ändern, außer dem Schweregrad des Alarms.
+. **Speichern** auswählen, um die Änderungen zu übernehmen.
+
