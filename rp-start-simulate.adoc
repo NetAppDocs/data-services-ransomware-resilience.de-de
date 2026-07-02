@@ -12,7 +12,7 @@ summary: Führen Sie eine Ransomware-Bereitschaftsübung durch, indem Sie einen 
 
 
 [role="lead"]
-Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe durch, indem Sie einen Angriff auf eine neue Beispiel-Workload simulieren.  Untersuchen Sie den simulierten Angriff und stellen Sie die Arbeitslast wieder her.  Verwenden Sie diese Funktion, um Warnbenachrichtigungen, Reaktionen und Wiederherstellungen zu testen.  Führen Sie die Übung so oft wie nötig durch.
+In NetApp Ransomware Resilience kann eine Übung zur Vorbereitung auf einen Ransomware-Angriff durchgeführt werden, um die Bereitschaft für einen realen Ransomware-Angriff zu testen. Mit der Übung simuliert Ransomware Resilience einen Angriff auf eine neue Beispiel-Workload, wodurch eine Untersuchung des simulierten Angriffs und eine Wiederherstellung möglich sind, ohne die realen Produktionsdaten zu beeinträchtigen. Die Übung trägt dazu bei, sich mit Warnmeldungen vertraut zu machen und auf Reaktion sowie Wiederherstellung vorbereitet zu sein. Die Übung kann beliebig oft durchgeführt werden.
 
 
 TIP: Ihre tatsächlichen Arbeitslastdaten sind davon nicht betroffen.
@@ -23,37 +23,27 @@ Sie können Bereitschaftsübungen für NFS- und CIFS-Workloads (SMB) durchführe
 
 == Konfigurieren Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe
 
-Bevor Sie eine Simulation ausführen, richten Sie auf der Seite „Einstellungen“ eine Übung ein.  Greifen Sie über die Option „Aktionen“ im oberen Menü auf die Seite „Einstellungen“ zu.
-
-In den folgenden Situationen müssen Sie einen Benutzernamen und ein Kennwort eingeben:
-
-* Wenn für die zuvor ausgewählte Storage-VM Änderungen am Benutzernamen oder Passwort vorgenommen wurden
-* Wenn Sie eine andere CIFS (SMB)-Speicher-VM auswählen
-* Wenn Sie einen anderen Test-Workload-Namen eingeben
-
-
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 .Schritte
-. Wählen Sie im NetApp Ransomware Resilience -Menü oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Bereich „Readiness drill“ wird **Konfigurieren** ausgewählt.
+. Den **Readiness-Übungstyp** auswählen.
 +
-image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaftsübung ausführen“"]
+** **Benutzerdefinierte Wiederherstellung**: Diese Übung erzeugt eine Warnung und ermöglicht anschließend die Durchführung von link:rp-use-recover.html["eine benutzerdefinierte Wiederherstellung"] , wobei Sie den Wiederherstellungspunkt konfigurieren.
+** **Saubere Wiederherstellung**: Diese Übung erzeugt eine Warnung und führt Sie dann zum link:task-clean-restore-recover.html["Clean Restore"] Prozess für die Wiederherstellung, der Sie zu optimierten Wiederherstellungspunkten leitet.
+** **Wiederherstellung nach einem Datenleck**: Diese Übung erzeugt eine Warnung bei einem vom Benutzer ausgelösten Datenleck. Die Einstellungen link:suspicious-user-activity.html["ein Benutzeraktivitätsagent"]müssen zuvor konfiguriert sein, bevor dieser Übungstyp aktiviert werden kann.
 
-. Wählen Sie auf der Seite „Einstellungen“ in der Karte „Bereitschaftsübung“ die Option „Konfigurieren“ aus.
-+
-Die Konsole zeigt die Seite „Bereitschaftsübung konfigurieren“ an.
 
+. Wählen Sie die Umgebung, in der der Bereitschaftsübungstest erstellt wird.
 +
-image:screen-settings-alert-drill-configure.png["Seite „Bereitschaftsübung konfigurieren“"]
+.. Den **Konsolenagent** und das **System** auswählen.
+.. Nach Auswahl des **Systems** wird die **Storage VM** aus der vorausgefüllten Liste ausgewählt.
+.. Ein Name für die **New test workload** wird angegeben. Die Test-Workload wird mit "rps_test_" versehen.
+.. Wenn die Bereitschaftsübung der Wiederherstellung nach einem Datenleck dient, ist der **Benutzeraktivitätsagent** für die Übungsumgebung auszuwählen.
++
+image:screen-settings-alert-drill-configure.png["Screenshot der Konfigurationsoptionen für die Bereitschaftsübung."]
 
-. Gehen Sie folgendermaßen vor:
-+
-.. Wählen Sie den Konsolenagenten aus, den Sie für die Bereitschaftsübung verwenden möchten.
-.. Wählen Sie ein Testsystem aus.
-.. Wählen Sie eine Testspeicher-SVM aus.
-.. Wenn Sie eine CIFS (SMB)-Speicher-VM ausgewählt haben, werden die Felder **Benutzername** und **Passwort** angezeigt.  Geben Sie den Benutzernamen und das Kennwort für die Speicher-VM ein.
-.. Wählen Sie den Übungstyp aus. Für eine manuelle Wiederherstellung nach einem Verschlüsselungs-Datenleck wählen Sie **Benutzerdefinierte Wiederherstellung**. Für die Wiederherstellung nach verdächtigem Benutzerverhalten wählen Sie **Datenleck**.
-.. Geben Sie einen Namen für die Test-Workload ein. Der Name darf keine Bindestriche enthalten.
 
 
 . Wählen Sie *Speichern*.
@@ -70,25 +60,20 @@ Nachdem Sie die Bereitschaftsübung konfiguriert haben, können Sie mit der Übu
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
-Wenn Sie die Bereitschaftsübung starten, überspringt Ransomware Resilience den Lernmodus und startet die Übung im aktiven Modus.  Der Erkennungsstatus der Arbeitslast ist „Aktiv“.
-
-
-TIP: Eine Arbeitslast kann den Status „Lernmodus“ zur Ransomware-Erkennung haben, wenn vor Kurzem eine Erkennungsrichtlinie zugewiesen wurde und Ransomware Resilience Arbeitslasten scannt.
-
 .Schritte
-. Führen Sie einen der folgenden Schritte aus:
+. Zum Starten der Übung:
 +
-** Wählen Sie im Menü „Ransomware Resilience“ oben rechts die Schaltfläche „Bereitschaftsübung ausführen“ aus.
+** Im Dashboard NetApp Ransomware Resilience befindet sich oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
 +
 image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaftsübung ausführen“"]
 
-** ODER wählen Sie auf der Seite „Einstellungen“ in der Karte „Bereitschaftsübung“ die Option „Start“ aus.
+** Oder zu **Einstellungen** wechseln. Im Bereich „Bereitschaftsübung“ *Start* auswählen.
 
 
 
 
 
-NOTE: Sie können die Konfiguration der Bereitschaftsübung nicht bearbeiten, während die Übung läuft. Sie können den Bohrer zurücksetzen, um ihn anzuhalten und die Konfiguration zu ändern.
+NOTE: Die Konfiguration der Bereitschaftsübung kann nicht bearbeitet werden, während die Übung läuft. Zum Ändern der Bereitschaftsübung zunächst **Zurücksetzen** auswählen und anschließend die Übung bearbeiten.
 
 
 
@@ -106,7 +91,7 @@ Die Konsole zeigt die Seite „Warnungen“ an.  In der Spalte „Alarm-ID“ se
 +
 image:screen-alerts-readiness.png["Seite „Warnungen“ mit der Warnung zur Bereitschaftsübung"]
 
-. Wählen Sie den Alarm mit der Angabe „Bereitschaftsübung“ aus.  Auf der Detailseite der Warnungen wird eine Liste der Vorfallwarnungen angezeigt.
+. Die Warnung mit dem Hinweis „Readiness drill“ auswählen.
 +
 image:screen-alerts-readiness-details.png["Seite mit Alarmdetails, auf der der Alarm zur Bereitschaftsübung angezeigt wird"]
 
@@ -117,21 +102,14 @@ image:screen-alerts-readiness-incidents2.png["Vorfallseite mit der Warnung zur B
 
 
 
-Hier sind einige Dinge, auf die Sie achten sollten:
+Bei der Überprüfung des Vorfalls sind folgende Punkte zu berücksichtigen:
 
-* Sehen Sie sich die potenzielle Schwere des Angriffs an.
+* Der potenzielle Schweregrad.
 +
 Wenn der Schweregrad darauf hindeutet, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen. Sie können auchlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["den Benutzer blockieren."]
 
-* Sehen Sie sich die Dateiaktivität und verdächtigen Prozesse an:
-+
-** Vergleichen Sie die eingehenden erkannten Daten mit den erwarteten Daten.
-** Sehen Sie sich die Erstellungsrate der erkannten Dateien im Vergleich zur erwarteten Rate an.
-** Sehen Sie sich die erkannte Dateiumbenennungsrate im Vergleich zur erwarteten Rate an.
-** Vergleichen Sie die Löschrate mit der erwarteten Rate.
-
-
-* Sehen Sie sich die Liste der betroffenen Dateien an.  Sehen Sie sich die Erweiterungen an, die den Angriff verursachen könnten.
+* Die Dateiaktivität im Vergleich zu den erwarteten Raten. Dies umfasst lesen/schreiben-Rate, Dateierstellung, Dateiumbenennung und Dateilöschung.
+* Die Liste der betroffenen Dateien. Es empfiehlt sich, die Dateierweiterungen zu prüfen, die möglicherweise den Angriff verursachen.
 * Bestimmen Sie die Auswirkungen und das Ausmaß des Angriffs, indem Sie die Anzahl der betroffenen Dateien und Verzeichnisse überprüfen.
 
 
@@ -145,46 +123,30 @@ Stellen Sie nach der Überprüfung der Warnung zur Bereitschaftsübung bei Bedar
 
 .Schritte
 . Kehren Sie zur Seite mit den Alarmdetails zurück.
-. Wenn die Test-Workload wiederhergestellt werden soll, gehen Sie wie folgt vor:
+. Soll die Testlast wiederhergestellt werden, **Als Wiederherstellung erforderlich markieren** auswählen und anschließend im Bestätigungsdialog erneut diese Schaltfläche auswählen.
+. Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
+. Die mit dem Tag „Readiness drill“ gekennzeichnete Test-Workload, die wiederhergestellt werden soll, auswählen.
+. Wählen Sie *Wiederherstellen*.
+. Befolgen Sie die Anweisungen für den von Ihnen konfigurierten Wiederherstellungsstil:
 +
-** Wählen Sie *Als Wiederherstellung erforderlich markieren*.
-** Überprüfen Sie die Bestätigung und wählen Sie im Bestätigungsfeld *Als Wiederherstellung erforderlich markieren* aus.
-+
-*** Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
-*** Wählen Sie die mit „Readiness drill“ gekennzeichnete Test-Workload aus, die Sie wiederherstellen möchten.
-*** Wählen Sie *Wiederherstellen*.
-*** Geben Sie auf der Seite „Wiederherstellen“ Informationen zur Wiederherstellung ein:
-
-
-** Wählen Sie die Quell-Snapshot-Kopie aus.
-** Wählen Sie das Zielvolume aus.
-
-
-. Wählen Sie auf der Überprüfungsseite der Wiederherstellung *Wiederherstellen* aus.
-+
-Die Konsole zeigt den Status der Wiederherstellung der Bereitschaftsübung auf der Wiederherstellungsseite als „In Bearbeitung“ an.
-
-+
-Nachdem die Wiederherstellung abgeschlossen ist, ändert die Konsole den Status der Arbeitslast in *Wiederhergestellt*.
-
-. Überprüfen Sie die wiederhergestellte Arbeitslast.
+** link:task-clean-restore-recover.html["Mit einer sauberen Wiederherstellung wiederherstellen"]
+** link:task-custom-restore.html["Wiederherstellung mit einer benutzerdefinierten Wiederherstellung"]
 
 
 
-TIP: Einzelheiten zum Wiederherstellungsvorgang finden Sie unterlink:rp-use-recover.html["Wiederherstellung nach einem Ransomware-Angriff (nachdem die Vorfälle neutralisiert wurden)"] .
 
 
 
-== Ändern Sie den Alarmstatus nach der Bereitschaftsübung
+== Den Alarmstatus nach der Bereitschaftsübung ändern
 
 Nachdem Sie die Warnung zur Bereitschaftsübung überprüft und die Arbeitslast wiederhergestellt haben, ändern Sie bei Bedarf den Warnungsstatus.
 
-*Die Konsolenrolle ist erforderlich* Organisationsadministrator, Ordner- oder Projektadministrator oder Ransomware-Resilience-Administrator. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^] .
+*Erforderliche Konsolenrolle* Organisationsadministrator, Ordner- oder Projektadministrator oder Administrator für NetApp Ransomware Resilience. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^].
 
 .Schritte
 . Kehren Sie zur Seite mit den Alarmdetails zurück.
 . Wählen Sie die Warnung erneut aus.
-. Geben Sie den Status an, indem Sie *Status bearbeiten* auswählen und den Status in einen der folgenden Werte ändern:
+. Der Status wird angegeben, indem neben dem Status auf *Bearbeiten* ausgewählt wird. Der Status kann auf einen der folgenden geändert werden:
 +
 ** Abgelehnt: Wenn Sie vermuten, dass es sich bei der Aktivität nicht um einen Ransomware-Angriff handelt, ändern Sie den Status in „Abgelehnt“.
 +
@@ -200,7 +162,7 @@ IMPORTANT: Nachdem Sie einen Angriff verworfen haben, kann dies nicht rückgäng
 
 == Überprüfen Sie die Berichte zur Bereitschaftsübung
 
-Nachdem die Bereitschaftsübung abgeschlossen ist, möchten Sie möglicherweise einen Bericht über die Übung überprüfen und speichern.
+Nach Abschluss der Bereitschaftsübung kann ein Bericht darüber generiert und gespeichert werden. Der Übungsbericht ist eine JSON-Datei, die Informationen wie die Erkennungsrichtlinie, den Alarmtyp und den Zeitstempel, Details zum Angriff und den Wiederherstellungsstatus enthält.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^], Ransomware Resilience-Administrator- oder Ransomware Resilience-Betrachter-Rolle. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
