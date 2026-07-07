@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: task-users-manage.html 
 keywords: user activity detection, 
-summary: Nach der Erstellung des Benutzerverzeichnis-Connectors in NetApp Ransomware Resilience können Benutzer gesperrt und entsperrt sowie von Warnmeldungen ausgeschlossen werden. 
+summary: Nach dem Erstellen des Benutzerverzeichnis-Connectors in NetApp Ransomware Resilience ist es möglich, Benutzer zu sperren und zu entsperren sowie Benutzer von Warnmeldungen auszuschließen. Auch das Ausschließen von Dateipfaden von der Generierung von Warnmeldungen ist möglich. 
 ---
-= Benutzerblockierung und Warnmeldungen in NetApp Ransomware Resilience verwalten
+= Warnmeldungen und blockierte Benutzer in NetApp Ransomware Resilience verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Nachdem der Benutzerverzeichnis-Connector in NetApp Ransomware Resilience erstellt wurde, besteht die Möglichkeit, Benutzer bei Ransomware-Ereignissen zu sperren und zu entsperren sowie diese Ereignisse auszuwerten. Es ist außerdem möglich, Benutzer gezielt von Ransomware-Warnungen auszuschließen, wenn sicher ist, dass deren Aktionen keine Angriffe sind.
+Nach der Konfiguration der Überwachung des Nutzerverhaltens in NetApp Ransomware Resilience besteht die Möglichkeit, Warnmeldungen anzupassen und gesperrte Benutzer zu verwalten. Die Anpassung der Warnmeldungen ermöglicht das Ausschließen bestimmter Benutzer oder Dateipfade von der Generierung einer Warnmeldung. Das Sperren von Benutzern ist als Reaktion auf Ransomware-Ereignisse vorgesehen, um schädliche Benutzeraktivitäten zu verhindern.
 
 Sie müssen link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["einen Benutzeraktivitätsagenten konfiguriert, eine Richtlinie mit Benutzeraktivitätserkennung aktiviert und einen Benutzerverzeichnis-Connector erstellt"] haben, um Benutzer zu blockieren.
 
@@ -46,7 +46,7 @@ Sie können Benutzer sperren, wenn Sie der Ansicht sind, dass sie für böswilli
 
 
 
-== Benutzerwarnungen verwalten
+== Benutzer von Warnmeldungen ausschließen
 
 Wenn es bestimmte vertrauenswürdige Benutzer gibt, deren Verhalten möglicherweise Warnmeldungen zum Benutzerverhalten auslöst, können Sie sie von Warnmeldungen ausschließen.
 
@@ -73,14 +73,33 @@ Wählen Sie in Ransomware Resilience **Hochladen** aus. Suchen Sie die Datei und
 
 TIP: Sie können einen Benutzer auch direkt von einer Benachrichtigung ausschließen. Weitere Informationen finden Sie unter link:rp-use-alert.html["Auf Ransomware-Warnungen reagieren"].
 
-.Benutzer aus der Liste der ausgeschlossenen Benutzer entfernen
-. Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
+.Benutzer aus der Liste ausgeschlossener Benutzer entfernen
+. Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.
 . Die Registerkarte **Von der Überwachung ausgeschlossen** auswählen.
 . Wählen Sie **Hinzufügen**.
-. Um einzelne Benutzer von der Benutzeroberfläche auszuschließen, **manuell auswählen** wählen.
+. Um einzelne Benutzer von der UI auszuschließen, wählen Sie **Select manually**.
 . Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Im Aktionsmenü (`...`) in der Zeile mit dem Benutzernamen steht die Option **Entfernen** zur Verfügung.
 . Wählen Sie im Dialogfeld **Entfernen** aus, um zu bestätigen, dass Sie die ausgewählten Benutzer entfernen möchten.
 
+
+
+
+== Dateipfade von der Überwachung ausschließen
+
+Jeder Dateipfad muss mit einem Volume-Namen beginnen. Es können bis zu drei Unterverzeichnisse dieses Volumes enthalten sein, zum Beispiel „volume/directory/subdirectory/subdirectory2“. Dateipfade lassen sich ausschließen, indem sie manuell eingegeben oder eine CSV-Datei mit den Pfaden hochgeladen wird.
+
+.Schritte
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
+. Die Registerkarte *Von der Überwachung ausgeschlossen* auswählen.
+. **Hinzufügen** auswählen, um die auszuschließenden Dateipfade einzugeben.
+. Um Dateipfade in der Benutzeroberfläche einzugeben, die Option *Manuell eingeben* auswählen und anschließend den Dateipfad eingeben, zum Beispiel "volume/directory/subdirectory/". Für die Eingabe weiterer Dateipfade **Dateipfad auswählen** auswählen.
+. Um eine Liste von Dateipfaden hochzuladen, die Option **Hochladen** auswählen. Die Schaltfläche **Hochladen** auswählen, um die CSV-Datei auszuwählen.
+. Wählen Sie **Hinzufügen**.
+
+
+.Ergebnis
+Nach erfolgreichem Abschluss des Vorgangs beginnt Ransomware Resilience, die Dateien in den ausgewählten Pfaden von der Überwachung auf verdächtiges Nutzerverhalten auszuschließen. Die Liste der Pfade kann jederzeit im Menü „Einstellungen“ eingesehen werden. Falls die Überwachung der Dateipfade wieder aktiviert werden soll, können diese aus der Liste entfernt werden.
 
 
 

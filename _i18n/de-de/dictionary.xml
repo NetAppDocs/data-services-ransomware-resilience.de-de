@@ -1666,7 +1666,6 @@
   <block id="9dd5e919daf597022ca9ace5ebd739e9" category="list-text">Wenn Sie **Manuell auswählen** gewählt haben, aktivieren Sie das Kontrollkästchen neben den Namen der spezifischen Benutzer, die Sie ausschließen möchten.</block>
   <block id="bf7da00a56585a6a89ff8f8184dfd6fd" category="inline-link-macro">Auf Ransomware-Warnungen reagieren</block>
   <block id="face5a9388d96715a2df2a403febcfad" category="admonition">Sie können einen Benutzer auch direkt von einer Benachrichtigung ausschließen. Weitere Informationen finden Sie unter <block ref="56429daef20ebac0c2b98002f6d61934" category="inline-link-macro-rx"></block>.</block>
-  <block id="0b09185e7ecba92cf7f8f0712501db0b" category="section-title">Benutzer aus der Liste der ausgeschlossenen Benutzer entfernen</block>
   <block id="581c5c550f20f231f6c9e881e699829b" category="list-text">Wählen Sie im Dialogfeld **Entfernen** aus, um zu bestätigen, dass Sie die ausgewählten Benutzer entfernen möchten.</block>
   <block id="90c78a95b0a3dffc0aa664d3139d1369" category="summary">Sie können Daten von NetApp Ransomware Resilience automatisch an Ihr Security and Event Management System (SIEM) zur Bedrohungsanalyse und -erkennung senden.</block>
   <block id="03883d80013dc0b2b972eccd5b93b56f" category="list-text">AWS Security Hub</block>
@@ -1759,7 +1758,6 @@
   <block id="147fa6a15cbb387b90cd75ccc34d8cfe" category="list-text">Datenvernichtung</block>
   <block id="9755e4a474d0024a8dcd40393e571716" category="list-text">Verdächtiges Nutzerverhalten</block>
   <block id="f94e6cd450a12c55223329be07d15575" category="inline-link-macro">Benutzeraktivitätserkennung</block>
-  <block id="09e9060a723336e7b5657759fccb4bbf" category="admonition">Für Benachrichtigungen über Datenschutzverletzungen, Datenzerstörung und verdächtiges Benutzerverhalten müssen Sie <block ref="9403988536e87b1b5fabe2157e11581a" category="inline-link-macro-rx"></block> konfigurieren.</block>
   <block id="b413c7d063ce740207cbb531b68c46dc" category="section-title">Alarmtypen und -status</block>
   <block id="1405a7e68c0a63e640869ddcfd6a3c37" category="paragraph">Benachrichtigungen haben einen von zwei Status: *New* oder *Inactive*.</block>
   <block id="75a90d27a357c4859ab2e4e41a012d82" category="paragraph">Eine Warnung wird als einer der folgenden Typen klassifiziert:</block>
@@ -2515,8 +2513,6 @@
   <block id="7e6d3cb777f931902eef28d721b391ad" category="list-text">In Ransomware Resilience die Option *Einstellungen* auswählen.</block>
   <block id="8e80013d454d77fa5da380a02985bf08" category="list-text">Die Kachel „Benutzeraktivitätsüberwachung“ finden und **Verwalten** auswählen.</block>
   <block id="ca9b34b1ac8edb836cc31adfeb86da35" category="paragraph">Sie können auch <block ref="8cd568562744ebd2ad72f4d26b638c5b" category="inline-link-macro-rx"></block>.</block>
-  <block id="83019ea39039a789f3a1ef050322b3c6" category="inline-link-macro">Benutzerblockierung und Warnmeldungen in NetApp Ransomware Resilience verwalten</block>
-  <block id="ab86c889344f48e6cc9a644f588de541" category="list-text"><block ref="ab86c889344f48e6cc9a644f588de541" category="inline-link-macro-rx"></block></block>
   <block id="0e5314dd9df9fd8758e118ce1e7ba897" category="summary">NetApp Ransomware Resilience unterstützt das Erstellen automatisierter Reaktionen auf Benutzeraktivitätsereignisse, sodass automatisch ein Snapshot erstellt oder ein Benutzer gesperrt werden kann.</block>
   <block id="da6a5c0ffdbef8b4ec186025eff8e43b" category="doc">Automatisierte Reaktionen auf Benutzeraktivitätswarnungen in NetApp Ransomware Resilience</block>
   <block id="11b56910cc00c324c49386ed5582988f" category="inline-link-macro">Benutzeraktivitätsereignisse</block>
@@ -2545,8 +2541,6 @@
   <block id="ffaa50c6810616dffe4f2fa3b11dd9d5" category="paragraph">Um die Antwort zu ändern, **Bearbeiten** auswählen.</block>
   <block id="9190ef848f1a62966c143f87f9a3b16e" category="list-text">Sie können alle Einstellungen ändern, außer dem Schweregrad des Alarms.</block>
   <block id="60fb8ad171246036e201929bc65c1158" category="list-text">**Speichern** auswählen, um die Änderungen zu übernehmen.</block>
-  <block id="b1e9096bc5102d69a78befc70d41fe69" category="summary">Nach der Erstellung des Benutzerverzeichnis-Connectors in NetApp Ransomware Resilience können Benutzer gesperrt und entsperrt sowie von Warnmeldungen ausgeschlossen werden.</block>
-  <block id="728a9373b496fb3b49cccf8e1eb055c0" category="paragraph">Nachdem der Benutzerverzeichnis-Connector in NetApp Ransomware Resilience erstellt wurde, besteht die Möglichkeit, Benutzer bei Ransomware-Ereignissen zu sperren und zu entsperren sowie diese Ereignisse auszuwerten. Es ist außerdem möglich, Benutzer gezielt von Ransomware-Warnungen auszuschließen, wenn sicher ist, dass deren Aktionen keine Angriffe sind.</block>
   <block id="9594e6c0471983974b6adc193bd57d4e" category="paragraph">Sie müssen <block ref="c512b877bbe8303215878962f3edb05e" category="inline-link-macro-rx"></block> haben, um Benutzer zu blockieren.</block>
   <block id="37bcec617eba318667a247a58bd99097" category="inline-link-macro">Antworten automatisieren</block>
   <block id="88450b9601513114d92202ed82d65469" category="admonition">Sie können <block ref="5b864d1f7cea25f12e7a99e07202259f" category="inline-link-macro-rx"></block> auf Benutzeraktivitätserkennungsereignisse reagieren.</block>
@@ -2564,16 +2558,12 @@
   <block id="e2d552c6afc3cd9e9e5367d429f832c4" category="list-text">Wählen Sie die gewünschte Änderung. Zum Ändern der Sperrdauer **Zeitraum für gesperrte Benutzer** auswählen und die Dauer anpassen. Zum Entfernen von Benutzern aus der Liste der gesperrten Benutzer **Benutzer entsperren** auswählen.</block>
   <block id="4ecd815bab325d10795007a2e86d0a31" category="list-text">Aktivieren Sie das Kontrollkästchen neben dem Namen des gesperrten Benutzers, dessen Status geändert werden soll.</block>
   <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">**Speichern** auswählen.</block>
-  <block id="d90cde04b4a8cbf5c0f2097687b77bc8" category="section-title">Benutzerwarnungen verwalten</block>
   <block id="bf21122a37b943f2b70a86b30f0af377" category="list-text">Die Registerkarte **Von der Überwachung ausgeschlossen** auswählen.</block>
   <block id="a5e15107d3aab04bc0c5f9ef6e7eafe8" category="list-text">**Hinzufügen** auswählen, um das Hinzufügen der Benutzer zur Ausschlussliste abzuschließen.</block>
   <block id="999d037bde1c176486633543cd03a250" category="list-text">Auf der Registerkarte **Von der Überwachung ausgeschlossen** werden im Dashboard nun die Namen der Benutzer angezeigt, die von den Warnmeldungen zur Benutzerverhaltenserkennung entfernt wurden.</block>
-  <block id="0e1a585fedc96851082d7b2be641fb77" category="list-text">Um einzelne Benutzer von der Benutzeroberfläche auszuschließen, **manuell auswählen** wählen.</block>
-  <block id="2e1bb6ba10017caa1a34a9693a9495b0" category="list-text">Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Im Aktionsmenü <block ref="2f43b42fd833d1e77420a8dae7419000" prefix="(" category="inline-code"></block>) in der Zeile mit dem Benutzernamen steht die Option **Entfernen** zur Verfügung.</block>
   <block id="f1d60a07f24fee746248e3b38e0d0891" category="inline-link-macro">Antworten auf Ereignisse der Benutzeraktivitätserkennung automatisieren</block>
   <block id="67f8bfb01063a7bf1e47bc5de6e7fcb9" category="list-text"><block ref="67f8bfb01063a7bf1e47bc5de6e7fcb9" category="inline-link-macro-rx"></block></block>
   <block id="f210e90dbf694c894759f78cc6d8b222" category="section-title">29. Juni 2026</block>
-  <block id="97d60b3e7c986739c534cb2a3c8f2b99" category="sidebar">Benutzerbenachrichtigungen und Blockierungen verwalten</block>
   <block id="acd27fc46144e7ce943b73180eb0d3a8" category="paragraph">In NetApp Ransomware Resilience kann eine Übung zur Vorbereitung auf einen Ransomware-Angriff durchgeführt werden, um die Bereitschaft für einen realen Ransomware-Angriff zu testen. Mit der Übung simuliert Ransomware Resilience einen Angriff auf eine neue Beispiel-Workload, wodurch eine Untersuchung des simulierten Angriffs und eine Wiederherstellung möglich sind, ohne die realen Produktionsdaten zu beeinträchtigen. Die Übung trägt dazu bei, sich mit Warnmeldungen vertraut zu machen und auf Reaktion sowie Wiederherstellung vorbereitet zu sein. Die Übung kann beliebig oft durchgeführt werden.</block>
   <block id="537f8bf1cb00339aa74d0eb9f514b0df" category="list-text">Im Bereich „Readiness drill“ wird **Konfigurieren** ausgewählt.</block>
   <block id="58217f0a1f8bf12ba3006ea914fc528d" category="list-text">Den **Readiness-Übungstyp** auswählen.</block>
@@ -2618,4 +2608,28 @@
   <block id="e3b01c4848ac6d1626374e4dee0f0685" category="list-text">**Wiederherstellung nach einem Datenleck**: <block ref="ea7722fd5c2c373bdaffcbde2ca3bbf6" category="inline-link-macro-rx"></block> muss konfiguriert sein, bevor dieser Übungstyp aktiviert werden kann.</block>
   <block id="05d14520f5a3fd970bfca710b43ae17a" category="admonition">Die Konfiguration der Bereitschaftsübung kann nicht bearbeitet werden, während die Übung läuft. Zum Ändern der Bereitschaftsübung zunächst **Zurücksetzen** auswählen und anschließend die Übung bearbeiten.</block>
   <block id="7820d7f245e7637e7833faccb183f36d" category="admonition">Bei automatisierten Reaktionen auf verdächtiges Nutzerverhalten kann lediglich eine Snapshot erstellt werden. Das Blockieren eines Nutzers wird als automatisierte Reaktion auf verdächtiges Nutzerverhalten nicht unterstützt.</block>
+  <block id="ddebb8e31f83ddb3bde0b3a0292845dc" category="doc">Dateipfade von Benachrichtigungen zum Benutzerverhalten ausschließen</block>
+  <block id="33239db9e04a3b1473f3468fd2d9d99b" category="paragraph">NetApp Ransomware Resilience unterstützt das Ausschließen bestimmter Dateipfade von Warnmeldungen zur Überwachung des Benutzerverhaltens. Dateipfade können ausgeschlossen werden, wenn bekannt ist, dass sie nicht gefährdet sind, oder wenn an Dateien in einem Volume gearbeitet wird, das möglicherweise Warnmeldungen auslösen könnte.</block>
+  <block id="f1780a3dd9362a514caa277752b942f2" category="inline-link-macro">Dateipfade von Benachrichtigungen ausschließen</block>
+  <block id="4cbd1bb5d6b8178b77b88be565a35c9b" category="paragraph">Weitere Informationen finden Sie unter <block ref="8c33118b4350e89c06a1a557095207c2" category="inline-link-macro-rx"></block>.</block>
+  <block id="1d20fa647694e6811cd363111cf77538" category="inline-link-macro">spezifische Dateipfade und Benutzer</block>
+  <block id="2e9d0337668c42840413047306ef5b57" category="admonition">Für Warnmeldungen bei Datenschutzverletzungen, Datenzerstörung und verdächtigem Nutzerverhalten muss <block ref="9403988536e87b1b5fabe2157e11581a" category="inline-link-macro-rx"></block> konfiguriert werden. Es kann außerdem verhindert werden, dass <block ref="bd37368d247ac8892eb2f81e8ff6fc76" category="inline-link-macro-rx"></block> Warnmeldungen generiert.</block>
+  <block id="75cd3815cc2e90d9679458215fb968dd" category="inline-link-macro">Benachrichtigungseinstellungen und blockierte Benutzer verwalten</block>
+  <block id="84bc023659fbaeb1e92bb1563d94a709" category="list-text"><block ref="84bc023659fbaeb1e92bb1563d94a709" category="inline-link-macro-rx"></block></block>
+  <block id="0050dfe8b12d7f41e074b38a1584c2e0" category="summary">Nach dem Erstellen des Benutzerverzeichnis-Connectors in NetApp Ransomware Resilience ist es möglich, Benutzer zu sperren und zu entsperren sowie Benutzer von Warnmeldungen auszuschließen. Auch das Ausschließen von Dateipfaden von der Generierung von Warnmeldungen ist möglich.</block>
+  <block id="19355628ba4f308abb52b989d195cbf2" category="doc">Warnmeldungen und blockierte Benutzer in NetApp Ransomware Resilience verwalten</block>
+  <block id="ec80e76fb9a96ba31394caae7738733c" category="paragraph">Nach der Konfiguration der Überwachung des Nutzerverhaltens in NetApp Ransomware Resilience besteht die Möglichkeit, Warnmeldungen anzupassen und gesperrte Benutzer zu verwalten. Die Anpassung der Warnmeldungen ermöglicht das Ausschließen bestimmter Benutzer oder Dateipfade von der Generierung einer Warnmeldung. Das Sperren von Benutzern ist als Reaktion auf Ransomware-Ereignisse vorgesehen, um schädliche Benutzeraktivitäten zu verhindern.</block>
+  <block id="978942e6f751f778d0fea794ac36a5ed" category="list-title">Benutzer aus der Liste ausgeschlossener Benutzer entfernen</block>
+  <block id="0189c7f085ff5d22843080df2225281b" category="list-text">Suchen Sie im Dashboard „Einstellungen“ die Karte „Benutzeraktivität“ und wählen Sie dann **Manage** aus.</block>
+  <block id="2a26cf4062a1ee4ec346c86574259847" category="list-text">Um einzelne Benutzer von der UI auszuschließen, wählen Sie **Select manually**.</block>
+  <block id="144c603fbbde0985023a4ea73e22e35b" category="list-text">Suchen Sie den Namen des Benutzers, den Sie aus der Liste der ausgeschlossenen Benutzer entfernen möchten. Im Aktionsmenü <block ref="2f43b42fd833d1e77420a8dae7419000" prefix="(" category="inline-code"></block>) in der Zeile mit dem Benutzernamen steht die Option **Entfernen** zur Verfügung.</block>
+  <block id="d6a20124c5d6d93a842f0081d06dac75" category="section-title">Dateipfade von der Überwachung ausschließen</block>
+  <block id="34b2f1838e031e0797b877cf1d2da3f4" category="paragraph">Jeder Dateipfad muss mit einem Volume-Namen beginnen. Es können bis zu drei Unterverzeichnisse dieses Volumes enthalten sein, zum Beispiel „volume/directory/subdirectory/subdirectory2“. Dateipfade lassen sich ausschließen, indem sie manuell eingegeben oder eine CSV-Datei mit den Pfaden hochgeladen wird.</block>
+  <block id="ba84271ee1ea783891cb6e404dfb3d53" category="list-text">Die Registerkarte *Von der Überwachung ausgeschlossen* auswählen.</block>
+  <block id="b4a2bf9e81e72a625f2411631cceee8c" category="list-text">**Hinzufügen** auswählen, um die auszuschließenden Dateipfade einzugeben.</block>
+  <block id="2de7a68b6ff6ef34aae577dd6bfe5c03" category="list-text">Um Dateipfade in der Benutzeroberfläche einzugeben, die Option *Manuell eingeben* auswählen und anschließend den Dateipfad eingeben, zum Beispiel "volume/directory/subdirectory/". Für die Eingabe weiterer Dateipfade **Dateipfad auswählen** auswählen.</block>
+  <block id="3dac93d0e83abe331915c1ec220e04ac" category="list-text">Um eine Liste von Dateipfaden hochzuladen, die Option **Hochladen** auswählen. Die Schaltfläche **Hochladen** auswählen, um die CSV-Datei auszuwählen.</block>
+  <block id="67510fe1e2eaace9d146396c21a7a119" category="paragraph">Nach erfolgreichem Abschluss des Vorgangs beginnt Ransomware Resilience, die Dateien in den ausgewählten Pfaden von der Überwachung auf verdächtiges Nutzerverhalten auszuschließen. Die Liste der Pfade kann jederzeit im Menü „Einstellungen“ eingesehen werden. Falls die Überwachung der Dateipfade wieder aktiviert werden soll, können diese aus der Liste entfernt werden.</block>
+  <block id="ea1fca7315926f55d77bcab3ed051982" category="section-title">07. Juli 2026</block>
+  <block id="4c0600f62cb13917f7a785731376b1cb" category="sidebar">Benachrichtigungen und blockierte Benutzer verwalten</block>
 </blocks>

@@ -170,5 +170,5 @@ Sie können auch link:task-automate-user-activity.html["Antworten auf Benutzerak
 
 == Nächste Schritte
 
-* link:task-users-manage.html["Benutzerblockierung und Warnmeldungen in NetApp Ransomware Resilience verwalten"]
+* link:task-users-manage.html["Benachrichtigungseinstellungen und blockierte Benutzer verwalten"]
 

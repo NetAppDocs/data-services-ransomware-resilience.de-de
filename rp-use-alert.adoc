@@ -41,7 +41,7 @@ Ransomware Resilience nutzt Erkenntnisse über Datenentropiemuster, Dateierweite
 
 
 
-NOTE: Für Benachrichtigungen über Datenschutzverletzungen, Datenzerstörung und verdächtiges Benutzerverhalten müssen Sie link:concept-user-behavior.html["Benutzeraktivitätserkennung"] konfigurieren.
+NOTE: Für Warnmeldungen bei Datenschutzverletzungen, Datenzerstörung und verdächtigem Nutzerverhalten muss link:concept-user-behavior.html["Benutzeraktivitätserkennung"] konfiguriert werden. Es kann außerdem verhindert werden, dass link:task-users-manage.html["spezifische Dateipfade und Benutzer"] Warnmeldungen generiert.
 
 
 
