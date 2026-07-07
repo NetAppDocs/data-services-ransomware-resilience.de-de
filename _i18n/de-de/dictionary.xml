@@ -2611,7 +2611,6 @@
   <block id="ddebb8e31f83ddb3bde0b3a0292845dc" category="doc">Dateipfade von Benachrichtigungen zum Benutzerverhalten ausschließen</block>
   <block id="33239db9e04a3b1473f3468fd2d9d99b" category="paragraph">NetApp Ransomware Resilience unterstützt das Ausschließen bestimmter Dateipfade von Warnmeldungen zur Überwachung des Benutzerverhaltens. Dateipfade können ausgeschlossen werden, wenn bekannt ist, dass sie nicht gefährdet sind, oder wenn an Dateien in einem Volume gearbeitet wird, das möglicherweise Warnmeldungen auslösen könnte.</block>
   <block id="f1780a3dd9362a514caa277752b942f2" category="inline-link-macro">Dateipfade von Benachrichtigungen ausschließen</block>
-  <block id="4cbd1bb5d6b8178b77b88be565a35c9b" category="paragraph">Weitere Informationen finden Sie unter <block ref="8c33118b4350e89c06a1a557095207c2" category="inline-link-macro-rx"></block>.</block>
   <block id="1d20fa647694e6811cd363111cf77538" category="inline-link-macro">spezifische Dateipfade und Benutzer</block>
   <block id="2e9d0337668c42840413047306ef5b57" category="admonition">Für Warnmeldungen bei Datenschutzverletzungen, Datenzerstörung und verdächtigem Nutzerverhalten muss <block ref="9403988536e87b1b5fabe2157e11581a" category="inline-link-macro-rx"></block> konfiguriert werden. Es kann außerdem verhindert werden, dass <block ref="bd37368d247ac8892eb2f81e8ff6fc76" category="inline-link-macro-rx"></block> Warnmeldungen generiert.</block>
   <block id="75cd3815cc2e90d9679458215fb968dd" category="inline-link-macro">Benachrichtigungseinstellungen und blockierte Benutzer verwalten</block>
@@ -2632,4 +2631,5 @@
   <block id="67510fe1e2eaace9d146396c21a7a119" category="paragraph">Nach erfolgreichem Abschluss des Vorgangs beginnt Ransomware Resilience, die Dateien in den ausgewählten Pfaden von der Überwachung auf verdächtiges Nutzerverhalten auszuschließen. Die Liste der Pfade kann jederzeit im Menü „Einstellungen“ eingesehen werden. Falls die Überwachung der Dateipfade wieder aktiviert werden soll, können diese aus der Liste entfernt werden.</block>
   <block id="ea1fca7315926f55d77bcab3ed051982" category="section-title">07. Juli 2026</block>
   <block id="4c0600f62cb13917f7a785731376b1cb" category="sidebar">Benachrichtigungen und blockierte Benutzer verwalten</block>
+  <block id="5f2a57952e65084ab1bcb535d4662440" category="paragraph">Weitere Informationen finden sich unter <block ref="8c33118b4350e89c06a1a557095207c2" category="inline-link-macro-rx"></block>.</block>
 </blocks>

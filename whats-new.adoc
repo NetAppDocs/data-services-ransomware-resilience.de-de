@@ -26,7 +26,7 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 NetApp Ransomware Resilience unterstützt das Ausschließen bestimmter Dateipfade von Warnmeldungen zur Überwachung des Benutzerverhaltens. Dateipfade können ausgeschlossen werden, wenn bekannt ist, dass sie nicht gefährdet sind, oder wenn an Dateien in einem Volume gearbeitet wird, das möglicherweise Warnmeldungen auslösen könnte.
 
-Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-users-manage.html["Dateipfade von Benachrichtigungen ausschließen"^].
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-users-manage.html["Dateipfade von Benachrichtigungen ausschließen"^].
 
 
 
