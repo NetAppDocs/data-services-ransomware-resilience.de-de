@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-simulate.html 
 keywords: ransomware protection alert, ransomware protection attack, detect ransomware alert, simulate, readiness drill, practice, ransomware attack, ransomware attack response, ransomware attack readiness drill 
-summary: Führen Sie eine Ransomware-Bereitschaftsübung durch, indem Sie einen Ransomware-Angriff auf eine neu erstellte Beispiel-Workload simulieren.  Untersuchen Sie dann den simulierten Angriff und stellen Sie die Beispiel-Arbeitslast wieder her.  Sie können eine Ransomware-Bereitschaftsübung mehrmals durchführen. 
+summary: Führen Sie eine Ransomware-Readiness-Übung durch, indem Sie einen Ransomware-Angriff auf eine Beispiel-Workload simulieren. Anschließend kann der simulierte Angriff untersucht und die Beispiel-Workload wiederhergestellt werden. Eine Ransomware-Readiness-Übung kann mehrfach durchgeführt werden. 
 ---
 = Führen Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe in NetApp Ransomware Resilience durch
 :hardbreaks:
@@ -14,10 +14,19 @@ summary: Führen Sie eine Ransomware-Bereitschaftsübung durch, indem Sie einen 
 [role="lead"]
 In NetApp Ransomware Resilience kann eine Übung zur Vorbereitung auf einen Ransomware-Angriff durchgeführt werden, um die Bereitschaft für einen realen Ransomware-Angriff zu testen. Mit der Übung simuliert Ransomware Resilience einen Angriff auf eine neue Beispiel-Workload, wodurch eine Untersuchung des simulierten Angriffs und eine Wiederherstellung möglich sind, ohne die realen Produktionsdaten zu beeinträchtigen. Die Übung trägt dazu bei, sich mit Warnmeldungen vertraut zu machen und auf Reaktion sowie Wiederherstellung vorbereitet zu sein. Die Übung kann beliebig oft durchgeführt werden.
 
-
-TIP: Ihre tatsächlichen Arbeitslastdaten sind davon nicht betroffen.
-
 Sie können Bereitschaftsübungen für NFS- und CIFS-Workloads (SMB) durchführen.
+
+
+
+== Funktionsweise von Bereitschaftsübungen
+
+Ransomware Resilience unterstützt drei Übungstypen: link:task-clean-restore-recover.html["Clean Restore"], link:rp-use-recover.html["Benutzerdefinierte Wiederherstellung"] und link:suspicious-user-activity.html["Wiederherstellung nach einem Data Breach"]. Clean Restore und Custom Recovery simulieren verschlüsselungsbasierte (entropiebasierte) Angriffe und unterscheiden sich in der angebotenen Wiederherstellungsmethode. Data Breach Recovery simuliert die Exfiltration mit ungewöhnlichen Lesemustern bei Ihren Daten.
+
+Wenn Sie eine Bereitschaftsübung konfigurieren, erstellt Ransomware Resilience ein Testvolume, wendet den Ransomware-Schutz mit einer Snapshot-Richtlinie auf das Volume an, validiert die Konnektivität, bindet das Volume ein, kopiert Basisdaten, bindet das Volume aus und erstellt einen Basis-Snapshot.
+
+Beim Start der Übung bindet Ransomware Resilience das Volume ein und simuliert einen Ransomware-Angriff. Bei einer Vorbereitungsübung für eine benutzerdefinierte Wiederherstellung oder eine vollständige Wiederherstellung werden die Basisdaten des Testvolumes durch Dateiendungen ersetzt, die bekanntermaßen Ransomware sind, sowie durch verschlüsselte oder entropieveränderte Dateien. Bei einer Übung zur Wiederherstellung nach einem Datenleck werden die Dateien nicht ersetzt, stattdessen simuliert Ransomware Resilience einen Angreifer, der systematisch Daten liest und exfiltriert. Unabhängig vom Übungstyp löst Ransomware Resilience anschließend eine Warnung aus und überprüft, ob die Warnung erfolgreich generiert wurde.
+
+Wenn Sie die Übung durchführen, können Sie Ihre Reaktion auf Warnmeldungen testen und optional den Wiederherstellungsprozess durchlaufen, ohne reale Daten zu beeinträchtigen.
 
 
 
@@ -30,9 +39,9 @@ Sie können Bereitschaftsübungen für NFS- und CIFS-Workloads (SMB) durchführe
 . Im Bereich „Readiness drill“ wird **Konfigurieren** ausgewählt.
 . Den **Readiness-Übungstyp** auswählen.
 +
-** **Benutzerdefinierte Wiederherstellung**: Diese Übung erzeugt eine Warnung und ermöglicht anschließend die Durchführung von link:rp-use-recover.html["eine benutzerdefinierte Wiederherstellung"] , wobei Sie den Wiederherstellungspunkt konfigurieren.
-** **Saubere Wiederherstellung**: Diese Übung erzeugt eine Warnung und führt Sie dann zum link:task-clean-restore-recover.html["Clean Restore"] Prozess für die Wiederherstellung, der Sie zu optimierten Wiederherstellungspunkten leitet.
-** **Wiederherstellung nach einem Datenleck**: Diese Übung erzeugt eine Warnung bei einem vom Benutzer ausgelösten Datenleck. Die Einstellungen link:suspicious-user-activity.html["ein Benutzeraktivitätsagent"]müssen zuvor konfiguriert sein, bevor dieser Übungstyp aktiviert werden kann.
+** **Benutzerdefinierte Wiederherstellung**: Auf einen Verschlüsselungsangriff (Entropieangriff) kann mit einer link:rp-use-recover.html["benutzerdefinierte Wiederherstellung"]Wiederherstellung reagiert werden, bei der der Wiederherstellungspunkt konfiguriert wird.
+** **Saubere Wiederherstellung**: Auf einen Verschlüsselungsangriff (Entropieangriff) mit einem link:task-clean-restore-recover.html["Clean Restore"] Prozess zur Wiederherstellung reagieren, der zu optimierten Wiederherstellungspunkten führt.
+** **Wiederherstellung nach einem Datenleck**: link:suspicious-user-activity.html["ein Benutzeraktivitätsagent"] muss konfiguriert sein, bevor dieser Übungstyp aktiviert werden kann.
 
 
 . Wählen Sie die Umgebung, in der der Bereitschaftsübungstest erstellt wird.

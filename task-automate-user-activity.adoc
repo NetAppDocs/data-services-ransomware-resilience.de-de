@@ -22,6 +22,9 @@ Automatisierte Antworten werden für Verschlüsselung (Benutzerverhalten), Daten
 
 Es kann nur eine Storage-VM mit mindestens einer Arbeitslast geschützt werden, die durch eine Richtlinie zur Erkennung verdächtigen Benutzerverhaltens geschützt ist.
 
+
+NOTE: Bei automatisierten Reaktionen auf verdächtiges Nutzerverhalten kann lediglich eine Snapshot erstellt werden. Das Blockieren eines Nutzers wird als automatisierte Reaktion auf verdächtiges Nutzerverhalten nicht unterstützt.
+
 .Schritte
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
@@ -53,6 +56,9 @@ Wenn Sie diese Option wählen, müssen Sie auch die Dauer der Sperre festlegen. 
 
 
 | Datenvernichtung | Ransomware Resilience erkennt die massenhafte Löschung von Dateien durch einen bestimmten Benutzer. 
+
+
+| Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
 |===
 . Wählen Sie die Storage-VMs aus, auf die die automatisierte Antwort angewendet werden soll.
 . **Hinzufügen** auswählen, um die automatische Antwort zu erstellen.
