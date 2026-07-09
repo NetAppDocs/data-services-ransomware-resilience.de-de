@@ -18,6 +18,7 @@ Automatisierte Antworten werden für Verschlüsselung (Benutzerverhalten), Daten
 
 
 
+[[create-an-automated-response]]
 == Eine automatisierte Antwort erstellen
 
 Es kann nur eine Storage-VM mit mindestens einer Arbeitslast geschützt werden, die durch eine Richtlinie zur Erkennung verdächtigen Benutzerverhaltens geschützt ist.
@@ -66,6 +67,7 @@ Wenn Sie diese Option wählen, müssen Sie auch die Dauer der Sperre festlegen. 
 
 
 
+[[modify-an-automated-response]]
 == Eine automatisierte Antwort ändern
 
 Nachdem eine automatische Antwort erstellt wurde, besteht die Möglichkeit, die Antwort zu pausieren, neu zu starten oder zu ändern. Der Name der Antwort, die Alarmtypen, die die Antwort auslösen, die Storage-VMs und die durchgeführte Aktion können geändert werden.

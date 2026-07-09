@@ -15,6 +15,7 @@ Innerhalb von NetApp Ransomware Resilience können Sie NetApp Data Classificatio
 
 
 
+[[identify-privacy-exposures]]
 == Datenschutzlücken identifizieren
 
 Bevor Sie Datenschutzlücken in NetApp Ransomware Resilience identifizieren können, benötigen Sie link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-cloud-compliance.html["um die Datenklassifizierung zum Scannen Ihrer Daten zu aktivieren"^].
@@ -48,6 +49,8 @@ image:screen-protection-workload-details-privacy-exposure.png["Bildschirm mit Ar
 
 
 
+[[impact-of-privacy-exposure-on-workload-importance]]
+[[privacy-impact]]
 == Auswirkungen der Offenlegung der Privatsphäre auf die Bedeutung der Arbeitsbelastung
 
 Änderungen der Datenschutzbelastung können sich auf die Arbeitsbelastung auswirken.
@@ -70,6 +73,7 @@ image:screen-protection-workload-details-privacy-exposure.png["Bildschirm mit Ar
 |===
 
 
+[[more-information]]
 == Weitere Informationen
 
 Informationen zur Behebung von Datenschutzverletzungen finden Sie in der Data Classification-Dokumentation:

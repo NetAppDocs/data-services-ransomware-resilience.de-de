@@ -4,6 +4,7 @@
 
 
 
+[[detect-anomalous-user-behavior-using-data-infrastructure-insights-storage-workload-security]]
 === Erkennen Sie anomales Benutzerverhalten mit Data Infrastructure Insights Storage Workload Security
 
 Mit dieser Version können Sie Data Infrastructure Insights Storage Workload Security verwenden, um anomales Benutzerverhalten in Ihren Speicher-Workloads zu erkennen.  Diese Funktion hilft Ihnen, potenzielle Sicherheitsbedrohungen zu erkennen und potenziell böswillige Benutzer zu blockieren, um Ihre Daten zu schützen.
@@ -16,6 +17,7 @@ Siehe https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-s
 
 
 
+[[select-workloads-to-discover-and-protect]]
 === Auswählen von Workloads zum Erkennen und Schützen
 
 Mit dieser Version können Sie jetzt Folgendes tun:

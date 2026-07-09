@@ -29,6 +29,7 @@ NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP und Azure 
 
 
 
+[[add-storagegrid-as-a-backup-destination]]
 == StorageGRID als Backup-Ziel hinzufügen
 
 Um NetApp StorageGRID als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
@@ -72,6 +73,7 @@ image:screen-settings-backup-destinations-list2.png["Screenshot der Sicherungszi
 
 
 
+[[add-amazon-web-services-as-a-backup-destination]]
 == Amazon Web Services als Sicherungsziel hinzufügen
 
 Um AWS als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
@@ -129,6 +131,7 @@ image:screen-settings-backup-destinations-list2.png["Seite „Sicherungsziele“
 
 
 
+[[add-google-cloud-platform-as-a-backup-destination]]
 == Google Cloud Platform als Backup-Ziel hinzufügen
 
 Um Google Cloud Platform (GCP) als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.
@@ -167,6 +170,7 @@ Das neue Sicherungsziel wird der Liste der Sicherungsziele hinzugefügt.
 
 
 
+[[add-microsoft-azure-as-a-backup-destination]]
 == Microsoft Azure als Sicherungsziel hinzufügen
 
 Um Azure als Sicherungsziel einzurichten, geben Sie die folgenden Informationen ein.

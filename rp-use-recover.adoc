@@ -33,6 +33,7 @@ Ein Workload kann einen der folgenden Wiederherstellungsstatus haben:
 
 
 
+[[view-workloads-that-are-ready-to-be-restored]]
 == Anzeigen von Workloads, die zur Wiederherstellung bereit sind
 
 Überprüfen Sie die Workloads, die sich im Wiederherstellungsstatus „Wiederherstellung erforderlich“ befinden.
@@ -50,6 +51,7 @@ image:screen-recovery2.png["Wiederherstellungsseite"]
 
 
 
+[[recover-a-workload]]
 == Eine Arbeitslast wiederherstellen
 
 Nachdem Sie die Arbeitslasten bewertet haben, haben Sie zwei Möglichkeiten, Ihre Arbeitslast wiederherzustellen:

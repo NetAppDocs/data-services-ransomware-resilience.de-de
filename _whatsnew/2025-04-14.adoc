@@ -4,6 +4,7 @@
 
 
 
+[[readiness-drill-reports]]
 === Bereitschaftsübungsberichte
 
 Mit dieser Version können Sie Übungsberichte zur Vorbereitung auf Ransomware-Angriffe überprüfen.  Mithilfe einer Bereitschaftsübung können Sie einen Ransomware-Angriff auf eine neu erstellte Beispiel-Workload simulieren.  Untersuchen Sie dann den simulierten Angriff und stellen Sie die Beispiel-Arbeitslast wieder her.  Mithilfe dieser Funktion können Sie durch das Testen von Warnbenachrichtigungen, Reaktions- und Wiederherstellungsprozessen sicherstellen, dass Sie im Falle eines tatsächlichen Ransomware-Angriffs vorbereitet sind.
@@ -12,6 +13,7 @@ Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-service
 
 
 
+[[new-role-based-access-control-roles-and-permissions]]
 === Neue rollenbasierte Zugriffskontrollrollen und -berechtigungen
 
 Bisher konnten Sie Benutzern basierend auf ihren Verantwortlichkeiten Rollen und Berechtigungen zuweisen, was Ihnen bei der Verwaltung des Benutzerzugriffs auf den BlueXP ransomware protection half.  Mit dieser Version gibt es zwei neue Rollen speziell für den BlueXP ransomware protection mit aktualisierten Berechtigungen.  Die neuen Rollen sind:
@@ -24,6 +26,7 @@ Weitere Informationen zu Berechtigungen finden Sie unter https://docs.netapp.com
 
 
 
+[[payment-improvements]]
 === Zahlungsverbesserungen
 
 Diese Version enthält mehrere Verbesserungen des Zahlungsvorgangs.

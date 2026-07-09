@@ -4,6 +4,7 @@
 
 
 
+[[google-cloud-netapp-volumes-support-preview]]
 === Google Cloud NetApp Volumes-Unterstützung (Vorschau)
 
 Ransomware Resilience unterstützt jetzt Google Cloud NetApp Volumes-Systeme und ermöglicht Ihnen so die effiziente Erkennung und Abwehr von Ransomware-Bedrohungen in Google Cloud NetApp Volumes. Bei der Erkennung zeigt Ransomware Resilience automatisch Workloads aus Google Cloud NetApp Volumes-Systemen an. Die erkannten Systeme werden im Ransomware Resilience-Dashboard angezeigt. Die Unterstützung für Google Cloud NetApp Volumes in Ransomware Resilience befindet sich derzeit in der Vorschauphase.
@@ -12,6 +13,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[clean-restore-enhancements]]
 === Verbesserungen für Clean Restore
 
 Die Funktion „Saubere Wiederherstellung“ unterstützt jetzt Berichte. Mithilfe von Berichten können Sie saubere Wiederherstellungen überprüfen und bewerten und diese Informationen offline als CSV-Datei speichern.

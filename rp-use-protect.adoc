@@ -18,6 +18,7 @@ Strategien zum Schutz vor Ransomware sind ein zentrales Merkmal der NetApp Ranso
 
 
 
+[[understand-ransomware-protection-strategies]]
 == Strategien zum Schutz vor Ransomware verstehen
 
 Strategien zum Schutz vor Ransomware umfassen _Erkennung_, _Schutz_ und _Replikationsrichtlinien_.
@@ -55,6 +56,7 @@ TIP: Für eine verbesserte Verwaltung und einen besseren Schutz Ihrer Datenbest�
 
 
 
+[[protection-policies-with-other-netapp-managed-services]]
 === Schutzrichtlinien mit anderen von NetApp verwalteten Diensten
 
 Neben Ransomware Resilience können Sie NetApp Backup and Recovery verwenden, um den Schutz für Dateifreigaben und VM-Dateifreigaben zu verwalten.
@@ -74,6 +76,7 @@ Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience v
 
 
 
+[[predefined-detection-policies]]
 === Vordefinierte Erkennungsrichtlinien
 
 Sie können eine der folgenden vordefinierten Ransomware-Resilience-Richtlinien auswählen, die auf die Wichtigkeit der Arbeitslast abgestimmt sind.
@@ -189,6 +192,7 @@ Alle 30 Tage
 |===
 
 
+[[add-a-ransomware-protection-strategy]]
 == Fügen Sie eine Ransomware-Schutzstrategie hinzu
 
 Es gibt drei Ansätze zum Hinzufügen einer Ransomware-Schutzstrategie:
@@ -224,6 +228,7 @@ Die Erkennungsrichtlinie aktiviert den autonomen Ransomware-Schutz und den FPoli
 
 
 
+[[create-a-ransomware-protection-strategy-if-you-have-no-snapshot-or-backup-policies]]
 === Erstellen Sie eine Ransomware-Schutzstrategie (wenn Sie keine Snapshot- oder Backup-Richtlinien haben)
 
 Wenn für die Arbeitslast keine Snapshot- oder Sicherungsrichtlinien vorhanden sind, können Sie eine Ransomware-Schutzstrategie erstellen, die die folgenden Richtlinien enthalten kann, die Sie in Ransomware Resilience erstellen:
@@ -302,6 +307,7 @@ TIP: Um die Sicherungssperrung auf sekundärem Speicher zu aktivieren, konfiguri
 
 
 
+[[add-a-detection-policy-to-workloads-with-existing-snapshot-and-backup-policies-managed-by-backup-and-recovery]]
 === Fügen Sie eine Erkennungsrichtlinie zu Workloads mit vorhandenen Snapshot- und Backup-Richtlinien hinzu, die von Backup and Recovery verwaltet werden
 
 Ransomware Resilience ermöglicht es Ihnen, entweder eine Erkennungsrichtlinie oder eine Datensicherungsstrategie auf Workloads mit bestehendem Snapshot- und Backup-Schutz, der in anderen NetApp Produkten oder Diensten verwaltet wird, anzuwenden. Backup and Recovery verwendet Richtlinien, die Snapshots, die Replikation auf Sekundärspeicher oder Backups auf Objektspeicher steuern.
@@ -363,6 +369,7 @@ image:screen-protection.png["Strategieseite verwalten"]
 
 
 
+[[assign-a-different-policy]]
 === Zuweisen einer anderen Richtlinie
 
 Sie können die bestehende Richtlinie durch eine andere ersetzen.
@@ -378,12 +385,14 @@ Sie können die bestehende Richtlinie durch eine andere ersetzen.
 
 
 
+[[manage-ransomware-protection-strategies]]
 == Verwalten Sie Strategien zum Schutz vor Ransomware
 
 Sie können eine Ransomware-Strategie löschen.
 
 
 
+[[view-workloads-protected-by-a-ransomware-protection-strategy]]
 === Durch eine Ransomware-Schutzstrategie geschützte Workloads anzeigen
 
 Bevor Sie eine Ransomware-Schutzstrategie löschen, möchten Sie möglicherweise prüfen, welche Workloads durch diese Strategie geschützt sind.
@@ -404,6 +413,7 @@ image:screen-protection-strategy-list.png["Bildschirm mit Ransomware-Schutzstrat
 
 
 
+[[delete-a-ransomware-protection-strategy]]
 === Löschen einer Ransomware-Schutzstrategie
 
 Sie können eine Schutzstrategie löschen, die derzeit keinen Workloads zugeordnet ist.

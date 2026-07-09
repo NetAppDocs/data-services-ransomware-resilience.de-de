@@ -20,6 +20,7 @@ TIP: Sie können link:task-automate-user-activity.html["Antworten automatisieren
 
 
 
+[[manage-blocked-users]]
 == Blockierte Benutzer verwalten
 
 Sie können Benutzer sperren, wenn Sie der Ansicht sind, dass sie für böswillige Aktivitäten verantwortlich sind.
@@ -46,6 +47,7 @@ Sie können Benutzer sperren, wenn Sie der Ansicht sind, dass sie für böswilli
 
 
 
+[[exclude-users-from-alerts]]
 == Benutzer von Warnmeldungen ausschließen
 
 Wenn es bestimmte vertrauenswürdige Benutzer gibt, deren Verhalten möglicherweise Warnmeldungen zum Benutzerverhalten auslöst, können Sie sie von Warnmeldungen ausschließen.
@@ -84,6 +86,7 @@ TIP: Sie können einen Benutzer auch direkt von einer Benachrichtigung ausschlie
 
 
 
+[[exclude-file-paths-from-monitoring]]
 == Dateipfade von der Überwachung ausschließen
 
 Jeder Dateipfad muss mit einem Volume-Namen beginnen. Es können bis zu drei Unterverzeichnisse dieses Volumes enthalten sein, zum Beispiel „volume/directory/subdirectory/subdirectory2“. Dateipfade lassen sich ausschließen, indem sie manuell eingegeben oder eine CSV-Datei mit den Pfaden hochgeladen wird.
@@ -103,6 +106,7 @@ Nach erfolgreichem Abschluss des Vorgangs beginnt Ransomware Resilience, die Dat
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:task-automate-user-activity.html["Antworten auf Ereignisse der Benutzeraktivitätserkennung automatisieren"]

@@ -53,6 +53,7 @@ image:screen-reports.png["Berichtsseite mit dem Bereitschaftsübungsbericht"]
 
 
 
+[[more-information]]
 == Weitere Informationen
 
 * link:task-automate-user-activity.html["Antworten auf Benutzeraktivitätsereignisse automatisieren"]

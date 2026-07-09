@@ -18,6 +18,7 @@ Mit NetApp Ransomware Resilience können Sie nach einem Ransomware-Angriff mit V
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
@@ -26,6 +27,7 @@ Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgeb
 
 
 
+[[considerations]]
 == Überlegungen
 
 * Sie können nur eine vollständige Wiederherstellung bei einem auf Verschlüsselung basierenden Ransomware-Angriff durchführen.
@@ -39,6 +41,7 @@ Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgeb
 
 
 
+[[considerations-for-restoring-to-an-alternate-location]]
 === Überlegungen zur Wiederherstellung an einem alternativen Standort
 
 Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, haben Sie die Möglichkeit, die Wiederherstellung an einem alternativen Speicherort durchzuführen, der vom selben Console-Agenten verwaltet wird. Der neue Speicherort kann sich auf demselben oder einem anderen System, derselben Storage-VM oder demselben Aggregat befinden. Bei der Wiederherstellung an einem alternativen Speicherort:
@@ -51,6 +54,7 @@ Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, 
 
 
 
+[[perform-a-clean-restore]]
 == Führen Sie eine saubere Wiederherstellung durch
 
 . Identifizieren Sie im Abschnitt **Wiederherstellung** die Workload, die Sie wiederherstellen möchten. Wählen Sie **Wiederherstellen** aus.

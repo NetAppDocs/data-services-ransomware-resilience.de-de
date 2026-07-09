@@ -29,6 +29,7 @@ Falls Sie DII _nicht_ verwenden, fahren Sie mit den Konfigurationsanweisungen hi
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 * Stellen Sie sicher, dass Sie die link:reference-user-activity-requirements.html["Anforderungen an Betriebssystem, Server und Netzwerk"] erfüllen.
@@ -40,6 +41,7 @@ Stellen Sie sicher, dass jede Rolle auf Organisationsebene angewendet wird.
 
 
 
+[[create-a-user-activity-agent]]
 == Erstellen Sie einen Benutzeraktivitätsagenten
 
 Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"]; Datensammler teilen Benutzeraktivitätsereignisse mit Ransomware Resilience. Sie müssen mindestens einen Benutzeraktivitätsagenten erstellen, um die Benutzeraktivitätserkennung zu aktivieren.
@@ -78,6 +80,7 @@ Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, zurück zum Men
 
 
 
+[[add-a-data-collector]]
 === Hinzufügen eines Datensammlers
 
 Datensammler werden automatisch erstellt, wenn Sie eine Datensicherungsstrategie mit Benutzeraktivitätserkennung aktivieren. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-detection-policy-to-workloads-with-existing-backup-or-snapshot-policies["Hinzufügen einer Erkennungsrichtlinie"].
@@ -88,6 +91,7 @@ image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellunge
 
 
 
+[[create-a-user-directory-connector]]
 == Erstellen Sie einen Benutzerverzeichnis-Connector
 
 Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-Connector erstellen.
@@ -148,6 +152,7 @@ Geben Sie die Details zur Attributzuordnung an:
 
 
 
+[[delete-a-user-directory-connector]]
 === Löschen eines Benutzerverzeichnis-Connectors
 
 .Schritte
@@ -160,6 +165,7 @@ Geben Sie die Details zur Attributzuordnung an:
 
 
 
+[[respond-to-user-activity-alerts]]
 == Auf Benachrichtigungen über Benutzeraktivitäten reagieren
 
 Nachdem Sie die Benutzeraktivitätserkennung konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie bösartige Aktivitäten und verdächtiges Nutzerverhalten"].
@@ -168,6 +174,7 @@ Sie können auch link:task-automate-user-activity.html["Antworten auf Benutzerak
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:task-users-manage.html["Benachrichtigungseinstellungen und blockierte Benutzer verwalten"]

@@ -18,6 +18,7 @@ Die Erkennung des Benutzerverhaltens wird in Ransomware Resilience für Workload
 
 
 
+[[cloud-provider-support]]
 == Cloud-Anbieter-Support
 
 Nutzerverhaltensdaten können in AWS und Azure in den folgenden Regionen gespeichert werden:
@@ -38,6 +39,7 @@ Nutzerverhaltensdaten können in AWS und Azure in den folgenden Regionen gespeic
 |===
 
 
+[[operating-system-requirements]]
 == Betriebssystemanforderungen
 
 Die Erkennung verdächtigen Benutzerverhaltens wird mit den folgenden Betriebssystemen unterstützt:
@@ -80,6 +82,7 @@ Der `unzip` Für die Installation wird ein Befehl benötigt. Der `sudo su -` Der
 
 
 
+[[server-requirements]]
 == Serveranforderungen
 
 Der Server muss die folgenden Mindestanforderungen erfüllen:
@@ -91,6 +94,7 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 
 
+[[server-recommendations]]
 === Serverempfehlungen
 
 * Weisen Sie zusätzlichen Speicherplatz zu, um die Erstellung des Dateisystems zu ermöglichen. Stellen Sie sicher, dass im Dateisystem mindestens 35 GB freier Speicherplatz vorhanden sind. + Wenn `/opt` Es handelt sich um einen eingebundenen Ordner von einem NAS-Speicher; lokale Benutzer müssen Zugriff auf diesen Ordner haben. Die Erstellung eines Benutzeraktivitätsagenten kann fehlschlagen, wenn lokale Benutzer nicht über die erforderlichen Berechtigungen verfügen.
@@ -100,6 +104,7 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 
 
+[[sizing-recommendations]]
 === Größenempfehlungen
 
 Stellen Sie beim Erfassen von Benutzerereignissen sicher, dass der Rechner, auf dem der Benutzeraktivitätsagent ausgeführt wird, ausreichend dimensioniert ist, um Ihre Ereignisrate zu bewältigen. Das bedeutet, dass Sie über genügend Datensammler sowie ausreichend CPU und RAM auf dem Rechner verfügen müssen, auf dem der Benutzeraktivitätsagent ausgeführt wird, um die Anzahl der Ereignisse pro Sekunde zu tolerieren. Um die Anzahl der Datensammler zu erhöhen, müssen Sie möglicherweise die RAM- oder CPU-Kapazität erhöhen. Ransomware Resilience unterstützt bis zu 50 Datensammler pro Benutzeraktivitätsagent.
@@ -146,6 +151,7 @@ Nutzen Sie die Ereignisrate, um Ihre Dimensionierung zu berechnen.
 ====
 
 
+[[cloud-network-access-rules]]
 == Cloud-Netzwerkzugriffsregeln
 
 Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-Pazifik, Europa oder Vereinigte Staaten).
@@ -158,6 +164,7 @@ NOTE: Der Benutzeraktivitätsagent nutzt NetApp Data Insights Infrastructure-Tec
 
 
 
+[[apac-based-user-activity-agent-deployments]]
 === Bereitstellungen von Benutzeraktivitätsagenten mit Sitz in APAC
 
 [cols="1,1,1,3,1"]
@@ -175,6 +182,7 @@ NOTE: Der Benutzeraktivitätsagent nutzt NetApp Data Insights Infrastructure-Tec
 |===
 
 
+[[europe-based-user-activity-agent-deployments]]
 === Benutzeraktivitätsagenten-Bereitstellungen mit Sitz in Europa
 
 [cols="1,1,1,3,1"]
@@ -192,6 +200,7 @@ NOTE: Der Benutzeraktivitätsagent nutzt NetApp Data Insights Infrastructure-Tec
 |===
 
 
+[[us-based-user-activity-agent-deployments]]
 === US-basierte Bereitstellungen von Benutzeraktivitätsagenten
 
 [cols="1,1,1,3,1"]
@@ -209,6 +218,7 @@ NOTE: Der Benutzeraktivitätsagent nutzt NetApp Data Insights Infrastructure-Tec
 |===
 
 
+[[in-network-rules]]
 == Netzwerkinterne Regeln
 
 [cols="5*"]
@@ -234,6 +244,7 @@ SVM-Daten LIF IP-Adressen
 |===
 
 
+[[next-step]]
 == Nächster Schritt
 
 * link:suspicious-user-activity.html["Benutzeraktivitätsagenten und -sammler konfigurieren"]

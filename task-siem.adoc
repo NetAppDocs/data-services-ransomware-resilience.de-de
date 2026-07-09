@@ -27,6 +27,7 @@ TIP: Ransomware Resilience bietet außerdem link:reference-soar.html["Security O
 
 
 
+[[event-data-sent-to-a-siem]]
 == Ereignisdaten, die an ein SIEM gesendet werden
 
 Ransomware Resilience kann die folgenden Ereignisdaten an Ihr SIEM-System senden:
@@ -67,6 +68,7 @@ NOTE: Die Felder *user_name* und *user_id* sind nur relevant, wenn Sie xref:conc
 
 
 
+[[configure-aws-security-hub-for-threat-detection]]
 == Konfigurieren Sie AWS Security Hub für die Bedrohungserkennung
 
 Bevor Sie AWS Security Hub in Ransomware Resilience aktivieren, müssen Sie Sicherheitskonfigurationen in AWS Security Hub vornehmen:
@@ -124,6 +126,7 @@ image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungse
 
 
 
+[[configure-google-secops-for-threat-detection]]
 == Konfigurieren Sie Google SecOps für die Bedrohungserkennung
 
 Bevor Sie Google SecOps in Ransomware Resilience aktivieren, müssen Sie den Protokolltyp und den Webhook in Google SecOps registrieren, um die Verbindung zwischen den Diensten zu ermöglichen.
@@ -173,6 +176,7 @@ image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungse
 
 
 
+[[configure-microsoft-sentinel-for-threat-detection]]
 == Konfigurieren von Microsoft Sentinel zur Bedrohungserkennung
 
 Bevor Sie Microsoft Sentinel in Ransomware Resilience aktivieren, müssen Sie die folgenden Schritte auf hoher Ebene in Microsoft Sentinel durchführen:
@@ -304,6 +308,7 @@ image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungse
 
 
 
+[[configure-splunk-cloud-and-splunk-enterprise-for-threat-detection]]
 == Konfigurieren Sie Splunk Cloud und Splunk Enterprise für die Bedrohungserkennung
 
 Ransomware Resilience unterstützt die Bedrohungserkennung mit Splunk Cloud und Splunk Enterprise. Bevor Sie die Splunk-Verbindung in Ransomware Resilience aktivieren, müssen Sie Folgendes tun:
@@ -357,6 +362,7 @@ image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungse
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:reference-soar.html["Integrieren Sie ein SOAR-Playbook"]

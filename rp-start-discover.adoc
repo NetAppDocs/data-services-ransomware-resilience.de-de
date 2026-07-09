@@ -25,6 +25,7 @@ Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und 
 
 
 
+[[select-workloads-to-discover]]
 == Wählen Sie die Workloads aus, die Sie entdecken möchten
 
 Wählen Sie innerhalb jedes Console-Agent die Systeme aus, auf denen Sie Workloads identifizieren möchten.
@@ -69,6 +70,7 @@ link:rp-use-dashboard.html["Erfahren Sie, was das Dashboard Ihnen anzeigt."]
 
 
 
+[[discover-newly-created-workloads-for-previously-selected-systems]]
 == Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme
 
 Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, müssen Sie die Erkennung erneut initiieren, um die neuen Workloads zu schützen.
@@ -83,6 +85,7 @@ TIP: Falls Sie feststellen, dass für das von Ihnen ermittelte System keine Volu
 
 
 
+[[discover-new-systems]]
 == Entdecken Sie neue Systeme
 
 Wenn Sie bereits eine Erkennung auf einem System durchgeführt und anschließend eine Arbeitslast hinzugefügt haben, führen Sie die Erkennung erneut durch, um die Arbeitslasten zu identifizieren.
@@ -96,6 +99,7 @@ Wenn Sie bereits eine Erkennung auf einem System durchgeführt und anschließend
 
 
 
+[[exclude-workloads]]
 == Arbeitslasten ausschließen
 
 Ransomware-Resilienz ermöglicht es Ihnen, bestimmte Workloads in einem System vom Ransomware-Schutz und der Erkennung auszuschließen.

@@ -4,6 +4,7 @@
 
 
 
+[[enable-data-classification-and-scan-for-personally-identifiable-information-pii]]
 === Aktivieren Sie die Datenklassifizierung und suchen Sie nach personenbezogenen Daten (PII).
 
 Mit dieser Version können Sie die BlueXP classification, eine Kernkomponente der BlueXP Familie, aktivieren, um Daten in Ihren Dateifreigabe-Workloads zu scannen und zu klassifizieren.  Durch die Klassifizierung von Daten können Sie feststellen, ob Ihre Daten persönliche oder private Informationen enthalten, die das Sicherheitsrisiko erhöhen können.  Dieser Prozess wirkt sich auch auf die Wichtigkeit der Arbeitslast aus und hilft Ihnen sicherzustellen, dass Sie die Arbeitslasten mit dem richtigen Schutzniveau schützen.
@@ -14,6 +15,7 @@ Um den Scan zu starten, wählen Sie auf der Seite Schutz im Dashboard des Schutz
 
 
 
+[[siem-integration-with-microsoft-sentinel]]
 === SIEM-Integration mit Microsoft Sentinel
 
 Sie können jetzt mithilfe von Microsoft Sentinel Daten zur Bedrohungsanalyse und -erkennung an Ihr Sicherheits- und Ereignismanagementsystem (SIEM) senden.  Bisher konnten Sie den AWS Security Hub oder Splunk Cloud als Ihr SIEM auswählen.
@@ -22,6 +24,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html
 
 
 
+[[free-trial-now-30-days]]
 === Jetzt 30 Tage kostenlos testen
 
 Mit dieser Version können neue Bereitstellungen des BlueXP ransomware protection jetzt 30 Tage lang kostenlos getestet werden.  Zuvor war der BlueXP ransomware protection 90 Tage lang als kostenlose Testversion verfügbar.  Wenn Sie bereits an der 90-tägigen kostenlosen Testversion teilnehmen, gilt dieses Angebot für die nächsten 90 Tage.

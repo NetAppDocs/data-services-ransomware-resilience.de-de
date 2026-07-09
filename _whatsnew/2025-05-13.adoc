@@ -4,6 +4,7 @@
 
 
 
+[[reporting-of-unsupported-working-environments-in-bluexp-ransomware-protection]]
 === Meldung nicht unterstützter Arbeitsumgebungen im BlueXP ransomware protection
 
 Während des Erkennungsworkflows meldet der BlueXP ransomware protection weitere Details, wenn Sie mit der Maus über „Unterstützte“ oder „Nicht unterstützte Workloads“ fahren.  Dies wird Ihnen helfen zu verstehen, warum einige Ihrer Workloads vom BlueXP ransomware protection nicht erkannt werden.

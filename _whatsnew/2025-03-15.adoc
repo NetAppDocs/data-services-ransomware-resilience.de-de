@@ -4,6 +4,7 @@
 
 
 
+[[simulate-an-attack-and-respond]]
 === Simulieren Sie einen Angriff und reagieren Sie darauf
 
 Simulieren Sie mit dieser Version einen Ransomware-Angriff, um Ihre Reaktion auf eine Ransomware-Warnung zu testen.  Mithilfe dieser Funktion können Sie durch das Testen von Warnbenachrichtigungen, Reaktions- und Wiederherstellungsprozessen sicherstellen, dass Sie im Falle eines tatsächlichen Ransomware-Angriffs vorbereitet sind.
@@ -12,6 +13,7 @@ Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-service
 
 
 
+[[enhancements-to-discovery-process]]
 === Verbesserungen des Erkennungsprozesses
 
 Diese Version enthält Verbesserungen der selektiven Erkennungs- und Neuerkennungsprozesse:
@@ -25,6 +27,7 @@ Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-service
 
 
 
+[[alerts-raised-when-high-encryption-is-detected]]
 === Warnungen werden ausgelöst, wenn eine hohe Verschlüsselung erkannt wird
 
 Mit dieser Version können Sie Warnmeldungen anzeigen, wenn bei Ihren Workloads eine hohe Verschlüsselung erkannt wird, auch ohne dass es zu starken Änderungen der Dateierweiterungen kommt.  Diese Funktion, die ONTAP Autonomous Ransomware Protection (ARP) AI verwendet, hilft Ihnen, Workloads zu identifizieren, die einem Risiko von Ransomware-Angriffen ausgesetzt sind.  Verwenden Sie diese Funktion und laden Sie die gesamte Liste der betroffenen Dateien mit oder ohne Erweiterungsänderungen herunter.

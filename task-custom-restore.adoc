@@ -19,6 +19,7 @@ TIP: Ransomware Resilience unterstützt außerdem eine xref:task-clean-restore.h
 
 
 
+[[restore-a-workload]]
 == Stellen Sie eine Arbeitslast wieder her
 
 *Erforderliche Konsolenrolle* Organisationsadministrator, Ordner- oder Projektadministrator oder Administrator für Ransomware-Schutz. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Konsolenzugriffsrollen für alle Dienste"^].
@@ -58,6 +59,7 @@ TIP: Sie können bis zu 100 Dateien oder einen einzelnen Ordner auswählen.
 
 
 
+[[restore-all-volumes]]
 === Alle Volumes wiederherstellen
 
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
@@ -97,6 +99,7 @@ TIP: Der neue Datenträgername wird als Präfix + ursprünglicher Datenträgerna
 
 
 
+[[restore-a-workload-at-the-volume-level]]
 === Stellen Sie eine Arbeitslast auf Volumenebene wieder her
 
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Wiederherstellung“ aus.
@@ -137,6 +140,7 @@ TIP: Der neue Datenträgername wird als ursprünglicher Datenträgername + Siche
 
 
 
+[[restore-a-workload-at-the-file-level]]
 === Stellen Sie eine Arbeitslast auf Dateiebene wieder her
 
 Bevor Sie eine Arbeitslast auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen. Sie können die Seite „Warnungen“ aufrufen, um eine Liste der betroffenen Dateien herunterzuladen. Dann verwenden Sie die Seite „Wiederherstellung“, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
@@ -223,6 +227,7 @@ TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien
 
 
 
+[[restore-a-file-share-or-datastore]]
 === Wiederherstellen einer Dateifreigabe oder eines Datenspeichers
 
 . Nachdem Sie eine Dateifreigabe oder einen Datenspeicher zum Wiederherstellen ausgewählt haben, wählen Sie auf der Seite „Wiederherstellen“ im Wiederherstellungsbereich die Option *Nach Volume* aus.
@@ -263,6 +268,7 @@ TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien
 
 
 
+[[restore-a-vm-file-share-at-the-vm-level]]
 === Wiederherstellen einer VM-Dateifreigabe auf VM-Ebene
 
 Nachdem Sie eine VM zur Wiederherstellung ausgewählt haben, fahren Sie auf der Seite „Wiederherstellung“ mit diesen Schritten fort.

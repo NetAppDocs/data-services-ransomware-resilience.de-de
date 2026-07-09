@@ -16,6 +16,7 @@ Diese FAQ können hilfreich sein, wenn Sie nur eine schnelle Antwort auf eine Fr
 
 
 
+[[deployment]]
 == Einsatz
 
 .Benötigen Sie eine Lizenz zur Nutzung von Ransomware Resilience?
@@ -49,6 +50,7 @@ Bei der Dimensionierung basieren die Lizenzkosten auf der logischen Kapazität d
 
 
 
+[[access]]
 == Zugang
 
 .Wie lautet die URL für Ransomware-Resilienz?
@@ -65,6 +67,7 @@ Sie können mit jedem modernen Webbrowser auf die NetApp Console zugreifen.
 
 
 
+[[interoperability]]
 == Interoperabilität
 
 .Ist die Ransomware-Resilienz auf die Schutzeinstellungen in ONTAP vorbereitet?
@@ -77,6 +80,7 @@ Für Lizenzierung und Abrechnung kann Ransomware Resilience auch dann in Backup 
 
 
 
+[[workloads]]
 == Arbeitslasten
 
 .Was versteht man unter Arbeitslast im Kontext von Ransomware-Resilienz?
@@ -104,6 +108,7 @@ Wenn Sie Ihrer Umgebung ein neues Volume hinzugefügt haben, starten Sie die Erk
 
 
 
+[[protection-policies]]
 == Schutzrichtlinien
 
 .Können Ransomware-Resilienzrichtlinien mit anderen Arten von Workload-Richtlinien koexistieren?

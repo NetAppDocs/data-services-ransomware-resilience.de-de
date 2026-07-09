@@ -20,6 +20,7 @@ NetApp Ransomware Resilience bietet saubere Wiederherstellungen, die eine gefüh
 
 
 
+[[learn-about-clean-restores]]
 == Erfahren Sie mehr über Clean Restores
 
 Wenn Sie eine vollständige Wiederherstellung durchführen, führt Sie Ransomware Resilience durch einen mehrstufigen Prozess, der die Wiederherstellung optimiert.
@@ -48,6 +49,7 @@ Sie können auch im Planungsschritt die Dateihistorien einsehen, um zu sehen, wa
 
 
 
+[[supported-configurations]]
 == Unterstützte Konfigurationen
 
 * Pro Ransomware Resilience-Konto kann nur ein IRE erstellt werden. Jedes IRE kann drei Clean Rooms enthalten.
@@ -92,6 +94,7 @@ NOTE: Eine vollständige Wiederherstellung in einer Cloud-basierten Umgebung kan
 
 
 
+[[considerations]]
 == Überlegungen
 
 * Sie können nur eine vollständige Wiederherstellung bei einem auf Verschlüsselung basierenden Ransomware-Angriff durchführen.
@@ -105,6 +108,7 @@ NOTE: Eine vollständige Wiederherstellung in einer Cloud-basierten Umgebung kan
 
 
 
+[[additional-considerations-for-on-premises-environments]]
 === Zusätzliche Überlegungen für On-Premises-Umgebungen
 
 Wenn Sie eine lokale IRE bereitstellen und eine Windows-VM für die Wiederherstellungsanalyse im Rahmen einer sauberen Wiederherstellung geklont wird, behält die geklonte VM dieselbe Konfiguration wie die Quelle. Dies kann zu Konflikten führen:
@@ -118,6 +122,7 @@ Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten 
 
 
 
+[[secondary-sources]]
 === Sekundärquellen
 
 Beim Erstellen des IRE haben Sie die Möglichkeit, eine sekundäre Quelle hinzuzufügen.
@@ -128,6 +133,7 @@ Der Clean Restore-Prozess analysiert standardmäßig Snapshots aus der Quellumge
 
 
 
+[[cost-and-licensing]]
 == Kosten und Lizenzierung
 
 Die vollständige Wiederherstellung ist Bestandteil der Ransomware-Resilienz. Für die Durchführung einer vollständigen Wiederherstellung oder die Erstellung einer IRE ist keine zusätzliche Lizenz erforderlich.
@@ -142,6 +148,7 @@ Gebühren von Drittanbietern können die Erstellung und Bereitstellung von Reche
 
 
 
+[[prerequisites]]
 == Voraussetzungen
 
 Stellen Sie sicher, dass Sie die Voraussetzungen für den von Ihnen gewählten Bereitstellungstyp „Saubere Wiederherstellung“ erfüllt haben. Wählen Sie die Registerkarte für Ihre gewählte IRE-Konfiguration aus.
@@ -506,6 +513,7 @@ NFS-Zugriff auf die: * Produktionskonsolenagent * Konsolenagent VLAN * Reinraum 
 ====
 
 
+[[create-an-isolated-recovery-environment]]
 == Erstellen Sie eine isolierte Wiederherstellungsumgebung
 
 Vor der Durchführung einer vollständigen Wiederherstellung muss ein isolierter Wiederherstellungsraum eingerichtet werden.
@@ -593,6 +601,7 @@ TIP: Um Details der IRE zu ändern, wählen Sie *Einstellungen* in der Ransomwar
 
 
 
+[[delete-an-isolated-recovery-environment]]
 == Löschen einer isolierten Wiederherstellungsumgebung
 
 Eine IRE kann nicht gelöscht werden, während ein Wiederherstellungsvorgang aktiv ist; Sie können den Wiederherstellungsvorgang abbrechen oder warten, bis die Wiederherstellung abgeschlossen ist, dann die IRE löschen.

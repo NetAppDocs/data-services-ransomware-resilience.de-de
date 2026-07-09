@@ -4,6 +4,7 @@
 
 
 
+[[clean-restore]]
 === Saubere Wiederherstellung
 
 Ransomware Resilience unterstützt jetzt Clean Restores, eine neue Wiederherstellungsoption, mit der Sie sich schnell und einfach von Ransomware-Angriffen erholen können. Clean Restores bieten geführte Arbeitsabläufe, die optimale Wiederherstellungspunkte identifizieren, um Ihre Workloads wieder zum Laufen zu bringen und die Ausfallzeit zu minimieren. Die Arbeitsabläufe in Clean Restore bieten außerdem Einblicke auf Dateiebene in Ihre Daten, sodass Sie malwarefreie Workloads wiederherstellen können, was eine erneute Infektion verhindert und Datenverlust minimiert.
@@ -12,6 +13,7 @@ Informationen zu unterstützten Konfigurationen und zur Konfiguration Ihres Syst
 
 
 
+[[siem-support-for-splunk-enterprise]]
 === SIEM-Unterstützung für Splunk Enterprise
 
 Ransomware Resilience bietet jetzt Security Information Event Management (SIEM)-Unterstützung für Splunk Enterprise, wodurch Sie Protokoll- und Ereignisdaten zentralisieren und die Bedrohungsanalyse und -erkennung optimieren können.
@@ -20,6 +22,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[user-behavior-detection-enhancement]]
 === Verbesserung der Benutzerverhaltenserkennung
 
 Erkenntnisse über Datenschutzverletzungen werden nun 13 Monate nach dem Vorfall gespeichert, wodurch eine längere Datenspeicherung für Ihre Berichtspflichten ermöglicht wird.

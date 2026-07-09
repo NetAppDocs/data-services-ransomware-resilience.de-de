@@ -4,6 +4,7 @@
 
 
 
+[[unsupported-volumes]]
 === Nicht unterstützte Volumes
 
 Ransomware Resilience-Berichte erfassen jetzt im **Summary**-Bericht Informationen über unterstützte und nicht unterstützte Volumes. Verwenden Sie diese Informationen, um zu diagnostizieren, warum Volumes in einem System möglicherweise nicht für Ransomware protection infrage kommen.

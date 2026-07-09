@@ -20,6 +20,7 @@ Verwenden Sie das Dashboard, um Schutzvorschläge zu überprüfen, Einstellungen
 
 
 
+[[review-workload-health-using-the-dashboard]]
 == Überprüfen Sie die Arbeitslastgesundheit mithilfe des Dashboards
 
 .Schritte
@@ -78,6 +79,7 @@ In der Gesamtzahl der Aktionen sind die von Ihnen abgelehnten Aktionen nicht ent
 
 
 
+[[review-protection-recommendations-on-the-dashboard]]
 == Schutzempfehlungen auf dem Dashboard überprüfen
 
 Ransomware Resilience bewertet den Schutz Ihrer Workloads und empfiehlt Maßnahmen zur Verbesserung dieses Schutzes.
@@ -129,6 +131,7 @@ TIP: Sie können einen abgelehnten Eintrag später in einen Aufgabeneintrag änd
 
 
 
+[[export-protection-data-to-csv-files]]
 == Exportieren Sie Schutzdaten in CSV-Dateien
 
 Sie können Daten exportieren und CSV-Dateien herunterladen, die Details zu Schutz, Warnungen und Wiederherstellung enthalten.
@@ -157,6 +160,7 @@ Die CSV-Dateien enthalten Daten für alle Workloads auf allen Konsolensystemen.
 
 
 
+[[access-technical-documentation]]
 == Zugriff auf die technische Dokumentation
 
 Sie können auf die technische Dokumentation zu Ransomware Resilience zugreifen unterlink:https://docs.netapp.com["docs.netapp.com"^] oder innerhalb von Ransomware Resilience.

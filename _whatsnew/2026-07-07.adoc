@@ -4,6 +4,7 @@
 
 
 
+[[exclude-file-paths-from-user-behavior-alerts]]
 === Dateipfade von Benachrichtigungen zum Benutzerverhalten ausschließen
 
 NetApp Ransomware Resilience unterstützt das Ausschließen bestimmter Dateipfade von Warnmeldungen zur Überwachung des Benutzerverhaltens. Dateipfade können ausgeschlossen werden, wenn bekannt ist, dass sie nicht gefährdet sind, oder wenn an Dateien in einem Volume gearbeitet wird, das möglicherweise Warnmeldungen auslösen könnte.

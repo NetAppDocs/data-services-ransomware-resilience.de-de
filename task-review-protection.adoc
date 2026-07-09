@@ -18,6 +18,7 @@ Sobald Sie den Umfang Ihres aktuellen Schutzes verstanden haben, link:rp-use-pro
 
 
 
+[[view-protection-on-a-workload]]
 == Schutz auf einer Arbeitslast anzeigen
 
 Einer der ersten Schritte zum Schutz von Workloads besteht darin, Ihre aktuellen Workloads und deren Schutzstatus anzuzeigen.  Sie können die folgenden Arten von Workloads sehen:
@@ -46,6 +47,7 @@ NOTE: Siehe link:rp-use-protect.html#add-a-ransomware-protection-strategy["Füge
 
 
 
+[[understand-the-protection-dashboard]]
 == Das Schutz-Dashboard verstehen
 
 Das Schutz-Dashboard in Ransomware Resilience zeigt detaillierte Informationen zu Workloads (zum Beispiel Workload-Name und -Typ, Console-Agent, System und Storage-VM) sowie Einblicke in den Schutzstatus. Verwenden Sie das Schutz-Dashboard, um die Ransomware-Vorsorge für Workloads zu überprüfen und zu verwalten. Die folgenden Spalten sind besonders hilfreich, um Ihre Schutzsituation zu verstehen:
@@ -86,6 +88,7 @@ Ransomware Resilience weist jedem Workload während der Erkennung basierend auf 
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:rp-use-protect.html["Schützen Sie Workloads mit Strategien zum Schutz vor Ransomware"]

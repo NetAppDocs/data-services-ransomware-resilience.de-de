@@ -18,6 +18,7 @@ NetApp Ransomware Resilience bietet Schutzgruppen zur einfacheren Verwaltung Ihr
 
 
 
+[[create-a-protection-group]]
 == Erstellen einer Schutzgruppe
 
 Sie können Gruppen unabhängig von ihrem Schutzstatus erstellen (d. h. Gruppen, die nicht geschützt sind, und Gruppen, die geschützt sind). Wenn Sie einer Schutzgruppe eine Datensicherungsstrategie hinzufügen, ersetzt die neue Datensicherungsstrategie alle vorhandenen Richtlinien, einschließlich der von NetApp Backup and Recovery verwalteten Richtlinien.
@@ -62,6 +63,7 @@ TIP: Beim Überprüfen des Schutz-Dashboards in Ransomware Resilience können Si
 
 
 
+[[edit-group-protection]]
 === Gruppenschutz bearbeiten
 
 Sie können die Erkennungsrichtlinie für eine vorhandene Gruppe ändern.
@@ -77,6 +79,7 @@ Sie können die Erkennungsrichtlinie für eine vorhandene Gruppe ändern.
 
 
 
+[[remove-workloads-from-a-protection-group]]
 == Workloads aus einer Datensicherungsgruppe entfernen
 
 Möglicherweise müssen Sie später Workloads aus einer bestehenden Datensicherungsgruppe entfernen.
@@ -95,6 +98,7 @@ image:screen-protection-groups-more-workloads.png["Seite mit Details zur Schutzg
 
 
 
+[[delete-a-protection-group]]
 == Eine Schutzgruppe löschen
 
 Wenn Sie eine Schutzgruppe löschen, entfernt Ransomware Resilience die Gruppe und die Datensicherungsstrategie von den Workloads. Es werden nicht die einzelnen Workloads gelöscht.

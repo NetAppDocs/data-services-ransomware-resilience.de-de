@@ -4,6 +4,7 @@
 
 
 
+[[bulk-exclude-users-from-user-behavior-alerts]]
 === Benutzer massenhaft von Benutzerverhaltenswarnungen ausschließen
 
 Ransomware Resilience unterstützt jetzt zusätzlich zu den bestehenden UI- und CSV-basierten Optionen das Hochladen einer JSON-Liste von Benutzern, die von Warnmeldungen zum Benutzerverhalten ausgeschlossen werden sollen.
@@ -12,6 +13,7 @@ Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-s
 
 
 
+[[user-behavior-detection-enhancements]]
 === Verbesserungen der Benutzerverhaltenserkennung
 
 Ransomware Resilience bietet verbesserte Einblicke in das Nutzerverhalten durch E-Mail-Benachrichtigungen und die Einbeziehung von Nutzerverhaltensereignissen in die unterstützten SIEM-Ereignisdaten (AWS Security Hub, Microsoft Sentinel, und Splunk Cloud). Diese Verbesserungen bieten genauere Einblicke in Ihre Sicherheits- und Compliance-Überwachung.

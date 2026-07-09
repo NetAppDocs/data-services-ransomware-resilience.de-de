@@ -18,6 +18,7 @@ Sie können Bereitschaftsübungen für NFS- und CIFS-Workloads (SMB) durchführe
 
 
 
+[[how-readiness-drills-work]]
 == Funktionsweise von Bereitschaftsübungen
 
 Ransomware Resilience unterstützt drei Übungstypen: link:task-clean-restore-recover.html["Clean Restore"], link:rp-use-recover.html["Benutzerdefinierte Wiederherstellung"] und link:suspicious-user-activity.html["Wiederherstellung nach einem Data Breach"]. Clean Restore und Custom Recovery simulieren verschlüsselungsbasierte (entropiebasierte) Angriffe und unterscheiden sich in der angebotenen Wiederherstellungsmethode. Data Breach Recovery simuliert die Exfiltration mit ungewöhnlichen Lesemustern bei Ihren Daten.
@@ -30,6 +31,7 @@ Wenn Sie die Übung durchführen, können Sie Ihre Reaktion auf Warnmeldungen te
 
 
 
+[[configure-a-ransomware-attack-readiness-drill]]
 == Konfigurieren Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
@@ -63,6 +65,7 @@ TIP: Sie können die Konfiguration der Bereitschaftsübung später auf der Seite
 
 
 
+[[start-a-readiness-drill]]
 == Starten Sie eine Bereitschaftsübung
 
 Nachdem Sie die Bereitschaftsübung konfiguriert haben, können Sie mit der Übung beginnen.
@@ -86,6 +89,7 @@ NOTE: Die Konfiguration der Bereitschaftsübung kann nicht bearbeitet werden, w�
 
 
 
+[[respond-to-a-readiness-drill-alert]]
 == Auf einen Alarm einer Bereitschaftsübung reagieren
 
 Testen Sie Ihre Bereitschaft, indem Sie auf eine Bereitschaftsübungswarnung reagieren.
@@ -124,6 +128,7 @@ Wenn der Schweregrad darauf hindeutet, dass ein Benutzer böswilliger Aktivität
 
 
 
+[[restore-the-test-workload]]
 == Wiederherstellen der Test-Workload
 
 Stellen Sie nach der Überprüfung der Warnung zur Bereitschaftsübung bei Bedarf die Testarbeitslast wieder her.
@@ -146,6 +151,7 @@ Stellen Sie nach der Überprüfung der Warnung zur Bereitschaftsübung bei Bedar
 
 
 
+[[change-the-alert-status-after-the-readiness-drill]]
 == Den Alarmstatus nach der Bereitschaftsübung ändern
 
 Nachdem Sie die Warnung zur Bereitschaftsübung überprüft und die Arbeitslast wiederhergestellt haben, ändern Sie bei Bedarf den Warnungsstatus.
@@ -169,6 +175,7 @@ IMPORTANT: Nachdem Sie einen Angriff verworfen haben, kann dies nicht rückgäng
 
 
 
+[[review-reports-on-the-readiness-drill]]
 == Überprüfen Sie die Berichte zur Bereitschaftsübung
 
 Nach Abschluss der Bereitschaftsübung kann ein Bericht darüber generiert und gespeichert werden. Der Übungsbericht ist eine JSON-Datei, die Informationen wie die Erkennungsrichtlinie, den Alarmtyp und den Zeitstempel, Details zum Angriff und den Wiederherstellungsstatus enthält.
