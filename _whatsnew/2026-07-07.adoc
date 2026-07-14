@@ -10,3 +10,12 @@
 NetApp Ransomware Resilience unterstützt das Ausschließen bestimmter Dateipfade von Warnmeldungen zur Überwachung des Benutzerverhaltens. Dateipfade können ausgeschlossen werden, wenn bekannt ist, dass sie nicht gefährdet sind, oder wenn an Dateien in einem Volume gearbeitet wird, das möglicherweise Warnmeldungen auslösen könnte.
 
 Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-users-manage.html["Dateipfade von Benachrichtigungen ausschließen"^].
+
+
+
+[[arm-template-for-microsoft-sentinel]]
+=== ARM Vorlage für Microsoft Sentinel
+
+Ransomware Resilience bietet jetzt eine Azure Resource Manager (ARM) Vorlage für die Verbindung mit Microsoft Sentinel als SIEM und bietet damit eine zusätzliche Methode zur Vereinfachung der Bereitstellung.
+
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html["Anbindung an ein SIEM-System für Bedrohungserkennung und -analyse"^].
