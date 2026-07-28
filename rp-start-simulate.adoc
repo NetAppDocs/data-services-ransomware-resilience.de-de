@@ -34,12 +34,39 @@ Wenn Sie die Übung durchführen, können Sie Ihre Reaktion auf Warnmeldungen te
 [[configure-a-ransomware-attack-readiness-drill]]
 == Konfigurieren Sie eine Übung zur Vorbereitung auf Ransomware-Angriffe
 
+Vor dem Ausführen einer Simulation müssen Sie die Bereitschaftsübung konfigurieren. Die Bereitschaftsübung muss für einen bestimmten Typ von Ransomware-Angriff erstellt werden. Ransomware Resilience erkennt fünf Arten von Angriffen:
+
+[cols="25,75"]
+|===
+| Angriffsart | Beschreibung 
+
+
+| Verschlüsselung (Entropie) | Ransomware Resilience erkennt anomale IOPS-Muster, Datenentropie und nicht standardmäßige Dateisuffixe. 
+
+
+| Verschlüsselung (Benutzerverhalten) | Ransomware Resilience erkennt anomale Lese-, Schreib- und Umbenennungsaktivitäten von Dateien, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenpanne | Ransomware Resilience erkennt anomale Dateilesemuster, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenvernichtung | Ransomware Resilience erkennt die massenhafte Löschung von Dateien durch einen bestimmten Benutzer. 
+
+
+| Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
+|===
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 .Schritte
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
-. Im Bereich „Readiness drill“ wird **Konfigurieren** ausgewählt.
-. Den **Readiness-Übungstyp** auswählen.
+. In der Readiness-Drill-Karte auf der Seite „Einstellungen“ die Option *Konfigurieren* auswählen.
++
+Die Konsole zeigt die Seite „Configure readiness drill“ an.
+
++
+image:screen-settings-alert-drill-configure.png["Seite zur Konfiguration der Bereitschaftsübung"]
+
+. Den *Ransomware-Angriffstyp* auswählen.
 +
 ** **Benutzerdefinierte Wiederherstellung**: Auf einen Verschlüsselungsangriff (Entropieangriff) kann mit einer link:rp-use-recover.html["benutzerdefinierte Wiederherstellung"]Wiederherstellung reagiert werden, bei der der Wiederherstellungspunkt konfiguriert wird.
 ** **Saubere Wiederherstellung**: Auf einen Verschlüsselungsangriff (Entropieangriff) mit einem link:task-clean-restore-recover.html["Clean Restore"] Prozess zur Wiederherstellung reagieren, der zu optimierten Wiederherstellungspunkten führt.
@@ -52,16 +79,13 @@ Wenn Sie die Übung durchführen, können Sie Ihre Reaktion auf Warnmeldungen te
 .. Nach Auswahl des **Systems** wird die **Storage VM** aus der vorausgefüllten Liste ausgewählt.
 .. Ein Name für die **New test workload** wird angegeben. Die Test-Workload wird mit "rps_test_" versehen.
 .. Wenn die Bereitschaftsübung der Wiederherstellung nach einem Datenleck dient, ist der **Benutzeraktivitätsagent** für die Übungsumgebung auszuwählen.
-+
-image:screen-settings-alert-drill-configure.png["Screenshot der Konfigurationsoptionen für die Bereitschaftsübung."]
-
 
 
 . Wählen Sie *Speichern*.
 
 
 
-TIP: Sie können die Konfiguration der Bereitschaftsübung später auf der Seite „Einstellungen“ bearbeiten.
+TIP: Die Konfiguration der Bereitschaftsübung lässt sich später auf der Seite „Einstellungen“ anpassen.
 
 
 
@@ -73,15 +97,8 @@ Nachdem Sie die Bereitschaftsübung konfiguriert haben, können Sie mit der Übu
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
 .Schritte
-. Zum Starten der Übung:
-+
-** Im Dashboard NetApp Ransomware Resilience befindet sich oben rechts die Schaltfläche *Bereitschaftsübung ausführen*.
-+
-image:screen-dashboard.png["Dashboardseite mit der Schaltfläche „Bereitschaftsübung ausführen“"]
-
-** Oder zu **Einstellungen** wechseln. Im Bereich „Bereitschaftsübung“ *Start* auswählen.
-
-
+. Unter Ransomware Resilience wählen Sie **Einstellungen**.
+. Auf der Einstellungsseite *Start* auswählen.
 
 
 
@@ -98,13 +115,7 @@ Testen Sie Ihre Bereitschaft, indem Sie auf eine Bereitschaftsübungswarnung rea
 
 .Schritte
 . Wählen Sie im Menü „Ransomware Resilience“ die Option „Warnungen“ aus.
-+
-Die Konsole zeigt die Seite „Warnungen“ an.  In der Spalte „Alarm-ID“ sehen Sie neben der ID „Bereitschaftsübung“.
-
-+
-image:screen-alerts-readiness.png["Seite „Warnungen“ mit der Warnung zur Bereitschaftsübung"]
-
-. Die Warnung mit dem Hinweis „Readiness drill“ auswählen.
+. Die Warnung mit dem Hinweis „Readiness drill“ auswählen. Auf der Seite mit den Warnungsdetails erscheint eine Liste der Vorfallwarnungen.
 +
 image:screen-alerts-readiness-details.png["Seite mit Alarmdetails, auf der der Alarm zur Bereitschaftsübung angezeigt wird"]
 
@@ -121,8 +132,15 @@ Bei der Überprüfung des Vorfalls sind folgende Punkte zu berücksichtigen:
 +
 Wenn der Schweregrad darauf hindeutet, dass ein Benutzer böswilliger Aktivitäten verdächtigt wird, überprüfen Sie den Benutzernamen. Sie können auchlink:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["den Benutzer blockieren."]
 
-* Die Dateiaktivität im Vergleich zu den erwarteten Raten. Dies umfasst lesen/schreiben-Rate, Dateierstellung, Dateiumbenennung und Dateilöschung.
-* Die Liste der betroffenen Dateien. Es empfiehlt sich, die Dateierweiterungen zu prüfen, die möglicherweise den Angriff verursachen.
+* Dateiaktivitäten und verdächtige Prozesse werden angezeigt:
++
+** Die eingehenden erfassten Daten im Vergleich zu den erwarteten Daten betrachten.
+** Die festgestellte Erstellungsrate der Dateien im Vergleich zur erwarteten Rate kann betrachtet werden.
+** Die festgestellte Dateiumbenennungsrate im Vergleich zur erwarteten Rate kann betrachtet werden.
+** Die Löschrate im Vergleich zur erwarteten Rate betrachten.
+
+
+* Die Liste der betroffenen Dateien kann eingesehen werden. Die Dateierweiterungen, die möglicherweise den Angriff verursachen, können überprüft werden.
 * Bestimmen Sie die Auswirkungen und das Ausmaß des Angriffs, indem Sie die Anzahl der betroffenen Dateien und Verzeichnisse überprüfen.
 
 

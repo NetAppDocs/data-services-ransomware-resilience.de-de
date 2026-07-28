@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+[cols="25,75"]
+|===
+| Angriffsart | Beschreibung 
+
+
+| Verschlüsselung (Entropie) | Ransomware Resilience erkennt anomale IOPS-Muster, Datenentropie und nicht standardmäßige Dateisuffixe. 
+
+
+| Verschlüsselung (Benutzerverhalten) | Ransomware Resilience erkennt anomale Lese-, Schreib- und Umbenennungsaktivitäten von Dateien, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenpanne | Ransomware Resilience erkennt anomale Dateilesemuster, die von einem bestimmten Benutzer durchgeführt werden. 
+
+
+| Datenvernichtung | Ransomware Resilience erkennt die massenhafte Löschung von Dateien durch einen bestimmten Benutzer. 
+
+
+| Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
+|===

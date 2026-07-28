@@ -18,6 +18,40 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 
 
+[[27-july-2026]]
+== 27. Juli 2026
+
+
+
+[[standardize-protection-groups-based-on-workload-and-system-type]]
+=== Schutzgruppen werden auf Grundlage von Arbeitslast und Systemtyp standardisiert
+
+Ransomware Resilience erzwingt nun, dass Schutzgruppen nur einen Workload-Typ und einen Systemtyp enthalten. Beim Erstellen einer neuen Schutzgruppe ist sowohl der Workload-Typ (Dateisystem oder Block) als auch das System für den Workload anzugeben. Diese Verbesserung stellt sicher, dass die gewählte Ransomware-Schutzstrategie für die Schutzgruppe erfolgreich auf alle Workloads in der Gruppe angewendet werden kann.
+
+Wenn bereits Schutzgruppen vorhanden sind, die System- und Workload-Typen mischen, ist deren weitere Nutzung möglich, jedoch können der Schutzgruppe keine Workloads hinzugefügt werden.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-protection-group.html["Erstellen einer Schutzgruppe"^].
+
+
+
+[[readiness-drill-enhancement]]
+=== Verbesserung der Readiness-Drill-Funktion
+
+Ransomware Resilience ermöglicht jetzt die Durchführung von Bereitschaftsübungen basierend auf dem Angriffstyp. Ransomware Resilience erkennt fünf Angriffstypen, und für jeden kann eine Bereitschaftsübung durchgeführt werden, um den Angriffs- und Wiederherstellungsprozess zu simulieren und so die eigene Bereitschaft für einen Ransomware-Angriff zu verstehen.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-simulate.html["Führen Sie eine Bereitschaftsübung durch"^].
+
+
+
+[[pause-or-delete-a-siem-system]]
+=== Ein SIEM-System anhalten oder löschen
+
+Ransomware Resilience bietet nun Optionen in der Benutzeroberfläche, um ein SIEM-System anzuhalten oder zu löschen. Diese Verbesserung erleichtert es, das System vorübergehend zur Fehlerbehebung oder Wartung zu deaktivieren oder es vollständig zu entfernen.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html#disable-a-siem-system["Deaktivieren eines SIEM-Systems"^].
+
+
+
 [[20-july-2026]]
 == 20. Juli 2026
 

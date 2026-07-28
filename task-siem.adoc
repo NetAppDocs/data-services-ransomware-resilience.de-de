@@ -376,6 +376,22 @@ NOTE: Die SIEM-Konfiguration kann nach ihrer Erstellung bearbeitet werden. Alle 
 
 
 
+[[disable-a-siem-system]]
+== Deaktivieren eines SIEM-Systems
+
+Sie können die Übertragung von Ereignisdaten an ein SIEM-System vorübergehend unterbrechen oder das SIEM-System löschen, wenn das SIEM nicht mehr benötigt wird. Wenn das SIEM unterbrochen wird, kann es jederzeit wieder aufgenommen werden.
+
+.Schritte
+. In Ransomware Resilience die Option *Einstellungen* auswählen.
+. In der SIEM-Kachel *Verwalten* auswählen.
+. Wählen Sie das Aktionsmenü (`...` für das SIEM-System, das Sie stoppen möchten, und wählen Sie dann *Pause* oder *Löschen* aus.
++
+Wenn Sie löschen, im Bestätigungsdialog *Löschen* auswählen, um die Aktion abzuschließen.
+
+
+
+
+
 [[next-steps]]
 == Nächste Schritte
 

@@ -56,5 +56,17 @@ Für Google Cloud NetApp Volumes gelten folgende Einschränkungen:
 
 * SAN-Workloads von Google Cloud NetApp Volumes werden derzeit in Ransomware Resilience nicht unterstützt.
 * Derzeit können Sie auf Google Cloud NetApp Volumes-Workloads nur Verschlüsselungs- und FPolicy-basierte Schutzstrategien anwenden. Sie können keine Strategien zum Schutz des Nutzerverhaltens anwenden.
-* Schutzstrategien mit Replikation werden derzeit für Google Cloud NetApp Volumes nicht unterstützt
+* Schutzstrategien mit Replikation werden derzeit für Google Cloud NetApp Volumes nicht unterstützt.
+
+
+
+
+[[san-storage-limitations]]
+== SAN Speicherbeschränkungen
+
+Für SAN (Blockspeicher)-Workloads gelten die folgenden Einschränkungen:
+
+* Ransomware Resilience unterstützt derzeit keine SAN-Workloads von Google Cloud NetApp Volumes.
+* Wenn Ransomware Resilience Warnungen für SAN Workloads generiert, basieren diese ausschließlich auf hoher Entropie.
+* SAN Workloads können nur mithilfe einer link:task-custom-restore.html["benutzerdefinierte Wiederherstellung"] wiederhergestellt werden. Eine Clean Restore ist für SAN Workloads derzeit nicht verfügbar.
 
