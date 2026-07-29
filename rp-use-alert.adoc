@@ -256,11 +256,9 @@ Nachdem die Warnung zur Wiederherstellung markiert wurde, wird sie von der Regis
 [[dismiss-incidents-that-are-not-potential-attacks]]
 == Vorfälle abweisen, bei denen es sich nicht um potenzielle Angriffe handelt
 
-Nachdem Sie die Vorfälle überprüft haben, müssen Sie feststellen, ob es sich bei den Vorfällen um potenzielle Angriffe handelt. Wenn es sich nicht um tatsächliche Bedrohungen handelt, können sie als unbegründet abgetan werden.
+Nachdem Sie die Vorfälle geprüft haben, müssen Sie feststellen, ob es sich um potenzielle Angriffe handelt. Wenn es sich nicht um tatsächliche Bedrohungen handelt, können sie verworfen werden. Wenn Sie eine Warnung verwerfen, werden alle automatisch als Reaktion auf einen potenziellen Ransomware-Angriff erstellten Snapshot Kopien dauerhaft gelöscht.
 
-Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden. Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten und ordnet es dem normalen Betrieb zu, sodass bei einem solchen Verhalten keine Warnung mehr ausgelöst wird.
-
-Wenn Sie eine Arbeitslast verwerfen, werden alle Snapshot-Kopien, die automatisch als Reaktion auf einen potenziellen Ransomware-Angriff erstellt wurden, dauerhaft gelöscht.
+Bei Warnmeldungen, die durch Verschlüsselungsereignisse (Entropie) ausgelöst werden, lernt Ransomware Resilience aus Ihrer Bestätigung der Warnmeldung, dass die Aktivität dem normalen Betrieb zuzuordnen ist; zukünftig erhalten Sie keine Warnmeldungen mehr, die auf dieser Art von Aktivität basieren. Dies liegt daran, dass Verschlüsselungsereignisse (Entropie) von ARP/AI verwaltet werden. Bei Warnmeldungen, die durch link:concept-ransomware-resilience.html#attack-types["andere Ereignisse"] ausgelöst werden, lernt Ransomware Resilience nicht aus der Bestätigung, da diese Warnmeldungen auf Benutzeraktivitätsmustern basieren.
 
 
 CAUTION: Wenn Sie eine Warnung verwerfen, können Sie ihren Status nicht ändern oder diese Änderung rückgängig machen.

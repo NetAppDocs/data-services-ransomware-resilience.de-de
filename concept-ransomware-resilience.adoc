@@ -141,6 +141,7 @@ image:diagram-rp-architecture-preview3.png["Diagramm zur Ransomware-Resilienzarc
 
 | *ERKENNEN*  a| 
 * Erkennt potenzielle Angriffe mit einem integrierten Machine-Learning-Modell (ML), das potenziell anomale Verschlüsselung und Aktivität erkennt.
+* Erkennt Verhaltensmuster von Nutzern, um bösartige Nutzeraktivitäten zu identifizieren.
 * Bietet eine zweischichtige Erkennung, die mit der Erkennung potenzieller Ransomware-Angriffe im Primärspeicher beginnt und auf abnormale Aktivitäten reagiert, indem zusätzliche automatisierte Snapshot-Kopien erstellt werden, um die nächstgelegenen Datenwiederherstellungspunkte zu erstellen.  Ransomware Resilience bietet die Möglichkeit, tiefer zu graben, um potenzielle Angriffe präziser zu identifizieren, ohne die Leistung der primären Workloads zu beeinträchtigen.
 * Bestimmt die spezifischen verdächtigen Dateien und ordnet diese Angriffe den zugehörigen Workloads zu. Dabei kommen ONTAP, Autonomous Ransomware Protection (ARP oder ARP/AI, abhängig von Ihrer ONTAP Version) und FPolicy-Technologien zum Einsatz.
 
@@ -162,7 +163,7 @@ image:diagram-rp-architecture-preview3.png["Diagramm zur Ransomware-Resilienzarc
 
 
 | *REGIEREN*  a| 
-* Weist die Ransomware-Schutzstrategien zu
+* Weist Strategien zum Schutz vor Ransomware zu.
 * Hilft Ihnen dabei, die Ergebnisse zu überwachen.
 
 
