@@ -21,3 +21,5 @@
 
 | Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
 |===
+
+NOTE: link:concept-user-behavior.html["Benutzeraktivitätserkennung"] muss so konfiguriert werden, dass Verschlüsselung (Benutzerverhalten), Datenschutzverletzungen, Datenzerstörung und Angriffe mit verdächtigem Benutzerverhalten erkannt werden.

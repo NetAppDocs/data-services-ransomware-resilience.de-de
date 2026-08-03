@@ -55,30 +55,30 @@ Vor dem Ausführen einer Simulation müssen Sie die Bereitschaftsübung konfigur
 
 | Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
 |===
+
+NOTE: link:concept-user-behavior.html["Benutzeraktivitätserkennung"] muss so konfiguriert werden, dass Verschlüsselung (Benutzerverhalten), Datenschutzverletzungen, Datenzerstörung und Angriffe mit verdächtigem Benutzerverhalten erkannt werden.
+
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
+
+.Bevor Sie beginnen
+* Um eine Bereitschaftsübung für jede Art von Ransomware-Angriff außer Verschlüsselung (Entropie) zu konfigurieren, muss link:concept-user-behavior.html["Benutzeraktivitätserkennung"] konfiguriert sein.
+* Wenn eine Bereitschaftsübung für eine CIFS-Workload erstellt wird, müssen Benutzeranmeldeinformationen eingegeben werden. Für Bereitschaftsübungen, insbesondere beim Testen von Angriffstypen, die Benutzeraktivitäten betreffen (also Datenpannen), empfiehlt sich die Erstellung eines dedizierten Testbenutzers außerhalb der Produktionsumgebung. Wird ein realer Produktionsbenutzer verwendet, markiert Ransomware Resilience diesen Benutzer, was dazu führen kann, dass der Benutzer vom Zugriff auf Produktionsdaten ausgeschlossen wird. Wird ein Testbenutzer verwendet, behalten alle Benutzer den normalen Zugriff auf die Daten.
+
 
 .Schritte
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . In der Readiness-Drill-Karte auf der Seite „Einstellungen“ die Option *Konfigurieren* auswählen.
 +
-Die Konsole zeigt die Seite „Configure readiness drill“ an.
-
-+
 image:screen-settings-alert-drill-configure.png["Seite zur Konfiguration der Bereitschaftsübung"]
 
 . Den *Ransomware-Angriffstyp* auswählen.
-+
-** **Benutzerdefinierte Wiederherstellung**: Auf einen Verschlüsselungsangriff (Entropieangriff) kann mit einer link:rp-use-recover.html["benutzerdefinierte Wiederherstellung"]Wiederherstellung reagiert werden, bei der der Wiederherstellungspunkt konfiguriert wird.
-** **Saubere Wiederherstellung**: Auf einen Verschlüsselungsangriff (Entropieangriff) mit einem link:task-clean-restore-recover.html["Clean Restore"] Prozess zur Wiederherstellung reagieren, der zu optimierten Wiederherstellungspunkten führt.
-** **Wiederherstellung nach einem Datenleck**: link:suspicious-user-activity.html["ein Benutzeraktivitätsagent"] muss konfiguriert sein, bevor dieser Übungstyp aktiviert werden kann.
-
-
 . Wählen Sie die Umgebung, in der der Bereitschaftsübungstest erstellt wird.
 +
-.. Den **Konsolenagent** und das **System** auswählen.
-.. Nach Auswahl des **Systems** wird die **Storage VM** aus der vorausgefüllten Liste ausgewählt.
-.. Ein Name für die **New test workload** wird angegeben. Die Test-Workload wird mit "rps_test_" versehen.
-.. Wenn die Bereitschaftsübung der Wiederherstellung nach einem Datenleck dient, ist der **Benutzeraktivitätsagent** für die Übungsumgebung auszuwählen.
+.. Den **Konsolenagenten** und das **primäre System** auswählen.
+.. Nachdem das primäre System ausgewählt wurde, die **Storage VM** aus der vorausgefüllten Liste auswählen.
+.. Wenn die Storage-VM das CIFS-Protokoll verwendet, sind die Active Directory-Anmeldeinformationen einzugeben. Optional kann die **Active Directory-Domäne** eingegeben werden; **Benutzername** und **Kennwort** müssen jedoch eingegeben werden. Es wird empfohlen, Anmeldeinformationen für einen dedizierten Testbenutzer einzugeben.
+.. Geben Sie einen Namen für die **New test workload** an. Die Test-Workload wird mit  `rps_test_` vorangestellt.
+.. Wenn die Bereitschaftsübung für einen Angriffstyp vom Typ Benutzeraktivität ist, den **Benutzeraktivitätsagent** für die Übungsumgebung auswählen.
 
 
 . Wählen Sie *Speichern*.

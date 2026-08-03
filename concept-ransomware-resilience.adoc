@@ -195,6 +195,9 @@ Ransomware Resilience erkennt fünf Arten von Ransomware-Angriffen:
 | Verdächtiges Nutzerverhalten | Ransomware Resilience identifiziert anomales Verhalten, das über den Rahmen von Datenlecks, Datenzerstörung oder Verschlüsselung hinausgeht. 
 |===
 
+NOTE: link:concept-user-behavior.html["Benutzeraktivitätserkennung"] muss so konfiguriert werden, dass Verschlüsselung (Benutzerverhalten), Datenschutzverletzungen, Datenzerstörung und Angriffe mit verdächtigem Benutzerverhalten erkannt werden.
+
+
 NOTE: Um einen bestimmten Benutzer zu identifizieren, der für einen Angriff verantwortlich ist, müssen Sie link:concept-user-behavior.html["Erkennung des Benutzerverhaltens."] Review link:rp-reference-limitations.html["Einschränkungen"] überprüfen, um festzustellen, ob Ihr System die Erkennung von Benutzeraktivitäten unterstützt.
 
 

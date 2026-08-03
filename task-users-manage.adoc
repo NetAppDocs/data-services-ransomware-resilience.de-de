@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-users-manage.html 
-keywords: user activity detection, 
+keywords: user activity detection, block user, stop alerts, exclude users, alert management 
 summary: Nach dem Erstellen des Benutzerverzeichnis-Connectors in NetApp Ransomware Resilience ist es möglich, Benutzer zu sperren und zu entsperren sowie Benutzer von Warnmeldungen auszuschließen. Auch das Ausschließen von Dateipfaden von der Generierung von Warnmeldungen ist möglich. 
 ---
 = Warnmeldungen und blockierte Benutzer in NetApp Ransomware Resilience verwalten
