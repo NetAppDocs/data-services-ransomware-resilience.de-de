@@ -62,7 +62,7 @@ NOTE: link:concept-user-behavior.html["Benutzeraktivitätserkennung"] muss so ko
 
 .Bevor Sie beginnen
 * Um eine Bereitschaftsübung für jede Art von Ransomware-Angriff außer Verschlüsselung (Entropie) zu konfigurieren, muss link:concept-user-behavior.html["Benutzeraktivitätserkennung"] konfiguriert sein.
-* Wenn eine Bereitschaftsübung für eine CIFS-Workload erstellt wird, müssen Benutzeranmeldeinformationen eingegeben werden. Für Bereitschaftsübungen, insbesondere beim Testen von Angriffstypen, die Benutzeraktivitäten betreffen (also Datenpannen), empfiehlt sich die Erstellung eines dedizierten Testbenutzers außerhalb der Produktionsumgebung. Wird ein realer Produktionsbenutzer verwendet, markiert Ransomware Resilience diesen Benutzer, was dazu führen kann, dass der Benutzer vom Zugriff auf Produktionsdaten ausgeschlossen wird. Wird ein Testbenutzer verwendet, behalten alle Benutzer den normalen Zugriff auf die Daten.
+* Wenn eine Bereitschaftsübung für eine CIFS-Workload erstellt wird, müssen Benutzeranmeldeinformationen eingegeben werden. Für Bereitschaftsübungen empfiehlt sich die Erstellung eines dedizierten Testbenutzers außerhalb der Produktionsumgebung, insbesondere beim Testen von Angriffstypen, die Benutzeraktivitäten betreffen (also Datenlecks). Wird ein realer Produktionsbenutzer verwendet und zeigt dieser verdächtiges Verhalten auf anderen Produktionsvolumes, können diese Warnungen unter der Bereitschaftsübung erscheinen, anstatt eine echte Warnung zu generieren.
 
 
 .Schritte

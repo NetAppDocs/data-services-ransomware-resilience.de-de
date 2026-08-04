@@ -30,7 +30,7 @@ Sie können Benutzer sperren, wenn Sie der Ansicht sind, dass sie für böswilli
 . Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
 . Die Registerkarte **Benutzer** auswählen.
 . **Benutzer blockieren** auswählen.
-. Wählen Sie die Dauer der Sperrung: Sie kann eine Stunde bis zu 24 Stunden oder dauerhaft betragen.
+. Wählen Sie die Dauer der Sperrung. Benutzer können dauerhaft gesperrt oder eine Sperre mit einer Dauer zwischen 1 und 24 Stunden festgelegt werden.
 . Aktivieren Sie das Kontrollkästchen neben den Namen der Benutzer, die blockiert werden sollen.
 . **Block** auswählen.
 
@@ -40,7 +40,7 @@ Sie können Benutzer sperren, wenn Sie der Ansicht sind, dass sie für böswilli
 . Im Dashboard „Einstellungen“ befindet sich die Kachel „Benutzeraktivitätsüberwachung“, anschließend **Verwalten** auswählen.
 . Die Registerkarte **Benutzer** auswählen.
 . **Benutzerblockierung bearbeiten** auswählen.
-. Wählen Sie die gewünschte Änderung. Zum Ändern der Sperrdauer **Zeitraum für gesperrte Benutzer** auswählen und die Dauer anpassen. Zum Entfernen von Benutzern aus der Liste der gesperrten Benutzer **Benutzer entsperren** auswählen.
+. Wählen Sie aus, welche Qualität der Benutzerblockierung geändert werden soll. Zum Ändern der Dauer der Blockierung **Zeitraum für gesperrte Benutzer** auswählen und anschließend den **Zeitraum** anpassen. Zum Entfernen von Benutzern aus der Liste der gesperrten Benutzer **Benutzer entsperren** auswählen.
 . Aktivieren Sie das Kontrollkästchen neben dem Namen des gesperrten Benutzers, dessen Status geändert werden soll.
 . **Speichern** auswählen.
 
