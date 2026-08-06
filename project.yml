@@ -58,6 +58,8 @@ sidebar:
           url: "/suspicious-user-activity.html"
         - title: Benachrichtigungen und blockierte Benutzer verwalten
           url: "/task-users-manage.html"
+        - title: Fehlerbehebung beim Benutzeraktivitätsagenten
+          url: "/troubleshoot-user-activity.html"
       - title: Schutzgruppen verwalten
         url: "/task-protection-group.html"
       - title: Scannen nach personenbezogenen Daten
