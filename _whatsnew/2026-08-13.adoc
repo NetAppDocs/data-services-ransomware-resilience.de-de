@@ -1,0 +1,12 @@
+= Einen Datensammler löschen
+:allow-uri-read: 
+
+
+
+
+[[delete-a-data-collector]]
+=== Einen Datensammler löschen
+
+Ransomware Resilience unterstützt nun das Löschen eines Datensammlers. Der Datensammler wird automatisch erstellt, wenn die Benutzeraktivitätserkennung für Workloads aktiviert wird; falls der Datensammler veraltet ist, kann er nun manuell gelöscht werden.
+
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#delete-a-data-collector["Einen Datensammler löschen"^].

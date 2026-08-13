@@ -91,6 +91,21 @@ image:user-activity-settings.png["Screenshot der Benutzeraktivitätseinstellunge
 
 
 
+[[delete-a-data-collector]]
+=== Einen Datensammler löschen
+
+Wenn ein Datensammler veraltet ist oder nicht mehr funktioniert, kann er gelöscht werden. Jede Arbeitslast, die vom Datensammler überwacht wurde, wird nach dem Löschen nicht mehr auf verdächtiges Benutzerverhalten überwacht.
+
+.Schritte
+. Gehen Sie in Ransomware Resilience zu *Einstellungen*.
+. Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
+. Die Registerkarte *Agenten und Sammler* und dann *Datensammler* auswählen.
+. Identifizieren Sie den Datensammler, den Sie löschen möchten. Im Aktionsmenü **Löschen** auswählen.
+. Im Dialogfeld wählen Sie *Löschen* aus, um zu bestätigen.
+
+
+
+
 [[create-a-user-directory-connector]]
 == Erstellen Sie einen Benutzerverzeichnis-Connector
 
@@ -99,7 +114,7 @@ Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-
 .Schritte
 . Gehen Sie in Ransomware Resilience zu *Einstellungen*.
 . Im Feld „Benutzeraktivitätsüberwachung“ **Verwalten** auswählen.
-. Wählen Sie die Registerkarte **Benutzerverzeichnis-Konnektoren** und dann **Hinzufügen**.
+. Wählen Sie die Registerkarte *Agenten und Sammler*, dann die Registerkarte **Benutzerverzeichnis-Konnektoren** und anschließend **Hinzufügen**.
 . Konfigurieren Sie die Verbindung. Geben Sie die erforderlichen Informationen für jedes Feld ein.
 +
 [cols="25,75"]

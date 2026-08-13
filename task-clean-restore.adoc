@@ -525,8 +525,8 @@ Die Vorgehensweise zum Einrichten eines isolierten Wiederherstellungsraums unter
 .Cloud
 --
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
-. Wählen Sie in der Karte „Saubere Wiederherstellung“ die Option **Hinzufügen**, um die isolierte Wiederherstellungsumgebung zu erstellen.
-. Im Abschnitt „Typ“ wählen Sie *Nur Reinigung*.
+. In der Karte „Isolation, Reinigung und Wiederherstellung“ die Option **Hinzufügen** auswählen, um die isolierte Wiederherstellungsumgebung zu erstellen.
+. Im Abschnitt „Typ“ *Reinigung auf Abruf* auswählen.
 . Erweitern Sie den Abschnitt **Name**. Geben Sie einen **Name** für die Umgebung ein.
 . Für ein Cloud-basiertes IRE wählen Sie **Amazon Web Services**.
 . Erweitern Sie den Abschnitt *Systeme*. Wählen Sie die Systeme aus, die Sie mit dem IRE verbinden möchten. Für jedes ausgewählte System müssen Sie die IP-Adresse, die Subnetzmaske und das Gateway der Speicher-VM angeben.
@@ -535,18 +535,18 @@ Die Vorgehensweise zum Einrichten eines isolierten Wiederherstellungsraums unter
 NOTE: Für IREs, die auf Amazon FSx for NetApp ONTAP bereitgestellt werden, ist die Angabe dieser Informationen nicht erforderlich.
 
 +
-image:clean-restore-systems.png["Screenshot der Systemauswahloberfläche."]
+image::clean-restore-systems.png[Screenshot der Systemauswahloberfläche.]
 
 . Erweitern Sie den Abschnitt **Authentifizierung**.
 +
 ** Geben Sie die **Account**-ID in der Cloud ein und wählen Sie im Dropdown-Menü die **Region** für das Konto aus. Sie können eine IRE nur in einer unterstützten Region bereitstellen.
 ** Geben Sie den **Zugriffsschlüssel** und den **Geheimschlüssel** für das Konto ein.
++
+image::screenshot-set-up-recovery-environment.png[Screenshot der IRE-Authentifizierungseinrichtung.]
+
 
 
 . Erweitern Sie den Abschnitt *Virtuelle private Cloud (VPC)*. Geben Sie die VPC-ID ein, in der die IRE bereitgestellt werden soll.
-+
-image:screenshot-set-up-recovery-environment.png["Screenshot der IRE-Authentifizierungseinrichtung."]
-
 . Wählen Sie **Hinzufügen**, um den IRE zu erstellen.
 +
 Ransomware Resilience testet die Verbindung, nachdem Sie „Hinzufügen“ ausgewählt haben, was einige Minuten dauern kann. Die IRE wurde erfolgreich bereitgestellt, wenn ihr Status als „deployed“ angezeigt wird.
@@ -558,18 +558,15 @@ Ransomware Resilience testet die Verbindung, nachdem Sie „Hinzufügen“ ausge
 --
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . Wählen Sie auf der Karte „Clean restores“ die Option **Hinzufügen**, wenn dies Ihre erste Umgebung ist, oder **Verwalten**, wenn Sie bereits eine erstellt haben.
-. Im Abschnitt „Typ“ wählen Sie *Nur Reinigung*.
+. Im Abschnitt „Typ“ *Reinigung auf Abruf* auswählen.
 . Erweitern Sie den Abschnitt *Name*. Weisen Sie dem IRE einen **Namen** zu.
 . Wählen Sie als Standort **On-premises** aus.
 . Erweitern Sie den Abschnitt *Systeme*. Wählen Sie die Systeme aus, die Sie mit dem IRE verbinden möchten. Weisen Sie jedem System, dessen Workloads im IRE wiederhergestellt werden sollen, eine Speicher-VM-IP-Adresse, eine Subnetzmaske und ein Gateway zu.
 +
 Jedem ausgewählten System muss eine IP-Adresse zugewiesen sein. Sie können primäre oder sekundäre Systeme auswählen. Sekundäre Systeme können für Analyse und Wiederherstellung verwendet werden, falls das primäre System keine unverschlüsselten Snapshots enthält oder nicht verfügbar ist.
 
-+
-image:clean-restore-systems.png["Screenshot der Systemauswahloberfläche."]
-
 . Erweitern Sie den Abschnitt **Konsolenagent**. Wählen Sie den Konsolenagenten aus dem Dropdown-Menü aus, der im IRE bereitgestellt ist.
-. Erweitern Sie den Abschnitt *Compute*.
+. Den Abschnitt *Clean room compute* erweitern.
 +
 .. Geben Sie die Anmeldeinformationen zur Authentifizierung des vCenter Servers an: *IP-Adresse* oder vollqualifizierter Domänenname (FQDN), *Port*, *Benutzername* und *Passwort*.
 .. Wählen Sie **Authentifizieren**, um die Anmeldeinformationen zu bestätigen. Warten Sie, bis die Benutzeroberfläche Ihre Anmeldeinformationen bestätigt hat, bevor Sie fortfahren.
@@ -581,7 +578,7 @@ image:clean-restore-compute.png["Screenshot der Benutzeroberfläche zur Computer
 
 
 
-. Erweitern Sie den Abschnitt *VMs*, der anhand Ihrer Eingaben im Abschnitt *Compute* befüllt wird.
+. Den Abschnitt *Clean room VMs* erweitern, der auf Grundlage Ihrer Eingaben im Abschnitt *Compute* befüllt ist.
 +
 .. Wählen Sie für die Linux-VM, die Ransomware Resilience zum Scannen nach Ransomware verwendet, die VM aus dem Dropdown-Menü und geben Sie dann den *Benutzernamen* und das *Passwort* für die VM ein.
 .. Wählen Sie für die zum Scannen verwendete Windows-VM die VM aus dem Dropdown-Menü aus und geben Sie anschließend den *Benutzernamen* und das *Passwort* für die VM ein.
@@ -597,7 +594,7 @@ Sie können den Fortschritt verfolgen. Wählen Sie im Tab „Einstellungen“ **
 Sie können die Systeme in einer IRE nach deren Erstellung bearbeiten. Wählen Sie im Tab „Einstellungen“ **Isolierte Wiederherstellungsumgebungen** aus. Suchen Sie die gewünschte IRE, wählen Sie das Aktionsmenü `...` und dann **Bearbeiten**. Fahren Sie fort, um die Systeme zu bearbeiten. Wählen Sie **Speichern**, wenn Sie fertig sind.
 
 
-TIP: Um Details der IRE zu ändern, wählen Sie *Einstellungen* in der Ransomware Resilience-Seitenleiste und dann in der Clean restore-Karte **Verwalten**. Wählen Sie das Aktionsmenü für die IRE und dann **Bearbeiten**, um die Konfiguration zu ändern.
+TIP: Wenn Details der IRE geändert werden müssen, ist in der Ransomware Resilience-Seitenleiste *Einstellungen* auszuwählen und anschließend in der Isolation cleaning and recovery-Karte **Manage**. Im Aktionsmenü der IRE ist dann **Edit** auszuwählen, um die Konfiguration zu ändern.
 
 
 
@@ -610,7 +607,7 @@ Eine IRE kann nicht gelöscht werden, während ein Wiederherstellungsvorgang akt
 IMPORTANT: Wenn Sie die IRE löschen, werden auch die Clean-Room-SVM und das Metadaten-Volume gelöscht. Sobald diese Assets gelöscht wurden, können Sie keine Berichte mehr für die Clean Restore generieren.
 
 . Gehen Sie zu **Einstellungen**.
-. Wählen Sie in der Karte „Clean restore“ die Option **Verwalten**.
+. In der Isolationsreinigungs- und Wiederherstellungskarte **Verwalten** auswählen.
 . Identifizieren Sie den Reinraum, den Sie löschen möchten. Wählen Sie das Aktionsmenü (`...`) für den IRE und dann **Löschen**.
 . Wählen Sie im Dialogfeld **Löschen**, um den Vorgang zu bestätigen.
 
