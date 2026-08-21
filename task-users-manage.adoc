@@ -11,7 +11,7 @@ summary: Nach dem Erstellen des Benutzerverzeichnis-Connectors in NetApp Ransomw
 
 
 [role="lead"]
-Nach der Konfiguration der Überwachung des Nutzerverhaltens in NetApp Ransomware Resilience besteht die Möglichkeit, Warnmeldungen anzupassen und gesperrte Benutzer zu verwalten. Die Anpassung der Warnmeldungen ermöglicht das Ausschließen bestimmter Benutzer oder Dateipfade von der Generierung einer Warnmeldung. Das Sperren von Benutzern ist als Reaktion auf Ransomware-Ereignisse vorgesehen, um schädliche Benutzeraktivitäten zu verhindern.
+Nachdem die Benutzeraktivitätserkennung in NetApp Ransomware Resilience konfiguriert wurde, besteht die Möglichkeit, gesperrte Benutzer zu verwalten und Warnmeldungen anzupassen. Es können bestimmte Benutzer oder Dateipfade von Warnmeldungen ausgeschlossen werden, und Benutzer lassen sich als Reaktion auf Ransomware-Ereignisse sperren, um schädliche Aktivitäten zu verhindern.
 
 Sie müssen link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["einen Benutzeraktivitätsagenten konfiguriert, eine Richtlinie mit Benutzeraktivitätserkennung aktiviert und einen Benutzerverzeichnis-Connector erstellt"] haben, um Benutzer zu blockieren.
 

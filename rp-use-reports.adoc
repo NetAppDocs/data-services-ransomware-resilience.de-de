@@ -12,7 +12,7 @@ summary: Mit NetApp Ransomware Resilience können Sie Berichte mit Details zu Sc
 
 
 [role="lead"]
-NetApp Ransomware Resilience liefert Berichte im JSON-Format, die Details zu unterstützten und nicht unterstützten Volumes, Übungen zur Angriffsbereitschaft, Schutzmaßnahmen, Warnungen und Wiederherstellung aufzeigen und Ihnen die Möglichkeit geben, Ransomware-Ereignisse und die Bereitschaft offline zu bewerten und zu überprüfen.
+Berichte zur NetApp Ransomware Resilience können heruntergeladen werden, um unterstützte und nicht unterstützte Volumes, Bereitschaftsübungen, Schutz, Warnmeldungen und Wiederherstellungsdaten offline zu überprüfen.
 
 
 TIP: Bevor Sie die Dateien herunterladen, aktualisieren Sie das Dashboard, um die aktuellsten Daten in Ihren Berichten zu erfassen.

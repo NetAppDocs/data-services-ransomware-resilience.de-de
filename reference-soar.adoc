@@ -11,7 +11,7 @@ summary: Integrieren und nutzen Sie SOAR-Playbooks, um Aufgaben zur Bedrohungsre
 
 
 [role="lead"]
-Ransomware Resilience bietet Sicherheitsorchestrierungs-, Automatisierungs- und Reaktions- (SOAR) Playbooks, mit denen Sie Aufgaben wie die Reaktion auf Bedrohungen automatisieren können.
+NetApp Ransomware Resilience bietet Security Orchestration, Automation, and Response (SOAR) Playbooks, die die Automatisierung von Aufgaben wie der Reaktion auf Bedrohungen ermöglichen.
 
 Ransomware Resilience Playbooks bieten die folgenden Funktionen:
 

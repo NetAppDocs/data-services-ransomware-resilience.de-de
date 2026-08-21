@@ -12,7 +12,7 @@ summary: Während der Erkennung analysiert Ransomware Resilience alle Volumes un
 
 
 [role="lead"]
-Bevor Sie NetApp Ransomware Resilience nutzen können, müssen zunächst die Workload-Daten ermittelt werden. Während der Erkennung analysiert Ransomware Resilience alle Volumes und Dateien in Systemen über alle Konsolenagenten und Projekte innerhalb einer Organisation hinweg.
+Bevor Sie Workloads schützen können, muss NetApp Ransomware Resilience diese erkennen, indem Volumes und Dateien in Systemen über Console-Agenten und Projekte in Ihrer Organisation analysiert werden.
 
 Im Discovery-Dashboard zeigt Ransomware Resilience unterstützte und nicht unterstützte Systemkonfigurationen an. Ransomware Resilience bewertet Dateifreigaben und Blockspeicher.
 
@@ -28,7 +28,7 @@ Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und 
 [[select-workloads-to-discover]]
 == Wählen Sie die Workloads aus, die Sie entdecken möchten
 
-Wählen Sie innerhalb jedes Console-Agent die Systeme aus, auf denen Sie Workloads identifizieren möchten.
+Innerhalb jedes Console-Agenten werden die Systeme ausgewählt, auf denen Workloads erkannt werden sollen.
 
 Die Erkennung von Workloads schützt diese nicht automatisch. Ransomware Resilience erkennt bestehende Schutzrichtlinien von NetApp Backup and Recovery oder ONTAP während des Erkennungsprozesses. Für alle Workloads ohne Schutz müssen Sie link:rp-use-protect.html["Schutz konfigurieren"].
 
@@ -53,7 +53,7 @@ image:screen-discover-workloads.png["Screenshot „Workloads ermitteln“"]
 . Wählen Sie die Systeme aus, auf denen Sie die Erkennung durchführen möchten.
 . Wählen Sie *Entdecken*.
 +
-Ransomware Resilience erkennt Workload-Daten nur, wenn Sie das System auswählen. Der Ermittlungsprozess kann mehrere Minuten dauern.
+Ransomware Resilience ermittelt Workload-Daten nur für die von Ihnen ausgewählten Systeme. Der Ermittlungsprozess kann einige Minuten dauern.
 
 . Um die Liste der erkannten Workloads herunterzuladen, wählen Sie *Ergebnisse herunterladen*.
 . Um das Ransomware Resilience-Dashboard anzuzeigen, wählen Sie *Zum Dashboard gehen*.
@@ -73,7 +73,7 @@ link:rp-use-dashboard.html["Erfahren Sie, was das Dashboard Ihnen anzeigt."]
 [[discover-newly-created-workloads-for-previously-selected-systems]]
 == Entdecken Sie neu erstellte Workloads für zuvor ausgewählte Systeme
 
-Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, müssen Sie die Erkennung erneut initiieren, um die neuen Workloads zu schützen.
+Wenn Sie einem zuvor erkannten System Workloads hinzugefügt haben, sollte die Erkennung erneut ausgeführt werden, damit die neuen Workloads identifiziert und geschützt werden.
 
 .Schritte
 . Um den Zeitpunkt der letzten Erkennung zu ermitteln, sehen Sie sich den Datums- und Zeitstempel neben dem Symbol *Aktualisieren* oben rechts im Ransomware-Resilienz-Dashboard an.
@@ -88,7 +88,7 @@ TIP: Falls Sie feststellen, dass für das von Ihnen ermittelte System keine Volu
 [[discover-new-systems]]
 == Entdecken Sie neue Systeme
 
-Wenn Sie bereits eine Erkennung auf einem System durchgeführt und anschließend eine Arbeitslast hinzugefügt haben, führen Sie die Erkennung erneut durch, um die Arbeitslasten zu identifizieren.
+Wenn bereits eine Erkennung auf einem System durchgeführt wurde und später eine Arbeitslast hinzugefügt wurde, sollte die Erkennung erneut durchgeführt werden, um diese zu identifizieren.
 
 .Schritte
 . Wählen Sie in NetApp Ransomware Resilience *Einstellungen* aus.
@@ -102,7 +102,7 @@ Wenn Sie bereits eine Erkennung auf einem System durchgeführt und anschließend
 [[exclude-workloads]]
 == Arbeitslasten ausschließen
 
-Ransomware-Resilienz ermöglicht es Ihnen, bestimmte Workloads in einem System vom Ransomware-Schutz und der Erkennung auszuschließen.
+Ransomware Resilience ermöglicht das Ausschließen bestimmter Workloads in einem System vom Ransomware-Schutz und der Erkennung.
 
 Sie können nur solche Workloads ausschließen, die unterstützt werden und erfolgreich erkannt wurden. Sie können die Liste der ausgeschlossenen Workloads jederzeit ändern. Für Workloads, die von der Ransomware-Resilienz ausgeschlossen sind, werden keine Gebühren erhoben.
 
@@ -128,5 +128,5 @@ image:settings-excluded-workload.png["Screenshot des Dashboards mit den Einstell
 Um mehrere Workloads zu entfernen, wählen Sie das Kontrollkästchen neben den Workloads aus, die Sie entfernen möchten, und klicken Sie dann auf **Aus ausgeschlossenen entfernen**.
 
 . Wählen Sie im Dialogfeld **Entfernen**, um zu bestätigen, dass Sie die Workloads aus der Ausschlussliste entfernen möchten.
-. Wenn die Arbeitslast erfolgreich aus der Liste der ausgeschlossenen Arbeitslasten entfernt wurde, erscheint eine Erfolgsmeldung auf der Seite „Ausgeschlossene Arbeitslasten“ und die Arbeitslast wird nicht mehr in der Liste der ausgeschlossenen Arbeitslasten angezeigt. Wenn die Aktion fehlschlägt, wird eine Fehlermeldung angezeigt; versuchen Sie den Vorgang erneut. image:exclude-workload-remove-successful.png["Screenshot der erfolgreichen Entfernung einer ausgeschlossenen Arbeitslast."]
+. Wenn die Arbeitslast erfolgreich aus der Liste der ausgeschlossenen Arbeitslasten entfernt wird, erscheint eine Erfolgsmeldung auf der Seite „Ausgeschlossene Arbeitslasten“ und die Arbeitslast erscheint nicht mehr in der Liste der ausgeschlossenen Arbeitslasten. Schlägt die Aktion fehl, erscheint eine Fehlermeldung; der Vorgang kann erneut versucht werden. image:exclude-workload-remove-successful.png["Screenshot der erfolgreichen Entfernung einer ausgeschlossenen Arbeitslast."]
 

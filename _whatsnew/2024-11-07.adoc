@@ -27,4 +27,4 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html
 [[free-trial-now-30-days]]
 === Jetzt 30 Tage kostenlos testen
 
-Mit dieser Version können neue Bereitstellungen des BlueXP ransomware protection jetzt 30 Tage lang kostenlos getestet werden.  Zuvor war der BlueXP ransomware protection 90 Tage lang als kostenlose Testversion verfügbar.  Wenn Sie bereits an der 90-tägigen kostenlosen Testversion teilnehmen, gilt dieses Angebot für die nächsten 90 Tage.
+Neue Bereitstellungen von BlueXP Ransomware Protection verfügen jetzt über eine 30-tägige kostenlose Testphase. Zuvor bot BlueXP Ransomware Protection eine 90-tägige kostenlose Testphase an. Wer sich bereits in der 90-tägigen kostenlosen Testphase befindet, erhält dieses Angebot weiterhin für 90 Tage.

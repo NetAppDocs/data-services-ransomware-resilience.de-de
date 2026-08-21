@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: support/task-get-help.html 
 keywords: help, ticket, open support case, support, netapp support, technical support, call support, phone number, open ticket, web ticket, open an issue 
-summary: 'NetApp bietet Support für Ransomare Resilience auf verschiedene Weise. Umfangreiche kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, beispielsweise Knowledgebase-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung beinhaltet technischen Remote-Support per Web-Ticketing.' 
+summary: 'NetApp bietet Unterstützung für Ransomware Resilience auf verschiedene Weise. Umfangreiche kostenlose Selbsthilfeoptionen stehen 24x7 zur Verfügung, wie zum Beispiel Knowledgebase (KB)-Artikel und ein Community-Forum. Die Support-Registrierung umfasst technischen Support aus der Ferne über Web-Ticketing.' 
 ---
 = Hilfe zur Ransomware Resilience erhalten
 :allow-uri-read: 

@@ -12,16 +12,16 @@ summary: Wenn Ransomware Resilience einen möglichen Angriff erkennt, erscheint 
 
 
 [role="lead"]
-Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung im Dashboard und im Benachrichtigungsmenü angezeigt. Ransomware Resilience erstellt sofort eine Snapshot. Wenn Sie eine Warnung erhalten, überprüfen Sie das potenzielle Risiko im *Alerts*-Tab von Ransomware Resilience, um die Auswirkungen auf Ihre Daten einzuschätzen und einen möglichen Ransomware-Angriff zu verhindern.
+Wenn NetApp Ransomware Resilience einen möglichen Angriff erkennt, wird eine Warnung im Dashboard und im Benachrichtigungsmenü angezeigt und sofort ein Snapshot erstellt. Die Warnung im Tab *Warnungen* bietet eine Einschätzung des Risikos für Ihre Daten und unterstützt die Entscheidung über eine geeignete Reaktion.
 
 Wenn Ransomware Resilience einen möglichen Angriff erkennt, erscheint eine Benachrichtigung in den Console Notification-Einstellungen und eine E-Mail wird an die konfigurierten Adressen gesendet. Die E-Mail enthält Informationen über den Schweregrad, die betroffene Workload und einen Link zur Warnung im Tab *Alerts* von Ransomware Resilience.
 
-Sie können Fehlalarme ignorieren oder sich für eine sofortige Wiederherstellung Ihrer Daten entscheiden.
+Sie können Fehlalarme ignorieren oder die Wiederherstellung sofort starten.
 
 
 TIP: Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten, ordnet es dem normalen Betrieb zu und sendet keine Warnungen mehr bei ähnlichen Ereignissen.
 
-Um mit der Wiederherstellung Ihrer Daten zu beginnen, markieren Sie die Warnung als „bereit zur Wiederherstellung“, damit Ihr Speicheradministrator mit dem Wiederherstellungsprozess beginnen kann.
+Zur Einleitung der Wiederherstellung wird die Warnung als bereit zur Wiederherstellung markiert, sodass Ihr Speicheradministrator den Wiederherstellungsprozess starten kann.
 
 Jede Warnung kann mehrere Vorfälle mit unterschiedlichem Umfang und Status umfassen.  Überprüfen Sie alle Vorfälle.
 
@@ -216,7 +216,7 @@ Wenn Sie die Verhaltenserkennung für Benutzer konfiguriert haben, können Sie D
 .. Um einen verdächtigen Benutzer in Ihrer Umgebung zu blockieren, wählen Sie *Block* neben dem Namen des Benutzers aus.
 .. Um Benachrichtigungen für einen Benutzer zu deaktivieren, der Gegenstand einer nachweislich falschen Benachrichtigung ist, wählen Sie die drei Punkte (`...` und anschließend **Diesen Benutzer von der Überwachung ausschließen**. Überprüfen Sie den Dialog und wählen Sie dann **Ausschließen** zur Bestätigung.
 .. Im Feld *Antworten* wird mit **Jetzt Snapshot erstellen** ein Snapshot erstellt.
-.. Wenn auf der SVM eine automatische Antwort aktiviert wurde, kann über **Benutzerblockierung bearbeiten** der Benutzer gesperrt werden. Zum Sperren des Benutzers **Zeitraum für gesperrten Benutzer** auswählen und die Dauer der Sperre festlegen (von einer Stunde bis dauerhaft). Der Benutzer kann auch wieder entsperrt werden, falls die Warnung nicht als Ransomware-Ereignis eingestuft wird. **Speichern** auswählen.
+.. Wenn auf der SVM eine automatische Antwort aktiviert wurde, kann über **Benutzerblockierung bearbeiten** der Benutzer gesperrt werden. Zum Sperren des Benutzers ist **Zeitraum für gesperrten Benutzer** auszuwählen und die Dauer der Sperre festzulegen (von einer Stunde bis dauerhaft). Auch eine Entsperrung des Benutzers ist möglich, falls die Warnung nicht als Ransomware-Ereignis eingestuft wird. **Speichern** auswählen.
 
 
 

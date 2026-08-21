@@ -11,7 +11,7 @@ summary: Falls bei der Installation des Benutzeraktivitätsagenten in NetApp Ran
 
 
 [role="lead"]
-Wenn bei der Installation oder Ausführung des Benutzeraktivitätsagenten in NetApp Ransomware Resilience ein Problem auftritt, finden Sie im Folgenden häufige Szenarien und deren Lösungen.
+Falls bei der Installation oder Ausführung des Benutzeraktivitätsagenten in NetApp Ransomware Resilience Probleme auftreten, bieten diese häufigen Szenarien und Lösungen eine Orientierung.
 
 
 

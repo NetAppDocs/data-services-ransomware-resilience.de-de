@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-protection-group.html 
-keywords: ransomware protection, protection group, modify, create, 
+keywords: ransomware protection, protection group, modify, create 
 summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einem Workload in NetApp Ransomware Resilience Richtlinien zuweisen. 
 ---
 = Schutzgruppen in NetApp Ransomware Resilience verwalten
@@ -12,7 +12,7 @@ summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie ein
 
 
 [role="lead"]
-NetApp Ransomware Resilience bietet Schutzgruppen zur einfacheren Verwaltung Ihrer Datenbestände. Schutzgruppen sind logische Gruppierungen von Workloads. Ransomware Resilience kann alle Volumes in einer Schutzgruppe gleichzeitig mit einer einzigen Datensicherungsstrategie schützen, sodass Sie keine Strategie für jeden Workload einzeln anwenden müssen.
+In NetApp Ransomware Resilience Schutzgruppen dienen dazu, zusammengehörige Workloads gemeinsam zu verwalten und eine einheitliche Datensicherungsstrategie für die Workloads in der Gruppe anzuwenden.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^] oder die Administratorrolle für Ransomware Resilience. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
@@ -21,7 +21,7 @@ NetApp Ransomware Resilience bietet Schutzgruppen zur einfacheren Verwaltung Ihr
 [[create-a-protection-group]]
 == Erstellen einer Schutzgruppe
 
-Sie können Gruppen unabhängig von ihrem Schutzstatus erstellen (d. h. Gruppen, die nicht geschützt sind, und Gruppen, die geschützt sind). Wenn Sie einer Schutzgruppe eine Datensicherungsstrategie hinzufügen, ersetzt die neue Datensicherungsstrategie alle vorhandenen Richtlinien, einschließlich der von NetApp Backup and Recovery verwalteten Richtlinien.
+Sie können Gruppen unabhängig vom Schutzstatus der hinzugefügten Workloads erstellen. Wenn einer Schutzgruppe eine Datensicherungsstrategie hinzugefügt wird, ersetzt die neue Strategie alle vorhandenen Strategien, einschließlich der von NetApp Backup and Recovery verwalteten Strategien.
 
 Die Workloads in einer Schutzgruppe müssen vom selben Workload-Typ sein, das heißt, Block- und Dateisystem-Workloads dürfen nicht gemischt werden. Die Workloads müssen außerdem demselben Systemtyp angehören. Beispielsweise kann eine Schutzgruppe alle lokalen ONTAP Dateisystem-Workloads enthalten; Amazon FSx for NetApp ONTAP Workloads können nicht derselben Schutzgruppe hinzugefügt werden.
 

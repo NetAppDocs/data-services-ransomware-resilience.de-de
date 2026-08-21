@@ -12,7 +12,7 @@ summary: Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie ein
 
 
 [role="lead"]
-NetApp Ransomware Resilience's Schutz-Dashboard bietet einen Überblick über den Schutzstatus und die Schutzbereitschaft Ihrer Workloads. Verwenden Sie das Schutz-Dashboard, um Einblicke darin zu erhalten, was geschützt ist, was Schutz benötigt und welchen Umfang der Schutz hat.
+Das Schutz-Dashboard in NetApp Ransomware Resilience bietet einen Überblick über den Status des Workload-Schutzes, zeigt Workloads mit Handlungsbedarf auf und ermöglicht ein Verständnis der gesamten Schutzabdeckung.
 
 Sobald Sie den Umfang Ihres aktuellen Schutzes verstanden haben, link:rp-use-protect.html["Sie können Ransomware-Schutzstrategien für Ihre Workloads erstellen und anwenden"].
 

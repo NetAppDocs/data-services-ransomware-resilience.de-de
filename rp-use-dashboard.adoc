@@ -12,9 +12,9 @@ summary: Nutzen Sie die Ransomware Resilience, um festzustellen, welche Workload
 
 
 [role="lead"]
-Das NetApp Ransomware Resilience Dashboard bietet auf einen Blick Informationen über die Schutzgesundheit Ihrer Workloads. Sie können schnell feststellen, welche Workloads gefährdet oder geschützt sind, Workloads identifizieren, die von einem Vorfall betroffen oder in der Wiederherstellung sind, und das Ausmaß des Schutzes einschätzen, indem Sie sehen, wie viel Speicher geschützt oder gefährdet ist.
+Das NetApp Ransomware Resilience Dashboard bietet eine schnelle Übersicht über den Schutzstatus der Workloads, ermöglicht die Identifizierung gefährdeter oder sich in der Wiederherstellung befindlicher Workloads und gibt Aufschluss darüber, wie viel Speicher geschützt ist.
 
-Verwenden Sie das Dashboard, um Schutzvorschläge zu überprüfen, Einstellungen zu ändern und Berichte herunterzuladen.
+Das Dashboard bietet die Möglichkeit, Schutzempfehlungen zu überprüfen, Einstellungen zu ändern und Berichte herunterzuladen.
 
 *Erforderliche Konsolenrolle* Um diese Aufgabe auszuführen, benötigen Sie die link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-platform-roles.html#super-admin-roles["Super-Admin"^], Ransomware Resilience-Administrator- oder Ransomware Resilience-Betrachter-Rolle. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-ransomware-roles.html["Erfahren Sie mehr über Ransomware Resilience-Rollen für die NetApp Console"^].
 
@@ -28,7 +28,7 @@ Verwenden Sie das Dashboard, um Schutzvorschläge zu überprüfen, Einstellungen
 +
 image:screen-dashboard.png["Dashboard-Seite"]
 
-. Im Dashboard können Sie in den einzelnen Bereichen folgende Aktionen durchführen:
+. Im Dashboard können Sie in jedem Bereich die folgenden Aktionen durchführen:
 +
 ** *Schutz von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um auf der Seite „Schutz“ alle gefährdeten oder geschützten Workloads anzuzeigen.  Wenn die Schutzstufen nicht mit einer Schutzrichtlinie übereinstimmen, sind Workloads gefährdet. Weitere Informationen finden Sie unter link:rp-use-protect.html["Workloads schützen"] .
 +
@@ -61,7 +61,7 @@ TIP: Wählen Sie den Tooltip „i“ aus, um Tipps zu diesen Daten anzuzeigen. U
 
 
 
-** *Empfohlene Maßnahmen*: Um den Schutz zu erhöhen, überprüfen Sie jede Empfehlung und wählen Sie dann *Überprüfen und beheben*.
+** *Empfohlene Maßnahmen*: Zur Erhöhung des Schutzes sollten alle Empfehlungen geprüft und *Überprüfen und beheben* ausgewählt werden.
 +
 Siehe link:rp-use-dashboard.html#review-protection-recommendations-on-the-dashboard["Schutzvorschläge auf dem Dashboard prüfen"] oder link:rp-use-protect.html["Workloads schützen"].
 

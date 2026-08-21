@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-clean-restore.html 
 keywords: clean room, clean restore, secure recovery, restore, isolated recovery environment 
-summary: Bevor Sie eine vollständige Wiederherstellung in NetApp Ransomware Resilience durchführen, müssen Sie eine isolierte Wiederherstellungsumgebung erstellen, um die Umgebung abzugrenzen und zu bereinigen. 
+summary: Bevor eine vollständige Wiederherstellung in NetApp Ransomware Resilience durchgeführt wird, ist eine isolierte Wiederherstellungsumgebung zu erstellen, um die Umgebung abzugrenzen und zu bereinigen. 
 ---
 = Konfigurieren Sie die Umgebung für eine saubere Wiederherstellung in NetApp Ransomware Resilience
 :hardbreaks:
@@ -23,7 +23,7 @@ NetApp Ransomware Resilience bietet saubere Wiederherstellungen, die eine gefüh
 [[learn-about-clean-restores]]
 == Erfahren Sie mehr über Clean Restores
 
-Wenn Sie eine vollständige Wiederherstellung durchführen, führt Sie Ransomware Resilience durch einen mehrstufigen Prozess, der die Wiederherstellung optimiert.
+Bei einer vollständigen Wiederherstellung führt Ransomware Resilience durch einen mehrstufigen Prozess, der die Wiederherstellung optimiert.
 
 * **EINRICHTUNG**: Für eine vollständige Wiederherstellung müssen Sie zunächst eine IRE erstellen und anschließend die wiederherzustellende Workload auswählen. Ransomware Resilience erstellt einen sauberen Raum, in dem alle Aktionen für die Workload ausgeführt werden.
 * **ANALYSE**: Im Clean Room analysiert Ransomware Resilience alle Snapshots, um festzustellen, ob eine Verschlüsselung vorhanden ist. Clean restore bestimmt eine Wiederherstellungskarte, um den optimalen Wiederherstellungsplan zu bestimmen.
@@ -44,7 +44,7 @@ Sie können auch im Planungsschritt die Dateihistorien einsehen, um zu sehen, wa
 
 * **BEREINIGUNG**: Ransomware Resilience entfernt Schadsoftware vom Wiederherstellungspunkt. Wenn Dateien nicht bereinigt werden können, werden sie von der Wiederherstellung ausgeschlossen und in einem separaten Speicherort unter Quarantäne gestellt.
 * **WIEDERHERSTELLEN**: Ransomware Resilience stellt die sauberen Daten in der Quellumgebung wieder her.
-* **ENDE**: Ransomware Resilience bietet eine detaillierte Zusammenfassung des Prozesses und schließt den Clean Room, wodurch die während der Einrichtung bereitgestellten Ressourcen freigegeben werden, um zukünftige nutzungsabhängige Kosten zu eliminieren.
+* **ENDE**: Ransomware Resilience bietet eine detaillierte Zusammenfassung des Prozesses und schließt den Clean Room, wobei die während der Einrichtung bereitgestellten Ressourcen freigegeben werden, um zukünftige nutzungsabhängige Kosten zu vermeiden.
 
 
 
@@ -604,7 +604,7 @@ TIP: Wenn Details der IRE geändert werden müssen, ist in der Ransomware Resili
 Eine IRE kann nicht gelöscht werden, während ein Wiederherstellungsvorgang aktiv ist; Sie können den Wiederherstellungsvorgang abbrechen oder warten, bis die Wiederherstellung abgeschlossen ist, dann die IRE löschen.
 
 
-IMPORTANT: Wenn Sie die IRE löschen, werden auch die Clean-Room-SVM und das Metadaten-Volume gelöscht. Sobald diese Assets gelöscht wurden, können Sie keine Berichte mehr für die Clean Restore generieren.
+IMPORTANT: Wenn Sie die IRE löschen, werden auch die Clean Room SVM und das Metadaten-Volume gelöscht. Sobald diese Assets gelöscht wurden, ist das Generieren von Berichten für die Clean Restore nicht mehr möglich.
 
 . Gehen Sie zu **Einstellungen**.
 . In der Isolationsreinigungs- und Wiederherstellungskarte **Verwalten** auswählen.

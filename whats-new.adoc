@@ -778,7 +778,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem.html
 [[free-trial-now-30-days]]
 === Jetzt 30 Tage kostenlos testen
 
-Mit dieser Version können neue Bereitstellungen des BlueXP ransomware protection jetzt 30 Tage lang kostenlos getestet werden.  Zuvor war der BlueXP ransomware protection 90 Tage lang als kostenlose Testversion verfügbar.  Wenn Sie bereits an der 90-tägigen kostenlosen Testversion teilnehmen, gilt dieses Angebot für die nächsten 90 Tage.
+Neue Bereitstellungen von BlueXP Ransomware Protection verfügen jetzt über eine 30-tägige kostenlose Testphase. Zuvor bot BlueXP Ransomware Protection eine 90-tägige kostenlose Testphase an. Wer sich bereits in der 90-tägigen kostenlosen Testphase befindet, erhält dieses Angebot weiterhin für 90 Tage.
 
 
 
@@ -804,7 +804,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect
 [[security-risk-assessment-from-digital-advisor]]
 === Sicherheitsrisikobewertung von Digital Advisor
 
-BlueXP ransomware protection sammelt nun Informationen über hohe und kritische Sicherheitsrisiken im Zusammenhang mit einem Cluster von NetApp Digital Advisor. Wenn ein Risiko gefunden wird, gibt BlueXP ransomware protection eine Empfehlung im Bereich *Empfohlene Aktionen* des Dashboards: „Bekannte Sicherheitslücke im Cluster beheben <name>.“ Von der Empfehlung im Dashboard aus schlägt die Auswahl von *Überprüfen und beheben* vor, Digital Advisor und einen Common Vulnerability & Exposure (CVE)-Artikel zu überprüfen, um das Sicherheitsrisiko zu beheben. Wenn mehrere Sicherheitsrisiken bestehen, überprüfen Sie die Informationen in Digital Advisor.
+BlueXP Ransomware Protection sammelt nun Informationen über hohe und kritische Cluster-Sicherheitsrisiken von NetApp Digital Advisor. Wenn ein Risiko erkannt wird, zeigt BlueXP Ransomware Protection im Dashboard im Bereich *Empfohlene Aktionen* die folgende Empfehlung an: „Bekannte Sicherheitslücke im Cluster beheben <name>.“ Aus der Dashboard-Empfehlung kann *Überprüfen und beheben* ausgewählt werden, um Digital Advisor und den zugehörigen Common Vulnerability & Exposure (CVE) Artikel einzusehen. Bei mehreren Sicherheitsrisiken können die Details in Digital Advisor eingesehen werden.
 
 Siehe https://docs.netapp.com/us-en/active-iq/index.html["Digital Advisor -Dokumentation"^] .
 

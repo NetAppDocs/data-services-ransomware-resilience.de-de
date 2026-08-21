@@ -12,9 +12,9 @@ summary: Stellen Sie sicher, dass Sie die Lizenzanforderungen für Ransomware Re
 
 
 [role="lead"]
-NetApp Ransomware Resilience bietet verschiedene Lizenzpläne an, sodass Sie den Dienst genau dort abonnieren können, wo es für Ihr Unternehmen sinnvoll ist.
+Wählen Sie aus den Lizenzoptionen Testversion, PAYGO und BYOL für NetApp Ransomware Resilience die passende für Ihr Unternehmen.
 
-Für die Einrichtung der Lizenzierung benötigen Sie die Rolle des Organization admin, Folder oder project admin. https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^].
+Für die Einrichtung der Lizenzierung ist die Rolle als Organization admin oder Folder oder project admin erforderlich https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Konsolenzugriffsrollen"^].
 
 
 
@@ -176,7 +176,7 @@ NOTE: Sie erhalten eine E-Mail mit der Seriennummer von Ransomware Resilience un
 +
 image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufügen“."]
 
-. Wählen Sie auf der Seite „Lizenz hinzufügen“ die Option „Seriennummer eingeben“ aus und geben Sie dann die Seriennummer aus der E-Mail ein, die Sie erhalten haben.  Wählen Sie *Lizenz hinzufügen*.
+. Auf der Seite „Lizenz hinzufügen“ die Option *Seriennummer eingeben* auswählen und anschließend die Seriennummer aus der Ihnen zugesandten E-Mail eingeben. *Lizenz hinzufügen* auswählen.
 . Um Lizenzdetails unter „Licenses and subscriptions“ anzuzeigen, wählen Sie in der linken Navigation der Konsole „Governance“ > „Licenses and subscriptions“ aus.
 +
 ** Um Abonnementinformationen anzuzeigen, wählen Sie *Abonnements*.
@@ -259,7 +259,7 @@ image:screen-license-dw-add-license.png["Screenshot der Seite „Lizenz hinzufü
 +
 Wenn Ihr NetApp Support Site-Konto nicht in der Dropdown-Liste verfügbar ist, https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html["Fügen Sie das NSS-Konto zur Konsole hinzu"^] .
 
-** Wenn Sie über die zvondolr-Lizenzdatei verfügen (erforderlich bei Installation auf einer Dark Site), wählen Sie die Option *Lizenzdatei hochladen* und folgen Sie den Anweisungen zum Anhängen der Datei.
+** Falls Sie über die Lizenzdatei verfügen (erforderlich bei Installation in einer Dark Site), wählen Sie die Option *Lizenzdatei hochladen* und folgen den Anweisungen, um die Datei anzuhängen.
 
 
 . Wählen Sie *Lizenz hinzufügen*.

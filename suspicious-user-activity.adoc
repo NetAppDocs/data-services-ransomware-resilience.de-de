@@ -12,9 +12,9 @@ summary: Die Benutzeraktivitätserkennung in NetApp Ransomware Resilience ermög
 
 
 [role="lead"]
-NetApp Ransomware Resilience Benutzerverhaltenserkennung hilft Ihnen, Ransomware-Ereignisse auf Benutzerebene zu verhindern. Um die Benutzerverhaltenserkennung in Ransomware Resilience zu aktivieren, müssen Sie mindestens einen Benutzeraktivitätsagenten installieren, der eine Datenerfassungsumgebung erstellt, um das Benutzerverhalten auf abweichende Muster zu überwachen, die Ransomware-Ereignissen ähneln.
+Die Benutzerverhaltenserkennung von NetApp Ransomware Resilience dient zur Identifizierung verdächtiger Benutzeraktivitäten, die auf Ransomware, Datenlecks oder Datenzerstörung hinweisen könnten. Hierfür ist die Installation von mindestens einem Agenten zur Benutzeraktivität erforderlich, um die Datenerfassungsumgebung zu erstellen.
 
-Ein Benutzeraktivitätsagent hostet einen Datensammler und einen Benutzerverzeichnis-Connector, die beide Daten zur Analyse an einen SaaS-Standort senden.
+Ein Benutzeraktivitätsagent hostet einen Datensammler und einen Benutzerverzeichnis-Connector, die Daten zur Analyse an einen Cloud-Standort senden.
 
 * Der **Datensammler** erfasst Benutzeraktivitätsdaten von ONTAP. Der Datensammler wird automatisch erstellt, wenn Sie eine Schutzstrategie mit Benutzerverhaltenserkennung erstellen.
 * Der **Benutzerverzeichnis-Connector** stellt eine Verbindung zu Ihrem Verzeichnis her, um Benutzer-IDs Benutzernamen zuzuordnen. Sie müssen den Benutzerverzeichnis-Connector konfigurieren.
@@ -23,9 +23,9 @@ Ein Benutzeraktivitätsagent hostet einen Datensammler und einen Benutzerverzeic
 Der Benutzeraktivitätsagent, der Datensammler und der Benutzerverzeichnis-Connector können alle über das Dashboard der Ransomware Resilience-Einstellungen verwaltet werden.
 
 
-NOTE: Wenn Sie bereits NetApp Data Infrastructure Insights (DII) Workload Security verwenden, wird empfohlen, dieselben Workload Security Agents auch für Ransomware Resilience zu verwenden. Sie müssen keine separaten Workload Security Agents für Ransomware Resilience bereitstellen, jedoch erfordert die Verwendung derselben Workload Security Agents eine Kopplung zwischen der Ransomware Resilience Console Organization und dem DII Storage Workload Security Tenant. Wenden Sie sich an Ihren Account Representative, um diese Kopplung zu aktivieren.
+NOTE: Wenn Sie bereits NetApp Data Infrastructure Insights (DII) Workload Security verwenden, können dieselben Workload Security Agenten auch für Ransomware Resilience genutzt werden. Es ist nicht erforderlich, separate Workload Security Agenten für Ransomware Resilience bereitzustellen. Die Nutzung derselben Workload Security Agenten setzt jedoch eine Kopplung zwischen der Ransomware Resilience Console Organisation und dem DII Storage Workload Security Mandanten voraus. Für die Aktivierung dieser Kopplung ist der Kontakt mit dem Kundenbetreuer erforderlich.
 
-Falls Sie DII _nicht_ verwenden, fahren Sie mit den Konfigurationsanweisungen hier fort.
+Wenn Sie DII nicht verwenden, finden Sie die Konfigurationsanweisungen hier.
 
 
 
@@ -44,7 +44,7 @@ Stellen Sie sicher, dass jede Rolle auf Organisationsebene angewendet wird.
 [[create-a-user-activity-agent]]
 == Erstellen Sie einen Benutzeraktivitätsagenten
 
-Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"]; Datensammler teilen Benutzeraktivitätsereignisse mit Ransomware Resilience. Sie müssen mindestens einen Benutzeraktivitätsagenten erstellen, um die Benutzeraktivitätserkennung zu aktivieren.
+Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"], die Benutzeraktivitätsereignisse mit Ransomware Resilience teilen. Mindestens ein Benutzeraktivitätsagent ist erforderlich, damit die Benutzeraktivitätserkennung verfügbar ist.
 
 .Schritte
 . Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.

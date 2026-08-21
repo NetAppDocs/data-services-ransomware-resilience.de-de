@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-quick-start.html 
 keywords: get started, ransomware protection, quick start, resilience, quickstart 
-summary: Beginnen Sie in wenigen Schritten mit der NetApp Ransomware Resilience . 
+summary: In wenigen Schritten mit NetApp Ransomware Resilience beginnen. 
 ---
 = Schnellstart für NetApp Ransomware Resilience
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: Beginnen Sie in wenigen Schritten mit der NetApp Ransomware Resilience 
 
 
 [role="lead"]
-Informieren Sie sich über die wichtigsten Schritte, die Sie zum Einrichten der Ransomware-Resilienz und zum Schutz Ihrer Workloads ausführen müssen.
+Mit dieser Kurzanleitung lässt sich NetApp Ransomware Resilience einrichten, Workloads erkennen und der Schutz konfigurieren.
 
 Folgen Sie den Links in jedem Schritt, um detaillierte Informationen zu erhalten.
 
@@ -27,7 +27,7 @@ Für diese Aufgaben ist die Rolle „Konsolenadministrator“ erforderlich.
 ** Prüfen Sie außerdem die Anforderungen für link:reference-user-activity-requirements.html["Erkennung verdächtigen Nutzerverhaltens"] und link:task-clean-restore.html["saubere Wiederherstellungen"].
 
 
-* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Überprüfen Sie die Benutzerrollen von Ransomware Resilience und weisen Sie Benutzern, die auf Ransomware Resilience zugreifen, Berechtigungen zu."]
+* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-roles.html["Benutzerrollen für die Ransomware Resilience überprüfen und Berechtigungen für Benutzer zuweisen, die auf den Service zugreifen"]
 * link:rp-start-licenses.html["Einrichten der Lizenzierung"]
 
 
@@ -43,7 +43,7 @@ Für diese Aufgaben ist die Rolle „Ransomware Resilience-Administrator“ erfo
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Konfigurieren Sie Schutz und Erkennung in Ransomware Resilience
 [role="quick-margin-para"]
-Für diese Aufgaben ist die Administratorrolle _Ransomware Resilience admin_ erforderlich. Die Konfiguration der Benutzerverhaltenserkennung erfordert zusätzlich die Administratorrolle _Ransomware Resilience user behavior admin_.
+Für diese Aufgaben ist die Rolle _Ransomware Resilience admin_ erforderlich. Für die Konfiguration der Benutzerverhaltenserkennung ist zusätzlich die Rolle _Ransomware Resilience user behavior admin_ erforderlich.
 
 [role="quick-margin-list"]
 * link:rp-use-protect.html["Workloads schützen"]
@@ -63,7 +63,7 @@ Für diese Aufgaben ist die Administratorrolle _Ransomware Resilience admin_ erf
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]Wie geht es weiter?
 [role="quick-margin-para"]
-Nachdem Sie den Schutz in Ransomware Resilience konfiguriert haben, können Sie:
+Nachdem Sie den Schutz konfiguriert haben, sind folgende Aktionen möglich:
 
 [role="quick-margin-list"]
 * link:task-classify.html["Aktivieren Sie die Datenklassifizierung, um Governance- und Sicherheitsrisiken zu identifizieren"]
