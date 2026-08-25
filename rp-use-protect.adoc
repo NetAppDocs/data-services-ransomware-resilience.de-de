@@ -265,44 +265,48 @@ NOTE: Wenn Sie eine vorhandene Strategie kopieren und ändern möchten, hängt R
 +
 Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.
 
-+
+
+
+
+
+
+
 
 NOTE: Sie können eine beliebige Kombination der Erkennungsrichtlinien auswählen. Die Erkennungsrichtlinie muss entweder die Verschlüsselungserkennung oder die Erkennung verdächtigen Benutzerverhaltens umfassen.
 
-
-
-** *Snapshot-Richtlinie*:
+* *Snapshot-Richtlinie*:
 +
-*** *Basisname der Snapshot-Richtlinie*: Wählen Sie eine Richtlinie aus oder wählen Sie *Erstellen* und geben Sie einen Namen für die Snapshot-Richtlinie ein.
-*** *Snapshot-Sperre*: Aktivieren Sie diese Option, um die Snapshot-Kopien auf dem primären Speicher zu sperren, sodass sie für einen bestimmten Zeitraum nicht geändert oder gelöscht werden können, selbst wenn ein Ransomware-Angriff den Weg zum Sicherungsspeicherziel findet.  Dies wird auch als _unveränderlicher Speicher_ bezeichnet.  Dies ermöglicht eine schnellere Wiederherstellung.
+** *Basisname der Snapshot-Richtlinie*: Wählen Sie eine Richtlinie aus oder wählen Sie *Erstellen* und geben Sie einen Namen für die Snapshot-Richtlinie ein.
+** *Snapshot-Sperre*: Aktivieren Sie diese Option, um die Snapshot-Kopien auf dem primären Speicher zu sperren, sodass sie für einen bestimmten Zeitraum nicht geändert oder gelöscht werden können, selbst wenn ein Ransomware-Angriff den Weg zum Sicherungsspeicherziel findet.  Dies wird auch als _unveränderlicher Speicher_ bezeichnet.  Dies ermöglicht eine schnellere Wiederherstellung.
 +
 Wenn ein Snapshot gesperrt ist, wird die Ablaufzeit des Volumes auf die Ablaufzeit der Snapshot-Kopie eingestellt.
 
 +
 Die Snapshot-Kopiersperre ist mit ONTAP 9.12.1 und höher verfügbar.  Weitere Informationen zu SnapLock finden Sie unter https://docs.netapp.com/us-en/ontap/snaplock/index.html["SnapLock in ONTAP"^] .
 
-*** *Schnappschuss-Zeitpläne*: Wählen Sie Zeitplanoptionen und die Anzahl der aufzubewahrenden Schnappschusskopien aus und aktivieren Sie den Zeitplan.
+** *Schnappschuss-Zeitpläne*: Wählen Sie Zeitplanoptionen und die Anzahl der aufzubewahrenden Schnappschusskopien aus und aktivieren Sie den Zeitplan.
 
 
-** *Replikationsrichtlinie*:
+* *Replikationsrichtlinie*:
 +
-*** *Basisname der Replikationsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen aus. Der Basisname ist das Präfix, das an alle Snapshots angehängt wird.
-*** *Replikationszeitpläne*: Aktivieren Sie die gewünschten Replikationsfrequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert (die Anzahl der aufzubewahrenden replizierten Snapshots) fest.
+** *Basisname der Replikationsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen aus. Der Basisname ist das Präfix, das an alle Snapshots angehängt wird.
+** *Replikationszeitpläne*: Aktivieren Sie die gewünschten Replikationsfrequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert (die Anzahl der aufzubewahrenden replizierten Snapshots) fest.
 
 
-** *Backup-Richtlinie*:
+* *Backup-Richtlinie*:
 +
-*** *Basisname der Sicherungsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen Namen.
-*** *Sicherungszeitpläne*: Wählen Sie Zeitplanoptionen für den sekundären Speicher und aktivieren Sie den Zeitplan.
+** *Basisname der Sicherungsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen Namen.
+** *Sicherungszeitpläne*: Wählen Sie Zeitplanoptionen für den sekundären Speicher und aktivieren Sie den Zeitplan.
 +
 
 TIP: Um die Sicherungssperrung auf sekundärem Speicher zu aktivieren, konfigurieren Sie Ihre Sicherungsziele mit der Option *Einstellungen*. Weitere Informationen finden Sie unter link:task-backup-destination.html["Konfigurieren der Einstellungen"].
 
++
+... Wählen Sie *Hinzufügen*.
 
 
 
 
-. Wählen Sie *Hinzufügen*.
 
 
 
@@ -334,7 +338,7 @@ image:screen-protection.png["Strategieseite verwalten"]
 
 
 . Wählen Sie **Weiter**.
-. Wenn Sie *Erkennung verdächtigen Nutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den User activity agent oder link:suspicious-user-activity.html#create-a-user-activity-agent["oder erstellen Sie ein"].
+. Wenn Sie *Erkennung verdächtigen Nutzerverhaltens* als Erkennungseinstellung ausgewählt haben, wählen Sie den Benutzeraktivitätsagenten oder link:suspicious-user-activity.html#create-a-user-activity-agent["oder erstellen Sie ein"].
 +
 Der Benutzeraktivitätsagent hostet die neuen Datensammler. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.
 
