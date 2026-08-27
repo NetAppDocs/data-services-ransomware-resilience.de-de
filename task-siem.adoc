@@ -89,7 +89,7 @@ Bevor Sie AWS Security Hub in Ransomware Resilience aktivieren, müssen Sie Sich
 . Wählen Sie *Richtlinien* aus.
 . Erstellen Sie eine Richtlinie mit dem folgenden Code im JSON-Format:
 +
-[listing]
+[source, json]
 ----
 {
   "Version": "2012-10-17",
@@ -113,9 +113,6 @@ Bevor Sie AWS Security Hub in Ransomware Resilience aktivieren, müssen Sie Sich
 
 .AWS Security Hub in NetApp Ransomware Resilience authentifizieren
 . In Ransomware Resilience wählen Sie in der Seitenleiste *Einstellungen* aus.
-+
-image:screen-settings2.png["Seite „Einstellungen“"]
-
 . Auf der Seite „Einstellungen“ im Feld „SIEM-Verbindung“ die Option *Verbinden* auswählen und dann im Dropdown-Menü *AWS Security Hub* wählen.
 +
 image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungserkennung aktivieren"]
@@ -162,9 +159,6 @@ Wenn Sie einen benutzerdefinierten Protokolltyp verwenden, müssen Sie einen Par
 
 .Authentifizieren Sie Google SecOps in Ransomware Resilience
 . In Ransomware Resilience wählen Sie in der Seitenleiste *Einstellungen* aus.
-+
-image:screen-settings2.png["Seite „Einstellungen“"]
-
 . Auf der Einstellungsseite in der SIEM-Verbindungskachel die Option *Verbinden* auswählen und dann im Dropdown-Menü *Google SecOps* wählen.
 +
 image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungserkennung aktivieren"]
@@ -212,7 +206,7 @@ Bevor Sie Microsoft Sentinel in Ransomware Resilience aktivieren, müssen Sie di
 . Geben Sie einen benutzerdefinierten Rollennamen ein.  Verwenden Sie den Namen *Ransomware Resilience Sentinel Configurator*.
 . Kopieren Sie das folgende JSON und fügen Sie es in die Registerkarte *JSON* ein.
 +
-[listing]
+[source, json]
 ----
 {
   "roleName": "Ransomware Resilience Sentinel Configurator",
@@ -335,7 +329,7 @@ image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungse
 .. *Überprüfen + zuweisen*.
 
 
-. Zurück zur Ransomware Resilience-Benutzeroberfläche. Den JSON-Code der ARM-Vorlage kopieren, um die benutzerdefinierte Log Analytics-Tabelle, den Data Collection Endpoint (DCE), die Data Collection Rule (DCR) und die Sentinel analytics rules in Ihrer Azure-Umgebung zu erstellen.
+. Zurück zur Ransomware Resilience. Das JSON der ARM Vorlage kann kopiert werden, um die benutzerdefinierte Log Analytics Tabelle, den Data Collection Endpoint (DCE), die Data Collection Rule (DCR) und die Sentinel Analytics Regeln in Ihrer Azure Umgebung zu erstellen.
 . Im Azure-Portal nach *Benutzerdefinierte Vorlage bereitstellen* suchen.
 . Im Editor ist *Eigene Vorlage erstellen* auszuwählen.
 . Fügen Sie den kopierten JSON-Code in den Editor ein. *Speichern* auswählen.
@@ -393,9 +387,6 @@ NOTE: Für Splunk Enterprise muss eingehender öffentlicher Internetverkehr zuge
 
 .Splunk mit Ransomware Resilience authentifizieren
 . In Ransomware Resilience wählen Sie in der Seitenleiste *Einstellungen* aus.
-+
-image:screen-settings2.png["Seite „Einstellungen“"]
-
 . Wählen Sie auf der Seite „Einstellungen“ in der Kachel „SIEM-Verbindung“ die Option „Verbinden“ aus.
 +
 image:screen-settings-threat-detection-3options.png["Detailseite zur Bedrohungserkennung aktivieren"]
