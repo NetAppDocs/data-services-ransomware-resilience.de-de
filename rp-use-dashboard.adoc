@@ -30,7 +30,7 @@ image:screen-dashboard.png["Dashboard-Seite"]
 
 . Im Dashboard können Sie in jedem Bereich die folgenden Aktionen durchführen:
 +
-** *Schutz von Workload-Daten*: Wählen Sie *Alle anzeigen* aus, um auf der Seite „Schutz“ alle gefährdeten oder geschützten Workloads anzuzeigen.  Wenn die Schutzstufen nicht mit einer Schutzrichtlinie übereinstimmen, sind Workloads gefährdet. Weitere Informationen finden Sie unter link:rp-use-protect.html["Workloads schützen"] .
+** *Datensicherungsstrategie für Workloads*: Mit *Alle anzeigen* werden auf der Seite „Datensicherung“ alle gefährdeten oder geschützten Workloads angezeigt. Ohne entweder Verschlüsselungserkennung oder Erkennung von Benutzeraktivitäten gilt der Workload als gefährdet. Siehe link:rp-use-protect.html["Workloads schützen"].
 +
 
 TIP: Wählen Sie den Tooltip „i“ aus, um Tipps zu diesen Daten anzuzeigen. Um das Arbeitslastlimit zu erhöhen, wählen Sie in dieser Notiz *Arbeitslastlimit erhöhen* aus. Wenn Sie diese Option auswählen, gelangen Sie zur Seite „Konsolensupport“, auf der Sie ein Fallticket erstellen können.

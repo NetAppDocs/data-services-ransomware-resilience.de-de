@@ -42,7 +42,7 @@ Sie können Ransomware Resilience mit einer 30-tägigen kostenlosen Testversion 
 
 Wenn Sie sowohl über Backup and Recovery als auch über Ransomware Resilience verfügen, werden alle gemeinsamen Daten, die durch beide Produkte geschützt werden, nur über Ransomware Resilience abgerechnet.
 
-Wird eine Arbeitslast als geschützt eingestuft, wird sie auf die erworbene Kapazität oder das PAYGO-Abonnement angerechnet. Ransomware Resilience stuft eine Arbeitslast als geschützt ein, wenn eine Erkennungsrichtlinie mit mindestens einer Snapshot- oder Backup-Richtlinie aktiviert ist. Arbeitslasten, die zwar mit einer Erkennungsrichtlinie, aber _ohne_ Backup- oder Snapshot-Richtlinien erkannt werden, gelten als gefährdet. Gefährdete Arbeitslasten werden nicht auf die erworbene Kapazität angerechnet.
+Wird eine Arbeitslast als geschützt eingestuft, wird sie auf die erworbene Kapazität oder das PAYGO Abonnement angerechnet. Ransomware Resilience stuft eine Arbeitslast als geschützt ein, wenn entweder eine Verschlüsselungs- oder eine Benutzeraktivitätserkennungsrichtlinie aktiviert ist. Ohne mindestens eine dieser Erkennungsrichtlinien wird eine Arbeitslast als gefährdet eingestuft. Gefährdete Arbeitslasten werden nicht auf die erworbene Kapazität angerechnet.
 
 Geschützte Workloads werden nach Ablauf der kostenlosen Testphase auf die erworbene Kapazität oder das Abonnement angerechnet. Ransomware Resilience wird pro GB für die Daten berechnet, die mit geschützten Workloads verbunden sind (wie von ONTAP gemeldet), vor Effizienzsteigerungen.
 
@@ -98,10 +98,14 @@ Ransomware Resilience kann die folgenden Workloads identifizieren: Oracle, Datei
 Ransomware Resilience erkennt die Volumes und die Dateierweiterungen und ordnet sie der entsprechenden Arbeitslast zu.
 
 .Was ist eine geschützte Arbeitslast?
-In Ransomware Resilience wird eine Arbeitslast als *geschützt* angezeigt, wenn eine _Erkennungs_-Richtlinie aktiviert ist. Die Erkennungsrichtlinie muss entweder die Erkennung von Verschlüsselungen oder von verdächtigem Benutzerverhalten (oder beides) umfassen. Sie kann auch die Erkennung verdächtiger Dateierweiterungen beinhalten. Weitere Informationen finden Sie unter link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"].
+In Ransomware Resilience wird eine Arbeitslast als *geschützt* angezeigt, wenn eine _Erkennungs_-Richtlinie aktiviert ist. Die Erkennungsrichtlinie muss entweder die Erkennung von Verschlüsselungen oder von verdächtigem Benutzerverhalten (oder beides) umfassen. Weitere Informationen finden sich unter link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"].
 
 .Was ist eine „gefährdete“ Arbeitsbelastung?
-Wenn für eine Arbeitslast keine Erkennungsrichtlinie aktiviert ist, wird sie als „gefährdet“ eingestuft, selbst wenn eine Backup- und Snapshot-Richtlinie aktiviert ist. Zum Schutz vor Ransomware sollten Sie eine link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"] aktivieren.
+Eine Arbeitslast muss über eine Ransomware-Datensicherungsstrategie mit aktivierter Verschlüsselungserkennung oder aktivierter Benutzerverhaltenserkennung verfügen, um als geschützt zu gelten. Ohne mindestens eine dieser Erkennungsstrategien wird die Arbeitslast als gefährdet eingestuft. Wenn eine Arbeitslast über eine Backup- oder Snapshot-Strategie verfügt, aber keine aktivierte Verschlüsselungserkennung oder Benutzerverhaltenserkennung enthält, gilt sie als gefährdet.
+
+Ransomware Resilience bietet auch eine Erkennung verdächtiger Dateierweiterungen. Wenn die Erkennung verdächtiger Dateierweiterungen die einzige aktivierte Erkennungsrichtlinie ist, wird die Arbeitslast als gefährdet eingestuft.
+
+Zum Schutz vor Ransomware sollten Sie eine link:rp-use-protect.html#add-a-ransomware-protection-strategy["Erkennungsrichtlinie"] aktivieren.
 
 .Ich habe einen neuen Band hinzugefügt, aber er wird noch nicht angezeigt. Was soll ich tun?
 Wenn Sie Ihrer Umgebung ein neues Volume hinzugefügt haben, starten Sie die Erkennung der Arbeitslast erneut. Nachdem das Volumen entdeckt wurde, link:rp-use-protect.html#add-a-ransomware-protection-strategy["Schutzrichtlinien anwenden, um das neue Volumen zu schützen"]Die
