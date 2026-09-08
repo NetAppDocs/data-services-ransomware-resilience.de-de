@@ -8,4 +8,4 @@ Wird eine Arbeitslast als geschützt eingestuft, wird sie auf die erworbene Kapa
 
 Geschützte Workloads werden nach Ablauf der kostenlosen Testphase auf die erworbene Kapazität oder das Abonnement angerechnet. Ransomware Resilience wird pro GB für die Daten berechnet, die mit geschützten Workloads verbunden sind (wie von ONTAP gemeldet), vor Effizienzsteigerungen.
 
-Bei der Dimensionierung basieren die Lizenzkosten auf der logischen Kapazität des aktiven Dateisystems (das heißt, der von Snapshots belegte Speicherplatz ist nicht enthalten).
+Bei der Dimensionierung basieren die Lizenzkosten auf der logischen Kapazität des aktiven Dateisystems, unabhängig davon, ob sich diese Daten in Hot- oder Cold-Storage-Tiers befinden. Der von Snapshots belegte Speicherplatz wird in dieser Berechnung nicht berücksichtigt, selbst wenn diese Snapshots in einem Cold-Storage-Tier gespeichert sind.
