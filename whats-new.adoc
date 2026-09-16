@@ -18,6 +18,29 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 
 
+[[16-september-2026]]
+== 16. September 2026
+
+
+
+[[enhanced-support-for-clean-restores]]
+=== Verbesserte Unterstützung für saubere Wiederherstellungen
+
+Saubere Wiederherstellungen sind nun nach verdächtigem Nutzerverhalten und benutzerbasierten Verschlüsselungsangriffen möglich. Diese Erweiterung ergänzt die bestehende Unterstützung für (entropiebasierte) Verschlüsselungsangriffe. Diese erweiterte Funktion ermöglicht die Nutzung des geführten Ansatzes der sauberen Wiederherstellung, wobei optimale Wiederherstellungspunkte identifiziert werden, um Datenverlust zu minimieren und die Wiederherstellung zu beschleunigen.
+
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Eine isolierte Wiederherstellungsumgebung für eine saubere Wiederherstellung bereitstellen"^].
+
+
+
+[[san-support-for-google-cloud-netapp-volumes]]
+=== SAN-Unterstützung für Google Cloud NetApp Volumes
+
+Ransomware Resilience bietet jetzt Unterstützung für SAN-Workloads aus Google Cloud NetApp Volumes, wodurch die Erkennung von verschlüsselungsbasierten Ransomware-Angriffen auf SAN-Workloads möglich ist. Unterstützung für SAN in Google Cloud NetApp Volumes ist jetzt allgemein verfügbar.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html#supported-systems["Unterstützte Systeme"^] und link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-limitations.html["SAN Storage in Ransomware-Resilienz"^].
+
+
+
 [[25-august-2026]]
 == 25. August 2026
 
@@ -159,7 +182,7 @@ Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-
 [[automated-responses-to-user-activity-alerts]]
 === Automatisierte Antworten auf Benachrichtigungen zu Benutzeraktivitäten
 
-Ransomware Resilience unterstützt jetzt die Automatisierung der Snapshot-Erstellung und das Sperren von Benutzern, wenn eine Benutzeraktivitätswarnung generiert wird. Mit automatisierten Reaktionen lässt sich ein Benutzer unmittelbar nach Generierung einer Warnung sperren und ein Snapshot zur Wiederherstellung erstellen, was eine schnellere Reaktion ohne manuelle Eingriffe ermöglicht.
+Ransomware Resilience unterstützt jetzt automatisierte Reaktionen auf Benutzeraktivitätsereignisse. Benutzer können automatisch gesperrt und ein Snapshot erstellt werden, wenn eine Benutzeraktivitätswarnung generiert wird. Diese Aktionen ermöglichen eine schnellere Reaktion ohne manuelle Eingriffe.
 
 Weitere Informationen sind unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-automate-user-activity.html["Antworten auf Warnmeldungen zu Benutzeraktivitäten automatisieren"^] zu finden.
 
@@ -197,8 +220,8 @@ link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/reference
 
 
 
-[[google-cloud-netapp-volumes-support-preview]]
-=== Google Cloud NetApp Volumes-Unterstützung (Vorschau)
+[[protection-groups-in-google-cloud-netapp-volumes-support-preview]]
+=== Unterstützung für Schutzgruppen in Google Cloud NetApp Volumes (Vorschau)
 
 Ransomware Resilience unterstützt jetzt die Erstellung von Schutzgruppen für Workloads in Google Cloud NetApp Volumes-Systemen, sodass Sie mehrere Workloads unter einer Richtlinie organisieren können, um die Verwaltung zu vereinfachen.
 

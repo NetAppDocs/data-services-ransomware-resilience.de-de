@@ -48,6 +48,16 @@ Geschützte Workloads werden nach Ablauf der kostenlosen Testphase auf die erwor
 
 Bei der Dimensionierung basieren die Lizenzkosten auf der logischen Kapazität des aktiven Dateisystems, unabhängig davon, ob sich diese Daten in Hot- oder Cold-Storage-Tiers befinden. Der von Snapshots belegte Speicherplatz wird in dieser Berechnung nicht berücksichtigt, selbst wenn diese Snapshots in einem Cold-Storage-Tier gespeichert sind.
 
+.Was passiert nach Ablauf meiner Testphase oder nach Ablauf meiner Lizenz?
+Nach Ablauf der kostenlosen Testphase oder der Lizenz bzw. des Abonnements bleiben die Workloads in NetApp Ransomware Resilience sichtbar, sofern sie nicht ausgeschlossen werden. Mit einer abgelaufenen Lizenz oder Testphase besteht Folgendes:
+
+* Anzeigen von Workloads und Workload-Integrität
+* Löschen von Ressourcen wie Richtlinien
+* Führen Sie alle geplanten Vorgänge aus, die während der Testphase oder unter der Lizenz erstellt wurden
+
+
+Um NetApp Ransomware Resilience außer Betrieb zu nehmen, ist eine Supportanfrage erforderlich. Die Anfrage muss Ihre Organisations-ID enthalten und den Hinweis, dass Sie den Service außer Betrieb nehmen möchten.
+
 
 
 [[access]]

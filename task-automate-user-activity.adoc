@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-automate-user-activity.html 
-keywords: data breach detection, data breach, user activity, automated response 
+keywords: data breach detection, data breach, user activity, automated response, block user, automate, ransomware response 
 summary: NetApp Ransomware Resilience unterstützt das Erstellen automatisierter Reaktionen auf Benutzeraktivitätsereignisse, sodass automatisch ein Snapshot erstellt oder ein Benutzer gesperrt werden kann. 
 ---
 = Automatisierte Reaktionen auf Benutzeraktivitätswarnungen in NetApp Ransomware Resilience
@@ -12,9 +12,16 @@ summary: NetApp Ransomware Resilience unterstützt das Erstellen automatisierter
 
 
 [role="lead"]
-Mit NetApp Ransomware Resilience können automatisierte Reaktionen auf link:concept-user-behavior.html["Benutzeraktivitätsereignisse"] erfolgen. Mit automatisierten Reaktionen kann Ransomware Resilience bei Erkennung eines Angriffs oder einer Warnung einen Snapshot erstellen oder einen Benutzer sperren, was eine schnellere Reaktion auf Ransomware-Ereignisse ermöglicht.
+Mit NetApp Ransomware Resilience können Reaktionen auf link:concept-user-behavior.html["Benutzeraktivitätsereignisse"] automatisiert werden. Wenn eine Benutzeraktivitätswarnung ausgelöst wird, kann Ransomware Resilience Folgendes ausführen:
+
+* Einen Benutzer blockieren
+* Erstellen Sie einen Snapshot
+
 
 Automatisierte Reaktionen werden bei Verschlüsselung (Benutzerverhalten), Datenschutzverletzungen und Datenzerstörung unterstützt. Es müssen link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["einen Benutzeraktivitätsagenten konfiguriert, eine Richtlinie mit Benutzeraktivitätserkennung aktiviert und einen Benutzerverzeichnis-Connector erstellt"] vorhanden sein, bevor eine automatisierte Reaktion erstellt werden kann. Wenn eine automatisierte Reaktion ausgelöst wird, sendet NetApp Ransomware Resilience eine E-Mail-Benachrichtigung.
+
+
+NOTE: Wird die Warnung durch verdächtiges Nutzerverhalten ausgelöst, kann lediglich eine Snapshot erstellt werden. Das Sperren eines Nutzers ist als automatische Reaktion auf verdächtiges Nutzerverhalten nicht möglich.
 
 
 
@@ -22,9 +29,6 @@ Automatisierte Reaktionen werden bei Verschlüsselung (Benutzerverhalten), Daten
 == Eine automatisierte Antwort erstellen
 
 Es kann nur eine Storage-VM mit mindestens einer Arbeitslast geschützt werden, die durch eine Richtlinie zur Erkennung verdächtigen Benutzerverhaltens geschützt ist.
-
-
-NOTE: Bei automatisierten Reaktionen auf verdächtiges Nutzerverhalten kann lediglich eine Snapshot erstellt werden. Das Blockieren eines Nutzers wird als automatisierte Reaktion auf verdächtiges Nutzerverhalten nicht unterstützt.
 
 .Schritte
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
@@ -84,3 +88,10 @@ Um die Antwort zu ändern, **Bearbeiten** auswählen.
 . Sie können alle Einstellungen ändern, außer dem Schweregrad des Alarms.
 . **Speichern** auswählen, um die Änderungen zu übernehmen.
 
+
+
+
+[[next-steps]]
+== Nächste Schritte
+
+link:task-users-manage.html["Blockierte Benutzer verwalten"]

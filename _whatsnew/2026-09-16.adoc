@@ -1,0 +1,21 @@
+= Verbesserte Unterstützung für saubere Wiederherstellungen
+:allow-uri-read: 
+
+
+
+
+[[enhanced-support-for-clean-restores]]
+=== Verbesserte Unterstützung für saubere Wiederherstellungen
+
+Saubere Wiederherstellungen sind nun nach verdächtigem Nutzerverhalten und benutzerbasierten Verschlüsselungsangriffen möglich. Diese Erweiterung ergänzt die bestehende Unterstützung für (entropiebasierte) Verschlüsselungsangriffe. Diese erweiterte Funktion ermöglicht die Nutzung des geführten Ansatzes der sauberen Wiederherstellung, wobei optimale Wiederherstellungspunkte identifiziert werden, um Datenverlust zu minimieren und die Wiederherstellung zu beschleunigen.
+
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Eine isolierte Wiederherstellungsumgebung für eine saubere Wiederherstellung bereitstellen"^].
+
+
+
+[[san-support-for-google-cloud-netapp-volumes]]
+=== SAN-Unterstützung für Google Cloud NetApp Volumes
+
+Ransomware Resilience bietet jetzt Unterstützung für SAN-Workloads aus Google Cloud NetApp Volumes, wodurch die Erkennung von verschlüsselungsbasierten Ransomware-Angriffen auf SAN-Workloads möglich ist. Unterstützung für SAN in Google Cloud NetApp Volumes ist jetzt allgemein verfügbar.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html#supported-systems["Unterstützte Systeme"^] und link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-reference-limitations.html["SAN Storage in Ransomware-Resilienz"^].

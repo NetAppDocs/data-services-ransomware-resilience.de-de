@@ -30,7 +30,12 @@ Ransomware Resilience ist mit den folgenden Lizenztypen verfügbar:
 
 Nachdem Sie Ihr BYOL eingerichtet oder ein PAYGO-Abonnement erworben haben, können Sie die Lizenz im Abschnitt „Licenses and subscriptions“ der Konsole sehen.
 
-Nach Ablauf der kostenlosen Testversion oder der Lizenz bzw. des Abonnements können Sie weiterhin:
+
+
+[[expired-licenses]]
+=== Abgelaufene Lizenzen
+
+Nach Ablauf der kostenlosen Testphase oder der Lizenz bzw. des Abonnements bleiben die Workloads in NetApp Ransomware Resilience sichtbar, sofern sie nicht ausgeschlossen werden. Mit einer abgelaufenen Lizenz oder Testphase besteht Folgendes:
 
 * Anzeigen von Workloads und Workload-Integrität
 * Löschen von Ressourcen wie Richtlinien
