@@ -43,7 +43,7 @@ Falls bei der Installation oder Ausführung des Benutzeraktivitätsagenten in Ne
 | Das Skript cloudsecure-agent-symptom-collector.sh schlägt mit der Fehlermeldung „ERROR: Failed to create /tmp/cloudsecure-agent-symptoms.zip“ fehl. | Das Zip-Tool mit dem Befehl  `yum install zip` installieren, dann  `cloudsecure-agent-symptom-collector.sh` erneut ausführen. 
 
 
-| Die Installation des Benutzeraktivitätsagenten schlägt mit der Fehlermeldung „useradd: kann Verzeichnis /home/cssys. nicht erstellen“ fehl. | Das Anmeldeverzeichnis des Benutzers kann aufgrund eines Berechtigungsfehlers nicht unter /home erstellt werden. Ein cssys Benutzer kann erstellt und dessen Anmeldeverzeichnis manuell mit dem Befehl  `sudo useradd <user_name> -m -d HOME_DIR` hinzugefügt werden. In diesem Befehl  `-m` wird das Home-Verzeichnis erstellt, falls es nicht existiert;  `-d` legt HOME_DIR als Anmeldeverzeichnis fest. 
+| Die Installation des Benutzeraktivitätsagenten schlägt mit der Fehlermeldung „useradd: kann Verzeichnis /home/cssys. nicht erstellen“ fehl. | Das Anmeldeverzeichnis des Benutzers kann aufgrund eines Berechtigungsfehlers nicht unter dem Verzeichnis /home erstellt werden. Ein cssys-Benutzer kann erstellt und dessen Anmeldeverzeichnis manuell mit dem Befehl  `sudo useradd <user_name> -m -d HOME_DIR` hinzugefügt werden. In diesem Befehl  `-m` wird das Home-Verzeichnis erstellt, falls es nicht existiert;  `-d` legt HOME_DIR als Anmeldeverzeichnis fest. 
 |===
 
 
