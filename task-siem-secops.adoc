@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-siem-secops.html 
+keywords: ransomware protection, SIEM, security event management system, orchestration, event management, google, secops, security operations 
+summary: Die Bedrohungsanalyse und das Ereignismanagement in NetApp Ransomware Resilience werden durch die Anbindung des Google SecOps SIEM optimiert. 
+---
+= Google SecOps SIEM in NetApp Ransomware Resilience konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience bietet native Unterstützung für Security Information and Event Management (SIEM) mit Google SecOps. Durch die Verbindung von Ransomware Resilience mit Google SecOps können Ereignisdaten automatisch zur Bedrohungsanalyse und -erkennung gesendet werden, um den Ransomware-Schutz und das Ereignismanagement zu optimieren.
+
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+Bevor Sie Google SecOps in Ransomware Resilience aktivieren, müssen der Protokolltyp und der Webhook in Google SecOps registriert werden, um eine Verbindung zwischen den Diensten zu ermöglichen.
+
+
+
+[[configure-google-secops]]
+== Google SecOps konfigurieren
+
+Führen Sie die folgenden Schritte in Google SecOps aus:
+
+.Erstellen Sie einen Protokolltyp
+. In Google SecOps zu *Einstellungen* > *SIEM-Einstellungen* > *Verfügbare Protokolltypen* navigieren.
++
+Es wird empfohlen, den Protokolltyp NETAPP_RANSOMWARE_RESILIENCE zu verwenden. Falls Sie diesen nicht verwenden möchten, erstellen Sie einen benutzerdefinierten Protokolltyp.
+
+. Wenn Sie den Protokolltyp NETAPP_RANSOMWARE_RESILIENCE verwenden, ist ein vorkonfigurierter Parser enthalten, und es sind keine weiteren Maßnahmen erforderlich.
++
+Wenn Sie einen benutzerdefinierten Protokolltyp verwenden, müssen Sie einen Parser erstellen. Gehen Sie zu *SIEM Settings* > *Parsers* > *Create Parser*, um den Parser zu erstellen.
+
+
+
+.Webhook registrieren
+. In Google SecOps zu *Einstellungen* > *SIEM settings* > *Feeds* navigieren.
+. Wählen Sie *Neuen Feed hinzufügen*.
+. Wählen Sie den Protokolltyp aus, den Sie im Workflow „Protokolltyp erstellen“ verwendet haben.
+. Stellen Sie den *Quelltyp* auf Webhook ein und speichern Sie den Feed.
+. Öffnen Sie die Registerkarte *Details*. Kopieren Sie die *Webhook-Endpunkt-URL*, um sie bei der Authentifizierung in Ransomware Resilience zu verwenden.
+. Öffnen Sie den Tab „Geheimer Schlüssel“. Generieren Sie den geheimen Schlüssel oder kopieren Sie ihn, falls Sie bereits einen erstellt haben. Speichern Sie den Schlüssel, um ihn bei der Authentifizierung in Ransomware Resilience zu verwenden.
+. Erstellen Sie einen *API-Schlüssel* mithilfe des Google API-Schlüsselprozesses Ihrer Organisation.
+
+
+
+
+[[authenticate-google-secops-in-ransomware-resilience]]
+== Authentifizieren Sie Google SecOps in Ransomware Resilience
+
+. In Ransomware Resilience wählen Sie in der Seitenleiste *Einstellungen* aus.
+. Auf der Einstellungsseite in der SIEM-Verbindungskachel die Option *Verbinden* auswählen und dann im Dropdown-Menü *Google SecOps* wählen.
++
+image:screen-settings-threat-detection-3options.png["Screenshot der SIEM Verbindungsoptionen"]
+
+. Lesen Sie die Abschnitte *Voraussetzungen* und *Webhook feed*.
+. Erweitern Sie den Abschnitt *Authentifizierung*.
++
+.. Geben Sie die *Webhook-URL* ein, die Sie von Google SecOps kopiert haben.
+.. Geben Sie den *Geheimschlüssel* und den *API-Schlüssel* von Google SecOps ein.
+
+
+. Wählen Sie link:task-siem.html#event-delivery-route["Ereignisübertragungsroute"]. Um SIEM-Ereignisse an Ihren SIEM-Endpunkt zu liefern, ist *Über NetApp Console liefern* auszuwählen. Um Ereignisse über den bereits in Ihrem Netzwerk vorhandenen Console Agent zu leiten, ist *Über Console Agent liefern* auszuwählen.
++
+Wenn *Zustellung über Konsolenagent* ausgewählt wurde, ist der zu verwendende Konsolenagent aus dem Dropdown-Menü auszuwählen.
+
+. Wählen Sie *Connect*, um mit dem Senden von SIEM-Daten zu beginnen.
+
+
+
+
+[[next-steps]]
+== Nächste Schritte
+
+* link:reference-soar.html["Integrieren Sie ein SOAR-Playbook"]
+

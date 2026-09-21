@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: task-siem-splunk.html 
+keywords: ransomware protection, SIEM, security event management system, orchestration, event management, splunk cloud, splunk enterprise, splunk 
+summary: Die Bedrohungsanalyse und das Ereignismanagement in NetApp Ransomware Resilience werden durch die Anbindung von entweder Splunk Cloud oder Splunk Enterprise als SIEM-System optimiert. 
+---
+= Ein Splunk SIEM in NetApp Ransomware Resilience konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Ransomware Resilience bietet native Unterstützung für Security Information and Event Management (SIEM) mit Splunk Cloud und Splunk Enterprise. Durch die Verbindung von Ransomware Resilience mit einem Splunk SIEM können Ereignisdaten automatisch zur Bedrohungsanalyse und -erkennung gesendet werden, um den Ransomware-Schutz und das Ereignismanagement zu optimieren.
+
+
+
+[[configure-splunk-cloud-and-splunk-enterprise-for-threat-detection]]
+== Konfigurieren Sie Splunk Cloud und Splunk Enterprise für die Bedrohungserkennung
+
+Konfigurationen in Splunk Cloud oder Splunk Enterprise sind erforderlich, bevor das SIEM-System in Ransomware Resilience authentifiziert wird.
+
+.Bevor Sie beginnen
+Ransomware Resilience unterstützt die Bedrohungserkennung mit Splunk Cloud und Splunk Enterprise. Bevor Sie die Splunk-Verbindung in Ransomware Resilience aktivieren, müssen Sie Folgendes tun:
+
+* Aktivieren Sie einen HTTP Event Collector in Splunk Cloud oder Enterprise, um Ereignisdaten über HTTP oder HTTPS von der Konsole zu empfangen.
+* Erstellen Sie ein Event Collector-Token in Splunk Cloud oder Enterprise.
+* Für *Splunk Enterprise* ist bei Auswahl von *Übermittlung über NetApp Console* eingehender öffentlicher Internetverkehr zuzulassen, damit Ransomware Resilience Ereignisse an den HTTP Event Collector senden kann. Bei Auswahl von *Übermittlung über Console agent* muss der Console agent den HTTP Event Collector erreichen können.
+
+
+.Aktivieren eines HTTP-Ereignissammlers in Splunk
+. In Splunk Cloud oder Enterprise unter *Einstellungen* > *Dateneingaben* auswählen.
+. Wählen Sie *HTTP-Ereignissammler* > *Globale Einstellungen*.
+. Wählen Sie auf dem Umschalter „Alle Token“ die Option *Aktiviert* aus.
+. Damit der Event Collector über HTTPS statt über HTTP lauscht und kommuniziert, wählen Sie *SSL aktivieren*.
+. Geben Sie im Feld *HTTP-Portnummer* einen Port für den HTTP-Ereignissammler ein. Speichern Sie die Portnummer für die Authentifizierung.
+
+
+.Erstellen Sie ein Event Collector-Token in Splunk
+. In Splunk Cloud oder Enterprise unter *Einstellungen* > *Daten hinzufügen* auswählen.
+. Wählen Sie *Monitor* > *HTTP-Ereignissammler*.
+. Geben Sie einen *Namen* für das Token ein und wählen Sie dann *Weiter*.
+. Wählen Sie einen *Standardindex* aus, in den Ereignisse übertragen werden, und wählen Sie dann *Überprüfen*.
+. Vergewissern Sie sich, dass alle Einstellungen für den Endpunkt korrekt sind. Zum Ändern der Einstellungen kann die Schaltfläche „Zurück“ ausgewählt werden, andernfalls *Senden* auswählen.
+. Kopieren Sie das Token und fügen Sie es in ein anderes Dokument ein, um es für den Authentifizierungsschritt bereit zu haben.
+
+
+
+
+[[authenticate-splunk-with-ransomware-resilience]]
+== Splunk mit Ransomware Resilience authentifizieren
+
+. In Ransomware Resilience wählen Sie in der Seitenleiste *Einstellungen* aus.
+. Wählen Sie auf der Seite „Einstellungen“ in der Kachel „SIEM-Verbindung“ die Option „Verbinden“ aus.
++
+image:screen-settings-threat-detection-3options.png["Screenshot der SIEM Verbindungsoptionen"]
+
+. Wählen Sie *Splunk* als SIEM-Anbieter.
+. Überprüfen Sie die Abschnitte *Event collector* und *Token*, um sicherzustellen, dass Sie die richtigen Informationen haben.
+. Erweitern Sie den Abschnitt *Authentifizierung*.
++
+.. Wählen Sie das *Protokoll* für den HTTP Event Collector aus. Es wird empfohlen, HTTPS zu verwenden, aber wenn SSL für den HTTP Event Collector nicht aktiviert ist, sollte *HTTP* ausgewählt werden.
+.. Geben Sie *Host* und *Port* für die Splunk Instanz ein, auf der der HTTP Event Collector ausgeführt wird. Der Port sollte mit dem übereinstimmen, den Sie im HTTP Event Collector Prozess eingegeben haben.
+.. Geben Sie das Ereignis-Collector-Token ein, das Sie in Splunk erstellt haben.
+
+
+. Wählen Sie link:task-siem.html#event-delivery-route["Ereignisübertragungsroute"]. Um SIEM-Ereignisse an Ihren SIEM-Endpunkt zu liefern, ist *Über NetApp Console liefern* auszuwählen. Um Ereignisse über den bereits in Ihrem Netzwerk vorhandenen Console Agent zu leiten, ist *Über Console Agent liefern* auszuwählen.
++
+Wenn *Zustellung über Konsolenagent* ausgewählt wurde, ist der zu verwendende Konsolenagent aus dem Dropdown-Menü auszuwählen.
+
+. Wählen Sie *Connect*, um mit dem Senden von SIEM-Daten zu beginnen.
+
+
+
+
+[[next-steps]]
+== Nächste Schritte
+
+* link:reference-soar.html["Integrieren Sie ein SOAR-Playbook"]
+

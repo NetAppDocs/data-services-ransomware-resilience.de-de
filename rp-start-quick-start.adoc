@@ -53,7 +53,6 @@ FÃ¼r diese Aufgaben ist die Rolle _Ransomware Resilience admin_ erforderlich. FÃ
 
 * Konfigurieren Sie optional Sicherungsziele:
 +
-** link:rp-start-setup.html["Bereiten Sie NetApp StorageGRID, Amazon Web Services, Google Cloud Platform oder Microsoft Azure als Sicherungsziel vor"] .
 ** link:rp-start-setup.html["Konfigurieren von Sicherungszielen"]
 
 

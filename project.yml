@@ -87,7 +87,19 @@ sidebar:
       - title: Böswillige Benutzerereignisse simulieren
         url: "/task-test-user-activity.html"
     - title: SIEM konfigurieren
-      url: "/task-siem.html"
+      entries:
+      - title: SIEM-Unterstützung
+        url: "/task-siem.html"
+      - title: AWS Security Hub konfigurieren
+        url: "/task-siem-security-hub.html"
+      - title: Google SecOps konfigurieren
+        url: "/task-siem-secops.html"
+      - title: Microsoft Sentinel konfigurieren
+        url: "/task-siem-sentinel.html"
+      - title: Splunk Cloud & Enterprise konfigurieren
+        url: "/task-siem-splunk.html"
+      - title: Ein SIEM mit Webhooks konfigurieren
+        url: "/task-siem-webhook.html"
     - title: SOAR-Playbooks integrieren
       url: "/reference-soar.html"
     - title: Berichte herunterladen
