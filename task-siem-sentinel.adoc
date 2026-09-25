@@ -150,8 +150,8 @@ TIP: Die Gültigkeitsdauer eines Clientgeheimnisses ist auf maximal zwei Jahre (
 
 
 
-[[authenticate-microsoft-sentinel-in-ransomware-resilience]]
-== Microsoft Sentinel in NetApp Ransomware Resilience authentifizieren
+[[add-roles-in-azure-and-authenticate-microsoft-sentinel-in-ransomware-resilience]]
+== Hinzufügen von Rollen in Azure und Authentifizierung von Microsoft Sentinel in Ransomware Resilience
 
 Für das Microsoft Sentinel SIEM kann eine automatische Bereitstellung gewählt werden, bei der Ransomware Resilience die Ressourcen basierend auf den von Ihnen bereitgestellten Berechtigungen bereitstellt. Alternativ ist eine manuelle Bereitstellung möglich, bei der Ressourcen auf Grundlage einer bereitgestellten ARM-Vorlage bereitgestellt werden. Beide Optionen erfordern das Festlegen von Berechtigungen im Azure-Portal und anschließend die Authentifizierung der Verbindung in Ransomware Resilience, wobei sich die einzelnen Schritte unterscheiden. Es sollte der Workflow gewählt werden, der den eigenen Anforderungen am besten entspricht.
 
