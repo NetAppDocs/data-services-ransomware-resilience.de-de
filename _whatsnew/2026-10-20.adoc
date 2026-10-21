@@ -1,0 +1,19 @@
+= Erweiterte Konfiguration der isolierten Wiederherstellungsumgebung
+:allow-uri-read: 
+
+
+
+
+[[enhanced-isolated-recovery-environment-configuration]]
+=== Erweiterte Konfiguration der isolierten Wiederherstellungsumgebung
+
+Ransomware Resilience bietet jetzt einen verbesserten Workflow zur Konfiguration isolierter Wiederherstellungsumgebungen. Der neue Workflow vereinfacht und präzisiert den Prozess zur Einrichtung einer solchen Umgebung für Cloud- oder On-Premises-Umgebungen.
+
+Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Eine isolierte Wiederherstellungsumgebung für eine saubere Wiederherstellung bereitstellen"^].
+
+
+
+[[google-cloud-netapp-volumes-flex-service-level-generally-available]]
+=== Google Cloud NetApp Volumes Flex Service Level allgemein verfügbar
+
+Die Unterstützung für das Flex Service Level von Google Cloud NetApp Volumes in Ransomware Resilience ist jetzt allgemein verfügbar (GA).

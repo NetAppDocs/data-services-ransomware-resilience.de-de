@@ -57,7 +57,6 @@ Für Google Cloud NetApp Volumes gelten folgende Einschränkungen:
 
 * Derzeit können Sie auf Google Cloud NetApp Volumes-Workloads nur Verschlüsselungs- und FPolicy-basierte Schutzstrategien anwenden. Sie können keine Strategien zum Schutz des Nutzerverhaltens anwenden.
 * Schutzstrategien mit Replikation werden für Google Cloud NetApp Volumes derzeit nicht unterstützt.
-* Die Unterstützung für die Flex Servicelevels von Google Cloud NetApp Volumes befindet sich derzeit in der Vorschauphase.
 
 
 
