@@ -13,6 +13,15 @@ Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-
 
 
 
+[[enhanced-workflow-for-enabling-user-activity-monitoring]]
+=== Verbesserter Workflow zur Aktivierung der Benutzeraktivitätsüberwachung
+
+Ransomware Resilience hat den Workflow für die Aktivierung der Benutzeraktivitätsüberwachung verbessert. Bisher testete Ransomware Resilience die Verbindung des Datensammlers jedes Mal, wenn Sie für eine Workload eine Ransomware-Schutzstrategie mit Benutzeraktivitätsüberwachung aktivierten. Mit diesem Update wird diese Prüfung nun übersprungen, wenn für die Storage VM ein Datensammler vorhanden ist und sich im Status "running" befindet, wodurch der Schutz Workflow beschleunigt wird.
+
+Weitere Informationen finden Sie unter link:link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Workloads schützen"^].
+
+
+
 [[google-cloud-netapp-volumes-flex-service-level-generally-available]]
 === Google Cloud NetApp Volumes Flex Service Level allgemein verfügbar
 
