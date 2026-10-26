@@ -26,7 +26,7 @@ NetApp Ransomware Resilience bietet saubere Wiederherstellungen, die eine gefüh
 Bei einer vollständigen Wiederherstellung führt Ransomware Resilience durch einen mehrstufigen Prozess, der die Wiederherstellung optimiert.
 
 * **EINRICHTUNG**: Für eine vollständige Wiederherstellung müssen Sie zunächst eine IRE erstellen und anschließend die wiederherzustellende Workload auswählen. Ransomware Resilience erstellt einen sauberen Raum, in dem alle Aktionen für die Workload ausgeführt werden.
-* **ANALYSE**: Im Clean Room analysiert Ransomware Resilience alle Snapshots, um festzustellen, ob eine Verschlüsselung vorhanden ist. Clean restore bestimmt eine Wiederherstellungskarte, um den optimalen Wiederherstellungsplan zu bestimmen.
+* **ANALYSE**: Im Clean Room analysiert Ransomware Resilience alle Snapshots, um festzustellen, ob eine Verschlüsselung vorhanden ist. Clean restore ermittelt eine Wiederherstellungskarte mit dem optimalen Wiederherstellungsplan.
 +
 Sobald ein Wiederherstellungspunkt ohne betroffene Dateien gefunden wurde, werden alle vorherigen Wiederherstellungspunkte übersprungen. Wenn der Ransomware-Angriff am 10. Oktober stattfand und am 7. Oktober um 10:21 Uhr ein Wiederherstellungspunkt ohne betroffene Dateien gefunden wurde, werden alle Wiederherstellungspunkte vor dem 7. Oktober um 10:21 Uhr übersprungen.
 
@@ -38,7 +38,7 @@ Im Analyseschritt wird auch die Anzahl der überprüften Dateien angezeigt, wobe
 ** _Letzter unbeeinträchtigter Wiederherstellungspunkt_: der schnellste Wiederherstellungspunkt aus dem aktuellsten unverschlüsselten Snapshot vor dem Angriff
 ** _Minimaler Datenverlust_: die aktuellste Version jeder unverschlüsselten Datei aus verschiedenen Snapshots
 +
-Sie können auch im Planungsschritt die Dateihistorien einsehen, um zu sehen, wann Ransomware-Ereignisse die Dateien beeinträchtigt haben und wie der Wiederherstellungspunkt zeitlich zu diesem Ereignis steht.
+Sie können im Planungsschritt auch Dateiverläufe anzeigen, um zu erkennen, wann Ransomware-Ereignisse sich auf die Dateien ausgewirkt haben und in welchem zeitlichen Verhältnis der Wiederherstellungspunkt zu diesem Ereignis steht.
 
 
 
@@ -54,7 +54,7 @@ Sie können auch im Planungsschritt die Dateihistorien einsehen, um zu sehen, wa
 
 * Pro Ransomware Resilience-Konto kann nur ein IRE erstellt werden. Jedes IRE kann drei Clean Rooms enthalten.
 * Eine vollständige Wiederherstellung wird derzeit nur für NAS-Dateifreigaben (NFS/CIFS) unterstützt.
-* Sie müssen eine saubere Wiederherstellung der Quellumgebung durchführen.
+* Bei einer sauberen Wiederherstellung können Sie nur die Quellumgebung wiederherstellen.
 * Sie können eine IRE in der Cloud oder lokal erstellen. Aktuell werden folgende Konfigurationen unterstützt:
 +
 |===
@@ -118,7 +118,7 @@ Wenn Sie eine lokale IRE bereitstellen und eine Windows-VM für die Wiederherste
 * Die Verwendung derselben Maschinenidentität führt zu Lizenzierungs- und Aktivierungsproblemen.
 
 
-Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten VM eine Systemvorbereitung (sysprep) durch, wodurch SID, CN und Maschinenidentität zurückgesetzt werden. Durch das Zurücksetzen dieser Werte wird sichergestellt, dass die geklonte VM als eindeutige und unabhängige Instanz funktioniert, ohne die Quell-VM zu beeinträchtigen.
+Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten VM eine Systemvorbereitung (sysprep) durch, wodurch SID, CN und Maschinenidentität zurückgesetzt werden. Das Zurücksetzen dieser Werte stellt sicher, dass die geklonte VM als eindeutige und unabhängige Instanz funktioniert, ohne die Quell-VM zu beeinträchtigen.
 
 
 
@@ -127,7 +127,7 @@ Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten 
 
 Beim Erstellen des IRE haben Sie die Möglichkeit, eine sekundäre Quelle hinzuzufügen.
 
-Wenn die primäre Quelle nicht verfügbar ist und Sie eine sekundäre Quelle konfiguriert haben, wird die Clean Restore auf der sekundären Quelle durchgeführt.
+Wenn die primäre Quelle nicht verfügbar ist und Sie eine sekundäre Quelle konfiguriert haben, werden die Daten auf der sekundären Quelle wiederhergestellt.
 
 Der Clean Restore-Prozess analysiert standardmäßig Snapshots aus der Quellumgebung. Ist entweder die Quellumgebung nicht verfügbar oder kein unverschlüsselter Snapshot auf der Quelle vorhanden, analysiert Clean Restore Snapshots auf einem Sekundärsystem, sofern Sie eines konfiguriert haben.
 
@@ -154,7 +154,7 @@ Gebühren von Drittanbietern können die Erstellung und Bereitstellung von Reche
 Stellen Sie sicher, dass Sie die Voraussetzungen für den von Ihnen gewählten Bereitstellungstyp „Saubere Wiederherstellung“ erfüllt haben. Wählen Sie die Registerkarte für Ihre gewählte IRE-Konfiguration aus.
 
 
-NOTE: Wenn Sie das IRE erstellen, müssen Sie während des Systemauswahlschritts beim Erstellen des IRE jedes System (primär oder sekundär) hinzufügen, das Sie für die Analyse verwenden möchten.
+NOTE: Wenn Sie die IRE erstellen, müssen Sie bei der Systemauswahl jedes System (primär oder sekundär) hinzufügen, das Sie für die Analyse verwenden möchten.
 
 [role="tabbed-block"]
 ====
@@ -299,9 +299,9 @@ NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert w
 --
 .On-Premises zu Cloud
 --
-Dieses Diagramm veranschaulicht ein Beispiel für die On-Premises-zu-Cloud-Clean-Restore-Konfiguration. Überprüfen Sie das Diagramm und die Ressourcen, die Sie konfigurieren müssen, bevor Sie die IRE erstellen können.
+Dieses Diagramm veranschaulicht ein Beispiel für die Konfiguration einer sauberen Wiederherstellung von einer lokalen Umgebung in die Cloud. Vor dem Erstellen der IRE sind das Diagramm und die zu konfigurierenden Ressourcen zu prüfen.
 
-image:diagram-clean-recovery-cloud-on-prem.png["Diagramm zur Wiederherstellung von Cloud zu On-Premise"]
+image:diagram-clean-recovery-cloud-on-prem.png["Diagramm einer sauberen Wiederherstellung von der lokalen Umgebung in die Cloud."]
 
 .Reinraum-SVM-Daten LIF IP (crr-data-LIF-IP)
 * Weisen Sie dem Reinraum-SVM-Daten-LIF eine IP-Adresse zu. Notieren Sie sich die IP-Adresse: Sie benötigen diese IP-Adresse während des IRE-Konfigurationsprozesses.
@@ -440,7 +440,7 @@ NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert w
 --
 Dieses Diagramm veranschaulicht ein Beispiel für die Konfiguration einer sauberen Wiederherstellung von On-Premises zu On-Premises. Überprüfen Sie das Diagramm und die Ressourcen, die Sie konfigurieren müssen, bevor Sie die IRE erstellen können.
 
-image:diagram-clean-recovery-on-prem.png["Diagramm zur Wiederherstellung von Cloud zu On-Premise"]
+image:diagram-clean-recovery-on-prem.png["Diagramm der sauberen Wiederherstellung von On-Premises zu On-Premises"]
 
 .Reinraum-SVM-Daten LIF IP (crr-data-LIF-IP)
 * Auf jedem System, das Sie für die Verbindung mit dem IRE zur Wiederherstellung von Workloads auswählen, wird eine Storage Virtual Machine (SVM) erstellt. Sie müssen jedem System, das als Daten-LIF der Clean-Room-SVM verwendet wird, eine dedizierte IP-Adresse zuweisen.
@@ -448,15 +448,15 @@ image:diagram-clean-recovery-on-prem.png["Diagramm zur Wiederherstellung von Clo
 
 .Hosts & vCenter
 * Das vCenter muss Version 7.0 oder höher mit mindestens einem Rechenzentrum sein.
-* Der ESXi-Host muss ESXi Version 7.0 oder höher sein und mindestens einen Host mit ausreichend CPU- und Arbeitsspeicherressourcen zum Klonen der VMs aufweisen.
+* Der ESXi Host muss ESXi Version 7.0 oder höher verwenden, und mindestens ein Host muss über ausreichende CPU- und Arbeitsspeicherressourcen zum Klonen der VMs verfügen.
 * Die angegebenen vCenter Anmeldeinformationen müssen über Berechtigungen zum Auffinden von Ressourcen und zum Klonen von VMs verfügen.
 
 
 .Basis-VMs (Windows oder Linux)
-* Bei der Wiederherstellung im Rahmen einer sauberen Wiederherstellung werden die Basis-VMs in ein ausgewähltes Rechenzentrum geklont, auf dem gewählten ESXi-Rechenknoten platziert, dem angegebenen Datenspeicher zugeordnet und mit dem festgelegten Netzwerk verbunden. Beim Klonen werden die VMs mit 2 vCPUs und 4 GB RAM (für Linux- oder Windows-VM) sowie demselben Speicherplatz wie die Basis-VMs konfiguriert. Jede Sitzung zur sauberen Wiederherstellung verwendet zwei IP-Adressen aus dem angegebenen CIDR-Bereich.
+* Während der Wiederherstellung im Rahmen einer sauberen Wiederherstellung werden die Basis-VMs in ein ausgewähltes Rechenzentrum geklont, auf dem gewählten ESXi Compute platziert, dem angegebenen Datastore zugeordnet und mit dem festgelegten Netzwerk verbunden. Beim Klonen werden die VMs so konfiguriert, dass sie über 2 vCPUs und 4 GB RAM (für Linux oder Windows VM) sowie über denselben Festplattenspeicher wie die Basis-VMs verfügen. Jede Sitzung zur sauberen Wiederherstellung verwendet zwei IP-Adressen aus dem angegebenen CIDR-Bereich.
 * Sie müssen einen ausreichend großen IP-Adressbereich bereitstellen, um mehrere parallele Reinraumsitzungen zu ermöglichen. Die IP-Adressen werden nach Abschluss der Wiederherstellung freigegeben.
 * Der Datenspeicher sollte über ausreichend freie Kapazität verfügen, um das Klonen von VMs zu ermöglichen.
-* Der IP-Adressbereich muss im CIDR-Format angegeben werden (z. B. 100.100.0.0/24)
+* Der IP-Adressbereich muss im CIDR-Format angegeben werden (z. B. 100.100.0.0/24).
 * Für Linux-VMs:
 +
 ** Als Betriebssystem muss Ubuntu Linux 20.04 oder höher installiert sein.
@@ -470,12 +470,12 @@ image:diagram-clean-recovery-on-prem.png["Diagramm zur Wiederherstellung von Clo
 
 * Für Windows-VMs:
 +
-** Windows-VMs sollten über 20 GB freien Speicherplatz verfügen.
-** Das Betriebssystem sollte Windows Server 2022 oder 2025 sein.
+** Windows VMs müssen über mindestens 20 GB freien Speicherplatz verfügen.
+** Als Betriebssystem ist Windows Server 2022 oder 2025 erforderlich.
 ** VMware Tools muss installiert sein und ausgeführt werden.
 ** WinRM muss aktiviert sein.
-** Die IP-Adresse sollte konfiguriert werden.
-** Stellen Sie sicher, dass Sie über die entsprechende Lizenz verfügen, die das Klonen von Basis-VMs erlaubt.
+** Die IP-Adresse muss konfiguriert sein.
+** Voraussetzung ist eine entsprechende Lizenz, die das Klonen von Basis-VMs ermöglicht.
 ** Die VM muss eingeschaltet sein.
 
 
@@ -516,9 +516,9 @@ NFS-Zugriff auf die: * Produktionskonsolenagent * Konsolenagent VLAN * Reinraum 
 [[create-an-isolated-recovery-environment]]
 == Erstellen Sie eine isolierte Wiederherstellungsumgebung
 
-Vor der Durchführung einer vollständigen Wiederherstellung muss ein isolierter Wiederherstellungsraum eingerichtet werden.
+Vor der Durchführung einer vollständigen Wiederherstellung müssen Sie eine isolierte Wiederherstellungsumgebung erstellen.
 
-Die Vorgehensweise zum Einrichten eines isolierten Wiederherstellungsraums unterscheidet sich je nachdem, ob sich die Umgebung in der Cloud oder lokal befindet. Stellen Sie sicher, dass Sie die Anweisungen für den richtigen Standort befolgen.
+Die Vorgehensweise zum Erstellen einer isolierten Wiederherstellungsumgebung unterscheidet sich, je nachdem, ob sich die Umgebung in der Cloud oder lokal befindet. Dabei sind die Anweisungen für den richtigen Standort maßgeblich.
 
 [role="tabbed-block"]
 ====
@@ -530,14 +530,14 @@ Die Vorgehensweise zum Einrichten eines isolierten Wiederherstellungsraums unter
 . Für ein Cloud-basiertes IRE ist **Amazon Web Services** als Standort zu wählen.
 . Geben Sie einen **Name** für die Umgebung ein.
 . Wählen Sie *Weiter*.
-. Der Abschnitt *Systeme* ist zu erweitern. Die Systeme, die mit dem IRE verbunden werden sollen, sind auszuwählen. Dies gilt für jedes ausgewählte System. Jedes System muss über Netzwerkkonnektivität zum IRE verfügen. Möglicherweise muss für jedes System eine Daten-LIF-IP-Adresse angegeben werden, um den Wiederherstellungspunkt für Clean Restore einzurichten.
+. Der Abschnitt *Systeme* ist zu erweitern. Die Systeme, die mit dem IRE verbunden werden sollen, sind auszuwählen. Jedes System muss über Netzwerkkonnektivität zum IRE verfügen. Möglicherweise muss für jedes System eine Daten-LIF-IP-Adresse angegeben werden, um den Wiederherstellungspunkt für Clean Restore einzurichten.
 +
 
 NOTE: Für IREs, die auf Amazon FSx for NetApp ONTAP bereitgestellt werden, ist die Angabe dieser Informationen nicht erforderlich.
 
 . Für jedes System, das Sie hinzugefügt haben, mit Ausnahme von Amazon FSx for NetApp ONTAP, ist *Edit storage VM* auszuwählen. Im Pop-up sind die *Storage VM IP address* und die *Storage VM subnet mask* einzugeben. Für die *Broadcast domain* ist default oder management auszuwählen. Optional kann ein *Storage VM gateway* eingegeben werden.
 +
-image::clean-restore-systems.png[Screenshot der Systemauswahloberfläche.]
+image::clean-restore-systems.png[Screenshot der Oberfläche zur Systemauswahl.]
 
 . Wählen Sie *Weiter*.
 . Im Abschnitt *Authentifizierung* erfolgt die Eingabe der **Cloud-Konto-ID** und die Auswahl der **Region** für das Konto aus dem Dropdown-Menü. Das Einsetzen einer IRE ist nur in einer unterstützten Region möglich.
@@ -564,7 +564,7 @@ Ransomware Resilience testet die Verbindung, nachdem Sie „Hinzufügen“ ausge
 . Wählen Sie auf der Karte „Clean restores“ die Option **Hinzufügen**, wenn dies Ihre erste Umgebung ist, oder **Verwalten**, wenn Sie bereits eine erstellt haben.
 . Im Abschnitt „Typ“ *Reinigung auf Abruf* auswählen.
 . Wählen Sie als Standort **On-premises** aus.
-. Eingabe eines *Namens für die isolierte Wiederherstellungsumgebung*.
+. Erforderlich ist die Eingabe eines *Namens für die isolierte Wiederherstellungsumgebung*.
 . Wählen Sie *Weiter*.
 . Erweitern Sie den Abschnitt *Systeme*. Wählen Sie die Systeme aus, die Sie mit dem IRE verbinden möchten.
 +
@@ -572,19 +572,22 @@ Jedem ausgewählten System muss eine IP-Adresse zugewiesen sein. Sie können pri
 
 . Für jedes hinzugefügte System ist *Edit storage VM* auszuwählen. Im Popup sind die *Storage VM IP address* und die *Storage VM subnet mask* einzugeben. Für die *Broadcast domain* ist default oder management auszuwählen. Optional kann ein *Storage VM gateway* eingegeben werden.
 . Wählen Sie *Weiter*.
-. Wählen Sie den Konsolenagenten aus dem Dropdown-Menü aus, der im IRE bereitgestellt ist.
-. Für die Authentifizierung des vCenter Servers sind folgende Anmeldeinformationen anzugeben: *IP-Adresse oder vollqualifizierter Domänenname (FQDN)*, *Port*, *Benutzername* und *Passwort*.
+. Im Dropdown-Menü erfolgt die Auswahl des *Console agent*, der in der IRE bereitgestellt ist.
+. Für die Authentifizierung des vCenter Servers werden folgende Anmeldeinformationen benötigt: *IP-Adresse oder vollqualifizierte Domain (FQDN)*, *Port*, *Benutzername* und *Passwort*.
 . Wählen Sie **Authentifizieren**, um die Anmeldeinformationen zu bestätigen. Warten Sie, bis die Benutzeroberfläche Ihre Anmeldeinformationen bestätigt hat, bevor Sie fortfahren.
-. Erweiterung des Abschnitts *Clean room compute*.
+. Den Abschnitt *Clean room compute* erweitern.
 . Wählen Sie das *Rechenzentrum* und den *Cluster* aus, in dem die VMs bereitgestellt werden sollen.
 . Wählen Sie den *Datenspeicher* und das *Netzwerk* für den ESXi-Host aus.
-. Geben Sie den *IP-Adressbereich* im CIDR-Format (z. B. 10.0.0.1/24), die *Subnetzmaske* und das *Gateway* für die VMs ein.
-. Auszuwählen sind die VMs auf dem ESXi Host, die während des Wiederherstellungsprozesses als Basis VM für das Klonen dienen.
+. Für die VMs werden der *IP-Adressbereich* im CIDR-Format (z. B. 100.100.0.0/24), die *Subnetzmaske* und das *Gateway* angegeben.
+. Auszuwählen sind die VMs auf dem ESXi Host, die während des Recovery Prozesses als Basis VMs für das Klonen verwendet werden.
 +
 Wählen Sie für die Linux-VM, die Ransomware Resilience zum Scannen nach Ransomware verwendet, die VM aus dem Dropdown-Menü und geben Sie dann den *Benutzernamen* und das *Passwort* für die VM ein.
 
 +
 Wählen Sie für die zum Scannen verwendete Windows-VM die VM aus dem Dropdown-Menü aus und geben Sie anschließend den *Benutzernamen* und das *Passwort* für die VM ein.
+
++
+image::clean-restore-compute.png[Screenshot des Schritts zur sauberen Wiederherstellung der Compute Konfiguration.]
 
 . Über *Weiter* lässt sich die Konfiguration überprüfen.
 . Wählen Sie **Hinzufügen**, um die IRE zu erstellen. Ransomware Resilience testet die Verbindung, nachdem Sie Hinzufügen ausgewählt haben; dieser Vorgang kann einige Minuten dauern. Die IRE wurde erfolgreich bereitgestellt, wenn ihr Status als „bereitgestellt“ angezeigt wird.
