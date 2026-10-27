@@ -615,11 +615,8 @@
   <block id="f5bfc54a73042ca571add47438fea77e" category="cell">Änderungen von Standard oder Wichtig zu Kritisch</block>
   <block id="903c9d0250ec5956f3a9e1f0a3469c20" category="summary">Sie können Workloads vor Ransomware-Angriffen schützen, indem Sie einem Workload in NetApp Ransomware Resilience Richtlinien zuweisen.</block>
   <block id="54a418aa76c7e9afaa77a58a34a3d3ed" category="doc">Schützen Sie Workloads mit NetApp Ransomware Resilience -Schutzstrategien</block>
-  <block id="9d76fd8cddbcb128567856bd698d409e" category="section-title">Strategien zum Schutz vor Ransomware verstehen</block>
   <block id="b5728c1f0d5859e4bf3e89712b5ddbdf" category="list-text">**Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.</block>
   <block id="7646c296ea1b221cbb826893afaa224e" category="paragraph">Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt Ransomware Resilience diese und bietet Ihnen die Möglichkeit, entweder:</block>
-  <block id="0e468f869572effeac4af4bbea21ed06" category="list-text">Verwenden Sie eine Ransomware-Erkennungsrichtlinie und nutzen Sie weiterhin die Snapshot- und Backup-Richtlinien, die von anderen NetApp -Tools erstellt wurden, oder</block>
-  <block id="47751183709636889e320f1a849dd584" category="list-text">Verwenden Sie Ransomware Resilience, um Erkennung, Snapshots und Backups zu verwalten.</block>
   <block id="be96aa820e4d4c79150a1ea86f47ceb0" category="section-title">Schutzrichtlinien mit anderen von NetApp verwalteten Diensten</block>
   <block id="f37d79a56cb20cdcf206acc1cfa8be14" category="paragraph">Wenn eine Ransomware-Erkennungsrichtlinie von Autonomous Ransomware Protection (ARP oder ARP/AI, je nach ONTAP Version) und FPolicy in ONTAP verwaltet wird, sind diese Workloads geschützt und werden weiterhin von ARP und FPolicy verwaltet.</block>
   <block id="d62f06f1ca9fb020be7953fe3101f0a3" category="section-title">Schutzrichtlinien für Workloads, die nicht durch NetApp -Anwendungen geschützt sind</block>
@@ -656,11 +653,9 @@
   <block id="072b030ba126b2f4b2374f342be9ed44" category="cell">60</block>
   <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2</block>
   <block id="f543761d662a5051911ae04c98a64d2a" category="cell">*Wichtige Arbeitsbelastungsrichtlinie*</block>
-  <block id="a99b6d6970ec523cbdaf4eef268b8c6f" category="cell">Alle 30 Minuten</block>
   <block id="0a09c8844ba8f0936c20bd791130d6b6" category="cell">144</block>
   <block id="9766527f2b5d3e95d4a733fcfb77bd7e" category="cell">165</block>
   <block id="48a3fd80fe94fd5fab8bd8b5d0983950" category="cell">*Standard-Arbeitslastrichtlinie*</block>
-  <block id="f4e76e01f80db61a6180d7fa5d9656c3" category="cell">Alle 30 Minuten</block>
   <block id="32bb90e8976aab5298d5da10fe66f21d" category="cell">72</block>
   <block id="98dce83da57b0395e163467c9dae521b" category="cell">93</block>
   <block id="0396743cd11b926055aa9c4e3fc5eb14" category="cell">*Verschlüsselungsbenutzererweiterung*</block>
@@ -681,22 +676,8 @@
   <block id="197c283a01f19c77a4081693cf2ef5bf" category="list-text">Wählen Sie auf der Seite „Ransomware-Schutzstrategien“ *Hinzufügen* aus.</block>
   <block id="a5be5d648ce22c25337cedcc760abd3c" category="inline-image-macro">Strategieseite hinzufügen, die den Snapshot-Bereich anzeigt</block>
   <block id="3c47a09fd51a5bf078b6b75c88195ad8" category="paragraph"><block ref="3c47a09fd51a5bf078b6b75c88195ad8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2eaf03a47e19fb4342355aea7247f987" category="list-text">Geben Sie einen neuen Strategienamen ein oder geben Sie einen vorhandenen Namen ein, um ihn zu kopieren.  Wenn Sie einen vorhandenen Namen eingeben, wählen Sie aus, welchen Sie kopieren möchten, und wählen Sie *Kopieren*.</block>
-  <block id="2b83c0c36fa2002a1fbc43f8f9192b43" category="admonition">Wenn Sie eine vorhandene Strategie kopieren und ändern möchten, hängt Ransomware Resilience „_copy“ an den ursprünglichen Namen an.  Sie sollten den Namen und mindestens eine Einstellung ändern, um es eindeutig zu machen.</block>
   <block id="e4574be2aa1d855d0a159fa734c028b7" category="list-text">Wählen Sie für jedes Element den *Abwärtspfeil* aus.</block>
-  <block id="b77a56354e9e39a76b1a118e9bfa09d3" category="list-text">*Erkennungsrichtlinie*:</block>
-  <block id="949db64066489b0349a4ff1451832808" category="list-text">*Richtlinie*: Wählen Sie eine der vordefinierten Erkennungsrichtlinien.</block>
   <block id="7c06fadd4f73e4b63eb519df7d9880fc" category="paragraph">Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.</block>
-  <block id="c8499d03897189696e5af26fc5ab9f45" category="list-text">*Snapshot-Richtlinie*:</block>
-  <block id="007ac2633329ecdb55692304050d9260" category="list-text">*Basisname der Snapshot-Richtlinie*: Wählen Sie eine Richtlinie aus oder wählen Sie *Erstellen* und geben Sie einen Namen für die Snapshot-Richtlinie ein.</block>
-  <block id="db1a1db15ec89ce3f1720ebaa5e16708" category="list-text">*Snapshot-Sperre*: Aktivieren Sie diese Option, um die Snapshot-Kopien auf dem primären Speicher zu sperren, sodass sie für einen bestimmten Zeitraum nicht geändert oder gelöscht werden können, selbst wenn ein Ransomware-Angriff den Weg zum Sicherungsspeicherziel findet.  Dies wird auch als _unveränderlicher Speicher_ bezeichnet.  Dies ermöglicht eine schnellere Wiederherstellung.</block>
-  <block id="adffa2f644199b61c95070a8e5f0b6a4" category="paragraph">Wenn ein Snapshot gesperrt ist, wird die Ablaufzeit des Volumes auf die Ablaufzeit der Snapshot-Kopie eingestellt.</block>
-  <block id="2a81a6cd6ac2a1bf9226055bf00ceada" category="inline-link">SnapLock in ONTAP</block>
-  <block id="df0d3afa881e0dbd0a73d2a79b4d08de" category="paragraph">Die Snapshot-Kopiersperre ist mit ONTAP 9.12.1 und höher verfügbar.  Weitere Informationen zu SnapLock finden Sie unter<block ref="4a9cf5e778f625195d7ada1c294fe592" category="inline-link-rx"></block> .</block>
-  <block id="32d9d253b967fa9a09765582b443ab9f" category="list-text">*Schnappschuss-Zeitpläne*: Wählen Sie Zeitplanoptionen und die Anzahl der aufzubewahrenden Schnappschusskopien aus und aktivieren Sie den Zeitplan.</block>
-  <block id="bec83ad5f3237718ad523140fca8ac2b" category="list-text">*Backup-Richtlinie*:</block>
-  <block id="4c2335d5c61b4722f3bc7508bd4a0ada" category="list-text">*Basisname der Sicherungsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen Namen.</block>
-  <block id="589d15d214feb500a590692bf3a50f04" category="list-text">*Sicherungszeitpläne*: Wählen Sie Zeitplanoptionen für den sekundären Speicher und aktivieren Sie den Zeitplan.</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Wählen Sie *Hinzufügen*.</block>
   <block id="1a068d6a85d666ea306209409d3e8bca" category="section-title">Hinzufügen einer Erkennungsrichtlinie zu Workloads mit vorhandenen Sicherungs- oder Snapshot-Richtlinien</block>
   <block id="8ffd4321390a5a9174c14e023f8f68f8" category="inline-xref">Schutz durch Ransomware-Resilienz</block>
@@ -711,7 +692,6 @@
   <block id="df03f91b3a74d5ec2baa41276e3a16de" category="inline-xref">Erstellen einer Schutzrichtlinie</block>
   <block id="6254fbe0af1c355b3b21ba0edff9f802" category="list-text">Wählen Sie eine Schutzrichtlinie.  Wenn keine Schutzrichtlinie vorhanden ist, wählen Sie **Hinzufügen**, um eine neue Richtlinie zu erstellen.  Informationen zum Erstellen einer Richtlinie finden Sie unter<block ref="176be3a772dd966966fe67b132b5ec7b" category="inline-xref-macro-rx"></block> . Wählen Sie **Weiter**.</block>
   <block id="375396793fa0187dd9b04e12d4a0a7b3" category="list-text">Wählen Sie ein Sicherungsziel aus oder erstellen Sie ein neues. Wählen Sie **Weiter**.</block>
-  <block id="1f47983fe74a4f8bc9fa8a9706708fe6" category="list-text">Wenn Ihre Schutzstrategie die Erkennung des Benutzerverhaltens umfasst, wählen Sie in Ihrer Umgebung einen Benutzeraktivitätsagenten aus, um die neuen Datensammler zu hosten. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übertragen und so anomales Benutzerverhalten zu erkennen.</block>
   <block id="bd320a2d0a55e1edf2c57054719c7c15" category="list-text">Überprüfen Sie die neue Schutzstrategie und wählen Sie dann **Schützen** aus, um sie anzuwenden.</block>
   <block id="82f3ca7fa2e1f82d7f077e15af9747a4" category="section-title">Zuweisen einer anderen Richtlinie</block>
   <block id="0fd65377e78b78ae68af3a3a26d93972" category="paragraph">Sie können die bestehende Richtlinie durch eine andere ersetzen.</block>
@@ -746,17 +726,7 @@
   <block id="05d9024c9e1747e3e7428ac3d6598aec" category="list-text">Bestätigen Sie, dass Sie die Arbeitslast entfernen möchten, und wählen Sie *Entfernen*.</block>
   <block id="45a84df973de2cf5ebebbbb483cfdc19" category="list-text">Wählen Sie auf der Seite mit der ausgewählten Schutzgruppe oben rechts *Schutzgruppe löschen* aus.</block>
   <block id="923d9e45e363794e64a67b73838142ac" category="list-text">Bestätigen Sie, dass Sie die Gruppe löschen möchten, und wählen Sie *Löschen*.</block>
-  <block id="f3d0cde08790f065a5bc8c494e512b95" category="section-title">Verwalten Sie Strategien zum Schutz vor Ransomware</block>
-  <block id="e299818a27e1f0221ee8f26b09166030" category="paragraph">Sie können eine Ransomware-Strategie löschen.</block>
-  <block id="b7c78f5e474c6b8d64bb9440e0c2207c" category="section-title">Durch eine Ransomware-Schutzstrategie geschützte Workloads anzeigen</block>
-  <block id="74c3d5e9f3c5f4a3eb1732ac96ae76d8" category="paragraph">Bevor Sie eine Ransomware-Schutzstrategie löschen, möchten Sie möglicherweise prüfen, welche Workloads durch diese Strategie geschützt sind.</block>
-  <block id="ce1be6d505f661c5110f1445e0bf19ba" category="paragraph">Sie können die Arbeitslasten aus der Liste der Strategien oder beim Bearbeiten einer bestimmten Strategie anzeigen.</block>
-  <block id="8e872201a9f1d2d9ce53cb5399ef0085" category="list-title">Schritte zum Anzeigen von Strategien</block>
   <block id="90f081941b9ec4d54a22065d524e3c77" category="list-text">Wählen Sie auf der Seite „Schutz“ die Option „Schutzstrategien verwalten“ aus.</block>
-  <block id="5c5c4c2893639638b243a5ebcf096a91" category="paragraph">Auf der Seite mit den Ransomware-Schutzstrategien wird eine Liste mit Strategien angezeigt.</block>
-  <block id="b4591df76e4afaf6201f5ab62904e7c9" category="inline-image-macro">Bildschirm mit Ransomware-Schutzstrategien mit einer Liste von Strategien</block>
-  <block id="41bd5eb706037d556691ac8ba68c41a4" category="paragraph"><block ref="41bd5eb706037d556691ac8ba68c41a4" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b4f3b22ae011fb04bce785386b9d1062" category="list-text">Wählen Sie auf der Seite „Ransomware-Schutzstrategien“ in der Spalte „Geschützte Workloads“ den Abwärtspfeil am Ende der Zeile aus.</block>
   <block id="ccf23ad1bfca8f3c51caa8c9d8745378" category="section-title">Löschen einer Ransomware-Schutzstrategie</block>
   <block id="1eade84fa2646ea13dc54a4b35f61c1c" category="paragraph">Sie können eine Schutzstrategie löschen, die derzeit keinen Workloads zugeordnet ist.</block>
   <block id="571f33f6eea9a8d4cbc40d9ea733c1e9" category="list-text">Wählen Sie auf der Seite „Strategien verwalten“ die Option „Aktionen“ aus.<block ref="c25b92b317848c2a66dcfecc2a02ad99" category="inline-image-macro-rx" type="image"></block> Option für die Strategie, die Sie löschen möchten.</block>
@@ -1456,15 +1426,11 @@
   <block id="705d8898c1c055eb3bff9939a87b6812" category="list-text">*Kritisch*: Es werden mehr als eine Snapshot-Kopie pro Stunde erstellt (sehr aggressiver Schutzplan).</block>
   <block id="0bec43abfdb99f043ac56e20931d1899" category="list-text">*Wichtig*: Snapshot-Kopien werden seltener als stündlich, aber häufiger als täglich erstellt.</block>
   <block id="890ca6db61a7d84b3c2f7e8b21560ff7" category="list-text">*Standard*: Es werden mehrmals täglich Momentaufnahmen erstellt.</block>
-  <block id="da4aa80a5402fe8991327699e5421e28" category="section-title">Vordefinierte Erkennungsrichtlinien</block>
   <block id="0d6a90889ade51e4252ba8bbf1ad155e" category="cell">Aufbewahrungsdauer (Tage)</block>
   <block id="b5b7fab63026325a379913c2a05751c2" category="cell">Anzahl der Snapshot-Kopien</block>
   <block id="aa9adfa847815670c9bd986dafc8c79c" category="cell">Maximale Anzahl von Snapshot-Kopien</block>
   <block id="cf9344351eb239ccd95661876c4d97ee" category="cell">*Richtlinie zur kritischen Replikation*</block>
   <block id="ad53fda1a18da9db9d8aa1d460952aa5" category="list-text">Sekundäre Replikation zu ONTAP</block>
-  <block id="50723c157cd9ea132a02f421411e273d" category="list-text">*Replikationsrichtlinie*:</block>
-  <block id="f84245dfb1fc8217e62c0934102ba606" category="list-text">*Basisname der Replikationsrichtlinie*: Geben Sie einen neuen Namen ein oder wählen Sie einen vorhandenen aus. Der Basisname ist das Präfix, das an alle Snapshots angehängt wird.</block>
-  <block id="d230465858c85552b6c5a5b1ef3bb21f" category="list-text">*Replikationszeitpläne*: Aktivieren Sie die gewünschten Replikationsfrequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert (die Anzahl der aufzubewahrenden replizierten Snapshots) fest.</block>
   <block id="447fce6406d4a8e99de98a2d5d107536" category="list-text">Wenn Ihre Strategie die Replikation beinhaltet, wählen Sie das **Zielsystem** und die **Zielspeicher-VM** aus. Wählen Sie **Weiter**.</block>
   <block id="6f540707e47351a26c8e3c79ccce18ea" category="list-text">*Schutz*: Beinhaltet den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -1498,7 +1464,6 @@
   <block id="ce47b0513e6a5635f603be8cc52f392d" category="list-text">&lt;site_name&gt;.c01.cloudinsights.netapp.com</block>
   <block id="906a7644c76f341f29012680a39f7225" category="list-text">&lt;site_name&gt;.c02.cloudinsights.netapp.com</block>
   <block id="142b47c359d647af9faff9ef084152c7" category="list-text">agentlogin.cs01.cloudinsights.netapp.com</block>
-  <block id="9d710e8874b82a90107c10683350b48a" category="paragraph">Strategien zum Schutz vor Ransomware umfassen _Erkennung_, _Schutz_ und _Replikationsrichtlinien_.</block>
   <block id="7923de3f0c836263e77d3ef5585b2ee7" category="cell">HTTPS (TCP)</block>
   <block id="27db5f7ea4fbef607be3e5580d6023dd" category="paragraph">Sie benötigen keine Lizenz oder kein Abonnement, um die NetApp Console zu nutzen, und es entstehen Ihnen erst Kosten, wenn Sie Console-Agenten in Ihrer Cloud bereitstellen, um die Konnektivität zu Ihren Speichersystemen oder NetApp Datendiensten sicherzustellen. Einige von der Console aus zugängliche NetApp Datendienste sind jedoch lizenz- oder abonnementbasiert.</block>
   <block id="354ccfdcbf26f407e895a47f9d8a503b" category="section-title">Schlüsselbegriffe</block>
@@ -1570,9 +1535,6 @@
   <block id="c7508e265b893e4d518594502d79c380" category="list-text">Überwacht aktiv die Workloads und orchestriert die Nutzung der Backup and Recovery- und ONTAP-APIs, indem Richtlinien auf jede der identifizierten Workloads angewendet werden.</block>
   <block id="e47b008a3c9b07db3a7f7c525eeccc5a" category="cell">Weisen Sie jedem Workload eine Richtlinie zu. Siehe <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>. Siehe <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>. Siehe <block ref="cc10c371e1aab359fa44a886d5e79433" category="inline-link-macro-rx"></block>.</block>
   <block id="402b250b6b0cd33bf0396353ed30be82" category="inline-link-macro">Gruppen-Workloads</block>
-  <block id="c35d66439764aa49afc7babd31dd817e" category="admonition">Für eine verbesserte Verwaltung und einen besseren Schutz Ihrer Datenbestände können Sie <block ref="f976640ede437bd07da0e62885caa3e9" category="inline-link-macro-rx"></block> erstellen, um Volumes gemeinsam unter einer Strategie zu schützen.</block>
-  <block id="32fcd2ee690f5f3556594e0a5c86b657" category="paragraph">Neben Ransomware Resilience können Sie NetApp Backup and Recovery verwenden, um den Schutz für Dateifreigaben und VM-Dateifreigaben zu verwalten.</block>
-  <block id="19df373c6eb28e440c7376f7b6153ac6" category="paragraph">Schutzinformationen von Backup &amp; Recovery Services werden in Ransomware Resilience angezeigt. Sie können diesen Services mit Ransomware Resilience Erkennungsrichtlinien hinzufügen. Das Hinzufügen einer Datensicherungsstrategie mit Ransomware Resilience ersetzt die bestehenden Datensicherungsstrategien.</block>
   <block id="5faff4d5da024e537f30a6f61e63b11d" category="paragraph">Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience verwaltet wird, wurden möglicherweise Snapshots im Rahmen von ONTAP oder anderen Produkten erstellt. Wenn ONTAP FPolicy-Schutz aktiviert ist, können Sie den FPolicy-Schutz mit ONTAP ändern.</block>
   <block id="294bdeaab3c13eeb5476a96b2a4d7991" category="list-text">**Ersetzen Sie die bestehenden Snapshot- oder Backup-Richtlinien von Backup and Recovery protection durch Datensicherungsstrategien, die von Ransomware Resilience verwaltet werden.**</block>
   <block id="f9dbe879fedc698e4cd50df0431ab680" category="section-title">Fügen Sie eine Erkennungsrichtlinie zu Workloads mit vorhandenen Snapshot- und Backup-Richtlinien hinzu, die von Backup and Recovery verwaltet werden</block>
@@ -2239,8 +2201,6 @@
   <block id="495dc566c29577d14a3418e529c90d3c" category="list-text">**Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen. Sie haben drei Erkennungsoptionen:</block>
   <block id="b3b96411f9486bb0c2c8a4e2b07e7d35" category="list-text">Verschlüsselungserkennung</block>
   <block id="2b694a9a00b006682bcbea870c2ca4fb" category="list-text">Verdächtige Dateierweiterungen blockieren</block>
-  <block id="a1c735fa1a87c7cfca09d994cfe02048" category="inline-link-macro">verdächtige Benutzeraktivität (die zusätzliche Konfigurationen erfordert)</block>
-  <block id="262d414194517bdfa67b048201f2b424" category="paragraph">Ihre Erkennungsrichtlinie kann alle drei Optionen oder eine Kombination davon umfassen. Sie muss entweder die Verschlüsselungserkennung oder <block ref="0c1271458a5eed3dcf0b345a743161db" category="inline-link-macro-rx"></block> beinhalten.</block>
   <block id="38cfc49361136d6f7410fbe2c3b7430a" category="list-text">*Änderungen der Schutzmaßnahmen*: Beinhaltet eine Überprüfung der Änderungen der Schutzstrategien für Workloads über einen festgelegten Zeitraum: 30 Tage, 60 Tage, 90 Tage oder 1 Jahr.</block>
   <block id="3e323562bd488e4cbd90a025b9424181" category="section-title">08. Juni 2026</block>
   <block id="fec111d809c49ffc75c21732e808fe2d" category="admonition">Wenn Sie die Warnung ignorieren, lernt Ransomware Resilience dieses Verhalten, ordnet es dem normalen Betrieb zu und sendet keine Warnungen mehr bei ähnlichen Ereignissen.</block>
@@ -2256,7 +2216,6 @@
   <block id="7eba97a8ef53163c9fd30177df926301" category="admonition">Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert wird, entfällt diese Clean Room SVM-Daten-LIF-IP-Anforderung.</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="cell">Amazon FSx for NetApp ONTAP</block>
   <block id="7e04984fc8cb78806e36cbf9552342fd" category="admonition">Die Erkennung von Benutzeraktivitäten wird derzeit für SAN-Workloads nicht unterstützt. Die Erkennung von Benutzeraktivitäten kann mit NAS-Workloads in Amazon FSx for NetApp ONTAP, Cloud Volumes ONTAP und ONTAP verwendet werden.</block>
-  <block id="0270ec13158ac8d81c5022ad41a38235" category="admonition">Bei der Konfiguration von Schutzstrategien für Amazon FSx for NetApp ONTAP und Azure NetApp Files empfiehlt sich eine Konsultation von <block ref="f35eaad9edb95ec2be22c4403bf0d360" category="inline-link-macro-rx"></block>.</block>
   <block id="b70244907e8a4cb4fbb47d6e9fdda53a" category="cell">Cloud: Amazon FSx for NetApp ONTAP</block>
   <block id="b4bada7d854e6650f9cc28e404fe40fb" category="admonition">Für IREs, die auf Amazon FSx for NetApp ONTAP bereitgestellt werden, ist die Angabe dieser Informationen nicht erforderlich.</block>
   <block id="f5b6822ed53c8f99c424ea0e8e011bf7" category="admonition">Ransomware Resilience kann nur bis zu 3.000 Workloads pro Console agent erkennen.</block>
@@ -2725,7 +2684,6 @@
   <block id="f162f526fe9a4312ce833ccc6262c43c" category="cell">Kommunikation von ONTAP zum Benutzeraktivitätsagenten für FPolicy-Ereignisse. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet sein, damit ONTAP Ereignisse an diesen senden kann, einschließlich einer eventuell vorhandenen Firewall auf dem Benutzeraktivitätsagenten selbst (falls vorhanden). + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie dafür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, zunächst 100 Ports zu reservieren und die Anzahl bei Bedarf zu erhöhen.</block>
   <block id="836e56ef7ecb008a36ab89b0620d32b3" category="list-text">Überprüfen Sie im Dashboard „Ransomware Resilience“ den Bereich „Warnungen“.</block>
   <block id="2bf784d30957b3ec7d6ebc12ece51af1" category="paragraph">Wenn Ransomware Resilience einen potenziellen Angriff erkennt, sendet es eine E-Mail-Benachrichtigung an die abonnierten Benutzer basierend auf deren Benachrichtigungseinstellungen, die in den NetApp Console-Einstellungen konfiguriert sind. Die E-Mail enthält Informationen zur Warnung, einschließlich des Schweregrads und der betroffenen Ressourcen.</block>
-  <block id="f642b6f4e49c47514e5e24cda6578784" category="admonition">Die **Benutzererweiterung für Verschlüsselung** ist die einzige vordefinierte Richtlinie, die die Erkennung verdächtigen Benutzerverhaltens unterstützt. + Die **Richtlinie für kritische Replikation** ist die einzige vordefinierte Richtlinie, die die Replikation von Snapshots nach ONTAP unterstützt.</block>
   <block id="a7cc27b78a2a959c7d443e41e9734a78" category="cell">Das Anmeldeverzeichnis des Benutzers kann aufgrund eines Berechtigungsfehlers nicht unter dem Verzeichnis /home erstellt werden. Ein cssys-Benutzer kann erstellt und dessen Anmeldeverzeichnis manuell mit dem Befehl <block ref="d5ba9a9474fc171d7c8d8e0ad71f99d9" prefix=" " category="inline-code"></block> hinzugefügt werden. In diesem Befehl <block ref="67dd1c0d4e68c367b980f8723c781cb1" prefix=" " category="inline-code"></block> wird das Home-Verzeichnis erstellt, falls es nicht existiert; <block ref="9b017020b9d48d433ec90c548e6b5c70" prefix=" " category="inline-code"></block> legt HOME_DIR als Anmeldeverzeichnis fest.</block>
   <block id="dafa465aa4f684cd34125edc375ebf59" category="paragraph"><block ref="2a4fc232baf441f054526df5220063f3" category="inline-link-rx"></block>.</block>
   <block id="bab7cd99622d9058ad65108d51915a15" category="inline-link-macro">Konfiguration eines Splunk SIEM</block>
@@ -2862,8 +2820,6 @@
   <block id="07405e58de7ae5291e2723155a5869b4" category="section-title">Verbesserter Workflow zur Aktivierung der Benutzeraktivitätsüberwachung</block>
   <block id="dd9dd4a4b292f36f08cee46f9ba3ffa3" category="paragraph">Ransomware Resilience hat den Workflow für die Aktivierung der Benutzeraktivitätsüberwachung verbessert. Bisher testete Ransomware Resilience die Verbindung des Datensammlers jedes Mal, wenn Sie für eine Workload eine Ransomware-Schutzstrategie mit Benutzeraktivitätsüberwachung aktivierten. Mit diesem Update wird diese Prüfung nun übersprungen, wenn für die Storage VM ein Datensammler vorhanden ist und sich im Status "running" befindet, wodurch der Schutz Workflow beschleunigt wird.</block>
   <block id="b79c3e2214dfd55d5e8b57ef1d6ae5bb" category="inline-link-macro">Workloads schützen</block>
-  <block id="5f705092fbb64e2adcc5b83793eed660" category="paragraph">Weitere Informationen finden Sie unter <block ref="f5df6f8f09e7648e9d6889e3e6e725cb" category="inline-link-macro-rx"></block>.</block>
-  <block id="d64a907f57f420b81a119fce287ff09f" category="paragraph">Ransomware-Schutzstrategien sind ein zentrales Merkmal von NetApp Ransomware Resilience: Sie unterstützen Erkennung, Schutz und Replikation. Mit der Aktivierung einer Ransomware-Schutzstrategie lassen sich Ransomware-Angriffe erkennen und eine Schutzbasis für die Wiederherstellung sicherstellen.</block>
   <block id="233adc8ca42f7a8097ed29533bfab815" category="list-text">**ANALYSE**: Im Clean Room analysiert Ransomware Resilience alle Snapshots, um festzustellen, ob eine Verschlüsselung vorhanden ist. Clean restore ermittelt eine Wiederherstellungskarte mit dem optimalen Wiederherstellungsplan.</block>
   <block id="3cfd0b2a1a1f7eb6f8f17ddc0f73fc96" category="paragraph">Sie können im Planungsschritt auch Dateiverläufe anzeigen, um zu erkennen, wann Ransomware-Ereignisse sich auf die Dateien ausgewirkt haben und in welchem zeitlichen Verhältnis der Wiederherstellungspunkt zu diesem Ereignis steht.</block>
   <block id="2167a2d55f36099e0735c5707e3b71bb" category="list-text">Bei einer sauberen Wiederherstellung können Sie nur die Quellumgebung wiederherstellen.</block>
@@ -2893,4 +2849,51 @@
   <block id="6f4030f935741207e6077271ec4c7fcd" category="list-text">Für die VMs werden der *IP-Adressbereich* im CIDR-Format (z. B. 100.100.0.0/24), die *Subnetzmaske* und das *Gateway* angegeben.</block>
   <block id="0ad38e8473db5155eec04c6689ae2fed" category="list-text">Auszuwählen sind die VMs auf dem ESXi Host, die während des Recovery Prozesses als Basis VMs für das Klonen verwendet werden.</block>
   <block id="41195e5d1530c08998754564c86f0814" category="image-alt">Screenshot des Schritts zur sauberen Wiederherstellung der Compute Konfiguration.</block>
+  <block id="a2796a8db571ead965c0a0f1d62135a3" category="paragraph">Weitere Informationen finden Sie unter <block ref="092a9715a1fcee9c7af4662f48f0f290" category="inline-link-macro-rx"></block>.</block>
+  <block id="140820d94a267dbe5867680c67a5798d" category="summary">Informationen zu Strategien zum Schutz vor Ransomware in NetApp Ransomware Resilience. Datensicherungsstrategien ermöglichen sowohl die Erkennung als auch Snapshots, Backup und Replikation, um eine Grundlage für die Wiederherstellung zu schaffen.</block>
+  <block id="de38341d386aac0e035b857d1e5a3ccd" category="doc">Informationen zu Schutzstrategien in NetApp Ransomware Resilience</block>
+  <block id="bc92d7f1a44cfd18f7c5f445b25d55b9" category="paragraph">In NetApp Ransomware Resilience sind Datensicherungsstrategien ein wesentliches Element Ihrer Ransomware-Abwehrstrategie. Datensicherungsstrategien umfassen _Erkennung_, _Schutz_ und _Replikation_ und ermöglichen es Ihnen, Ransomware-Angriffe zu erkennen, sich davor zu schützen und eine Grundlage für die Wiederherstellung zu schaffen.</block>
+  <block id="b742b0ec247c3cdcc191f1d822fb5b29" category="section-title">Elemente der Schutzstrategie</block>
+  <block id="1dcd854bf756bc93beadebb594120427" category="paragraph">Schutzstrategien bestehen aus drei Elementen: Erkennung, Schutz und Replikation.</block>
+  <block id="ac1b8bba2f610b7935e7424342a0ec1f" category="inline-link-macro">verdächtige Benutzeraktivität (die eine zusätzliche Konfiguration erfordert)</block>
+  <block id="a3a4bfca25ee9bd823c50f83c3b1cdb0" category="paragraph">Ihre Erkennungsrichtlinie kann alle drei Optionen oder eine Kombination davon umfassen. Sie muss entweder die Verschlüsselungserkennung oder <block ref="abbfcb2a99b09ad39603d2f80be3fec7" category="inline-link-macro-rx"></block> beinhalten.</block>
+  <block id="a08b60b067cfccd8d9f87d57ea4bf995" category="list-text">Verwendung einer Ransomware-Erkennungsrichtlinie und weitere Nutzung der von anderen NetApp Tools erstellten Snapshot- und Backup-Richtlinien, oder</block>
+  <block id="9c864d59c7a41fa01f3cfe3c8f413487" category="list-text">Mit Ransomware Resilience lassen sich Erkennung, Snapshots und Backups managen.</block>
+  <block id="aacfe2994af49daf45b1e3f0121af4bf" category="admonition">Bei der Konfiguration von Datensicherungsstrategien für Amazon FSx for NetApp ONTAP oder Azure NetApp Files finden Sie Informationen unter <block ref="f35eaad9edb95ec2be22c4403bf0d360" category="inline-link-macro-rx"></block>.</block>
+  <block id="c90079c45ff924b0cb15b35d000c9ade" category="admonition">Für ein verbessertes Management und einen besseren Schutz Ihrer Datenlandschaft können Sie <block ref="f976640ede437bd07da0e62885caa3e9" category="inline-link-macro-rx"></block>, um Volumes gemeinsam mit einer einzigen Strategie zu schützen.</block>
+  <block id="eb0f013f3748a5c33bbc7b5948baf26e" category="paragraph">Neben der Ransomware-Resilienz können Sie NetApp Backup and Recovery zum Managen des Schutzes von Dateifreigaben verwenden.</block>
+  <block id="c036804c8db0bc110afe05b3cdd5b86c" category="paragraph">Schutzinformationen aus Backup and Recovery Services werden in Ransomware Resilience angezeigt. Einer bestehenden Backup and Recovery Richtlinie lässt sich eine Ransomware-Erkennungsrichtlinie hinzufügen. Auch über Ransomware Resilience lassen sich Sicherungsrichtlinien hinzufügen, die die bestehenden Datensicherungsstrategien aus Backup and Recovery ersetzen.</block>
+  <block id="172504408a355f366017244a5b384ba8" category="section-title">Vordefinierte Richtlinien</block>
+  <block id="54b0e51980ebec464c2fd19bbec7d8a9" category="admonition">Die Richtlinie **Encryption user extension** ist die einzige vordefinierte Richtlinie, die die Erkennung verdächtiger Benutzeraktivitäten unterstützt. + Die Richtlinie **Critical replication** ist die einzige vordefinierte Richtlinie, die das Replizieren von Snapshots auf ONTAP unterstützt.</block>
+  <block id="7e0b491310b68d825e272ba1bb842550" category="paragraph">Halbstündlich</block>
+  <block id="4f6969a7095a445329e6510879d4e23a" category="cell">Alle 30 Minuten</block>
+  <block id="5c8ced3e31f752b34df3c4592d6ab71f" category="list-text"><block ref="5c8ced3e31f752b34df3c4592d6ab71f" category="inline-link-macro-rx"></block></block>
+  <block id="d2965551e1afdc691102350337341b9c" category="inline-link-macro">Schutzstrategien</block>
+  <block id="6e67000bd0dfb478ab8f86ae1400fcf0" category="paragraph">Nachdem Workloads in NetApp Ransomware Resilience erkannt wurden, ist es wichtig, <block ref="816a63b3c576ffe370f29988014c79a0" category="inline-link-macro-rx"></block> auf Ihre Workloads anzuwenden, um eine Kombination aus Ransomware-Erkennung, -Schutz und -Replikation zu konfigurieren. Durch die Aktivierung einer Ransomware-Schutzstrategie lassen sich Ransomware-Angriffe erkennen, und es steht eine Schutzgrundlage für die Wiederherstellung zur Verfügung.</block>
+  <block id="c805a7ccdfbefcb95c3e5d3eb799559f" category="inline-link-macro">die notwendigen Einstellungen vorgenommen</block>
+  <block id="a5305c2f9c4859bf06df996bb447f1a0" category="paragraph">Wenn Sie eine Datensicherungsstrategie mit Erkennung verdächtigen Benutzerverhaltens erstellen möchten, ist sicherzustellen, dass Sie <block ref="d7ebceebd961973af1512cc719357652" category="inline-link-macro-rx"></block> für die Überwachung von Benutzeraktivitäten eingerichtet haben.</block>
+  <block id="f5ef2630931c51549af3e623d4f63fcd" category="list-text">Neuen Strategienamen eingeben. Der Strategiename darf keine Leerzeichen enthalten.</block>
+  <block id="344f7e8a6617b537a56be4e2326d7628" category="list-text">Optional kann eine bestehende Datensicherungsstrategie als Grundlage für die neue Strategie ausgewählt werden. Unter *Copy from existing Ransomware Resilience strategy* wird *Select* gewählt. Anschließend wird die bestehende Strategie ausgewählt und dann *Copy*.</block>
+  <block id="b99ea56cd0937e71402758b90941afba" category="list-text">Folgende Einstellungen für die *Erkennungsrichtlinie* sind auszuwählen:</block>
+  <block id="368cc5f046a5decdd8a63b189def027d" category="inline-link-macro">vordefinierte Richtlinie</block>
+  <block id="35818e1bdf8572310be62fbe70d83fbd" category="list-text">Festlegen der *Snapshot-Richtlinie*. Um Snapshot-Einstellungen aus einer <block ref="acb8cd429652c09fe35d5de4c302f2ae" category="inline-link-macro-rx"></block> zu importieren, ist die Optionsschaltfläche *Select* und anschließend die Richtlinie aus der Dropdown-Liste auszuwählen. Wenn eine Richtlinie importiert wird, sind keine weiteren Snapshot-Konfigurationen erforderlich.</block>
+  <block id="cb67299b59d7a0a794b01e3933723fc2" category="paragraph">Zur Konfiguration eigener Einstellungen wird *Create* ausgewählt, anschließend wird ein *Snapshot basename* eingegeben. Der Basisname ist das Präfix, das an jeden Snapshot angehängt wird.</block>
+  <block id="3f1b170bc65d3a2a562b87c762c823cf" category="list-text">Wenn Sie Ihre eigenen Snapshot-Einstellungen konfigurieren, können Sie *Snapshot locking* aktivieren. Wenn Sie *Snapshot locking* aktivieren, ist ein Wert für *Locking retention days* festzulegen (d. h. wie lange die Snapshots gesperrt sind).</block>
+  <block id="227b3727877936fe36a5c3408d154e37" category="paragraph">Die Snapshot-Sperrung erzeugt unveränderlichen Storage, indem die Snapshot-Kopien auf dem primären Storage gesperrt werden, sodass sie für einen bestimmten Zeitraum weder geändert noch gelöscht werden können, selbst wenn ein Ransomware-Angriff das Backup Storage Ziel erreicht. Dies ermöglicht eine schnellere Wiederherstellung. Wenn ein Snapshot gesperrt ist, wird die Ablaufzeit des Volumes auf die Ablaufzeit der Snapshot-Kopie gesetzt.</block>
+  <block id="70f359f752aadf5bf7a021c260016eae" category="inline-link-macro">ONTAP Dokumentation für SnapLock</block>
+  <block id="e2c8c1fbfb2e418d03e83af4d5e791b3" category="paragraph">Die Snapshot-Kopiersperre ist ab ONTAP 9.12.1 verfügbar. Weitere Informationen zu SnapLock finden Sie unter <block ref="4ca7d4cccee9eba6047bb73bae1d4bb0" category="inline-link-macro-rx"></block>.</block>
+  <block id="d07faab816e99d4553ba7bf5cb72f7bd" category="paragraph">Bei der Konfiguration eigener Snapshot-Einstellungen sind die Optionen für den Snapshot-Zeitplan festzulegen. Dabei ist auszuwählen, ob Snapshots minütlich, stündlich, täglich, wöchentlich oder monatlich erstellt werden. Für alle Optionen außer „täglich“ ist festzulegen, zu welcher Tages-, Wochen- oder Monatszeit die Snapshots erstellt werden. Außerdem ist im Feld *Retention* festzulegen, wie viele Kopien jedes Snapshot-Typs aufbewahrt werden.</block>
+  <block id="99cf9bfc9df3b53a2612d01dea4a5f59" category="inline-image-macro">Screenshot der Snapshot-Richtlinienoptionen.</block>
+  <block id="b0a1cedd2277ba2ec3327d537c1e0a4b" category="paragraph"><block ref="b0a1cedd2277ba2ec3327d537c1e0a4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="199641835a7fed0b2247051b07a065cc" category="list-text">Für lokale Workloads können Sie optional eine *Replikationsrichtlinie* festlegen, um den Workload auf ONTAP Storage zu replizieren.</block>
+  <block id="4978e3b9001301d839fc0946f4ba3f67" category="paragraph">Zum Importieren einer systemdefinierten Richtlinie ist die Optionsschaltfläche *Auswählen* und anschließend die <block ref="acb8cd429652c09fe35d5de4c302f2ae" category="inline-link-macro-rx"></block> gewünschte Richtlinie aus dem Dropdown-Menü auszuwählen.</block>
+  <block id="60e573bc37b98bd9fd792830cf42a815" category="paragraph">Zum Vornehmen eigener Replikationseinstellungen wählen Sie *Erstellen* und geben anschließend einen *Basisnamen der Replikationsrichtlinie* ein, der allen Snapshots als Präfix vorangestellt wird. Legen Sie die *Replikationszeitpläne* fest. Aktivieren Sie die gewünschten Frequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert fest, also die Anzahl der replizierten Snapshots, die beibehalten werden.</block>
+  <block id="0ac700a6fce8da97bdad86b3f0e2e13d" category="list-text">Optional lässt sich eine *Backup-Richtlinie* festlegen. Zum Importieren einer vorhandenen ist das Optionsfeld *Select* zu aktivieren; anschließend ist <block ref="acb8cd429652c09fe35d5de4c302f2ae" category="inline-link-macro-rx"></block> aus dem Dropdown-Menü auszuwählen.</block>
+  <block id="c7915346ee91e7b7da0689c8b96c3c65" category="paragraph">Zum Erstellen einer eigenen Richtlinie wählen Sie *Erstellen* aus und geben einen *Basisnamen für die Sicherungsrichtlinie* ein. Die *Sicherungszeitpläne* werden festgelegt, indem die verschiedenen Häufigkeiten (stündlich, täglich, wöchentlich und monatlich) umgeschaltet und anschließend die Aufbewahrungsanzahl für jede festgelegt wird.</block>
+  <block id="9830c7d8e813511d60d4ac7532561b5d" category="list-text">Wenn Ihre Datensicherungsstrategie die Erkennung des Nutzerverhaltens umfasst, ist in Ihrer Umgebung ein *Benutzeraktivitätsagent* als Host für die neuen Datensammler auszuwählen. Ransomware Resilience erstellt den Datensammler automatisch, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übermitteln und anomales Nutzerverhalten zu erkennen.</block>
+  <block id="9e22bb022357fb45ccf2d21570594214" category="inline-link-macro">Informationen zu Schutzstrategien</block>
+  <block id="ca8c59331fa4e2672fad0627fd8a1afc" category="list-text"><block ref="ca8c59331fa4e2672fad0627fd8a1afc" category="inline-link-macro-rx"></block></block>
+  <block id="16cc2aca7cc498abeffc42549cad2598" category="inline-link-macro">Managen von Backup-Zielen</block>
+  <block id="25b72bfc4abf024dd9a87b63b6ca2a88" category="list-text"><block ref="25b72bfc4abf024dd9a87b63b6ca2a88" category="inline-link-macro-rx"></block></block>
+  <block id="b41cfa2f28f2dfb717d6f9b7ebc066af" category="list-text"><block ref="b41cfa2f28f2dfb717d6f9b7ebc066af" category="inline-link-macro-rx"></block></block>
 </blocks>

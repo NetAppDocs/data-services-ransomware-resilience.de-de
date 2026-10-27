@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: concept-strategy.html 
+keywords: ransomware protection, protect against ransomware attacks, anti-ransomware policies, detection, protection, policy, malware 
+summary: Informationen zu Strategien zum Schutz vor Ransomware in NetApp Ransomware Resilience. Datensicherungsstrategien ermöglichen sowohl die Erkennung als auch Snapshots, Backup und Replikation, um eine Grundlage für die Wiederherstellung zu schaffen. 
+---
+= Informationen zu Schutzstrategien in NetApp Ransomware Resilience
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+In NetApp Ransomware Resilience sind Datensicherungsstrategien ein wesentliches Element Ihrer Ransomware-Abwehrstrategie. Datensicherungsstrategien umfassen _Erkennung_, _Schutz_ und _Replikation_ und ermöglichen es Ihnen, Ransomware-Angriffe zu erkennen, sich davor zu schützen und eine Grundlage für die Wiederherstellung zu schaffen.
+
+
+
+[[protection-strategy-elements]]
+== Elemente der Schutzstrategie
+
+Schutzstrategien bestehen aus drei Elementen: Erkennung, Schutz und Replikation.
+
+* **Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen. Sie haben drei Erkennungsoptionen:
++
+** Verschlüsselungserkennung
+** Verdächtige Benutzeraktivität
+** Verdächtige Dateierweiterungen blockieren
++
+Ihre Erkennungsrichtlinie kann alle drei Optionen oder eine Kombination davon umfassen. Sie muss entweder die Verschlüsselungserkennung oder link:suspicious-user-activity.html["verdächtige Benutzeraktivität (die eine zusätzliche Konfiguration erfordert)"] beinhalten.
+
+
+
+* **Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.
++
+Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt Ransomware Resilience diese und bietet Ihnen die Möglichkeit, entweder:
+
++
+** Verwendung einer Ransomware-Erkennungsrichtlinie und weitere Nutzung der von anderen NetApp Tools erstellten Snapshot- und Backup-Richtlinien, oder
+** Mit Ransomware Resilience lassen sich Erkennung, Snapshots und Backups managen.
+
+
+* **Replikationsrichtlinien** ermöglichen es Ihnen, Snapshots von Ransomware Resilience auf einen sekundären Standort zu replizieren. Replikationspläne können auf stündliche, tägliche, wöchentliche oder monatliche Frequenzen eingestellt werden.
++
+Derzeit können Snapshots nur auf lokalem ONTAP Speicher repliziert werden.
+
+
+
+
+NOTE: Bei der Konfiguration von Datensicherungsstrategien für Amazon FSx for NetApp ONTAP oder Azure NetApp Files finden Sie Informationen unter link:rp-reference-limitations.html["die Einschränkungen für jeden Dienst"].
+
+
+TIP: Für ein verbessertes Management und einen besseren Schutz Ihrer Datenlandschaft können Sie link:task-protection-group.html["Gruppen-Workloads"], um Volumes gemeinsam mit einer einzigen Strategie zu schützen.
+
+
+
+[[protection-policies-with-other-netapp-managed-services]]
+== Schutzrichtlinien mit anderen von NetApp verwalteten Diensten
+
+Neben der Ransomware-Resilienz können Sie NetApp Backup and Recovery zum Managen des Schutzes von Dateifreigaben verwenden.
+
+Schutzinformationen aus Backup and Recovery Services werden in Ransomware Resilience angezeigt. Einer bestehenden Backup and Recovery Richtlinie lässt sich eine Ransomware-Erkennungsrichtlinie hinzufügen. Auch über Ransomware Resilience lassen sich Sicherungsrichtlinien hinzufügen, die die bestehenden Datensicherungsstrategien aus Backup and Recovery ersetzen.
+
+Wenn eine Ransomware-Erkennungsrichtlinie von Autonomous Ransomware Protection (ARP oder ARP/AI, je nach ONTAP Version) und FPolicy in ONTAP verwaltet wird, sind diese Workloads geschützt und werden weiterhin von ARP und FPolicy verwaltet.
+
+
+NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP oder Azure NetApp Files nicht verfügbar. Führen Sie Backup-Vorgänge mit dem FSx for ONTAP-Backup-Service durch. Sie legen Backup-Richtlinien für Workloads in FSx for ONTAP in AWS fest, nicht in Ransomware Resilience. Die Backup-Richtlinien werden in Ransomware Resilience angezeigt und bleiben gegenüber AWS unverändert.
+
+
+
+[[protection-policies-for-workloads-not-protected-by-netapp-applications]]
+=== Schutzrichtlinien für Workloads, die nicht durch NetApp -Anwendungen geschützt sind
+
+Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience verwaltet wird, wurden möglicherweise Snapshots im Rahmen von ONTAP oder anderen Produkten erstellt. Wenn ONTAP FPolicy-Schutz aktiviert ist, können Sie den FPolicy-Schutz mit ONTAP ändern.
+
+
+
+[[predefined-policies]]
+== Vordefinierte Richtlinien
+
+Sie können eine der folgenden vordefinierten Ransomware-Resilience-Richtlinien auswählen, die auf die Wichtigkeit der Arbeitslast abgestimmt sind.
+
+
+NOTE: Die Richtlinie **Encryption user extension** ist die einzige vordefinierte Richtlinie, die die Erkennung verdächtiger Benutzeraktivitäten unterstützt. + Die Richtlinie **Critical replication** ist die einzige vordefinierte Richtlinie, die das Replizieren von Snapshots auf ONTAP unterstützt.
+
+[cols="10,15a,20,15,15,15"]
+|===
+| Richtlinienebene | Schnappschuss | Frequenz | Aufbewahrungsdauer (Tage) | Anzahl der Snapshot-Kopien | Maximale Anzahl von Snapshot-Kopien 
+
+
+.4+| *Richtlinie für kritische Arbeitslast*  a| 
+Viertelstündlich
+| Alle 15 Minuten | 3 | 288 | 309 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 309 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 309 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 309 
+
+
+.4+| *Wichtige Arbeitsbelastungsrichtlinie*  a| 
+Halbstündlich
+| Alle 30 Minuten | 3 | 144 | 165 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 165 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 165 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 165 
+
+
+.4+| *Standard-Arbeitslastrichtlinie*  a| 
+Halbstündlich
+| Alle 30 Minuten | 3 | 72 | 93 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 93 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 93 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 93 
+
+
+.4+| *Verschlüsselungsbenutzererweiterung*  a| 
+Halbstündlich
+| Alle 30 Minuten | 3 | 72 | 93 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 93 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 93 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 93 
+
+
+.4+| *Richtlinie zur kritischen Replikation*  a| 
+Viertelstündlich
+| Alle 15 Minuten | 3 | 288 | 309 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 309 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 309 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 309 
+|===
+
+
+[[next-steps]]
+== Nächste Schritte
+
+* link:rp-use-protect.html["Workloads im Rahmen der Ransomware-Resilienz schützen"]
+
