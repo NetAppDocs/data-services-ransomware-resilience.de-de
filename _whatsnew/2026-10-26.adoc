@@ -5,7 +5,7 @@
 
 
 [[new-manual-workflow-for-creating-a-user-activity-agent]]
-== Neuer manueller Workflow zur Erstellung eines Benutzeraktivitätsagenten
+=== Neuer manueller Workflow zur Erstellung eines Benutzeraktivitätsagenten
 
 Ransomware Resilience bietet jetzt einen manuellen Workflow zur Erstellung des Benutzeraktivitätsagenten und ermöglicht so eine präzisere Steuerung der Agentenerstellung auf Ihrer VM. Mit diesem neuen Workflow können Sie den Benutzeraktivitätsagenten direkt installieren und Proxy-Einstellungen konfigurieren, ohne VM-SSH-Schlüssel angeben zu müssen.
 
