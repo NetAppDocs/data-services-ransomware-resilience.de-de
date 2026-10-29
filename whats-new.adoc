@@ -18,6 +18,20 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 
 
+[[26-october-2026]]
+== 26. Oktober 2026
+
+
+
+[[new-manual-workflow-for-creating-a-user-activity-agent]]
+== Neuer manueller Workflow zur Erstellung eines Benutzeraktivitätsagenten
+
+Ransomware Resilience bietet jetzt einen manuellen Workflow zur Erstellung des Benutzeraktivitätsagenten und ermöglicht so eine präzisere Steuerung der Agentenerstellung auf Ihrer VM. Mit diesem neuen Workflow können Sie den Benutzeraktivitätsagenten direkt installieren und Proxy-Einstellungen konfigurieren, ohne VM-SSH-Schlüssel angeben zu müssen.
+
+Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["Erstellen Sie einen Benutzeraktivitätsagenten"^].
+
+
+
 [[20-october-2026]]
 == 20. Oktober 2026
 
@@ -32,7 +46,7 @@ Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-
 
 
 
-[[enhanced-workflow-for-enabling-user-activity-monitoring]]
+[[improved-workflow-for-enabling-user-activity-monitoring]]
 === Verbesserter Workflow zur Aktivierung der Benutzeraktivitätsüberwachung
 
 Ransomware Resilience hat den Workflow für die Aktivierung der Benutzeraktivitätsüberwachung verbessert. Bisher testete Ransomware Resilience die Verbindung des Datensammlers jedes Mal, wenn Sie für eine Workload eine Ransomware-Schutzstrategie mit Benutzeraktivitätsüberwachung aktivierten. Mit diesem Update wird diese Prüfung nun übersprungen, wenn für die Storage VM ein Datensammler vorhanden ist und sich im Status "running" befindet, wodurch der Schutz Workflow beschleunigt wird.
@@ -53,8 +67,8 @@ Die Unterstützung für das Flex Service Level von Google Cloud NetApp Volumes i
 
 
 
-[[enhanced-support-for-clean-restores]]
-=== Verbesserte Unterstützung für saubere Wiederherstellungen
+[[clean-restore-support-for-suspicious-user-behavior-and-user-based-encryption-attacks]]
+=== Unterstützung für die saubere Wiederherstellung nach verdächtigem Benutzerverhalten und benutzerbasierten Verschlüsselungsangriffen
 
 Saubere Wiederherstellungen sind nun nach verdächtigem Nutzerverhalten und benutzerbasierten Verschlüsselungsangriffen möglich. Diese Erweiterung ergänzt die bestehende Unterstützung für (entropiebasierte) Verschlüsselungsangriffe. Diese erweiterte Funktion ermöglicht die Nutzung des geführten Ansatzes der sauberen Wiederherstellung, wobei optimale Wiederherstellungspunkte identifiziert werden, um Datenverlust zu minimieren und die Wiederherstellung zu beschleunigen.
 

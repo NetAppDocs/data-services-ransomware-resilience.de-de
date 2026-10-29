@@ -1,11 +1,11 @@
-= Verbesserte Unterstützung für saubere Wiederherstellungen
+= Unterstützung für die saubere Wiederherstellung nach verdächtigem Benutzerverhalten und benutzerbasierten Verschlüsselungsangriffen
 :allow-uri-read: 
 
 
 
 
-[[enhanced-support-for-clean-restores]]
-=== Verbesserte Unterstützung für saubere Wiederherstellungen
+[[clean-restore-support-for-suspicious-user-behavior-and-user-based-encryption-attacks]]
+=== Unterstützung für die saubere Wiederherstellung nach verdächtigem Benutzerverhalten und benutzerbasierten Verschlüsselungsangriffen
 
 Saubere Wiederherstellungen sind nun nach verdächtigem Nutzerverhalten und benutzerbasierten Verschlüsselungsangriffen möglich. Diese Erweiterung ergänzt die bestehende Unterstützung für (entropiebasierte) Verschlüsselungsangriffe. Diese erweiterte Funktion ermöglicht die Nutzung des geführten Ansatzes der sauberen Wiederherstellung, wobei optimale Wiederherstellungspunkte identifiziert werden, um Datenverlust zu minimieren und die Wiederherstellung zu beschleunigen.
 
