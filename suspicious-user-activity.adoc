@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: suspicious-user-activity.html 
-keywords: data breach detection, data breach, user activity, suspicious, anomalous, 
+keywords: data breach detection, data breach, user activity, suspicious, anomalous behavior, user activity monitoring 
 summary: Die Benutzeraktivitätserkennung in NetApp Ransomware Resilience ermöglicht es Ihnen, Benutzeraktivitäten zu erkennen, die eine potenzielle Bedrohung darstellen könnten. 
 ---
 = Konfigurieren der Benutzeraktivitätserkennung in NetApp Ransomware Resilience
@@ -22,7 +22,7 @@ Ein Benutzeraktivitätsagent hostet einen Datensammler und einen Benutzerverzeic
 
 Der Benutzeraktivitätsagent, der Datensammler und der Benutzerverzeichnis-Connector können alle über das Dashboard der Ransomware Resilience-Einstellungen verwaltet werden.
 
-Wenn Sie DII nicht verwenden, finden Sie die Konfigurationsanweisungen hier.
+Wenn Sie NetApp Data Infrastructure Insights (DII) nicht verwenden, finden Sie hier die Konfigurationsanweisungen.
 
 
 
@@ -52,15 +52,57 @@ Wenn Sie die Benutzeraktivitätserkennung in Ransomware Resilience aktivieren, w
 
 Benutzeraktivitätsagenten sind ausführbare Umgebungen für link:#add-a-data-collector["Datensammler"], die Benutzeraktivitätsereignisse mit Ransomware Resilience teilen. Mindestens ein Benutzeraktivitätsagent ist erforderlich, damit die Benutzeraktivitätserkennung verfügbar ist.
 
-.Schritte
-. Wenn Sie zum ersten Mal einen Benutzeraktivitätsagenten erstellen, gehen Sie zum **Dashboard**. Wählen Sie in der Kachel **Benutzeraktivität** die Option **Aktivieren** aus.
-+
-Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen, gehen Sie zu *Einstellungen*, suchen Sie die Kachel **Benutzeraktivität** und wählen Sie dann **Verwalten**. Wählen Sie auf dem Bildschirm „Benutzeraktivität“ die Registerkarte **Benutzeraktivitätsagenten** und dann **Hinzufügen**.
 
-. Wählen Sie einen **Cloud-Anbieter** und dann eine **Region** aus. Wählen Sie **Weiter**.
+NOTE: Nachdem Sie den Mandanten erstellt haben, kann die Region nicht mehr geändert werden. Die Mandantenerstellung dauert etwa fünf Minuten und kann nach dem Start nicht mehr abgebrochen werden.
+
+.Schritte
+Sie können einen Benutzeraktivitätsagenten mithilfe einer *Manual* Konfiguration oder einer *Automatic* Konfiguration erstellen. Bei der automatischen Konfiguration müssen Sie den Console Agent, den VM DNS-Namen oder die IP-Adresse sowie den VM SSH Key angeben, damit Ransomware Resilience den Mandanten erstellen kann. Bei einer manuellen Konfiguration stellt Ransomware Resilience die Befehle zum manuellen Erstellen des Mandanten bereit.
+
+[role="tabbed-block"]
+====
+.Manuell
+--
+. Beim erstmaligen Erstellen eines Benutzeraktivitätsagenten zum **Dashboard** wechseln. In der Kachel **Benutzeraktivitätsüberwachung** **Aktivieren** auswählen.
++
+Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen möchten, wechseln Sie zu *Einstellungen*, suchen die Kachel **Benutzeraktivitätsüberwachung** und wählen dann **Verwalten**. Auf dem Bildschirm „Benutzeraktivität“ können Sie die Registerkarte **Benutzeraktivitätsagenten** und anschließend **Hinzufügen** auswählen.
+
+. Zuerst erfolgt die Auswahl eines **Cloud-Providers**, anschließend die einer **Region**.
+. **Mandant erstellen** auswählen.
++
+Die Mandantenerstellung dauert etwa fünf Minuten. Nach der Auswahl von *Mandant erstellen* können Sie *Im Hintergrund ausführen* wählen, um zum Dashboard zurückzukehren und mit anderen Vorgängen fortzufahren.
+
+. Eingabe des *Namens des Benutzeraktivitätsagenten*.
+. Als Konfigurationsmethode wird *manuell* verwendet.
+. Im Schritt *Mandanten zulassen* stellt Ransomware Resilience die URL für den Benutzeraktivitätsagenten bereit. Zum Zulassen von Verbindungen wird die URL kopiert und eingefügt.
+. In Ihrer Cloud-Umgebung ist ein Terminal zu öffnen, um den Benutzeraktivitätsagenten zu installieren.
++
+.. Optional können Sie, wenn Sie einen Proxyserver verwenden, Ihre Proxyserver-Variable angeben und den angezeigten Export-Befehl ausführen `export https_proxy='USER:PASSWORD@PROXY_SERVER:<port>'`. Wenn der Proxyserver keine Authentifizierung erfordert, können Sie die Felder für Benutzername und Passwort weglassen. In diesem Fall sieht der Befehl folgendermaßen aus `export https_proxy='https://proxy.company.com:<port>'`.
+.. Im selben Terminal erfolgt das Kopieren und Einfügen des Installationsbefehls. Der Befehlsausschnitt ist nur zwei Stunden gültig und kann nur zur Installation eines Benutzeraktivitätsagenten verwendet werden.
++
+Wenn die Installation zusätzlicher Benutzeraktivitätsagenten erforderlich ist, kann durch Wiederholen dieses Vorgangs ein neuer Installationsausschnitt generiert werden.
+
+
+
+. Wählen Sie *Weiter*.
+. Eine Überprüfung der Details des Mandanten und des Benutzeraktivitätsagenten ist erforderlich. Wenn alles korrekt ist, wird der Vorgang durch Auswahl von *Aktivieren* abgeschlossen.
+
+
+--
+.Automatisch
+--
+. Beim erstmaligen Erstellen eines Benutzeraktivitätsagenten zum **Dashboard** wechseln. In der Kachel **Benutzeraktivitätsüberwachung** **Aktivieren** auswählen.
++
+Wenn Sie einen zusätzlichen Benutzeraktivitätsagenten hinzufügen möchten, wechseln Sie zu *Einstellungen*, suchen die Kachel **Benutzeraktivitätsüberwachung** und wählen dann **Verwalten**. Auf dem Bildschirm „Benutzeraktivität“ können Sie die Registerkarte **Benutzeraktivitätsagenten** und anschließend **Hinzufügen** auswählen.
+
+. Zunächst erfolgt die Auswahl eines **Cloud-Anbieters** und anschließend einer **Region**.
+. **Mandant erstellen** auswählen.
++
+Die Mandantenerstellung dauert etwa fünf Minuten. Nach der Auswahl von *Mandant erstellen* können Sie *Im Hintergrund ausführen* wählen, um zum Dashboard zurückzukehren und mit anderen Vorgängen fortzufahren.
+
+. Eingabe eines Namens für den *User activity agent name*.
+. Als Konfigurationsmethode wird *Automatic* gewählt.
 . Geben Sie die Details des Benutzeraktivitätsagenten an:
 +
-** **Name des Benutzeraktivitätsagenten**
 ** *Konsolenagent* - Der Konsolenagent sollte sich im selben Netzwerk wie der Benutzeraktivitätsagent befinden und über eine SSH-Verbindung zur IP-Adresse des Benutzeraktivitätsagenten verfügen.
 ** *VM-DNS-Name oder IP-Adresse*
 ** *VM SSH Key* - Geben Sie den SSH-Schlüssel in diesem Format ein:
@@ -81,6 +123,8 @@ image:user-activity-agent.png["Screenshot der Benutzeroberfläche des Aktivität
 . Bestätigen Sie, dass der Benutzeraktivitätsagent erfolgreich erstellt wurde. In der Kachel „Benutzeraktivitätsüberwachung“ wird eine erfolgreiche Bereitstellung als **Wird ausgeführt** angezeigt.
 
 
+--
+====
 .Ergebnis
 Nachdem der Benutzeraktivitätsagent erfolgreich erstellt wurde, zurück zum Menü **Einstellungen** wechseln und dann im Bereich **Benutzeraktivitätsüberwachung** die Option **Verwalten** auswählen. Den Tab **Benutzeraktivitätsagenten** auswählen und dann den gewünschten Benutzeraktivitätsagenten, um Details dazu anzuzeigen, einschließlich Datensammler und Benutzerverzeichnis-Konnektoren.
 
@@ -134,7 +178,7 @@ Um Benutzer-IDs Benutzernamen zuzuordnen, müssen Sie einen Benutzerverzeichnis-
 | *Benutzerverzeichnistyp* | Der Verzeichnistyp 
 
 
-| *Server-IP-Adresse oder Domänenname* | Die IP-Adresse oder der vollqualifizierte Domänenname (FQDN) des Servers, der die Verbindung hostet 
+| *Server-IP-Adresse oder Domänenname* | Die IP-Adresse oder der vollqualifizierte Domänenname (FQDN) des Servers, der die Verbindung bereitstellt 
 
 
 | *Waldname oder Suchname*  a| 
@@ -164,9 +208,10 @@ Geben Sie die Details zur Attributzuordnung an:
 ** *SID* (wenn Sie LDAP verwenden)
 ** *Benutzername*
 ** *Unix-ID* (wenn Sie NFS verwenden)
-** Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, den Vorgesetzten-DN oder Gruppen hinzufügen. Wählen Sie *Erweitert*, um eine optionale Suchanfrage hinzuzufügen.
+** Wenn Sie *Optionale Attribute einbeziehen* auswählen, können Sie auch eine E-Mail-Adresse, eine Telefonnummer, eine Rolle, ein Bundesland, ein Land, eine Abteilung, ein Foto, Manager DN oder Gruppen hinzufügen.
 
 
+. Mit *Erweitert* lässt sich eine optionale Suchanfrage hinzufügen.
 . Wählen Sie **Hinzufügen**.
 . Kehren Sie zur Registerkarte „Benutzerverzeichnis-Konnektoren“ zurück, um den Status Ihres Benutzerverzeichnis-Konnektors zu überprüfen. Bei erfolgreicher Erstellung wird der Status des Benutzerverzeichnis-Connectors als *Wird ausgeführt* angezeigt.
 
@@ -191,7 +236,7 @@ Geben Sie die Details zur Attributzuordnung an:
 
 Nachdem Sie die Benutzeraktivitätserkennung konfiguriert haben, können Sie Ereignisse auf der Warnseite überwachen. Weitere Informationen finden Sie unter link:rp-use-alert.html#detect-malicious-activity-and-anomalous-user-behavior["Erkennen Sie bösartige Aktivitäten und verdächtiges Nutzerverhalten"].
 
-Sie können auch link:task-automate-user-activity.html["Antworten auf Benutzeraktivitätsereignisse automatisieren"].
+Sie können auch link:task-automate-user-activity.html["Reaktionen auf Ereignisse der Benutzeraktivität automatisieren"].
 
 
 
