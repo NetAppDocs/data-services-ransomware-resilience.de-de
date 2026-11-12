@@ -21,7 +21,7 @@ Sie können die Arbeitslast wiederherstellen, indem Sie alle Volumes, bestimmte 
 
 
 
-TIP: Die Wiederherstellung der Arbeitslast kann sich auf laufende Arbeitslasten auswirken.  Sie sollten die Wiederherstellungsprozesse mit den entsprechenden Beteiligten koordinieren.
+TIP: Die Wiederherstellung von Workloads kann sich auf laufende Workloads auswirken. Eine Abstimmung der Wiederherstellungsprozesse mit den relevanten Beteiligten ist erforderlich.
 
 Ein Workload kann einen der folgenden Wiederherstellungsstatus haben:
 

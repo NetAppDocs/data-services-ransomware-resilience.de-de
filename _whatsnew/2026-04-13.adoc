@@ -7,7 +7,7 @@
 [[clean-restore]]
 === Saubere Wiederherstellung
 
-Ransomware Resilience unterstützt jetzt Clean Restores, eine neue Wiederherstellungsoption, mit der Sie sich schnell und einfach von Ransomware-Angriffen erholen können. Clean Restores bieten geführte Arbeitsabläufe, die optimale Wiederherstellungspunkte identifizieren, um Ihre Workloads wieder zum Laufen zu bringen und die Ausfallzeit zu minimieren. Die Arbeitsabläufe in Clean Restore bieten außerdem Einblicke auf Dateiebene in Ihre Daten, sodass Sie malwarefreie Workloads wiederherstellen können, was eine erneute Infektion verhindert und Datenverlust minimiert.
+Ransomware Resilience unterstützt jetzt Clean Restores, eine neue Wiederherstellungsoption, mit der eine schnelle und einfache Recovery nach Ransomware-Angriffen möglich ist. Clean Restores bieten geführte Workflows, die optimale Wiederherstellungspunkte identifizieren, damit Ihre Workloads bei minimalen Ausfallzeiten schnell wieder ausgeführt werden können. Die Workflows in Clean Restore bieten zudem Einblicke in Ihre Daten auf Dateiebene, sodass malwarefreie Workloads wiederhergestellt, eine erneute Infektion verhindert und Datenverlust minimiert werden können.
 
 Informationen zu unterstützten Konfigurationen und zur Konfiguration Ihres Systems für eine vollständige Wiederherstellung finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Erstellen Sie eine isolierte Wiederherstellungsumgebung"^]. Informationen zur Wiederherstellung mittels vollständiger Wiederherstellung finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore-recover.html["Stellen Sie Workloads mit einer sauberen Wiederherstellung wieder her"^].
 
@@ -16,7 +16,7 @@ Informationen zu unterstützten Konfigurationen und zur Konfiguration Ihres Syst
 [[siem-support-for-splunk-enterprise]]
 === SIEM-Unterstützung für Splunk Enterprise
 
-Ransomware Resilience bietet jetzt Security Information Event Management (SIEM)-Unterstützung für Splunk Enterprise, wodurch Sie Protokoll- und Ereignisdaten zentralisieren und die Bedrohungsanalyse und -erkennung optimieren können.
+Ransomware Resilience bietet jetzt SIEM-Unterstützung (Security Information and Event Management) für Splunk Enterprise, wodurch Sie Protokoll- und Ereignisdaten zentralisieren und die Bedrohungsanalyse und -erkennung optimieren können.
 
 Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-siem-splunk.html["Konfiguration eines Splunk SIEM"^].
 

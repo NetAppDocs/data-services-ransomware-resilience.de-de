@@ -7,7 +7,7 @@
 [[enhanced-isolated-recovery-environment-configuration]]
 === Erweiterte Konfiguration der isolierten Wiederherstellungsumgebung
 
-Ransomware Resilience bietet jetzt einen verbesserten Workflow zur Konfiguration isolierter Wiederherstellungsumgebungen. Der neue Workflow vereinfacht und präzisiert den Prozess zur Einrichtung einer solchen Umgebung für Cloud- oder On-Premises-Umgebungen.
+Ransomware Resilience bietet jetzt einen verbesserten Workflow für die Konfiguration einer isolierten Wiederherstellungsumgebung. Der neue Workflow vereinfacht und präzisiert den Prozess zur Einrichtung einer isolierten Wiederherstellungsumgebung für Cloud- oder On-Premises-Umgebungen.
 
 Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-clean-restore.html["Eine isolierte Wiederherstellungsumgebung für eine saubere Wiederherstellung bereitstellen"^].
 
@@ -16,7 +16,7 @@ Weitere Informationen finden sich unter link:https://docs.netapp.com/us-en/data-
 [[improved-workflow-for-enabling-user-activity-monitoring]]
 === Verbesserter Workflow zur Aktivierung der Benutzeraktivitätsüberwachung
 
-Ransomware Resilience hat den Workflow für die Aktivierung der Benutzeraktivitätsüberwachung verbessert. Bisher testete Ransomware Resilience die Verbindung des Datensammlers jedes Mal, wenn Sie für eine Workload eine Ransomware-Schutzstrategie mit Benutzeraktivitätsüberwachung aktivierten. Mit diesem Update wird diese Prüfung nun übersprungen, wenn für die Storage VM ein Datensammler vorhanden ist und sich im Status "running" befindet, wodurch der Schutz Workflow beschleunigt wird.
+Ransomware Resilience hat den Workflow für die Aktivierung der Benutzeraktivitätsüberwachung verbessert. Bisher testete Ransomware Resilience die Verbindung des Datensammlers jedes Mal, wenn Sie für eine Workload eine Ransomware-Schutzstrategie mit Benutzeraktivitätsüberwachung aktivierten. Mit diesem Update überspringt Ransomware Resilience diese Prüfung nun, wenn für die Storage VM ein Datensammler vorhanden ist und sich im Status "running" befindet, was den Schutz-Workflow beschleunigt.
 
 Weitere Informationen finden Sie unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-protect.html["Workloads schützen"^].
 

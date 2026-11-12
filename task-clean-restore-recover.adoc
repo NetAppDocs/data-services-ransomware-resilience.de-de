@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-clean-restore-recover.html 
 keywords: clean room, clean restore, secure recovery, recover, isolated recovery environment, ire 
-summary: Ransomware Resilience ermöglicht es Ihnen, Ihre Workloads durch eine saubere Wiederherstellung zu kontrollieren und zu bereinigen. 
+summary: Mit Clean Restore können Sie Workloads nach einem Ransomware-Angriff wiederherstellen, Snapshots analysieren, Malware entfernen und Daten am ursprünglichen oder an einem alternativen Speicherort wiederherstellen. 
 ---
 = Workloads mit sauberer Wiederherstellung in NetApp Ransomware Resilience wiederherstellen
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Ransomware Resilience ermöglicht es Ihnen, Ihre Workloads durch eine s
 
 
 [role="lead"]
-Mit NetApp Ransomware Resilience können Sie nach einem Ransomware-Angriff mit Verschlüsselung eine geführte Wiederherstellung mittels einer sauberen Wiederherstellung durchführen. Die saubere Wiederherstellung identifiziert optimierte Wiederherstellungspfade, um Datenverlust zu minimieren und Ihre Workloads in kürzester Zeit wieder online zu bringen.
+Mit NetApp Ransomware Resilience können Sie nach einem verschlüsselungsbasierten Ransomware-Angriff mithilfe einer sauberen Wiederherstellung eine geführte Recovery durchführen. Die saubere Wiederherstellung identifiziert optimierte Wiederherstellungspfade, um den Datenverlust zu minimieren und Ihre Workloads so schnell wie möglich wieder online zu bringen.
 
 
 
@@ -30,8 +30,8 @@ Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgeb
 [[considerations]]
 == Überlegungen
 
-* Eine vollständige Wiederherstellung ist nur bei verschlüsselungsbasierten Angriffen (sowohl auf Benutzerverhalten als auch auf Entropie) und bei Angriffen aufgrund verdächtigen Benutzerverhaltens möglich. Eine vollständige Wiederherstellung wird bei Datenlecks und Datenzerstörungsangriffen nicht unterstützt.
-* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, wird dieser in die Warteschlange gestellt, bis Kapazität verfügbar ist.
+* Eine Clean Restore ist nur bei verschlüsselungsbasierten Angriffen (sowohl Benutzerverhalten als auch Entropie) und Angriffen mit verdächtigem Benutzerverhalten möglich. Eine Clean Restore wird bei Angriffen auf Datenabfluss und Datenzerstörung nicht unterstützt.
+* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, kommt der Vorgang in die Warteschlange, bis Kapazität verfügbar ist.
 +
 ** Im Dashboard „Ransomware Resilience Recovery“ können Sie jederzeit den Status aktiver und in der Warteschlange befindlicher Wiederherstellungsvorgänge überwachen.
 
@@ -44,7 +44,7 @@ Sie müssen eine link:task-clean-restore.html["isolierte Wiederherstellungsumgeb
 [[considerations-for-restoring-to-an-alternate-location]]
 === Überlegungen zur Wiederherstellung an einem alternativen Standort
 
-Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, haben Sie die Möglichkeit, die Wiederherstellung an einem alternativen Speicherort durchzuführen, der vom selben Console-Agenten verwaltet wird. Der neue Speicherort kann sich auf demselben oder einem anderen System, derselben Storage-VM oder demselben Aggregat befinden. Bei der Wiederherstellung an einem alternativen Speicherort:
+Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, können Sie es an einem alternativen Speicherort wiederherstellen, der vom selben Console agent verwaltet wird. Der neue Speicherort kann sich auf demselben oder einem anderen System, einer anderen Storage VM oder einem anderen Aggregat befinden. Wenn Sie an einem alternativen Speicherort wiederherstellen:
 
 * ARP wird auf dem neuen Volume automatisch aktiviert.
 * Der Verbindungspfad wird anhand des von Ihnen angegebenen Namens festgelegt. Zum Beispiel: `<Data LIF IP address of destination storage VM>:<new volume name>`.
@@ -61,13 +61,13 @@ Wenn Sie ein Volume mithilfe einer sauberen Wiederherstellung wiederherstellen, 
 . Wählen Sie unter den Optionen für den Wiederherstellungstyp **Saubere Wiederherstellung** und dann **Weiter** aus.
 . Wählen Sie die gewünschte isolierte Wiederherstellungsumgebung aus und klicken Sie dann auf **Weiter**.
 . Überprüfen Sie die isolierte Wiederherstellungsumgebung und vergewissern Sie sich, dass es sich um den richtigen Speicherort handelt. Wählen Sie **Wiederherstellen**.
-. Ransomware Resilience führt die erforderliche Konfiguration durch. Nach erfolgreichem Abschluss der Einrichtung aktualisiert Ransomware Resilience den Status. Um fortzufahren, wählen Sie **Weiter**.
+. Ransomware Resilience führt die erforderliche Konfiguration durch. Nach erfolgreichem Abschluss der Einrichtung aktualisiert Ransomware Resilience den Status. Zum Fortfahren wählen Sie **Weiter** aus.
 . Nach Abschluss der Einrichtung wählen Sie **Analyse ausführen**. Ransomware Resilience sucht nach dem aktuellsten unbeschädigten Snapshot.
 +
 image:screenshot-clean-room-analysis.png["Screenshot des Analyseschritts „Saubere Wiederherstellung“."]
 
 +
-Während die Analyse läuft, können Sie **Stopp** auswählen. Das Beenden der Analyse erfordert, dass der Clean Restore-Prozess neu gestartet wird.
+Während die Analyse läuft, können Sie **Stop** auswählen. Wenn Sie die Analyse abbrechen, müssen Sie den Clean Restore-Prozess erneut starten.
 
 . Nach Abschluss der Analyse wählen Sie **Weiter**, um Ihre Wiederherstellung zu planen. Ransomware Resilience präsentiert zwei Optionen: **Least data loss** und **Latest unimpacted restore point**. Wählen Sie eine der beiden Optionen und sehen Sie sich optional die einzelnen Dateidaten für den jeweiligen Wiederherstellungspunkt an.
 +
@@ -76,16 +76,16 @@ Um detaillierte Dateiereignisdaten anzuzeigen, wählen Sie eine Datei aus, um de
 +
 image:clean-restore-plan.png["Screenshot des Schritts „Sauberer Wiederherstellungsplan“."]
 
-. Nachdem Sie Ihren Wiederherstellungspunkt ausgewählt haben, wählen Sie **Wiederherstellungspunkt erstellen**. Ransomware Resilience startet eine Reihe von Jobs, um den Wiederherstellungspunkt zu erstellen. Sobald dieser Vorgang abgeschlossen ist, wählen Sie **Weiter**.
+. Nach Auswahl Ihres Wiederherstellungspunkts ist **Wiederherstellungspunkt erstellen** auszuwählen. Ransomware Resilience startet eine Reihe von Schritten, um den Wiederherstellungspunkt zu erstellen. Nach Abschluss dieses Vorgangs ist **Weiter** auszuwählen.
 . Wählen Sie **Bereinigung starten**, um mit der Entfernung von Malware aus den Dateien zu beginnen.
-. Sobald die Reinigung abgeschlossen ist, wählen Sie **Weiter**.
+. Nach Abschluss der Reinigung folgt die Auswahl von **Weiter**.
 . Wählen Sie das Wiederherstellungsziel aus:
 +
 ** Wählen Sie **Primär (Original)**, um am ursprünglichen Zielort wiederherzustellen.
 +
 Wenn der primäre Speicherort nicht verfügbar ist und link:task-clean-restore.html#secondary-sources["Sie haben eine sekundäre Quelle konfiguriert"], können Sie stattdessen auf die **sekundäre** Quelle wiederherstellen.
 
-** Wählen Sie **Alternativ**, um die Wiederherstellung auf einem neuen Volume durchzuführen. Wählen Sie das **System**, die **Storage-VM** und das **Aggregat** für das neue Volume aus und geben Sie anschließend einen **neuen Volume-Namen** an.
+** Für die Wiederherstellung auf einem neuen Volume steht **Alternate** zur Verfügung. Für das neue Volume erfolgt dann die Auswahl von **System**, **Storage VM** und **Aggregate** sowie die Angabe eines **New volume name**.
 +
 image:alternate-recovery-destination.png["Screenshot des alternativen Wiederherstellungsziels"]
 

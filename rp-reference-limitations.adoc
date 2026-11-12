@@ -12,7 +12,7 @@ summary: Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funk
 
 
 [role="lead"]
-Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+Bekannte Einschränkungen kennzeichnen die Plattformen, Geräte und Funktionen, die von NetApp Ransomware Resilience nicht unterstützt werden oder nicht ordnungsgemäß damit zusammenarbeiten. Eine Übersicht über die für Ihre Umgebung geltenden Einschränkungen.
 
 
 
@@ -28,7 +28,7 @@ Wenn Sie für die Übung zur Vorbereitung auf Ransomware-Angriffe ein ONTAP 9.11
 
 Die folgenden Einschränkungen gelten für Amazon FSx für ONTAP:
 
-* Backup-Richtlinien werden für Amazon FSx für ONTAP nicht unterstützt. In dieser Umgebung sollten Sicherungsvorgänge mit Amazon FSx Backups durchgeführt werden. Diese Workloads können mit Ransomware Resilience wiederhergestellt werden.
+* Backup-Richtlinien werden für Amazon FSx for ONTAP nicht unterstützt. In dieser Umgebung erfolgen Backup-Vorgänge mit Amazon FSx backups. Diese Workloads können mit Ransomware Resilience wiederhergestellt werden.
 * Wiederherstellungsvorgänge werden nur von Snapshots aus durchgeführt.
 
 
@@ -43,7 +43,7 @@ Für Azure NetApp Files gelten die folgenden Einschränkungen:
 * Ransomware-Schutzstrategien mit Replikation werden für Azure NetApp Files nicht unterstützt.
 * Azure NetApp Files unterstützt weder FPolicy noch die Erkennung des Nutzerverhaltens. Azure NetApp Files unterstützt auch keine Entropieforensik.
 * Achten Sie bei der Auswahl einer Schutzstrategie darauf, dass deren Snapshot-Zeitplan mit Azure NetApp Files kompatibel ist. Der am häufigsten in Azure NetApp Files verfügbare Snapshot-Zeitplan ist stündlich.
-* Von der Verwendung link:reference-soar.html["SOAR-Spielbücher"] mit Azure NetApp Files wird abgeraten, da die Azure NetApp Files APIs automatisierte Aktionen blockieren.
+* Von der Verwendung link:reference-soar.html["SOAR-Spielbücher"] mit Azure NetApp Files ist abzusehen, da die APIs von Azure NetApp Files automatisierte Aktionen blockieren.
 * Einige Ereignisdaten sind in link:task-siem.html["SIEM-Berichte"] für Azure NetApp Files-Konfigurationen nicht enthalten.
 * Die Wiederherstellung auf Dateiebene ist nicht verfügbar, wenn Sie link:task-custom-restore.html["Wiederherstellen einer Workload"] für Azure NetApp Files.
 
@@ -75,4 +75,4 @@ Für SAN (Blockspeicher)-Workloads gelten die folgenden Einschränkungen:
 [[multi-admin-verification]]
 == Multi-Admin-Verifizierung
 
-Die Multi-Admin-Verifizierung wird in Ransomware Resilience oder der NetApp Console nicht unterstützt. Wenn link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/["Multi-Admin Verifizierung in ONTAP"^] konfiguriert wurde, ist es nicht möglich, den Schutz zu aktivieren, eine Bereitschaftsübung durchzuführen oder Wiederherstellungsvorgänge vorzunehmen. Vor dem Versuch eines dieser Vorgänge sollte die Multi-Admin-Verifizierung deaktiviert werden.
+Multi-Admin-Verifizierung wird in Ransomware Resilience oder der NetApp Console nicht unterstützt. Wenn Sie link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/["Multi-Admin Verifizierung in ONTAP"^] konfiguriert haben, können Sie den Schutz nicht aktivieren, keine Bereitschaftsübung durchführen und keine Wiederherstellungsvorgänge ausführen. Bevor Sie einen dieser Vorgänge ausführen, muss die Multi-Admin-Verifizierung deaktiviert sein.

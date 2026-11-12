@@ -2,8 +2,8 @@
 :allow-uri-read: 
 
 
-* Eine vollständige Wiederherstellung ist nur bei verschlüsselungsbasierten Angriffen (sowohl auf Benutzerverhalten als auch auf Entropie) und bei Angriffen aufgrund verdächtigen Benutzerverhaltens möglich. Eine vollständige Wiederherstellung wird bei Datenlecks und Datenzerstörungsangriffen nicht unterstützt.
-* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, wird dieser in die Warteschlange gestellt, bis Kapazität verfügbar ist.
+* Eine Clean Restore ist nur bei verschlüsselungsbasierten Angriffen (sowohl Benutzerverhalten als auch Entropie) und Angriffen mit verdächtigem Benutzerverhalten möglich. Eine Clean Restore wird bei Angriffen auf Datenabfluss und Datenzerstörung nicht unterstützt.
+* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, kommt der Vorgang in die Warteschlange, bis Kapazität verfügbar ist.
 +
 ** Im Dashboard „Ransomware Resilience Recovery“ können Sie jederzeit den Status aktiver und in der Warteschlange befindlicher Wiederherstellungsvorgänge überwachen.
 

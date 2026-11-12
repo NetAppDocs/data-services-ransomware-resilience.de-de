@@ -24,7 +24,7 @@ Welche Berichte kann ich herunterladen?
 * **Zusammenfassung**: Enthält Listen unterstützter und nicht unterstützter Workloads, empfohlene Maßnahmen zur Verbesserung Ihrer Cyber-Resilienz sowie Informationen, die im Ransomware-Resilienz-Dashboard erfasst werden.
 * *Schutz*: Beinhaltet den Status und die Details aller Workloads, einschließlich der Gesamtzahl der geschützten und gefährdeten Workloads.
 * *Warnungen*: Enthält den Status und die Details aller Warnungen, einschließlich der Gesamtzahl der Warnungen und automatisierten Snapshots.
-* *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads mit den Markierungen „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“.
+* *Wiederherstellung*: Enthält den Status und die Details aller Workloads, die wiederhergestellt werden müssen, einschließlich der Gesamtzahl der Workloads, die als „Wiederherstellung erforderlich“, „In Bearbeitung“, „Wiederherstellung fehlgeschlagen“ und „Erfolgreich wiederhergestellt“ gekennzeichnet sind.
 * *Bereitschaftsübungen*: Beinhaltet Ergebnisse simulierter Angriffe, um Verbesserungspotenziale aufzuzeigen.
 * *Änderungen der Schutzmaßnahmen*: Beinhaltet eine Überprüfung der Änderungen der Schutzstrategien für Workloads über einen festgelegten Zeitraum: 30 Tage, 60 Tage, 90 Tage oder 1 Jahr.
 * *Saubere Wiederherstellung*: Enthält Details zu den mit der sauberen Wiederherstellung wiederhergestellten Workloads.

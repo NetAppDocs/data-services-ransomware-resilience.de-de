@@ -54,8 +54,8 @@ NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert w
 .Virtual Private Cloud (VPC)
 * Für das IRE stellen Sie eine VPC innerhalb des IP-Adressbereichs Ihrer Produktionsumgebung bereit. Die IP-Adresse darf nicht mit bestehenden IP-Adressen in Konflikt stehen.
 +
-** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) haben.
-** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Konsolenagent nicht.
+** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) aufweisen.
+** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Console Agent nicht.
 
 
 

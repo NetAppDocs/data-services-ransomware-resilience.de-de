@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rp-start-prerequisites.html 
 keywords: bluexp ransomware protection, ransomware protection prerequisites, resilience 
-summary: Beginnen Sie mit NetApp Ransomware Resilience, indem Sie die Unterstützung für Ihre Umgebung, Ihren Netzwerkzugriff, Ihre Anmeldung und Ihren Webbrowser überprüfen. 
+summary: Vor dem Einsatz von NetApp Ransomware Resilience sind die Anforderungen an das System, die NetApp Console, ONTAP, Backup und die Erkennung des Benutzerverhaltens zu prüfen. 
 ---
 = Voraussetzungen für NetApp Ransomware Resilience
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: Beginnen Sie mit NetApp Ransomware Resilience, indem Sie die Unterstüt
 
 
 [role="lead"]
-Bevor NetApp Ransomware Resilience bereitgestellt wird, sollte geprüft werden, ob die Umgebung, der Netzwerkzugriff und der Browser die Anforderungen erfüllen.
+Vor dem Einsatz von NetApp Ransomware Resilience ist zu überprüfen, ob Ihre Systeme, die NetApp Console Konfiguration, die ONTAP Version und die Backup-Ziele die Anforderungen erfüllen.
 
 Die folgenden Anforderungen sind zu beachten.
 
@@ -21,7 +21,7 @@ Die folgenden Anforderungen sind zu beachten.
 [[supported-systems]]
 == Unterstützte Systeme
 
-Stellen Sie sicher, dass Sie ein unterstütztes System verwenden:
+Es ist sicherzustellen, dass Sie ein unterstütztes System verwenden:
 
 |===
 | Umfeld | Protokoll | Unterstützte Versionen 
@@ -75,13 +75,13 @@ Ihre NetApp Console Konfiguration erfordert Folgendes:
 ** Falls Ihre On-Premises ONTAP Cluster oder Cloud Volumes ONTAP Systeme nicht in der Console eingerichtet sind, siehe link:https://docs.netapp.com/us-en/console-setup-admin/concept-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten konfigurieren"^] und link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-checklist-cm.html["Standardanforderungen für die Konsole"^].
 +
 
-NOTE: Wenn Sie mehrere Console-Agenten in einer einzigen Console-Organisation haben, scannt Ransomware Resilience ONTAP Ressourcen auf allen Console-Agenten, die nicht aktuell in der Console-Benutzeroberfläche ausgewählt sind.
+NOTE: Wenn Sie über mehrere Console Agents in einem einzelnen Console Unternehmen verfügen, scannt Ransomware Resilience ONTAP Ressourcen über alle Console Agents hinweg, nicht nur über den, der derzeit in der Console UI ausgewählt ist.
 
 
 
 * Der Konsolenagent muss über die `cloudmanager-ransomware-protection` Container in einem aktiven Zustand.
 * Es gilt eine Beschränkung von 3.000 Workloads pro Console agent. Sie können eine Anfrage stellen, um diese Beschränkung zu erweitern.
-* Für ONTAP oder Cloud Volumes ONTAP Cluster ist für die Ransomware-Resilienz ONTAP Version 9.11.1 oder höher erforderlich.
+* Für ONTAP oder Cloud Volumes ONTAP Cluster erfordert Ransomware Resilience ONTAP Version 9.11.1 oder höher.
 +
 
 NOTE: Um Ransomware Resilience auf SAN-Workloads nutzen zu können, müssen Sie ONTAP 9.17.1 oder höher verwenden.
@@ -119,14 +119,14 @@ NOTE: Sie können link:task-backup-destination.html["Konfigurieren eines Backup-
 [[user-behavior-detection-requirements]]
 == Anforderungen an die Erkennung des Nutzerverhaltens
 
-Damit Ransomware Resilience Warnungen zum Benutzerverhalten ausgeben kann, müssen Sie einen Benutzeraktivitätsagenten konfigurieren. Um einen Benutzeraktivitätsagenten zu installieren, stellen Sie sicher, dass Ihr System link:reference-user-activity-requirements.html["die Anforderungen"] erfüllt.
+Damit Ransomware Resilience Warnungen zum Benutzerverhalten bereitstellen kann, muss ein Benutzeraktivitätsagent konfiguriert werden. Für die Installation eines Benutzeraktivitätsagenten muss Ihr System die link:reference-user-activity-requirements.html["die Anforderungen"] erfüllen.
 
 
 
 [[clean-restore-prerequisites]]
 == Voraussetzungen für die Bereinigung der Wiederherstellung
 
-Ransomware Resilience bietet eine saubere Wiederherstellung, die einen geführten Wiederherstellungsprozess zur Ermittlung optimaler Wiederherstellungspfade beinhaltet. Um eine saubere Wiederherstellung zu nutzen, link:task-clean-restore.html["Stellen Sie sicher, dass Sie die Voraussetzungen erfüllen."].
+Ransomware Resilience bietet eine saubere Wiederherstellung, die einen geführten Wiederherstellungsprozess zur Ermittlung optimaler Wiederherstellungspfade beinhaltet. Um eine saubere Wiederherstellung zu nutzen, link:task-clean-restore.html["Bestätigung, dass Sie die Voraussetzungen erfüllen"].
 
 
 

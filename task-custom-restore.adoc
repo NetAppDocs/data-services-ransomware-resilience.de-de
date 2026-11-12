@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-custom-restore.html 
 keywords: ransomware protection recovery, recover from a ransomware attack, recovery point, RPA 
-summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die Sicherungsdaten auf dem Sekundärspeicher sauber sind, empfiehlt einen tatsächlichen Wiederherstellungspunkt (RPA) und orchestriert den Workflow für eine absturzsichere Wiederherstellung.' 
+summary: Die Wiederherstellung von Workloads nach einem Ransomware-Angriff ist mit dem empfohlenen oder einem bevorzugten Wiederherstellungspunkt auf Volume-, Datei- oder VM-Level möglich, ohne die Dateien zuvor zu bereinigen. 
 ---
-= Wiederherstellung nach einem Ransomware-Angriff mit einer benutzerdefinierten Wiederherstellung in NetApp Ransomware Resilience
+= Benutzerdefinierte Wiederherstellung von Workloads in NetApp Ransomware Resilience
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: 'Nach einem Angriff überprüft NetApp Ransomware Resilience , ob die S
 
 
 [role="lead"]
-Mit Ransomware Resilience können Speicheradministratoren festlegen, wie Workloads am besten wiederhergestellt werden, entweder vom empfohlenen oder vom bevorzugten Wiederherstellungspunkt.
+Die Wiederherstellung Ihrer Workloads nach einem Ransomware-Angriff erfolgt mit einer benutzerdefinierten Wiederherstellung in NetApp Ransomware Resilience. Dabei lässt sich der empfohlene oder ein bevorzugter Wiederherstellungspunkt auswählen, um Daten wiederherzustellen, ohne die Dateien zuvor zu bereinigen.
 
 
 TIP: Ransomware Resilience unterstützt außerdem eine xref:task-clean-restore.html[Option für saubere Wiederherstellung], die eine geführte Wiederherstellung und erweiterte Funktionen bietet, um sicherzustellen, dass nur saubere und unverschlüsselte Daten wiederhergestellt werden.
@@ -27,7 +27,7 @@ TIP: Ransomware Resilience unterstützt außerdem eine xref:task-clean-restore.h
 Der Sicherheitsspeicheradministrator kann Daten auf verschiedenen Ebenen wiederherstellen:
 
 * Alle Volumes wiederherstellen
-* Eine Dateifreigabe auf Volume-, Verzeichnis- oder Dateiebene wiederherstellen.
+* Wiederherstellung einer Dateifreigabe auf Volume-, Verzeichnis- oder Dateiebene.
 * Wiederherstellung aus einem Datenspeicher auf VM-Ebene.
 
 
@@ -143,7 +143,7 @@ TIP: Der neue Datenträgername wird als ursprünglicher Datenträgername + Siche
 [[restore-a-workload-at-the-file-level]]
 === Stellen Sie eine Arbeitslast auf Dateiebene wieder her
 
-Bevor Sie eine Arbeitslast auf Dateiebene wiederherstellen, können Sie eine Liste der betroffenen Dateien anzeigen. Sie können die Seite „Warnungen“ aufrufen, um eine Liste der betroffenen Dateien herunterzuladen. Dann verwenden Sie die Seite „Wiederherstellung“, um die Liste hochzuladen und auszuwählen, welche Dateien wiederhergestellt werden sollen.
+Bevor Sie einen Workload auf Dateiebene wiederherstellen, können Sie auf der Seite „Warnungen“ eine Liste der betroffenen Dateien herunterladen. Auf der Seite „Wiederherstellung“ kann die Liste hochgeladen und können die wiederherzustellenden Dateien ausgewählt werden.
 
 Sie können eine Arbeitslast auf Dateiebene auf demselben oder einem anderen System wiederherstellen.
 
@@ -198,7 +198,7 @@ image:screen-recovery-app-by-file-select-files.png["Wählen Sie die wiederherzus
 
 +
 
-NOTE: Wenn Dateien mit dem ausgewählten Wiederherstellungspunkt nicht wiederhergestellt werden können, wird eine Meldung mit der Anzahl der nicht wiederhergestellten Dateien angezeigt. Sie können die Liste dieser Dateien herunterladen, indem Sie „Liste der betroffenen Dateien herunterladen“ auswählen.
+NOTE: Falls Dateien mit dem ausgewählten Wiederherstellungspunkt nicht wiederhergestellt werden können, wird in einer Meldung die Anzahl der betroffenen Dateien angezeigt. Zum Herunterladen der Liste dieser Dateien dient *Liste der betroffenen Dateien herunterladen*.
 
 
 
@@ -207,7 +207,7 @@ NOTE: Wenn Dateien mit dem ausgewählten Wiederherstellungspunkt nicht wiederher
 .. Wählen Sie, wo die Daten wiederhergestellt werden sollen: am ursprünglichen Quellspeicherort oder an einem alternativen Speicherort, den Sie angeben können.
 +
 
-TIP: Während die ursprünglichen Dateien oder Verzeichnisse durch die wiederhergestellten Daten überschrieben werden, bleiben die ursprünglichen Datei- und Ordnernamen gleich, sofern Sie keine neuen Namen angeben.
+TIP: Die wiederhergestellten Daten überschreiben die ursprünglichen Dateien oder das ursprüngliche Verzeichnis, die ursprünglichen Datei- und Ordnernamen bleiben jedoch gleich, sofern Sie keine neuen Namen angeben.
 
 .. Wählen Sie das System aus.
 .. Wählen Sie die Speicher-VM aus.
@@ -216,7 +216,7 @@ TIP: Während die ursprünglichen Dateien oder Verzeichnisse durch die wiederher
 
 TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien auf einem neuen Volume im obersten Verzeichnis wiederhergestellt.
 
-.. Wählen Sie aus, ob die Namen der wiederhergestellten Dateien oder Verzeichnisse dieselben oder andere Namen wie am aktuellen Speicherort haben sollen.
+.. Es wird ausgewählt, ob die aktuellen Namen beibehalten oder andere Namen für die wiederhergestellten Dateien oder das Verzeichnis verwendet werden.
 
 
 . Wählen Sie *Weiter*.
@@ -271,7 +271,7 @@ TIP: Wenn Sie keinen Pfad für die Wiederherstellung angeben, werden die Dateien
 [[restore-a-vm-file-share-at-the-vm-level]]
 === Wiederherstellen einer VM-Dateifreigabe auf VM-Ebene
 
-Nachdem Sie eine VM zur Wiederherstellung ausgewählt haben, fahren Sie auf der Seite „Wiederherstellung“ mit diesen Schritten fort.
+Auf der Seite „Wiederherstellung“ folgen nach der Auswahl einer wiederherzustellenden VM diese Schritte.
 
 . *Quelle*: Wählen Sie den Abwärtspfeil neben „Quelle“, um Details anzuzeigen.
 +

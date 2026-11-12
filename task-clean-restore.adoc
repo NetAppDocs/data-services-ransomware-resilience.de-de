@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-clean-restore.html 
 keywords: clean room, clean restore, secure recovery, restore, isolated recovery environment 
-summary: Bevor eine vollständige Wiederherstellung in NetApp Ransomware Resilience durchgeführt wird, ist eine isolierte Wiederherstellungsumgebung zu erstellen, um die Umgebung abzugrenzen und zu bereinigen. 
+summary: In NetApp Ransomware Resilience lässt sich eine isolierte Wiederherstellungsumgebung zum Isolieren und Bereinigen von Workloads, zum Überprüfen unterstützter Konfigurationen und zur Vorbereitung auf eine saubere Wiederherstellung erstellen. 
 ---
 = Konfigurieren Sie die Umgebung für eine saubere Wiederherstellung in NetApp Ransomware Resilience
 :hardbreaks:
@@ -97,8 +97,8 @@ NOTE: Eine vollständige Wiederherstellung in einer Cloud-basierten Umgebung kan
 [[considerations]]
 == Überlegungen
 
-* Eine vollständige Wiederherstellung ist nur bei verschlüsselungsbasierten Angriffen (sowohl auf Benutzerverhalten als auch auf Entropie) und bei Angriffen aufgrund verdächtigen Benutzerverhaltens möglich. Eine vollständige Wiederherstellung wird bei Datenlecks und Datenzerstörungsangriffen nicht unterstützt.
-* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, wird dieser in die Warteschlange gestellt, bis Kapazität verfügbar ist.
+* Eine Clean Restore ist nur bei verschlüsselungsbasierten Angriffen (sowohl Benutzerverhalten als auch Entropie) und Angriffen mit verdächtigem Benutzerverhalten möglich. Eine Clean Restore wird bei Angriffen auf Datenabfluss und Datenzerstörung nicht unterstützt.
+* Wenn die isolierte Wiederherstellungsumgebung keine Kapazität für einen neuen Vorgang hat, kommt der Vorgang in die Warteschlange, bis Kapazität verfügbar ist.
 +
 ** Im Dashboard „Ransomware Resilience Recovery“ können Sie jederzeit den Status aktiver und in der Warteschlange befindlicher Wiederherstellungsvorgänge überwachen.
 
@@ -111,7 +111,7 @@ NOTE: Eine vollständige Wiederherstellung in einer Cloud-basierten Umgebung kan
 [[additional-considerations-for-on-premises-environments]]
 === Zusätzliche Überlegungen für On-Premises-Umgebungen
 
-Wenn Sie eine lokale IRE bereitstellen und eine Windows-VM für die Wiederherstellungsanalyse im Rahmen einer sauberen Wiederherstellung geklont wird, behält die geklonte VM dieselbe Konfiguration wie die Quelle. Dies kann zu Konflikten führen:
+Bei der Bereitstellung einer lokalen IRE und dem Klonen einer Windows-VM für die Wiederherstellungsanalyse im Rahmen einer sauberen Wiederherstellung behält die geklonte VM dieselbe Konfiguration wie die Quell-VM. Diese Duplizierung kann zu Konflikten führen:
 
 * Die Verwendung desselben Sicherheitsidentifikators (SID) führt zu Authentifizierungs- und Sicherheitskonflikten.
 * Die Verwendung desselben Computernamens (CN) führt zu Netzwerkkonflikten.
@@ -125,7 +125,7 @@ Um diese Konflikte zu vermeiden, führt Ransomware Resilience auf der geklonten 
 [[secondary-sources]]
 === Sekundärquellen
 
-Beim Erstellen des IRE haben Sie die Möglichkeit, eine sekundäre Quelle hinzuzufügen.
+Beim Erstellen des IRE können Sie eine sekundäre Datenquelle hinzufügen.
 
 Wenn die primäre Quelle nicht verfügbar ist und Sie eine sekundäre Quelle konfiguriert haben, werden die Daten auf der sekundären Quelle wiederhergestellt.
 
@@ -151,7 +151,7 @@ Gebühren von Drittanbietern können die Erstellung und Bereitstellung von Reche
 [[prerequisites]]
 == Voraussetzungen
 
-Stellen Sie sicher, dass Sie die Voraussetzungen für den von Ihnen gewählten Bereitstellungstyp „Saubere Wiederherstellung“ erfüllt haben. Wählen Sie die Registerkarte für Ihre gewählte IRE-Konfiguration aus.
+Bestätigung, dass Sie die Voraussetzungen für den ausgewählten Clean Restore Deployment-Typ erfüllt haben. Auswahl der Registerkarte für die ausgewählte IRE-Konfiguration.
 
 
 NOTE: Wenn Sie die IRE erstellen, müssen Sie bei der Systemauswahl jedes System (primär oder sekundär) hinzufügen, das Sie für die Analyse verwenden möchten.
@@ -216,8 +216,8 @@ NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert w
 .Virtual Private Cloud (VPC)
 * Für das IRE stellen Sie eine VPC innerhalb des IP-Adressbereichs Ihrer Produktionsumgebung bereit. Die IP-Adresse darf nicht mit bestehenden IP-Adressen in Konflikt stehen.
 +
-** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) haben.
-** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Konsolenagent nicht.
+** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) aufweisen.
+** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Console Agent nicht.
 
 
 
@@ -355,8 +355,8 @@ NOTE: Wenn eine IRE mit der Quelle in Amazon FSx for NetApp ONTAP konfiguriert w
 .Virtual Private Cloud (VPC)
 * Für das IRE stellen Sie eine VPC innerhalb des IP-Adressbereichs Ihrer Produktionsumgebung bereit. Die IP-Adresse darf nicht mit bestehenden IP-Adressen in Konflikt stehen.
 +
-** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) haben.
-** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Konsolenagent nicht.
+** Die VPC sollte eine Mindestkapazität von 64 IP-Adressen (eine /26-Netzmaske) aufweisen.
+** Die VPC muss den öffentlichen Internetzugang zulassen. Andernfalls funktioniert der Console Agent nicht.
 
 
 
@@ -475,7 +475,7 @@ image:diagram-clean-recovery-on-prem.png["Diagramm der sauberen Wiederherstellun
 ** VMware Tools muss installiert sein und ausgeführt werden.
 ** WinRM muss aktiviert sein.
 ** Die IP-Adresse muss konfiguriert sein.
-** Voraussetzung ist eine entsprechende Lizenz, die das Klonen von Basis-VMs ermöglicht.
+** Sie benötigen die entsprechende Lizenz, um das Klonen von Basis-VMs zu ermöglichen.
 ** Die VM muss eingeschaltet sein.
 
 
@@ -519,6 +519,9 @@ NFS-Zugriff auf die: * Produktionskonsolenagent * Konsolenagent VLAN * Reinraum 
 Vor der Durchführung einer vollständigen Wiederherstellung müssen Sie eine isolierte Wiederherstellungsumgebung erstellen.
 
 Die Vorgehensweise zum Erstellen einer isolierten Wiederherstellungsumgebung unterscheidet sich, je nachdem, ob sich die Umgebung in der Cloud oder lokal befindet. Dabei sind die Anweisungen für den richtigen Standort maßgeblich.
+
+
+TIP: link:https://www.netapp.com/video/6Vj0Ijo3mno/netapp-ransomware-resilience-clean-restore/["Ein Video führt Sie durch das isolierte Recovery Deployment."^]
 
 [role="tabbed-block"]
 ====
@@ -610,10 +613,18 @@ TIP: Wenn Details der IRE geändert werden müssen, ist in der Ransomware Resili
 Eine IRE kann nicht gelöscht werden, während ein Wiederherstellungsvorgang aktiv ist; Sie können den Wiederherstellungsvorgang abbrechen oder warten, bis die Wiederherstellung abgeschlossen ist, dann die IRE löschen.
 
 
-IMPORTANT: Wenn Sie die IRE löschen, werden auch die Clean Room SVM und das Metadaten-Volume gelöscht. Sobald diese Assets gelöscht wurden, ist das Generieren von Berichten für die Clean Restore nicht mehr möglich.
+IMPORTANT: Wenn Sie die IRE löschen, löscht dies auch die Clean Room SVM und das Metadaten-Volume. Nachdem diese Ressourcen gelöscht wurden, können Sie keine Berichte mehr für die saubere Wiederherstellung erstellen.
 
 . Gehen Sie zu **Einstellungen**.
 . In der Isolationsreinigungs- und Wiederherstellungskarte **Verwalten** auswählen.
 . Identifizieren Sie den Reinraum, den Sie löschen möchten. Wählen Sie das Aktionsmenü (`...`) für den IRE und dann **Löschen**.
 . Wählen Sie im Dialogfeld **Löschen**, um den Vorgang zu bestätigen.
+
+
+
+
+[[more-information]]
+== Weitere Informationen
+
+* link:https://www.youtube.com/watch?v=6Vj0Ijo3mno&t=6s["VIDEO: Deployment einer isolierten Wiederherstellungsumgebung"]
 
