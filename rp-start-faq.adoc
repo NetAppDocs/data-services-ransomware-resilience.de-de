@@ -176,7 +176,7 @@ Ja, wenn Sie Workloads in Backup and Recovery verwalten, werden diese Richtlinie
 Nein, Sie können von Backup und Recovery verwaltete Richtlinien nicht über Ransomware Resilience ändern. Sie verwalten Änderungen an diesen Richtlinien in Backup und Recovery.
 
 .Wenn Richtlinien aus ONTAP vorhanden sind (wie ARP, FPolicy und Snapshots), werden diese durch Ransomware Resilience geändert?
-Ransomware Resilience ändert keine bestehenden Erkennungsrichtlinien (ARP- und FPolicy-Einstellungen) von ONTAP. Wenn Sie Einstellungen in Ransomware Resilience ändern, können Sie die ONTAP Einstellungen überschreiben.
+Nicht automatisch. Ransomware Resilience ändert keine bestehenden Erkennungsrichtlinien (ARP, FPolicy-Einstellungen) von ONTAP, es sei denn, Sie ändern diese Einstellungen manuell in Ransomware Resilience.
 
 .Was passiert, wenn Sie nach der Anmeldung für Ransomware Resilience neue Richtlinien in Backup und Recovery hinzufügen?
 Ransomware Resilience erkennt neu erstellte Richtlinien und Richtlinienänderungen in Backup und Recovery.

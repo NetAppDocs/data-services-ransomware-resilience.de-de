@@ -1,0 +1,7 @@
+= 
+:allow-uri-read: 
+
+
+Die Option zum Blockieren verdächtiger Dateierweiterungen verwendet die Standardliste, die Sie für das Unternehmen konfiguriert haben. Zum Bearbeiten von link:task-file-extensions.html["eine benutzerdefinierte Liste verwenden"], das Sie erstellt haben, steht das Stiftsymbol zur Verfügung.
+
++ Wenn Sie in ONTAP Listen blockierter Dateierweiterungen konfiguriert haben, können Sie diese überschreiben, indem Sie *ONTAP Listen durch Ransomware Resilience Listen ersetzen* auswählen. Anschließend wählen Sie aus, ob die SVM *alle Dateierweiterungen außer der Sperrliste zulässt* oder *alle Dateierweiterungen außer der Zulassungsliste blockiert*. Dann wählen Sie die Liste aus dem Dropdown-Menü aus. Alle Storage VMs (SVMs) auf der Workload verwenden diese Liste; später können Sie verschiedenen SVMs auf der Workload unterschiedliche Listen zuweisen.

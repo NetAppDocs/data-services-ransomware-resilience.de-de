@@ -21,6 +21,173 @@ Nachdem Workloads in NetApp Ransomware Resilience erkannt wurden, ist es wichtig
 [[before-you-begin]]
 == Bevor Sie beginnen
 
+Strategien zum Schutz vor Ransomware umfassen _Erkennung_, _Schutz_ und _Replikationsrichtlinien_.
+
+* **Erkennungsrichtlinien** identifizieren Ransomware-Bedrohungen. Ihre Erkennungsrichtlinie kann alle drei Erkennungsarten oder eine Kombination davon umfassen. Sie muss entweder die Verschlüsselungserkennung oder link:suspicious-user-activity.html["verdächtige Benutzeraktivität (die zusätzliche Konfigurationen erfordert)"] die Erkennung von Verschlüsselungsalgorithmen enthalten.
++
+** Verschlüsselungserkennung
+** Verdächtige Benutzeraktivität
+** Verdächtige Dateierweiterungen blockieren
++
+Wenn Sie die Erkennung mit dem Blockieren verdächtiger Dateierweiterungen aktivieren, können Sie den Mauszeiger auf die QuickInfo bewegen und dann **managen** auswählen, um link:task-file-extensions.html["Auswahl einer benutzerdefinierten Liste blockierter Dateierweiterungen"].
+
+
+
+* **Schutzrichtlinien** umfassen Snapshot- und Backup-Richtlinien.  In einer Schutzstrategie sind Erkennungs- und Snapshot-Richtlinien erforderlich.  Sicherungsrichtlinien sind optional.
++
+Wenn Sie zum Schutz Ihrer Workloads andere NetApp -Produkte verwenden, erkennt Ransomware Resilience diese und bietet Ihnen die Möglichkeit, entweder:
+
++
+** eine Ransomware-Erkennungsrichtlinie verwenden und weiterhin die von anderen NetApp tools erstellten Snapshot- und Backup-Richtlinien nutzen, oder
+** Ransomware Resilience dient zum Managen von Erkennung, Snapshots und Backups.
+
+
+* **Replikationsrichtlinien** ermöglichen es Ihnen, Snapshots von Ransomware Resilience auf einen sekundären Standort zu replizieren. Replikationspläne können auf stündliche, tägliche, wöchentliche oder monatliche Frequenzen eingestellt werden.
++
+Derzeit können Snapshots nur auf lokalem ONTAP Speicher repliziert werden.
+
+
+
+
+NOTE: Bei der Konfiguration von Schutzstrategien für Amazon FSx for NetApp ONTAP und Azure NetApp Files empfiehlt sich eine Konsultation von link:rp-reference-limitations.html["die Einschränkungen für jeden Dienst"].
+
+
+TIP: Für eine verbesserte Verwaltung und einen besseren Schutz Ihrer Datenbestände können Sie link:task-protection-group.html["Gruppen-Workloads"] erstellen, um Volumes gemeinsam unter einer Strategie zu schützen.
+
+
+
+[[protection-policies-with-other-netapp-managed-services]]
+=== Schutzrichtlinien mit anderen von NetApp verwalteten Diensten
+
+Neben der Ransomware-Resilienz können Sie NetApp Backup and Recovery auch für das Managen des Schutzes von Dateifreigaben und VM-Dateifreigaben nutzen.
+
+Schutzinformationen aus Backup and Recovery Services werden in Ransomware Resilience angezeigt. Sie können diesen Services mit Ransomware Resilience Erkennungsrichtlinien hinzufügen. Das Hinzufügen einer Datensicherungsstrategie mit Ransomware Resilience ersetzt die bestehenden Datensicherungsstrategien.
+
+Wenn eine Ransomware-Erkennungsrichtlinie von Autonomous Ransomware Protection (ARP oder ARP/AI, je nach ONTAP Version) und FPolicy in ONTAP verwaltet wird, sind diese Workloads geschützt und werden weiterhin von ARP und FPolicy verwaltet.
+
+
+NOTE: Backup-Ziele sind für Workloads in Amazon FSx for NetApp ONTAP oder Azure NetApp Files nicht verfügbar. Führen Sie Backup-Vorgänge mit dem FSx for ONTAP-Backup-Service durch. Sie legen Backup-Richtlinien für Workloads in FSx for ONTAP in AWS fest, nicht in Ransomware Resilience. Die Backup-Richtlinien werden in Ransomware Resilience angezeigt und bleiben gegenüber AWS unverändert.
+
+
+
+==== Schutzrichtlinien für Workloads, die nicht durch NetApp -Anwendungen geschützt sind
+
+Wenn Ihre Arbeitslast nicht von Backup and Recovery oder Ransomware Resilience verwaltet wird, wurden möglicherweise Snapshots im Rahmen von ONTAP oder anderen Produkten erstellt. Wenn ONTAP FPolicy-Schutz aktiviert ist, können Sie den FPolicy-Schutz mit ONTAP ändern.
+
+
+
+[[predefined-detection-policies]]
+=== Vordefinierte Erkennungsrichtlinien
+
+Sie können eine der folgenden vordefinierten Ransomware-Resilience-Richtlinien auswählen, die auf die Wichtigkeit der Arbeitslast abgestimmt sind.
+
+
+NOTE: Die **Benutzererweiterung für Verschlüsselung** ist die einzige vordefinierte Richtlinie, die die Erkennung verdächtigen Benutzerverhaltens unterstützt. + Die Richtlinie **Critical replication** ist die einzige vordefinierte Richtlinie, die das Replizieren von Snapshots auf ONTAP unterstützt.
+
+[cols="10,15a,20,15,15,15"]
+|===
+| Richtlinienebene | Schnappschuss | Frequenz | Aufbewahrungsdauer (Tage) | Anzahl der Snapshot-Kopien | Maximale Anzahl von Snapshot-Kopien 
+
+
+.4+| *Richtlinie für kritische Arbeitslast*  a| 
+Viertelstündlich
+| Alle 15 Minuten | 3 | 288 | 309 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 309 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 309 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 309 
+
+
+.4+| *Wichtige Arbeitsbelastungsrichtlinie*  a| 
+Viertelstündlich
+| Alle 30 Minuten | 3 | 144 | 165 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 165 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 165 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 165 
+
+
+.4+| *Standard-Arbeitslastrichtlinie*  a| 
+Viertelstündlich
+| Alle 30 Minuten | 3 | 72 | 93 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 93 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 93 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 93 
+
+
+.4+| *Verschlüsselungsbenutzererweiterung*  a| 
+Viertelstündlich
+| Alle 30 Minuten | 3 | 72 | 93 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 93 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 93 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 93 
+
+
+.4+| *Richtlinie zur kritischen Replikation*  a| 
+Viertelstündlich
+| Alle 15 Minuten | 3 | 288 | 309 
+
+
+| Täglich  a| 
+Jeden 1 Tag
+| 14 | 14 | 309 
+
+
+| Wöchentlich  a| 
+Jede Woche
+| 35 | 5 | 309 
+
+
+| Monatlich  a| 
+Alle 30 Tage
+| 60 | 2 | 309 
+|===
 Wenn Sie eine Datensicherungsstrategie mit Erkennung verdächtigen Benutzerverhaltens erstellen möchten, ist sicherzustellen, dass Sie link:suspicious-user-activity.html["die notwendigen Einstellungen vorgenommen"] für die Überwachung von Benutzeraktivitäten eingerichtet haben.
 
 
@@ -55,8 +222,15 @@ Die Ransomware-Schutzstrategie umfasst:
 Die Erkennungsrichtlinie ändert nicht die in anderen Produkten verwalteten Richtlinien.
 
 +
-Die Erkennungsrichtlinie aktiviert den autonomen Ransomware-Schutz und den FPolicy-Schutz, wenn diese bereits in anderen Diensten aktiviert sind. Erfahren Sie mehr überlink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Autonomer Ransomware-Schutz"^] ,link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sicherung und Wiederherstellung"^] , Undlink:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^] .
+Die Erkennungsrichtlinie aktiviert Autonomous Ransomware Protection und FPolicy protection, sofern diese bereits in anderen Services aktiviert sind.
 
+
+
+Weitere Informationen zu:
+
+* link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Autonomer Ransomware-Schutz"^]
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["Sicherung und Wiederherstellung"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy"^]
 
 
 
@@ -91,48 +265,32 @@ image:screen-protection-strategy-add.png["Strategieseite hinzufügen, die den Sn
 ** *Erkennung verdächtigen Benutzerverhaltens*: Aktivieren Sie die Erkennung von Benutzerverhalten, um Benutzeraktivitätsereignisse an Ransomware Resilience zu übermitteln und verdächtige Ereignisse wie Datenlecks oder Datenzerstörung zu erkennen.
 ** *Dateierweiterungen blockieren*: Aktivieren Sie die Ransomware-Resilienz, um bekannte verdächtige Dateierweiterungen zu blockieren.
 +
-Wenn Sie die blockierten Dateierweiterungen ändern möchten, bearbeiten Sie sie im System Manager.
-
-+
-
-NOTE: Sie können eine beliebige Kombination der Erkennungsrichtlinien auswählen. Die Erkennungsrichtlinie muss entweder die Verschlüsselungserkennung oder die Erkennung verdächtigen Benutzerverhaltens umfassen.
+Sie können eine Standardliste blockierter Dateierweiterungen verwenden oder eine link:task-file-extensions.html["benutzerdefinierte Liste"] erstellen.
 
 
 
-. Festlegen der *Snapshot-Richtlinie*. Um Snapshot-Einstellungen aus einer link:concept-strategy.html#predefined-policies["vordefinierte Richtlinie"] zu importieren, ist die Optionsschaltfläche *Select* und anschließend die Richtlinie aus der Dropdown-Liste auszuwählen. Wenn eine Richtlinie importiert wird, sind keine weiteren Snapshot-Konfigurationen erforderlich.
-+
-Zur Konfiguration eigener Einstellungen wird *Create* ausgewählt, anschließend wird ein *Snapshot basename* eingegeben. Der Basisname ist das Präfix, das an jeden Snapshot angehängt wird.
 
-. Wenn Sie Ihre eigenen Snapshot-Einstellungen konfigurieren, können Sie *Snapshot locking* aktivieren. Wenn Sie *Snapshot locking* aktivieren, ist ein Wert für *Locking retention days* festzulegen (d. h. wie lange die Snapshots gesperrt sind).
-+
-Die Snapshot-Sperrung erzeugt unveränderlichen Storage, indem die Snapshot-Kopien auf dem primären Storage gesperrt werden, sodass sie für einen bestimmten Zeitraum weder geändert noch gelöscht werden können, selbst wenn ein Ransomware-Angriff das Backup Storage Ziel erreicht. Dies ermöglicht eine schnellere Wiederherstellung. Wenn ein Snapshot gesperrt ist, wird die Ablaufzeit des Volumes auf die Ablaufzeit der Snapshot-Kopie gesetzt.
 
-+
-Die Snapshot-Kopiersperre ist ab ONTAP 9.12.1 verfügbar. Weitere Informationen zu SnapLock finden Sie unter link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP Dokumentation für SnapLock"^].
 
-+
-Bei der Konfiguration eigener Snapshot-Einstellungen sind die Optionen für den Snapshot-Zeitplan festzulegen. Dabei ist auszuwählen, ob Snapshots minütlich, stündlich, täglich, wöchentlich oder monatlich erstellt werden. Für alle Optionen außer „täglich“ ist festzulegen, zu welcher Tages-, Wochen- oder Monatszeit die Snapshots erstellt werden. Außerdem ist im Feld *Retention* festzulegen, wie viele Kopien jedes Snapshot-Typs aufbewahrt werden.
+NOTE: Sie können eine beliebige Kombination der Erkennungsrichtlinien auswählen. Die Erkennungsrichtlinie muss entweder die Verschlüsselungserkennung oder die Erkennung verdächtigen Benutzerverhaltens umfassen. . Festlegen der *Snapshot-Richtlinie*. Um Snapshot-Einstellungen aus einer link:concept-strategy.html#predefined-policies["vordefinierte Richtlinie"] zu importieren, ist die Optionsschaltfläche *Select* und anschließend die Richtlinie aus der Dropdown-Liste auszuwählen. Wenn eine Richtlinie importiert wird, sind keine weiteren Snapshot-Konfigurationen erforderlich.
 
-+
-image:add-policy-snapshot.png["Screenshot der Snapshot-Richtlinienoptionen."]
++ Eigene Einstellungen lassen sich konfigurieren, indem *Create* ausgewählt und anschließend ein *Snapshot basename* eingegeben wird. Der Basisname ist das Präfix, das an jeden Snapshot angehängt wird . Wenn eigene Snapshot-Einstellungen konfiguriert werden, lässt sich *Snapshot locking* aktivieren. Wenn *Snapshot locking* aktiviert ist, wird ein Wert für die *Locking retention days* festgelegt (das heißt, wie lange die Snapshots gesperrt sind).
 
-. Für lokale Workloads können Sie optional eine *Replikationsrichtlinie* festlegen, um den Workload auf ONTAP Storage zu replizieren.
-+
-Zum Importieren einer systemdefinierten Richtlinie ist die Optionsschaltfläche *Auswählen* und anschließend die link:concept-strategy.html#predefined-policies["vordefinierte Richtlinie"] gewünschte Richtlinie aus dem Dropdown-Menü auszuwählen.
++ Die Snapshot-Sperrung erzeugt unveränderlichen Storage, indem die Snapshot-Kopien auf dem primären Storage gesperrt werden, sodass sie für einen bestimmten Zeitraum weder geändert noch gelöscht werden können, selbst wenn ein Ransomware-Angriff das Ziel des Backup Storage erreicht. Dies ermöglicht eine schnellere Wiederherstellung. Wenn ein Snapshot gesperrt ist, wird die Ablaufzeit des Volumes auf die Ablaufzeit der Snapshot-Kopie gesetzt.
 
-+
-Zum Vornehmen eigener Replikationseinstellungen wählen Sie *Erstellen* und geben anschließend einen *Basisnamen der Replikationsrichtlinie* ein, der allen Snapshots als Präfix vorangestellt wird. Legen Sie die *Replikationszeitpläne* fest. Aktivieren Sie die gewünschten Frequenzen (stündlich, täglich, wöchentlich oder monatlich) und legen Sie für jeden aktivierten Zeitplan den Aufbewahrungswert fest, also die Anzahl der replizierten Snapshots, die beibehalten werden.
++ Die Snapshot-Kopiersperre ist ab ONTAP 9.12.1 und höher verfügbar. Weitere Informationen zu SnapLock sind unter link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP Dokumentation für SnapLock"^] verfügbar.
 
-. Optional lässt sich eine *Backup-Richtlinie* festlegen. Zum Importieren einer vorhandenen ist das Optionsfeld *Select* zu aktivieren; anschließend ist link:concept-strategy.html#predefined-policies["vordefinierte Richtlinie"] aus dem Dropdown-Menü auszuwählen.
-+
-Zum Erstellen einer eigenen Richtlinie wählen Sie *Erstellen* aus und geben einen *Basisnamen für die Sicherungsrichtlinie* ein. Die *Sicherungszeitpläne* werden festgelegt, indem die verschiedenen Häufigkeiten (stündlich, täglich, wöchentlich und monatlich) umgeschaltet und anschließend die Aufbewahrungsanzahl für jede festgelegt wird.
++ Wenn Sie Ihre eigenen Snapshot-Einstellungen konfigurieren, werden die Optionen für den Snapshot-Zeitplan festgelegt. Dabei wird festgelegt, ob Snapshots in Abständen von Minuten, Stunden, Tagen, Wochen oder Monaten erstellt werden. Für alle Optionen außer täglich wird ausgewählt, zu welcher Tages-, Wochen- oder Monatszeit die Snapshots erstellt werden. Außerdem wird im Feld *Retention* festgelegt, wie viele Kopien jedes Snapshot-Typs aufbewahrt werden.
 
-+
++ image:add-policy-snapshot.png["Screenshot der Snapshot-Richtlinienoptionen."] . Für lokale Workloads kann optional eine *Replikationsrichtlinie* festgelegt werden, um den Workload auf ONTAP Storage zu replizieren.
 
-TIP: Um die Sicherungssperrung auf sekundärem Speicher zu aktivieren, konfigurieren Sie Ihre Sicherungsziele mit der Option *Einstellungen*. Weitere Informationen finden Sie unter link:task-backup-destination.html["Konfigurieren der Einstellungen"].
++ Zum Importieren einer systemdefinierten Richtlinie wird die Optionsschaltfläche *Auswählen* gewählt und anschließend die link:concept-strategy.html#predefined-policies["vordefinierte Richtlinie"] aus dem Dropdown-Menü ausgewählt.
 
-. Wählen Sie *Hinzufügen*.
++ Zum Vornehmen eigener Replikationseinstellungen wird *Create* ausgewählt und anschließend ein *Replication policy basename* eingegeben, also das Präfix, das an alle Snapshots angehängt wird. Die *Replication schedules* werden festgelegt. Die zu aktivierenden Frequenzen (stündlich, täglich, wöchentlich oder monatlich) werden ausgewählt, und für jeden aktivierten Zeitplan wird der Aufbewahrungswert (die Anzahl der beizubehaltenden replizierten Snapshots) festgelegt. . Optional wird eine *Backup policy* festgelegt. Zum Importieren einer vorhandenen Richtlinie wird das Optionsfeld *Select* ausgewählt und anschließend link:concept-strategy.html#predefined-policies["vordefinierte Richtlinie"] im Dropdown-Menü gewählt.
 
++ Zum Erstellen einer eigenen Richtlinie ist *Create* auszuwählen und ein *Backup policy basename* einzugeben. Die *Backup schedules* werden festgelegt, indem die verschiedenen Häufigkeiten (stündlich, täglich, wöchentlich und monatlich) umgeschaltet und anschließend für jede die Anzahl der Aufbewahrungen festgelegt wird.
+
++ TIPP: Die Aktivierung der Sicherungssperrung auf sekundärem Storage erfolgt über die Konfiguration Ihrer Sicherungsziele mit der Option *Einstellungen*. Details finden Sie unter link:task-backup-destination.html["Konfigurieren der Einstellungen"]. . Anschließend erfolgt die Auswahl von *Hinzufügen*.
 
 
 
@@ -160,6 +318,12 @@ image:screen-protection.png["Strategieseite verwalten"]
 ** *Verschlüsselungserkennung*
 ** *Erkennung verdächtigen Benutzerverhaltens*
 ** *Verdächtige Dateierweiterungen blockieren*
++
+Die Option zum Blockieren verdächtiger Dateierweiterungen verwendet die Standardliste, die Sie für das Unternehmen konfiguriert haben. Zum Bearbeiten von link:task-file-extensions.html["eine benutzerdefinierte Liste verwenden"], das Sie erstellt haben, steht das Stiftsymbol zur Verfügung.
+
++
+Wenn Sie in ONTAP Listen blockierter Dateierweiterungen konfiguriert haben, können Sie diese Listen überschreiben, indem Sie *ONTAP Listen durch Ransomware Resilience Listen ersetzen* auswählen. Wählen Sie anschließend aus, ob die SVM *alle Dateierweiterungen außer der Sperrliste zulassen* oder *alle Dateierweiterungen außer der Zulassungsliste blockieren* soll. Wählen Sie dann die Liste aus dem Dropdown-Menü aus. Alle Storage VMs (SVMs) auf der Workload verwenden diese Liste; später können unterschiedlichen SVMs auf der Workload verschiedene Listen zugewiesen werden.
+
 
 
 . Wählen Sie **Weiter**.
@@ -185,7 +349,14 @@ image:screen-protection.png["Strategieseite verwalten"]
 
 . Wählen Sie auf der Seite „Schutz“ eine Arbeitslast aus und wählen Sie dann *Schützen*.
 . Ransomware Resilience erkennt, ob bereits aktive Backup and Recovery policies vorhanden sind. Um die vorhandenen policies zu ersetzen, aktivieren Sie das Kontrollkästchen **Replace existing policies**. Wenn Sie das Kontrollkästchen aktivieren, ersetzt Ransomware Resilience die Liste der detection policies durch detection policies.
-. Wählen Sie eine Schutzrichtlinie.  Wenn keine Schutzrichtlinie vorhanden ist, wählen Sie **Hinzufügen**, um eine neue Richtlinie zu erstellen.  Informationen zum Erstellen einer Richtlinie finden Sie unter<<steps,Erstellen einer Schutzrichtlinie>> . Wählen Sie **Weiter**.
+. Wählen Sie eine Datensicherungsstrategie. Wenn keine Datensicherungsstrategie vorhanden ist, können Sie mit **Add** eine neue Datensicherungsstrategie erstellen. Informationen zum Erstellen einer Datensicherungsstrategie finden Sie unter <<steps,Erstellen einer Schutzrichtlinie>>.
++
+Die Option zum Blockieren verdächtiger Dateierweiterungen verwendet die Standardliste, die Sie für das Unternehmen konfiguriert haben. Zum Bearbeiten von link:task-file-extensions.html["eine benutzerdefinierte Liste verwenden"], das Sie erstellt haben, steht das Stiftsymbol zur Verfügung.
+
++
+Wenn Sie in ONTAP Listen blockierter Dateierweiterungen konfiguriert haben, können Sie diese Listen überschreiben, indem Sie *ONTAP Listen durch Ransomware Resilience Listen ersetzen* auswählen. Wählen Sie anschließend aus, ob die SVM *alle Dateierweiterungen außer der Sperrliste zulassen* oder *alle Dateierweiterungen außer der Zulassungsliste blockieren* soll. Wählen Sie dann die Liste aus dem Dropdown-Menü aus. Alle Storage VMs (SVMs) auf der Workload verwenden diese Liste; später können unterschiedlichen SVMs auf der Workload verschiedene Listen zugewiesen werden.
+
+. Wählen Sie **Weiter**.
 . Wenn Ihre Strategie die Replikation beinhaltet, wählen Sie das **Zielsystem** und die **Zielspeicher-VM** aus. Wählen Sie **Weiter**.
 . Wählen Sie ein Sicherungsziel aus oder erstellen Sie ein neues. Wählen Sie **Weiter**.
 +
@@ -231,8 +402,10 @@ Sie können eine Schutzstrategie löschen, die derzeit keinen Workloads zugeordn
 [[next-steps]]
 == Nächste Schritte
 
+* link:task-file-extensions.html["Blockierte oder zulässige Dateierweiterungen managen"]
+* link:suspicious-user-activity.html["Benutzeraktivitätserkennung konfigurieren"]
+* link:rp-use-alert.html["Auf Ransomware-Warnungen reagieren"]
 * link:concept-strategy.html["Informationen zu Schutzstrategien"]
 * link:task-protection-group.html["Schutzgruppen verwalten"]
 * link:task-backup-destination.html["Managen von Backup-Zielen"]
-* link:suspicious-user-activity.html["Benutzeraktivitätserkennung konfigurieren"]
 

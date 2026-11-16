@@ -72,6 +72,14 @@ Für SAN (Blockspeicher)-Workloads gelten die folgenden Einschränkungen:
 
 
 
+[[metrocluster-limitations]]
+== MetroCluster Einschränkungen
+
+* Eine vollständige Wiederherstellung wird für MetroCluster Workloads derzeit nicht unterstützt.
+
+
+
+
 [[multi-admin-verification]]
 == Multi-Admin-Verifizierung
 

@@ -120,6 +120,10 @@ Sie können auf Warnmeldungen über das Ransomware Resilience-Dashboard oder üb
 . Überprüfen Sie im Dashboard „Ransomware Resilience“ den Bereich „Warnungen“.
 . Wählen Sie unter einem der Status *Alle anzeigen* aus.
 . Wählen Sie eine Warnung aus, um alle Vorfälle auf jedem Datenträger für jede Warnung zu überprüfen.
++
+
+TIP: Wurde die Warnung durch eine verdächtige Dateierweiterung ausgelöst, kann verhindert werden, dass dieser Dateityp auf der Storage VM erneut zugelassen wird. In der Warnung ist die Option „Erweiterungen aus der Allow-Liste entfernen“ link:task-file-extensions.html["die Liste der zulässigen Dateierweiterungen ändern"] auszuwählen.
+
 . Um weitere Warnungen anzuzeigen, wählen Sie in der Brotkrümelnavigation oben links *Warnung* aus.
 . Überprüfen Sie die Warnungen auf der Seite „Warnungen“.
 +

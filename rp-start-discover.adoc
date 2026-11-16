@@ -25,6 +25,18 @@ Ransomware Resilience prüft Ihren aktuellen Backup-Schutz, Snapshot-Kopien und 
 
 
 
+[[metrocluster-discovery]]
+== MetroCluster Identifizierung
+
+Ransomware Resilience lädt automatisch MetroCluster Konfigurationen zur Identifizierung. Eine erfolgreiche Identifizierung setzt voraus, dass beide Systeme des MetroCluster Paars zur Console hinzugefügt wurden.
+
+Wenn beide Systeme des MetroCluster Paars erfolgreich zum Console Unternehmen hinzugefügt wurden, sind beide Systeme in der Erkennungsauswahl sichtbar. Für die Erkennung reicht die Auswahl eines Systems aus; das gespiegelte Paar wird automatisch hinzugefügt.
+
+
+TIP: MetroCluster Systeme sind im Discovery Dashboard mit **+1** gekennzeichnet. Wenn Sie den Mauszeiger über **+1** bewegen, werden alle Systeme im Paar angezeigt.
+
+
+
 [[select-workloads-to-discover]]
 == Wählen Sie die Workloads aus, die Sie entdecken möchten
 

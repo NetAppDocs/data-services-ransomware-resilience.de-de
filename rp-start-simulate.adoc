@@ -63,6 +63,7 @@ NOTE: link:concept-user-behavior.html["Benutzeraktivitätserkennung"] muss so ko
 .Bevor Sie beginnen
 * Um eine Bereitschaftsübung für jede Art von Ransomware-Angriff außer Verschlüsselung (Entropie) zu konfigurieren, muss link:concept-user-behavior.html["Benutzeraktivitätserkennung"] konfiguriert sein.
 * Wenn eine Bereitschaftsübung für eine CIFS-Workload erstellt wird, müssen Benutzeranmeldeinformationen eingegeben werden. Für Bereitschaftsübungen empfiehlt sich die Erstellung eines dedizierten Testbenutzers außerhalb der Produktionsumgebung, insbesondere beim Testen von Angriffstypen, die Benutzeraktivitäten betreffen (also Datenlecks). Wird ein realer Produktionsbenutzer verwendet und zeigt dieser verdächtiges Verhalten auf anderen Produktionsvolumes, können diese Warnungen unter der Bereitschaftsübung erscheinen, anstatt eine echte Warnung zu generieren.
+* Bei MetroCluster Workloads ist eine Bereitschaftsübung nur auf dem aktiven System des Paares möglich.
 
 
 .Schritte

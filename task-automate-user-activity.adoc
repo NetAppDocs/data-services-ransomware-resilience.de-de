@@ -21,7 +21,13 @@ Mit NetApp Ransomware Resilience können Reaktionen auf link:concept-user-behavi
 Automatisierte Reaktionen werden bei Verschlüsselung (Benutzerverhalten), Datenschutzverletzungen und Datenzerstörung unterstützt. Es müssen link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html#create-a-user-activity-agent["einen Benutzeraktivitätsagenten konfiguriert, eine Richtlinie mit Benutzeraktivitätserkennung aktiviert und einen Benutzerverzeichnis-Connector erstellt"] vorhanden sein, bevor eine automatisierte Reaktion erstellt werden kann. Wenn eine automatisierte Reaktion ausgelöst wird, sendet NetApp Ransomware Resilience eine E-Mail-Benachrichtigung.
 
 
-NOTE: Wird die Warnung durch verdächtiges Nutzerverhalten ausgelöst, kann lediglich eine Snapshot erstellt werden. Das Sperren eines Nutzers ist als automatische Reaktion auf verdächtiges Nutzerverhalten nicht möglich.
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+* Wird die Warnung durch verdächtiges Nutzerverhalten ausgelöst, kann lediglich eine Snapshot erstellt werden. Das Sperren eines Nutzers ist als automatische Reaktion auf verdächtiges Nutzerverhalten nicht möglich.
+* Beim Konfigurieren automatisierter Antworten für MetroCluster Konfigurationen ist nur eine Workload im MetroCluster Paar auszuwählen. Automatisierte Antworten gelten automatisch für die gesamte MetroCluster Konfiguration.
+
 
 
 

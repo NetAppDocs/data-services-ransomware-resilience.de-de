@@ -64,6 +64,8 @@ sidebar:
           url: "/troubleshoot-user-activity.html"
       - title: Schutzgruppen verwalten
         url: "/task-protection-group.html"
+      - title: Verwaltung blockierter Dateierweiterungen
+        url: "/task-file-extensions.html"
       - title: Scannen nach personenbezogenen Daten
         url: "/task-classify.html"
     - title: Reagieren und wiederherstellen

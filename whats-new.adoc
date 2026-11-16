@@ -18,6 +18,36 @@ Informieren Sie sich über die Neuerungen bei NetApp Ransomware Resilience.
 
 
 
+[[16-november-2026]]
+== 16. November 2026
+
+
+
+[[metrocluster-support]]
+=== MetroCluster Unterstützung
+
+Ransomware Resilience unterstützt jetzt MetroCluster und ermöglicht damit Ransomware-Schutz, -Erkennung und -Wiederherstellung für gespiegelte MetroCluster Konfigurationen. Beim Aktivieren des Ransomware-Schutzes für MetroCluster Konfigurationen ist es erforderlich, beide Systeme im MetroCluster Paar zur Console hinzuzufügen. Wenn Sie den Schutz auf einer Seite des Paares identifizieren und aktivieren, wird er auf der anderen Seite automatisch ebenfalls aktiviert.
+
+Bei der Wiederherstellung nach einem Ransomware-Angriff auf eine MetroCluster Arbeitslast steht derzeit nur eine benutzerdefinierte Wiederherstellung zur Verfügung.
+
+Weitere Informationen sind unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-start-discover.html#metrocluster-discovery["MetroCluster Identifizierung"] verfügbar.
+
+
+
+[[09-november-2026]]
+== 09. November 2026
+
+
+
+[[managed-blocked-file-extensions]]
+=== Verwaltete blockierte Dateierweiterungen
+
+Ransomware Resilience bietet jetzt die Möglichkeit, die Liste der zulässigen oder blockierten Dateierweiterungen für eine Workload anzupassen, wenn die Datensicherungsstrategie „Verdächtige Dateierweiterungen blockieren“ aktiviert ist. Mit dieser Erweiterung lässt sich die Workload so konfigurieren, dass auf der Storage VM (SVM) nur bestimmte Dateitypen zugelassen oder bestimmte Dateierweiterungen blockiert werden. Wenn eine vorhandene Workload mit FPolicy zu Ransomware Resilience migriert wird, um verdächtige Dateierweiterungen zu blockieren, wird standardmäßig eine stärker kuratierte Liste von Erweiterungen verwendet, die sich jedoch anpassen lässt. Diese Erweiterung unterstützt eine granularere Steuerung der Dateierweiterungsoption und ermöglicht außerdem die Erstellung unterschiedlicher Listen für verschiedene SVMs.
+
+Weitere Informationen sind unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-file-extensions.html["Blockierte Dateierweiterungen in Ransomware Resilience managen"] verfügbar.
+
+
+
 [[26-october-2026]]
 == 26. Oktober 2026
 

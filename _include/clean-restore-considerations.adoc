@@ -9,4 +9,5 @@
 
 
 * Wenn Sie eine vollständige Wiederherstellung durchführen, wird das ursprüngliche Volume ausgehängt, was den E/A-Zugriff beeinträchtigen kann.
+* Die saubere Wiederherstellung wird derzeit für MetroCluster oder SAN Workloads nicht unterstützt.
 

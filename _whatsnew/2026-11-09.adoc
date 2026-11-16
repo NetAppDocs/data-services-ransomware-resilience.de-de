@@ -1,0 +1,12 @@
+= Verwaltete blockierte Dateierweiterungen
+:allow-uri-read: 
+
+
+
+
+[[managed-blocked-file-extensions]]
+=== Verwaltete blockierte Dateierweiterungen
+
+Ransomware Resilience bietet jetzt die Möglichkeit, die Liste der zulässigen oder blockierten Dateierweiterungen für eine Workload anzupassen, wenn die Datensicherungsstrategie „Verdächtige Dateierweiterungen blockieren“ aktiviert ist. Mit dieser Erweiterung lässt sich die Workload so konfigurieren, dass auf der Storage VM (SVM) nur bestimmte Dateitypen zugelassen oder bestimmte Dateierweiterungen blockiert werden. Wenn eine vorhandene Workload mit FPolicy zu Ransomware Resilience migriert wird, um verdächtige Dateierweiterungen zu blockieren, wird standardmäßig eine stärker kuratierte Liste von Erweiterungen verwendet, die sich jedoch anpassen lässt. Diese Erweiterung unterstützt eine granularere Steuerung der Dateierweiterungsoption und ermöglicht außerdem die Erstellung unterschiedlicher Listen für verschiedene SVMs.
+
+Weitere Informationen sind unter link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/task-file-extensions.html["Blockierte Dateierweiterungen in Ransomware Resilience managen"] verfügbar.
