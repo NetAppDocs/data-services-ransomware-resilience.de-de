@@ -12,9 +12,9 @@ summary: In NetApp Ransomware Resilience lassen sich Listen unterstützter oder 
 
 
 [role="lead"]
-NetApp Ransomware Resilience unterstützt die Konfiguration einer Schutzstrategie, die verdächtige Dateierweiterungen blockiert. Ransomware Resilience stellt standardmäßig eine Liste bekannter verdächtiger Dateierweiterungen bereit, die blockiert werden, um Ransomware-Angriffe zu verhindern. Sie können die Liste der Dateierweiterungen anpassen und Einträge nach Bedarf hinzufügen oder entfernen.
+NetApp Ransomware Resilience unterstützt die Konfiguration einer Datensicherungsstrategie, die verdächtige Dateierweiterungen blockiert. Ransomware Resilience stellt eine Standardliste bekannter verdächtiger Dateierweiterungen bereit, um verdächtige Dateien direkt bei ihrer Erstellung zu blockieren und Ransomware-Angriffe zu verhindern. Sie können die Liste der Dateierweiterungen anpassen und Einträge nach Bedarf hinzufügen oder entfernen.
 
-Wenn der Schutz mit der Blockierung verdächtiger Dateierweiterungen konfiguriert wird, erfolgt dies auf Workload-Ebene. Es ist jedoch möglich, festzulegen, welche Dateierweiterungen auf Ebene der Storage VM (SVM) blockiert werden, sodass verschiedene SVMs innerhalb desselben Workloads unterschiedliche Listen verwenden können.
+Wenn Sie den Schutz mit der Blockierung verdächtiger Dateierweiterungen konfigurieren, wird er auf Workload-Ebene festgelegt. Die Liste der Dateierweiterungen kann jedoch auf Ebene der Storage VM (SVM) angepasst werden, sodass verschiedene SVMs innerhalb desselben Workloads unterschiedliche Listen verwenden können.
 
 
 
@@ -32,20 +32,22 @@ Es gibt zwei Ansätze zum Konfigurieren von Dateierweiterungslisten:
 [[file-extension-blocking-from-ontap]]
 === Blockierung von Dateierweiterungen durch ONTAP
 
-Wenn Sie in ONTAP bestimmte Dateierweiterungen zum Blockieren festgelegt haben, erkennt Ransomware Resilience diese Einstellungen. Wenn Sie link:rp-use-protect.html["Schutz konfigurieren"] in Ransomware Resilience so konfigurieren, dass verdächtige Dateierweiterungen blockiert werden, verwendet Ransomware Resilience standardmäßig eine sorgfältig zusammengestellte Liste von Dateierweiterungen, sofern Sie keine andere Standardeinstellung konfiguriert haben.
+Wenn Sie in ONTAP bestimmte Dateierweiterungen zum Blockieren festgelegt haben, erkennt Ransomware Resilience diese Liste. Falls Sie versuchen, die Blockierung verdächtiger Dateien in Ransomware Resilience zu aktivieren und dabei blockiert werden, sind zu viele Listen blockierter Dateierweiterungen aktiviert. Zum Fortfahren muss eine der Listen in ONTAP entfernt werden.
+
+Die standardmäßig von Ransomware Resilience bereitgestellte Liste enthält eine stärker kuratierte Auswahl von durch Malware und Ransomware erstellten Dateierweiterungen als in ONTAP.
 
 
 
 [[default-file-extensions]]
 === Standarddateierweiterungen
 
-Ransomware Resilience stellt eine Standardliste blockierter Dateierweiterungen bereit, die „NetApp“ genannt wird. Standardmäßig verwenden alle Workloads, die für das Blockieren verdächtiger Dateierweiterungen aktiviert sind, diese Liste, die mehr als 3.900 bekannte schädliche Dateierweiterungen enthält. Sie können diese Liste ändern oder sie kopieren, um sie als Grundlage für eine benutzerdefinierte Liste zu verwenden.
+Ransomware Resilience bietet eine Standardliste blockierter Dateierweiterungen mit dem Namen „NetApp“. Wenn diese Liste für die Blockierung verdächtiger Dateierweiterungen ausgewählt wird, blockiert Ransomware Resilience Dateien mit den in der Liste enthaltenen Erweiterungen. Sie können diese Liste bearbeiten oder als Grundlage für eine benutzerdefinierte Liste kopieren. Sie können <<default,auch eine andere Standardliste festlegen>>.
 
 Sie können eine andere Liste als Standard festlegen. Sobald eine Liste als Standard festgelegt ist, verwenden alle Workloads, für die anschließend die Dateiblockierung aktiviert wird, diese Liste, sofern Sie nicht manuell eine andere Liste auswählen.
 
 
 
-[[create-a-file-extensions-list]]
+[[create-a-file-extension-list]]
 == Erstellung einer Liste der Dateierweiterungen
 
 .Schritte
@@ -56,14 +58,14 @@ Sie können eine andere Liste als Standard festlegen. Sobald eine Liste als Stan
 . Auswahl der Funktionsweise der Liste:
 +
 ** Die Auswahl von *Erweiterungen blockieren* kennzeichnet alle Dateierweiterungen in der Liste automatisch als Ransomware-Bedrohung.
-** Bei Auswahl von *Erweiterungen zulassen* sind nur Anfragen von Dateierweiterungen in der Liste zulässig.
+** Mit *Allow extensions* werden nur Dateien mit Erweiterungen aus der Liste zugelassen.
 
 
 . Wählen Sie aus, wie die Liste erstellt werden soll:
 +
 ** Zum Erstellen auf Basis einer bestehenden Liste steht die Registerkarte *Liste kopieren* zur Verfügung.
 +
-Die Liste der Dateierweiterungen kann überprüft werden. Zum Löschen von Erweiterungen ist das „X“ neben dem Dateierweiterungstyp zu wählen. Mit *+ Zur Liste hinzufügen* lassen sich zusätzliche Erweiterungen hinzufügen; diese Auswahl führt zur Registerkarte *Manuell eingeben*.
+Die Liste der Dateierweiterungen kann überprüft werden. Zum Löschen von Erweiterungen kann das „X“ neben dem Dateierweiterungstyp ausgewählt werden. Mit *+ Zur Liste hinzufügen* können Erweiterungen hinzugefügt werden; diese Auswahl führt zur Registerkarte *Manuell eingeben*.
 
 ** Die Registerkarte *Hochladen* dient zum Hinzufügen einer Liste von Dateierweiterungen aus einer CSV-Datei.
 +
@@ -84,7 +86,7 @@ image:blocked-file-extensions.png["Screenshot der blockierten Dateierweiterungen
 [[svm]]
 == Anwenden einer Dateierweiterungsliste auf eine SVM
 
-Wenn Sie eine Ransomware-Schutzstrategie mit der Richtlinie zum Blockieren verdächtiger Dateierweiterungen zuweisen, können Sie eine spezifische Liste von Dateierweiterungen für die gesamte Workload festlegen. Nach Anwendung der Datensicherungsstrategie können Sie verschiedenen SVMs unterschiedliche Listen zuweisen.
+Wenn Sie eine Ransomware-Schutzstrategie mit der Richtlinie zum Blockieren verdächtiger Dateierweiterungen zuweisen, können Sie eine spezifische Liste von Dateierweiterungen für die gesamte Workload festlegen. Nach der Anwendung einer Datensicherungsstrategie können Sie verschiedenen SVMs unterschiedliche Listen zuweisen.
 
 Die Arbeitslast muss eine Erkennungsrichtlinie enthalten, die verdächtige Dateierweiterungen blockiert, bevor Sie diese Aufgabe ausführen können. Informationen dazu, wie link:rp-use-protect.html["Konfiguration einer Ransomware-Schutzstrategie"]. Sie können jeder SVM nur eine Liste von Dateierweiterungen zuweisen.
 
@@ -92,7 +94,7 @@ Die Arbeitslast muss eine Erkennungsrichtlinie enthalten, die verdächtige Datei
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . Unter der Überschrift „Dateierweiterungen“ wird **Managen** ausgewählt.
 . Die Registerkarte *Storage VM* ist auszuwählen.
-. Die Liste der SVMs mit aktiviertem Schutz vor verdächtigen Dateierweiterungen ist hier aufgeführt. Es ist erkennbar, welche SVM welche Liste verwendet. Für Änderungen an der Liste steht *Liste ändern* zur Verfügung.
+. Angezeigt wird die Liste der SVMs, für die der Schutz vor verdächtigen Dateierweiterungen aktiviert ist. Es ist ersichtlich, welche SVM welche Liste verwendet. Zum Ändern der Liste steht *Liste ändern* zur Verfügung.
 . Im Dialogfeld erfolgt zunächst die Auswahl der neuen Liste aus dem Dropdown-Menü, danach die Auswahl von *Speichern*.
 
 
@@ -124,6 +126,7 @@ Alternativ erfolgt das Entfernen für die jeweilige Dateierweiterung über das A
 . Mit *Speichern* lässt sich die Liste ändern.
 
 
+[[default]]
 .Festlegen einer Dateierweiterungsliste als Standard
 . Unter Ransomware Resilience wählen Sie **Einstellungen**.
 . Unter der Überschrift „Dateierweiterungen“ wird **Managen** ausgewählt.
@@ -132,7 +135,7 @@ Alternativ erfolgt das Entfernen für die jeweilige Dateierweiterung über das A
 
 
 .Löschen einer Dateierweiterungsliste
-Eine Liste, die auf eine SVM angewendet wird, kann nicht gelöscht werden. Zuerst muss <<svm,Änderung der mit der SVM verknüpften Liste>>.
+Eine Liste, die auf eine SVM angewendet wird, kann nicht gelöscht werden. Sie müssen zuerst <<svm,Änderung der mit der SVM verknüpften Liste>>.
 
 Die NetApp Liste kann nicht gelöscht werden.
 
