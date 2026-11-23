@@ -54,7 +54,6 @@ Sie können im Planungsschritt auch Dateiverläufe anzeigen, um zu erkennen, wan
 
 * Pro Ransomware Resilience-Konto kann nur ein IRE erstellt werden. Jedes IRE kann drei Clean Rooms enthalten.
 * Eine vollständige Wiederherstellung wird derzeit nur für NAS-Dateifreigaben (NFS/CIFS) unterstützt.
-* Bei einer sauberen Wiederherstellung können Sie nur die Quellumgebung wiederherstellen.
 * Sie können eine IRE in der Cloud oder lokal erstellen. Aktuell werden folgende Konfigurationen unterstützt:
 +
 |===
