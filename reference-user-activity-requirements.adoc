@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-user-activity-requirements.html 
 keywords: data breach detection, data breach, user activity, suspicious, anomalous, requirements, endpoints, operating systems, networking 
-summary: Bevor Sie einen Benutzeraktivitätsagenten und andere Collector erstellen, müssen Sie sicherstellen, dass Sie die beschriebenen Anforderungen an Betriebssystem, Server und Netzwerk erfüllen. 
+summary: Bevor Sie einen Benutzeraktivitätsagenten erstellen, müssen Sie sicherstellen, dass Sie die beschriebenen Anforderungen an Betriebssystem, Server und Netzwerk erfüllen. 
 ---
 = Anforderungen an die Erkennung von Benutzeraktivitäten für NetApp Ransomware Resilience
 :hardbreaks:
@@ -12,16 +12,19 @@ summary: Bevor Sie einen Benutzeraktivitätsagenten und andere Collector erstell
 
 
 [role="lead"]
-NetApp Ransomware Resilience Benutzerverhaltenserkennung ermöglicht es Ihnen, auf Ransomware-Ereignisse auf Benutzerebene zu reagieren. Sie müssen eine Gruppe von Agenten erstellen, um die Benutzerverhaltenserkennung zu aktivieren. Bevor Sie die Erkennung aktivieren, müssen Sie sicherstellen, dass Sie die beschriebenen Betriebssystem-, Server- und Netzwerkvoraussetzungen erfüllen, damit Ransomware Resilience Ereignisse korrekt erkennen und melden kann.
+NetApp Ransomware Resilience Benutzerverhaltenserkennung ermöglicht es Ihnen, auf Ransomware-Ereignisse auf Benutzerebene zu reagieren. Sie müssen einen Mandanten und mehrere Agenten erstellen, um die Benutzerverhaltenserkennung zu aktivieren. Vor der Aktivierung der Erkennung müssen Sie sicherstellen, dass Sie die beschriebenen Betriebssystem-, Server- und Netzwerkanforderungen erfüllen, damit Ransomware Resilience Ereignisse ordnungsgemäß erkennen und melden kann.
 
 
 
-[[user-activity-agent-cloud-provider-support]]
-== Unterstützung von Cloud-Anbietern für Benutzeraktivitätsagenten
+[[cloud-provider-support]]
+== Cloud-Anbieter-Support
 
-Um die Erkennung des Benutzerverhaltens zu aktivieren, ist die Erstellung eines Benutzeraktivitätsagenten erforderlich. Der Benutzeraktivitätsagent ist eine ausführbare Umgebung für Datensammler, die Benutzeraktivitätsereignisse mit Ransomware Resilience austauschen.
+Zur Aktivierung der Erkennung des Benutzerverhaltens müssen Sie für Datensammler eine Ausführungsumgebung erstellen, die Benutzeraktivitätsereignisse an Ransomware Resilience weitergeben.
 
-Der Benutzeraktivitätsagent kann in AWS und Azure in den folgenden Regionen bereitgestellt werden:
+
+NOTE: Das regionale Deployment des Mandanten hat keine Auswirkungen auf den Console Agent. Das Deployment des Console Agent ist von diesen Regionen unabhängig.
+
+Der Mandant kann in AWS und Azure in den folgenden Regionen bereitgestellt werden:
 
 |===
 | Cloud-Anbieter | Region 
@@ -37,9 +40,6 @@ Der Benutzeraktivitätsagent kann in AWS und Azure in den folgenden Regionen ber
 
 | Azurblau | Ostküste der USA 
 |===
-
-NOTE: Die regionale Bereitstellung des Benutzeraktivitätsagenten hat keine Auswirkungen auf den Konsolenagenten. Die Bereitstellung des Konsolenagenten ist unabhängig von diesen Regionen.
-
 
 
 [[operating-system-requirements]]
@@ -67,13 +67,13 @@ Die Erkennung verdächtigen Benutzerverhaltens wird mit den folgenden Betriebssy
 | Oracle Linux | 8.10 (64 Bit) und 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
 
 
-| Red Hat | 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit) und 10 (64 Bit), einschließlich SELinux 
+| Red Hat Enterprise Linux | 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit) und 10 (64 Bit), einschließlich SELinux 
 
 
-| Felsig | Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
+| Felsig | 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux 
 
 
-| SUSE Enterprise Linux | 15 SP4 (64 Bit) bis 15 SP6 (64 Bit), einschließlich SELinux 
+| SUSE Linux Enterprise Server | 15 SP4 (64 Bit) bis 15 SP6 (64 Bit), einschließlich SELinux 
 
 
 | Ubuntu | 20.04 LTS (64 Bit), 22.04 LTS (64 Bit) und 24.04 LTS (64 Bit) 
@@ -81,7 +81,7 @@ Die Erkennung verdächtigen Benutzerverhaltens wird mit den folgenden Betriebssy
 
 NOTE: Auf dem Computer, den Sie für den Benutzeraktivitätsagenten verwenden, sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen.
 
-Der  `unzip` Befehl ist für die Installation erforderlich. Der  `sudo su -` Befehl ist für die Installation, das Ausführen von Skripten und die Deinstallation erforderlich.
+Der  `unzip`Befehl ist für die Installation erforderlich. Der  `sudo su -`Befehl ist für die Installation, die Ausführung von Skripten und die Deinstallation erforderlich.
 
 
 
@@ -92,7 +92,7 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 
 * **CPU**: 4 Kerne
 * **RAM**: 16 GB RAM
-* **Festplattenspeicher**: 36 GB freier Festplattenspeicher
+* **Speicherplatz**: 36 GB frei
 
 
 
@@ -100,8 +100,8 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 [[server-recommendations]]
 === Serverempfehlungen
 
-* Weisen Sie zusätzlichen Speicherplatz für die Erstellung des Dateisystems zu. Es muss sichergestellt sein, dass im Dateisystem mindestens 35 GB freier Speicherplatz vorhanden sind. + Wenn  `/opt` ein eingebundener Ordner von einem NAS-Speicher ist, müssen lokale Benutzer Zugriff auf diesen Ordner haben. Die Erstellung des User Activity Agent kann fehlschlagen, wenn lokale Benutzer nicht über die erforderlichen Berechtigungen verfügen.
-* Es wird empfohlen, den Benutzeraktivitätsagenten auf einem separaten System zu installieren, das von Ihrer Ransomware Resilience-Umgebung getrennt ist. Wenn der Agent und Ransomware Resilience auf demselben Rechner installiert werden, sollten 50 bis 55 GB Festplattenspeicher vorgesehen werden. Für Linux sind 25 bis 30 GB Speicherplatz für  `/opt/netapp` und 25 GB für  `var/log/netapp` zuzuweisen.
+* Für die Erstellung des Dateisystems ist zusätzlicher Festplattenspeicher einzuplanen. Im Dateisystem müssen mindestens 35 GB freier Speicherplatz vorhanden sein. + Wenn `/opt` ein eingebundener Ordner aus NAS Storage ist, müssen lokale Benutzer Zugriff auf diesen Ordner haben. Die Erstellung des Benutzeraktivitätsagenten kann fehlschlagen, wenn lokale Benutzer nicht über die erforderlichen Berechtigungen verfügen.
+* Der Benutzeraktivitätsagent sollte auf einem System installiert werden, das von Ihrer Ransomware Resilience Umgebung getrennt ist. Wenn der Agent und Ransomware Resilience auf demselben Rechner installiert werden, sollten 50 bis 55 GB Festplattenspeicher eingeplant werden. Unter Linux sollten 25 bis 30 GB Speicher für `/opt/netapp` und 25 GB für `/var/log/netapp` zugewiesen werden.
 * Es wird empfohlen, die Zeit sowohl auf dem ONTAP System als auch auf dem Rechner des Benutzeraktivitätsagenten mithilfe des Network Time Protocol (NTP) oder des Simple Network Time Protocol (SNTP) zu synchronisieren.
 
 
@@ -110,7 +110,7 @@ Der Server muss die folgenden Mindestanforderungen erfüllen:
 [[sizing-recommendations]]
 === Größenempfehlungen
 
-Stellen Sie beim Erfassen von Benutzerereignissen sicher, dass der Rechner, auf dem der Benutzeraktivitätsagent ausgeführt wird, ausreichend dimensioniert ist, um Ihre Ereignisrate zu bewältigen. Das bedeutet, dass Sie über genügend Datensammler sowie ausreichend CPU und RAM auf dem Rechner verfügen müssen, auf dem der Benutzeraktivitätsagent ausgeführt wird, um die Anzahl der Ereignisse pro Sekunde zu tolerieren. Um die Anzahl der Datensammler zu erhöhen, müssen Sie möglicherweise die RAM- oder CPU-Kapazität erhöhen. Ransomware Resilience unterstützt bis zu 50 Datensammler pro Benutzeraktivitätsagent.
+Beim Erfassen von Benutzerereignissen ist sicherzustellen, dass der Rechner, auf dem der Benutzeraktivitätsagent gehostet wird, ausreichend dimensioniert ist, um Ihre Ereignisrate zu bewältigen. Dies bedeutet, dass genügend Datensammler sowie ausreichend CPU und RAM auf dem Rechner, auf dem der Benutzeraktivitätsagent gehostet wird, vorhanden sein müssen, um die Anzahl der Ereignisse pro Sekunde zu verarbeiten. Zur Erhöhung der Anzahl der Datensammler kann es erforderlich sein, die RAM- oder CPU-Kapazität zu erhöhen. Ransomware Resilience unterstützt bis zu 50 Datensammler pro Benutzeraktivitätsagent.
 
 Die folgende Tabelle bietet allgemeine Richtlinien zur Größenbestimmung:
 
@@ -131,19 +131,19 @@ Where E is the sum of all events per second across all data collectors:
 
 E + (0.3 x E) < 20,000 events/second
 ----
-.Ransomware Resilience stellt ein Skript zur Berechnung der Ereignisdatenrate bereit. Erfahren Sie, wie Sie die Ereignisdatenrate in Ransomware Resilience berechnen.
+.Berechnung der Ereignisdatenrate in Ransomware Resilience.
 [%collapsible]
 ====
-Ransomware Resilience stellt ein Skript bereit, mit dem Sie die Ereignisdatenrate auf Ihrem System berechnen können. Standardmäßig wird das Skript für maximal fünf Storage-VMs ausgeführt. Wenn Ihre Umgebung mehr als 5 SVMs umfasst, können Sie das Skript entsprechend anpassen. Unabhängig von der Anzahl der SVMs benötigt das Skript etwa fünf Minuten, um einen durchschnittlichen Wert für die Ereignisrate zu ermitteln. Bevor Sie das Skript ausführen, müssen Sie Folgendes haben:
+Ransomware Resilience stellt ein Skript bereit, mit dem die Ereignisdatenrate auf Ihrem System berechnet werden kann. Standardmäßig wird das Skript für maximal fünf SVMs ausgeführt. Falls Ihre Umgebung mehr als fünf SVMs umfasst, können Sie das Skript entsprechend anpassen. Unabhängig von der Anzahl der SVMs benötigt das Skript etwa fünf Minuten, um einen durchschnittlichen Wert für die Ereignisrate zu ermitteln. Vor der Ausführung des Skripts müssen folgende Voraussetzungen erfüllt sein:
 
 * link:suspicious-user-activity.html["Einen Benutzeraktivitätsagenten konfiguriert"]
 * Die Cluster-IP-Adresse
 * Benutzername und Passwort des Cluster-Administrators
-* Installiert `sshpass` auf dem Linux-Rechner (Sie können mit dem Befehl  `sudo yum install -y sshpass` installieren)
+* Installiert `sshpass` auf dem Linux-Rechner (Installation mit dem Befehl  `sudo yum install -y sshpass` möglich)
 
 
 .Schritte
-. Führen Sie das Skript auf dem Cluster, auf dem der Benutzeraktivitätsagent gehostet wird, als Administrator aus: `/opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh`
+. Das Skript wird auf dem Computer, der den Benutzeraktivitätsagenten hostet, mit Administratorrechten ausgeführt: `/opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh`
 . Wenn Sie dazu aufgefordert werden, geben Sie die Cluster-IP-Adresse, den Admin-Benutzernamen und das Admin-Passwort ein.
 . Das Skript benötigt etwa fünf Minuten zur Ausführung. Nach Abschluss zeigt die Befehlszeile die Ereignisrate an, beispielsweise „Svm svm_rate generiert 100 Ereignisse/Sek.“
 +
@@ -163,7 +163,7 @@ Prüfen Sie die Cloud-Netzwerkzugriffsregeln für Ihre jeweilige Region (Asien-P
 IMPORTANT: Ersetzen Sie während der Erstinstallation die  `<site_name>` durch eine Platzhalter-(`*`-Berechtigung. Nachdem der Agent aktiviert und voll funktionsfähig ist, können Sie die Berechtigung durch den Standortnamen ersetzen. Wenden Sie sich an Ihren NetApp-Ansprechpartner, um den Standortnamen zu erhalten.
 
 
-NOTE: Der Benutzeraktivitätsagent nutzt NetApp Data Insights Infrastructure-Technologie, daher die Verwendung von  `cloudinsights` Endpunkten. Weitere Informationen finden Sie unter link:concept-user-behavior.html#user-activity-forensics["Ransomware Resilience und Data Infrastructure Insights"].
+NOTE: Der Benutzeraktivitätsagent nutzt die NetApp Data Infrastructure Insights Technologie, daher die Verwendung von `cloudinsights` Endpunkten. Weitere Informationen finden Sie unter link:concept-user-behavior.html#user-activity-forensics["Ransomware Resilience und Data Infrastructure Insights"].
 
 
 
@@ -229,18 +229,18 @@ NOTE: Der Benutzeraktivitätsagent nutzt NetApp Data Insights Infrastructure-Tec
 | Protokoll | Hafen | Quelle | Ziel | Beschreibung 
 
 
-| TCP | 389 (LDAP) 636 (LDAPS / start-tls) | Benutzeraktivitätsagent | LDAP-Server-URL | Mit LDAP verbinden 
+| TCP | 389 (LDAP) 636 (LDAPS / StartTLS) | Benutzeraktivitätsagent | LDAP-Server-URL | Mit LDAP verbinden 
 
 
 | HTTPS (TCP) | 443 | Benutzeraktivitätsagent | Cluster- oder SVM-Management-IP-Adresse (abhängig von der SVM-Collector-Konfiguration) | API-Kommunikation mit ONTAP 
 
 
-| TCP | 35000 - 55000  a| 
+| TCP | 35000-55000  a| 
 SVM-Daten LIF IP-Adressen
-| Benutzeraktivitätsagent | Kommunikation von ONTAP zum Benutzeraktivitätsagenten für FPolicy-Ereignisse. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet sein, damit ONTAP Ereignisse an diesen senden kann, einschließlich einer eventuell vorhandenen Firewall auf dem Benutzeraktivitätsagenten selbst (falls vorhanden). + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie dafür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, zunächst 100 Ports zu reservieren und die Anzahl bei Bedarf zu erhöhen. 
+| Benutzeraktivitätsagent | Kommunikation von ONTAP zum Benutzeraktivitätsagenten für FPolicy-Ereignisse. Diese Ports müssen in Richtung des Benutzeraktivitätsagenten geöffnet sein, damit ONTAP Ereignisse an ihn senden kann, einschließlich einer etwaigen Firewall auf dem Benutzeraktivitätsagenten selbst (falls vorhanden). + **HINWEIS:** Es ist nicht erforderlich, *alle* dieser Ports zu reservieren, aber die dafür reservierten Ports müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, zunächst 100 Ports zu reservieren und die Anzahl bei Bedarf zu erhöhen. 
 
 
-| TCP | 35000-55000 | Cluster-Verwaltungs-IP | Benutzeraktivitätsagent | Kommunikation von der ONTAP Clusterverwaltungs-IP zum Benutzeraktivitätsagenten für *EMS-Ereignisse*. Diese Ports müssen zum Benutzeraktivitätsagenten hin geöffnet werden, damit ONTAP EMS-Ereignisse an ihn senden kann, einschließlich etwaiger Firewall-Anforderungen auf dem Benutzeraktivitätsagenten selbst. + **HINWEIS:** Sie müssen nicht *alle* dieser Ports reservieren, aber die Ports, die Sie hierfür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von 100 Ports zu beginnen und diese bei Bedarf zu erhöhen. 
+| TCP | 35000-55000 | Cluster-Management-IP | Benutzeraktivitätsagent | Kommunikation von der ONTAP Cluster-Management-IP an den Benutzeraktivitätsagenten für *EMS-Ereignisse*. Diese Ports müssen in Richtung des Benutzeraktivitätsagenten geöffnet werden, damit ONTAP EMS-Ereignisse an ihn senden kann, einschließlich einer Firewall auf dem Benutzeraktivitätsagenten selbst. + **HINWEIS:** Es ist nicht erforderlich, *alle* dieser Ports zu reservieren, aber die dafür reservierten Ports müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, zunächst 100 Ports zu reservieren und die Anzahl bei Bedarf zu erhöhen. 
 
 
 | SSH | 22 | Benutzeraktivitätsagent | Clusterverwaltung | Wird für die CIFS/SMB-Benutzerblockierung benötigt. 
